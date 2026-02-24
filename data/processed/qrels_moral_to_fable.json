@@ -1,0 +1,3547 @@
+[
+  {
+    "query_id": "moral_0000",
+    "doc_id": "fable_0000",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0001",
+    "doc_id": "fable_0001",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0002",
+    "doc_id": "fable_0002",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0003",
+    "doc_id": "fable_0003",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0004",
+    "doc_id": "fable_0004",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0005",
+    "doc_id": "fable_0005",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0006",
+    "doc_id": "fable_0006",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0007",
+    "doc_id": "fable_0007",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0008",
+    "doc_id": "fable_0008",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0009",
+    "doc_id": "fable_0009",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0010",
+    "doc_id": "fable_0010",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0011",
+    "doc_id": "fable_0011",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0012",
+    "doc_id": "fable_0012",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0013",
+    "doc_id": "fable_0013",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0014",
+    "doc_id": "fable_0014",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0015",
+    "doc_id": "fable_0015",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0016",
+    "doc_id": "fable_0016",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0017",
+    "doc_id": "fable_0017",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0018",
+    "doc_id": "fable_0018",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0019",
+    "doc_id": "fable_0019",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0020",
+    "doc_id": "fable_0020",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0021",
+    "doc_id": "fable_0021",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0022",
+    "doc_id": "fable_0022",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0023",
+    "doc_id": "fable_0023",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0024",
+    "doc_id": "fable_0024",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0025",
+    "doc_id": "fable_0025",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0026",
+    "doc_id": "fable_0026",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0027",
+    "doc_id": "fable_0027",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0028",
+    "doc_id": "fable_0028",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0029",
+    "doc_id": "fable_0029",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0030",
+    "doc_id": "fable_0030",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0031",
+    "doc_id": "fable_0031",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0032",
+    "doc_id": "fable_0032",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0033",
+    "doc_id": "fable_0033",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0034",
+    "doc_id": "fable_0034",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0035",
+    "doc_id": "fable_0035",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0036",
+    "doc_id": "fable_0036",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0037",
+    "doc_id": "fable_0037",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0038",
+    "doc_id": "fable_0038",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0039",
+    "doc_id": "fable_0039",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0040",
+    "doc_id": "fable_0040",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0041",
+    "doc_id": "fable_0041",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0042",
+    "doc_id": "fable_0042",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0043",
+    "doc_id": "fable_0043",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0044",
+    "doc_id": "fable_0044",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0045",
+    "doc_id": "fable_0045",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0046",
+    "doc_id": "fable_0046",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0047",
+    "doc_id": "fable_0047",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0048",
+    "doc_id": "fable_0048",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0049",
+    "doc_id": "fable_0049",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0050",
+    "doc_id": "fable_0050",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0051",
+    "doc_id": "fable_0051",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0052",
+    "doc_id": "fable_0052",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0053",
+    "doc_id": "fable_0053",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0054",
+    "doc_id": "fable_0054",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0055",
+    "doc_id": "fable_0055",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0056",
+    "doc_id": "fable_0056",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0057",
+    "doc_id": "fable_0057",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0058",
+    "doc_id": "fable_0058",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0059",
+    "doc_id": "fable_0059",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0060",
+    "doc_id": "fable_0060",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0061",
+    "doc_id": "fable_0061",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0062",
+    "doc_id": "fable_0062",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0063",
+    "doc_id": "fable_0063",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0064",
+    "doc_id": "fable_0064",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0065",
+    "doc_id": "fable_0065",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0066",
+    "doc_id": "fable_0066",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0067",
+    "doc_id": "fable_0067",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0068",
+    "doc_id": "fable_0068",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0069",
+    "doc_id": "fable_0069",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0070",
+    "doc_id": "fable_0070",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0071",
+    "doc_id": "fable_0071",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0072",
+    "doc_id": "fable_0072",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0073",
+    "doc_id": "fable_0073",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0074",
+    "doc_id": "fable_0074",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0075",
+    "doc_id": "fable_0075",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0076",
+    "doc_id": "fable_0076",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0077",
+    "doc_id": "fable_0077",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0078",
+    "doc_id": "fable_0078",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0079",
+    "doc_id": "fable_0079",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0080",
+    "doc_id": "fable_0080",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0081",
+    "doc_id": "fable_0081",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0082",
+    "doc_id": "fable_0082",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0083",
+    "doc_id": "fable_0083",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0084",
+    "doc_id": "fable_0084",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0085",
+    "doc_id": "fable_0085",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0086",
+    "doc_id": "fable_0086",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0087",
+    "doc_id": "fable_0087",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0088",
+    "doc_id": "fable_0088",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0089",
+    "doc_id": "fable_0089",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0090",
+    "doc_id": "fable_0090",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0091",
+    "doc_id": "fable_0091",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0092",
+    "doc_id": "fable_0092",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0093",
+    "doc_id": "fable_0093",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0094",
+    "doc_id": "fable_0094",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0095",
+    "doc_id": "fable_0095",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0096",
+    "doc_id": "fable_0096",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0097",
+    "doc_id": "fable_0097",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0098",
+    "doc_id": "fable_0098",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0099",
+    "doc_id": "fable_0099",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0100",
+    "doc_id": "fable_0100",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0101",
+    "doc_id": "fable_0101",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0102",
+    "doc_id": "fable_0102",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0103",
+    "doc_id": "fable_0103",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0104",
+    "doc_id": "fable_0104",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0105",
+    "doc_id": "fable_0105",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0106",
+    "doc_id": "fable_0106",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0107",
+    "doc_id": "fable_0107",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0108",
+    "doc_id": "fable_0108",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0109",
+    "doc_id": "fable_0109",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0110",
+    "doc_id": "fable_0110",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0111",
+    "doc_id": "fable_0111",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0112",
+    "doc_id": "fable_0112",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0113",
+    "doc_id": "fable_0113",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0114",
+    "doc_id": "fable_0114",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0115",
+    "doc_id": "fable_0115",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0116",
+    "doc_id": "fable_0116",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0117",
+    "doc_id": "fable_0117",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0118",
+    "doc_id": "fable_0118",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0119",
+    "doc_id": "fable_0119",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0120",
+    "doc_id": "fable_0120",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0121",
+    "doc_id": "fable_0121",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0122",
+    "doc_id": "fable_0122",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0123",
+    "doc_id": "fable_0123",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0124",
+    "doc_id": "fable_0124",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0125",
+    "doc_id": "fable_0125",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0126",
+    "doc_id": "fable_0126",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0127",
+    "doc_id": "fable_0127",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0128",
+    "doc_id": "fable_0128",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0129",
+    "doc_id": "fable_0129",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0130",
+    "doc_id": "fable_0130",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0131",
+    "doc_id": "fable_0131",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0132",
+    "doc_id": "fable_0132",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0133",
+    "doc_id": "fable_0133",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0134",
+    "doc_id": "fable_0134",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0135",
+    "doc_id": "fable_0135",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0136",
+    "doc_id": "fable_0136",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0137",
+    "doc_id": "fable_0137",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0138",
+    "doc_id": "fable_0138",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0139",
+    "doc_id": "fable_0139",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0140",
+    "doc_id": "fable_0140",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0141",
+    "doc_id": "fable_0141",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0142",
+    "doc_id": "fable_0142",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0143",
+    "doc_id": "fable_0143",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0144",
+    "doc_id": "fable_0144",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0145",
+    "doc_id": "fable_0145",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0146",
+    "doc_id": "fable_0146",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0147",
+    "doc_id": "fable_0147",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0148",
+    "doc_id": "fable_0148",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0149",
+    "doc_id": "fable_0149",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0150",
+    "doc_id": "fable_0150",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0151",
+    "doc_id": "fable_0151",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0152",
+    "doc_id": "fable_0152",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0153",
+    "doc_id": "fable_0153",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0154",
+    "doc_id": "fable_0154",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0155",
+    "doc_id": "fable_0155",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0156",
+    "doc_id": "fable_0156",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0157",
+    "doc_id": "fable_0157",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0158",
+    "doc_id": "fable_0158",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0159",
+    "doc_id": "fable_0159",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0160",
+    "doc_id": "fable_0160",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0161",
+    "doc_id": "fable_0161",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0162",
+    "doc_id": "fable_0162",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0163",
+    "doc_id": "fable_0163",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0164",
+    "doc_id": "fable_0164",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0165",
+    "doc_id": "fable_0165",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0166",
+    "doc_id": "fable_0166",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0167",
+    "doc_id": "fable_0167",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0168",
+    "doc_id": "fable_0168",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0169",
+    "doc_id": "fable_0169",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0170",
+    "doc_id": "fable_0170",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0171",
+    "doc_id": "fable_0171",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0172",
+    "doc_id": "fable_0172",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0173",
+    "doc_id": "fable_0173",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0174",
+    "doc_id": "fable_0174",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0175",
+    "doc_id": "fable_0175",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0176",
+    "doc_id": "fable_0176",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0177",
+    "doc_id": "fable_0177",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0178",
+    "doc_id": "fable_0178",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0179",
+    "doc_id": "fable_0179",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0180",
+    "doc_id": "fable_0180",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0181",
+    "doc_id": "fable_0181",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0182",
+    "doc_id": "fable_0182",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0183",
+    "doc_id": "fable_0183",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0184",
+    "doc_id": "fable_0184",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0185",
+    "doc_id": "fable_0185",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0186",
+    "doc_id": "fable_0186",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0187",
+    "doc_id": "fable_0187",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0188",
+    "doc_id": "fable_0188",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0189",
+    "doc_id": "fable_0189",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0190",
+    "doc_id": "fable_0190",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0191",
+    "doc_id": "fable_0191",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0192",
+    "doc_id": "fable_0192",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0193",
+    "doc_id": "fable_0193",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0194",
+    "doc_id": "fable_0194",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0195",
+    "doc_id": "fable_0195",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0196",
+    "doc_id": "fable_0196",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0197",
+    "doc_id": "fable_0197",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0198",
+    "doc_id": "fable_0198",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0199",
+    "doc_id": "fable_0199",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0200",
+    "doc_id": "fable_0200",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0201",
+    "doc_id": "fable_0201",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0202",
+    "doc_id": "fable_0202",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0203",
+    "doc_id": "fable_0203",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0204",
+    "doc_id": "fable_0204",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0205",
+    "doc_id": "fable_0205",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0206",
+    "doc_id": "fable_0206",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0207",
+    "doc_id": "fable_0207",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0208",
+    "doc_id": "fable_0208",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0209",
+    "doc_id": "fable_0209",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0210",
+    "doc_id": "fable_0210",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0211",
+    "doc_id": "fable_0211",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0212",
+    "doc_id": "fable_0212",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0213",
+    "doc_id": "fable_0213",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0214",
+    "doc_id": "fable_0214",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0215",
+    "doc_id": "fable_0215",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0216",
+    "doc_id": "fable_0216",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0217",
+    "doc_id": "fable_0217",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0218",
+    "doc_id": "fable_0218",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0219",
+    "doc_id": "fable_0219",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0220",
+    "doc_id": "fable_0220",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0221",
+    "doc_id": "fable_0221",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0222",
+    "doc_id": "fable_0222",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0223",
+    "doc_id": "fable_0223",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0224",
+    "doc_id": "fable_0224",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0225",
+    "doc_id": "fable_0225",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0226",
+    "doc_id": "fable_0226",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0227",
+    "doc_id": "fable_0227",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0228",
+    "doc_id": "fable_0228",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0229",
+    "doc_id": "fable_0229",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0230",
+    "doc_id": "fable_0230",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0231",
+    "doc_id": "fable_0231",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0232",
+    "doc_id": "fable_0232",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0233",
+    "doc_id": "fable_0233",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0234",
+    "doc_id": "fable_0234",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0235",
+    "doc_id": "fable_0235",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0236",
+    "doc_id": "fable_0236",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0237",
+    "doc_id": "fable_0237",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0238",
+    "doc_id": "fable_0238",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0239",
+    "doc_id": "fable_0239",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0240",
+    "doc_id": "fable_0240",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0241",
+    "doc_id": "fable_0241",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0242",
+    "doc_id": "fable_0242",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0243",
+    "doc_id": "fable_0243",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0244",
+    "doc_id": "fable_0244",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0245",
+    "doc_id": "fable_0245",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0246",
+    "doc_id": "fable_0246",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0247",
+    "doc_id": "fable_0247",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0248",
+    "doc_id": "fable_0248",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0249",
+    "doc_id": "fable_0249",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0250",
+    "doc_id": "fable_0250",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0251",
+    "doc_id": "fable_0251",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0252",
+    "doc_id": "fable_0252",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0253",
+    "doc_id": "fable_0253",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0254",
+    "doc_id": "fable_0254",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0255",
+    "doc_id": "fable_0255",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0256",
+    "doc_id": "fable_0256",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0257",
+    "doc_id": "fable_0257",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0258",
+    "doc_id": "fable_0258",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0259",
+    "doc_id": "fable_0259",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0260",
+    "doc_id": "fable_0260",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0261",
+    "doc_id": "fable_0261",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0262",
+    "doc_id": "fable_0262",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0263",
+    "doc_id": "fable_0263",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0264",
+    "doc_id": "fable_0264",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0265",
+    "doc_id": "fable_0265",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0266",
+    "doc_id": "fable_0266",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0267",
+    "doc_id": "fable_0267",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0268",
+    "doc_id": "fable_0268",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0269",
+    "doc_id": "fable_0269",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0270",
+    "doc_id": "fable_0270",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0271",
+    "doc_id": "fable_0271",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0272",
+    "doc_id": "fable_0272",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0273",
+    "doc_id": "fable_0273",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0274",
+    "doc_id": "fable_0274",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0275",
+    "doc_id": "fable_0275",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0276",
+    "doc_id": "fable_0276",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0277",
+    "doc_id": "fable_0277",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0278",
+    "doc_id": "fable_0278",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0279",
+    "doc_id": "fable_0279",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0280",
+    "doc_id": "fable_0280",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0281",
+    "doc_id": "fable_0281",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0282",
+    "doc_id": "fable_0282",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0283",
+    "doc_id": "fable_0283",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0284",
+    "doc_id": "fable_0284",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0285",
+    "doc_id": "fable_0285",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0286",
+    "doc_id": "fable_0286",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0287",
+    "doc_id": "fable_0287",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0288",
+    "doc_id": "fable_0288",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0289",
+    "doc_id": "fable_0289",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0290",
+    "doc_id": "fable_0290",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0291",
+    "doc_id": "fable_0291",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0292",
+    "doc_id": "fable_0292",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0293",
+    "doc_id": "fable_0293",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0294",
+    "doc_id": "fable_0294",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0295",
+    "doc_id": "fable_0295",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0296",
+    "doc_id": "fable_0296",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0297",
+    "doc_id": "fable_0297",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0298",
+    "doc_id": "fable_0298",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0299",
+    "doc_id": "fable_0299",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0300",
+    "doc_id": "fable_0300",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0301",
+    "doc_id": "fable_0301",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0302",
+    "doc_id": "fable_0302",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0303",
+    "doc_id": "fable_0303",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0304",
+    "doc_id": "fable_0304",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0305",
+    "doc_id": "fable_0305",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0306",
+    "doc_id": "fable_0306",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0307",
+    "doc_id": "fable_0307",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0308",
+    "doc_id": "fable_0308",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0309",
+    "doc_id": "fable_0309",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0310",
+    "doc_id": "fable_0310",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0311",
+    "doc_id": "fable_0311",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0312",
+    "doc_id": "fable_0312",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0313",
+    "doc_id": "fable_0313",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0314",
+    "doc_id": "fable_0314",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0315",
+    "doc_id": "fable_0315",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0316",
+    "doc_id": "fable_0316",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0317",
+    "doc_id": "fable_0317",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0318",
+    "doc_id": "fable_0318",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0319",
+    "doc_id": "fable_0319",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0320",
+    "doc_id": "fable_0320",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0321",
+    "doc_id": "fable_0321",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0322",
+    "doc_id": "fable_0322",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0323",
+    "doc_id": "fable_0323",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0324",
+    "doc_id": "fable_0324",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0325",
+    "doc_id": "fable_0325",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0326",
+    "doc_id": "fable_0326",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0327",
+    "doc_id": "fable_0327",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0328",
+    "doc_id": "fable_0328",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0329",
+    "doc_id": "fable_0329",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0330",
+    "doc_id": "fable_0330",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0331",
+    "doc_id": "fable_0331",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0332",
+    "doc_id": "fable_0332",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0333",
+    "doc_id": "fable_0333",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0334",
+    "doc_id": "fable_0334",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0335",
+    "doc_id": "fable_0335",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0336",
+    "doc_id": "fable_0336",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0337",
+    "doc_id": "fable_0337",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0338",
+    "doc_id": "fable_0338",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0339",
+    "doc_id": "fable_0339",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0340",
+    "doc_id": "fable_0340",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0341",
+    "doc_id": "fable_0341",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0342",
+    "doc_id": "fable_0342",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0343",
+    "doc_id": "fable_0343",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0344",
+    "doc_id": "fable_0344",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0345",
+    "doc_id": "fable_0345",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0346",
+    "doc_id": "fable_0346",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0347",
+    "doc_id": "fable_0347",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0348",
+    "doc_id": "fable_0348",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0349",
+    "doc_id": "fable_0349",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0350",
+    "doc_id": "fable_0350",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0351",
+    "doc_id": "fable_0351",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0352",
+    "doc_id": "fable_0352",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0353",
+    "doc_id": "fable_0353",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0354",
+    "doc_id": "fable_0354",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0355",
+    "doc_id": "fable_0355",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0356",
+    "doc_id": "fable_0356",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0357",
+    "doc_id": "fable_0357",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0358",
+    "doc_id": "fable_0358",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0359",
+    "doc_id": "fable_0359",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0360",
+    "doc_id": "fable_0360",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0361",
+    "doc_id": "fable_0361",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0362",
+    "doc_id": "fable_0362",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0363",
+    "doc_id": "fable_0363",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0364",
+    "doc_id": "fable_0364",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0365",
+    "doc_id": "fable_0365",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0366",
+    "doc_id": "fable_0366",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0367",
+    "doc_id": "fable_0367",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0368",
+    "doc_id": "fable_0368",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0369",
+    "doc_id": "fable_0369",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0370",
+    "doc_id": "fable_0370",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0371",
+    "doc_id": "fable_0371",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0372",
+    "doc_id": "fable_0372",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0373",
+    "doc_id": "fable_0373",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0374",
+    "doc_id": "fable_0374",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0375",
+    "doc_id": "fable_0375",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0376",
+    "doc_id": "fable_0376",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0377",
+    "doc_id": "fable_0377",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0378",
+    "doc_id": "fable_0378",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0379",
+    "doc_id": "fable_0379",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0380",
+    "doc_id": "fable_0380",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0381",
+    "doc_id": "fable_0381",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0382",
+    "doc_id": "fable_0382",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0383",
+    "doc_id": "fable_0383",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0384",
+    "doc_id": "fable_0384",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0385",
+    "doc_id": "fable_0385",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0386",
+    "doc_id": "fable_0386",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0387",
+    "doc_id": "fable_0387",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0388",
+    "doc_id": "fable_0388",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0389",
+    "doc_id": "fable_0389",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0390",
+    "doc_id": "fable_0390",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0391",
+    "doc_id": "fable_0391",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0392",
+    "doc_id": "fable_0392",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0393",
+    "doc_id": "fable_0393",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0394",
+    "doc_id": "fable_0394",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0395",
+    "doc_id": "fable_0395",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0396",
+    "doc_id": "fable_0396",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0397",
+    "doc_id": "fable_0397",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0398",
+    "doc_id": "fable_0398",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0399",
+    "doc_id": "fable_0399",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0400",
+    "doc_id": "fable_0400",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0401",
+    "doc_id": "fable_0401",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0402",
+    "doc_id": "fable_0402",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0403",
+    "doc_id": "fable_0403",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0404",
+    "doc_id": "fable_0404",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0405",
+    "doc_id": "fable_0405",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0406",
+    "doc_id": "fable_0406",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0407",
+    "doc_id": "fable_0407",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0408",
+    "doc_id": "fable_0408",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0409",
+    "doc_id": "fable_0409",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0410",
+    "doc_id": "fable_0410",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0411",
+    "doc_id": "fable_0411",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0412",
+    "doc_id": "fable_0412",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0413",
+    "doc_id": "fable_0413",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0414",
+    "doc_id": "fable_0414",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0415",
+    "doc_id": "fable_0415",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0416",
+    "doc_id": "fable_0416",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0417",
+    "doc_id": "fable_0417",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0418",
+    "doc_id": "fable_0418",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0419",
+    "doc_id": "fable_0419",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0420",
+    "doc_id": "fable_0420",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0421",
+    "doc_id": "fable_0421",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0422",
+    "doc_id": "fable_0422",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0423",
+    "doc_id": "fable_0423",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0424",
+    "doc_id": "fable_0424",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0425",
+    "doc_id": "fable_0425",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0426",
+    "doc_id": "fable_0426",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0427",
+    "doc_id": "fable_0427",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0428",
+    "doc_id": "fable_0428",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0429",
+    "doc_id": "fable_0429",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0430",
+    "doc_id": "fable_0430",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0431",
+    "doc_id": "fable_0431",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0432",
+    "doc_id": "fable_0432",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0433",
+    "doc_id": "fable_0433",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0434",
+    "doc_id": "fable_0434",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0435",
+    "doc_id": "fable_0435",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0436",
+    "doc_id": "fable_0436",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0437",
+    "doc_id": "fable_0437",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0438",
+    "doc_id": "fable_0438",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0439",
+    "doc_id": "fable_0439",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0440",
+    "doc_id": "fable_0440",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0441",
+    "doc_id": "fable_0441",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0442",
+    "doc_id": "fable_0442",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0443",
+    "doc_id": "fable_0443",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0444",
+    "doc_id": "fable_0444",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0445",
+    "doc_id": "fable_0445",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0446",
+    "doc_id": "fable_0446",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0447",
+    "doc_id": "fable_0447",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0448",
+    "doc_id": "fable_0448",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0449",
+    "doc_id": "fable_0449",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0450",
+    "doc_id": "fable_0450",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0451",
+    "doc_id": "fable_0451",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0452",
+    "doc_id": "fable_0452",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0453",
+    "doc_id": "fable_0453",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0454",
+    "doc_id": "fable_0454",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0455",
+    "doc_id": "fable_0455",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0456",
+    "doc_id": "fable_0456",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0457",
+    "doc_id": "fable_0457",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0458",
+    "doc_id": "fable_0458",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0459",
+    "doc_id": "fable_0459",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0460",
+    "doc_id": "fable_0460",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0461",
+    "doc_id": "fable_0461",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0462",
+    "doc_id": "fable_0462",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0463",
+    "doc_id": "fable_0463",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0464",
+    "doc_id": "fable_0464",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0465",
+    "doc_id": "fable_0465",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0466",
+    "doc_id": "fable_0466",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0467",
+    "doc_id": "fable_0467",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0468",
+    "doc_id": "fable_0468",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0469",
+    "doc_id": "fable_0469",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0470",
+    "doc_id": "fable_0470",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0471",
+    "doc_id": "fable_0471",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0472",
+    "doc_id": "fable_0472",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0473",
+    "doc_id": "fable_0473",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0474",
+    "doc_id": "fable_0474",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0475",
+    "doc_id": "fable_0475",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0476",
+    "doc_id": "fable_0476",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0477",
+    "doc_id": "fable_0477",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0478",
+    "doc_id": "fable_0478",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0479",
+    "doc_id": "fable_0479",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0480",
+    "doc_id": "fable_0480",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0481",
+    "doc_id": "fable_0481",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0482",
+    "doc_id": "fable_0482",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0483",
+    "doc_id": "fable_0483",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0484",
+    "doc_id": "fable_0484",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0485",
+    "doc_id": "fable_0485",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0486",
+    "doc_id": "fable_0486",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0487",
+    "doc_id": "fable_0487",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0488",
+    "doc_id": "fable_0488",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0489",
+    "doc_id": "fable_0489",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0490",
+    "doc_id": "fable_0490",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0491",
+    "doc_id": "fable_0491",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0492",
+    "doc_id": "fable_0492",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0493",
+    "doc_id": "fable_0493",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0494",
+    "doc_id": "fable_0494",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0495",
+    "doc_id": "fable_0495",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0496",
+    "doc_id": "fable_0496",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0497",
+    "doc_id": "fable_0497",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0498",
+    "doc_id": "fable_0498",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0499",
+    "doc_id": "fable_0499",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0500",
+    "doc_id": "fable_0500",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0501",
+    "doc_id": "fable_0501",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0502",
+    "doc_id": "fable_0502",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0503",
+    "doc_id": "fable_0503",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0504",
+    "doc_id": "fable_0504",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0505",
+    "doc_id": "fable_0505",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0506",
+    "doc_id": "fable_0506",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0507",
+    "doc_id": "fable_0507",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0508",
+    "doc_id": "fable_0508",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0509",
+    "doc_id": "fable_0509",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0510",
+    "doc_id": "fable_0510",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0511",
+    "doc_id": "fable_0511",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0512",
+    "doc_id": "fable_0512",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0513",
+    "doc_id": "fable_0513",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0514",
+    "doc_id": "fable_0514",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0515",
+    "doc_id": "fable_0515",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0516",
+    "doc_id": "fable_0516",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0517",
+    "doc_id": "fable_0517",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0518",
+    "doc_id": "fable_0518",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0519",
+    "doc_id": "fable_0519",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0520",
+    "doc_id": "fable_0520",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0521",
+    "doc_id": "fable_0521",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0522",
+    "doc_id": "fable_0522",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0523",
+    "doc_id": "fable_0523",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0524",
+    "doc_id": "fable_0524",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0525",
+    "doc_id": "fable_0525",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0526",
+    "doc_id": "fable_0526",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0527",
+    "doc_id": "fable_0527",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0528",
+    "doc_id": "fable_0528",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0529",
+    "doc_id": "fable_0529",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0530",
+    "doc_id": "fable_0530",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0531",
+    "doc_id": "fable_0531",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0532",
+    "doc_id": "fable_0532",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0533",
+    "doc_id": "fable_0533",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0534",
+    "doc_id": "fable_0534",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0535",
+    "doc_id": "fable_0535",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0536",
+    "doc_id": "fable_0536",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0537",
+    "doc_id": "fable_0537",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0538",
+    "doc_id": "fable_0538",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0539",
+    "doc_id": "fable_0539",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0540",
+    "doc_id": "fable_0540",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0541",
+    "doc_id": "fable_0541",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0542",
+    "doc_id": "fable_0542",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0543",
+    "doc_id": "fable_0543",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0544",
+    "doc_id": "fable_0544",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0545",
+    "doc_id": "fable_0545",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0546",
+    "doc_id": "fable_0546",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0547",
+    "doc_id": "fable_0547",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0548",
+    "doc_id": "fable_0548",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0549",
+    "doc_id": "fable_0549",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0550",
+    "doc_id": "fable_0550",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0551",
+    "doc_id": "fable_0551",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0552",
+    "doc_id": "fable_0552",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0553",
+    "doc_id": "fable_0553",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0554",
+    "doc_id": "fable_0554",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0555",
+    "doc_id": "fable_0555",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0556",
+    "doc_id": "fable_0556",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0557",
+    "doc_id": "fable_0557",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0558",
+    "doc_id": "fable_0558",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0559",
+    "doc_id": "fable_0559",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0560",
+    "doc_id": "fable_0560",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0561",
+    "doc_id": "fable_0561",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0562",
+    "doc_id": "fable_0562",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0563",
+    "doc_id": "fable_0563",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0564",
+    "doc_id": "fable_0564",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0565",
+    "doc_id": "fable_0565",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0566",
+    "doc_id": "fable_0566",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0567",
+    "doc_id": "fable_0567",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0568",
+    "doc_id": "fable_0568",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0569",
+    "doc_id": "fable_0569",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0570",
+    "doc_id": "fable_0570",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0571",
+    "doc_id": "fable_0571",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0572",
+    "doc_id": "fable_0572",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0573",
+    "doc_id": "fable_0573",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0574",
+    "doc_id": "fable_0574",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0575",
+    "doc_id": "fable_0575",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0576",
+    "doc_id": "fable_0576",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0577",
+    "doc_id": "fable_0577",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0578",
+    "doc_id": "fable_0578",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0579",
+    "doc_id": "fable_0579",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0580",
+    "doc_id": "fable_0580",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0581",
+    "doc_id": "fable_0581",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0582",
+    "doc_id": "fable_0582",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0583",
+    "doc_id": "fable_0583",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0584",
+    "doc_id": "fable_0584",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0585",
+    "doc_id": "fable_0585",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0586",
+    "doc_id": "fable_0586",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0587",
+    "doc_id": "fable_0587",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0588",
+    "doc_id": "fable_0588",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0589",
+    "doc_id": "fable_0589",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0590",
+    "doc_id": "fable_0590",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0591",
+    "doc_id": "fable_0591",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0592",
+    "doc_id": "fable_0592",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0593",
+    "doc_id": "fable_0593",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0594",
+    "doc_id": "fable_0594",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0595",
+    "doc_id": "fable_0595",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0596",
+    "doc_id": "fable_0596",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0597",
+    "doc_id": "fable_0597",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0598",
+    "doc_id": "fable_0598",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0599",
+    "doc_id": "fable_0599",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0600",
+    "doc_id": "fable_0600",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0601",
+    "doc_id": "fable_0601",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0602",
+    "doc_id": "fable_0602",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0603",
+    "doc_id": "fable_0603",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0604",
+    "doc_id": "fable_0604",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0605",
+    "doc_id": "fable_0605",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0606",
+    "doc_id": "fable_0606",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0607",
+    "doc_id": "fable_0607",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0608",
+    "doc_id": "fable_0608",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0609",
+    "doc_id": "fable_0609",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0610",
+    "doc_id": "fable_0610",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0611",
+    "doc_id": "fable_0611",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0612",
+    "doc_id": "fable_0612",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0613",
+    "doc_id": "fable_0613",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0614",
+    "doc_id": "fable_0614",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0615",
+    "doc_id": "fable_0615",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0616",
+    "doc_id": "fable_0616",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0617",
+    "doc_id": "fable_0617",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0618",
+    "doc_id": "fable_0618",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0619",
+    "doc_id": "fable_0619",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0620",
+    "doc_id": "fable_0620",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0621",
+    "doc_id": "fable_0621",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0622",
+    "doc_id": "fable_0622",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0623",
+    "doc_id": "fable_0623",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0624",
+    "doc_id": "fable_0624",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0625",
+    "doc_id": "fable_0625",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0626",
+    "doc_id": "fable_0626",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0627",
+    "doc_id": "fable_0627",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0628",
+    "doc_id": "fable_0628",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0629",
+    "doc_id": "fable_0629",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0630",
+    "doc_id": "fable_0630",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0631",
+    "doc_id": "fable_0631",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0632",
+    "doc_id": "fable_0632",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0633",
+    "doc_id": "fable_0633",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0634",
+    "doc_id": "fable_0634",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0635",
+    "doc_id": "fable_0635",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0636",
+    "doc_id": "fable_0636",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0637",
+    "doc_id": "fable_0637",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0638",
+    "doc_id": "fable_0638",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0639",
+    "doc_id": "fable_0639",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0640",
+    "doc_id": "fable_0640",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0641",
+    "doc_id": "fable_0641",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0642",
+    "doc_id": "fable_0642",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0643",
+    "doc_id": "fable_0643",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0644",
+    "doc_id": "fable_0644",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0645",
+    "doc_id": "fable_0645",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0646",
+    "doc_id": "fable_0646",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0647",
+    "doc_id": "fable_0647",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0648",
+    "doc_id": "fable_0648",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0649",
+    "doc_id": "fable_0649",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0650",
+    "doc_id": "fable_0650",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0651",
+    "doc_id": "fable_0651",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0652",
+    "doc_id": "fable_0652",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0653",
+    "doc_id": "fable_0653",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0654",
+    "doc_id": "fable_0654",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0655",
+    "doc_id": "fable_0655",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0656",
+    "doc_id": "fable_0656",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0657",
+    "doc_id": "fable_0657",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0658",
+    "doc_id": "fable_0658",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0659",
+    "doc_id": "fable_0659",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0660",
+    "doc_id": "fable_0660",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0661",
+    "doc_id": "fable_0661",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0662",
+    "doc_id": "fable_0662",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0663",
+    "doc_id": "fable_0663",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0664",
+    "doc_id": "fable_0664",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0665",
+    "doc_id": "fable_0665",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0666",
+    "doc_id": "fable_0666",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0667",
+    "doc_id": "fable_0667",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0668",
+    "doc_id": "fable_0668",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0669",
+    "doc_id": "fable_0669",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0670",
+    "doc_id": "fable_0670",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0671",
+    "doc_id": "fable_0671",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0672",
+    "doc_id": "fable_0672",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0673",
+    "doc_id": "fable_0673",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0674",
+    "doc_id": "fable_0674",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0675",
+    "doc_id": "fable_0675",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0676",
+    "doc_id": "fable_0676",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0677",
+    "doc_id": "fable_0677",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0678",
+    "doc_id": "fable_0678",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0679",
+    "doc_id": "fable_0679",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0680",
+    "doc_id": "fable_0680",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0681",
+    "doc_id": "fable_0681",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0682",
+    "doc_id": "fable_0682",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0683",
+    "doc_id": "fable_0683",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0684",
+    "doc_id": "fable_0684",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0685",
+    "doc_id": "fable_0685",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0686",
+    "doc_id": "fable_0686",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0687",
+    "doc_id": "fable_0687",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0688",
+    "doc_id": "fable_0688",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0689",
+    "doc_id": "fable_0689",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0690",
+    "doc_id": "fable_0690",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0691",
+    "doc_id": "fable_0691",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0692",
+    "doc_id": "fable_0692",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0693",
+    "doc_id": "fable_0693",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0694",
+    "doc_id": "fable_0694",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0695",
+    "doc_id": "fable_0695",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0696",
+    "doc_id": "fable_0696",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0697",
+    "doc_id": "fable_0697",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0698",
+    "doc_id": "fable_0698",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0699",
+    "doc_id": "fable_0699",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0700",
+    "doc_id": "fable_0700",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0701",
+    "doc_id": "fable_0701",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0702",
+    "doc_id": "fable_0702",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0703",
+    "doc_id": "fable_0703",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0704",
+    "doc_id": "fable_0704",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0705",
+    "doc_id": "fable_0705",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0706",
+    "doc_id": "fable_0706",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0707",
+    "doc_id": "fable_0707",
+    "relevance": 1
+  },
+  {
+    "query_id": "moral_0708",
+    "doc_id": "fable_0708",
+    "relevance": 1
+  }
+]

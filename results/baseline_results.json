@@ -1,0 +1,62 @@
+[
+  {
+    "MRR": 0.06258538818810035,
+    "R-Precision": 0.03385049365303244,
+    "Recall@1": 0.03385049365303244,
+    "Recall@5": 0.07475317348377997,
+    "Recall@10": 0.11706629055007052,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  {
+    "MRR": 0.0790085267829575,
+    "R-Precision": 0.04372355430183357,
+    "Recall@1": 0.04372355430183357,
+    "Recall@5": 0.09449929478138223,
+    "Recall@10": 0.14527503526093088,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  {
+    "MRR": 0.02619556611406919,
+    "R-Precision": 0.011764705882352941,
+    "Recall@1": 0.011764705882352941,
+    "Recall@5": 0.03529411764705882,
+    "Recall@10": 0.045098039215686274,
+    "n_queries": 510,
+    "task": "fable\u2192moral (augmented)",
+    "model": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  {
+    "MRR": 0.06506538916717014,
+    "R-Precision": 0.02679830747531735,
+    "Recall@1": 0.02679830747531735,
+    "Recall@5": 0.08321579689703808,
+    "Recall@10": 0.12693935119887165,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "sentence-transformers/all-mpnet-base-v2"
+  },
+  {
+    "MRR": 0.07747619375404048,
+    "R-Precision": 0.03244005641748942,
+    "Recall@1": 0.03244005641748942,
+    "Recall@5": 0.10296191819464035,
+    "Recall@10": 0.1622002820874471,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "sentence-transformers/all-mpnet-base-v2"
+  },
+  {
+    "MRR": 0.025834975676979288,
+    "R-Precision": 0.011764705882352941,
+    "Recall@1": 0.011764705882352941,
+    "Recall@5": 0.027450980392156862,
+    "Recall@10": 0.047058823529411764,
+    "n_queries": 510,
+    "task": "fable\u2192moral (augmented)",
+    "model": "sentence-transformers/all-mpnet-base-v2"
+  }
+]

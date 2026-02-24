@@ -1,0 +1,3547 @@
+[
+  {
+    "doc_id": "moral_0000",
+    "text": "Gratitude is the sign of noble souls.",
+    "fable_id": "fable_0000"
+  },
+  {
+    "doc_id": "moral_0001",
+    "text": "Appearances are deceptive.",
+    "fable_id": "fable_0001"
+  },
+  {
+    "doc_id": "moral_0002",
+    "text": "There's a time for work and a time for play.",
+    "fable_id": "fable_0002"
+  },
+  {
+    "doc_id": "moral_0003",
+    "text": "In quarreling about the shadow we often lose the substance.",
+    "fable_id": "fable_0003"
+  },
+  {
+    "doc_id": "moral_0004",
+    "text": "Men often bear little grievances with less courage than they do large misfortunes.",
+    "fable_id": "fable_0004"
+  },
+  {
+    "doc_id": "moral_0005",
+    "text": "To be satisfied with one's lot is better than to desire something which one is not fitted to receive.",
+    "fable_id": "fable_0005"
+  },
+  {
+    "doc_id": "moral_0006",
+    "text": "Clumsy jesting is no joke.",
+    "fable_id": "fable_0006"
+  },
+  {
+    "doc_id": "moral_0007",
+    "text": "An ounce of prevention is worth a pound of cure.",
+    "fable_id": "fable_0007"
+  },
+  {
+    "doc_id": "moral_0008",
+    "text": "Fine clothes may disguise, but silly words will disclose a fool.",
+    "fable_id": "fable_0008"
+  },
+  {
+    "doc_id": "moral_0009",
+    "text": "Wit has always an answer ready.",
+    "fable_id": "fable_0009"
+  },
+  {
+    "doc_id": "moral_0010",
+    "text": "Vices are their own punishment.",
+    "fable_id": "fable_0010"
+  },
+  {
+    "doc_id": "moral_0011",
+    "text": "It's good to be able to laugh at yourself.",
+    "fable_id": "fable_0011"
+  },
+  {
+    "doc_id": "moral_0012",
+    "text": "You will only injure yourself if you take notice of despicable enemies.",
+    "fable_id": "fable_0012"
+  },
+  {
+    "doc_id": "moral_0013",
+    "text": "He that is neither one thing nor the other has no friends.",
+    "fable_id": "fable_0013"
+  },
+  {
+    "doc_id": "moral_0014",
+    "text": "Misfortune tests the sincerity of friends.",
+    "fable_id": "fable_0014"
+  },
+  {
+    "doc_id": "moral_0015",
+    "text": "It is easy to propose impossible remedies.",
+    "fable_id": "fable_0015"
+  },
+  {
+    "doc_id": "moral_0016",
+    "text": "Each member in his proper sphere must work for the common good",
+    "fable_id": "fable_0016"
+  },
+  {
+    "doc_id": "moral_0017",
+    "text": "Necessity knows no law.",
+    "fable_id": "fable_0017"
+  },
+  {
+    "doc_id": "moral_0018",
+    "text": "Be on guard against men who can strike from a distance.",
+    "fable_id": "fable_0018"
+  },
+  {
+    "doc_id": "moral_0019",
+    "text": "Do not attempt too much at once.",
+    "fable_id": "fable_0019"
+  },
+  {
+    "doc_id": "moral_0020",
+    "text": "One man's pleasure may be another's pain.",
+    "fable_id": "fable_0020"
+  },
+  {
+    "doc_id": "moral_0021",
+    "text": "Whatever you do, do with all your might.",
+    "fable_id": "fable_0021"
+  },
+  {
+    "doc_id": "moral_0022",
+    "text": "Men often applaud an imitation and hiss the real thing.",
+    "fable_id": "fable_0022"
+  },
+  {
+    "doc_id": "moral_0023",
+    "text": "Nature reveals itself.",
+    "fable_id": "fable_0023"
+  },
+  {
+    "doc_id": "moral_0024",
+    "text": "Nature reveals itself.",
+    "fable_id": "fable_0024"
+  },
+  {
+    "doc_id": "moral_0025",
+    "text": "He who is once deceived is doubly cautious.",
+    "fable_id": "fable_0025"
+  },
+  {
+    "doc_id": "moral_0026",
+    "text": "Precious things are for those that can prize them.",
+    "fable_id": "fable_0026"
+  },
+  {
+    "doc_id": "moral_0027",
+    "text": "Little by little does the trick.",
+    "fable_id": "fable_0027"
+  },
+  {
+    "doc_id": "moral_0028",
+    "text": "Men often revert to their natural instincts.",
+    "fable_id": "fable_0028"
+  },
+  {
+    "doc_id": "moral_0029",
+    "text": "Those who enter by the back stairs may expect to be shown out at the window.",
+    "fable_id": "fable_0029"
+  },
+  {
+    "doc_id": "moral_0030",
+    "text": "People often grudge others what they cannot enjoy themselves.",
+    "fable_id": "fable_0030"
+  },
+  {
+    "doc_id": "moral_0031",
+    "text": "He who covets what belongs to another, deservedly loses his own.",
+    "fable_id": "fable_0031"
+  },
+  {
+    "doc_id": "moral_0032",
+    "text": "How often do we supply our enemies with the means of our own destruction.",
+    "fable_id": "fable_0032"
+  },
+  {
+    "doc_id": "moral_0033",
+    "text": "If words suffice not, blows must follow.",
+    "fable_id": "fable_0033"
+  },
+  {
+    "doc_id": "moral_0034",
+    "text": "The greatest kindness will not bind the ungrateful.",
+    "fable_id": "fable_0034"
+  },
+  {
+    "doc_id": "moral_0035",
+    "text": "Birds of a feather flock together.",
+    "fable_id": "fable_0035"
+  },
+  {
+    "doc_id": "moral_0036",
+    "text": "A little thing in hand is worth more than a great thing in prospect.",
+    "fable_id": "fable_0036"
+  },
+  {
+    "doc_id": "moral_0037",
+    "text": "To do the right thing at the right season is a great art.",
+    "fable_id": "fable_0037"
+  },
+  {
+    "doc_id": "moral_0038",
+    "text": "Union is strength.",
+    "fable_id": "fable_0038"
+  },
+  {
+    "doc_id": "moral_0039",
+    "text": "It is foolish to expect help from someone who is naturally unkind.",
+    "fable_id": "fable_0039"
+  },
+  {
+    "doc_id": "moral_0040",
+    "text": "Better one safe way than a hundred on which you cannot reckon.",
+    "fable_id": "fable_0040"
+  },
+  {
+    "doc_id": "moral_0041",
+    "text": "Cunning often outwits itself.",
+    "fable_id": "fable_0041"
+  },
+  {
+    "doc_id": "moral_0042",
+    "text": "Do unto others what you would have them do unto you.",
+    "fable_id": "fable_0042"
+  },
+  {
+    "doc_id": "moral_0043",
+    "text": "Flatters are not to be trusted.",
+    "fable_id": "fable_0043"
+  },
+  {
+    "doc_id": "moral_0044",
+    "text": "Do not trust flatterers.",
+    "fable_id": "fable_0044"
+  },
+  {
+    "doc_id": "moral_0045",
+    "text": "Look before you leap.",
+    "fable_id": "fable_0045"
+  },
+  {
+    "doc_id": "moral_0046",
+    "text": "Consider carefully before changing your situation.",
+    "fable_id": "fable_0046"
+  },
+  {
+    "doc_id": "moral_0047",
+    "text": "There is as much malice in a wink as in a word.",
+    "fable_id": "fable_0047"
+  },
+  {
+    "doc_id": "moral_0048",
+    "text": "Better no rule than cruel rule.",
+    "fable_id": "fable_0048"
+  },
+  {
+    "doc_id": "moral_0049",
+    "text": "Old friends should not be sacrificed for new ones.",
+    "fable_id": "fable_0049"
+  },
+  {
+    "doc_id": "moral_0050",
+    "text": "Greed often overreaches itself.",
+    "fable_id": "fable_0050"
+  },
+  {
+    "doc_id": "moral_0051",
+    "text": "Necessity is our strongest weapon.",
+    "fable_id": "fable_0051"
+  },
+  {
+    "doc_id": "moral_0052",
+    "text": "There is always someone worse off than yourself.",
+    "fable_id": "fable_0052"
+  },
+  {
+    "doc_id": "moral_0053",
+    "text": "He that has many friends, has no friends.",
+    "fable_id": "fable_0053"
+  },
+  {
+    "doc_id": "moral_0054",
+    "text": "We often despise what is most useful to us.",
+    "fable_id": "fable_0054"
+  },
+  {
+    "doc_id": "moral_0055",
+    "text": "Nothing escapes the master's eye",
+    "fable_id": "fable_0055"
+  },
+  {
+    "doc_id": "moral_0056",
+    "text": "Avoid a remedy that is worse than the disease.",
+    "fable_id": "fable_0056"
+  },
+  {
+    "doc_id": "moral_0057",
+    "text": "He laughs best that laughs last.",
+    "fable_id": "fable_0057"
+  },
+  {
+    "doc_id": "moral_0058",
+    "text": "Strife feeds on conflict.",
+    "fable_id": "fable_0058"
+  },
+  {
+    "doc_id": "moral_0059",
+    "text": "Self-help is the best help.",
+    "fable_id": "fable_0059"
+  },
+  {
+    "doc_id": "moral_0060",
+    "text": "If you allow men to use you for your own purposes, they will use you for theirs.",
+    "fable_id": "fable_0060"
+  },
+  {
+    "doc_id": "moral_0061",
+    "text": "The hero is brave in deeds as well as words.",
+    "fable_id": "fable_0061"
+  },
+  {
+    "doc_id": "moral_0062",
+    "text": "Abstain and enjoy.",
+    "fable_id": "fable_0062"
+  },
+  {
+    "doc_id": "moral_0063",
+    "text": "The desire for imaginary benefits often involves the loss of present blessings.",
+    "fable_id": "fable_0063"
+  },
+  {
+    "doc_id": "moral_0064",
+    "text": "Sorrow not over what is lost forever",
+    "fable_id": "fable_0064"
+  },
+  {
+    "doc_id": "moral_0065",
+    "text": "Youth's first duty is reverence to parents.",
+    "fable_id": "fable_0065"
+  },
+  {
+    "doc_id": "moral_0066",
+    "text": "Self-help is the best help.",
+    "fable_id": "fable_0066"
+  },
+  {
+    "doc_id": "moral_0067",
+    "text": "Try before you trust.",
+    "fable_id": "fable_0067"
+  },
+  {
+    "doc_id": "moral_0068",
+    "text": "Happy is the man who learns from the misfortunes of others.",
+    "fable_id": "fable_0068"
+  },
+  {
+    "doc_id": "moral_0069",
+    "text": "Small liberties can be large offenses.",
+    "fable_id": "fable_0069"
+  },
+  {
+    "doc_id": "moral_0070",
+    "text": "You may share the labours of the great, but you will not share the spoil.",
+    "fable_id": "fable_0070"
+  },
+  {
+    "doc_id": "moral_0071",
+    "text": "Wit always has an answer ready.",
+    "fable_id": "fable_0071"
+  },
+  {
+    "doc_id": "moral_0072",
+    "text": "Straws show how the wind blows.",
+    "fable_id": "fable_0072"
+  },
+  {
+    "doc_id": "moral_0073",
+    "text": "Yield to all and you will soon have nothing to yield.",
+    "fable_id": "fable_0073"
+  },
+  {
+    "doc_id": "moral_0074",
+    "text": "The man who talks for both sides is not to be trusted by either.",
+    "fable_id": "fable_0074"
+  },
+  {
+    "doc_id": "moral_0075",
+    "text": "One story is good, till another is told.",
+    "fable_id": "fable_0075"
+  },
+  {
+    "doc_id": "moral_0076",
+    "text": "Greatness has its penalties.",
+    "fable_id": "fable_0076"
+  },
+  {
+    "doc_id": "moral_0077",
+    "text": "Do not count your chickens before they are hatched.",
+    "fable_id": "fable_0077"
+  },
+  {
+    "doc_id": "moral_0078",
+    "text": "Try to please all and you end by pleasing none.",
+    "fable_id": "fable_0078"
+  },
+  {
+    "doc_id": "moral_0079",
+    "text": "Don't make a big fuss over nothing.",
+    "fable_id": "fable_0079"
+  },
+  {
+    "doc_id": "moral_0080",
+    "text": "Enemies' promises are made to be broken.",
+    "fable_id": "fable_0080"
+  },
+  {
+    "doc_id": "moral_0081",
+    "text": "Be sure of your pedigree before you boast of it.",
+    "fable_id": "fable_0081"
+  },
+  {
+    "doc_id": "moral_0082",
+    "text": "Enemies' promises were made to be broken.",
+    "fable_id": "fable_0082"
+  },
+  {
+    "doc_id": "moral_0083",
+    "text": "Stoop to conquer.",
+    "fable_id": "fable_0083"
+  },
+  {
+    "doc_id": "moral_0084",
+    "text": "Trouble comes from the direction we least expect it.",
+    "fable_id": "fable_0084"
+  },
+  {
+    "doc_id": "moral_0085",
+    "text": "Be content with your lot; one cannot be first in everything.",
+    "fable_id": "fable_0085"
+  },
+  {
+    "doc_id": "moral_0086",
+    "text": "Self-interest alone moves some men.",
+    "fable_id": "fable_0086"
+  },
+  {
+    "doc_id": "moral_0087",
+    "text": "Those who would mend others, should first mend themselves.",
+    "fable_id": "fable_0087"
+  },
+  {
+    "doc_id": "moral_0088",
+    "text": "Change of habit cannot alter nature.",
+    "fable_id": "fable_0088"
+  },
+  {
+    "doc_id": "moral_0089",
+    "text": "Vicious people cannot resist hurting others even when it is not in their own interests",
+    "fable_id": "fable_0089"
+  },
+  {
+    "doc_id": "moral_0090",
+    "text": "Regardless of our wishes, or even our intent, it is to our Nature alone that we will be faithful.",
+    "fable_id": "fable_0090"
+  },
+  {
+    "doc_id": "moral_0091",
+    "text": "One good turn deserves another.",
+    "fable_id": "fable_0091"
+  },
+  {
+    "doc_id": "moral_0092",
+    "text": "It is useless attacking the insensible.",
+    "fable_id": "fable_0092"
+  },
+  {
+    "doc_id": "moral_0093",
+    "text": "Understand what you are doing before you do it.",
+    "fable_id": "fable_0093"
+  },
+  {
+    "doc_id": "moral_0094",
+    "text": "There is no believing a liar, even when he speaks the truth.",
+    "fable_id": "fable_0094"
+  },
+  {
+    "doc_id": "moral_0095",
+    "text": "A liar deceives no one but himself.",
+    "fable_id": "fable_0095"
+  },
+  {
+    "doc_id": "moral_0096",
+    "text": "Fine work gets preserved and treasured.",
+    "fable_id": "fable_0096"
+  },
+  {
+    "doc_id": "moral_0097",
+    "text": "Two blacks do not make a white.",
+    "fable_id": "fable_0097"
+  },
+  {
+    "doc_id": "moral_0098",
+    "text": "Destroy the seed of evil, or it will grow up to your ruin.",
+    "fable_id": "fable_0098"
+  },
+  {
+    "doc_id": "moral_0099",
+    "text": "A bribe in hand betrays mischief at heart.",
+    "fable_id": "fable_0099"
+  },
+  {
+    "doc_id": "moral_0100",
+    "text": "Every man for himself.",
+    "fable_id": "fable_0100"
+  },
+  {
+    "doc_id": "moral_0101",
+    "text": "Never put yourself in your enemy's clutches.",
+    "fable_id": "fable_0101"
+  },
+  {
+    "doc_id": "moral_0102",
+    "text": "If men had all they wished, they would be often ruined.",
+    "fable_id": "fable_0102"
+  },
+  {
+    "doc_id": "moral_0103",
+    "text": "Everyone is more or less master of his own fate.",
+    "fable_id": "fable_0103"
+  },
+  {
+    "doc_id": "moral_0104",
+    "text": "The loiterer often blames delay on his more active friend.",
+    "fable_id": "fable_0104"
+  },
+  {
+    "doc_id": "moral_0105",
+    "text": "Obscurity often brings safety.",
+    "fable_id": "fable_0105"
+  },
+  {
+    "doc_id": "moral_0106",
+    "text": "He who incites to strife is worse than he who takes part in it.",
+    "fable_id": "fable_0106"
+  },
+  {
+    "doc_id": "moral_0107",
+    "text": "Equals make the best friends.",
+    "fable_id": "fable_0107"
+  },
+  {
+    "doc_id": "moral_0108",
+    "text": "The strong and the weak cannot keep company.",
+    "fable_id": "fable_0108"
+  },
+  {
+    "doc_id": "moral_0109",
+    "text": "He who shares the danger ought to share the prize.",
+    "fable_id": "fable_0109"
+  },
+  {
+    "doc_id": "moral_0110",
+    "text": "It is not only fine feathers that make fine birds.",
+    "fable_id": "fable_0110"
+  },
+  {
+    "doc_id": "moral_0111",
+    "text": "Quality is better than quantity.",
+    "fable_id": "fable_0111"
+  },
+  {
+    "doc_id": "moral_0112",
+    "text": "The least outlay is not always the greatest gain.",
+    "fable_id": "fable_0112"
+  },
+  {
+    "doc_id": "moral_0113",
+    "text": "An invitation prompted by selfishness is not to be accepted.",
+    "fable_id": "fable_0113"
+  },
+  {
+    "doc_id": "moral_0114",
+    "text": "Do not say anything at any time that you would not say at all times.",
+    "fable_id": "fable_0114"
+  },
+  {
+    "doc_id": "moral_0115",
+    "text": "Men often condemn others for what they see no wrong in doing themselves.",
+    "fable_id": "fable_0115"
+  },
+  {
+    "doc_id": "moral_0116",
+    "text": "Seek to harm and harm shall find you.",
+    "fable_id": "fable_0116"
+  },
+  {
+    "doc_id": "moral_0117",
+    "text": "Appearances are deceptive.",
+    "fable_id": "fable_0117"
+  },
+  {
+    "doc_id": "moral_0118",
+    "text": "No gratitude from the wicked.",
+    "fable_id": "fable_0118"
+  },
+  {
+    "doc_id": "moral_0119",
+    "text": "We are made by our teachings in youth.",
+    "fable_id": "fable_0119"
+  },
+  {
+    "doc_id": "moral_0120",
+    "text": "Some things you cannot change.",
+    "fable_id": "fable_0120"
+  },
+  {
+    "doc_id": "moral_0121",
+    "text": "Do not trust the wicked.",
+    "fable_id": "fable_0121"
+  },
+  {
+    "doc_id": "moral_0122",
+    "text": "There is always someone else worse off than you.",
+    "fable_id": "fable_0122"
+  },
+  {
+    "doc_id": "moral_0123",
+    "text": "There is strength in restraint.",
+    "fable_id": "fable_0123"
+  },
+  {
+    "doc_id": "moral_0124",
+    "text": "A discerning speaker can deftly turn the insults of his enemies into compliments.",
+    "fable_id": "fable_0124"
+  },
+  {
+    "doc_id": "moral_0125",
+    "text": "Great achievements are often blocked by some small thing which prevents their realization.",
+    "fable_id": "fable_0125"
+  },
+  {
+    "doc_id": "moral_0126",
+    "text": "Sometimes a small sacrifice results in a greater good.",
+    "fable_id": "fable_0126"
+  },
+  {
+    "doc_id": "moral_0127",
+    "text": "Necessity is the mother of invention.",
+    "fable_id": "fable_0127"
+  },
+  {
+    "doc_id": "moral_0128",
+    "text": "When people harbor a criminal they become his first victims without even realizing it.",
+    "fable_id": "fable_0128"
+  },
+  {
+    "doc_id": "moral_0129",
+    "text": "Resting the mind is essential for clear thinking.",
+    "fable_id": "fable_0129"
+  },
+  {
+    "doc_id": "moral_0130",
+    "text": "It is unwise to reward when one should punish.",
+    "fable_id": "fable_0130"
+  },
+  {
+    "doc_id": "moral_0131",
+    "text": "Success leads many astray to their ruin.",
+    "fable_id": "fable_0131"
+  },
+  {
+    "doc_id": "moral_0132",
+    "text": "People are asking for trouble if they make fun of someone who is better than they are.",
+    "fable_id": "fable_0132"
+  },
+  {
+    "doc_id": "moral_0133",
+    "text": "Experience often provides clearer insight than empty predictions.",
+    "fable_id": "fable_0133"
+  },
+  {
+    "doc_id": "moral_0134",
+    "text": "A mild disposition can put a stop to vicious behaviour.",
+    "fable_id": "fable_0134"
+  },
+  {
+    "doc_id": "moral_0135",
+    "text": "A mother's nurturing is stronger than a stepmother's attentions.",
+    "fable_id": "fable_0135"
+  },
+  {
+    "doc_id": "moral_0136",
+    "text": "Foolish people disregard important business in favour of frivolities.",
+    "fable_id": "fable_0136"
+  },
+  {
+    "doc_id": "moral_0137",
+    "text": "The dishonest, if they act honestly, get no credit.",
+    "fable_id": "fable_0137"
+  },
+  {
+    "doc_id": "moral_0138",
+    "text": "Self-help is the best help.",
+    "fable_id": "fable_0138"
+  },
+  {
+    "doc_id": "moral_0139",
+    "text": "Gratitude should be shown through kindness, not harm.",
+    "fable_id": "fable_0139"
+  },
+  {
+    "doc_id": "moral_0140",
+    "text": "When people plot against their neighbours, they fall victim to the same sort of plot themselves.",
+    "fable_id": "fable_0140"
+  },
+  {
+    "doc_id": "moral_0141",
+    "text": "Changing your location does not change your state of mind.",
+    "fable_id": "fable_0141"
+  },
+  {
+    "doc_id": "moral_0142",
+    "text": "Enviable conditions often have a downside.",
+    "fable_id": "fable_0142"
+  },
+  {
+    "doc_id": "moral_0143",
+    "text": "Do no overestimate your worth when your fate rests in the hands of the high and the mighty.",
+    "fable_id": "fable_0143"
+  },
+  {
+    "doc_id": "moral_0144",
+    "text": "Burdens can continue in unexpected ways.",
+    "fable_id": "fable_0144"
+  },
+  {
+    "doc_id": "moral_0145",
+    "text": "People get themselves into trouble because of their boasting.",
+    "fable_id": "fable_0145"
+  },
+  {
+    "doc_id": "moral_0146",
+    "text": "Return favors and favors will be bestowed on you.",
+    "fable_id": "fable_0146"
+  },
+  {
+    "doc_id": "moral_0147",
+    "text": "Nature and instincts can persist despite changes in form or appearance.",
+    "fable_id": "fable_0147"
+  },
+  {
+    "doc_id": "moral_0148",
+    "text": "There's a time for work and a time for play.",
+    "fable_id": "fable_0148"
+  },
+  {
+    "doc_id": "moral_0149",
+    "text": "Prepare for the future.",
+    "fable_id": "fable_0149"
+  },
+  {
+    "doc_id": "moral_0150",
+    "text": "Work honestly and you won't be scorned.",
+    "fable_id": "fable_0150"
+  },
+  {
+    "doc_id": "moral_0151",
+    "text": "One good turn deserves another.",
+    "fable_id": "fable_0151"
+  },
+  {
+    "doc_id": "moral_0152",
+    "text": "When someone with a wicked nature changes his appearance, his behaviour remains the same.",
+    "fable_id": "fable_0152"
+  },
+  {
+    "doc_id": "moral_0153",
+    "text": "True value comes from usefulness.",
+    "fable_id": "fable_0153"
+  },
+  {
+    "doc_id": "moral_0154",
+    "text": "Brag and nature may bring you down.",
+    "fable_id": "fable_0154"
+  },
+  {
+    "doc_id": "moral_0155",
+    "text": "He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour.",
+    "fable_id": "fable_0155"
+  },
+  {
+    "doc_id": "moral_0156",
+    "text": "Do not mock the gods.",
+    "fable_id": "fable_0156"
+  },
+  {
+    "doc_id": "moral_0157",
+    "text": "If people who have previously committed a crime are swiftly punished, then others will become afraid on their account.",
+    "fable_id": "fable_0157"
+  },
+  {
+    "doc_id": "moral_0158",
+    "text": "Some things you cannot change.",
+    "fable_id": "fable_0158"
+  },
+  {
+    "doc_id": "moral_0159",
+    "text": "Everyone thinks themselves the best.",
+    "fable_id": "fable_0159"
+  },
+  {
+    "doc_id": "moral_0160",
+    "text": "Do not take credit for the accomplishments of others.",
+    "fable_id": "fable_0160"
+  },
+  {
+    "doc_id": "moral_0161",
+    "text": "Those who refuse to share and respond with rudeness may face dire consequences for their actions.",
+    "fable_id": "fable_0161"
+  },
+  {
+    "doc_id": "moral_0162",
+    "text": "The true leader proves himself by his qualities.",
+    "fable_id": "fable_0162"
+  },
+  {
+    "doc_id": "moral_0163",
+    "text": "Even a high and mighty person should beware of his inferiors; their ingenuity can find a way to take revenge.",
+    "fable_id": "fable_0163"
+  },
+  {
+    "doc_id": "moral_0164",
+    "text": "A single reliable skill is worth more than a bag of useless tricks",
+    "fable_id": "fable_0164"
+  },
+  {
+    "doc_id": "moral_0165",
+    "text": "A wicked nature does not produce a good character.",
+    "fable_id": "fable_0165"
+  },
+  {
+    "doc_id": "moral_0166",
+    "text": "Be true to your roots.",
+    "fable_id": "fable_0166"
+  },
+  {
+    "doc_id": "moral_0167",
+    "text": "True value is wasted on those who cannot appreciate it.",
+    "fable_id": "fable_0167"
+  },
+  {
+    "doc_id": "moral_0168",
+    "text": "You should think twice before offering anything to your enemies.",
+    "fable_id": "fable_0168"
+  },
+  {
+    "doc_id": "moral_0169",
+    "text": "People are often eager to treat their enemies well in the hopes of gaining something by it.",
+    "fable_id": "fable_0169"
+  },
+  {
+    "doc_id": "moral_0170",
+    "text": "Self-effort is essential.",
+    "fable_id": "fable_0170"
+  },
+  {
+    "doc_id": "moral_0171",
+    "text": "Be frank and open in your dealings.",
+    "fable_id": "fable_0171"
+  },
+  {
+    "doc_id": "moral_0172",
+    "text": "Some men underrate their best blessings.",
+    "fable_id": "fable_0172"
+  },
+  {
+    "doc_id": "moral_0173",
+    "text": "True friends are hard to find.",
+    "fable_id": "fable_0173"
+  },
+  {
+    "doc_id": "moral_0174",
+    "text": "Those who pretend to be what they are not, sooner or later, find themselves in deep water.",
+    "fable_id": "fable_0174"
+  },
+  {
+    "doc_id": "moral_0175",
+    "text": "Honor your craft with integrity.",
+    "fable_id": "fable_0175"
+  },
+  {
+    "doc_id": "moral_0176",
+    "text": "We should not call upon the gods in trivial affairs but only in dire necessity.",
+    "fable_id": "fable_0176"
+  },
+  {
+    "doc_id": "moral_0177",
+    "text": "Talking is a waste of time when you can simply provide a demonstration.",
+    "fable_id": "fable_0177"
+  },
+  {
+    "doc_id": "moral_0178",
+    "text": "Do not let fame get to your head.",
+    "fable_id": "fable_0178"
+  },
+  {
+    "doc_id": "moral_0179",
+    "text": "Seize opportunities when they arise.",
+    "fable_id": "fable_0179"
+  },
+  {
+    "doc_id": "moral_0180",
+    "text": "An invitation prompted by selfishness is not to be accepted.",
+    "fable_id": "fable_0180"
+  },
+  {
+    "doc_id": "moral_0181",
+    "text": "People often grasp for more than they need and thus lose the little they have.",
+    "fable_id": "fable_0181"
+  },
+  {
+    "doc_id": "moral_0182",
+    "text": "Expect no reward for serving the wicked.",
+    "fable_id": "fable_0182"
+  },
+  {
+    "doc_id": "moral_0183",
+    "text": "Do not attempt the impossible.",
+    "fable_id": "fable_0183"
+  },
+  {
+    "doc_id": "moral_0184",
+    "text": "Good things happen less often.",
+    "fable_id": "fable_0184"
+  },
+  {
+    "doc_id": "moral_0185",
+    "text": "Expectations can lead to disappointment when reality does not match our desires.",
+    "fable_id": "fable_0185"
+  },
+  {
+    "doc_id": "moral_0186",
+    "text": "Intent matters more than the outcome.",
+    "fable_id": "fable_0186"
+  },
+  {
+    "doc_id": "moral_0187",
+    "text": "Those who seek to please everybody please nobody.",
+    "fable_id": "fable_0187"
+  },
+  {
+    "doc_id": "moral_0188",
+    "text": "Precautions are useless after the crisis.",
+    "fable_id": "fable_0188"
+  },
+  {
+    "doc_id": "moral_0189",
+    "text": "Do not always stick to the same course.",
+    "fable_id": "fable_0189"
+  },
+  {
+    "doc_id": "moral_0190",
+    "text": "He that is neither one thing nor the other has no friends.",
+    "fable_id": "fable_0190"
+  },
+  {
+    "doc_id": "moral_0191",
+    "text": "Learn from past misfortunes.",
+    "fable_id": "fable_0191"
+  },
+  {
+    "doc_id": "moral_0192",
+    "text": "Hunger sharpens the wits.",
+    "fable_id": "fable_0192"
+  },
+  {
+    "doc_id": "moral_0193",
+    "text": "Sometimes one man toils while another profits.",
+    "fable_id": "fable_0193"
+  },
+  {
+    "doc_id": "moral_0194",
+    "text": "Don't take your friends for foes.",
+    "fable_id": "fable_0194"
+  },
+  {
+    "doc_id": "moral_0195",
+    "text": "What is valued in one group may be dismissed by another.",
+    "fable_id": "fable_0195"
+  },
+  {
+    "doc_id": "moral_0196",
+    "text": "Pretenders will be found out.",
+    "fable_id": "fable_0196"
+  },
+  {
+    "doc_id": "moral_0197",
+    "text": "Evil wishes, like chickens, come home to roost.",
+    "fable_id": "fable_0197"
+  },
+  {
+    "doc_id": "moral_0198",
+    "text": "No piece of luck can conceal a depraved nature.",
+    "fable_id": "fable_0198"
+  },
+  {
+    "doc_id": "moral_0199",
+    "text": "Beware of empty promises made during good times.",
+    "fable_id": "fable_0199"
+  },
+  {
+    "doc_id": "moral_0200",
+    "text": "Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well.",
+    "fable_id": "fable_0200"
+  },
+  {
+    "doc_id": "moral_0201",
+    "text": "A learned man has always a fund of riches in himself.",
+    "fable_id": "fable_0201"
+  },
+  {
+    "doc_id": "moral_0202",
+    "text": "It is easy to attack those who have fallen from their position of power and glory.",
+    "fable_id": "fable_0202"
+  },
+  {
+    "doc_id": "moral_0203",
+    "text": "Self-preservation can sometimes take precedence over kinship",
+    "fable_id": "fable_0203"
+  },
+  {
+    "doc_id": "moral_0204",
+    "text": "Someone who lays a trap for others will fall victim to it himself.",
+    "fable_id": "fable_0204"
+  },
+  {
+    "doc_id": "moral_0205",
+    "text": "People who lay traps for others should be careful not to fall into a trap themselves.",
+    "fable_id": "fable_0205"
+  },
+  {
+    "doc_id": "moral_0206",
+    "text": "Men feel worst when they contribute to their own undoing.",
+    "fable_id": "fable_0206"
+  },
+  {
+    "doc_id": "moral_0207",
+    "text": "There is no glory in tricking those easy to trick.",
+    "fable_id": "fable_0207"
+  },
+  {
+    "doc_id": "moral_0208",
+    "text": "Rushing into pleasant invitations can lead to dire consequences.",
+    "fable_id": "fable_0208"
+  },
+  {
+    "doc_id": "moral_0209",
+    "text": "Inattentive people quickly notice anything that they think will benefit them, while they are completely unaware of things which are not their immediate concern.",
+    "fable_id": "fable_0209"
+  },
+  {
+    "doc_id": "moral_0210",
+    "text": "Do not laugh at the calamity that befalls your neighbour.",
+    "fable_id": "fable_0210"
+  },
+  {
+    "doc_id": "moral_0211",
+    "text": "Evil tendencies are shown in early life.",
+    "fable_id": "fable_0211"
+  },
+  {
+    "doc_id": "moral_0212",
+    "text": "Rewards do not always accompany a lifetime of good work.",
+    "fable_id": "fable_0212"
+  },
+  {
+    "doc_id": "moral_0213",
+    "text": "Only cowards insult dying majesty.",
+    "fable_id": "fable_0213"
+  },
+  {
+    "doc_id": "moral_0214",
+    "text": "Preparedness for war is the best guarantee of peace.",
+    "fable_id": "fable_0214"
+  },
+  {
+    "doc_id": "moral_0215",
+    "text": "It is good to set aside our deadly disputes and conflicts, since they put everyone's lives in jeopardy.",
+    "fable_id": "fable_0215"
+  },
+  {
+    "doc_id": "moral_0216",
+    "text": "What you have done to others will likewise be done to you, according to the same measure.",
+    "fable_id": "fable_0216"
+  },
+  {
+    "doc_id": "moral_0217",
+    "text": "Counsel without help is useless.",
+    "fable_id": "fable_0217"
+  },
+  {
+    "doc_id": "moral_0218",
+    "text": "Anything which is done at the wrong time is liable to be ridiculed.",
+    "fable_id": "fable_0218"
+  },
+  {
+    "doc_id": "moral_0219",
+    "text": "An honest man's word is as good as his oath.",
+    "fable_id": "fable_0219"
+  },
+  {
+    "doc_id": "moral_0220",
+    "text": "Better poverty without care, than riches with.",
+    "fable_id": "fable_0220"
+  },
+  {
+    "doc_id": "moral_0221",
+    "text": "Inner beauty is better than outer beauty.",
+    "fable_id": "fable_0221"
+  },
+  {
+    "doc_id": "moral_0222",
+    "text": "Some men are of more consequence in their own eyes than in the eyes of their neighbors.",
+    "fable_id": "fable_0222"
+  },
+  {
+    "doc_id": "moral_0223",
+    "text": "Do not mock the gods.",
+    "fable_id": "fable_0223"
+  },
+  {
+    "doc_id": "moral_0224",
+    "text": "Some people just won't change.",
+    "fable_id": "fable_0224"
+  },
+  {
+    "doc_id": "moral_0225",
+    "text": "People who enter into contests with unworthy opponents lower their own reputation.",
+    "fable_id": "fable_0225"
+  },
+  {
+    "doc_id": "moral_0226",
+    "text": "When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone.",
+    "fable_id": "fable_0226"
+  },
+  {
+    "doc_id": "moral_0227",
+    "text": "When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",
+    "fable_id": "fable_0227"
+  },
+  {
+    "doc_id": "moral_0228",
+    "text": "Unity is strength, while division invites defeat.",
+    "fable_id": "fable_0228"
+  },
+  {
+    "doc_id": "moral_0229",
+    "text": "Believing your enemies makes you fall victim to their tricks and gets you into trouble.",
+    "fable_id": "fable_0229"
+  },
+  {
+    "doc_id": "moral_0230",
+    "text": "Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity.",
+    "fable_id": "fable_0230"
+  },
+  {
+    "doc_id": "moral_0231",
+    "text": "It is best to keep negative influences away.",
+    "fable_id": "fable_0231"
+  },
+  {
+    "doc_id": "moral_0232",
+    "text": "Experience teaches valuable lessons and encourages caution.",
+    "fable_id": "fable_0232"
+  },
+  {
+    "doc_id": "moral_0233",
+    "text": "Jealousy can lead people to foolishly imitate their betters.",
+    "fable_id": "fable_0233"
+  },
+  {
+    "doc_id": "moral_0234",
+    "text": "Familiarity mollifies even the most terrifying things.",
+    "fable_id": "fable_0234"
+  },
+  {
+    "doc_id": "moral_0235",
+    "text": "People who grasp for more than they need are deprived of what they have.",
+    "fable_id": "fable_0235"
+  },
+  {
+    "doc_id": "moral_0236",
+    "text": "Beware of when the powerful and the deceitful collaborate.",
+    "fable_id": "fable_0236"
+  },
+  {
+    "doc_id": "moral_0237",
+    "text": "Be cautious with promises made under duress.",
+    "fable_id": "fable_0237"
+  },
+  {
+    "doc_id": "moral_0238",
+    "text": "Tyrants need no excuse.",
+    "fable_id": "fable_0238"
+  },
+  {
+    "doc_id": "moral_0239",
+    "text": "Stay focused on your goals.",
+    "fable_id": "fable_0239"
+  },
+  {
+    "doc_id": "moral_0240",
+    "text": "Gossips are to be seen and not heard.",
+    "fable_id": "fable_0240"
+  },
+  {
+    "doc_id": "moral_0241",
+    "text": "Relying too much on subordinates can lead to unintended consequences.",
+    "fable_id": "fable_0241"
+  },
+  {
+    "doc_id": "moral_0242",
+    "text": "Look before you leap.",
+    "fable_id": "fable_0242"
+  },
+  {
+    "doc_id": "moral_0243",
+    "text": "One bad turn deserves another.",
+    "fable_id": "fable_0243"
+  },
+  {
+    "doc_id": "moral_0244",
+    "text": "When the evidence is fairly weighed, a colourfully painted lie is quickly refuted by the facts.",
+    "fable_id": "fable_0244"
+  },
+  {
+    "doc_id": "moral_0245",
+    "text": "It is useless attacking the insensible.",
+    "fable_id": "fable_0245"
+  },
+  {
+    "doc_id": "moral_0246",
+    "text": "Opposites are utterly incompatible.",
+    "fable_id": "fable_0246"
+  },
+  {
+    "doc_id": "moral_0247",
+    "text": "Favor those who do you kindness.",
+    "fable_id": "fable_0247"
+  },
+  {
+    "doc_id": "moral_0248",
+    "text": "A discerning person is made wise by the misfortunes of his neighbours.",
+    "fable_id": "fable_0248"
+  },
+  {
+    "doc_id": "moral_0249",
+    "text": "Do not go chasing after things that are useless and unprofitable.",
+    "fable_id": "fable_0249"
+  },
+  {
+    "doc_id": "moral_0250",
+    "text": "Those who do you a favour you must repay kind.",
+    "fable_id": "fable_0250"
+  },
+  {
+    "doc_id": "moral_0251",
+    "text": "The penalty for speaking and for keeping silent is one and the same.",
+    "fable_id": "fable_0251"
+  },
+  {
+    "doc_id": "moral_0252",
+    "text": "It is better to live in self-sufficient poverty than to be tormented by the worries of wealth.",
+    "fable_id": "fable_0252"
+  },
+  {
+    "doc_id": "moral_0253",
+    "text": "Men will stand behind a judgment made in error until the actual fact of the matter later compels them to regret their choice.",
+    "fable_id": "fable_0253"
+  },
+  {
+    "doc_id": "moral_0254",
+    "text": "It is natural to be a knave; men must rise above.",
+    "fable_id": "fable_0254"
+  },
+  {
+    "doc_id": "moral_0255",
+    "text": "Beware of swindlers, as they often exploit the gullibility of others.",
+    "fable_id": "fable_0255"
+  },
+  {
+    "doc_id": "moral_0256",
+    "text": "Only fools indulge into michief and excessive risks.",
+    "fable_id": "fable_0256"
+  },
+  {
+    "doc_id": "moral_0257",
+    "text": "An alliance made with the high and mighty can never be trusted.",
+    "fable_id": "fable_0257"
+  },
+  {
+    "doc_id": "moral_0258",
+    "text": "Wealth is of little value if one is too afraid to use or enjoy it.",
+    "fable_id": "fable_0258"
+  },
+  {
+    "doc_id": "moral_0259",
+    "text": "True courage involves overcoming fears, even when faced with intimidation.",
+    "fable_id": "fable_0259"
+  },
+  {
+    "doc_id": "moral_0260",
+    "text": "Contentment with our lot is an element of happiness.",
+    "fable_id": "fable_0260"
+  },
+  {
+    "doc_id": "moral_0261",
+    "text": "Don't be seduced by deceptive words, they will cause nothing but trouble.",
+    "fable_id": "fable_0261"
+  },
+  {
+    "doc_id": "moral_0262",
+    "text": "The useful is of much more importance and value, than the ornamental.",
+    "fable_id": "fable_0262"
+  },
+  {
+    "doc_id": "moral_0263",
+    "text": "You should not treat bad people the same way that you treat good people.",
+    "fable_id": "fable_0263"
+  },
+  {
+    "doc_id": "moral_0264",
+    "text": "You must not act unnaturally, trying to achieve some impossible thing.",
+    "fable_id": "fable_0264"
+  },
+  {
+    "doc_id": "moral_0265",
+    "text": "If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",
+    "fable_id": "fable_0265"
+  },
+  {
+    "doc_id": "moral_0266",
+    "text": "Those who commit grave wrongs cannot escape justice.",
+    "fable_id": "fable_0266"
+  },
+  {
+    "doc_id": "moral_0267",
+    "text": "Vanity can lead to self-destruction.",
+    "fable_id": "fable_0267"
+  },
+  {
+    "doc_id": "moral_0268",
+    "text": "Live your lives in the clothes that suit you.",
+    "fable_id": "fable_0268"
+  },
+  {
+    "doc_id": "moral_0269",
+    "text": "Vanity betrays every fraud.",
+    "fable_id": "fable_0269"
+  },
+  {
+    "doc_id": "moral_0270",
+    "text": "Be content with your lot; one cannot be first in everything.",
+    "fable_id": "fable_0270"
+  },
+  {
+    "doc_id": "moral_0271",
+    "text": "Do not boast to have something you do not.",
+    "fable_id": "fable_0271"
+  },
+  {
+    "doc_id": "moral_0272",
+    "text": "Many children are a great blessing; but a few good ones are a greater.",
+    "fable_id": "fable_0272"
+  },
+  {
+    "doc_id": "moral_0273",
+    "text": "Those who assume a character which does not belong to them, only make themselves ridiculous.",
+    "fable_id": "fable_0273"
+  },
+  {
+    "doc_id": "moral_0274",
+    "text": "Beware of when the powerful and the deceitful collaborate.",
+    "fable_id": "fable_0274"
+  },
+  {
+    "doc_id": "moral_0275",
+    "text": "Tricksters can outsmart the strong.",
+    "fable_id": "fable_0275"
+  },
+  {
+    "doc_id": "moral_0276",
+    "text": "Bad things naturally happen to bad people, while good things lie in wait for people who are honest and reasonable.",
+    "fable_id": "fable_0276"
+  },
+  {
+    "doc_id": "moral_0277",
+    "text": "You can't please everybody.",
+    "fable_id": "fable_0277"
+  },
+  {
+    "doc_id": "moral_0278",
+    "text": "Be careful what you wish for.",
+    "fable_id": "fable_0278"
+  },
+  {
+    "doc_id": "moral_0279",
+    "text": "Those who are not content with what they have may end up losing it while pursuing greater desires.",
+    "fable_id": "fable_0279"
+  },
+  {
+    "doc_id": "moral_0280",
+    "text": "Good will is worth nothing unless it is accompanied by good acts.",
+    "fable_id": "fable_0280"
+  },
+  {
+    "doc_id": "moral_0281",
+    "text": "In avoiding a lesser danger, one may inadvertently fall into a greater peril.",
+    "fable_id": "fable_0281"
+  },
+  {
+    "doc_id": "moral_0282",
+    "text": "Do not harm your benefactors.",
+    "fable_id": "fable_0282"
+  },
+  {
+    "doc_id": "moral_0283",
+    "text": "Watch on all sides.",
+    "fable_id": "fable_0283"
+  },
+  {
+    "doc_id": "moral_0284",
+    "text": "When it serves their purposes, people commonly do not hesitate to swear to the most incredible fabrications.",
+    "fable_id": "fable_0284"
+  },
+  {
+    "doc_id": "moral_0285",
+    "text": "Someone who assists both the truly good and those who are undeserving is not seen as a philanthropist, but is instead regarded as a madman.",
+    "fable_id": "fable_0285"
+  },
+  {
+    "doc_id": "moral_0286",
+    "text": "A death-bed flattery is the worst of treacheries.",
+    "fable_id": "fable_0286"
+  },
+  {
+    "doc_id": "moral_0287",
+    "text": "Few things are done except for profit.",
+    "fable_id": "fable_0287"
+  },
+  {
+    "doc_id": "moral_0288",
+    "text": "Do not play the wise man after the fact.",
+    "fable_id": "fable_0288"
+  },
+  {
+    "doc_id": "moral_0289",
+    "text": "Different people are interested in different things.",
+    "fable_id": "fable_0289"
+  },
+  {
+    "doc_id": "moral_0290",
+    "text": "It is a foolish man who wants to rival his superiors.",
+    "fable_id": "fable_0290"
+  },
+  {
+    "doc_id": "moral_0291",
+    "text": "Do not believe those who have ill intentions.",
+    "fable_id": "fable_0291"
+  },
+  {
+    "doc_id": "moral_0292",
+    "text": "Do not try to do impossible things.",
+    "fable_id": "fable_0292"
+  },
+  {
+    "doc_id": "moral_0293",
+    "text": "False sympathy often masks selfish intentions.",
+    "fable_id": "fable_0293"
+  },
+  {
+    "doc_id": "moral_0294",
+    "text": "Do not try to gain favor by acting in a way that is contrary to your own nature and character.",
+    "fable_id": "fable_0294"
+  },
+  {
+    "doc_id": "moral_0295",
+    "text": "You should especially avoid someone who does not even spare his own people.",
+    "fable_id": "fable_0295"
+  },
+  {
+    "doc_id": "moral_0296",
+    "text": "Trust is not to be given lightly.",
+    "fable_id": "fable_0296"
+  },
+  {
+    "doc_id": "moral_0297",
+    "text": "There is danger lurking in the words of a wicked person.",
+    "fable_id": "fable_0297"
+  },
+  {
+    "doc_id": "moral_0298",
+    "text": "Do not grasp at more than you need.",
+    "fable_id": "fable_0298"
+  },
+  {
+    "doc_id": "moral_0299",
+    "text": "Those who try to deceive may expect to be paid in their own coin.",
+    "fable_id": "fable_0299"
+  },
+  {
+    "doc_id": "moral_0300",
+    "text": "Men are averse to fixed rules, but are won by kind services.",
+    "fable_id": "fable_0300"
+  },
+  {
+    "doc_id": "moral_0301",
+    "text": "Wicked liars generally get their just consequences.",
+    "fable_id": "fable_0301"
+  },
+  {
+    "doc_id": "moral_0302",
+    "text": "Often justice is the captive of criminal deceit.",
+    "fable_id": "fable_0302"
+  },
+  {
+    "doc_id": "moral_0303",
+    "text": "They who act without sufficient thought, will often fall into unsuspected danger",
+    "fable_id": "fable_0303"
+  },
+  {
+    "doc_id": "moral_0304",
+    "text": "Enterprise is not to be judged in terms of its speed but its outcome.",
+    "fable_id": "fable_0304"
+  },
+  {
+    "doc_id": "moral_0305",
+    "text": "Greed can lead to ruin.",
+    "fable_id": "fable_0305"
+  },
+  {
+    "doc_id": "moral_0306",
+    "text": "Take what you can get when you can get it.",
+    "fable_id": "fable_0306"
+  },
+  {
+    "doc_id": "moral_0307",
+    "text": "Do not take pride in the good qualities that actually belong to someone else.",
+    "fable_id": "fable_0307"
+  },
+  {
+    "doc_id": "moral_0308",
+    "text": "Benefits are refused by those who don't understand them.",
+    "fable_id": "fable_0308"
+  },
+  {
+    "doc_id": "moral_0309",
+    "text": "No one can be a friend if you know not whether to trust or distrust him.",
+    "fable_id": "fable_0309"
+  },
+  {
+    "doc_id": "moral_0310",
+    "text": "People who offer to give someone many gifts are no doubt trying to deceive.",
+    "fable_id": "fable_0310"
+  },
+  {
+    "doc_id": "moral_0311",
+    "text": "Do not blame others for the circumstances of their upbringing.",
+    "fable_id": "fable_0311"
+  },
+  {
+    "doc_id": "moral_0312",
+    "text": "Do not give up friends for foes.",
+    "fable_id": "fable_0312"
+  },
+  {
+    "doc_id": "moral_0313",
+    "text": "There is satisfaction, however wretched, in taking one's enemy along if one has to die.",
+    "fable_id": "fable_0313"
+  },
+  {
+    "doc_id": "moral_0314",
+    "text": "Some can do wrong more easily than others can see it.",
+    "fable_id": "fable_0314"
+  },
+  {
+    "doc_id": "moral_0315",
+    "text": "Traitors may expect treachery.",
+    "fable_id": "fable_0315"
+  },
+  {
+    "doc_id": "moral_0316",
+    "text": "Clothes may disguise a fool, but his words will give him away.",
+    "fable_id": "fable_0316"
+  },
+  {
+    "doc_id": "moral_0317",
+    "text": "People who lay traps for others bring about their own destruction.",
+    "fable_id": "fable_0317"
+  },
+  {
+    "doc_id": "moral_0318",
+    "text": "Be content with your station.",
+    "fable_id": "fable_0318"
+  },
+  {
+    "doc_id": "moral_0319",
+    "text": "Be cautious of pride, as nobody knows what the future may bring.",
+    "fable_id": "fable_0319"
+  },
+  {
+    "doc_id": "moral_0320",
+    "text": "People are quick to promise but reluctant to give.",
+    "fable_id": "fable_0320"
+  },
+  {
+    "doc_id": "moral_0321",
+    "text": "The loud-mouthed boaster does not impress nor frighten those who know him.",
+    "fable_id": "fable_0321"
+  },
+  {
+    "doc_id": "moral_0322",
+    "text": "Talent is wasted when it's in the hands of the unappreciative.",
+    "fable_id": "fable_0322"
+  },
+  {
+    "doc_id": "moral_0323",
+    "text": "Instead of looking at how things start, we should look instead at how they turn out in the end.",
+    "fable_id": "fable_0323"
+  },
+  {
+    "doc_id": "moral_0324",
+    "text": "People often appreciate what they had only after experiencing something worse.",
+    "fable_id": "fable_0324"
+  },
+  {
+    "doc_id": "moral_0325",
+    "text": "The insubordinate are free from both obligation and protection.",
+    "fable_id": "fable_0325"
+  },
+  {
+    "doc_id": "moral_0326",
+    "text": "In a change of government, the poor change nothing beyond the name of their master.",
+    "fable_id": "fable_0326"
+  },
+  {
+    "doc_id": "moral_0327",
+    "text": "A man is known by the company he keeps.",
+    "fable_id": "fable_0327"
+  },
+  {
+    "doc_id": "moral_0328",
+    "text": "Easy life and seeming good fortune of others conceal a threat to their welfare.",
+    "fable_id": "fable_0328"
+  },
+  {
+    "doc_id": "moral_0329",
+    "text": "One cannot circumvent his destiny.",
+    "fable_id": "fable_0329"
+  },
+  {
+    "doc_id": "moral_0330",
+    "text": "False confidence often leads into danger.",
+    "fable_id": "fable_0330"
+  },
+  {
+    "doc_id": "moral_0331",
+    "text": "You can't always stop a fool.",
+    "fable_id": "fable_0331"
+  },
+  {
+    "doc_id": "moral_0332",
+    "text": "Greed for more can lead to losing what you already have.",
+    "fable_id": "fable_0332"
+  },
+  {
+    "doc_id": "moral_0333",
+    "text": "A life of greed and hoarding wealth leads to misery.",
+    "fable_id": "fable_0333"
+  },
+  {
+    "doc_id": "moral_0334",
+    "text": "Our mere anticipations of life outrun its realities.",
+    "fable_id": "fable_0334"
+  },
+  {
+    "doc_id": "moral_0335",
+    "text": "It's hard to give up bad habits.",
+    "fable_id": "fable_0335"
+  },
+  {
+    "doc_id": "moral_0336",
+    "text": "Beauty alone does not qualify one for leadership.",
+    "fable_id": "fable_0336"
+  },
+  {
+    "doc_id": "moral_0337",
+    "text": "Count the cost before you commit yourselves.",
+    "fable_id": "fable_0337"
+  },
+  {
+    "doc_id": "moral_0338",
+    "text": "Pride goes before destruction.",
+    "fable_id": "fable_0338"
+  },
+  {
+    "doc_id": "moral_0339",
+    "text": "God is the ultimate judge.",
+    "fable_id": "fable_0339"
+  },
+  {
+    "doc_id": "moral_0340",
+    "text": "It is a foolish thing to give advice to others while not looking out for oneself.",
+    "fable_id": "fable_0340"
+  },
+  {
+    "doc_id": "moral_0341",
+    "text": "Some people will do anything to get what they want.",
+    "fable_id": "fable_0341"
+  },
+  {
+    "doc_id": "moral_0342",
+    "text": "He who competes with his superiors destroys himself before he can equal them.",
+    "fable_id": "fable_0342"
+  },
+  {
+    "doc_id": "moral_0343",
+    "text": "Some people are so consumed by hatred that they would rather suffer themselves than see their enemies succeed.",
+    "fable_id": "fable_0343"
+  },
+  {
+    "doc_id": "moral_0344",
+    "text": "People with a history of wrongdoing are often not trusted.",
+    "fable_id": "fable_0344"
+  },
+  {
+    "doc_id": "moral_0345",
+    "text": "Do not boast too much at the height of your powers; people often spend their old age worn out with toil and trouble.",
+    "fable_id": "fable_0345"
+  },
+  {
+    "doc_id": "moral_0346",
+    "text": "The only thing that can really bring shame on a man is a punishment that he has justly deserved.",
+    "fable_id": "fable_0346"
+  },
+  {
+    "doc_id": "moral_0347",
+    "text": "Do not try to grasp too much at once.",
+    "fable_id": "fable_0347"
+  },
+  {
+    "doc_id": "moral_0348",
+    "text": "Nothing escapes the master's eye.",
+    "fable_id": "fable_0348"
+  },
+  {
+    "doc_id": "moral_0349",
+    "text": "Bad neighbours are the first to suffer from the harm they would do to others.",
+    "fable_id": "fable_0349"
+  },
+  {
+    "doc_id": "moral_0350",
+    "text": "Do not take on more than you can handle.",
+    "fable_id": "fable_0350"
+  },
+  {
+    "doc_id": "moral_0351",
+    "text": "Charity begins at home, but this does not prevent the further exercise of it.",
+    "fable_id": "fable_0351"
+  },
+  {
+    "doc_id": "moral_0352",
+    "text": "Those who complain about their duties often forget their own role in creating the situation.",
+    "fable_id": "fable_0352"
+  },
+  {
+    "doc_id": "moral_0353",
+    "text": "He who harms someone should henceforth be treated with suspicion.",
+    "fable_id": "fable_0353"
+  },
+  {
+    "doc_id": "moral_0354",
+    "text": "Injuries may be forgiven, but not forgotten.",
+    "fable_id": "fable_0354"
+  },
+  {
+    "doc_id": "moral_0355",
+    "text": "When wicked people do not get the reward and thanks they expect, they immediately put a stop to their good works.",
+    "fable_id": "fable_0355"
+  },
+  {
+    "doc_id": "moral_0356",
+    "text": "Man's greatest treasure consists in work.",
+    "fable_id": "fable_0356"
+  },
+  {
+    "doc_id": "moral_0357",
+    "text": "We had better bear our troubles bravely than try to escape them.",
+    "fable_id": "fable_0357"
+  },
+  {
+    "doc_id": "moral_0358",
+    "text": "To be small is a way to stay safe and avoid problems, whereas you rarely see a man with a big reputation who is able to keep out of danger.",
+    "fable_id": "fable_0358"
+  },
+  {
+    "doc_id": "moral_0359",
+    "text": "Imitation is no substitute for knowledge.",
+    "fable_id": "fable_0359"
+  },
+  {
+    "doc_id": "moral_0360",
+    "text": "We have to endure reversals of fortune, since we know that life is a matter of luck.",
+    "fable_id": "fable_0360"
+  },
+  {
+    "doc_id": "moral_0361",
+    "text": "Luck often bestows the things that skill cannot obtain.",
+    "fable_id": "fable_0361"
+  },
+  {
+    "doc_id": "moral_0362",
+    "text": "Some never understand the actions of others.",
+    "fable_id": "fable_0362"
+  },
+  {
+    "doc_id": "moral_0363",
+    "text": "A reward for one might be destruction for another.",
+    "fable_id": "fable_0363"
+  },
+  {
+    "doc_id": "moral_0364",
+    "text": "No mercy should be shown to someone who is wicked, regardless of whether his wickedness is great or small.",
+    "fable_id": "fable_0364"
+  },
+  {
+    "doc_id": "moral_0365",
+    "text": "Pleasure bought with pains, hurts.",
+    "fable_id": "fable_0365"
+  },
+  {
+    "doc_id": "moral_0366",
+    "text": "Ignore complainers who have no influence.",
+    "fable_id": "fable_0366"
+  },
+  {
+    "doc_id": "moral_0367",
+    "text": "We should do favours for someone who can do us a good deed in return.",
+    "fable_id": "fable_0367"
+  },
+  {
+    "doc_id": "moral_0368",
+    "text": "Coffers of cash put a stop to honest traffic in praise.",
+    "fable_id": "fable_0368"
+  },
+  {
+    "doc_id": "moral_0369",
+    "text": "Accept the changes in life.",
+    "fable_id": "fable_0369"
+  },
+  {
+    "doc_id": "moral_0370",
+    "text": "Outside show is a poor substitute for inner worth.",
+    "fable_id": "fable_0370"
+  },
+  {
+    "doc_id": "moral_0371",
+    "text": "Slow and steady wins the race.",
+    "fable_id": "fable_0371"
+  },
+  {
+    "doc_id": "moral_0372",
+    "text": "A wicked person deservedly comes to a bad end by keeping company with other wicked people.",
+    "fable_id": "fable_0372"
+  },
+  {
+    "doc_id": "moral_0373",
+    "text": "It's easy to despise what you cannot have.",
+    "fable_id": "fable_0373"
+  },
+  {
+    "doc_id": "moral_0374",
+    "text": "Overly curious people often pay a very high price for recklessly indulging their curiosity.",
+    "fable_id": "fable_0374"
+  },
+  {
+    "doc_id": "moral_0375",
+    "text": "People who act impulsively can end up in regrettable situations.",
+    "fable_id": "fable_0375"
+  },
+  {
+    "doc_id": "moral_0376",
+    "text": "Ambiguity in character can lead to mistrust.",
+    "fable_id": "fable_0376"
+  },
+  {
+    "doc_id": "moral_0377",
+    "text": "Quality is more valuable than quantity.",
+    "fable_id": "fable_0377"
+  },
+  {
+    "doc_id": "moral_0378",
+    "text": "Chance sometimes rules.",
+    "fable_id": "fable_0378"
+  },
+  {
+    "doc_id": "moral_0379",
+    "text": "Take warning from the misfortunes of others.",
+    "fable_id": "fable_0379"
+  },
+  {
+    "doc_id": "moral_0380",
+    "text": "Deceivers often exploit the inability of others to challenge their falsehoods.",
+    "fable_id": "fable_0380"
+  },
+  {
+    "doc_id": "moral_0381",
+    "text": "Greedy men chase after profit with such an intensity that they destroy themselves without achieving anything.",
+    "fable_id": "fable_0381"
+  },
+  {
+    "doc_id": "moral_0382",
+    "text": "Stay vigilant and think before you speak.",
+    "fable_id": "fable_0382"
+  },
+  {
+    "doc_id": "moral_0383",
+    "text": "Take pleasure when thieves destroy themselves.",
+    "fable_id": "fable_0383"
+  },
+  {
+    "doc_id": "moral_0384",
+    "text": "Distrust advice from someone who stands to gain.",
+    "fable_id": "fable_0384"
+  },
+  {
+    "doc_id": "moral_0385",
+    "text": "Familiarity makes it easy to confront even frightening situations.",
+    "fable_id": "fable_0385"
+  },
+  {
+    "doc_id": "moral_0386",
+    "text": "Someone who plots against others falls into his own trap.",
+    "fable_id": "fable_0386"
+  },
+  {
+    "doc_id": "moral_0387",
+    "text": "Beware of those who appear busy but achieve little of value.",
+    "fable_id": "fable_0387"
+  },
+  {
+    "doc_id": "moral_0388",
+    "text": "Imaginary fears are the worst.",
+    "fable_id": "fable_0388"
+  },
+  {
+    "doc_id": "moral_0389",
+    "text": "People who stubbornly cling to unwise choices lose everything before they know it.",
+    "fable_id": "fable_0389"
+  },
+  {
+    "doc_id": "moral_0390",
+    "text": "People who do harm to others destroy themselves in the bargain.",
+    "fable_id": "fable_0390"
+  },
+  {
+    "doc_id": "moral_0391",
+    "text": "Poor folk suffer when the high and mighty are at war with one another.",
+    "fable_id": "fable_0391"
+  },
+  {
+    "doc_id": "moral_0392",
+    "text": "When you need someone to lend a hand, mere words are no help at all.",
+    "fable_id": "fable_0392"
+  },
+  {
+    "doc_id": "moral_0393",
+    "text": "Look before you leap.",
+    "fable_id": "fable_0393"
+  },
+  {
+    "doc_id": "moral_0394",
+    "text": "Easy gains often come with hidden costs and hardships.",
+    "fable_id": "fable_0394"
+  },
+  {
+    "doc_id": "moral_0395",
+    "text": "The things that a person does to others will happen to him in turn.",
+    "fable_id": "fable_0395"
+  },
+  {
+    "doc_id": "moral_0396",
+    "text": "Bear that those who are inferior to you in merit should be like you in outside appearances.",
+    "fable_id": "fable_0396"
+  },
+  {
+    "doc_id": "moral_0397",
+    "text": "Beware of enterprizes where the risks are not equal.",
+    "fable_id": "fable_0397"
+  },
+  {
+    "doc_id": "moral_0398",
+    "text": "Do not expect to be defended by someone who cannot offer any protection.",
+    "fable_id": "fable_0398"
+  },
+  {
+    "doc_id": "moral_0399",
+    "text": "Sometimes, the greatest threats come from those you trust.",
+    "fable_id": "fable_0399"
+  },
+  {
+    "doc_id": "moral_0400",
+    "text": "A fool will make excuses for foolish behavior.",
+    "fable_id": "fable_0400"
+  },
+  {
+    "doc_id": "moral_0401",
+    "text": "It is often the case that people are greedy for things which they think will bring them honour, but which only result in their death and destruction.",
+    "fable_id": "fable_0401"
+  },
+  {
+    "doc_id": "moral_0402",
+    "text": "Those who scheme against others may ultimately fall victim to their own plots.",
+    "fable_id": "fable_0402"
+  },
+  {
+    "doc_id": "moral_0403",
+    "text": "Do not neglect small advantages in hopes of better ones.",
+    "fable_id": "fable_0403"
+  },
+  {
+    "doc_id": "moral_0404",
+    "text": "People who grasp at more than they need lose the little that they held in their hands.",
+    "fable_id": "fable_0404"
+  },
+  {
+    "doc_id": "moral_0405",
+    "text": "We should never put our trust in a wicked man, even if he seems to be completely innocuous.",
+    "fable_id": "fable_0405"
+  },
+  {
+    "doc_id": "moral_0406",
+    "text": "Vanity can blind one to their true worth in the eyes of others.",
+    "fable_id": "fable_0406"
+  },
+  {
+    "doc_id": "moral_0407",
+    "text": "Physical stature does not guarantee wisdom or intelligence.",
+    "fable_id": "fable_0407"
+  },
+  {
+    "doc_id": "moral_0408",
+    "text": "Honesty is the best policy.",
+    "fable_id": "fable_0408"
+  },
+  {
+    "doc_id": "moral_0409",
+    "text": "The promises of the greedy are often empty and insincere.",
+    "fable_id": "fable_0409"
+  },
+  {
+    "doc_id": "moral_0410",
+    "text": "When you lie, you often have to expand the lie.",
+    "fable_id": "fable_0410"
+  },
+  {
+    "doc_id": "moral_0411",
+    "text": "When people suffer misfortune because of their own foolishness, they often blame the gods.",
+    "fable_id": "fable_0411"
+  },
+  {
+    "doc_id": "moral_0412",
+    "text": "Life's disasters can often bring boastful and presumptuous people back down to earth.",
+    "fable_id": "fable_0412"
+  },
+  {
+    "doc_id": "moral_0413",
+    "text": "Don't promise big things if you can't deliver.",
+    "fable_id": "fable_0413"
+  },
+  {
+    "doc_id": "moral_0414",
+    "text": "There is no fixed day on which wicked people are punished.",
+    "fable_id": "fable_0414"
+  },
+  {
+    "doc_id": "moral_0415",
+    "text": "Nobody believes people who are inherently wicked, even if they pretend to be good-natured.",
+    "fable_id": "fable_0415"
+  },
+  {
+    "doc_id": "moral_0416",
+    "text": "Each man makes his reputation in the field which is his specialty.",
+    "fable_id": "fable_0416"
+  },
+  {
+    "doc_id": "moral_0417",
+    "text": "Acceptance can lead to unexpected harmony.",
+    "fable_id": "fable_0417"
+  },
+  {
+    "doc_id": "moral_0418",
+    "text": "People who have been judged in the past can later on be in a position to judge their former teachers.",
+    "fable_id": "fable_0418"
+  },
+  {
+    "doc_id": "moral_0419",
+    "text": "It is not the place, nor the condition, but the mind alone that is responsible for our happiness.",
+    "fable_id": "fable_0419"
+  },
+  {
+    "doc_id": "moral_0420",
+    "text": "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
+    "fable_id": "fable_0420"
+  },
+  {
+    "doc_id": "moral_0421",
+    "text": "Do not let anything turn you from your purpose.",
+    "fable_id": "fable_0421"
+  },
+  {
+    "doc_id": "moral_0422",
+    "text": "A hypocrite can usually be found out.",
+    "fable_id": "fable_0422"
+  },
+  {
+    "doc_id": "moral_0423",
+    "text": "Every man should be content to mind his own business.",
+    "fable_id": "fable_0423"
+  },
+  {
+    "doc_id": "moral_0424",
+    "text": "Hypocritical speeches are easily seen through.",
+    "fable_id": "fable_0424"
+  },
+  {
+    "doc_id": "moral_0425",
+    "text": "The safeguards of virtue are hateful to those with evil intentions.",
+    "fable_id": "fable_0425"
+  },
+  {
+    "doc_id": "moral_0426",
+    "text": "Caution is far superior to reckless haste and hurry.",
+    "fable_id": "fable_0426"
+  },
+  {
+    "doc_id": "moral_0427",
+    "text": "People are willing to risk their lives for the sake of some petty profit.",
+    "fable_id": "fable_0427"
+  },
+  {
+    "doc_id": "moral_0428",
+    "text": "When your adversary is also your judge, don't bother arguing.",
+    "fable_id": "fable_0428"
+  },
+  {
+    "doc_id": "moral_0429",
+    "text": "Those who thrive on deception often retaliate against those who speak the truth.",
+    "fable_id": "fable_0429"
+  },
+  {
+    "doc_id": "moral_0430",
+    "text": "No act of kindness, no matter how small, is ever wasted",
+    "fable_id": "fable_0430"
+  },
+  {
+    "doc_id": "moral_0431",
+    "text": "Be careful what you wish for; your wish may be granted.",
+    "fable_id": "fable_0431"
+  },
+  {
+    "doc_id": "moral_0432",
+    "text": "Things you acquire through evil means can be taken from you by evil means.",
+    "fable_id": "fable_0432"
+  },
+  {
+    "doc_id": "moral_0433",
+    "text": "You will hurt yourself and accomplish nothing if you try to imitate someone who is far better than you are.",
+    "fable_id": "fable_0433"
+  },
+  {
+    "doc_id": "moral_0434",
+    "text": "The greatest gifts are often overlooked in favor of envying others.",
+    "fable_id": "fable_0434"
+  },
+  {
+    "doc_id": "moral_0435",
+    "text": "People often make plans that turn out to be to their own disadvantage.",
+    "fable_id": "fable_0435"
+  },
+  {
+    "doc_id": "moral_0436",
+    "text": "Someone who cannot manage his own affairs is not qualified to give advice to his neighbours.",
+    "fable_id": "fable_0436"
+  },
+  {
+    "doc_id": "moral_0437",
+    "text": "Marrying someone unworthy can lead to a tarnished reputation.",
+    "fable_id": "fable_0437"
+  },
+  {
+    "doc_id": "moral_0438",
+    "text": "The true value of money is not in its possession but in its use.",
+    "fable_id": "fable_0438"
+  },
+  {
+    "doc_id": "moral_0439",
+    "text": "Boast of one thing and you will be found lacking in that and a few other things as well.",
+    "fable_id": "fable_0439"
+  },
+  {
+    "doc_id": "moral_0440",
+    "text": "A sinful mind can even change a person's nature, causing it to be impaired.",
+    "fable_id": "fable_0440"
+  },
+  {
+    "doc_id": "moral_0441",
+    "text": "Those who avoid hardship may miss out on valuable rewards.",
+    "fable_id": "fable_0441"
+  },
+  {
+    "doc_id": "moral_0442",
+    "text": "The best intentions will not always ensure success.",
+    "fable_id": "fable_0442"
+  },
+  {
+    "doc_id": "moral_0443",
+    "text": "Tear out vice by the roots and the branches will wither away.",
+    "fable_id": "fable_0443"
+  },
+  {
+    "doc_id": "moral_0444",
+    "text": "In conflicts between powerful parties, bystanders may suffer unintended consequences.",
+    "fable_id": "fable_0444"
+  },
+  {
+    "doc_id": "moral_0445",
+    "text": "Appearances can be deceiving.",
+    "fable_id": "fable_0445"
+  },
+  {
+    "doc_id": "moral_0446",
+    "text": "If often happens that even honest people do not hesitate to persecute someone who has slandered them.",
+    "fable_id": "fable_0446"
+  },
+  {
+    "doc_id": "moral_0447",
+    "text": "There is little risk in being poor, while being rich can get you into trouble.",
+    "fable_id": "fable_0447"
+  },
+  {
+    "doc_id": "moral_0448",
+    "text": "There's no reading of ourselves but with other mans eyes.",
+    "fable_id": "fable_0448"
+  },
+  {
+    "doc_id": "moral_0449",
+    "text": "When people feel grief for their misfortunes, they avoid the place where that grief overtook them.",
+    "fable_id": "fable_0449"
+  },
+  {
+    "doc_id": "moral_0450",
+    "text": "Persuasion is better than Force.",
+    "fable_id": "fable_0450"
+  },
+  {
+    "doc_id": "moral_0451",
+    "text": "The memory of a good deed lives.",
+    "fable_id": "fable_0451"
+  },
+  {
+    "doc_id": "moral_0452",
+    "text": "People often disguise their selfish desires as practical needs to justify their actions.",
+    "fable_id": "fable_0452"
+  },
+  {
+    "doc_id": "moral_0453",
+    "text": "Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary.",
+    "fable_id": "fable_0453"
+  },
+  {
+    "doc_id": "moral_0454",
+    "text": "People who have been treated with contempt repay the deed in kind.",
+    "fable_id": "fable_0454"
+  },
+  {
+    "doc_id": "moral_0455",
+    "text": "A wise person readily tolerates the insolence of strangers when he sees those same strangers mistreating one another.",
+    "fable_id": "fable_0455"
+  },
+  {
+    "doc_id": "moral_0456",
+    "text": "Temptation can lead even the most virtuous individuals to compromise their integrity and values.",
+    "fable_id": "fable_0456"
+  },
+  {
+    "doc_id": "moral_0457",
+    "text": "The bad things that strangers do to you are never as terrible as the things done to you by the members of your own family.",
+    "fable_id": "fable_0457"
+  },
+  {
+    "doc_id": "moral_0458",
+    "text": "Some people will agree to do things under compulsion that they are not willing to do as a favour.",
+    "fable_id": "fable_0458"
+  },
+  {
+    "doc_id": "moral_0459",
+    "text": "One should never trust those with a history of deceit.",
+    "fable_id": "fable_0459"
+  },
+  {
+    "doc_id": "moral_0460",
+    "text": "No one gladly revisits a place where they got hurt.",
+    "fable_id": "fable_0460"
+  },
+  {
+    "doc_id": "moral_0461",
+    "text": "The unjust man is envious of anyone else's good fortune.",
+    "fable_id": "fable_0461"
+  },
+  {
+    "doc_id": "moral_0462",
+    "text": "Desire things you don't understand and you accept the consequences.",
+    "fable_id": "fable_0462"
+  },
+  {
+    "doc_id": "moral_0463",
+    "text": "A change of place does not make you a saint.",
+    "fable_id": "fable_0463"
+  },
+  {
+    "doc_id": "moral_0464",
+    "text": "Fair weather friends are not worth much.",
+    "fable_id": "fable_0464"
+  },
+  {
+    "doc_id": "moral_0465",
+    "text": "Sometimes, those you support become your worst enemy.",
+    "fable_id": "fable_0465"
+  },
+  {
+    "doc_id": "moral_0466",
+    "text": "Not all advice is wise.",
+    "fable_id": "fable_0466"
+  },
+  {
+    "doc_id": "moral_0467",
+    "text": "Familiarity can alleviate seemingly intractable problems.",
+    "fable_id": "fable_0467"
+  },
+  {
+    "doc_id": "moral_0468",
+    "text": "Do not blame others.",
+    "fable_id": "fable_0468"
+  },
+  {
+    "doc_id": "moral_0469",
+    "text": "Courage in words means nothing if you flee in danger.",
+    "fable_id": "fable_0469"
+  },
+  {
+    "doc_id": "moral_0470",
+    "text": "That is how life is: we must put up with less serious losses in order to avoid worse ones.",
+    "fable_id": "fable_0470"
+  },
+  {
+    "doc_id": "moral_0471",
+    "text": "Modesty and carnal love cannot survive together.",
+    "fable_id": "fable_0471"
+  },
+  {
+    "doc_id": "moral_0472",
+    "text": "Appetite blinds men to their surroundings",
+    "fable_id": "fable_0472"
+  },
+  {
+    "doc_id": "moral_0473",
+    "text": "False men cannot be trusted.",
+    "fable_id": "fable_0473"
+  },
+  {
+    "doc_id": "moral_0474",
+    "text": "Some may choose mutual destruction over continued suffering.",
+    "fable_id": "fable_0474"
+  },
+  {
+    "doc_id": "moral_0475",
+    "text": "Even the favours of wicked people are frightening.",
+    "fable_id": "fable_0475"
+  },
+  {
+    "doc_id": "moral_0476",
+    "text": "Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings.",
+    "fable_id": "fable_0476"
+  },
+  {
+    "doc_id": "moral_0477",
+    "text": "What is most truly valuable is often underrated.",
+    "fable_id": "fable_0477"
+  },
+  {
+    "doc_id": "moral_0478",
+    "text": "People often prefer to live simply at home than to live lavishly at someone else's house.",
+    "fable_id": "fable_0478"
+  },
+  {
+    "doc_id": "moral_0479",
+    "text": "Those who act in their own self-interest while pretending to help others will not earn gratitude.",
+    "fable_id": "fable_0479"
+  },
+  {
+    "doc_id": "moral_0480",
+    "text": "People often make extravagant promises which they are completely unable to carry out.",
+    "fable_id": "fable_0480"
+  },
+  {
+    "doc_id": "moral_0481",
+    "text": "Bad situations rarely get better.",
+    "fable_id": "fable_0481"
+  },
+  {
+    "doc_id": "moral_0482",
+    "text": "Even those who work hard may find their material wealth undone by the greed of others.",
+    "fable_id": "fable_0482"
+  },
+  {
+    "doc_id": "moral_0483",
+    "text": "Some begrudge others what they cannot enjoy themselves.",
+    "fable_id": "fable_0483"
+  },
+  {
+    "doc_id": "moral_0484",
+    "text": "Do not overestimate yourself.",
+    "fable_id": "fable_0484"
+  },
+  {
+    "doc_id": "moral_0485",
+    "text": "Be yourself and don't pretend to be someone you're not.",
+    "fable_id": "fable_0485"
+  },
+  {
+    "doc_id": "moral_0486",
+    "text": "Do not believe everything you hear.",
+    "fable_id": "fable_0486"
+  },
+  {
+    "doc_id": "moral_0487",
+    "text": "Unity is mankind's greatest good, while dissension is a weak and slavish thing",
+    "fable_id": "fable_0487"
+  },
+  {
+    "doc_id": "moral_0488",
+    "text": "You can fool someone only so many times.",
+    "fable_id": "fable_0488"
+  },
+  {
+    "doc_id": "moral_0489",
+    "text": "Telling the truth can sometimes be dangerous",
+    "fable_id": "fable_0489"
+  },
+  {
+    "doc_id": "moral_0490",
+    "text": "You should not add one problem to another.",
+    "fable_id": "fable_0490"
+  },
+  {
+    "doc_id": "moral_0491",
+    "text": "Try to make something, and do not let envy pass judgment on it. Nothing is entirely satisfactory to the dishonest.",
+    "fable_id": "fable_0491"
+  },
+  {
+    "doc_id": "moral_0492",
+    "text": "People adjust their beliefs based on what is profitable for them.",
+    "fable_id": "fable_0492"
+  },
+  {
+    "doc_id": "moral_0493",
+    "text": "Unresolved issues can resurface when least expected.",
+    "fable_id": "fable_0493"
+  },
+  {
+    "doc_id": "moral_0494",
+    "text": "Fortune can occasionally bestow favours that exceed a person's hopes and expectations.",
+    "fable_id": "fable_0494"
+  },
+  {
+    "doc_id": "moral_0495",
+    "text": "Only a man who is out of his mind and hated by the gods delights in ugly things as if they were beautiful.",
+    "fable_id": "fable_0495"
+  },
+  {
+    "doc_id": "moral_0496",
+    "text": "It is difficult to truly know a person.",
+    "fable_id": "fable_0496"
+  },
+  {
+    "doc_id": "moral_0497",
+    "text": "Don't draw a conclusion based on a single observation.",
+    "fable_id": "fable_0497"
+  },
+  {
+    "doc_id": "moral_0498",
+    "text": "He laughs best that laughs last.",
+    "fable_id": "fable_0498"
+  },
+  {
+    "doc_id": "moral_0499",
+    "text": "One is known by deeds, not by words.",
+    "fable_id": "fable_0499"
+  },
+  {
+    "doc_id": "moral_0500",
+    "text": "Beauty is in the eyes of the beholder.",
+    "fable_id": "fable_0500"
+  },
+  {
+    "doc_id": "moral_0501",
+    "text": "Notoriety is often mistaken for fame.",
+    "fable_id": "fable_0501"
+  },
+  {
+    "doc_id": "moral_0502",
+    "text": "They complain most who suffer least.",
+    "fable_id": "fable_0502"
+  },
+  {
+    "doc_id": "moral_0503",
+    "text": "Do not be in a hurry to change one evil for another.",
+    "fable_id": "fable_0503"
+  },
+  {
+    "doc_id": "moral_0504",
+    "text": "Overconfidence often leads people into danger.",
+    "fable_id": "fable_0504"
+  },
+  {
+    "doc_id": "moral_0505",
+    "text": "There is no wealth greater than liberty.",
+    "fable_id": "fable_0505"
+  },
+  {
+    "doc_id": "moral_0506",
+    "text": "Some would rather fight than not.",
+    "fable_id": "fable_0506"
+  },
+  {
+    "doc_id": "moral_0507",
+    "text": "Be yourself and don't pretend to be someone you're not.",
+    "fable_id": "fable_0507"
+  },
+  {
+    "doc_id": "moral_0508",
+    "text": "Don't take on more than you can accomplish.",
+    "fable_id": "fable_0508"
+  },
+  {
+    "doc_id": "moral_0509",
+    "text": "Use care to place your blame on the right person.",
+    "fable_id": "fable_0509"
+  },
+  {
+    "doc_id": "moral_0510",
+    "text": "Beware the sort of person who uses tricks.",
+    "fable_id": "fable_0510"
+  },
+  {
+    "doc_id": "moral_0511",
+    "text": "Union gives strength.",
+    "fable_id": "fable_0511"
+  },
+  {
+    "doc_id": "moral_0512",
+    "text": "Where force is not enough, cleverness must be used instead.",
+    "fable_id": "fable_0512"
+  },
+  {
+    "doc_id": "moral_0513",
+    "text": "A greedy man does not gladly give anything away, even when he has enough for himself.",
+    "fable_id": "fable_0513"
+  },
+  {
+    "doc_id": "moral_0514",
+    "text": "Someone who wants to help his friend must give him what is essential and appropriate.",
+    "fable_id": "fable_0514"
+  },
+  {
+    "doc_id": "moral_0515",
+    "text": "Do not ask for more than you deserve.",
+    "fable_id": "fable_0515"
+  },
+  {
+    "doc_id": "moral_0516",
+    "text": "Indulgence in luxuries can lead to peril.",
+    "fable_id": "fable_0516"
+  },
+  {
+    "doc_id": "moral_0517",
+    "text": "An enemy is most dangerous when offering you help.",
+    "fable_id": "fable_0517"
+  },
+  {
+    "doc_id": "moral_0518",
+    "text": "The things which bring us pleasure can often be hazardous as well.",
+    "fable_id": "fable_0518"
+  },
+  {
+    "doc_id": "moral_0519",
+    "text": "No one should boast when his prowess is a matter of mere circumstance.",
+    "fable_id": "fable_0519"
+  },
+  {
+    "doc_id": "moral_0520",
+    "text": "No curse weighs more heavily than a guilty conscience.",
+    "fable_id": "fable_0520"
+  },
+  {
+    "doc_id": "moral_0521",
+    "text": "People are often quick to make promises, but they do not really expect to have to fulfill them.",
+    "fable_id": "fable_0521"
+  },
+  {
+    "doc_id": "moral_0522",
+    "text": "Those who adapt to the times will emerge unscathed.",
+    "fable_id": "fable_0522"
+  },
+  {
+    "doc_id": "moral_0523",
+    "text": "It is easy to be brave when there is no danger.",
+    "fable_id": "fable_0523"
+  },
+  {
+    "doc_id": "moral_0524",
+    "text": "Love can blind even the wildest.",
+    "fable_id": "fable_0524"
+  },
+  {
+    "doc_id": "moral_0525",
+    "text": "You are judged by the company you keep.",
+    "fable_id": "fable_0525"
+  },
+  {
+    "doc_id": "moral_0526",
+    "text": "Do not attempt to hide things which cannot be hid.",
+    "fable_id": "fable_0526"
+  },
+  {
+    "doc_id": "moral_0527",
+    "text": "Example is more powerful than precept.",
+    "fable_id": "fable_0527"
+  },
+  {
+    "doc_id": "moral_0528",
+    "text": "We must make friends in prosperity if we would have their help in adversity.",
+    "fable_id": "fable_0528"
+  },
+  {
+    "doc_id": "moral_0529",
+    "text": "A coward by nature will always be a coward.",
+    "fable_id": "fable_0529"
+  },
+  {
+    "doc_id": "moral_0530",
+    "text": "Do not be what you are not, nor pretend to be what you are not",
+    "fable_id": "fable_0530"
+  },
+  {
+    "doc_id": "moral_0531",
+    "text": "The word of a wicked man can never be trusted.",
+    "fable_id": "fable_0531"
+  },
+  {
+    "doc_id": "moral_0532",
+    "text": "It is better to serve in safety than to rule in peril.",
+    "fable_id": "fable_0532"
+  },
+  {
+    "doc_id": "moral_0533",
+    "text": "The man who treats others well is rewarded by gratitude.",
+    "fable_id": "fable_0533"
+  },
+  {
+    "doc_id": "moral_0534",
+    "text": "Pay attention to deeds, not words.",
+    "fable_id": "fable_0534"
+  },
+  {
+    "doc_id": "moral_0535",
+    "text": "A man cannot be too careful of what he does, where the life of any creature is in question.",
+    "fable_id": "fable_0535"
+  },
+  {
+    "doc_id": "moral_0536",
+    "text": "Trouble awaits you if you pursue ill-gotten gains.",
+    "fable_id": "fable_0536"
+  },
+  {
+    "doc_id": "moral_0537",
+    "text": "Every tale is not to be believed.",
+    "fable_id": "fable_0537"
+  },
+  {
+    "doc_id": "moral_0538",
+    "text": "The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",
+    "fable_id": "fable_0538"
+  },
+  {
+    "doc_id": "moral_0539",
+    "text": "It is dangerous to believe a story, and dangerous not to believe it.",
+    "fable_id": "fable_0539"
+  },
+  {
+    "doc_id": "moral_0540",
+    "text": "Often there is more good to be found in one man than in a crowd of people.",
+    "fable_id": "fable_0540"
+  },
+  {
+    "doc_id": "moral_0541",
+    "text": "If you don't speak out for others, there will be nobody left to speak out for you.",
+    "fable_id": "fable_0541"
+  },
+  {
+    "doc_id": "moral_0542",
+    "text": "Tears don't always signify pity.",
+    "fable_id": "fable_0542"
+  },
+  {
+    "doc_id": "moral_0543",
+    "text": "People with excellent qualities are often insulted by their inferiors.",
+    "fable_id": "fable_0543"
+  },
+  {
+    "doc_id": "moral_0544",
+    "text": "A bad man can come to ruin, but he is able to harm many other people first.",
+    "fable_id": "fable_0544"
+  },
+  {
+    "doc_id": "moral_0545",
+    "text": "Any excuse will serve a tyrant.",
+    "fable_id": "fable_0545"
+  },
+  {
+    "doc_id": "moral_0546",
+    "text": "Don't judge character by appearance.",
+    "fable_id": "fable_0546"
+  },
+  {
+    "doc_id": "moral_0547",
+    "text": "There is nothing more valuable than liberty.",
+    "fable_id": "fable_0547"
+  },
+  {
+    "doc_id": "moral_0548",
+    "text": "It is better to be injured with impunity, than to put ourselves in the power of another.",
+    "fable_id": "fable_0548"
+  },
+  {
+    "doc_id": "moral_0549",
+    "text": "Humble commonalty easily finds safety in obscurity.",
+    "fable_id": "fable_0549"
+  },
+  {
+    "doc_id": "moral_0550",
+    "text": "We are not able to see our own faults: but as soon as others make a slip, we are ready to censure.",
+    "fable_id": "fable_0550"
+  },
+  {
+    "doc_id": "moral_0551",
+    "text": "Choosing unworthy representatives can lead to humiliation and ongoing disrespect for the entire group.",
+    "fable_id": "fable_0551"
+  },
+  {
+    "doc_id": "moral_0552",
+    "text": "Better to endure a small hardship than risk a greater one.",
+    "fable_id": "fable_0552"
+  },
+  {
+    "doc_id": "moral_0553",
+    "text": "Life is a mixture of grief and joy.",
+    "fable_id": "fable_0553"
+  },
+  {
+    "doc_id": "moral_0554",
+    "text": "Avoid the gain that exposes to hazard.",
+    "fable_id": "fable_0554"
+  },
+  {
+    "doc_id": "moral_0555",
+    "text": "We must not require what is unreasonable.",
+    "fable_id": "fable_0555"
+  },
+  {
+    "doc_id": "moral_0556",
+    "text": "The essence of authenticity cannot be replicated.",
+    "fable_id": "fable_0556"
+  },
+  {
+    "doc_id": "moral_0557",
+    "text": "The meaning is to be considered, not the mere words.",
+    "fable_id": "fable_0557"
+  },
+  {
+    "doc_id": "moral_0558",
+    "text": "Whatever happens, we must bear it with equanimity.",
+    "fable_id": "fable_0558"
+  },
+  {
+    "doc_id": "moral_0559",
+    "text": "Don't go to extremes.",
+    "fable_id": "fable_0559"
+  },
+  {
+    "doc_id": "moral_0560",
+    "text": "Kindness is never wasted.",
+    "fable_id": "fable_0560"
+  },
+  {
+    "doc_id": "moral_0561",
+    "text": "The weak may find a way to avenge a wrong.",
+    "fable_id": "fable_0561"
+  },
+  {
+    "doc_id": "moral_0562",
+    "text": "Know your enemies.",
+    "fable_id": "fable_0562"
+  },
+  {
+    "doc_id": "moral_0563",
+    "text": "A fine coat is not always an indication of an attractive mind.",
+    "fable_id": "fable_0563"
+  },
+  {
+    "doc_id": "moral_0564",
+    "text": "A little thing in hand is worth more than a great thing in prospect.",
+    "fable_id": "fable_0564"
+  },
+  {
+    "doc_id": "moral_0565",
+    "text": "Don't be greedy.",
+    "fable_id": "fable_0565"
+  },
+  {
+    "doc_id": "moral_0566",
+    "text": "Take care of the little things and the big things will take care of themselves.",
+    "fable_id": "fable_0566"
+  },
+  {
+    "doc_id": "moral_0567",
+    "text": "Avoid overindulgence",
+    "fable_id": "fable_0567"
+  },
+  {
+    "doc_id": "moral_0568",
+    "text": "Everyone is more or less master of his own fate.",
+    "fable_id": "fable_0568"
+  },
+  {
+    "doc_id": "moral_0569",
+    "text": "Wit outshines skill.",
+    "fable_id": "fable_0569"
+  },
+  {
+    "doc_id": "moral_0570",
+    "text": "Each stage of life has its own gifts.",
+    "fable_id": "fable_0570"
+  },
+  {
+    "doc_id": "moral_0571",
+    "text": "Don't deceive yourself.",
+    "fable_id": "fable_0571"
+  },
+  {
+    "doc_id": "moral_0572",
+    "text": "When a man has both an interest and an inclination to betray us, there's no trusting him.",
+    "fable_id": "fable_0572"
+  },
+  {
+    "doc_id": "moral_0573",
+    "text": "In times of peril, the truth may be bitter, but it can also be a means of escape.",
+    "fable_id": "fable_0573"
+  },
+  {
+    "doc_id": "moral_0574",
+    "text": "Fear of the future can lead to actions that bring about the very fate we seek to avoid.",
+    "fable_id": "fable_0574"
+  },
+  {
+    "doc_id": "moral_0575",
+    "text": "We must help one another, for if a neighbor falls, their burden will fall on you.",
+    "fable_id": "fable_0575"
+  },
+  {
+    "doc_id": "moral_0576",
+    "text": "The grass is always greener on the other side of the fence.",
+    "fable_id": "fable_0576"
+  },
+  {
+    "doc_id": "moral_0577",
+    "text": "Professional mourners serve those who pay the most.",
+    "fable_id": "fable_0577"
+  },
+  {
+    "doc_id": "moral_0578",
+    "text": "Justice is fickle.",
+    "fable_id": "fable_0578"
+  },
+  {
+    "doc_id": "moral_0579",
+    "text": "Honor the customs of the household you enter.",
+    "fable_id": "fable_0579"
+  },
+  {
+    "doc_id": "moral_0580",
+    "text": "No matter how you brag, you can be undone.",
+    "fable_id": "fable_0580"
+  },
+  {
+    "doc_id": "moral_0581",
+    "text": "Do not let your fancy make you forget realities.",
+    "fable_id": "fable_0581"
+  },
+  {
+    "doc_id": "moral_0582",
+    "text": "Better to face a known danger than to trust a deceitful promise of safety.",
+    "fable_id": "fable_0582"
+  },
+  {
+    "doc_id": "moral_0583",
+    "text": "Look at the source when placing the blame.",
+    "fable_id": "fable_0583"
+  },
+  {
+    "doc_id": "moral_0584",
+    "text": "It is better to be loved than feared.",
+    "fable_id": "fable_0584"
+  },
+  {
+    "doc_id": "moral_0585",
+    "text": "Foresake the hard when an easier way is available.",
+    "fable_id": "fable_0585"
+  },
+  {
+    "doc_id": "moral_0586",
+    "text": "Even gods may not know everything.",
+    "fable_id": "fable_0586"
+  },
+  {
+    "doc_id": "moral_0587",
+    "text": "Act as you profess to believe.",
+    "fable_id": "fable_0587"
+  },
+  {
+    "doc_id": "moral_0588",
+    "text": "Respect is often better shown by refraining from disrespect.",
+    "fable_id": "fable_0588"
+  },
+  {
+    "doc_id": "moral_0589",
+    "text": "Sometimes, Wicked people commit crime in haste but are not punished until much later.",
+    "fable_id": "fable_0589"
+  },
+  {
+    "doc_id": "moral_0590",
+    "text": "Watch the actions of your enemy.",
+    "fable_id": "fable_0590"
+  },
+  {
+    "doc_id": "moral_0591",
+    "text": "Care defines ability.",
+    "fable_id": "fable_0591"
+  },
+  {
+    "doc_id": "moral_0592",
+    "text": "A humble life free from danger is more valuable than a life of luxury filled with peril.",
+    "fable_id": "fable_0592"
+  },
+  {
+    "doc_id": "moral_0593",
+    "text": "Nature reveals itself.",
+    "fable_id": "fable_0593"
+  },
+  {
+    "doc_id": "moral_0594",
+    "text": "Never trust a known deceiver.",
+    "fable_id": "fable_0594"
+  },
+  {
+    "doc_id": "moral_0595",
+    "text": "Do not neglect the loyalty of old friends to please new acquaintances.",
+    "fable_id": "fable_0595"
+  },
+  {
+    "doc_id": "moral_0596",
+    "text": "Know yourself and your limits.",
+    "fable_id": "fable_0596"
+  },
+  {
+    "doc_id": "moral_0597",
+    "text": "Flatterers and deceivers are not to be trusted.",
+    "fable_id": "fable_0597"
+  },
+  {
+    "doc_id": "moral_0598",
+    "text": "Do not boast lest you be taken down.",
+    "fable_id": "fable_0598"
+  },
+  {
+    "doc_id": "moral_0599",
+    "text": "Trust but verify.",
+    "fable_id": "fable_0599"
+  },
+  {
+    "doc_id": "moral_0600",
+    "text": "The great do not always prevail.",
+    "fable_id": "fable_0600"
+  },
+  {
+    "doc_id": "moral_0601",
+    "text": "Falsehood is with all men.",
+    "fable_id": "fable_0601"
+  },
+  {
+    "doc_id": "moral_0602",
+    "text": "Consider all before you judge.",
+    "fable_id": "fable_0602"
+  },
+  {
+    "doc_id": "moral_0603",
+    "text": "People that live by example need to look closely at the example they are following.",
+    "fable_id": "fable_0603"
+  },
+  {
+    "doc_id": "moral_0604",
+    "text": "Know your place.",
+    "fable_id": "fable_0604"
+  },
+  {
+    "doc_id": "moral_0605",
+    "text": "Be watchful or all will be lost.",
+    "fable_id": "fable_0605"
+  },
+  {
+    "doc_id": "moral_0606",
+    "text": "It is better to endure short-term struggles for long-term benefits than the other way around.",
+    "fable_id": "fable_0606"
+  },
+  {
+    "doc_id": "moral_0607",
+    "text": "When fools fight others run away with the prize.",
+    "fable_id": "fable_0607"
+  },
+  {
+    "doc_id": "moral_0608",
+    "text": "There is no easy choice during desperate times.",
+    "fable_id": "fable_0608"
+  },
+  {
+    "doc_id": "moral_0609",
+    "text": "Do not dwell on what has passed.",
+    "fable_id": "fable_0609"
+  },
+  {
+    "doc_id": "moral_0610",
+    "text": "Sadness is a part of life.",
+    "fable_id": "fable_0610"
+  },
+  {
+    "doc_id": "moral_0611",
+    "text": "Destroy the seed of evil, or it will grow up to your ruin.",
+    "fable_id": "fable_0611"
+  },
+  {
+    "doc_id": "moral_0612",
+    "text": "Action is more valuable than arguments.",
+    "fable_id": "fable_0612"
+  },
+  {
+    "doc_id": "moral_0613",
+    "text": "Nature reveals itself.",
+    "fable_id": "fable_0613"
+  },
+  {
+    "doc_id": "moral_0614",
+    "text": "It's easy to put off today what can be done tomorrow.",
+    "fable_id": "fable_0614"
+  },
+  {
+    "doc_id": "moral_0615",
+    "text": "Be prepared to defend your position.",
+    "fable_id": "fable_0615"
+  },
+  {
+    "doc_id": "moral_0616",
+    "text": "Greed often overreaches itself.",
+    "fable_id": "fable_0616"
+  },
+  {
+    "doc_id": "moral_0617",
+    "text": "Be careful what you wish for.",
+    "fable_id": "fable_0617"
+  },
+  {
+    "doc_id": "moral_0618",
+    "text": "Degrading your opponents only diminishes your own victory.",
+    "fable_id": "fable_0618"
+  },
+  {
+    "doc_id": "moral_0619",
+    "text": "Pick your enemies.",
+    "fable_id": "fable_0619"
+  },
+  {
+    "doc_id": "moral_0620",
+    "text": "Flatters are not to be trusted.",
+    "fable_id": "fable_0620"
+  },
+  {
+    "doc_id": "moral_0621",
+    "text": "Every tale is not to be believed.",
+    "fable_id": "fable_0621"
+  },
+  {
+    "doc_id": "moral_0622",
+    "text": "Value is what others think of you, not what you think of yourself.",
+    "fable_id": "fable_0622"
+  },
+  {
+    "doc_id": "moral_0623",
+    "text": "There is danger in the silent enemy.",
+    "fable_id": "fable_0623"
+  },
+  {
+    "doc_id": "moral_0624",
+    "text": "We should not love our homeland so much that we ignore the possibility of finding greater happiness elsewhere.",
+    "fable_id": "fable_0624"
+  },
+  {
+    "doc_id": "moral_0625",
+    "text": "A small inconvenience is compensated for by a greater usefulness.",
+    "fable_id": "fable_0625"
+  },
+  {
+    "doc_id": "moral_0626",
+    "text": "It's wise to think before we speak.",
+    "fable_id": "fable_0626"
+  },
+  {
+    "doc_id": "moral_0627",
+    "text": "A wise person will not attempt anything without having the right means to achieve it.",
+    "fable_id": "fable_0627"
+  },
+  {
+    "doc_id": "moral_0628",
+    "text": "Trusting as you wish to be trusted doesn't work between a rogue and an honest person. ",
+    "fable_id": "fable_0628"
+  },
+  {
+    "doc_id": "moral_0629",
+    "text": "Pride and vanity leads to our downfall.",
+    "fable_id": "fable_0629"
+  },
+  {
+    "doc_id": "moral_0630",
+    "text": "We should not to conclude that we are allowed to do to other people's things what is permitted to them in their own houses.",
+    "fable_id": "fable_0630"
+  },
+  {
+    "doc_id": "moral_0631",
+    "text": "The life of the poor is often safer than the life of the rich.",
+    "fable_id": "fable_0631"
+  },
+  {
+    "doc_id": "moral_0632",
+    "text": "What we are forced to do by a greater power and necessity is not truly our own action.",
+    "fable_id": "fable_0632"
+  },
+  {
+    "doc_id": "moral_0633",
+    "text": "Famous beauties are rarely lucky.",
+    "fable_id": "fable_0633"
+  },
+  {
+    "doc_id": "moral_0634",
+    "text": "Do not fear death, as it is the final goodbye to all the troubles, pains, and dangers of life.",
+    "fable_id": "fable_0634"
+  },
+  {
+    "doc_id": "moral_0635",
+    "text": "Beware those who value their gain more than their love.",
+    "fable_id": "fable_0635"
+  },
+  {
+    "doc_id": "moral_0636",
+    "text": "Arrogant fools have no true influence.",
+    "fable_id": "fable_0636"
+  },
+  {
+    "doc_id": "moral_0637",
+    "text": "In all disputes, those who keep their opponents afraid of revenge come out best.",
+    "fable_id": "fable_0637"
+  },
+  {
+    "doc_id": "moral_0638",
+    "text": "Men would bear their misfortunes more patiently if they considered the ones of others.",
+    "fable_id": "fable_0638"
+  },
+  {
+    "doc_id": "moral_0639",
+    "text": "The shortest and surest way of doing things is best.",
+    "fable_id": "fable_0639"
+  },
+  {
+    "doc_id": "moral_0640",
+    "text": "When we are avoiding present dangers, we should not fall into even worse peril.",
+    "fable_id": "fable_0640"
+  },
+  {
+    "doc_id": "moral_0641",
+    "text": "An alliance with the powerless is futile.",
+    "fable_id": "fable_0641"
+  },
+  {
+    "doc_id": "moral_0642",
+    "text": "There is a clever way of joking between seriousness and jest that brings both enjoyment and benefit.",
+    "fable_id": "fable_0642"
+  },
+  {
+    "doc_id": "moral_0643",
+    "text": "Honors change behavior.",
+    "fable_id": "fable_0643"
+  },
+  {
+    "doc_id": "moral_0644",
+    "text": "Do not mock the feelings of old age, as no one can escape them if they go on living.",
+    "fable_id": "fable_0644"
+  },
+  {
+    "doc_id": "moral_0645",
+    "text": "All things are to be done in their own time.",
+    "fable_id": "fable_0645"
+  },
+  {
+    "doc_id": "moral_0646",
+    "text": "Big talkers are not suited for trust, business, or conversation.",
+    "fable_id": "fable_0646"
+  },
+  {
+    "doc_id": "moral_0647",
+    "text": "Putting up with one insult invites another.",
+    "fable_id": "fable_0647"
+  },
+  {
+    "doc_id": "moral_0648",
+    "text": "Only untrustworthy people blame the consequences of their own actions on others.",
+    "fable_id": "fable_0648"
+  },
+  {
+    "doc_id": "moral_0649",
+    "text": "Embrace your own strengths.",
+    "fable_id": "fable_0649"
+  },
+  {
+    "doc_id": "moral_0650",
+    "text": "Consider the consequences of your actions.",
+    "fable_id": "fable_0650"
+  },
+  {
+    "doc_id": "moral_0651",
+    "text": "What a person does through another is truly their own action.",
+    "fable_id": "fable_0651"
+  },
+  {
+    "doc_id": "moral_0652",
+    "text": "Many people fear danger where there is none, and feel safe where there is danger: put things in perspective.",
+    "fable_id": "fable_0652"
+  },
+  {
+    "doc_id": "moral_0653",
+    "text": "It's better to ignore an insult from one troublemaker than to bring a whole crowd of trouble upon yourself.",
+    "fable_id": "fable_0653"
+  },
+  {
+    "doc_id": "moral_0654",
+    "text": "Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",
+    "fable_id": "fable_0654"
+  },
+  {
+    "doc_id": "moral_0655",
+    "text": "Everything pleases at first, but nothing pleases for long.",
+    "fable_id": "fable_0655"
+  },
+  {
+    "doc_id": "moral_0656",
+    "text": "We should not be upset by the words of our teachers, since those words are usually the cause of many good things.",
+    "fable_id": "fable_0656"
+  },
+  {
+    "doc_id": "moral_0657",
+    "text": "It's wise and kind to be considerate of one another, for no one knows their own end.",
+    "fable_id": "fable_0657"
+  },
+  {
+    "doc_id": "moral_0658",
+    "text": "There is no wealth greater than liberty.",
+    "fable_id": "fable_0658"
+  },
+  {
+    "doc_id": "moral_0659",
+    "text": "True worth should be measured by character and deeds, not by outward appearances.",
+    "fable_id": "fable_0659"
+  },
+  {
+    "doc_id": "moral_0660",
+    "text": "Nothing should be condemned, since there is nothing so worthless and humble that it cannot at some time or another prove to be useful.",
+    "fable_id": "fable_0660"
+  },
+  {
+    "doc_id": "moral_0661",
+    "text": "It is more honorable to die having achieved noble deeds than to live a life of vice.",
+    "fable_id": "fable_0661"
+  },
+  {
+    "doc_id": "moral_0662",
+    "text": "Don't promise more than you can deliver.",
+    "fable_id": "fable_0662"
+  },
+  {
+    "doc_id": "moral_0663",
+    "text": "Many people renounce wicked activities only because they are prevented from conducting them any longer.",
+    "fable_id": "fable_0663"
+  },
+  {
+    "doc_id": "moral_0664",
+    "text": "Do not fight with those who are perfectly capable of fighting back.",
+    "fable_id": "fable_0664"
+  },
+  {
+    "doc_id": "moral_0665",
+    "text": "Unequal matches bring misery.",
+    "fable_id": "fable_0665"
+  },
+  {
+    "doc_id": "moral_0666",
+    "text": "It's foolish to make decisions without understanding the nature of the matter at hand.",
+    "fable_id": "fable_0666"
+  },
+  {
+    "doc_id": "moral_0667",
+    "text": "Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side.",
+    "fable_id": "fable_0667"
+  },
+  {
+    "doc_id": "moral_0668",
+    "text": "When public officials encourage foolishness, it's no surprise if fools try to become public officials.",
+    "fable_id": "fable_0668"
+  },
+  {
+    "doc_id": "moral_0669",
+    "text": "He who claims any good for himself takes away from the source of all the good he enjoys.",
+    "fable_id": "fable_0669"
+  },
+  {
+    "doc_id": "moral_0670",
+    "text": "We should not expect that our crimes will always go unpunished.",
+    "fable_id": "fable_0670"
+  },
+  {
+    "doc_id": "moral_0671",
+    "text": "It is better by far to be governed by one chief, than by many.",
+    "fable_id": "fable_0671"
+  },
+  {
+    "doc_id": "moral_0672",
+    "text": "No one is so loving of a friend that they would not prefer their own good to that of another.",
+    "fable_id": "fable_0672"
+  },
+  {
+    "doc_id": "moral_0673",
+    "text": "Not all things are suitable for all people.",
+    "fable_id": "fable_0673"
+  },
+  {
+    "doc_id": "moral_0674",
+    "text": "Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.",
+    "fable_id": "fable_0674"
+  },
+  {
+    "doc_id": "moral_0675",
+    "text": "Many pretend to be concerned about some people's demise, when however what they want is for it to come quickly.",
+    "fable_id": "fable_0675"
+  },
+  {
+    "doc_id": "moral_0676",
+    "text": "Every Season has its own work.",
+    "fable_id": "fable_0676"
+  },
+  {
+    "doc_id": "moral_0677",
+    "text": "People are to be judged by their actions, not by their appearance.",
+    "fable_id": "fable_0677"
+  },
+  {
+    "doc_id": "moral_0678",
+    "text": "No one can be safe in peace unless they are always ready to face an enemy in case of war.",
+    "fable_id": "fable_0678"
+  },
+  {
+    "doc_id": "moral_0679",
+    "text": "Save a Thief from the Gallows, and he'll cut your Throat.",
+    "fable_id": "fable_0679"
+  },
+  {
+    "doc_id": "moral_0680",
+    "text": "Unwanted visits are a nuisance to a peaceful person's life.",
+    "fable_id": "fable_0680"
+  },
+  {
+    "doc_id": "moral_0681",
+    "text": "Possession is nine-tenths of the law.",
+    "fable_id": "fable_0681"
+  },
+  {
+    "doc_id": "moral_0682",
+    "text": "Wisdom is far superior to strength.",
+    "fable_id": "fable_0682"
+  },
+  {
+    "doc_id": "moral_0683",
+    "text": "Many people give up their vices not out of a love for virtue, but because they can no longer continue indulging in them.",
+    "fable_id": "fable_0683"
+  },
+  {
+    "doc_id": "moral_0684",
+    "text": "Better to be alone than in bad company.",
+    "fable_id": "fable_0684"
+  },
+  {
+    "doc_id": "moral_0685",
+    "text": "People should not be judged by their appearances, but by their actions.",
+    "fable_id": "fable_0685"
+  },
+  {
+    "doc_id": "moral_0686",
+    "text": "There is no thing so worthy of wonderment which does not cease to be a miracle with the passage of time.",
+    "fable_id": "fable_0686"
+  },
+  {
+    "doc_id": "moral_0687",
+    "text": "An enemy in disguise is much more unforgivable than an open enemy.",
+    "fable_id": "fable_0687"
+  },
+  {
+    "doc_id": "moral_0688",
+    "text": "We should not pick fights with people stronger than we are.",
+    "fable_id": "fable_0688"
+  },
+  {
+    "doc_id": "moral_0689",
+    "text": "Men who are wickedly inclined will not stop their vicious behavior, no matter who urges them to do so.",
+    "fable_id": "fable_0689"
+  },
+  {
+    "doc_id": "moral_0690",
+    "text": "It is very unwise, even for the greatest of men, to provoke the least, as they may find a way to enact revenge.",
+    "fable_id": "fable_0690"
+  },
+  {
+    "doc_id": "moral_0691",
+    "text": "Be content with your lot.",
+    "fable_id": "fable_0691"
+  },
+  {
+    "doc_id": "moral_0692",
+    "text": "When people won't listen to reason through kind means, they must be made to understand through harsh ones.",
+    "fable_id": "fable_0692"
+  },
+  {
+    "doc_id": "moral_0693",
+    "text": "Complaining is the privilege of the weak.",
+    "fable_id": "fable_0693"
+  },
+  {
+    "doc_id": "moral_0694",
+    "text": "True friends are hard to come by.",
+    "fable_id": "fable_0694"
+  },
+  {
+    "doc_id": "moral_0695",
+    "text": "A false friend is the worst kind of enemy.",
+    "fable_id": "fable_0695"
+  },
+  {
+    "doc_id": "moral_0696",
+    "text": "Be content with your lot.",
+    "fable_id": "fable_0696"
+  },
+  {
+    "doc_id": "moral_0697",
+    "text": "Appearances can be deceiving.",
+    "fable_id": "fable_0697"
+  },
+  {
+    "doc_id": "moral_0698",
+    "text": "Money opens all doors.",
+    "fable_id": "fable_0698"
+  },
+  {
+    "doc_id": "moral_0699",
+    "text": "Even the strongest can be brought low by unchecked desires.",
+    "fable_id": "fable_0699"
+  },
+  {
+    "doc_id": "moral_0700",
+    "text": "Those who won't learn from advice must be taught by experience.",
+    "fable_id": "fable_0700"
+  },
+  {
+    "doc_id": "moral_0701",
+    "text": "A bird in the hand is worth two in the bush.",
+    "fable_id": "fable_0701"
+  },
+  {
+    "doc_id": "moral_0702",
+    "text": "Seek the friendship of those who do not withdraw from offering help even in a time of adversity.",
+    "fable_id": "fable_0702"
+  },
+  {
+    "doc_id": "moral_0703",
+    "text": "Educate your children in those arts which are capable of preserving them from want.",
+    "fable_id": "fable_0703"
+  },
+  {
+    "doc_id": "moral_0704",
+    "text": "No one is so contemptible that he cannot be of use to us in some way.",
+    "fable_id": "fable_0704"
+  },
+  {
+    "doc_id": "moral_0705",
+    "text": "The conflicts of the wicked are the protection of the good.",
+    "fable_id": "fable_0705"
+  },
+  {
+    "doc_id": "moral_0706",
+    "text": "We should live as if we always saw Death standing by.",
+    "fable_id": "fable_0706"
+  },
+  {
+    "doc_id": "moral_0707",
+    "text": "A life of greed and hoarding wealth leads to misery.",
+    "fable_id": "fable_0707"
+  },
+  {
+    "doc_id": "moral_0708",
+    "text": "Those who adapt to the times will emerge unscathed.",
+    "fable_id": "fable_0708"
+  }
+]
