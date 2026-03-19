@@ -54,16 +54,41 @@
   - 68% of correct morals rank below position 50 — embeddings don't capture moral abstraction
   - **This confirms the benchmark is meaningful and the task is hard**
 
-- [ ] **1.4 — Try additional embedding models**
-  Candidates (at minimum):
-  - `sentence-transformers/all-MiniLM-L6-v2` (fast baseline)
-  - `sentence-transformers/all-mpnet-base-v2` (stronger)
-  - `BAAI/bge-large-en-v1.5`
-  - `intfloat/e5-large-v2`
-  - An LLM-based embedder (e.g., `nomic-embed-text` or OpenAI `text-embedding-3-large`)
+- [x] **1.4 — Try additional embedding models** ✓ (see `results/improved_retrieval_results.json`)
+  Tested: `BAAI/bge-large-en-v1.5`, `intfloat/e5-large-v2`, `intfloat/multilingual-e5-large`
+  Also tested instruction prefix variants for BGE (no_instruction, default, moral_task, moral_meaning)
+  and E5 (default query:/passage: prefix vs no prefix).
+  Note: `Alibaba-NLP/gte-large-en-v1.5` crashed (torch/MPS incompatibility), removed.
 
-- [ ] **1.5 — Document baseline results**
-  Create a results table comparing models across tasks and metrics.
+  **Best results (Fable→Moral, clean):**
+
+  | Model | Variant | MRR | R@1 | R@5 | R@10 |
+  |-------|---------|-----|-----|-----|------|
+  | E5-large-v2 | no_prefix | **0.080** | **0.044** | 0.102 | 0.145 |
+  | E5-large-v2 | query:/passage: | 0.074 | 0.030 | **0.106** | **0.159** |
+  | BGE-large-en-v1.5 | default | 0.068 | 0.032 | 0.083 | 0.127 |
+  | multilingual-E5 | default | 0.071 | 0.024 | 0.102 | 0.159 |
+
+  **Best results (Moral→Fable, clean):**
+
+  | Model | Variant | MRR | R@1 | R@5 | R@10 |
+  |-------|---------|-----|-----|-----|------|
+  | E5-large-v2 | query:/passage: | **0.102** | **0.056** | **0.135** | **0.178** |
+  | multilingual-E5 | default | 0.095 | 0.056 | 0.124 | 0.152 |
+
+  **Key findings:**
+  - E5-large-v2 is the best model overall — 4.4% R@1 (f→m), 5.6% R@1 (m→f)
+  - Task-specific instructions HURT performance on BGE (moral_task/moral_meaning worse than no instruction)
+  - Multilingual E5 is competitive — useful for future cross-lingual experiments
+  - Improvement over baseline: ~30% relative gain in R@1 (3.4% → 4.4% for f→m)
+
+- [x] **1.5 — Document baseline results** ✓ (tables above and in results/ JSON files)
+
+- [ ] **1.6 — LLM-based CoT reranking** (script ready: `scripts/07_llm_reranking.py`)
+  Two approaches implemented:
+  - Approach A: CoT reranking of top-20 embedding candidates via Gemini
+  - Approach B: CoT moral summarization → embed summary → retrieve
+  Requires `GOOGLE_API_KEY` env var to run.
 
 ---
 

@@ -1,0 +1,212 @@
+[
+  {
+    "MRR": 0.0659,
+    "R-Precision": 0.0324,
+    "Recall@1": 0.0324,
+    "Recall@5": 0.0818,
+    "Recall@10": 0.1171,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [no_instruction]"
+  },
+  {
+    "MRR": 0.0670,
+    "R-Precision": 0.0254,
+    "Recall@1": 0.0254,
+    "Recall@5": 0.0973,
+    "Recall@10": 0.1326,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [no_instruction]"
+  },
+  {
+    "MRR": 0.0296,
+    "R-Precision": 0.0141,
+    "Recall@1": 0.0141,
+    "Recall@5": 0.0353,
+    "Recall@10": 0.0536,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "BAAI/bge-large-en-v1.5 [no_instruction]"
+  },
+  {
+    "MRR": 0.0675,
+    "R-Precision": 0.0324,
+    "Recall@1": 0.0324,
+    "Recall@5": 0.0832,
+    "Recall@10": 0.1269,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [default]"
+  },
+  {
+    "MRR": 0.0650,
+    "R-Precision": 0.0282,
+    "Recall@1": 0.0282,
+    "Recall@5": 0.0846,
+    "Recall@10": 0.1312,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [default]"
+  },
+  {
+    "MRR": 0.0285,
+    "R-Precision": 0.0099,
+    "Recall@1": 0.0099,
+    "Recall@5": 0.0381,
+    "Recall@10": 0.0578,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "BAAI/bge-large-en-v1.5 [default]"
+  },
+  {
+    "MRR": 0.0476,
+    "R-Precision": 0.0212,
+    "Recall@1": 0.0212,
+    "Recall@5": 0.0494,
+    "Recall@10": 0.0860,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_task]"
+  },
+  {
+    "MRR": 0.0429,
+    "R-Precision": 0.0169,
+    "Recall@1": 0.0169,
+    "Recall@5": 0.0508,
+    "Recall@10": 0.0790,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_task]"
+  },
+  {
+    "MRR": 0.0173,
+    "R-Precision": 0.0071,
+    "Recall@1": 0.0071,
+    "Recall@5": 0.0197,
+    "Recall@10": 0.0339,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_task]"
+  },
+  {
+    "MRR": 0.0482,
+    "R-Precision": 0.0183,
+    "Recall@1": 0.0183,
+    "Recall@5": 0.0564,
+    "Recall@10": 0.0874,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_meaning]"
+  },
+  {
+    "MRR": 0.0467,
+    "R-Precision": 0.0197,
+    "Recall@1": 0.0197,
+    "Recall@5": 0.0536,
+    "Recall@10": 0.0874,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_meaning]"
+  },
+  {
+    "MRR": 0.0162,
+    "R-Precision": 0.0056,
+    "Recall@1": 0.0056,
+    "Recall@5": 0.0155,
+    "Recall@10": 0.0282,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "BAAI/bge-large-en-v1.5 [moral_meaning]"
+  },
+  {
+    "MRR": 0.0744,
+    "R-Precision": 0.0296,
+    "Recall@1": 0.0296,
+    "Recall@5": 0.1058,
+    "Recall@10": 0.1594,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "intfloat/e5-large-v2 [default]"
+  },
+  {
+    "MRR": 0.1017,
+    "R-Precision": 0.0564,
+    "Recall@1": 0.0564,
+    "Recall@5": 0.1354,
+    "Recall@10": 0.1777,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "intfloat/e5-large-v2 [default]"
+  },
+  {
+    "MRR": 0.0378,
+    "R-Precision": 0.0141,
+    "Recall@1": 0.0141,
+    "Recall@5": 0.0508,
+    "Recall@10": 0.0832,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "intfloat/e5-large-v2 [default]"
+  },
+  {
+    "MRR": 0.0800,
+    "R-Precision": 0.0437,
+    "Recall@1": 0.0437,
+    "Recall@5": 0.1016,
+    "Recall@10": 0.1453,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "intfloat/e5-large-v2 [no_prefix]"
+  },
+  {
+    "MRR": 0.0948,
+    "R-Precision": 0.0536,
+    "Recall@1": 0.0536,
+    "Recall@5": 0.1185,
+    "Recall@10": 0.1636,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "intfloat/e5-large-v2 [no_prefix]"
+  },
+  {
+    "MRR": 0.0455,
+    "R-Precision": 0.0254,
+    "Recall@1": 0.0254,
+    "Recall@5": 0.0550,
+    "Recall@10": 0.0719,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "intfloat/e5-large-v2 [no_prefix]"
+  },
+  {
+    "MRR": 0.0709,
+    "R-Precision": 0.0240,
+    "Recall@1": 0.0240,
+    "Recall@5": 0.1016,
+    "Recall@10": 0.1594,
+    "n_queries": 709,
+    "task": "fable\u2192moral (clean)",
+    "model": "intfloat/multilingual-e5-large [default]"
+  },
+  {
+    "MRR": 0.0949,
+    "R-Precision": 0.0564,
+    "Recall@1": 0.0564,
+    "Recall@5": 0.1241,
+    "Recall@10": 0.1523,
+    "n_queries": 709,
+    "task": "moral\u2192fable (clean)",
+    "model": "intfloat/multilingual-e5-large [default]"
+  },
+  {
+    "MRR": 0.0334,
+    "R-Precision": 0.0127,
+    "Recall@1": 0.0127,
+    "Recall@5": 0.0437,
+    "Recall@10": 0.0635,
+    "n_queries": 709,
+    "task": "fable\u2192moral (augmented)",
+    "model": "intfloat/multilingual-e5-large [default]"
+  }
+]

@@ -11,6 +11,7 @@ Models:
   - sentence-transformers/all-mpnet-base-v2 (stronger)
 
 Metrics: R-Precision, Recall@1, Recall@5, Recall@10, MRR
+TODO: add Recall@50 / MAP
 """
 import json
 import time

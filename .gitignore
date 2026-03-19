@@ -35,3 +35,11 @@ Thumbs.db
 
 # PDFs (already tracked separately)
 *.pdf
+
+# Environment variables
+.env
+
+# Results — large run outputs (regeneratable, not tracked)
+results/runs/
+results/llm_runs/
+results/summaries/
