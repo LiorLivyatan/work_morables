@@ -43,3 +43,4 @@ Thumbs.db
 results/runs/
 results/llm_runs/
 results/summaries/
+results/summaries_backup/

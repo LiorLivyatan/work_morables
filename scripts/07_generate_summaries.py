@@ -19,7 +19,9 @@ Usage:
   # Full generation for specific prompts only
   python scripts/07_generate_summaries.py --prompts direct few_shot
 """
-
+# TODO: Add seeds
+# TODO: add a table of different prompt/model/seed with a few examples
+# Dataset / Modeling (summary/instructions/finetuning/indexing) / Models (to choose... in the future)
 import argparse
 import json
 import os
@@ -35,10 +37,10 @@ SUMMARIES_CACHE.mkdir(parents=True, exist_ok=True)
 
 # ── Qwen models ────────────────────────────────────────────────────────────────
 QWEN_MODELS = {
-    "qwen2.5-0.5b": "Qwen/Qwen2.5-0.5B-Instruct",
-    "qwen2.5-1.5b": "Qwen/Qwen2.5-1.5B-Instruct",
-    "qwen2.5-3b":   "Qwen/Qwen2.5-3B-Instruct",
-    "qwen2.5-7b":   "Qwen/Qwen2.5-7B-Instruct",
+    "qwen3.5-0.8b": "Qwen/Qwen3.5-0.8B",
+    "qwen3.5-2b":   "Qwen/Qwen3.5-2B",
+    "qwen3.5-4b":   "Qwen/Qwen3.5-4B",
+    "qwen3.5-9b":   "Qwen/Qwen3.5-9B",
 }
 
 # ── Prompt templates ───────────────────────────────────────────────────────────
@@ -66,30 +68,6 @@ SUMMARY_PROMPTS = {
         "Fable: {fable}\n\n"
         "Moral:"
     ),
-    # cot_v2: proverb/maxim format — calibrates style with concrete examples
-    "cot_v2": (
-        "Fable: {fable}\n\n"
-        "Think about what lesson this story teaches. "
-        "Express it as a short moral maxim, like 'Actions speak louder than words' "
-        "or 'Pride comes before a fall'. No intro, just the maxim:\n"
-        "Moral:"
-    ),
-    # cot_v3: guided questions with explicit format constraint at the end
-    "cot_v3": (
-        "Fable: {fable}\n\n"
-        "Answer briefly:\n"
-        "1. What happens?\n"
-        "2. What goes wrong or right for the character?\n"
-        "3. What should we learn from this?\n\n"
-        "Now state the moral in one short phrase (do NOT write 'The moral is'):\n"
-        "Moral:"
-    ),
-    # cot_v4: annotator role — simple and direct
-    "cot_v4": (
-        "You are a fable annotator. For each fable, write the moral as a short standalone phrase.\n\n"
-        "Fable: {fable}\n\n"
-        "Moral:"
-    ),
     "few_shot": (
         "Here are two examples of fables and their morals:\n\n"
         "Example 1:\n"
@@ -108,43 +86,6 @@ SUMMARY_PROMPTS = {
     ),
 }
 
-# ── Prefixes to strip from model outputs ──────────────────────────────────────
-_PREFIXES = [
-    "the moral of this fable is that ",
-    "the moral of the fable is that ",
-    "the moral of this story is that ",
-    "the moral of the story is that ",
-    "the moral is that ",
-    "the moral is: ",
-    "the lesson of this fable is that ",
-    "the lesson taught by this fable is that ",
-    "the lesson taught by the fable is that ",
-    "the lesson is that ",
-    "the deeper lesson of this fable is that ",
-    "the deeper lesson or moral principle illustrated in this fable is that ",
-    "the deeper lesson or moral principle illustrated in this fable is ",
-    "the key lesson is that ",
-    "the key lesson is: ",
-    "this fable teaches that ",
-    "this fable teaches us that ",
-    "this story teaches that ",
-    "in conclusion, ",
-    "overall, ",
-    "therefore, ",
-    "thus, ",
-]
-
-
-def _strip_prefix(text: str) -> str:
-    t = text.strip()
-    lower = t.lower()
-    for p in _PREFIXES:
-        if lower.startswith(p):
-            t = t[len(p):]
-            break
-    return (t[0].upper() + t[1:]) if t else t
-
-
 # ── Data ───────────────────────────────────────────────────────────────────────
 with open(DATA_DIR / "fables_corpus.json") as f:
     fable_texts = [x["text"] for x in json.load(f)]
@@ -155,21 +96,15 @@ print(f"Loaded {len(fable_texts)} fables")
 # ── Model loading / generation ─────────────────────────────────────────────────
 
 def load_model(model_id: str):
-    import torch
-    from transformers import AutoModelForCausalLM, AutoTokenizer
+    from mlx_lm import load
 
     print(f"  Loading {model_id}...")
-    tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
-    dtype = torch.float16
-    model = AutoModelForCausalLM.from_pretrained(
-        model_id, torch_dtype=dtype, device_map="auto", trust_remote_code=True,
-    )
-    model.train(False)
+    model, tokenizer = load(model_id)
     return tokenizer, model
 
 
 def generate_one(tokenizer, model, fable: str, prompt_template: str) -> str:
-    import torch
+    from mlx_lm import generate
 
     prompt = prompt_template.format(fable=fable)
     messages = [{"role": "user", "content": prompt}]
@@ -183,18 +118,7 @@ def generate_one(tokenizer, model, fable: str, prompt_template: str) -> str:
             messages, tokenize=False, add_generation_prompt=True,
         )
 
-    inputs = tokenizer(text, return_tensors="pt")
-    inputs = {k: v.to(model.device) for k, v in inputs.items()}
-
-    with torch.no_grad():
-        out = model.generate(
-            **inputs, max_new_tokens=80, do_sample=False,
-            pad_token_id=tokenizer.eos_token_id,
-        )
-
-    response = tokenizer.decode(
-        out[0][inputs["input_ids"].shape[1]:], skip_special_tokens=True,
-    ).strip()
+    response = generate(model, tokenizer, prompt=text, max_tokens=80, verbose=False)
 
     # Strip <think> blocks
     response = re.sub(r"<think>.*?</think>", "", response, flags=re.DOTALL).strip()
@@ -208,18 +132,12 @@ def generate_one(tokenizer, model, fable: str, prompt_template: str) -> str:
     # Take first non-empty line
     lines = [ln.strip() for ln in response.split("\n") if ln.strip()]
     return lines[0] if lines else response
-    # NOTE: prefix stripping is intentionally disabled — we let the model
-    # generate naturally. To re-enable, uncomment the line below:
-    # return _strip_prefix(lines[0] if lines else response)
 
 
 def unload_model(model, tokenizer):
-    import torch
+    import mlx.core as mx
     del model, tokenizer
-    if hasattr(torch.backends, "mps") and torch.backends.mps.is_available():
-        torch.mps.empty_cache()
-    elif torch.cuda.is_available():
-        torch.cuda.empty_cache()
+    mx.clear_cache()
 
 
 # ── Main generation logic ──────────────────────────────────────────────────────
