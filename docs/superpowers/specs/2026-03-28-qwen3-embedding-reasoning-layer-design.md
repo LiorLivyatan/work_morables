@@ -28,7 +28,7 @@ This follows the professor's framing: "add a reasoning layer above the text — 
 
 ## Models
 
-All from the Qwen3-Embedding series, loaded via `sentence-transformers`:
+All from the Qwen3-Embedding series, loaded via `transformers` with last-token pooling:
 
 | Model | HuggingFace ID | Size | Embedding Dim |
 |-------|----------------|------|---------------|
@@ -40,44 +40,30 @@ Compute: M4 Pro (20-core GPU, 64GB unified memory) via MPS backend.
 
 ## Instruction Variants
 
-Qwen3-Embedding input format: `{Instruction} {Text}<|endoftext|>`. The instruction steers what the embedding represents. We test 4 instruction variants, applied asymmetrically (different instructions for fable-side and moral-side encoding).
+Qwen3-Embedding query format: `Instruct: {instruction}\nQuery:{text}`. Documents are encoded as plain text (no instruction). This follows the paper: "we concatenate the instruction and the query into a single input context, while leaving the document unchanged."
 
-### Fable-side instructions (encoding fables as corpus documents):
-
-**1. baseline:**
-> Retrieve the most relevant passage that matches this text
-
-**2. moral_focused:**
-> Read this fable carefully. Identify the central moral lesson or life principle it teaches — the underlying truth about human nature, virtue, or vice that the narrative illustrates. Represent the moral meaning, not the surface story.
-
-**3. analytical:**
-> Analyze this fable step by step: What conflict or situation does the story present? What choices do the characters make, and what consequences follow? What general principle about human behavior or wisdom does this pattern reveal? Focus your representation on that abstract principle.
-
-**4. abstract:**
-> This is a fable — a short narrative that uses characters and events as vehicles for a deeper truth. Look past the literal characters and plot. What universal principle, virtue, or vice is being illustrated? What would a wise reader take away as the enduring lesson? Represent that abstract meaning.
-
-### Moral-side instructions (encoding morals as queries):
+The instruction steers the moral (query) representation. We test 4 variants:
 
 **1. baseline:**
-> Retrieve the most relevant passage that matches this text
+> Given a text, retrieve the most relevant passage that matches this text
 
 **2. moral_focused:**
-> This is an abstract moral principle or life lesson. Find the narrative — a fable or parable — that teaches this exact lesson through its characters and plot.
+> Given a moral principle or life lesson, retrieve the fable or parable that teaches this exact lesson through its characters, conflict, and resolution. Focus on the underlying meaning, not surface-level details like character names or settings.
 
 **3. analytical:**
-> This moral statement expresses a truth about human nature. Find the fable whose characters, conflict, and resolution illustrate this principle. The fable may use animals, people, or objects as allegories — look for the structural match between the lesson and the narrative pattern.
+> Given a moral statement about human nature, retrieve the fable that illustrates this principle. Consider: the fable will dramatize this lesson through a narrative arc where characters' choices lead to consequences that reveal the truth of this moral. The fable may use animals, people, or objects as allegories. Look for the structural match between the abstract lesson and the narrative pattern.
 
 **4. abstract:**
-> This is a concise moral truth. A fable exists that dramatizes this principle through a specific story. The fable will not state this moral explicitly — instead, the moral emerges from the characters' actions and their consequences. Represent this moral for matching against such narratives.
+> Given a concise moral truth — a statement about virtue, vice, or the human condition — retrieve the fable that serves as its narrative embodiment. The fable will not state this moral explicitly; instead, the moral emerges from the interplay of characters' actions and their consequences. Look past literal content to find the fable whose deeper meaning aligns with this principle.
 
 ## Experiment Matrix
 
 3 models x 4 instructions = **12 runs**.
 
 Each run:
-1. Load model via `sentence-transformers`
-2. Encode 709 fables with fable-side instruction → fable embeddings
-3. Encode 709 morals with moral-side instruction → moral embeddings
+1. Load model via `transformers` AutoModel (last-token pooling)
+2. Encode 709 fables as plain text → fable embeddings
+3. Encode 709 morals with instruction prefix → moral embeddings
 4. Cosine similarity matrix → rankings
 5. Compute metrics via existing `retrieval_utils.compute_metrics()`
 
