@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_fables": 3,
+  "variants": [
+    "cot_proverb",
+    "cot_few_shot_proverb"
+  ],
+  "total_input_tokens": 2231,
+  "total_output_tokens": 41,
+  "total_thinking_tokens": 3690,
+  "total_tokens": 5962
+}

@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_fables": 3,
+  "variants": [
+    "proverb",
+    "universal_truth",
+    "few_shot_proverb"
+  ],
+  "total_input_tokens": 2739,
+  "total_output_tokens": 70,
+  "total_thinking_tokens": 4545,
+  "total_tokens": 7354
+}
