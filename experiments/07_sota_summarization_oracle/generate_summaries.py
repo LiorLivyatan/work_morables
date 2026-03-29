@@ -44,7 +44,7 @@ if _env.exists():
                 os.environ.setdefault(k.strip(), v)
 
 # ── Gemini model config ──────────────────────────────────────────────────────
-DEFAULT_MODEL_ID = "gemini-3.1-pro-preview"
+DEFAULT_MODEL_ID = "gemini-3-flash-preview"
 
 # ── System prompts ───────────────────────────────────────────────────────────
 
