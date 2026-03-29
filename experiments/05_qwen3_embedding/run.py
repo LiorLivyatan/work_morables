@@ -36,13 +36,13 @@ import torch
 import torch.nn.functional as F
 from tqdm import tqdm
 
-sys.path.insert(0, str(Path(__file__).parent))
+sys.path.insert(0, str(Path(__file__).parent.parent.parent / "lib"))
 from retrieval_utils import compute_metrics, compute_rankings
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
-DATA_DIR    = Path(__file__).parent.parent / "data" / "processed"
-RESULTS_DIR = Path(__file__).parent.parent / "results"
-RUNS_DIR    = RESULTS_DIR / "qwen3_embedding_runs"
+DATA_DIR    = Path(__file__).parent.parent.parent / "data" / "processed"
+RESULTS_DIR = Path(__file__).parent / "results"
+RUNS_DIR    = RESULTS_DIR / "runs"
 RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Models ────────────────────────────────────────────────────────────────────

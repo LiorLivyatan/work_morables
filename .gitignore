@@ -8,6 +8,7 @@ build/
 
 # Virtual environment
 venv/
+venv_gen/
 .venv/
 
 # Data cache
@@ -28,19 +29,33 @@ hf_cache/
 .DS_Store
 Thumbs.db
 
-# Output artifacts
+# Generated images (regeneratable)
 *.png
 *.jpg
-!docs/*.png
 
-# PDFs (already tracked separately)
+# PDFs (stored in papers/ but not tracked in git)
 *.pdf
 
 # Environment variables
 .env
 
-# Results — large run outputs (regeneratable, not tracked)
+# Claude Code
+.claude/
+
+# ── Experiment run outputs (large, regeneratable) ──
+# Old locations (pre-reorg)
 results/runs/
 results/llm_runs/
 results/summaries/
 results/summaries_backup/
+results/qwen3_embedding_runs/
+results/sentence_level_runs/
+
+# New locations (per-experiment timestamped run dirs)
+experiments/*/results/2*/
+experiments/*/results/runs/
+experiments/*/results/summaries/
+experiments/*/results/summaries_backup/
+
+# Log files
+*.log
