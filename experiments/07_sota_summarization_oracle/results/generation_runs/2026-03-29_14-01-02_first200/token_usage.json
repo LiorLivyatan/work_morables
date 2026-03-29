@@ -1,0 +1,40 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_fables": 200,
+  "variants": [
+    "direct_moral",
+    "conceptual_abstract",
+    "proverb",
+    "cot_proverb"
+  ],
+  "per_variant": {
+    "direct_moral": {
+      "input_tokens": 36574,
+      "output_tokens": 2365,
+      "thinking_tokens": 72839,
+      "total_tokens": 111778
+    },
+    "conceptual_abstract": {
+      "input_tokens": 46126,
+      "output_tokens": 2955,
+      "thinking_tokens": 103300,
+      "total_tokens": 152381
+    },
+    "proverb": {
+      "input_tokens": 35778,
+      "output_tokens": 1674,
+      "thinking_tokens": 90845,
+      "total_tokens": 128297
+    },
+    "cot_proverb": {
+      "input_tokens": 47718,
+      "output_tokens": 1853,
+      "thinking_tokens": 144999,
+      "total_tokens": 194570
+    }
+  },
+  "total_input_tokens": 166196,
+  "total_output_tokens": 8847,
+  "total_thinking_tokens": 411983,
+  "total_tokens": 587026
+}
