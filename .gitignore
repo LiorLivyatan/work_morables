@@ -57,5 +57,8 @@ experiments/*/results/runs/
 experiments/*/results/summaries/
 experiments/*/results/summaries_backup/
 
+# Embedding cache (large .npy files, regeneratable)
+cache/
+
 # Log files
 *.log

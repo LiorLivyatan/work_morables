@@ -26,10 +26,12 @@ ROOT_DIR = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT_DIR / "lib"))
 from data import load_fables, load_morals, load_qrels_moral_to_fable
 from retrieval_utils import compute_metrics
+from embedding_cache import encode_with_cache
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 RESULTS_DIR = Path(__file__).parent / "results"
 GENERATION_RUNS_DIR = RESULTS_DIR / "generation_runs"
+CACHE_DIR = ROOT_DIR / "cache" / "embeddings"
 
 # ── Embedding model ──────────────────────────────────────────────────────────
 EMBED_MODEL_ID = "Linq-AI-Research/Linq-Embed-Mistral"
@@ -108,23 +110,21 @@ def main():
     from sentence_transformers import SentenceTransformer
     model = SentenceTransformer(EMBED_MODEL_ID)
 
-    def encode(texts, is_query=False, batch_size=32):
-        if is_query:
-            texts = [f"Instruct: {QUERY_INSTRUCTION}\nQuery: {t}" for t in texts]
-        return model.encode(
-            texts, batch_size=batch_size, normalize_embeddings=True,
-            show_progress_bar=True, convert_to_numpy=True,
-        ).astype(np.float32)
+    def enc(texts, label, query_instruction=None):
+        return encode_with_cache(
+            model=model, texts=texts, model_id=EMBED_MODEL_ID,
+            cache_dir=CACHE_DIR, query_instruction=query_instruction, label=label,
+        )
 
     # Encode morals once
     print("\nEncoding morals...")
-    moral_embs = encode(subset_morals, is_query=True)
+    moral_embs = enc(subset_morals, label="moral queries", query_instruction=QUERY_INSTRUCTION)
 
     results = {}
 
     # Baseline: raw fable
     print("\n--- Baseline: raw fable ---")
-    fable_embs = encode(fable_texts)
+    fable_embs = enc(fable_texts, label="raw fables")
     m = compute_metrics(moral_embs, fable_embs, subset_gt)
     print(f"  MRR={m['MRR']:.4f}  R@1={m['Recall@1']:.3f}  "
           f"R@5={m['Recall@5']:.3f}  R@10={m['Recall@10']:.3f}")
@@ -132,7 +132,7 @@ def main():
 
     # Config A: summary only
     print(f"\n--- Config A: {variant} summary only ---")
-    sum_embs = encode(summaries)
+    sum_embs = enc(summaries, label=f"{variant} summaries")
     m_a = compute_metrics(moral_embs, sum_embs, subset_gt)
     print(f"  MRR={m_a['MRR']:.4f}  R@1={m_a['Recall@1']:.3f}  "
           f"R@5={m_a['Recall@5']:.3f}  R@10={m_a['Recall@10']:.3f}")
@@ -141,7 +141,7 @@ def main():
     # Config B: fable + summary
     print(f"\n--- Config B: fable + {variant} summary ---")
     enriched = [f"{fable_texts[i]}\n\nMoral summary: {summaries[i]}" for i in range(n_fables)]
-    enr_embs = encode(enriched)
+    enr_embs = enc(enriched, label=f"{variant} fable+summary")
     m_b = compute_metrics(moral_embs, enr_embs, subset_gt)
     print(f"  MRR={m_b['MRR']:.4f}  R@1={m_b['Recall@1']:.3f}  "
           f"R@5={m_b['Recall@5']:.3f}  R@10={m_b['Recall@10']:.3f}")
