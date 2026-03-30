@@ -27,7 +27,7 @@ from embedding_cache import encode_with_cache
 # ── Paths ────────────────────────────────────────────────────────────────────
 RESULTS_DIR = Path(__file__).parent / "results"
 GENERATION_RUNS_DIR = RESULTS_DIR / "generation_runs"
-CACHE_DIR = ROOT_DIR / "cache" / "embeddings"
+CACHE_DIR = Path(__file__).parent / "results" / "embedding_cache"
 
 # ── Embedding model ──────────────────────────────────────────────────────────
 EMBED_MODEL_ID = "Linq-AI-Research/Linq-Embed-Mistral"
