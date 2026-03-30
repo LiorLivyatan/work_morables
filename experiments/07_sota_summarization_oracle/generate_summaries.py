@@ -192,6 +192,10 @@ def main():
         help="Only process first N fables (for quick testing).",
     )
     parser.add_argument(
+        "--offset", type=int, default=0,
+        help="Skip the first N fables (default: 0).",
+    )
+    parser.add_argument(
         "--delay", type=float, default=0.5,
         help="Delay between API calls in seconds (default: 0.5).",
     )
@@ -213,13 +217,16 @@ def main():
     fable_to_moral = {fable_idx: morals[moral_idx]["text"]
                       for moral_idx, fable_idx in gt_m2f.items()}
 
+    if args.offset:
+        fables = fables[args.offset:]
     if args.sample:
         fables = fables[:args.sample]
 
     # Create timestamped run directory
-    sample_tag = f"_sample{args.sample}" if args.sample else ""
+    range_tag = f"_offset{args.offset}" if args.offset else ""
+    range_tag += f"_sample{args.sample}" if args.sample else ""
     ts = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-    run_dir = RUNS_DIR / f"{ts}{sample_tag}"
+    run_dir = RUNS_DIR / f"{ts}{range_tag}"
     run_dir.mkdir(parents=True, exist_ok=True)
     output_path = run_dir / "golden_summaries.json"
 

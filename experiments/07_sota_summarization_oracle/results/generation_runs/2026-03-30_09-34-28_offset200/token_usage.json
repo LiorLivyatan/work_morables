@@ -1,0 +1,14 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_fables": 509,
+  "variants": [
+    "direct_moral",
+    "conceptual_abstract",
+    "proverb",
+    "cot_proverb"
+  ],
+  "total_input_tokens": 407960,
+  "total_output_tokens": 23887,
+  "total_thinking_tokens": 1129801,
+  "total_tokens": 1561648
+}
