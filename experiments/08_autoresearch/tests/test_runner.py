@@ -42,11 +42,17 @@ def test_get_best_mrr_no_file_returns_zero(tmp_path, monkeypatch):
     assert runner.get_best_mrr() == 0.0
 
 
-def test_get_best_mrr_only_considers_keep_rows(tmp_path, monkeypatch):
+def test_get_best_mrr_includes_baseline_rows(tmp_path, monkeypatch):
+    monkeypatch.setattr(runner, "RESULTS_TSV", tmp_path / "results.tsv")
+    runner.append_result("abc1234", 0.2100, 0.14, 0.36, 0.42, "baseline", "baseline")
+    assert runner.get_best_mrr() == 0.2100  # baseline counts toward best
+
+
+def test_get_best_mrr_excludes_discard_rows(tmp_path, monkeypatch):
     monkeypatch.setattr(runner, "RESULTS_TSV", tmp_path / "results.tsv")
     runner.append_result("abc1234", 0.2100, 0.14, 0.36, 0.42, "baseline", "baseline")
     runner.append_result("def5678", 0.1900, 0.12, 0.32, 0.38, "discard", "worse attempt")
-    assert runner.get_best_mrr() == 0.2100  # discard row ignored
+    assert runner.get_best_mrr() == 0.2100  # discard row ignored, baseline still wins
 
 
 def test_get_best_mrr_returns_max_kept(tmp_path, monkeypatch):
@@ -62,12 +68,12 @@ def test_get_best_mrr_returns_max_kept(tmp_path, monkeypatch):
 def test_append_result_creates_file_with_header(tmp_path, monkeypatch):
     monkeypatch.setattr(runner, "RESULTS_TSV", tmp_path / "results.tsv")
     runner.append_result("abc1234", 0.2100, 0.1400, 0.3640, 0.4200, "baseline", "Linq baseline")
-    content = (tmp_path / "results.tsv").read_text()
-    assert "commit" in content        # header written
-    assert "abc1234" in content
-    assert "0.2100" in content
-    assert "baseline" in content
-    assert "Linq baseline" in content
+    lines = (tmp_path / "results.tsv").read_text().strip().split("\n")
+    assert lines[0].startswith("commit")   # header is first line
+    assert "abc1234" in lines[1]           # data is in the data row
+    assert "0.2100" in lines[1]            # MRR value is in the data row
+    assert "baseline" in lines[1]          # status is in the data row
+    assert "Linq baseline" in lines[1]     # description is in the data row
 
 
 def test_append_result_no_duplicate_header(tmp_path, monkeypatch):
