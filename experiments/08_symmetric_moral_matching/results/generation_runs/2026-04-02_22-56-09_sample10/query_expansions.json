@@ -1,0 +1,312 @@
+[
+  {
+    "id": "moral_000",
+    "moral_idx": 0,
+    "fable_idx": 0,
+    "original_moral": "Gratitude is the sign of noble souls.",
+    "paraphrases": {
+      "moral_rephrase": "Appreciation is the distinguishing mark of a virtuous character.",
+      "moral_elaborate": "The sincere acknowledgment of benevolence serves as a fundamental hallmark of an elevated and virtuous character.",
+      "moral_abstract": "Gratitude reveals nobility."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 10,
+        "thinking_tokens": 353,
+        "total_tokens": 434
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 17,
+        "thinking_tokens": 641,
+        "total_tokens": 725
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 5,
+        "thinking_tokens": 607,
+        "total_tokens": 665
+      }
+    }
+  },
+  {
+    "id": "moral_001",
+    "moral_idx": 1,
+    "fable_idx": 1,
+    "original_moral": "Appearances are deceptive.",
+    "paraphrases": {
+      "moral_rephrase": "External qualities often mask the true nature of reality.",
+      "moral_elaborate": "External manifestations frequently fail to reflect the fundamental essence or intrinsic truth of a subject.",
+      "moral_abstract": "Form masks essence."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 67,
+        "output_tokens": 9,
+        "thinking_tokens": 4345,
+        "total_tokens": 4421
+      },
+      "moral_elaborate": {
+        "input_tokens": 63,
+        "output_tokens": 16,
+        "thinking_tokens": 644,
+        "total_tokens": 723
+      },
+      "moral_abstract": {
+        "input_tokens": 49,
+        "output_tokens": 4,
+        "thinking_tokens": 433,
+        "total_tokens": 486
+      }
+    }
+  },
+  {
+    "id": "moral_002",
+    "moral_idx": 2,
+    "fable_idx": 2,
+    "original_moral": "There's a time for work and a time for play.",
+    "paraphrases": {
+      "moral_rephrase": "Labor and leisure each require their own specific and appropriate times.",
+      "moral_elaborate": "A harmonious existence depends on the balanced integration of purposeful labor and restorative leisure.",
+      "moral_abstract": "Balance labor and leisure."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 12,
+        "thinking_tokens": 4532,
+        "total_tokens": 4619
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 15,
+        "thinking_tokens": 451,
+        "total_tokens": 537
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 5,
+        "thinking_tokens": 725,
+        "total_tokens": 787
+      }
+    }
+  },
+  {
+    "id": "moral_003",
+    "moral_idx": 3,
+    "fable_idx": 3,
+    "original_moral": "In quarreling about the shadow we often lose the substance.",
+    "paraphrases": {
+      "moral_rephrase": "Arguing over trivialities often leads to the loss of what truly matters.",
+      "moral_elaborate": "Focusing on peripheral trivialities often results in the forfeiture of fundamental and enduring value.",
+      "moral_abstract": "Trivial conflict forfeits true substance."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 16,
+        "thinking_tokens": 2108,
+        "total_tokens": 2199
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 17,
+        "thinking_tokens": 927,
+        "total_tokens": 1015
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 8,
+        "thinking_tokens": 719,
+        "total_tokens": 784
+      }
+    }
+  },
+  {
+    "id": "moral_004",
+    "moral_idx": 4,
+    "fable_idx": 4,
+    "original_moral": "Men often bear little grievances with less courage than they do large misfortunes.",
+    "paraphrases": {
+      "moral_rephrase": "Minor irritations are often endured with less fortitude than significant tragedies.",
+      "moral_elaborate": "Profound adversity often summons greater fortitude than the minor irritations that more easily compromise one’s inner composure.",
+      "moral_abstract": "Fortitude often falters before trifles yet withstands catastrophe."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 76,
+        "output_tokens": 13,
+        "thinking_tokens": 1678,
+        "total_tokens": 1767
+      },
+      "moral_elaborate": {
+        "input_tokens": 72,
+        "output_tokens": 22,
+        "thinking_tokens": 736,
+        "total_tokens": 830
+      },
+      "moral_abstract": {
+        "input_tokens": 58,
+        "output_tokens": 13,
+        "thinking_tokens": 5168,
+        "total_tokens": 5239
+      }
+    }
+  },
+  {
+    "id": "moral_005",
+    "moral_idx": 5,
+    "fable_idx": 5,
+    "original_moral": "To be satisfied with one's lot is better than to desire something which one is not fitted to receive.",
+    "paraphrases": {
+      "moral_rephrase": "Accepting your circumstances is better than desiring what is ill-suited to your nature.",
+      "moral_elaborate": "Fulfillment resides in accepting one’s inherent state rather than pursuing ambitions that exceed one’s fundamental capacities.",
+      "moral_abstract": "Contentment surpasses misplaced ambition."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 84,
+        "output_tokens": 17,
+        "thinking_tokens": 5253,
+        "total_tokens": 5354
+      },
+      "moral_elaborate": {
+        "input_tokens": 80,
+        "output_tokens": 22,
+        "thinking_tokens": 3047,
+        "total_tokens": 3149
+      },
+      "moral_abstract": {
+        "input_tokens": 66,
+        "output_tokens": 6,
+        "thinking_tokens": 902,
+        "total_tokens": 974
+      }
+    }
+  },
+  {
+    "id": "moral_006",
+    "moral_idx": 6,
+    "fable_idx": 6,
+    "original_moral": "Clumsy jesting is no joke.",
+    "paraphrases": {
+      "moral_rephrase": "Inept attempts at humor can result in grave consequences.",
+      "moral_elaborate": "Playful intent does not mitigate the gravity of harm caused by reckless or insensitive actions.",
+      "moral_abstract": "Inept humor invites grave consequences."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 11,
+        "thinking_tokens": 1888,
+        "total_tokens": 1970
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 17,
+        "thinking_tokens": 2096,
+        "total_tokens": 2180
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 7,
+        "thinking_tokens": 1083,
+        "total_tokens": 1143
+      }
+    }
+  },
+  {
+    "id": "moral_007",
+    "moral_idx": 7,
+    "fable_idx": 7,
+    "original_moral": "An ounce of prevention is worth a pound of cure.",
+    "paraphrases": {
+      "moral_rephrase": "Preventing a problem is more effective than repairing its consequences.",
+      "moral_elaborate": "Proactive measures to avert harm are consistently more efficient than the most exhaustive efforts at reactive remediation.",
+      "moral_abstract": "Preemption is more efficient than remediation."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 73,
+        "output_tokens": 12,
+        "thinking_tokens": 643,
+        "total_tokens": 728
+      },
+      "moral_elaborate": {
+        "input_tokens": 69,
+        "output_tokens": 19,
+        "thinking_tokens": 1375,
+        "total_tokens": 1463
+      },
+      "moral_abstract": {
+        "input_tokens": 55,
+        "output_tokens": 8,
+        "thinking_tokens": 645,
+        "total_tokens": 708
+      }
+    }
+  },
+  {
+    "id": "moral_008",
+    "moral_idx": 8,
+    "fable_idx": 8,
+    "original_moral": "Fine clothes may disguise, but silly words will disclose a fool.",
+    "paraphrases": {
+      "moral_rephrase": "Elegant attire may mask ignorance, but foolish speech reveals a lack of wisdom.",
+      "moral_elaborate": "Superficial presentation cannot permanently conceal the true nature revealed through the quality of one’s own expressions.",
+      "moral_abstract": "Appearance masks folly; speech reveals it."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 15,
+        "thinking_tokens": 3786,
+        "total_tokens": 3876
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 20,
+        "thinking_tokens": 651,
+        "total_tokens": 742
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 8,
+        "thinking_tokens": 536,
+        "total_tokens": 601
+      }
+    }
+  },
+  {
+    "id": "moral_009",
+    "moral_idx": 9,
+    "fable_idx": 9,
+    "original_moral": "Wit has always an answer ready.",
+    "paraphrases": {
+      "moral_rephrase": "Quick thinking always provides a ready response.",
+      "moral_elaborate": "Agile intelligence ensures that a viable response is always available for any challenge or unforeseen circumstance.",
+      "moral_abstract": "Intelligence is never without recourse."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 8,
+        "thinking_tokens": 540,
+        "total_tokens": 617
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 18,
+        "thinking_tokens": 925,
+        "total_tokens": 1008
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 6,
+        "thinking_tokens": 637,
+        "total_tokens": 694
+      }
+    }
+  }
+]
