@@ -31,6 +31,7 @@ from data import load_fables, load_morals, load_qrels_moral_to_fable
 # ── Paths ────────────────────────────────────────────────────────────────────
 RESULTS_DIR = Path(__file__).parent / "results"
 RUNS_DIR = RESULTS_DIR / "generation_runs"
+RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Load .env ────────────────────────────────────────────────────────────────
 _env = ROOT_DIR / ".env"
@@ -207,6 +208,24 @@ def main():
     print(f"\n  Done! Saved {len(expansions)} moral expansions to {output_path}")
     print(f"  Total tokens: {total_input:,} input + {total_thinking:,} thinking + "
           f"{total_output:,} output")
+
+    for variant in PARAPHRASE_PROMPTS:
+        texts = [item["paraphrases"].get(variant, "") for item in expansions]
+        avg_words = sum(len(t.split()) for t in texts) / max(len(texts), 1)
+        errors = sum(1 for t in texts if t.startswith("[ERROR"))
+        print(f"  {variant}: avg {avg_words:.1f} words, {errors} errors")
+
+    usage_summary = {
+        "model": args.model,
+        "n_morals": len(expansions),
+        "variants": list(PARAPHRASE_PROMPTS.keys()),
+        "total_input_tokens": total_input,
+        "total_output_tokens": total_output,
+        "total_thinking_tokens": total_thinking,
+        "total_tokens": total_input + total_thinking + total_output,
+    }
+    with open(run_dir / "query_expansion_token_usage.json", "w") as f:
+        json.dump(usage_summary, f, indent=2)
 
 
 if __name__ == "__main__":
