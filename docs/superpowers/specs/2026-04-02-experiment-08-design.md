@@ -25,11 +25,11 @@ Convert the matching problem from **moral vs. narrative** into **moral vs. moral
 
 ## Scope
 
-**Pilot run: first 50 fables only.** Success on the pilot justifies scaling to all 709.
+**Pilot run: first 10 fables only.** Success on the pilot justifies scaling to all 709.
 
-**Step 0 (before any new generation):** Re-run exp 07's R@1-best config (`conceptual_abstract__summary_only`) restricted to the 50-fable subset to establish the formal baseline threshold. The existing exp 07 results cover all 709 fables and cannot be used directly.
+**Step 0 (before any new generation):** Re-run exp 07's R@1-best config (`conceptual_abstract__summary_only`) restricted to the 10-fable subset to establish the formal baseline threshold. The existing exp 07 results cover all 709 fables and cannot be used directly.
 
-**Success criterion:** R@1 on the 50-fable subset beats `conceptual_abstract__summary_only` evaluated on the same 50 fables.
+**Success criterion:** R@1 on the 10-fable subset beats `conceptual_abstract__summary_only` evaluated on the same 10 fables.
 
 ---
 
@@ -44,7 +44,7 @@ Both prompts target the style of ground-truth morals: 5–15 words, declarative,
 | `ground_truth_style` | Generate a moral as a concise aphorism (5–15 words) with 3 few-shot examples from the ground-truth morals (e.g., *"Appearances are deceptive."*, *"Vices are their own punishment."*). No character names. |
 | `declarative_universal` | Distill the moral into one declarative sentence (5–15 words). Universal, timeless, no narrative description. Few-shot examples included to anchor style. |
 
-**LLM cost:** 2 × 50 = 100 Gemini calls.
+**LLM cost:** 2 × 10 = 20 Gemini calls.
 
 ### 2. Query Expansion (3 paraphrases per moral)
 
@@ -58,7 +58,7 @@ All paraphrases must remain **under 20 words and abstract** — no narrative exa
 
 At retrieval: compute cosine similarity for all 4 query vectors (original + 3), take **max score** per corpus document.
 
-**LLM cost:** 3 × 50 = 150 Gemini calls.
+**LLM cost:** 3 × 10 = 30 Gemini calls.
 
 ### 3. Retrieval Configurations
 
@@ -83,7 +83,7 @@ Apply RRF (k=60) over **ranked lists** (per-query argsort of cosine score matric
 
 - **Primary metric:** R@1
 - **Secondary metric:** MRR
-- **Corpus size:** 50 fables, 50 moral queries (indices 0–49)
+- **Corpus size:** 10 fables, 10 moral queries (indices 0–9)
 - **Embedding model:** Linq-Embed-Mistral (same as exp 07, for fair comparison)
 
 ---
@@ -111,9 +111,9 @@ experiments/08_symmetric_moral_matching/
 | Step | Calls |
 |------|-------|
 | Step 0: baseline (uses cached exp 07 embeddings) | 0 |
-| Corpus variants (2 × 50) | 100 |
-| Query expansion (3 × 50) | 150 |
-| **Total new calls** | **~250** |
+| Corpus variants (2 × 10) | 20 |
+| Query expansion (3 × 10) | 30 |
+| **Total new calls** | **~50** |
 
 Model: `gemini-3-flash-preview` (same as exp 07).
 
@@ -121,5 +121,5 @@ Model: `gemini-3-flash-preview` (same as exp 07).
 
 ## Next Steps After Pilot
 
-If R@1 on 50 beats exp 07 R@1-best on same 50: scale to all 709.
+If R@1 on 10 beats exp 07 R@1-best on same 10: scale to 50, then all 709.
 Scaling cost: ~3,545 new calls (2 × 709 corpus + 3 × 709 query). Exp 07 embeddings for all 709 are already cached.
