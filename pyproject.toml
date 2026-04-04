@@ -16,8 +16,11 @@ dependencies = [
     "torch",
     "transformers",
     "gritlm",
-    "mlx-lm; sys_platform == 'darwin'",
+    "mlx-lm ; sys_platform == 'darwin'",
 ]
 
 [tool.pytest.ini_options]
 testpaths = ["tests", "experiments"]
+
+[tool.uv.sources]
+mlx-lm = { git = "https://github.com/ml-explore/mlx-lm.git" }
