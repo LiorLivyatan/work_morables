@@ -53,11 +53,13 @@ SYSTEM_PROMPTS = {
         "When given a fable, extract its moral lesson as a single sentence. "
         "Be as concise as possible."
     ),
-    "narrative_distillation": (
-        "You are an expert literary analyst. When given a fable, first mentally "
-        "summarize what happens in the story, then distill the core lesson into "
-        "a single sentence. Focus on what the story illustrates about human nature "
-        "or behavior. Output only the single sentence — no labels, no prefixes. "
+    "cot_proverb": (
+        "You are an expert in fables and proverbs. When given a fable, reason step by step:\n"
+        "1. What is the central conflict or situation?\n"
+        "2. What does the outcome reveal about human nature?\n"
+        "3. What abstract principle does this illustrate?\n\n"
+        "After reasoning, state the moral as a proverb or maxim. "
+        "Output ONLY the proverb on the last line. Do NOT include your reasoning in the output. "
         "Be as concise as possible."
     ),
     "conceptual_abstract": (

@@ -18,9 +18,9 @@ def test_postprocess_direct_moral_returns_first_line():
     assert gs.postprocess_summary(raw, "direct_moral") == "Slow and steady wins the race."
 
 
-def test_postprocess_narrative_distillation_returns_last_line():
-    raw = "**Summary:** An ant dismisses a chrysalis.\nTrue potential is often hidden beneath an unassuming exterior."
-    assert gs.postprocess_summary(raw, "narrative_distillation") == "True potential is often hidden beneath an unassuming exterior."
+def test_postprocess_cot_proverb_returns_last_line():
+    raw = "1. A fox tricks a crow with flattery.\n2. Vanity leads to loss.\nVanity makes us easy prey for flatterers."
+    assert gs.postprocess_summary(raw, "cot_proverb") == "Vanity makes us easy prey for flatterers."
 
 
 def test_postprocess_conceptual_abstract_returns_last_line():
@@ -35,7 +35,7 @@ def test_postprocess_strips_think_blocks():
 
 def test_postprocess_handles_empty_lines():
     raw = "\n\nThe strong should not mock the weak.\n\n"
-    assert gs.postprocess_summary(raw, "narrative_distillation") == "The strong should not mock the weak."
+    assert gs.postprocess_summary(raw, "cot_proverb") == "The strong should not mock the weak."
 
 
 def test_postprocess_multiline_think_block():

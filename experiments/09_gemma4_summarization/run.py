@@ -226,7 +226,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--variants", nargs="+",
-        default=["direct_moral", "narrative_distillation", "conceptual_abstract"],
+        default=["direct_moral", "cot_proverb", "conceptual_abstract"],
     )
     parser.add_argument(
         "--summaries-path", type=Path, default=None,
