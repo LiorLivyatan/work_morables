@@ -57,7 +57,8 @@ SYSTEM_PROMPTS = {
         "You are an expert literary analyst. When given a fable, first mentally "
         "summarize what happens in the story, then distill the core lesson into "
         "a single sentence. Focus on what the story illustrates about human nature "
-        "or behavior. Be as concise as possible."
+        "or behavior. Output only the single sentence — no labels, no prefixes. "
+        "Be as concise as possible."
     ),
     "conceptual_abstract": (
         "You are a moral philosopher. When given a fable, reason step by step:\n"
@@ -66,7 +67,7 @@ SYSTEM_PROMPTS = {
         "3. What abstract principle does this illustrate?\n\n"
         "After reasoning, output ONLY the abstract moral principle as a single "
         "sentence on the last line. Do NOT include your reasoning in the output. "
-        "Be as concise as possible."
+        "Do NOT add any label or prefix. Be as concise as possible."
     ),
 }
 
@@ -84,14 +85,10 @@ def postprocess_summary(text: str, variant: str) -> str:
     lesson, so the moral is at the end.
     """
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
-    # Strip markdown bold markers (e.g. **Summary:** -> Summary:)
-    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
     lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
     if not lines:
         return text
-    line = lines[0] if variant == "direct_moral" else lines[-1]
-    # Strip common label prefixes the model adds (e.g. "Moral:", "Lesson:", "Summary:")
-    return re.sub(r"^(Moral|Lesson|Summary|Answer|Principle)\s*:\s*", "", line, flags=re.IGNORECASE)
+    return lines[0] if variant == "direct_moral" else lines[-1]
 
 
 def build_corpus_item(fable_idx: int, fable: dict, ground_truth_moral: str,

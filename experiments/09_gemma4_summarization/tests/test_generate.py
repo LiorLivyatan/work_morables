@@ -33,11 +33,6 @@ def test_postprocess_strips_think_blocks():
     assert gs.postprocess_summary(raw, "direct_moral") == "Vanity blinds us to real danger."
 
 
-def test_postprocess_strips_markdown_bold():
-    raw = "**Summary:** A fox tricks a crow.\nVanity makes us easy prey for flatterers."
-    assert gs.postprocess_summary(raw, "narrative_distillation") == "Vanity makes us easy prey for flatterers."
-
-
 def test_postprocess_handles_empty_lines():
     raw = "\n\nThe strong should not mock the weak.\n\n"
     assert gs.postprocess_summary(raw, "narrative_distillation") == "The strong should not mock the weak."
