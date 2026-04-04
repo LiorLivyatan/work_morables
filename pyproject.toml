@@ -1,0 +1,23 @@
+[project]
+name = "work-morables"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "datasets",
+    "sentence-transformers",
+    "matplotlib",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "tqdm",
+    "google-generativeai",
+    "InstructorEmbedding",
+    "einops",
+    "torch",
+    "transformers",
+    "gritlm",
+    "mlx-lm; sys_platform == 'darwin'",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "experiments"]
