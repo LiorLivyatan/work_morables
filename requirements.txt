@@ -11,3 +11,4 @@ einops
 torch
 transformers
 gritlm
+mlx-lm
