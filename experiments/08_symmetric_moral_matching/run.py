@@ -194,8 +194,11 @@ def main():
         return [corpus_lookup.get(i, {}).get(variant, "") for i in range(n_fables)]
 
     print(f"\n  Loading {EMBED_MODEL_ID}...")
+    import torch
     from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBED_MODEL_ID)
+    device = "mps" if torch.backends.mps.is_available() else "cpu"
+    print(f"  Device: {device}")
+    model = SentenceTransformer(EMBED_MODEL_ID, device=device)
 
     # Step 0: exp07 baseline
     print("\n─── Step 0: Exp 07 baseline (conceptual_abstract__summary_only) ───")

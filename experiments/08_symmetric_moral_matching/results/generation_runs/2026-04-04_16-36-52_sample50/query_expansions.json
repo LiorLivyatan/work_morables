@@ -1,0 +1,1552 @@
+[
+  {
+    "id": "moral_000",
+    "moral_idx": 0,
+    "fable_idx": 0,
+    "original_moral": "Gratitude is the sign of noble souls.",
+    "paraphrases": {
+      "moral_rephrase": "Thankfulness serves as the hallmark of a virtuous spirit.",
+      "moral_elaborate": "Acknowledging the kindness of others serves as a definitive hallmark of an elevated and virtuous character.",
+      "moral_abstract": "Gratitude manifests nobility."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 10,
+        "thinking_tokens": 1495,
+        "total_tokens": 1576
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 18,
+        "thinking_tokens": 1878,
+        "total_tokens": 1963
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 5,
+        "thinking_tokens": 670,
+        "total_tokens": 728
+      }
+    }
+  },
+  {
+    "id": "moral_001",
+    "moral_idx": 1,
+    "fable_idx": 1,
+    "original_moral": "Appearances are deceptive.",
+    "paraphrases": {
+      "moral_rephrase": "Outward impressions often mask the underlying reality.",
+      "moral_elaborate": "The external presentation of a subject is frequently an unreliable indicator of its substantive reality and intrinsic essence.",
+      "moral_abstract": "Surface belies essence."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 67,
+        "output_tokens": 9,
+        "thinking_tokens": 727,
+        "total_tokens": 803
+      },
+      "moral_elaborate": {
+        "input_tokens": 63,
+        "output_tokens": 19,
+        "thinking_tokens": 816,
+        "total_tokens": 898
+      },
+      "moral_abstract": {
+        "input_tokens": 49,
+        "output_tokens": 5,
+        "thinking_tokens": 555,
+        "total_tokens": 609
+      }
+    }
+  },
+  {
+    "id": "moral_002",
+    "moral_idx": 2,
+    "fable_idx": 2,
+    "original_moral": "There's a time for work and a time for play.",
+    "paraphrases": {
+      "moral_rephrase": "Balance labor and leisure by allocating appropriate moments for each.",
+      "moral_elaborate": "A flourishing existence requires the harmonious integration of productive labor and the essential periods of restorative renewal.",
+      "moral_abstract": "Balance labor with leisure."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 11,
+        "thinking_tokens": 1889,
+        "total_tokens": 1975
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 18,
+        "thinking_tokens": 862,
+        "total_tokens": 951
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 5,
+        "thinking_tokens": 416,
+        "total_tokens": 478
+      }
+    }
+  },
+  {
+    "id": "moral_003",
+    "moral_idx": 3,
+    "fable_idx": 3,
+    "original_moral": "In quarreling about the shadow we often lose the substance.",
+    "paraphrases": {
+      "moral_rephrase": "Disputing the insignificant often results in losing the essential.",
+      "moral_elaborate": "Preoccupation with peripheral trivialities leads to the neglect and eventual loss of fundamental reality.",
+      "moral_abstract": "Triviality forfeits substance."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 12,
+        "thinking_tokens": 3429,
+        "total_tokens": 3516
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 17,
+        "thinking_tokens": 1589,
+        "total_tokens": 1677
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 7,
+        "thinking_tokens": 731,
+        "total_tokens": 795
+      }
+    }
+  },
+  {
+    "id": "moral_004",
+    "moral_idx": 4,
+    "fable_idx": 4,
+    "original_moral": "Men often bear little grievances with less courage than they do large misfortunes.",
+    "paraphrases": {
+      "moral_rephrase": "Petty irritations often elicit less resilience than significant catastrophes.",
+      "moral_elaborate": "Profound adversity often summons greater fortitude than the trivial irritations that more easily erode human composure.",
+      "moral_abstract": "Small grievances often reveal more weakness than great calamities."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 76,
+        "output_tokens": 12,
+        "thinking_tokens": 1306,
+        "total_tokens": 1394
+      },
+      "moral_elaborate": {
+        "input_tokens": 72,
+        "output_tokens": 19,
+        "thinking_tokens": 1059,
+        "total_tokens": 1150
+      },
+      "moral_abstract": {
+        "input_tokens": 58,
+        "output_tokens": 10,
+        "thinking_tokens": 1745,
+        "total_tokens": 1813
+      }
+    }
+  },
+  {
+    "id": "moral_005",
+    "moral_idx": 5,
+    "fable_idx": 5,
+    "original_moral": "To be satisfied with one's lot is better than to desire something which one is not fitted to receive.",
+    "paraphrases": {
+      "moral_rephrase": "Contentment with your circumstances is superior to craving what is fundamentally ill-suited.",
+      "moral_elaborate": "True contentment stems from accepting one’s inherent capacity rather than pursuing ambitions that conflict with one’s fundamental nature.",
+      "moral_abstract": "Accept your nature over pursuing the incompatible."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 84,
+        "output_tokens": 16,
+        "thinking_tokens": 3214,
+        "total_tokens": 3314
+      },
+      "moral_elaborate": {
+        "input_tokens": 80,
+        "output_tokens": 23,
+        "thinking_tokens": 1213,
+        "total_tokens": 1316
+      },
+      "moral_abstract": {
+        "input_tokens": 66,
+        "output_tokens": 8,
+        "thinking_tokens": 749,
+        "total_tokens": 823
+      }
+    }
+  },
+  {
+    "id": "moral_006",
+    "moral_idx": 6,
+    "fable_idx": 6,
+    "original_moral": "Clumsy jesting is no joke.",
+    "paraphrases": {
+      "moral_rephrase": "Tactless humor can result in grave and harmful consequences.",
+      "moral_elaborate": "Ill-conceived levity ceases to be harmless when it results in actual distress or injury.",
+      "moral_abstract": "Inept humor yields serious harm."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 10,
+        "thinking_tokens": 1270,
+        "total_tokens": 1351
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 19,
+        "thinking_tokens": 1064,
+        "total_tokens": 1150
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 7,
+        "thinking_tokens": 1071,
+        "total_tokens": 1131
+      }
+    }
+  },
+  {
+    "id": "moral_007",
+    "moral_idx": 7,
+    "fable_idx": 7,
+    "original_moral": "An ounce of prevention is worth a pound of cure.",
+    "paraphrases": {
+      "moral_rephrase": "Preventing a problem is more effective than fixing its consequences.",
+      "moral_elaborate": "Proactive measures to forestall potential adversity yield greater utility than reactive efforts to remedy its realized consequences.",
+      "moral_abstract": "Preemption is more efficient than remediation."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 73,
+        "output_tokens": 12,
+        "thinking_tokens": 956,
+        "total_tokens": 1041
+      },
+      "moral_elaborate": {
+        "input_tokens": 69,
+        "output_tokens": 20,
+        "thinking_tokens": 891,
+        "total_tokens": 980
+      },
+      "moral_abstract": {
+        "input_tokens": 55,
+        "output_tokens": 8,
+        "thinking_tokens": 473,
+        "total_tokens": 536
+      }
+    }
+  },
+  {
+    "id": "moral_008",
+    "moral_idx": 8,
+    "fable_idx": 8,
+    "original_moral": "Fine clothes may disguise, but silly words will disclose a fool.",
+    "paraphrases": {
+      "moral_rephrase": "Elegant attire conceals ignorance, but foolish speech inevitably reveals a lack of wisdom.",
+      "moral_elaborate": "Outward sophistication cannot indefinitely mask a lack of wisdom that is eventually revealed through one's own discourse.",
+      "moral_abstract": "Speech reveals what appearance conceals."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 16,
+        "thinking_tokens": 1027,
+        "total_tokens": 1118
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 21,
+        "thinking_tokens": 2433,
+        "total_tokens": 2525
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 7,
+        "thinking_tokens": 396,
+        "total_tokens": 460
+      }
+    }
+  },
+  {
+    "id": "moral_009",
+    "moral_idx": 9,
+    "fable_idx": 9,
+    "original_moral": "Wit has always an answer ready.",
+    "paraphrases": {
+      "moral_rephrase": "Cleverness is never at a loss for an immediate response.",
+      "moral_elaborate": "Intellectual agility ensures a perpetual capacity to meet any situation with a prompt and resourceful response.",
+      "moral_abstract": "Ingenuity is never at a loss."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 13,
+        "thinking_tokens": 1831,
+        "total_tokens": 1913
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 18,
+        "thinking_tokens": 1376,
+        "total_tokens": 1459
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 9,
+        "thinking_tokens": 859,
+        "total_tokens": 919
+      }
+    }
+  },
+  {
+    "id": "moral_010",
+    "moral_idx": 10,
+    "fable_idx": 10,
+    "original_moral": "Vices are their own punishment.",
+    "paraphrases": {
+      "moral_rephrase": "Immorality inherently carries its own retribution.",
+      "moral_elaborate": "Immoral actions naturally generate their own detrimental consequences, serving as an intrinsic and unavoidable mechanism of retribution.",
+      "moral_abstract": "Vice is its own retribution."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 9,
+        "thinking_tokens": 1550,
+        "total_tokens": 1628
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 20,
+        "thinking_tokens": 782,
+        "total_tokens": 867
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 6,
+        "thinking_tokens": 839,
+        "total_tokens": 896
+      }
+    }
+  },
+  {
+    "id": "moral_011",
+    "moral_idx": 11,
+    "fable_idx": 11,
+    "original_moral": "It's good to be able to laugh at yourself.",
+    "paraphrases": {
+      "moral_rephrase": "Finding humor in one's own shortcomings is a beneficial trait.",
+      "moral_elaborate": "Recognizing personal fallibility with levity fosters resilience and safeguards against the fragility of ego.",
+      "moral_abstract": "Self-directed levity cultivates humility."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 74,
+        "output_tokens": 13,
+        "thinking_tokens": 1226,
+        "total_tokens": 1313
+      },
+      "moral_elaborate": {
+        "input_tokens": 70,
+        "output_tokens": 18,
+        "thinking_tokens": 1126,
+        "total_tokens": 1214
+      },
+      "moral_abstract": {
+        "input_tokens": 56,
+        "output_tokens": 9,
+        "thinking_tokens": 1042,
+        "total_tokens": 1107
+      }
+    }
+  },
+  {
+    "id": "moral_012",
+    "moral_idx": 12,
+    "fable_idx": 12,
+    "original_moral": "You will only injure yourself if you take notice of despicable enemies.",
+    "paraphrases": {
+      "moral_rephrase": "Acknowledging contemptible adversaries results only in self-inflicted harm.",
+      "moral_elaborate": "Granting attention to unworthy provocations empowers them to inflict the very harm one seeks to avoid.",
+      "moral_abstract": "Ignoring the unworthy preserves oneself."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 14,
+        "thinking_tokens": 2234,
+        "total_tokens": 2323
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 19,
+        "thinking_tokens": 1455,
+        "total_tokens": 1545
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 6,
+        "thinking_tokens": 580,
+        "total_tokens": 643
+      }
+    }
+  },
+  {
+    "id": "moral_013",
+    "moral_idx": 13,
+    "fable_idx": 13,
+    "original_moral": "He that is neither one thing nor the other has no friends.",
+    "paraphrases": {
+      "moral_rephrase": "Those who lack a clear identity or firm allegiance find themselves without allies.",
+      "moral_elaborate": "Ambiguity of character and a lack of firm commitment preclude the formation of authentic social bonds and communal trust.",
+      "moral_abstract": "Neutrality breeds isolation."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 14,
+        "thinking_tokens": 1200,
+        "total_tokens": 1289
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 21,
+        "thinking_tokens": 2291,
+        "total_tokens": 2383
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 5,
+        "thinking_tokens": 841,
+        "total_tokens": 903
+      }
+    }
+  },
+  {
+    "id": "moral_014",
+    "moral_idx": 14,
+    "fable_idx": 14,
+    "original_moral": "Misfortune tests the sincerity of friends.",
+    "paraphrases": {
+      "moral_rephrase": "Adversity reveals the genuine loyalty of companions.",
+      "moral_elaborate": "Adversity serves as the ultimate metric for revealing the true strength and authenticity of human connections.",
+      "moral_abstract": "Adversity reveals true loyalty."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 10,
+        "thinking_tokens": 1546,
+        "total_tokens": 1626
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 19,
+        "thinking_tokens": 1064,
+        "total_tokens": 1149
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 7,
+        "thinking_tokens": 393,
+        "total_tokens": 452
+      }
+    }
+  },
+  {
+    "id": "moral_015",
+    "moral_idx": 15,
+    "fable_idx": 15,
+    "original_moral": "It is easy to propose impossible remedies.",
+    "paraphrases": {
+      "moral_rephrase": "Suggesting unattainable solutions is far easier than implementing them.",
+      "moral_elaborate": "Idealistic solutions are easily conceived but hold no value without the possibility of practical implementation.",
+      "moral_abstract": "Talk is easier than execution."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 11,
+        "thinking_tokens": 1037,
+        "total_tokens": 1118
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 17,
+        "thinking_tokens": 454,
+        "total_tokens": 537
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 6,
+        "thinking_tokens": 840,
+        "total_tokens": 898
+      }
+    }
+  },
+  {
+    "id": "moral_016",
+    "moral_idx": 16,
+    "fable_idx": 16,
+    "original_moral": "Each member in his proper sphere must work for the common good",
+    "paraphrases": {
+      "moral_rephrase": "Everyone must serve the collective welfare by fulfilling their designated roles.",
+      "moral_elaborate": "The flourishing of a collective system requires every individual to fulfill their unique function for the shared benefit.",
+      "moral_abstract": "Individual roles serve the collective whole."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 74,
+        "output_tokens": 12,
+        "thinking_tokens": 2680,
+        "total_tokens": 2766
+      },
+      "moral_elaborate": {
+        "input_tokens": 70,
+        "output_tokens": 19,
+        "thinking_tokens": 821,
+        "total_tokens": 910
+      },
+      "moral_abstract": {
+        "input_tokens": 56,
+        "output_tokens": 7,
+        "thinking_tokens": 669,
+        "total_tokens": 732
+      }
+    }
+  },
+  {
+    "id": "moral_017",
+    "moral_idx": 17,
+    "fable_idx": 17,
+    "original_moral": "Necessity knows no law.",
+    "paraphrases": {
+      "moral_rephrase": "Dire need supersedes the constraints of established laws and rules.",
+      "moral_elaborate": "Fundamental preservation inherently transcends the boundaries of formal regulations and social constraints.",
+      "moral_abstract": "Need transcends law."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 67,
+        "output_tokens": 12,
+        "thinking_tokens": 3981,
+        "total_tokens": 4060
+      },
+      "moral_elaborate": {
+        "input_tokens": 63,
+        "output_tokens": 13,
+        "thinking_tokens": 967,
+        "total_tokens": 1043
+      },
+      "moral_abstract": {
+        "input_tokens": 49,
+        "output_tokens": 4,
+        "thinking_tokens": 1533,
+        "total_tokens": 1586
+      }
+    }
+  },
+  {
+    "id": "moral_018",
+    "moral_idx": 18,
+    "fable_idx": 18,
+    "original_moral": "Be on guard against men who can strike from a distance.",
+    "paraphrases": {
+      "moral_rephrase": "Maintain constant vigilance against those capable of inflicting harm from a distance.",
+      "moral_elaborate": "Exercise constant vigilance against threats capable of inflicting harm from beyond the scope of immediate perception.",
+      "moral_abstract": "Maintain vigilance against remote threats."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 74,
+        "output_tokens": 13,
+        "thinking_tokens": 1237,
+        "total_tokens": 1324
+      },
+      "moral_elaborate": {
+        "input_tokens": 70,
+        "output_tokens": 17,
+        "thinking_tokens": 807,
+        "total_tokens": 894
+      },
+      "moral_abstract": {
+        "input_tokens": 56,
+        "output_tokens": 6,
+        "thinking_tokens": 613,
+        "total_tokens": 675
+      }
+    }
+  },
+  {
+    "id": "moral_019",
+    "moral_idx": 19,
+    "fable_idx": 19,
+    "original_moral": "Do not attempt too much at once.",
+    "paraphrases": {
+      "moral_rephrase": "Focus on a single objective instead of attempting too much simultaneously.",
+      "moral_elaborate": "Sustainable progress is achieved through focused concentration rather than the dilution of effort across too many simultaneous objectives.",
+      "moral_abstract": "Focus ensures efficacy; overreach yields failure."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 12,
+        "thinking_tokens": 3999,
+        "total_tokens": 4081
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 19,
+        "thinking_tokens": 850,
+        "total_tokens": 935
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 9,
+        "thinking_tokens": 975,
+        "total_tokens": 1036
+      }
+    }
+  },
+  {
+    "id": "moral_020",
+    "moral_idx": 20,
+    "fable_idx": 20,
+    "original_moral": "One man's pleasure may be another's pain.",
+    "paraphrases": {
+      "moral_rephrase": "What brings joy to one may cause suffering to another.",
+      "moral_elaborate": "Subjective experience dictates that the same circumstance may yield fundamentally divergent impacts across different individuals.",
+      "moral_abstract": "Experience is subjective."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 74,
+        "output_tokens": 11,
+        "thinking_tokens": 5604,
+        "total_tokens": 5689
+      },
+      "moral_elaborate": {
+        "input_tokens": 70,
+        "output_tokens": 17,
+        "thinking_tokens": 1011,
+        "total_tokens": 1098
+      },
+      "moral_abstract": {
+        "input_tokens": 56,
+        "output_tokens": 4,
+        "thinking_tokens": 597,
+        "total_tokens": 657
+      }
+    }
+  },
+  {
+    "id": "moral_021",
+    "moral_idx": 21,
+    "fable_idx": 21,
+    "original_moral": "Whatever you do, do with all your might.",
+    "paraphrases": {
+      "moral_rephrase": "Commit your full energy and focus to every endeavor you undertake.",
+      "moral_elaborate": "Wholehearted commitment to every undertaking ensures the most profound realization of excellence and purpose.",
+      "moral_abstract": "Commit fully to every endeavor."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 72,
+        "output_tokens": 12,
+        "thinking_tokens": 491,
+        "total_tokens": 575
+      },
+      "moral_elaborate": {
+        "input_tokens": 68,
+        "output_tokens": 16,
+        "thinking_tokens": 854,
+        "total_tokens": 938
+      },
+      "moral_abstract": {
+        "input_tokens": 54,
+        "output_tokens": 6,
+        "thinking_tokens": 461,
+        "total_tokens": 521
+      }
+    }
+  },
+  {
+    "id": "moral_022",
+    "moral_idx": 22,
+    "fable_idx": 22,
+    "original_moral": "Men often applaud an imitation and hiss the real thing.",
+    "paraphrases": {
+      "moral_rephrase": "People often celebrate an imitation while disparaging the genuine reality.",
+      "moral_elaborate": "Curated artifice is frequently celebrated while authentic reality is rejected for failing to conform to preconceived ideals.",
+      "moral_abstract": "Artifice is often more celebrated than authenticity."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 73,
+        "output_tokens": 12,
+        "thinking_tokens": 2360,
+        "total_tokens": 2445
+      },
+      "moral_elaborate": {
+        "input_tokens": 69,
+        "output_tokens": 20,
+        "thinking_tokens": 904,
+        "total_tokens": 993
+      },
+      "moral_abstract": {
+        "input_tokens": 55,
+        "output_tokens": 9,
+        "thinking_tokens": 738,
+        "total_tokens": 802
+      }
+    }
+  },
+  {
+    "id": "moral_023",
+    "moral_idx": 23,
+    "fable_idx": 23,
+    "original_moral": "Nature reveals itself.",
+    "paraphrases": {
+      "moral_rephrase": "One’s true nature will inevitably be revealed.",
+      "moral_elaborate": "Inherent character will inevitably manifest, transcending all attempts at outward disguise or artificial transformation.",
+      "moral_abstract": "Innate character inevitably surfaces."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 66,
+        "output_tokens": 10,
+        "thinking_tokens": 1137,
+        "total_tokens": 1213
+      },
+      "moral_elaborate": {
+        "input_tokens": 62,
+        "output_tokens": 18,
+        "thinking_tokens": 1011,
+        "total_tokens": 1091
+      },
+      "moral_abstract": {
+        "input_tokens": 48,
+        "output_tokens": 6,
+        "thinking_tokens": 1070,
+        "total_tokens": 1124
+      }
+    }
+  },
+  {
+    "id": "moral_024",
+    "moral_idx": 24,
+    "fable_idx": 24,
+    "original_moral": "Nature reveals itself.",
+    "paraphrases": {
+      "moral_rephrase": "Innate qualities will always make themselves known.",
+      "moral_elaborate": "Fundamental qualities will inevitably manifest, as true essence cannot be perpetually suppressed by superficial artifice.",
+      "moral_abstract": "Innate essence inevitably manifests."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 66,
+        "output_tokens": 9,
+        "thinking_tokens": 1177,
+        "total_tokens": 1252
+      },
+      "moral_elaborate": {
+        "input_tokens": 62,
+        "output_tokens": 18,
+        "thinking_tokens": 463,
+        "total_tokens": 543
+      },
+      "moral_abstract": {
+        "input_tokens": 48,
+        "output_tokens": 6,
+        "thinking_tokens": 838,
+        "total_tokens": 892
+      }
+    }
+  },
+  {
+    "id": "moral_025",
+    "moral_idx": 25,
+    "fable_idx": 25,
+    "original_moral": "He who is once deceived is doubly cautious.",
+    "paraphrases": {
+      "moral_rephrase": "Past deception inspires a significantly higher degree of future vigilance.",
+      "moral_elaborate": "Adversity born of misplaced trust fosters a permanent state of heightened prudence and protective vigilance.",
+      "moral_abstract": "Deception breeds vigilance."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 11,
+        "thinking_tokens": 1203,
+        "total_tokens": 1285
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 18,
+        "thinking_tokens": 5117,
+        "total_tokens": 5202
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 5,
+        "thinking_tokens": 491,
+        "total_tokens": 549
+      }
+    }
+  },
+  {
+    "id": "moral_026",
+    "moral_idx": 26,
+    "fable_idx": 26,
+    "original_moral": "Precious things are for those that can prize them.",
+    "paraphrases": {
+      "moral_rephrase": "Valuables belong to those who recognize their true worth.",
+      "moral_elaborate": "True value is best realized when matched with the wisdom to recognize and respect its significance.",
+      "moral_abstract": "Appreciation determines value."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 72,
+        "output_tokens": 12,
+        "thinking_tokens": 1949,
+        "total_tokens": 2033
+      },
+      "moral_elaborate": {
+        "input_tokens": 68,
+        "output_tokens": 17,
+        "thinking_tokens": 5757,
+        "total_tokens": 5842
+      },
+      "moral_abstract": {
+        "input_tokens": 54,
+        "output_tokens": 5,
+        "thinking_tokens": 695,
+        "total_tokens": 754
+      }
+    }
+  },
+  {
+    "id": "moral_027",
+    "moral_idx": 27,
+    "fable_idx": 27,
+    "original_moral": "Little by little does the trick.",
+    "paraphrases": {
+      "moral_rephrase": "Small, consistent actions eventually lead to success.",
+      "moral_elaborate": "Consistent, incremental efforts inevitably culminate in the realization of significant and enduring achievements.",
+      "moral_abstract": "Incremental progress achieves cumulative success."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 9,
+        "thinking_tokens": 951,
+        "total_tokens": 1029
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 16,
+        "thinking_tokens": 724,
+        "total_tokens": 805
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 5,
+        "thinking_tokens": 764,
+        "total_tokens": 820
+      }
+    }
+  },
+  {
+    "id": "moral_028",
+    "moral_idx": 28,
+    "fable_idx": 28,
+    "original_moral": "Men often revert to their natural instincts.",
+    "paraphrases": {
+      "moral_rephrase": "Innate nature frequently resurfaces regardless of efforts to change.",
+      "moral_elaborate": "Inherent nature inevitably reasserts itself despite superficial changes or temporary adaptations.",
+      "moral_abstract": "Inherent nature inevitably resurfaces."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 12,
+        "thinking_tokens": 760,
+        "total_tokens": 842
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 15,
+        "thinking_tokens": 653,
+        "total_tokens": 734
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 7,
+        "thinking_tokens": 832,
+        "total_tokens": 891
+      }
+    }
+  },
+  {
+    "id": "moral_029",
+    "moral_idx": 29,
+    "fable_idx": 29,
+    "original_moral": "Those who enter by the back stairs may expect to be shown out at the window.",
+    "paraphrases": {
+      "moral_rephrase": "Gaining access through deceit ensures a sudden and humiliating expulsion.",
+      "moral_elaborate": "Illegitimate methods of advancement inevitably lead to a swift and disgraceful expulsion from the position gained.",
+      "moral_abstract": "Dishonest entry invites a shameful exit."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 79,
+        "output_tokens": 12,
+        "thinking_tokens": 1354,
+        "total_tokens": 1445
+      },
+      "moral_elaborate": {
+        "input_tokens": 75,
+        "output_tokens": 19,
+        "thinking_tokens": 1341,
+        "total_tokens": 1435
+      },
+      "moral_abstract": {
+        "input_tokens": 61,
+        "output_tokens": 9,
+        "thinking_tokens": 570,
+        "total_tokens": 640
+      }
+    }
+  },
+  {
+    "id": "moral_030",
+    "moral_idx": 30,
+    "fable_idx": 30,
+    "original_moral": "People often grudge others what they cannot enjoy themselves.",
+    "paraphrases": {
+      "moral_rephrase": "Individuals often resent others for possessing what they cannot personally utilize.",
+      "moral_elaborate": "Individuals often begrudge others the advantages or pleasures that they themselves are unable to personally utilize or enjoy.",
+      "moral_abstract": "Spite denies others what it cannot enjoy."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 72,
+        "output_tokens": 12,
+        "thinking_tokens": 1911,
+        "total_tokens": 1995
+      },
+      "moral_elaborate": {
+        "input_tokens": 68,
+        "output_tokens": 20,
+        "thinking_tokens": 2657,
+        "total_tokens": 2745
+      },
+      "moral_abstract": {
+        "input_tokens": 54,
+        "output_tokens": 9,
+        "thinking_tokens": 1303,
+        "total_tokens": 1366
+      }
+    }
+  },
+  {
+    "id": "moral_031",
+    "moral_idx": 31,
+    "fable_idx": 31,
+    "original_moral": "He who covets what belongs to another, deservedly loses his own.",
+    "paraphrases": {
+      "moral_rephrase": "Desiring the property of others leads to the deserved loss of one's own.",
+      "moral_elaborate": "The covetous pursuit of external gains often precipitates the forfeiture of one’s own foundational security.",
+      "moral_abstract": "Greed forfeits what one already possesses."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 77,
+        "output_tokens": 17,
+        "thinking_tokens": 972,
+        "total_tokens": 1066
+      },
+      "moral_elaborate": {
+        "input_tokens": 73,
+        "output_tokens": 20,
+        "thinking_tokens": 1722,
+        "total_tokens": 1815
+      },
+      "moral_abstract": {
+        "input_tokens": 59,
+        "output_tokens": 9,
+        "thinking_tokens": 895,
+        "total_tokens": 963
+      }
+    }
+  },
+  {
+    "id": "moral_032",
+    "moral_idx": 32,
+    "fable_idx": 32,
+    "original_moral": "How often do we supply our enemies with the means of our own destruction.",
+    "paraphrases": {
+      "moral_rephrase": "Individuals frequently provide their adversaries with the instruments of their own ruin.",
+      "moral_elaborate": "Empowering opposing forces often provides the specific instruments required to facilitate one’s own eventual destruction.",
+      "moral_abstract": "We furnish the means of our own destruction."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 77,
+        "output_tokens": 13,
+        "thinking_tokens": 3140,
+        "total_tokens": 3230
+      },
+      "moral_elaborate": {
+        "input_tokens": 73,
+        "output_tokens": 18,
+        "thinking_tokens": 2117,
+        "total_tokens": 2208
+      },
+      "moral_abstract": {
+        "input_tokens": 59,
+        "output_tokens": 9,
+        "thinking_tokens": 1924,
+        "total_tokens": 1992
+      }
+    }
+  },
+  {
+    "id": "moral_033",
+    "moral_idx": 33,
+    "fable_idx": 33,
+    "original_moral": "If words suffice not, blows must follow.",
+    "paraphrases": {
+      "moral_rephrase": "Force becomes necessary when verbal persuasion proves insufficient.",
+      "moral_elaborate": "When rational persuasion proves ineffective, more assertive measures must inevitably serve as the final instrument of resolution.",
+      "moral_abstract": "Force follows failed persuasion."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 71,
+        "output_tokens": 9,
+        "thinking_tokens": 776,
+        "total_tokens": 856
+      },
+      "moral_elaborate": {
+        "input_tokens": 67,
+        "output_tokens": 19,
+        "thinking_tokens": 1026,
+        "total_tokens": 1112
+      },
+      "moral_abstract": {
+        "input_tokens": 53,
+        "output_tokens": 5,
+        "thinking_tokens": 570,
+        "total_tokens": 628
+      }
+    }
+  },
+  {
+    "id": "moral_034",
+    "moral_idx": 34,
+    "fable_idx": 34,
+    "original_moral": "The greatest kindness will not bind the ungrateful.",
+    "paraphrases": {
+      "moral_rephrase": "No amount of generosity can secure the loyalty of the ungrateful.",
+      "moral_elaborate": "Profound benevolence cannot fundamentally alter a character that lacks the inherent capacity for appreciation.",
+      "moral_abstract": "Ingratitude is immune to benevolence."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 72,
+        "output_tokens": 13,
+        "thinking_tokens": 1009,
+        "total_tokens": 1094
+      },
+      "moral_elaborate": {
+        "input_tokens": 68,
+        "output_tokens": 16,
+        "thinking_tokens": 692,
+        "total_tokens": 776
+      },
+      "moral_abstract": {
+        "input_tokens": 54,
+        "output_tokens": 8,
+        "thinking_tokens": 834,
+        "total_tokens": 896
+      }
+    }
+  },
+  {
+    "id": "moral_035",
+    "moral_idx": 35,
+    "fable_idx": 35,
+    "original_moral": "Birds of a feather flock together.",
+    "paraphrases": {
+      "moral_rephrase": "Individuals with similar traits naturally seek each other's company.",
+      "moral_elaborate": "Similar natures naturally gravitate toward one another, forming associations rooted in shared characteristics and mutual alignment.",
+      "moral_abstract": "Similarity dictates association."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 12,
+        "thinking_tokens": 541,
+        "total_tokens": 622
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 18,
+        "thinking_tokens": 903,
+        "total_tokens": 986
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 4,
+        "thinking_tokens": 547,
+        "total_tokens": 602
+      }
+    }
+  },
+  {
+    "id": "moral_036",
+    "moral_idx": 36,
+    "fable_idx": 36,
+    "original_moral": "A little thing in hand is worth more than a great thing in prospect.",
+    "paraphrases": {
+      "moral_rephrase": "A certain small possession is superior to a potential large one.",
+      "moral_elaborate": "The security of immediate certainty holds more value than the speculative allure of superior but unassured potentiality.",
+      "moral_abstract": "Certainty outweighs potential."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 77,
+        "output_tokens": 12,
+        "thinking_tokens": 5266,
+        "total_tokens": 5355
+      },
+      "moral_elaborate": {
+        "input_tokens": 73,
+        "output_tokens": 20,
+        "thinking_tokens": 1405,
+        "total_tokens": 1498
+      },
+      "moral_abstract": {
+        "input_tokens": 59,
+        "output_tokens": 5,
+        "thinking_tokens": 808,
+        "total_tokens": 872
+      }
+    }
+  },
+  {
+    "id": "moral_037",
+    "moral_idx": 37,
+    "fable_idx": 37,
+    "original_moral": "To do the right thing at the right season is a great art.",
+    "paraphrases": {
+      "moral_rephrase": "Mastering the timing of appropriate actions is a profound art.",
+      "moral_elaborate": "True mastery involves the precise synchronization of right conduct with the unique demands of the opportune moment.",
+      "moral_abstract": "Timing is the essence of right action."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 76,
+        "output_tokens": 12,
+        "thinking_tokens": 1233,
+        "total_tokens": 1321
+      },
+      "moral_elaborate": {
+        "input_tokens": 72,
+        "output_tokens": 18,
+        "thinking_tokens": 1542,
+        "total_tokens": 1632
+      },
+      "moral_abstract": {
+        "input_tokens": 58,
+        "output_tokens": 8,
+        "thinking_tokens": 547,
+        "total_tokens": 613
+      }
+    }
+  },
+  {
+    "id": "moral_038",
+    "moral_idx": 38,
+    "fable_idx": 38,
+    "original_moral": "Union is strength.",
+    "paraphrases": {
+      "moral_rephrase": "Collective unity generates significantly more power than solitary effort.",
+      "moral_elaborate": "Collective cooperation fosters a synergistic power and resilience that far exceeds the capacity of isolated action.",
+      "moral_abstract": "Unity compounds power."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 66,
+        "output_tokens": 10,
+        "thinking_tokens": 781,
+        "total_tokens": 857
+      },
+      "moral_elaborate": {
+        "input_tokens": 62,
+        "output_tokens": 17,
+        "thinking_tokens": 396,
+        "total_tokens": 475
+      },
+      "moral_abstract": {
+        "input_tokens": 48,
+        "output_tokens": 4,
+        "thinking_tokens": 454,
+        "total_tokens": 506
+      }
+    }
+  },
+  {
+    "id": "moral_039",
+    "moral_idx": 39,
+    "fable_idx": 39,
+    "original_moral": "It is foolish to expect help from someone who is naturally unkind.",
+    "paraphrases": {
+      "moral_rephrase": "One cannot expect support from an inherently malicious nature.",
+      "moral_elaborate": "It is irrational to seek support from a source whose core disposition is fundamentally antithetical to benevolence.",
+      "moral_abstract": "Expectations cannot override inherent nature."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 10,
+        "thinking_tokens": 2153,
+        "total_tokens": 2238
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 19,
+        "thinking_tokens": 1378,
+        "total_tokens": 1468
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 7,
+        "thinking_tokens": 414,
+        "total_tokens": 478
+      }
+    }
+  },
+  {
+    "id": "moral_040",
+    "moral_idx": 40,
+    "fable_idx": 40,
+    "original_moral": "Better one safe way than a hundred on which you cannot reckon.",
+    "paraphrases": {
+      "moral_rephrase": "One dependable strategy is superior to many unreliable options.",
+      "moral_elaborate": "A single dependable certainty provides greater security than a multitude of unpredictable alternatives.",
+      "moral_abstract": "One reliable method surpasses many uncertain alternatives."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 10,
+        "thinking_tokens": 341,
+        "total_tokens": 426
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 14,
+        "thinking_tokens": 724,
+        "total_tokens": 809
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 8,
+        "thinking_tokens": 861,
+        "total_tokens": 926
+      }
+    }
+  },
+  {
+    "id": "moral_041",
+    "moral_idx": 41,
+    "fable_idx": 41,
+    "original_moral": "Cunning often outwits itself.",
+    "paraphrases": {
+      "moral_rephrase": "Deceptive cleverness frequently leads to one's own downfall.",
+      "moral_elaborate": "Sophisticated artifice frequently results in self-sabotage by undermining the very objectives it was intended to secure.",
+      "moral_abstract": "Guile is inherently self-defeating."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 13,
+        "thinking_tokens": 1438,
+        "total_tokens": 1521
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 22,
+        "thinking_tokens": 1302,
+        "total_tokens": 1390
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 9,
+        "thinking_tokens": 715,
+        "total_tokens": 776
+      }
+    }
+  },
+  {
+    "id": "moral_042",
+    "moral_idx": 42,
+    "fable_idx": 42,
+    "original_moral": "Do unto others what you would have them do unto you.",
+    "paraphrases": {
+      "moral_rephrase": "Treat others in the same manner you would like to be treated yourself.",
+      "moral_elaborate": "Universal morality requires treating others with the same degree of dignity and consideration one desires for oneself.",
+      "moral_abstract": "Reciprocity is the foundation of ethical conduct."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 74,
+        "output_tokens": 14,
+        "thinking_tokens": 811,
+        "total_tokens": 899
+      },
+      "moral_elaborate": {
+        "input_tokens": 70,
+        "output_tokens": 18,
+        "thinking_tokens": 5207,
+        "total_tokens": 5295
+      },
+      "moral_abstract": {
+        "input_tokens": 56,
+        "output_tokens": 10,
+        "thinking_tokens": 1004,
+        "total_tokens": 1070
+      }
+    }
+  },
+  {
+    "id": "moral_043",
+    "moral_idx": 43,
+    "fable_idx": 43,
+    "original_moral": "Flatters are not to be trusted.",
+    "paraphrases": {
+      "moral_rephrase": "Individuals who offer insincere praise are unworthy of trust.",
+      "moral_elaborate": "Excessive adulation often masks manipulative intent and warrants skeptical discernment rather than uncritical acceptance.",
+      "moral_abstract": "Flattery masks deception."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 70,
+        "output_tokens": 11,
+        "thinking_tokens": 3196,
+        "total_tokens": 3277
+      },
+      "moral_elaborate": {
+        "input_tokens": 66,
+        "output_tokens": 18,
+        "thinking_tokens": 1124,
+        "total_tokens": 1208
+      },
+      "moral_abstract": {
+        "input_tokens": 52,
+        "output_tokens": 5,
+        "thinking_tokens": 573,
+        "total_tokens": 630
+      }
+    }
+  },
+  {
+    "id": "moral_044",
+    "moral_idx": 44,
+    "fable_idx": 44,
+    "original_moral": "Do not trust flatterers.",
+    "paraphrases": {
+      "moral_rephrase": "Avoid placing confidence in individuals who provide insincere praise.",
+      "moral_elaborate": "Exercise caution toward excessive adulation, for superficial praise often masks manipulative self-interest.",
+      "moral_abstract": "Adulation masks manipulation."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 68,
+        "output_tokens": 11,
+        "thinking_tokens": 670,
+        "total_tokens": 749
+      },
+      "moral_elaborate": {
+        "input_tokens": 64,
+        "output_tokens": 17,
+        "thinking_tokens": 759,
+        "total_tokens": 840
+      },
+      "moral_abstract": {
+        "input_tokens": 50,
+        "output_tokens": 5,
+        "thinking_tokens": 732,
+        "total_tokens": 787
+      }
+    }
+  },
+  {
+    "id": "moral_045",
+    "moral_idx": 45,
+    "fable_idx": 45,
+    "original_moral": "Look before you leap.",
+    "paraphrases": {
+      "moral_rephrase": "Consider the potential consequences of an action before committing to it.",
+      "moral_elaborate": "Prudence demands a thorough assessment of potential consequences and risks prior to committing to any definitive course of action.",
+      "moral_abstract": "Evaluate consequences before acting."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 67,
+        "output_tokens": 12,
+        "thinking_tokens": 298,
+        "total_tokens": 377
+      },
+      "moral_elaborate": {
+        "input_tokens": 63,
+        "output_tokens": 21,
+        "thinking_tokens": 2364,
+        "total_tokens": 2448
+      },
+      "moral_abstract": {
+        "input_tokens": 49,
+        "output_tokens": 5,
+        "thinking_tokens": 336,
+        "total_tokens": 390
+      }
+    }
+  },
+  {
+    "id": "moral_046",
+    "moral_idx": 46,
+    "fable_idx": 46,
+    "original_moral": "Consider carefully before changing your situation.",
+    "paraphrases": {
+      "moral_rephrase": "Thoroughly evaluate the potential consequences before deciding to alter your current circumstances.",
+      "moral_elaborate": "Evaluate the long-term implications of any transition to ensure that change represents a genuine improvement over established conditions.",
+      "moral_abstract": "Deliberation must precede transition."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 15,
+        "thinking_tokens": 648,
+        "total_tokens": 732
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 21,
+        "thinking_tokens": 938,
+        "total_tokens": 1024
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 7,
+        "thinking_tokens": 1586,
+        "total_tokens": 1644
+      }
+    }
+  },
+  {
+    "id": "moral_047",
+    "moral_idx": 47,
+    "fable_idx": 47,
+    "original_moral": "There is as much malice in a wink as in a word.",
+    "paraphrases": {
+      "moral_rephrase": "Subtle gestures can convey as much malice as spoken words.",
+      "moral_elaborate": "Subtle gestures convey harmful intent with as much potency as explicit declarations.",
+      "moral_abstract": "Subtlety does not diminish the weight of malice."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 75,
+        "output_tokens": 12,
+        "thinking_tokens": 418,
+        "total_tokens": 505
+      },
+      "moral_elaborate": {
+        "input_tokens": 71,
+        "output_tokens": 14,
+        "thinking_tokens": 414,
+        "total_tokens": 499
+      },
+      "moral_abstract": {
+        "input_tokens": 57,
+        "output_tokens": 12,
+        "thinking_tokens": 1043,
+        "total_tokens": 1112
+      }
+    }
+  },
+  {
+    "id": "moral_048",
+    "moral_idx": 48,
+    "fable_idx": 48,
+    "original_moral": "Better no rule than cruel rule.",
+    "paraphrases": {
+      "moral_rephrase": "The absence of governance is preferable to an oppressive regime.",
+      "moral_elaborate": "The complete absence of governance is superior to any social structure sustained through systematic cruelty.",
+      "moral_abstract": "Chaos is preferable to tyranny."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 69,
+        "output_tokens": 11,
+        "thinking_tokens": 4942,
+        "total_tokens": 5022
+      },
+      "moral_elaborate": {
+        "input_tokens": 65,
+        "output_tokens": 16,
+        "thinking_tokens": 3559,
+        "total_tokens": 3640
+      },
+      "moral_abstract": {
+        "input_tokens": 51,
+        "output_tokens": 6,
+        "thinking_tokens": 586,
+        "total_tokens": 643
+      }
+    }
+  },
+  {
+    "id": "moral_049",
+    "moral_idx": 49,
+    "fable_idx": 49,
+    "original_moral": "Old friends should not be sacrificed for new ones.",
+    "paraphrases": {
+      "moral_rephrase": "Do not abandon long-standing loyalties for the sake of untried connections.",
+      "moral_elaborate": "Established bonds of proven worth should never be compromised for the speculative appeal of the new and untested.",
+      "moral_abstract": "Value established loyalty over novelty."
+    },
+    "token_usage": {
+      "moral_rephrase": {
+        "input_tokens": 72,
+        "output_tokens": 16,
+        "thinking_tokens": 1282,
+        "total_tokens": 1370
+      },
+      "moral_elaborate": {
+        "input_tokens": 68,
+        "output_tokens": 19,
+        "thinking_tokens": 625,
+        "total_tokens": 712
+      },
+      "moral_abstract": {
+        "input_tokens": 54,
+        "output_tokens": 6,
+        "thinking_tokens": 569,
+        "total_tokens": 629
+      }
+    }
+  }
+]
