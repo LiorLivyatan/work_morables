@@ -89,7 +89,9 @@ def postprocess_summary(text: str, variant: str) -> str:
     lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
     if not lines:
         return text
-    return lines[0] if variant == "direct_moral" else lines[-1]
+    line = lines[0] if variant == "direct_moral" else lines[-1]
+    # Strip common label prefixes the model adds (e.g. "Moral:", "Lesson:", "Summary:")
+    return re.sub(r"^(Moral|Lesson|Summary|Answer|Principle)\s*:\s*", "", line, flags=re.IGNORECASE)
 
 
 def build_corpus_item(fable_idx: int, fable: dict, ground_truth_moral: str,
