@@ -78,14 +78,18 @@ USER_PROMPT_TEMPLATE = "Fable: {fable}"
 def postprocess_summary(text: str, variant: str) -> str:
     """Strip artefacts and extract the relevant line from model output.
 
-    For conceptual_abstract (CoT): returns the last non-empty line (the principle).
-    For other variants: returns the first non-empty line.
+    For direct_moral: returns the first non-empty line (model answers directly).
+    For narrative_distillation / conceptual_abstract: returns the last non-empty
+    line — both prompts ask the model to reason/summarize first, then give the
+    lesson, so the moral is at the end.
     """
     text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+    # Strip markdown bold markers (e.g. **Summary:** -> Summary:)
+    text = re.sub(r"\*\*(.*?)\*\*", r"\1", text)
     lines = [ln.strip() for ln in text.split("\n") if ln.strip()]
     if not lines:
         return text
-    return lines[-1] if variant == "conceptual_abstract" else lines[0]
+    return lines[0] if variant == "direct_moral" else lines[-1]
 
 
 def build_corpus_item(fable_idx: int, fable: dict, ground_truth_moral: str,

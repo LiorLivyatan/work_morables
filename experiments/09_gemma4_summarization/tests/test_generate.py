@@ -18,6 +18,11 @@ def test_postprocess_direct_moral_returns_first_line():
     assert gs.postprocess_summary(raw, "direct_moral") == "Slow and steady wins the race."
 
 
+def test_postprocess_narrative_distillation_returns_last_line():
+    raw = "**Summary:** An ant dismisses a chrysalis.\nTrue potential is often hidden beneath an unassuming exterior."
+    assert gs.postprocess_summary(raw, "narrative_distillation") == "True potential is often hidden beneath an unassuming exterior."
+
+
 def test_postprocess_conceptual_abstract_returns_last_line():
     raw = "1. The hare was overconfident.\n2. The tortoise persisted.\nPersistence overcomes arrogance."
     assert gs.postprocess_summary(raw, "conceptual_abstract") == "Persistence overcomes arrogance."
@@ -26,6 +31,11 @@ def test_postprocess_conceptual_abstract_returns_last_line():
 def test_postprocess_strips_think_blocks():
     raw = "<think>some reasoning</think>Vanity blinds us to real danger."
     assert gs.postprocess_summary(raw, "direct_moral") == "Vanity blinds us to real danger."
+
+
+def test_postprocess_strips_markdown_bold():
+    raw = "**Summary:** A fox tricks a crow.\nVanity makes us easy prey for flatterers."
+    assert gs.postprocess_summary(raw, "narrative_distillation") == "Vanity makes us easy prey for flatterers."
 
 
 def test_postprocess_handles_empty_lines():
