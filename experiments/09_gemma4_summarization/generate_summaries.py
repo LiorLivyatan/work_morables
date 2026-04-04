@@ -228,8 +228,8 @@ def run_generation(model_labels: list[str], variant_labels: list[str],
                 for v in variant_labels:
                     print(f"    {v}: {summaries.get(v, '')[:100]}")
 
-            # Incremental checkpoint every 50 fables
-            if output_path and (i + 1) % 50 == 0:
+            # Incremental checkpoint every 10 fables
+            if output_path and (i + 1) % 10 == 0:
                 with open(output_path, "w") as f:
                     json.dump(corpus, f, indent=2, ensure_ascii=False)
                 print(f"  [checkpoint] {len(corpus)} items saved")

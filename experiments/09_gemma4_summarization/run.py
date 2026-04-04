@@ -28,11 +28,13 @@ ROOT_DIR = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT_DIR / "lib"))
 from data import load_moral_to_fable_retrieval_data
 from retrieval_utils import compute_metrics
+from embedding_cache import encode_with_cache
 
 # ── Paths ────────────────────────────────────────────────────────────────────
 RESULTS_DIR = Path(__file__).parent / "results"
 RUNS_DIR = RESULTS_DIR / "runs"
 GENERATION_RUNS_DIR = RESULTS_DIR / "generation_runs"
+CACHE_DIR = RESULTS_DIR / "embedding_cache"
 RUNS_DIR.mkdir(parents=True, exist_ok=True)
 
 # ── Embedding model (best baseline) ─────────────────────────────────────────
@@ -123,22 +125,20 @@ def run_experiment(config_keys: list[str], variants: list[str],
 
     print(f"\n  Loading {EMBED_MODEL_ID}...")
     from sentence_transformers import SentenceTransformer
-    model = SentenceTransformer(EMBED_MODEL_ID)
-
-    def encode(texts: list[str], is_query: bool = False, batch_size: int = 32):
-        if is_query:
-            texts = [f"Instruct: {QUERY_INSTRUCTION}\nQuery: {t}" for t in texts]
-        return model.encode(
-            texts, batch_size=batch_size, normalize_embeddings=True,
-            show_progress_bar=True, convert_to_numpy=True,
-        ).astype(np.float32)
+    embed_model = SentenceTransformer(EMBED_MODEL_ID)
 
     print("\n  Encoding moral queries...")
-    moral_embs = encode(moral_texts, is_query=True)
+    moral_embs = encode_with_cache(
+        embed_model, moral_texts, EMBED_MODEL_ID, CACHE_DIR,
+        query_instruction=QUERY_INSTRUCTION, label="morals (queries)",
+    )
 
     print("\n  Encoding raw fables (baseline)...")
     t0 = time.time()
-    baseline_embs = encode(fable_texts)
+    baseline_embs = encode_with_cache(
+        embed_model, fable_texts, EMBED_MODEL_ID, CACHE_DIR,
+        label="fables (baseline)",
+    )
     baseline_time = time.time() - t0
     baseline_metrics = compute_metrics(moral_embs, baseline_embs, ground_truth)
     print(f"  Baseline: MRR={baseline_metrics['MRR']:.4f}  "
@@ -162,7 +162,10 @@ def run_experiment(config_keys: list[str], variants: list[str],
 
             corpus_texts = build_corpus_texts(golden, fable_texts, config_key, "")
             t0 = time.time()
-            corpus_embs = encode(corpus_texts)
+            corpus_embs = encode_with_cache(
+                embed_model, corpus_texts, EMBED_MODEL_ID, CACHE_DIR,
+                label=f"config-{config_key}",
+            )
             encode_time = time.time() - t0
 
             metrics = compute_metrics(moral_embs, corpus_embs, ground_truth)
@@ -189,7 +192,10 @@ def run_experiment(config_keys: list[str], variants: list[str],
             print(f"    Sample: {sample[:120]}{'...' if len(sample) > 120 else ''}")
 
             t0 = time.time()
-            corpus_embs = encode(corpus_texts)
+            corpus_embs = encode_with_cache(
+                embed_model, corpus_texts, EMBED_MODEL_ID, CACHE_DIR,
+                label=f"config-{config_key}/{variant}",
+            )
             encode_time = time.time() - t0
 
             metrics = compute_metrics(moral_embs, corpus_embs, ground_truth)
