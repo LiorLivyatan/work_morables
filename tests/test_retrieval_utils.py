@@ -2,8 +2,11 @@
 import numpy as np
 import pytest
 import sys
+from pathlib import Path
 sys.path.insert(0, "scripts")
 from retrieval_utils import compute_metrics, rank_analysis
+sys.path.insert(0, str(Path(__file__).parent.parent))
+from lib.retrieval_utils import compute_metrics_from_matrix
 
 
 def test_perfect_retrieval():
@@ -67,3 +70,32 @@ def test_skips_missing_queries():
     m = compute_metrics(q, c, gt)
     assert m["n_queries"] == 2
     assert m["MRR"] == pytest.approx(1.0)
+
+
+def test_compute_metrics_from_matrix_perfect():
+    """Identity score matrix: every query hits rank 0."""
+    matrix = np.eye(4, dtype=np.float32)
+    gt = {0: 0, 1: 1, 2: 2, 3: 3}
+    m = compute_metrics_from_matrix(matrix, gt)
+    assert m["MRR"] == pytest.approx(1.0)
+    assert m["Recall@1"] == pytest.approx(1.0)
+    assert m["n_queries"] == 4
+
+
+def test_compute_metrics_from_matrix_matches_compute_metrics():
+    """Results must be identical to compute_metrics() on normalized embeddings."""
+    rng = np.random.default_rng(42)
+    q = rng.random((5, 8)).astype(np.float32)
+    q /= np.linalg.norm(q, axis=1, keepdims=True)
+    c = rng.random((10, 8)).astype(np.float32)
+    c /= np.linalg.norm(c, axis=1, keepdims=True)
+    gt = {0: 0, 1: 3, 2: 7, 3: 1, 4: 9}
+
+    from sklearn.metrics.pairwise import cosine_similarity
+    matrix = cosine_similarity(q, c).astype(np.float32)
+
+    m_emb = compute_metrics(q, c, gt)
+    m_mat = compute_metrics_from_matrix(matrix, gt)
+
+    for key in ["MRR", "MAP", "R-Precision", "Recall@1", "Recall@5", "n_queries"]:
+        assert m_emb[key] == pytest.approx(m_mat[key], abs=1e-5), f"Mismatch on {key}"

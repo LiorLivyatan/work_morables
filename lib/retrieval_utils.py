@@ -67,6 +67,61 @@ def compute_metrics(query_embeddings, corpus_embeddings, ground_truth, ks=(1, 5,
     return results
 
 
+def compute_metrics_from_matrix(
+    score_matrix: np.ndarray,
+    ground_truth: dict,
+    ks=(1, 5, 10, 50),
+) -> dict:
+    """
+    Compute retrieval metrics from a pre-computed score matrix.
+
+    Identical metric keys to compute_metrics(). Use this for fused score matrices
+    where embeddings are not available directly.
+
+    Args:
+        score_matrix: (N_queries, N_docs) float array, higher = more relevant
+        ground_truth: dict mapping query_idx (int) -> correct corpus_idx (int)
+        ks: tuple of k values for Recall@k, P@k, NDCG@k
+
+    Returns:
+        dict with same keys as compute_metrics()
+    """
+    rankings = np.argsort(-score_matrix, axis=1)
+
+    reciprocal_ranks = []
+    recall_at_k = {k: [] for k in ks}
+    precision_at_k = {k: [] for k in ks}
+    ndcg_at_k = {k: [] for k in ks}
+    r_precisions = []
+
+    for q_idx, correct_idx in ground_truth.items():
+        ranked = rankings[q_idx]
+        rank = int(np.where(ranked == correct_idx)[0][0])
+
+        reciprocal_ranks.append(1.0 / (rank + 1))
+        for k in ks:
+            hit = 1.0 if rank < k else 0.0
+            recall_at_k[k].append(hit)
+            precision_at_k[k].append(hit / k)
+            ndcg_at_k[k].append(1.0 / np.log2(rank + 2) if rank < k else 0.0)
+        r_precisions.append(1.0 if rank == 0 else 0.0)
+
+    ranks_1indexed = [1.0 / rr for rr in reciprocal_ranks]
+    results = {
+        "MRR": float(np.mean(reciprocal_ranks)),
+        "MAP": float(np.mean(reciprocal_ranks)),
+        "R-Precision": float(np.mean(r_precisions)),
+        "Mean Rank": float(np.mean(ranks_1indexed)),
+        "Median Rank": float(np.median(ranks_1indexed)),
+        "n_queries": len(reciprocal_ranks),
+    }
+    for k in ks:
+        results[f"Recall@{k}"] = float(np.mean(recall_at_k[k]))
+        results[f"P@{k}"] = float(np.mean(precision_at_k[k]))
+        results[f"NDCG@{k}"] = float(np.mean(ndcg_at_k[k]))
+    return results
+
+
 def compute_rankings(query_embeddings, corpus_embeddings, top_k=100):
     """
     Return top-k corpus indices and similarity scores for each query.
