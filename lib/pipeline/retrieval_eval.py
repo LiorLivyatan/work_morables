@@ -6,7 +6,11 @@ from typing import Optional
 import numpy as np
 
 from lib.embedding_cache import encode_with_cache
-from lib.retrieval_utils import compute_metrics_from_matrix
+from lib.retrieval_utils import (
+    compute_metrics_from_matrix,
+    compute_rankings_from_matrix,
+    rank_analysis_from_matrix,
+)
 
 
 _OUTPUT_FILE = "retrieval_results.json"
@@ -63,6 +67,7 @@ def run_retrieval_eval(
     """
     run_dir = Path(run_dir)
     output_path = run_dir / _OUTPUT_FILE
+    preds_dir = run_dir / "predictions"
 
     if output_path.exists() and not force:
         print(f"  [skip] {output_path.name} exists (use force=True to re-evaluate)")
@@ -79,6 +84,27 @@ def run_retrieval_eval(
     )
 
     # Load corpus summaries
+    preds_dir.mkdir(exist_ok=True)
+
+    def _dump_predictions(name: str, score_matrix: np.ndarray):
+        rankings_data = compute_rankings_from_matrix(score_matrix, top_k=n_fables)
+        ranks_arr = rank_analysis_from_matrix(score_matrix, ground_truth)
+        gt_sorted_qidx = sorted(ground_truth.keys())
+        rank_by_qidx = {q: int(r) + 1 for q, r in zip(gt_sorted_qidx, ranks_arr)}  # 1-indexed
+
+        pred_records = []
+        for q_idx, ranking in enumerate(rankings_data):
+            correct_idx = ground_truth.get(q_idx)
+            pred_records.append({
+                "query_idx": q_idx,
+                "correct_idx": correct_idx,
+                "correct_rank": rank_by_qidx.get(q_idx),  # 1-indexed absolute rank
+                "top_k_indices": ranking["indices"],
+                "top_k_scores": ranking["scores"],
+            })
+        with open(preds_dir / f"{name}.json", "w") as f:
+            json.dump({"config": name, "top_k": n_fables, "queries": pred_records}, f)
+
     with open(run_dir / "corpus_summaries.json") as f:
         corpus_data = json.load(f)
 
@@ -172,6 +198,7 @@ def run_retrieval_eval(
         b_matrix = moral_embs @ b_embs.T
         b_metrics = compute_metrics_from_matrix(b_matrix, ground_truth)
         all_results["baseline"] = b_metrics
+        _dump_predictions("baseline", b_matrix)
         print(f"\n  baseline: R@1={b_metrics['Recall@1']:.3f}  MRR={b_metrics['MRR']:.4f}")
 
     for rc in retrieval_configs:
@@ -197,6 +224,7 @@ def run_retrieval_eval(
         score_matrices[name] = score_matrix
         metrics = compute_metrics_from_matrix(score_matrix, ground_truth)
         all_results[name] = metrics
+        _dump_predictions(name, score_matrix)
 
         b_r1 = all_results.get("baseline", {}).get("Recall@1")
         delta_str = ""
