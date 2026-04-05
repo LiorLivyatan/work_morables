@@ -1,0 +1,24 @@
+# lib/pipeline/default_config.yaml
+# Base defaults for all experiments. Each experiment's config.yaml overrides only what differs.
+
+corpus_generation_model: gemini-3-flash-preview
+query_expansion_model: gemini-3-flash-preview
+embed_model: Linq-AI-Research/Linq-Embed-Mistral
+embed_query_instruction: "Given a text, retrieve the most relevant passage that answers the query"
+
+n_fables: null  # null = all fables in dataset
+
+steps:
+  generate_corpus_summaries: true
+  generate_query_expansions: true
+  run_retrieval_eval: true
+
+# Variants are fully defined per-experiment (no defaults here)
+corpus_variants: []
+query_expansion_variants: []
+retrieval_configs: []
+
+baseline: null  # set per-experiment if comparison is needed
+
+cache_dir: null  # null = <run_dir>/embedding_cache/
+api_delay_seconds: 0.5
