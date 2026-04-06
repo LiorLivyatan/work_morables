@@ -13,10 +13,12 @@ steps:
   generate_query_expansions: true
   run_retrieval_eval: true
 
-# Variants are fully defined per-experiment (no defaults here)
+# Variants and Matrix models are fully defined per-experiment (no defaults here)
 corpus_variants: []
 query_expansion_variants: []
 retrieval_configs: []
+generation_models: []
+embed_models: []
 
 baseline: null  # set per-experiment if comparison is needed
 

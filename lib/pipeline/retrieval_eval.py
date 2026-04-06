@@ -6,6 +6,7 @@ from typing import Optional
 import numpy as np
 
 from lib.embedding_cache import encode_with_cache
+from lib.pipeline.local_llm import resolve_model_source, sentence_transformer_load_kwargs
 from lib.retrieval_utils import (
     compute_metrics_from_matrix,
     compute_rankings_from_matrix,
@@ -22,7 +23,12 @@ def _load_model(model_id: str, device: Optional[str] = None):
     if device is None:
         device = "mps" if torch.backends.mps.is_available() else "cpu"
     print(f"  Loading {model_id} on {device}...")
-    return SentenceTransformer(model_id, device=device), device
+    model_source, is_local_source = resolve_model_source(model_id)
+    return SentenceTransformer(
+        model_source,
+        device=device,
+        **sentence_transformer_load_kwargs(model_id, is_local_source),
+    ), device
 
 
 def _rrf(score_matrices: list[np.ndarray], k: int = 60) -> np.ndarray:
@@ -49,6 +55,8 @@ def run_retrieval_eval(
     ground_truth: dict,
     moral_indices: list[int],
     force: bool = False,
+    embed_model_id: Optional[str] = None,
+    ablation_mode: Optional[str] = None,
 ) -> dict:
     """
     Run retrieval evaluation for all configs in config['retrieval_configs'].
@@ -61,12 +69,15 @@ def run_retrieval_eval(
         ground_truth:  {contiguous_query_idx: fable_idx}
         moral_indices: Original moral indices (for expansion lookup)
         force:         Re-run even if retrieval_results.json exists
+        embed_model_id: Optional override for the embedding model
+        ablation_mode: Optional test identifier string
 
     Returns:
         Dict mapping config name → metrics dict
     """
     run_dir = Path(run_dir)
-    output_path = run_dir / _OUTPUT_FILE
+    _output_file_name = f"{ablation_mode}_retrieval_results.json" if ablation_mode else _OUTPUT_FILE
+    output_path = run_dir / _output_file_name
     preds_dir = run_dir / "predictions"
 
     if output_path.exists() and not force:
@@ -74,7 +85,8 @@ def run_retrieval_eval(
         with open(output_path) as f:
             return json.load(f)
 
-    embed_model_id = config["embed_model"]
+    if embed_model_id is None:
+        embed_model_id = config["embed_model"]
     query_instruction = config.get("embed_query_instruction")
     retrieval_configs = config["retrieval_configs"]
     n_fables = config.get("n_fables") or len(fable_texts)

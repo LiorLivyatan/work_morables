@@ -1,4 +1,5 @@
 """lib/pipeline — Generic experiment pipeline for NLP-morables."""
+from lib.pipeline.matrix_runner import run_matrix_experiment
 import copy
 from pathlib import Path
 from typing import Optional

@@ -60,5 +60,18 @@ experiments/*/results/summaries_backup/
 # Embedding cache (large .npy files, regeneratable)
 experiments/*/results/embedding_cache/
 
+# Exp10 matrix pipeline run outputs
+experiments/*/results/pipeline_runs/
+
+# HuggingFace model weights (downloaded at runtime, not committed)
+~/.cache/huggingface/
+.cache/huggingface/
+
+# Numpy embedding arrays (regeneratable)
+*.npy
+
+# HuggingFace dynamic modules cache (runtime, not committed)
+.hf_modules_cache/
+
 # Log files
 *.log

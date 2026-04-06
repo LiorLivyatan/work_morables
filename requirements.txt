@@ -1,0 +1,15 @@
+datasets
+sentence-transformers
+matplotlib
+pandas
+numpy
+scikit-learn
+tqdm
+google-generativeai
+InstructorEmbedding
+einops
+torch
+transformers
+gritlm
+protobuf
+PyYAML
