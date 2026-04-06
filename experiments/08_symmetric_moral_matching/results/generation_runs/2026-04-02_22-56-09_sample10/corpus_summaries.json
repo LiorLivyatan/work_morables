@@ -1,0 +1,292 @@
+[
+  {
+    "id": "item_000",
+    "original_fable_id": "aesop_section_1_5",
+    "fable_text": "A slave named Androcles once escaped from his master and fled to the forest. As he was wandering about there he came upon a Lion lying down moaning and groaning. At first he turned to flee, but finding that the Lion did not pursue him, he turned back and went up to him. As he came near, the Lion put out his paw, which was all swollen and bleeding, and Androcles found that a huge thorn had got into it, and was causing all the pain. He pulled out the thorn and bound up the paw of the Lion, who was soon able to rise and lick the hand of Androcles like a dog. Then the Lion took Androcles to his cave, and every day used to bring him meat from which to live. But shortly afterwards both Androcles and the Lion were captured, and the slave was sentenced to be thrown to the Lion, after the latter had been kept without food for several days. The Emperor and all his Court came to see the spectacle, and Androcles was led out into the middle of the arena. Soon the Lion was let loose from his den, and rushed bounding and roaring towards his victim. But as soon as he came near to Androcles he recognised his friend, and fawned upon him, and licked his hands like a friendly dog. The Emperor, surprised at this, summoned Androcles to him, who told him the whole story. Whereupon the slave was pardoned and freed, and the Lion let loose to his native forest.",
+    "ground_truth_moral": "Gratitude is the sign of noble souls.",
+    "summaries": {
+      "ground_truth_style": "Kindness is never wasted and often returns in times of need.",
+      "declarative_universal": "Kindness shown to others often returns in an hour of need."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 430,
+        "output_tokens": 12,
+        "thinking_tokens": 1745,
+        "total_tokens": 2187
+      },
+      "declarative_universal": {
+        "input_tokens": 427,
+        "output_tokens": 13,
+        "thinking_tokens": 1998,
+        "total_tokens": 2438
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 261,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_001",
+    "original_fable_id": "aesop_section_1_6",
+    "fable_text": "An Ant nimbly running about in the sunshine in search of food came across a Chrysalis that was very near its time of change. The Chrysalis moved its tail, and thus attracted the attention of the Ant, who then saw for the first time that it was alive. Poor, pitiable animal! cried the Ant disdainfully. What a sad fate is yours! While I can run hither and thither, at my pleasure, and, if I wish, ascend the tallest tree, you lie imprisoned here in your shell, with power only to move a joint or two of your scaly tail. The Chrysalis heard all this, but did not try to make any reply. A few days after, when the Ant passed that way again, nothing but the shell remained. Wondering what had become of its contents, he felt himself suddenly shaded and fanned by the gorgeous wings of a beautiful Butterfly. Behold in me, said the Butterfly, your much-pitied friend! Boast now of your powers to run and climb as long as you can get me to listen. So saying, the Butterfly rose in the air, and, borne along and aloft on the summer breeze, was soon lost to the sight of the Ant forever.",
+    "ground_truth_moral": "Appearances are deceptive.",
+    "summaries": {
+      "ground_truth_style": "Do not judge the future by the limitations of the present.",
+      "declarative_universal": "Arrogance blinds a person to the hidden potential within the humble."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 371,
+        "output_tokens": 12,
+        "thinking_tokens": 987,
+        "total_tokens": 1370
+      },
+      "declarative_universal": {
+        "input_tokens": 368,
+        "output_tokens": 14,
+        "thinking_tokens": 1206,
+        "total_tokens": 1588
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 204,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_002",
+    "original_fable_id": "aesop_section_1_8",
+    "fable_text": "One summer's day a Grasshopper was hopping about, chirping and singing to its heart's content. An Ant passed by, bearing an ear of corn he was taking to the nest., 'Why not come and chat with me,' said the Grasshopper, 'instead of toiling in that way?' 'I am helping to lay up food for the winter,' said the Ant, 'and recommend you do the same' 'Why bother about winter?' said the Grasshopper; 'we have plenty of food now.' The Ant went on its way. When winter came the Grasshopper had no food and found itself dying of hunger, while it saw the ants distributing corn and grain from the stores they had collected in the summer.",
+    "ground_truth_moral": "There's a time for work and a time for play.",
+    "summaries": {
+      "ground_truth_style": "Preparation in times of plenty provides security in times of want.",
+      "declarative_universal": "Preparation in times of abundance ensures security in times of want."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 265,
+        "output_tokens": 12,
+        "thinking_tokens": 878,
+        "total_tokens": 1155
+      },
+      "declarative_universal": {
+        "input_tokens": 262,
+        "output_tokens": 12,
+        "thinking_tokens": 953,
+        "total_tokens": 1227
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 116,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_003",
+    "original_fable_id": "aesop_section_1_15",
+    "fable_text": "A Traveler hired an Ass to convey him to a distant place. The day being intensely hot, and the sun shining in its strength, the Traveler stopped to rest, and sought shelter from the heat under the Shadow of the Ass. As this afforded only protection for one, and as the Traveler and the owner of the Ass both claimed it, a violent dispute arose between them as to which of them had the right to the Shadow. The owner maintained that he had let the Ass only, and not his Shadow. The Traveler asserted that he had, with the hire of the Ass, hired his Shadow also. The quarrel proceeded from words to blows, and while the men fought, the Ass galloped off.",
+    "ground_truth_moral": "In quarreling about the shadow we often lose the substance.",
+    "summaries": {
+      "ground_truth_style": "In quarreling over the shadow, we often lose the substance.",
+      "declarative_universal": "In fighting over trifles, men lose the very thing they desire."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 258,
+        "output_tokens": 14,
+        "thinking_tokens": 2012,
+        "total_tokens": 2284
+      },
+      "declarative_universal": {
+        "input_tokens": 255,
+        "output_tokens": 14,
+        "thinking_tokens": 1312,
+        "total_tokens": 1581
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 124,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_004",
+    "original_fable_id": "aesop_section_1_18",
+    "fable_text": "An Ass, carrying a load of wood, passed through a pond. As he was crossing through the water he lost his footing, stumbled and fell, and not being able to rise on account of his load, groaned heavily. Some Frogs frequenting the pool heard his lamentation, and said, 'What would you do if you had to live here always as we do, when you make such a fuss about a mere fall into the water?'",
+    "ground_truth_moral": "Men often bear little grievances with less courage than they do large misfortunes.",
+    "summaries": {
+      "ground_truth_style": "Do not complain of temporary trials when others endure permanent hardship.",
+      "declarative_universal": "Those accustomed to hardship often belittle the temporary struggles of others."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 207,
+        "output_tokens": 12,
+        "thinking_tokens": 882,
+        "total_tokens": 1101
+      },
+      "declarative_universal": {
+        "input_tokens": 204,
+        "output_tokens": 12,
+        "thinking_tokens": 1240,
+        "total_tokens": 1456
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 75,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_005",
+    "original_fable_id": "aesop_section_1_21",
+    "fable_text": "A Man had an Ass, and a Maltese Lapdog, a very great beauty. The Ass was left in a stable and had plenty of oats and hay to eat, just as any other Ass would. The Lapdog knew many tricks and was a great favorite with his master, who often fondled him and seldom went out to dine without bringing him home some tidbit to eat. The Ass, on the contrary, had much work to do in grinding the corn-mill and in carrying wood from the forest or burdens from the farm. He often lamented his own hard fate and contrasted it with the luxury and idleness of the Lapdog, till at last one day he broke his cords and halter, and galloped into his master's house, kicking up his heels without measure, and frisking and fawning as well as he could. He next tried to jump about his master as he had seen the Lapdog do, but he broke the table and smashed all the dishes upon it to atoms. He then attempted to lick his master, and jumped upon his back. The servants, hearing the strange hubbub and perceiving the danger of their master, quickly relieved him, and drove out the Ass to his stable with kicks and clubs and cuffs. The Ass, as he returned to his stall beaten nearly to death, thus lamented: I have brought it all on myself! Why could I not have been contented to labor with my companions, and not wish to be idle all the day like that useless little Lapdog!",
+    "ground_truth_moral": "To be satisfied with one's lot is better than to desire something which one is not fitted to receive.",
+    "summaries": {
+      "ground_truth_style": "Do not attempt to play a part for which nature has not suited you.",
+      "declarative_universal": "He who seeks to mimic another’s nature invites his own misfortune."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 422,
+        "output_tokens": 15,
+        "thinking_tokens": 2222,
+        "total_tokens": 2659
+      },
+      "declarative_universal": {
+        "input_tokens": 419,
+        "output_tokens": 14,
+        "thinking_tokens": 1495,
+        "total_tokens": 1928
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 260,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_006",
+    "original_fable_id": "aesop_section_1_22",
+    "fable_text": "A farmer went to the stables to see to his beasts of burden; among them was his favorite Ass, that was always well fed and often carried his master. With the farmer came his Lapdog, who danced about and licked his hand and frisked about. The farmer gave the Lapdog some food, and sat down. The Lapdog jumped into his master's lap, and lay there while the farmer stroked his ears. The Ass, seeing this, broke loose from his halter and commenced prancing about in imitation of the Lapdog. The farmer could not hold his sides with laughter, so the Ass went up to him, and attempted to climb into his lap. The farmer's servants rushed up with sticks and pitchforks and drove the Ass back to the stables.",
+    "ground_truth_moral": "Clumsy jesting is no joke.",
+    "summaries": {
+      "ground_truth_style": "What is graceful in one may be ridiculous in another.",
+      "declarative_universal": "Those who forsake their own nature to mimic others invite only ridicule."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 275,
+        "output_tokens": 11,
+        "thinking_tokens": 1195,
+        "total_tokens": 1481
+      },
+      "declarative_universal": {
+        "input_tokens": 272,
+        "output_tokens": 14,
+        "thinking_tokens": 1530,
+        "total_tokens": 1816
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 129,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_007",
+    "original_fable_id": "aesop_section_1_23",
+    "fable_text": "A Muleteer set forth on a journey, driving before him an Ass and a Mule, both well laden. The Ass, as long as he traveled along the plain, carried his load with ease, but when he began to ascend the steep path of the mountain, felt his load to be more than he could bear. He entreated his companion to relieve him of a small portion, that he might carry home the rest; but the Mule paid no attention to the request. The Ass shortly afterwards fell down dead under his burden. Not knowing what else to do in so wild a region, the Muleteer placed upon the Mule the load carried by the Ass in addition to his own, and at the top of all placed the hide of the Ass, after he had skinned him. The Mule, groaning beneath his heavy burden, said to himself: I am treated according to my deserts. If I had only been willing to assist the Ass a little in his need, I should not now be bearing, together with his burden, himself as well.",
+    "ground_truth_moral": "An ounce of prevention is worth a pound of cure.",
+    "summaries": {
+      "ground_truth_style": "He who refuses to share a small burden must later bear it all.",
+      "declarative_universal": "He who refuses to share a burden invites a heavier one himself."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 329,
+        "output_tokens": 14,
+        "thinking_tokens": 1430,
+        "total_tokens": 1773
+      },
+      "declarative_universal": {
+        "input_tokens": 326,
+        "output_tokens": 13,
+        "thinking_tokens": 1553,
+        "total_tokens": 1892
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 182,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_008",
+    "original_fable_id": "aesop_section_1_27",
+    "fable_text": "An Ass once found a Lion's skin which the hunters had left out in the sun to dry. He put it on and went towards his native village. All fled at his approach, both men and animals, and he was a proud Ass that day. In his delight he lifted up his voice and brayed, but then every one knew him, and his owner came up and gave him a sound cudgelling for the fright he had caused. And shortly afterwards a Fox came up to him and said: Ah, I knew you by your voice.",
+    "ground_truth_moral": "Fine clothes may disguise, but silly words will disclose a fool.",
+    "summaries": {
+      "ground_truth_style": "Fine clothes may disguise a fool, but words reveal the true character.",
+      "declarative_universal": "Speech reveals the character that outward appearance seeks to hide."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 229,
+        "output_tokens": 14,
+        "thinking_tokens": 793,
+        "total_tokens": 1036
+      },
+      "declarative_universal": {
+        "input_tokens": 226,
+        "output_tokens": 11,
+        "thinking_tokens": 1778,
+        "total_tokens": 2015
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 96,
+      "model": "gemini-3-flash-preview"
+    }
+  },
+  {
+    "id": "item_009",
+    "original_fable_id": "aesop_section_1_30",
+    "fable_text": "The Lion and the Fox went hunting together. The Lion, on the advice of the Fox, sent a message to the Ass, proposing to make an alliance between their two families. The Ass came to the place of meeting, overjoyed at the prospect of a royal alliance. But when he came there the Lion simply pounced on the Ass, and said to the Fox: Here is our dinner for to-day. Watch you here while I go and have a nap. Woe betide you if you touch my prey. The Lion went away and the Fox waited; but finding that his master did not return, ventured to take out the brains of the Ass and ate them up. When the Lion came back he soon noticed the absence of the brains, and asked the Fox in a terrible voice: What have you done with the brains? Brains, your Majesty! it had none, or it would never have fallen into your trap.",
+    "ground_truth_moral": "Wit has always an answer ready.",
+    "summaries": {
+      "ground_truth_style": "He who trusts a known enemy lacks the wit to survive.",
+      "declarative_universal": "He who lacks discernment is easily led to his own ruin."
+    },
+    "token_usage": {
+      "ground_truth_style": {
+        "input_tokens": 305,
+        "output_tokens": 12,
+        "thinking_tokens": 2302,
+        "total_tokens": 2619
+      },
+      "declarative_universal": {
+        "input_tokens": 302,
+        "output_tokens": 12,
+        "thinking_tokens": 666,
+        "total_tokens": 980
+      }
+    },
+    "metadata": {
+      "source": "aesop",
+      "word_count_fable": 160,
+      "model": "gemini-3-flash-preview"
+    }
+  }
+]

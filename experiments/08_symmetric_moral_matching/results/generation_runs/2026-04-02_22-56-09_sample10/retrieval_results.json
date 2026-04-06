@@ -1,0 +1,47 @@
+{
+  "step0_baseline_exp07": {
+    "MRR": 0.75,
+    "MAP": 0.75,
+    "R-Precision": 0.6,
+    "Mean Rank": 1.9,
+    "Median Rank": 1.0,
+    "n_queries": 10,
+    "Recall@1": 0.6,
+    "P@1": 0.6,
+    "NDCG@1": 0.6,
+    "Recall@5": 0.9,
+    "P@5": 0.18,
+    "NDCG@5": 0.7761859507142915,
+    "Recall@10": 1.0,
+    "P@10": 0.1,
+    "NDCG@10": 0.8118066694250936,
+    "Recall@50": 1.0,
+    "P@50": 0.019999999999999997,
+    "NDCG@50": 0.8118066694250936
+  },
+  "A": {
+    "MRR": 0.6958333333333333,
+    "Recall@1": 0.5,
+    "n_queries": 10
+  },
+  "B": {
+    "MRR": 0.76,
+    "Recall@1": 0.6,
+    "n_queries": 10
+  },
+  "A_expand": {
+    "MRR": 0.7142857142857142,
+    "Recall@1": 0.5,
+    "n_queries": 10
+  },
+  "B_expand": {
+    "MRR": 0.7,
+    "Recall@1": 0.5,
+    "n_queries": 10
+  },
+  "RRF_all": {
+    "MRR": 0.7866666666666667,
+    "Recall@1": 0.7,
+    "n_queries": 10
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_morals": 10,
+  "variants": [
+    "moral_rephrase",
+    "moral_elaborate",
+    "moral_abstract"
+  ],
+  "total_input_tokens": 1988,
+  "total_output_tokens": 376,
+  "total_thinking_tokens": 48074,
+  "total_tokens": 50438
+}

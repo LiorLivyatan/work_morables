@@ -1,0 +1,12 @@
+{
+  "model": "gemini-3-flash-preview",
+  "n_fables": 10,
+  "variants": [
+    "ground_truth_style",
+    "declarative_universal"
+  ],
+  "total_input_tokens": 6152,
+  "total_output_tokens": 257,
+  "total_thinking_tokens": 28177,
+  "total_tokens": 34586
+}
