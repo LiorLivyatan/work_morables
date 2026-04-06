@@ -49,18 +49,18 @@ DEFAULT_MODEL_ID = "gemini-3-flash-preview"
 # ── System prompts ───────────────────────────────────────────────────────────
 
 SYSTEM_PROMPTS = {
-    "direct_moral": (
+    "direct_moral": (  # ✓ USED IN FULL RUN (full_709)
         "You are an expert in fables, parables, and moral philosophy. "
         "When given a fable, extract its moral lesson as a single sentence. "
         "Be as concise as possible."
     ),
-    "narrative_distillation": (
+    "narrative_distillation": (  # ✗ NOT used in full run
         "You are an expert literary analyst. When given a fable, first mentally "
         "summarize what happens in the story, then distill the core lesson into "
         "a single sentence. Focus on what the story illustrates about human nature "
         "or behavior. Be as concise as possible."
     ),
-    "conceptual_abstract": (
+    "conceptual_abstract": (  # ✓ USED IN FULL RUN (full_709)
         "You are a moral philosopher. When given a fable, reason step by step:\n"
         "1. What is the central conflict or situation?\n"
         "2. What does the outcome reveal about human nature?\n"
@@ -69,18 +69,18 @@ SYSTEM_PROMPTS = {
         "sentence on the last line. Do NOT include your reasoning in the output. "
         "Be as concise as possible."
     ),
-    "proverb": (
+    "proverb": (  # ✓ USED IN FULL RUN (full_709)
         "You are an expert in fables and proverbs. "
         "When given a fable, state its moral as a proverb or maxim. "
         "Be as concise as possible."
     ),
-    "universal_truth": (
+    "universal_truth": (  # ✗ NOT used in full run
         "You are an expert in fables and moral philosophy. "
         "When given a fable, state the moral as a universal truth about human nature. "
         "Use a declarative statement, not advice. "
         "Be as concise as possible."
     ),
-    "few_shot_proverb": (
+    "few_shot_proverb": (  # ✗ NOT used in full run
         "You are an expert in fables. When given a fable, state its moral as a short proverb.\n\n"
         "Examples:\n"
         "Fable about a tortoise beating a hare in a race -> Slow and steady wins the race.\n"
@@ -88,7 +88,7 @@ SYSTEM_PROMPTS = {
         "Fable about a boy who cried wolf and was not believed -> A liar will not be believed, even when telling the truth.\n\n"
         "Now state the moral of the following fable as a proverb. Be as concise as possible."
     ),
-    "cot_proverb": (
+    "cot_proverb": (  # ✓ USED IN FULL RUN (full_709) — best performer (Config B MRR=0.360)
         "You are an expert in fables and proverbs. When given a fable, reason step by step:\n"
         "1. What is the central conflict or situation?\n"
         "2. What does the outcome reveal about human nature?\n"
@@ -97,7 +97,7 @@ SYSTEM_PROMPTS = {
         "Output ONLY the proverb on the last line. Do NOT include your reasoning in the output. "
         "Be as concise as possible."
     ),
-    "cot_few_shot_proverb": (
+    "cot_few_shot_proverb": (  # ✗ NOT used in full run
         "You are an expert in fables and proverbs. When given a fable, reason step by step:\n"
         "1. What is the central conflict or situation?\n"
         "2. What does the outcome reveal about human nature?\n"

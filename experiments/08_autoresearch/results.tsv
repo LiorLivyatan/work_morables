@@ -1,0 +1,3 @@
+commit	MRR	R@1	R@5	R@10	status	description
+065b701	0.2098	0.1396	0.2821	0.3639	baseline	Linq-Embed-Mistral generic instruction
+73cbbea	0.1113	0.0635	0.1495	0.1918	discard	smoke-test: shorter instruction: retrieve fable that teaches lesson
