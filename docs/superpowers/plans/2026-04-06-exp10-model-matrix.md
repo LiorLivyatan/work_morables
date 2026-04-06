@@ -65,7 +65,6 @@ from lib.pipeline.paraphrase_filter import post_process, filter_paraphrases
 # ── post_process ─────────────────────────────────────────────────────────────
 
 def test_post_process_in_range_not_flagged():
-    text = "Appearances are deceptive."  # 3 words — wait, that's 3
     text = "Those who envy others invite their own misfortune."  # 8 words
     cfg = {"min_words": 5, "max_words": 15}
     result, flagged = post_process(text, cfg)
@@ -313,6 +312,7 @@ def test_local_llm_unload_clears_references():
     assert llm._model is None
     assert llm._tokenizer is None
     mock_gc.collect.assert_called_once()
+    mock_torch.mps.empty_cache.assert_called_once()
 
 
 def test_local_llm_generate_applies_chat_template_and_strips():
@@ -731,8 +731,28 @@ def generate_summaries(
 
     # Diagnostics
     summaries = [it["summary"] for it in items]
-    unique_ratio = len(set(summaries)) / len(summaries) if summaries else 1.0
+    sim_threshold = diag_cfg.get("duplicate_similarity_threshold", 0.95)
     generic_matches = []
+
+    # Near-duplicate rate via embedding similarity
+    near_dup_count = 0
+    if diag_cfg.get("enabled") and len(summaries) > 1:
+        from sentence_transformers import SentenceTransformer as _ST
+        _diag_model = _ST("BAAI/bge-m3")
+        embs = _diag_model.encode(summaries, normalize_embeddings=True)
+        import numpy as _np
+        sim_matrix = embs @ embs.T
+        for i in range(len(summaries)):
+            for j in range(i + 1, len(summaries)):
+                if sim_matrix[i, j] >= sim_threshold:
+                    near_dup_count += 1
+        del _diag_model
+        import gc as _gc, torch as _torch
+        _gc.collect(); _torch.mps.empty_cache()
+
+    unique_ratio = len(set(summaries)) / len(summaries) if summaries else 1.0
+    duplicate_rate = near_dup_count / max(len(summaries), 1)
+
     if diag_cfg.get("enabled"):
         generic_matches = [
             it["fable_id"] for it in items
@@ -744,7 +764,8 @@ def generate_summaries(
         "prompt_version": prompt_version,
         "n_fables": len(fables),
         "unique_ratio": round(unique_ratio, 4),
-        "duplicate_rate": round(1.0 - unique_ratio, 4),
+        "duplicate_rate": round(duplicate_rate, 4),
+        "near_duplicate_pairs": near_dup_count,
         "flagged_word_count": flagged_ids,
         "generic_matches": generic_matches,
     }
@@ -773,6 +794,8 @@ git commit -m "feat(pipeline): add local_corpus_generator — fable→summary wi
 
 ## Task 4: `local_query_paraphraser.py` — moral → 3 rephrases per gen model
 
+**Design note (I2 fix):** Generation and filtering are split into two functions to avoid holding the gen model and the filter model (BGE-M3) in MPS memory simultaneously. `generate_paraphrases` generates and saves raw paraphrases (no filtering). `apply_paraphrase_filter` is called afterwards, once the gen model has been unloaded.
+
 **Files:**
 - Create: `lib/pipeline/local_query_paraphraser.py`
 - Create: `tests/pipeline/test_local_query_paraphraser.py`
@@ -791,7 +814,7 @@ import pytest
 ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
-from lib.pipeline.local_query_paraphraser import generate_paraphrases
+from lib.pipeline.local_query_paraphraser import generate_paraphrases, apply_paraphrase_filter
 
 
 def _make_morals(n: int) -> list[dict]:
@@ -813,15 +836,11 @@ def _mock_llm_three_lines(lines=("r1", "r2", "r3")):
     return llm
 
 
-def test_generate_paraphrases_creates_output_file(tmp_path):
+def test_generate_paraphrases_creates_raw_output_file(tmp_path):
     gen_dir = tmp_path / "TestGen"
     gen_dir.mkdir()
-    filter_model = MagicMock()
-
-    with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM, \
-         patch("lib.pipeline.local_query_paraphraser.filter_paraphrases") as mock_filter:
+    with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM:
         MockLLM.return_value = _mock_llm_three_lines()
-        mock_filter.return_value = (["r1", "r2", "r3"], [])
         generate_paraphrases(
             model_cfg=_model_cfg(),
             moral_entries=_make_moral_entries(2),
@@ -829,21 +848,18 @@ def test_generate_paraphrases_creates_output_file(tmp_path):
             prompt="Rephrase this moral.",
             prompt_version="v1",
             post_cfg={"min_words": 5, "max_words": 15},
-            filter_cfg={"min_similarity": 0.85},
-            filter_model=filter_model,
             gen_model_dir=gen_dir,
         )
-    assert (gen_dir / "query_paraphrases.json").exists()
+    assert (gen_dir / "query_paraphrases_raw.json").exists()
 
 
-def test_generate_paraphrases_json_schema(tmp_path):
+def test_generate_paraphrases_raw_json_schema(tmp_path):
     gen_dir = tmp_path / "TestGen"
     gen_dir.mkdir()
-
-    with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM, \
-         patch("lib.pipeline.local_query_paraphraser.filter_paraphrases") as mock_filter:
-        MockLLM.return_value = _mock_llm_three_lines(("those who envy suffer", "envy invites ruin", "envious hearts find only pain"))
-        mock_filter.return_value = (["those who envy suffer", "envy invites ruin", "envious hearts find only pain"], [])
+    with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM:
+        MockLLM.return_value = _mock_llm_three_lines(
+            ("those who envy suffer", "envy invites ruin", "envious hearts find only pain")
+        )
         generate_paraphrases(
             model_cfg=_model_cfg(),
             moral_entries=_make_moral_entries(1),
@@ -851,11 +867,9 @@ def test_generate_paraphrases_json_schema(tmp_path):
             prompt="Rephrase.",
             prompt_version="v1",
             post_cfg={"min_words": 5, "max_words": 15},
-            filter_cfg={"min_similarity": 0.85},
-            filter_model=MagicMock(),
             gen_model_dir=gen_dir,
         )
-    with open(gen_dir / "query_paraphrases.json") as f:
+    with open(gen_dir / "query_paraphrases_raw.json") as f:
         data = json.load(f)
     assert data["prompt_version"] == "v1"
     assert len(data["items"]) == 1
@@ -863,7 +877,6 @@ def test_generate_paraphrases_json_schema(tmp_path):
     assert "moral_idx" in item
     assert "original_moral" in item
     assert "paraphrases" in item
-    assert "dropped_paraphrases" in item
     assert len(item["paraphrases"]) == 3
 
 
@@ -871,9 +884,9 @@ def test_generate_paraphrases_skips_when_cached_and_version_matches(tmp_path):
     gen_dir = tmp_path / "TestGen"
     gen_dir.mkdir()
     existing = {"prompt_version": "v1", "items": [
-        {"moral_idx": 0, "original_moral": "m0", "paraphrases": ["r1"], "dropped_paraphrases": []}
+        {"moral_idx": 0, "original_moral": "m0", "paraphrases": ["r1", "r2", "r3"]}
     ]}
-    with open(gen_dir / "query_paraphrases.json", "w") as f:
+    with open(gen_dir / "query_paraphrases_raw.json", "w") as f:
         json.dump(existing, f)
 
     with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM:
@@ -884,43 +897,60 @@ def test_generate_paraphrases_skips_when_cached_and_version_matches(tmp_path):
             prompt="Rephrase.",
             prompt_version="v1",
             post_cfg={"min_words": 5, "max_words": 15},
-            filter_cfg={"min_similarity": 0.85},
-            filter_model=MagicMock(),
             gen_model_dir=gen_dir,
             force=False,
         )
         MockLLM.assert_not_called()
 
 
-def test_generate_paraphrases_parses_three_lines():
-    """generate() returns 3 newline-separated lines → 3 paraphrases."""
-    import tempfile
-    with tempfile.TemporaryDirectory() as td:
-        gen_dir = Path(td) / "TestGen"
-        gen_dir.mkdir()
-        captured = []
+def test_generate_paraphrases_parses_three_lines(tmp_path):
+    """generate() returns 3 newline-separated lines → 3 paraphrases saved."""
+    gen_dir = tmp_path / "TestGen"
+    gen_dir.mkdir()
+    with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM:
+        MockLLM.return_value = _mock_llm_three_lines(
+            ("first rephrasing here", "second version stated", "third distinct expression")
+        )
+        generate_paraphrases(
+            model_cfg=_model_cfg(),
+            moral_entries=[(0, 0)],
+            morals=[{"text": "original moral text here."}],
+            prompt="Rephrase.",
+            prompt_version="v1",
+            post_cfg={"min_words": 5, "max_words": 15},
+            gen_model_dir=gen_dir,
+        )
+    with open(gen_dir / "query_paraphrases_raw.json") as f:
+        data = json.load(f)
+    assert data["items"][0]["paraphrases"] == [
+        "first rephrasing here", "second version stated", "third distinct expression"
+    ]
 
-        def fake_filter(paraphrases, original, filter_cfg, filter_model):
-            captured.extend(paraphrases)
-            return paraphrases, []
 
-        with patch("lib.pipeline.local_query_paraphraser.LocalLLM") as MockLLM, \
-             patch("lib.pipeline.local_query_paraphraser.filter_paraphrases", side_effect=fake_filter):
-            MockLLM.return_value = _mock_llm_three_lines(
-                ("first rephrasing here", "second version stated", "third distinct expression")
-            )
-            generate_paraphrases(
-                model_cfg=_model_cfg(),
-                moral_entries=[(0, 0)],
-                morals=[{"text": "original moral text here."}],
-                prompt="Rephrase.",
-                prompt_version="v1",
-                post_cfg={"min_words": 5, "max_words": 15},
-                filter_cfg={"min_similarity": 0.85},
-                filter_model=MagicMock(),
-                gen_model_dir=gen_dir,
-            )
-        assert captured == ["first rephrasing here", "second version stated", "third distinct expression"]
+def test_apply_paraphrase_filter_writes_filtered_file(tmp_path):
+    gen_dir = tmp_path / "TestGen"
+    gen_dir.mkdir()
+    raw = {"prompt_version": "v1", "items": [
+        {"moral_idx": 0, "original_moral": "envious hearts suffer greatly in silence",
+         "paraphrases": ["good rephrase one two three four", "bad", "another good rephrase here"]}
+    ]}
+    with open(gen_dir / "query_paraphrases_raw.json", "w") as f:
+        json.dump(raw, f)
+
+    with patch("lib.pipeline.local_query_paraphraser.filter_paraphrases") as mock_filter:
+        mock_filter.return_value = (["good rephrase one two three four", "another good rephrase here"], ["bad"])
+        apply_paraphrase_filter(
+            gen_model_dir=gen_dir,
+            filter_cfg={"min_similarity": 0.85},
+            filter_model=MagicMock(),
+        )
+
+    assert (gen_dir / "query_paraphrases.json").exists()
+    with open(gen_dir / "query_paraphrases.json") as f:
+        data = json.load(f)
+    item = data["items"][0]
+    assert item["paraphrases"] == ["good rephrase one two three four", "another good rephrase here"]
+    assert item["dropped_paraphrases"] == ["bad"]
 ```
 
 - [ ] **Step 2: Run tests to confirm failure**
@@ -934,7 +964,12 @@ Expected: `ModuleNotFoundError: No module named 'lib.pipeline.local_query_paraph
 
 ```python
 # lib/pipeline/local_query_paraphraser.py
-"""lib/pipeline/local_query_paraphraser.py — Generate 3 filtered rephrases per moral using a local LLM."""
+"""lib/pipeline/local_query_paraphraser.py — Generate and filter rephrases per moral using a local LLM.
+
+Two-phase design to avoid MPS OOM:
+  Phase 1 (generate_paraphrases): gen model loaded → raw paraphrases written → gen model unloaded.
+  Phase 2 (apply_paraphrase_filter): filter model loaded → similarity filter applied → filter model unloaded.
+"""
 from __future__ import annotations
 import json
 from pathlib import Path
@@ -942,7 +977,8 @@ from pathlib import Path
 from lib.pipeline.local_llm import LocalLLM
 from lib.pipeline.paraphrase_filter import filter_paraphrases, post_process
 
-_OUTPUT_FILE = "query_paraphrases.json"
+_RAW_FILE = "query_paraphrases_raw.json"
+_FILTERED_FILE = "query_paraphrases.json"
 _USER_TEMPLATE = "Moral: {text}"
 
 
@@ -953,34 +989,21 @@ def generate_paraphrases(
     prompt: str,
     prompt_version: str,
     post_cfg: dict,
-    filter_cfg: dict,
-    filter_model,
     gen_model_dir: Path,
     force: bool = False,
 ) -> Path:
     """
-    Generate 3 filtered rephrases per moral for one generation model.
+    Generate 3 raw rephrases per moral. Does NOT apply similarity filtering.
+    Call apply_paraphrase_filter() separately after unloading the gen model.
 
-    Cache contract: skip if query_paraphrases.json exists AND prompt_version matches,
+    Cache contract: skip if query_paraphrases_raw.json exists AND prompt_version matches,
     unless force=True.
 
-    Args:
-        model_cfg:     Generation model config.
-        moral_entries: List of (moral_idx, fable_idx) tuples.
-        morals:        Full morals list from load_morals().
-        prompt:        System prompt for paraphrasing.
-        prompt_version: Version string for cache busting.
-        post_cfg:      Word-count config.
-        filter_cfg:    Paraphrase filter config (min_similarity).
-        filter_model:  Pre-loaded SentenceTransformer for similarity filtering.
-        gen_model_dir: Directory for this model's cached outputs.
-        force:         Re-generate even if cache exists.
-
     Returns:
-        Path to written query_paraphrases.json.
+        Path to written query_paraphrases_raw.json.
     """
     gen_model_dir = Path(gen_model_dir)
-    output_path = gen_model_dir / _OUTPUT_FILE
+    output_path = gen_model_dir / _RAW_FILE
 
     if output_path.exists() and not force:
         with open(output_path) as f:
@@ -994,32 +1017,24 @@ def generate_paraphrases(
     llm.load()
 
     items = []
-    total_dropped = 0
-
     for moral_idx, fable_idx in moral_entries:
         original = morals[moral_idx]["text"]
         user_prompt = _USER_TEMPLATE.format(text=original)
         raw_output = llm.generate(prompt, user_prompt)
 
-        # Parse 3 newline-separated lines (no numbering expected)
         raw_lines = [line.strip() for line in raw_output.splitlines() if line.strip()]
-        # Post-process each line for word count
         processed = []
         for line in raw_lines[:3]:
             text, _ = post_process(line, post_cfg)
             processed.append(text)
 
-        passed, dropped = filter_paraphrases(processed, original, filter_cfg, filter_model)
-        total_dropped += len(dropped)
-
         items.append({
             "moral_idx": moral_idx,
             "fable_idx": fable_idx,
             "original_moral": original,
-            "paraphrases": passed,
-            "dropped_paraphrases": dropped,
+            "paraphrases": processed,
         })
-        print(f"    moral_{moral_idx:03d}: {len(passed)} kept, {len(dropped)} dropped")
+        print(f"    moral_{moral_idx:03d}: {len(processed)} raw paraphrases")
 
     llm.unload()
 
@@ -1027,8 +1042,60 @@ def generate_paraphrases(
     with open(output_path, "w") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)
 
-    print(f"\n  Saved {len(items)} morals → {output_path}  (total dropped: {total_dropped})")
+    print(f"\n  Saved {len(items)} raw paraphrases → {output_path}")
     return output_path
+
+
+def apply_paraphrase_filter(
+    gen_model_dir: Path,
+    filter_cfg: dict,
+    filter_model,
+    force: bool = False,
+) -> Path:
+    """
+    Read query_paraphrases_raw.json, apply similarity filter, write query_paraphrases.json.
+
+    Call AFTER the gen model has been unloaded to avoid MPS OOM.
+
+    Args:
+        gen_model_dir: Directory containing query_paraphrases_raw.json.
+        filter_cfg:    Dict with key 'min_similarity'.
+        filter_model:  Pre-loaded SentenceTransformer (e.g. BGE-M3).
+        force:         Re-filter even if query_paraphrases.json already exists.
+
+    Returns:
+        Path to written query_paraphrases.json.
+    """
+    gen_model_dir = Path(gen_model_dir)
+    raw_path = gen_model_dir / _RAW_FILE
+    out_path = gen_model_dir / _FILTERED_FILE
+
+    if out_path.exists() and not force:
+        print(f"  [skip] {out_path} already exists")
+        return out_path
+
+    with open(raw_path) as f:
+        raw_data = json.load(f)
+
+    total_dropped = 0
+    filtered_items = []
+    for item in raw_data["items"]:
+        original = item["original_moral"]
+        passed, dropped = filter_paraphrases(item["paraphrases"], original, filter_cfg, filter_model)
+        total_dropped += len(dropped)
+        filtered_items.append({
+            **item,
+            "paraphrases": passed,
+            "dropped_paraphrases": dropped,
+        })
+        print(f"    moral_{item['moral_idx']:03d}: {len(passed)} kept, {len(dropped)} dropped")
+
+    output = {**raw_data, "items": filtered_items}
+    with open(out_path, "w") as f:
+        json.dump(output, f, indent=2, ensure_ascii=False)
+
+    print(f"\n  Saved filtered paraphrases → {out_path}  (total dropped: {total_dropped})")
+    return out_path
 ```
 
 - [ ] **Step 4: Run tests to confirm pass**
@@ -1036,13 +1103,13 @@ def generate_paraphrases(
 ```bash
 python -m pytest tests/pipeline/test_local_query_paraphraser.py -v
 ```
-Expected: all 4 tests PASS.
+Expected: all 5 tests PASS.
 
 - [ ] **Step 5: Commit**
 
 ```bash
 git add lib/pipeline/local_query_paraphraser.py tests/pipeline/test_local_query_paraphraser.py
-git commit -m "feat(pipeline): add local_query_paraphraser — 3 rephrases with filter + generation cache"
+git commit -m "feat(pipeline): add local_query_paraphraser — two-phase gen+filter to avoid MPS OOM"
 ```
 
 ---
@@ -1137,10 +1204,12 @@ def test_run_single_eval_paraphrase_mode_uses_max_score(tmp_path):
 
 
 def test_run_single_eval_idempotent(tmp_path):
-    """Skips computation if output_path already exists and force=False."""
+    """Skips computation if output_path already exists and force=False. Returns nested metrics."""
     output_path = tmp_path / "result.json"
     preds_path = tmp_path / "preds.json"
-    existing = {"Recall@1": 1.0, "MRR": 1.0}
+    # On-disk format uses nested metrics key (C1/C2 fix)
+    existing = {"gen_model": "G", "embed_model": "E", "ablation": "full",
+                "n_queries": 1, "metrics": {"Recall@1": 1.0, "MRR": 1.0}}
     with open(output_path, "w") as f:
         json.dump(existing, f)
 
@@ -1156,7 +1225,7 @@ def test_run_single_eval_idempotent(tmp_path):
             force=False,
         )
     mock_load.assert_not_called()
-    assert result["Recall@1"] == 1.0
+    assert result["Recall@1"] == 1.0  # returns data["metrics"] — the nested dict
 ```
 
 - [ ] **Step 2: Run tests to confirm failure**
@@ -1168,7 +1237,7 @@ Expected: `ImportError: cannot import name 'run_single_eval'`
 
 - [ ] **Step 3: Add `run_single_eval()` to `retrieval_eval.py`**
 
-Add this function at the bottom of `lib/pipeline/retrieval_eval.py` (before the last line):
+Add this function at the bottom of `lib/pipeline/retrieval_eval.py`:
 
 ```python
 def run_single_eval(
@@ -1179,21 +1248,29 @@ def run_single_eval(
     cache_dir: Path,
     output_path: Path,
     predictions_path: Path,
+    metadata: Optional[dict] = None,
     force: bool = False,
 ) -> dict:
     """
     Evaluate one (gen_model, embed_model, ablation) combination.
 
+    On-disk format (output_path):
+        {**metadata, "n_queries": N, "metrics": {"Recall@1": ..., "Recall@5": ..., "MRR": ...}}
+
+    Cache-hit path returns data["metrics"] (the nested dict), never the full envelope.
+
     Args:
         corpus_texts:      n_fables texts (raw fable or gen model summary).
         query_texts_list:  n_queries lists; each sublist is [original] or
                            [original, rephrase_1, rephrase_2, ...].
-                           Multiple texts → max-score fusion.
+                           Multiple texts per query → max-score fusion.
         ground_truth:      {query_idx: fable_idx}.
         embed_model_cfg:   Dict with keys: id, alias, query_instruction.
         cache_dir:         Embedding cache directory.
-        output_path:       Where to write metrics JSON.
+        output_path:       Where to write result JSON.
         predictions_path:  Where to write per-query predictions JSON.
+        metadata:          Optional dict merged into the output envelope
+                           (e.g. gen_model, embed_model, ablation keys).
         force:             Re-run even if output_path exists.
 
     Returns:
@@ -1205,12 +1282,14 @@ def run_single_eval(
 
     if output_path.exists() and not force:
         with open(output_path) as f:
-            return json.load(f)
+            data = json.load(f)
+        return data["metrics"]   # always return nested metrics, never the envelope
 
     embed_model_id = embed_model_cfg["id"]
     embed_alias = embed_model_cfg.get("alias", embed_model_id)
     query_instruction = embed_model_cfg.get("query_instruction", "")
     n_fables = len(corpus_texts)
+    n_queries = len(query_texts_list)
 
     model, _ = _load_model(embed_model_id)
 
@@ -1219,23 +1298,29 @@ def run_single_eval(
         cache_dir=cache_dir, query_instruction=None, label=f"corpus:{embed_alias}",
     )
 
-    # Build per-query score vectors via max-score fusion when multiple texts
-    n_queries = len(query_texts_list)
+    # Batched max-score fusion (I1 fix: one encode call per text position, not per query).
+    # For raw/summary modes all queries have 1 text; for paraphrase modes up to 4.
+    max_texts = max(len(qts) for qts in query_texts_list)
     score_matrix = np.zeros((n_queries, n_fables), dtype=np.float32)
 
-    for q_idx, query_texts in enumerate(query_texts_list):
-        q_embs = encode_with_cache(
-            model=model, texts=query_texts, model_id=embed_alias,
+    for pos in range(max_texts):
+        # Pad queries with fewer texts by repeating their first text (original moral).
+        batch = [qts[pos] if pos < len(qts) else qts[0] for qts in query_texts_list]
+        pos_embs = encode_with_cache(
+            model=model, texts=batch, model_id=embed_alias,
             cache_dir=cache_dir, query_instruction=query_instruction,
-            label=f"query:{embed_alias}",
+            label=f"queries_pos{pos}:{embed_alias}",
         )
-        scores_per_text = q_embs @ corpus_embs.T  # (n_texts, n_fables)
-        score_matrix[q_idx] = scores_per_text.max(axis=0)
+        scores = pos_embs @ corpus_embs.T  # (n_queries, n_fables)
+        score_matrix = np.maximum(score_matrix, scores)
 
     metrics = compute_metrics_from_matrix(score_matrix, ground_truth)
+
+    # Write envelope: metadata + n_queries + nested metrics
     output_path.parent.mkdir(parents=True, exist_ok=True)
+    envelope = {**(metadata or {}), "n_queries": n_queries, "metrics": metrics}
     with open(output_path, "w") as f:
-        json.dump(metrics, f, indent=2)
+        json.dump(envelope, f, indent=2)
 
     # Write predictions
     rankings_data = compute_rankings_from_matrix(score_matrix, top_k=n_fables)
@@ -1253,9 +1338,14 @@ def run_single_eval(
         })
     predictions_path.parent.mkdir(parents=True, exist_ok=True)
     with open(predictions_path, "w") as f:
-        json.dump({"embed_model": embed_alias, "top_k": n_fables, "queries": pred_records}, f)
+        json.dump({**(metadata or {}), "top_k": n_fables, "queries": pred_records}, f)
 
     return metrics
+```
+
+Also add `Optional` to the imports at the top of `retrieval_eval.py`:
+```python
+from typing import Optional
 ```
 
 - [ ] **Step 4: Run all retrieval_eval tests**
@@ -1338,6 +1428,10 @@ def test_aggregate_matrix_structure(tmp_path):
     assert set(matrix["cols"]) == {"EmbedX", "EmbedY"}
     assert len(matrix["values"]) == 2
     assert len(matrix["values"][0]) == 2
+    # Verify correct values appear at the right cell positions
+    gen_idx = matrix["rows"].index("GenA")
+    emb_idx = matrix["cols"].index("EmbedX")
+    assert matrix["values"][gen_idx][emb_idx] == pytest.approx(0.80)
 
 
 def test_aggregate_rankings_best_pair(tmp_path):
@@ -1425,14 +1519,12 @@ def aggregate(retrieval_results_dir: Path, run_dir: Path) -> None:
     gen_models = sorted({r["gen_model"] for r in results})
     embed_models = sorted({r["embed_model"] for r in results})
     ablations = sorted({r["ablation"] for r in results})
-    metrics_keys = ["Recall@1", "MRR"]
+    metrics_keys = ["Recall@1", "Recall@5", "MRR"]
 
     # Build matrix per ablation per metric
     # matrix[ablation][metric] = {"rows": [...], "cols": [...], "values": [[...]]}
     summary: dict = {}
     for ablation in ablations:
-        abl_results = {r["gen_model"]: {r["embed_model"]: r} for r in results if r["ablation"] == ablation}
-        # rebuild as dict[gen][embed] = r
         lookup: dict[str, dict[str, dict]] = defaultdict(dict)
         for r in results:
             if r["ablation"] == ablation:
@@ -1597,6 +1689,7 @@ def test_run_matrix_experiment_creates_run_dir(tmp_path):
                return_value={0: 0, 1: 1}), \
          patch("lib.pipeline.matrix_runner.generate_summaries") as mock_gs, \
          patch("lib.pipeline.matrix_runner.generate_paraphrases") as mock_gp, \
+         patch("lib.pipeline.matrix_runner.apply_paraphrase_filter") as mock_apf, \
          patch("lib.pipeline.matrix_runner.run_single_eval") as mock_eval, \
          patch("lib.pipeline.matrix_runner.aggregate") as mock_agg, \
          patch("lib.pipeline.matrix_runner.SentenceTransformer") as mock_st, \
@@ -1606,19 +1699,10 @@ def test_run_matrix_experiment_creates_run_dir(tmp_path):
         mock_gp.return_value = MagicMock()
         mock_eval.return_value = {"Recall@1": 0.5, "Recall@5": 0.8, "MRR": 0.6}
 
-        # Simulate corpus_summaries.json written by generate_summaries
-        run_dir_holder = [None]
-        original_make = __import__("lib.pipeline.run_utils", fromlist=["make_run_dir"]).make_run_dir
-        def capture_run_dir(base, tag=""):
-            rd = original_make(base, tag)
-            run_dir_holder[0] = rd
-            return rd
-
-        with patch("lib.pipeline.matrix_runner.make_run_dir", side_effect=capture_run_dir):
-            run_matrix_experiment(
-                config_path=config_path,
-                run_dir=tmp_path / "run",
-            )
+        run_matrix_experiment(
+            config_path=config_path,
+            run_dir=tmp_path / "run",
+        )
 
     assert (tmp_path / "run").exists()
 
@@ -1636,6 +1720,7 @@ def test_run_matrix_experiment_calls_generate_summaries_once_per_gen_model(tmp_p
                return_value={0: 0, 1: 1}), \
          patch("lib.pipeline.matrix_runner.generate_summaries") as mock_gs, \
          patch("lib.pipeline.matrix_runner.generate_paraphrases") as mock_gp, \
+         patch("lib.pipeline.matrix_runner.apply_paraphrase_filter"), \
          patch("lib.pipeline.matrix_runner.run_single_eval",
                return_value={"Recall@1": 0.5, "Recall@5": 0.8, "MRR": 0.6}), \
          patch("lib.pipeline.matrix_runner.aggregate"), \
@@ -1688,6 +1773,7 @@ def test_run_matrix_experiment_calls_run_single_eval_for_each_combo(tmp_path):
                return_value={0: 0, 1: 1}), \
          patch("lib.pipeline.matrix_runner.generate_summaries") as mock_gs, \
          patch("lib.pipeline.matrix_runner.generate_paraphrases") as mock_gp, \
+         patch("lib.pipeline.matrix_runner.apply_paraphrase_filter"), \
          patch("lib.pipeline.matrix_runner.run_single_eval") as mock_eval, \
          patch("lib.pipeline.matrix_runner.aggregate"), \
          patch("lib.pipeline.matrix_runner.SentenceTransformer"), \
@@ -1716,31 +1802,23 @@ Expected: `ModuleNotFoundError: No module named 'lib.pipeline.matrix_runner'`
 # lib/pipeline/matrix_runner.py
 """lib/pipeline/matrix_runner.py — N×M orchestrator for local model matrix experiments."""
 from __future__ import annotations
+import gc
 import json
 from pathlib import Path
 from typing import Optional
 
+import torch
 import yaml
 from sentence_transformers import SentenceTransformer
 
+from lib.pipeline import _deep_merge
 from lib.pipeline.local_corpus_generator import generate_summaries
-from lib.pipeline.local_query_paraphraser import generate_paraphrases
+from lib.pipeline.local_query_paraphraser import generate_paraphrases, apply_paraphrase_filter
 from lib.pipeline.retrieval_eval import run_single_eval
 from lib.pipeline.matrix_aggregator import aggregate
 from lib.pipeline.run_utils import load_env, make_run_dir, write_manifest
 
 _DEFAULT_CONFIG_PATH = Path(__file__).parent / "default_config.yaml"
-
-
-def _deep_merge(base: dict, override: dict) -> dict:
-    import copy
-    result = copy.deepcopy(base)
-    for key, val in override.items():
-        if key in result and isinstance(result[key], dict) and isinstance(val, dict):
-            result[key] = _deep_merge(result[key], val)
-        else:
-            result[key] = copy.deepcopy(val)
-    return result
 
 
 def run_matrix_experiment(
@@ -1829,16 +1907,14 @@ def run_matrix_experiment(
     diag_cfg = config.get("summary_diagnostics", {})
     prompt_version = config.get("prompt_version", "v1")
 
-    # ── Stage 1: Local generation (per gen model) ─────────────────────────────
-    # Load filter model once for all paraphrase filtering
-    filter_model = None
-    if steps.get("generate_paraphrases", True) and filter_cfg.get("enabled", True):
-        filter_model_id = filter_cfg.get("filter_model", "BAAI/bge-m3")
-        print(f"\n  Loading filter model: {filter_model_id}")
-        filter_model = SentenceTransformer(filter_model_id)
+    # ── Stage 1: Local generation (per gen model) ────────────────────────────
+    # Two sub-phases to avoid MPS OOM: gen model and filter model never coexist.
+    #   Phase 1a: for each gen model → summaries + raw paraphrases → unload gen model
+    #   Phase 1b: load filter model → filter all gen models' paraphrases → unload filter model
 
     gen_cache_paths: dict[str, dict] = {}  # alias → {summaries_path, paraphrases_path}
 
+    # Phase 1a: generation
     for gen_cfg in config.get("generation_models", []):
         alias = gen_cfg["alias"]
         model_dir = gen_cache_dir / alias
@@ -1846,7 +1922,7 @@ def run_matrix_experiment(
 
         if steps.get("generate_summaries", True):
             print(f"\n── Summaries: {alias} ──────────────────────────────────")
-            summaries_path = generate_summaries(
+            generate_summaries(
                 model_cfg=gen_cfg,
                 fables=fables,
                 prompt=config["summarization_prompt"],
@@ -1856,34 +1932,42 @@ def run_matrix_experiment(
                 gen_model_dir=model_dir,
                 force=force,
             )
-        else:
-            summaries_path = model_dir / "corpus_summaries.json"
 
         if steps.get("generate_paraphrases", True):
-            print(f"\n── Paraphrases: {alias} ────────────────────────────────")
-            paraphrases_path = generate_paraphrases(
+            print(f"\n── Raw paraphrases: {alias} ─────────────────────────────")
+            generate_paraphrases(
                 model_cfg=gen_cfg,
                 moral_entries=moral_entries,
                 morals=morals,
                 prompt=config["paraphrase_prompt"],
                 prompt_version=prompt_version,
                 post_cfg=post_cfg,
-                filter_cfg=filter_cfg,
-                filter_model=filter_model,
                 gen_model_dir=model_dir,
                 force=force,
             )
-        else:
-            paraphrases_path = model_dir / "query_paraphrases.json"
 
         gen_cache_paths[alias] = {
-            "summaries": summaries_path,
-            "paraphrases": paraphrases_path,
+            "summaries": model_dir / "corpus_summaries.json",
+            "paraphrases": model_dir / "query_paraphrases.json",
         }
 
-    # Unload filter model before embedding stage
-    if filter_model is not None:
+    # Phase 1b: paraphrase filtering (filter model loaded after all gen models unloaded)
+    if steps.get("generate_paraphrases", True) and filter_cfg.get("enabled", True):
+        filter_model_id = filter_cfg.get("filter_model", "BAAI/bge-m3")
+        print(f"\n── Paraphrase filtering (filter model: {filter_model_id}) ──")
+        filter_model = SentenceTransformer(filter_model_id)
+        for gen_cfg in config.get("generation_models", []):
+            alias = gen_cfg["alias"]
+            model_dir = gen_cache_dir / alias
+            apply_paraphrase_filter(
+                gen_model_dir=model_dir,
+                filter_cfg=filter_cfg,
+                filter_model=filter_model,
+                force=force,
+            )
         del filter_model
+        gc.collect()
+        torch.mps.empty_cache()
 
     write_manifest(run_dir, "generation", config)
 
@@ -1900,17 +1984,15 @@ def run_matrix_experiment(
                 gen_alias = gen_cfg["alias"]
                 paths = gen_cache_paths.get(gen_alias, {})
 
-                # Load cached generation outputs
-                summaries_path = paths.get("summaries")
-                paraphrases_path = paths.get("paraphrases")
-
                 corpus_summaries = None
+                summaries_path = paths.get("summaries")
                 if summaries_path and Path(summaries_path).exists():
                     with open(summaries_path) as f:
                         raw = json.load(f)
                     corpus_summaries = {item["fable_id"]: item["summary"] for item in raw["items"]}
 
                 paraphrase_lookup = None
+                paraphrases_path = paths.get("paraphrases")
                 if paraphrases_path and Path(paraphrases_path).exists():
                     with open(paraphrases_path) as f:
                         raw = json.load(f)
@@ -1921,19 +2003,16 @@ def run_matrix_experiment(
                     use_summary = ablation.get("corpus") == "summary"
                     use_paraphrases = ablation.get("query") == "paraphrases"
 
-                    # Build corpus texts
-                    if use_summary and corpus_summaries:
-                        corpus_texts = [corpus_summaries.get(f["doc_id"], f["text"]) for f in fables]
-                    else:
-                        corpus_texts = fable_texts
+                    corpus_texts = (
+                        [corpus_summaries.get(f["doc_id"], f["text"]) for f in fables]
+                        if use_summary and corpus_summaries else fable_texts
+                    )
 
-                    # Build query texts list
-                    moral_entries_list = moral_entries
                     if use_paraphrases and paraphrase_lookup:
-                        query_texts_list = []
-                        for i, (m_idx, _) in enumerate(moral_entries_list):
-                            rephrases = paraphrase_lookup.get(m_idx, [])
-                            query_texts_list.append([moral_texts[i]] + rephrases)
+                        query_texts_list = [
+                            [moral_texts[i]] + paraphrase_lookup.get(m_idx, [])
+                            for i, (m_idx, _) in enumerate(moral_entries)
+                        ]
                     else:
                         query_texts_list = [[t] for t in moral_texts]
 
@@ -1942,6 +2021,8 @@ def run_matrix_experiment(
                     preds_path = predictions_dir / f"{combo}.json"
 
                     print(f"\n    {combo}")
+                    # Pass metadata so run_single_eval writes the full envelope in one step (C1/C2 fix)
+                    metadata = {"gen_model": gen_alias, "embed_model": emb_alias, "ablation": abl_name}
                     metrics = run_single_eval(
                         corpus_texts=corpus_texts,
                         query_texts_list=query_texts_list,
@@ -1950,17 +2031,9 @@ def run_matrix_experiment(
                         cache_dir=embedding_cache_dir,
                         output_path=output_path,
                         predictions_path=preds_path,
+                        metadata=metadata,
                         force=force,
                     )
-
-                    # Patch gen/embed model info into result file for aggregator
-                    with open(output_path) as f:
-                        result = json.load(f)
-                    result.update({"gen_model": gen_alias, "embed_model": emb_alias,
-                                   "ablation": abl_name, "metrics": metrics})
-                    with open(output_path, "w") as f:
-                        json.dump(result, f, indent=2)
-
                     print(f"    R@1={metrics.get('Recall@1', 0):.3f}  MRR={metrics.get('MRR', 0):.4f}")
 
         write_manifest(run_dir, "retrieval_eval", config)
@@ -1968,6 +2041,7 @@ def run_matrix_experiment(
     # ── Stage 3: Aggregate ────────────────────────────────────────────────────
     print(f"\n── Stage 3: Aggregation ────────────────────────────────")
     aggregate(results_dir, run_dir)
+    write_manifest(run_dir, "aggregation", config)
 
     print(f"\n  Done. Results in {run_dir}")
 ```
