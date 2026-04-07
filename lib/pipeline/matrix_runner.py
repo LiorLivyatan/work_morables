@@ -145,11 +145,14 @@ def _run_matrix_retrieval(
                 cache_dir=em_cache, query_instruction=None, label=f"{ga}_summaries"
             )
 
-            # Rephrased queries (+ original) — use all raw paraphrases, encode in one GPU call.
+            # Rephrased queries (+ original) — use kept_paraphrases (quality-filtered).
+            # If all paraphrases were dropped for a moral, fall back to original only
+            # (same behaviour as exp08: missing variant → repeat original, no harm).
             flat_query_texts: list[str] = []
             query_slices: list[tuple[int, int]] = []
             for item in gen_queries[ga]:
-                texts = [item["original_moral"]] + item["raw_paraphrases"]
+                kept = item.get("kept_paraphrases") or []
+                texts = [item["original_moral"]] + kept
                 start = len(flat_query_texts)
                 flat_query_texts.extend(texts)
                 query_slices.append((start, start + len(texts)))
