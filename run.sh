@@ -32,8 +32,8 @@ PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
 ssh_run()     { sshpass -p "$GPU_PASSWORD" ssh    $SSH_OPTS      "$GPU_USER@$GPU_HOST" "$@"; }
 ssh_run_tty() { sshpass -p "$GPU_PASSWORD" ssh -t $SSH_OPTS      "$GPU_USER@$GPU_HOST" "$@"; }
-rsync_to()    { sshpass -p "$GPU_PASSWORD" rsync  -az --info=progress2 -e "ssh $SSH_OPTS" "$@"; }
-rsync_from()  { sshpass -p "$GPU_PASSWORD" rsync  -az --info=progress2 -e "ssh $SSH_OPTS" "$@"; }
+rsync_to()    { sshpass -p "$GPU_PASSWORD" rsync  -az --progress -e "ssh $SSH_OPTS" "$@"; }
+rsync_from()  { sshpass -p "$GPU_PASSWORD" rsync  -az --progress -e "ssh $SSH_OPTS" "$@"; }
 
 # ── Parse subcommand or script ────────────────────────────────
 SUBCMD=""
@@ -209,6 +209,7 @@ export PATH="\$HOME/.local/bin:\$PATH"
 export WANDB_API_KEY="${WANDB_KEY}"
 export TG_BOT_TOKEN="${TG_TOKEN}"
 export TG_CHAT_ID="${TG_CHAT}"
+export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 cd ${REMOTE_DIR}
 
 CUDA_VISIBLE_DEVICES=${GPU} uv run python ${SCRIPT} ${ARGS_STR} 2>&1 | tee ${LOG}

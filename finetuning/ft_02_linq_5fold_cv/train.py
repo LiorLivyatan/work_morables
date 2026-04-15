@@ -44,6 +44,7 @@ EXP_DIR = Path(__file__).parent
 ROOT = EXP_DIR.parent.parent
 sys.path.insert(0, str(ROOT))
 
+from finetuning.lib import notify
 from finetuning.lib.data import load_pairs
 from finetuning.lib.eval import evaluate
 from finetuning.lib.trainer import train_model
@@ -137,6 +138,15 @@ def run_fold(
         })
         wandb.finish()
 
+    # Explicitly free GPU memory before the next fold loads a fresh 7B model.
+    # Without this, the 3090's 24GB fills up and the next fold crashes with OOM.
+    import gc
+    import torch
+    del model
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+
     return metrics
 
 
@@ -173,6 +183,13 @@ def main() -> None:
         f"LoRA r={lora_r}  "
         f"early_stop={config.get('early_stopping_patience', 'off')}  "
         f"wandb={'on' if use_wandb else 'off'}"
+    )
+
+    notify.send(
+        f"🚀 ft_02_linq_5fold_cv starting\n"
+        f"model: {config['model_name']}\n"
+        f"doc_mode: {config['doc_mode']}  epochs: {config['epochs']}  LoRA r={lora_r}\n"
+        f"folds: {[args.fold] if args.fold is not None else 'all 5'}"
     )
 
     moral_texts, doc_texts, ground_truth = load_pairs(config["doc_mode"])
