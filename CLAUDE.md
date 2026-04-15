@@ -30,6 +30,7 @@ All training and evaluation scripts MUST be run via `run.sh`, never with `python
 ### Pause & Resume
 
 Training checkpoints are saved after every epoch. To pause:
+
 1. `./run.sh pause --gpu N` — sends interrupt; training stops after the current epoch
 2. Re-run the same `./run.sh ... --remote` command to resume automatically from the last checkpoint
 
@@ -77,23 +78,26 @@ Keep Python scripts **pure** — no remote/local routing logic inside them. They
 **Cloud storage** (`/home/storage/$USER` or `~/gpufs`): long-term storage. Request access in the lab WhatsApp group if not set up.
 
 ### Check storage before every training run
+
 ```bash
 ./run.sh status                                      # shows GPU availability
 ssh server "df -h ~ && df -h /home/storage 2>/dev/null"  # physical + cloud free space
 ```
+
 **Do not start training if physical disk has less than 20GB free.**
 
 ### What to keep and where
 
-- **Checkpoints**: delete after training completes — only needed for resume, wasted space after
-- **Model weights**: keep the best-performing model; delete the rest once you've identified it
+- **Move to cloud storage** once training is done and you won't need the artifacts for a few days
+- **Checkpoints**: delete after training completes — only needed for resume, wasted space after. Ask user for permission before deleting.
+- **Model weights**: keep the best-performing model; delete the rest once you've identified it. Ask user for permission before deleting.
 - **Embeddings**: small, keep them
 - **Result JSONs**: always keep, commit to git
-- **Move to cloud storage** once training is done and you won't need the artifacts for a few days
 
-### Cleanup commands
+### Cleanup commands EXAMPLES
+
 ```bash
-# Delete checkpoints for an experiment
+# Delete checkpoints for an experiment - must ask user for permission first
 ssh $GPU_USER@$GPU_HOST "rm -rf ~/ParabeLink/finetuning/<exp>/cache/checkpoints"
 
 # Move models to cloud storage
