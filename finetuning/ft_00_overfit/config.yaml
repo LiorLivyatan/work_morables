@@ -1,0 +1,10 @@
+model_name: BAAI/bge-base-en-v1.5
+doc_mode: raw           # swap to fable_plus_summary for the summary variant
+epochs: 30              # high — we want near-memorisation of 709 pairs
+batch_size: 64          # larger batch = more in-batch negatives per step
+learning_rate: 0.00002
+seed: 42
+
+wandb:
+  project: morables-finetuning
+  enabled: true

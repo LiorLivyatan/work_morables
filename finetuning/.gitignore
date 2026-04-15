@@ -1,0 +1,13 @@
+# Trained model weights — large, re-trainable from config
+ft_*/cache/models/
+
+# HF Trainer checkpoints — large (model + optimizer + scheduler state)
+# These are kept locally for resume but not pushed
+ft_*/cache/checkpoints/
+
+# Cached embeddings — large numpy arrays
+ft_*/cache/embeddings/
+
+# The splits file IS committed (reproducibility)
+!ft_*/cache/splits/
+!ft_*/cache/splits/**
