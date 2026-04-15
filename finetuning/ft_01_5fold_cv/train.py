@@ -74,7 +74,8 @@ def run_fold(
     test_morals = [moral_texts[i] for i in test_idx]
     test_gt = {j: ground_truth[i] for j, i in enumerate(test_idx)}
 
-    model_cache = CACHE_DIR / "models" / config["doc_mode"] / f"fold_{fold_idx}"
+    _model_root = Path(config["model_output_dir"]) if config.get("model_output_dir") else CACHE_DIR / "models"
+    model_cache = _model_root / config["doc_mode"] / f"fold_{fold_idx}"
     checkpoint_dir = CACHE_DIR / "checkpoints" / config["doc_mode"] / f"fold_{fold_idx}"
     emb_cache = CACHE_DIR / "embeddings" / config["doc_mode"] / f"fold_{fold_idx}"
 

@@ -75,33 +75,45 @@ Keep Python scripts **pure** — no remote/local routing logic inside them. They
 
 **Physical disk** (`~/ParabeLink`): use during active training only. Space fills up fast with large models — always check before starting.
 
-**Cloud storage** (`/home/storage/$USER` or `~/gpufs`): long-term storage. Request access in the lab WhatsApp group if not set up.
+**Long-term storage** (`/data/lior`): 250GB, use for trained models and artifacts not needed daily.
 
 ### Check storage before every training run
 
 ```bash
 ./run.sh status                                      # shows GPU availability
-ssh server "df -h ~ && df -h /home/storage 2>/dev/null"  # physical + cloud free space
+ssh server "df -h ~ && df -h /data/lior"             # physical + long-term free space
 ```
 
-**Do not start training if physical disk has less than 20GB free.**
+**Do not start training if physical disk has less than 30GB free.**
 
 ### What to keep and where
 
-- **Move to cloud storage** once training is done and you won't need the artifacts for a few days
-- **Checkpoints**: delete after training completes — only needed for resume, wasted space after. Ask user for permission before deleting.
-- **Model weights**: keep the best-performing model; delete the rest once you've identified it. Ask user for permission before deleting.
-- **Embeddings**: small, keep them
+- **Final models**: saved directly to `/data/lior` via `model_output_dir` in `config.yaml` — never accumulate on physical disk
+- **Checkpoints**: stay on physical disk (`~/ParabeLink`) during training for fast I/O; delete after training completes. Ask user for permission before deleting.
+- **Embeddings**: small, keep them in `cache/embeddings/`
 - **Result JSONs**: always keep, commit to git
+
+### model_output_dir (MANDATORY for new experiments)
+
+Every new experiment's `config.yaml` must set `model_output_dir` to avoid filling the physical disk:
+
+```yaml
+model_output_dir: /data/lior/<exp_name>/models
+```
+
+Train scripts read this with:
+```python
+_model_root = Path(config["model_output_dir"]) if config.get("model_output_dir") else CACHE_DIR / "models"
+model_cache = _model_root / config["doc_mode"] / f"fold_{fold_idx}"
+```
+
+If omitted, models fall back to `cache/models/` — fine for local runs, but always set it for remote GPU runs.
 
 ### Cleanup commands EXAMPLES
 
 ```bash
 # Delete checkpoints for an experiment - must ask user for permission first
 ssh $GPU_USER@$GPU_HOST "rm -rf ~/ParabeLink/finetuning/<exp>/cache/checkpoints"
-
-# Move models to cloud storage
-ssh $GPU_USER@$GPU_HOST "mv ~/ParabeLink/finetuning/<exp>/cache/models /home/storage/$USER/"
 ```
 
 ## GPU Server
@@ -109,7 +121,7 @@ ssh $GPU_USER@$GPU_HOST "mv ~/ParabeLink/finetuning/<exp>/cache/models /home/sto
 - **Check GPU availability**: `./gpu_status.sh`
 - **Coordinate usage**: announce which GPU you're taking in the lab spreadsheet before running
 - **Default GPU**: 2 (usually free), override with `--gpu N`
-- **Physical vs cloud storage**: train on physical (`~/work_morables`), move to `/home/storage/lior` when idle for multiple days
+- **Physical vs long-term storage**: train on physical (`~/ParabeLink`), move to `/data/lior` when idle for multiple days
 
 ## Project Structure
 

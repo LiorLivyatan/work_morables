@@ -32,6 +32,11 @@ lora:
     - v_proj
     - o_proj
 
+# Where to save the final trained model. Defaults to cache/models/ (local) when
+# not set. On the GPU server, point this to /data/lior to avoid filling the
+# physical disk with large model weights.
+model_output_dir: /data/lior/ft_02_linq_5fold_cv/models
+
 wandb:
   project: morables-finetuning
   enabled: true
