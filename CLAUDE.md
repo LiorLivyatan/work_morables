@@ -70,6 +70,36 @@ Keep Python scripts **pure** — no remote/local routing logic inside them. They
 
 `run.sh` owns all execution routing. A new script needs zero changes to support `--remote`.
 
+## Storage Policy (MANDATORY)
+
+**Physical disk** (`~/ParabeLink`): use during active training only. Space fills up fast with large models — always check before starting.
+
+**Cloud storage** (`/home/storage/$USER` or `~/gpufs`): long-term storage. Request access in the lab WhatsApp group if not set up.
+
+### Check storage before every training run
+```bash
+./run.sh status                                      # shows GPU availability
+ssh server "df -h ~ && df -h /home/storage 2>/dev/null"  # physical + cloud free space
+```
+**Do not start training if physical disk has less than 20GB free.**
+
+### What to keep and where
+
+- **Checkpoints**: delete after training completes — only needed for resume, wasted space after
+- **Model weights**: keep the best-performing model; delete the rest once you've identified it
+- **Embeddings**: small, keep them
+- **Result JSONs**: always keep, commit to git
+- **Move to cloud storage** once training is done and you won't need the artifacts for a few days
+
+### Cleanup commands
+```bash
+# Delete checkpoints for an experiment
+ssh $GPU_USER@$GPU_HOST "rm -rf ~/ParabeLink/finetuning/<exp>/cache/checkpoints"
+
+# Move models to cloud storage
+ssh $GPU_USER@$GPU_HOST "mv ~/ParabeLink/finetuning/<exp>/cache/models /home/storage/$USER/"
+```
+
 ## GPU Server
 
 - **Check GPU availability**: `./gpu_status.sh`
