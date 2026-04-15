@@ -43,10 +43,10 @@ def build_doc_text(fable_text: str, summary: str | None, doc_mode: str) -> str:
     if doc_mode == "raw":
         return fable_text
     if doc_mode == "fable_plus_summary":
-        # Summary after fable: narrative context first, moral distillation as a closing
-        # signal. The [CLS] embedding attends to both; this mirrors the TL;DR pattern
-        # the model has seen in pretraining and matches exp07's best-performing config.
-        return f"{fable_text}\n\n{summary}"
+        # Matches exp07's exact format (run_all_variants.py line 123).
+        # "Moral summary:" label is critical — without it the baseline model cannot
+        # distinguish the appended proverb from the narrative, tanking MRR by ~0.17.
+        return f"{fable_text}\n\nMoral summary: {summary}"
     raise ValueError(f"Unknown doc_mode: {doc_mode!r}. Expected one of {DOC_MODES}.")
 
 

@@ -80,8 +80,10 @@ def print_fold_table(
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Standalone evaluation for ft_02_linq_5fold_cv")
-    parser.add_argument("--doc_mode", choices=["raw", "fable_plus_summary"], help="Override config doc_mode")
+    parser.add_argument("--doc_mode", choices=["raw", "fable_plus_summary"], help="Override config doc_mode (also sets model source unless --train_doc_mode is given)")
+    parser.add_argument("--train_doc_mode", choices=["raw", "fable_plus_summary"], help="doc_mode the model was trained on (controls which cached model is loaded); defaults to --doc_mode")
     parser.add_argument("--fold", type=int, choices=range(5), metavar="0-4", help="Evaluate a single fold")
+    parser.add_argument("--force", action="store_true", help="Re-encode even if embeddings are cached")
     parser.add_argument("--wandb", dest="use_wandb", action="store_true", help="Log results to wandb")
     args = parser.parse_args()
 
@@ -89,6 +91,8 @@ def main() -> None:
         config = yaml.safe_load(f)
     if args.doc_mode:
         config["doc_mode"] = args.doc_mode
+    # doc_mode used to locate cached models (may differ from eval doc_mode)
+    train_doc_mode = args.train_doc_mode or config["doc_mode"]
 
     if not SPLITS_PATH.exists():
         raise FileNotFoundError(
@@ -100,55 +104,84 @@ def main() -> None:
 
     fold_indices = [args.fold] if args.fold is not None else list(range(len(all_folds)))
 
+    _model_root = Path(config["model_output_dir"]) if config.get("model_output_dir") else CACHE_DIR / "models"
     missing = [
         i for i in fold_indices
-        if not (CACHE_DIR / "models" / config["doc_mode"] / f"fold_{i}").exists()
+        if not (_model_root / train_doc_mode / f"fold_{i}").exists()
     ]
     if missing:
         raise FileNotFoundError(
-            f"No cached model(s) for fold(s) {missing} with doc_mode='{config['doc_mode']}'.\n"
-            f"Run training first:  python finetuning/ft_02_linq_5fold_cv/train.py --doc_mode {config['doc_mode']}"
+            f"No cached model(s) for fold(s) {missing} with train_doc_mode='{train_doc_mode}'.\n"
+            f"Expected at: {_model_root / train_doc_mode}\n"
+            f"Run training first:  python finetuning/ft_02_linq_5fold_cv/train.py --doc_mode {train_doc_mode}"
         )
 
+    train_label = f"trained_on={train_doc_mode}"
+    eval_label = f"eval_on={config['doc_mode']}"
+    cross_eval = train_doc_mode != config["doc_mode"]
     print(
         f"\n[ft_02_linq_5fold_cv / evaluate]  "
-        f"doc_mode={config['doc_mode']}  "
+        f"{train_label}  {eval_label}  "
+        f"{'⚡ cross-eval  ' if cross_eval else ''}"
         f"folds={fold_indices}"
     )
 
     moral_texts, doc_texts, ground_truth = load_pairs(config["doc_mode"])
-    instruction = config.get("query_instruction", "")
 
+    # Fine-tuned model instruction (from config — how it was trained)
+    ft_instruction = config.get("query_instruction", "")
+
+    # Baseline instruction matches exp07 exactly (run_all_variants.py):
+    # "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: {t}"
+    # Using a different instruction for baseline vs FT is intentional — the baseline
+    # is an untuned model and should be evaluated the same way exp07 evaluated it.
+    BASELINE_INSTRUCTION = "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+
+    import gc
+    import torch
     from sentence_transformers import SentenceTransformer
-    print("\n  Loading baseline (untrained Linq-Embed-Mistral)...")
-    baseline_model = SentenceTransformer(config["model_name"], model_kwargs=config.get("model_kwargs") or {})
 
-    baseline_fold_metrics: list[dict] = []
-    finetuned_fold_metrics: list[dict] = []
-
+    # Build per-fold query/gt dicts for both baseline and FT (different instructions)
+    fold_data = []
     for fold_idx in fold_indices:
         test_idx = all_folds[fold_idx]["test"]
-        test_morals = [f"{instruction}{moral_texts[i]}" for i in test_idx]
+        baseline_morals = [f"{BASELINE_INSTRUCTION}{moral_texts[i]}" for i in test_idx]
+        ft_morals = [f"{ft_instruction}{moral_texts[i]}" for i in test_idx]
         test_gt = {j: ground_truth[i] for j, i in enumerate(test_idx)}
+        fold_data.append((fold_idx, baseline_morals, ft_morals, test_gt))
 
-        print(f"\n  Fold {fold_idx + 1}/{len(fold_indices)}  (test={len(test_idx)})")
-
-        print("    Baseline...")
-        bm = evaluate(baseline_model, test_morals, doc_texts, test_gt)
+    # ── Pass 1: baseline (one model load for all folds, then freed) ───────────
+    # Keeping both baseline and FT model in memory simultaneously would require
+    # ~28GB (2 × 7B @ bfloat16), exceeding the 3090's 24GB. Run them in two
+    # separate passes so only one 7B model is resident at a time.
+    baseline_fold_metrics: list[dict] = []
+    print("\n  [Pass 1/2] Baseline (untrained Linq-Embed-Mistral)...")
+    baseline_model = SentenceTransformer(config["model_name"], model_kwargs=config.get("model_kwargs") or {})
+    for fold_idx, baseline_morals, ft_morals, test_gt in fold_data:
+        print(f"\n  Fold {fold_idx + 1}/{len(fold_indices)}  (test={len(baseline_morals)})")
+        bm = evaluate(baseline_model, baseline_morals, doc_texts, test_gt, force=args.force)
         baseline_fold_metrics.append(bm)
         print(f"    Baseline  MRR={bm['MRR']:.4f}  R@1={bm['Recall@1']:.4f}  R@5={bm['Recall@5']:.4f}")
+    del baseline_model
+    gc.collect()
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
 
-        print("    Fine-tuned (from cache)...")
-        model_cache = CACHE_DIR / "models" / config["doc_mode"] / f"fold_{fold_idx}"
-        emb_cache = CACHE_DIR / "embeddings" / config["doc_mode"] / f"fold_{fold_idx}"
-        # Merged model is a standard SentenceTransformer — no model_kwargs needed
-        ft_model = SentenceTransformer(str(model_cache))
-        fm = evaluate(ft_model, test_morals, doc_texts, test_gt, cache_dir=emb_cache)
+    # ── Pass 2: fine-tuned models (one per fold, freed after each) ────────────
+    finetuned_fold_metrics: list[dict] = []
+    print("\n  [Pass 2/2] Fine-tuned models...")
+    for fold_idx, baseline_morals, ft_morals, test_gt in fold_data:
+        print(f"\n  Fold {fold_idx + 1}/{len(fold_indices)}  (test={len(ft_morals)})")
+        model_cache = _model_root / train_doc_mode / f"fold_{fold_idx}"
+        emb_cache = CACHE_DIR / "embeddings" / f"{train_doc_mode}_eval_{config['doc_mode']}" / f"fold_{fold_idx}"
+        ft_model = SentenceTransformer(str(model_cache), model_kwargs=config.get("model_kwargs") or {})
+        fm = evaluate(ft_model, ft_morals, doc_texts, test_gt, cache_dir=emb_cache, force=args.force)
         finetuned_fold_metrics.append(fm)
         print(f"    Fine-tuned MRR={fm['MRR']:.4f}  R@1={fm['Recall@1']:.4f}  R@5={fm['Recall@5']:.4f}")
         del ft_model
-
-    del baseline_model
+        gc.collect()
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
 
     print_fold_table(fold_indices, baseline_fold_metrics, finetuned_fold_metrics, config)
 
@@ -180,7 +213,8 @@ def main() -> None:
     RESULTS_DIR.mkdir(exist_ok=True)
     ts = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     suffix = f"fold{args.fold}" if args.fold is not None else "all_folds"
-    out = RESULTS_DIR / f"{ts}_{config['doc_mode']}_{suffix}_evaluate.json"
+    label = f"{train_doc_mode}_eval_{config['doc_mode']}" if cross_eval else config["doc_mode"]
+    out = RESULTS_DIR / f"{ts}_{label}_{suffix}_evaluate.json"
     with open(out, "w") as f:
         json.dump({
             "config": config,

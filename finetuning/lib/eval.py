@@ -68,7 +68,7 @@ def _encode(
         print(f"    [cache hit] Loading embeddings ← {cache_path}")
         return np.load(str(cache_path))
 
-    encode_kwargs: dict = {"normalize_embeddings": True, "show_progress_bar": True, "batch_size": 64}
+    encode_kwargs: dict = {"normalize_embeddings": True, "show_progress_bar": True, "batch_size": 16}
     if prompt:
         encode_kwargs["prompt"] = prompt
     embs = model.encode(texts, **encode_kwargs)
