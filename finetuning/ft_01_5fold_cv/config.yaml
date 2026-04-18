@@ -1,0 +1,10 @@
+model_name: BAAI/bge-base-en-v1.5
+doc_mode: raw           # override with --doc_mode fable_plus_summary for the summary variant
+epochs: 30
+batch_size: 32          # ~567 train pairs → ~17 steps/epoch; 32 gives good in-batch negatives
+learning_rate: 0.00002
+seed: 42
+
+wandb:
+  project: morables-finetuning
+  enabled: true

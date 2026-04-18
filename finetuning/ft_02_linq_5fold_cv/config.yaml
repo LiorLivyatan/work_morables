@@ -1,0 +1,37 @@
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+doc_mode: raw
+epochs: 10
+batch_size: 4                    # keeps activation memory low on unified memory (bandwidth-bound)
+gradient_accumulation_steps: 4   # effective batch = 4 × 4 = 16 for LR scheduling
+gradient_checkpointing: true     # faster in practice on MPS — avoids saturating memory bandwidth
+max_seq_length: 512              # fables rarely exceed 500 tokens; caps attention memory
+learning_rate: 0.0001            # LoRA adapters typically need higher LR than full FT
+seed: 42
+early_stopping_patience: 3       # stop if MRR doesn't improve for 3 consecutive epochs
+
+# Task-specific instruction prepended to moral queries before encoding.
+# Documents (fables) are NOT prefixed — instruction-tuned models like Linq
+# expect the instruction on queries only.
+query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+
+# Load the 7B model in its native bfloat16 dtype (~14 GB vs ~28 GB in fp32).
+# With 64 GB unified memory this leaves ample headroom for optimizer state.
+model_kwargs:
+  torch_dtype: "auto"
+
+# LoRA: train only low-rank adapter layers (≈1% of parameters).
+# Recommended for 7B models on small datasets — prevents overfitting while
+# allowing meaningful domain adaptation. Adapters are merged before saving.
+lora:
+  r: 64
+  alpha: 128               # alpha = 2 × r is a common heuristic for full-rank scaling
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+
+wandb:
+  project: morables-finetuning
+  enabled: true

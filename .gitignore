@@ -75,3 +75,6 @@ experiments/*/results/pipeline_runs/
 
 # Log files
 *.log
+
+# wandb
+wandb/
