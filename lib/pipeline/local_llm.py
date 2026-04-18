@@ -14,6 +14,11 @@ import gc
 import re
 from pathlib import Path
 
+import numpy as np
+import torch
+import torch.nn.functional as F
+from tqdm.auto import tqdm
+
 
 def ensure_transformers_dynamic_module_cache() -> str:
     """
@@ -50,17 +55,130 @@ def resolve_model_source(model_id: str) -> tuple[str, bool]:
 def sentence_transformer_load_kwargs(model_id: str, is_local_source: bool) -> dict:
     """
     Extra kwargs for SentenceTransformer loaders.
-
-    Some embedding repos, such as Nomic, rely on custom model code referenced
-    through `auto_map`. Those need `trust_remote_code=True` so transformers can
-    instantiate the architecture from the cached Hub code files.
     """
     kwargs = {"local_files_only": is_local_source}
-    if model_id.startswith("nomic-ai/"):
+    if model_id.startswith("nomic-ai/") or model_id.startswith("Qwen/"):
         ensure_transformers_dynamic_module_cache()
         kwargs["trust_remote_code"] = True
         kwargs["model_kwargs"] = {"trust_remote_code": True}
     return kwargs
+
+
+def load_embedding_model(
+    model_id: str,
+    device: str = "auto",
+):
+    """
+    Load an embedding model.
+
+    Returns:
+        Standard SentenceTransformer if the model is compatible,
+        or DecoderOnlyEmbedder for causal-LM models like Qwen3.
+    """
+    import torch
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    import gc
+    gc.collect()
+
+    from sentence_transformers import SentenceTransformer
+
+    model_source, is_local_source = resolve_model_source(model_id)
+
+    # Use custom wrapper for Qwen3-Embedding models
+    if "Qwen3-Embedding" in model_id:
+        return DecoderOnlyEmbedder(model_id, device=device)
+
+    # Standard path for everything else
+    return SentenceTransformer(
+        model_source,
+        device=device,
+        **sentence_transformer_load_kwargs(model_id, is_local_source),
+    )
+
+
+class DecoderOnlyEmbedder:
+    """
+    Wrapper for decoder-only LLMs fine-tuned for embedding (e.g. Qwen3-Embedding).
+    Mimics the SentenceTransformer interface.
+    """
+    def __init__(self, model_id: str, device: str = "auto"):
+        from transformers import AutoTokenizer, AutoModel
+
+        if device == "auto":
+            if torch.cuda.is_available():
+                device = "cuda"
+            elif torch.backends.mps.is_available():
+                device = "mps"
+            else:
+                device = "cpu"
+
+        print(f"  [DecoderOnlyEmbedder] Loading {model_id} on {device} (bfloat16) ...")
+        self.device = device
+        self.tokenizer = AutoTokenizer.from_pretrained(model_id, padding_side="left")
+        self.model = AutoModel.from_pretrained(
+            model_id, torch_dtype=torch.bfloat16, trust_remote_code=True
+        ).to(device)
+        self.model.eval()
+
+    @staticmethod
+    def _last_token_pool(last_hidden_states, attention_mask):
+        # Handle left padding: if last token is not a pad, use it.
+        # Efficiently: sum attention mask to find sequence lengths.
+        seq_lengths = attention_mask.sum(dim=1) - 1
+        return last_hidden_states[
+            torch.arange(len(last_hidden_states), device=last_hidden_states.device),
+            seq_lengths,
+        ]
+
+    def encode(
+        self,
+        sentences: list[str],
+        batch_size: int = 1,
+        show_progress_bar: bool = True,
+        **kwargs
+    ) -> np.ndarray:
+        """
+        Mimics SentenceTransformer.encode().
+        Note: Formatting (Instruct/Query) is assumed to be handled by the caller.
+        """
+        all_embs = []
+        iterable = range(0, len(sentences), batch_size)
+        if show_progress_bar:
+            iterable = tqdm(iterable, desc="    encoding", leave=False)
+
+        for i in iterable:
+            batch = sentences[i : i + batch_size]
+            formatted = batch
+
+            encoded = self.tokenizer(
+                formatted, padding=True, truncation=True,
+                max_length=8192, return_tensors="pt",
+            ).to(self.device)
+
+            with torch.no_grad():
+                out = self.model(**encoded)
+
+            embs = self._last_token_pool(out.last_hidden_state, encoded["attention_mask"])
+            embs = F.normalize(embs, p=2, dim=1)
+            all_embs.append(embs.cpu().float().numpy())
+
+        return np.concatenate(all_embs, axis=0)
+
+    def to(self, device):
+        self.model.to(device)
+        self.device = device
+        return self
+
+    def eval(self):
+        self.model.eval()
+        return self
+
+    def train(self, mode=True):
+        self.model.train(mode)
+        return self
+
+
 
 
 def load_model(
@@ -246,7 +364,9 @@ def unload_model(model, tokenizer) -> None:
     del model
     del tokenizer
     gc.collect()
-    if torch.backends.mps.is_available():
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    elif torch.backends.mps.is_available():
         torch.mps.empty_cache()
     print("  [local_llm] Model unloaded and cache cleared.", flush=True)
 

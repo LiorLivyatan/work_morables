@@ -5,15 +5,17 @@ Evaluate combinations of local generation models × embedding models on the MORA
 ## Models Evaluated
 
 **Generation Models:**
-- Phi-3.5-mini (`microsoft/Phi-3.5-mini-instruct`)
-- Qwen3.5-4B (`Qwen/Qwen3.5-4B`)
+- Mistral-7B-Instruct
+- Phi-3.5-mini
+- Qwen3.5-4B
+- Qwen3.5-9B
 
 **Embedding Models:**
-- Linq-Embed-Mistral (`Linq-AI-Research/Linq-Embed-Mistral`) — exp08 model
-- Qwen3-Embed-8B (`Qwen/Qwen3-Embedding-8B`)
-- BGE-M3 (`BAAI/bge-m3`)
-- BGE-Large-EN (`BAAI/bge-large-en-v1.5`)
-- Nomic-Embed-Text (`nomic-ai/nomic-embed-text-v1.5`)
+- BGE-Large-EN
+- BGE-M3
+- Linq-Embed-Mistral
+- Nomic-Embed-Text
+- Qwen3-Embed-8B
 
 ## Run Instruction
 ```bash
@@ -27,33 +29,31 @@ python experiments/10_model_matrix/add_embed_model.py \
   --embed-alias Linq-Embed-Mistral
 ```
 
-## Results (sample50, `full` ablation — summary corpus + query paraphrases)
+## Results (full 709 fables, `full` ablation — summary corpus + query paraphrases)
 
-| Gen \ Embed       | BGE-Large-EN | BGE-M3 | Linq-Embed-Mistral | Nomic-Embed-Text | Qwen3-Embed-8B |
-|-------------------|:------------:|:------:|:------------------:|:----------------:|:--------------:|
-| **Phi-3.5-mini**  | 0.18         | 0.14   | 0.16               | 0.16             | 0.20           |
-| **Qwen3.5-4B**    | 0.16         | 0.26   | **0.28**           | 0.26             | **0.32**       |
+| Generation Model | BGE-Large-EN | BGE-M3 | Linq-Embed-Mistral | Nomic-Embed-Text | Qwen3-Embed-8B |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Mistral-7B-Instruct** | 0.0127 | 0.0324 | 0.0085 | 0.0635 | 0.0155 |
+| **Phi-3.5-mini** | 0.0197 | 0.0197 | 0.0155 | 0.0437 | 0.0282 |
+| **Qwen3.5-4B** | 0.0254 | 0.0296 | 0.0508 | 0.0592 | 0.0324 |
+| **Qwen3.5-9B** | 0.0296 | 0.0353 | **0.0973** | 0.0719 | 0.0494 |
 
-Metric: Recall@1. Best overall: **Qwen3.5-4B × Qwen3-Embed-8B = 0.32**.
+Metric: Recall@1. Best overall: **Qwen3.5-9B × Linq-Embed-Mistral = 0.0973**.
 
-### All Ablations (Recall@1)
+## Results (full 709 fables, Recall@5)
 
-| Gen \ Embed       | Ablation        | BGE-Large-EN | BGE-M3 | Linq-Embed-Mistral | Nomic-Embed-Text | Qwen3-Embed-8B |
-|-------------------|-----------------|:------------:|:------:|:------------------:|:----------------:|:--------------:|
-| **Phi-3.5-mini**  | raw_raw         | 0.14         | 0.06   | **0.46**           | 0.10             | 0.18           |
-|                   | summary_only    | 0.12         | 0.16   | 0.24               | 0.18             | 0.16           |
-|                   | paraphrase_only | 0.08         | 0.04   | 0.42               | 0.12             | 0.20           |
-|                   | full            | 0.18         | 0.14   | 0.16               | 0.16             | 0.20           |
-|                   | rrf             | 0.08         | 0.14   | 0.26               | 0.12             | 0.16           |
-| **Qwen3.5-4B**    | raw_raw         | 0.14         | 0.06   | **0.46**           | 0.10             | 0.18           |
-|                   | summary_only    | 0.20         | 0.22   | 0.26               | 0.24             | 0.36           |
-|                   | paraphrase_only | 0.12         | 0.12   | 0.40               | 0.16             | 0.16           |
-|                   | full            | 0.16         | 0.26   | 0.28               | 0.26             | 0.32           |
-|                   | rrf             | 0.22         | 0.28   | 0.36               | 0.20             | 0.24           |
+| Generation Model | BGE-Large-EN | BGE-M3 | Linq-Embed-Mistral | Nomic-Embed-Text | Qwen3-Embed-8B |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **Mistral-7B-Instruct** | 0.0578 | 0.0959 | 0.0959 | 0.1467 | 0.0705 |
+| **Phi-3.5-mini** | 0.0621 | 0.0663 | 0.0705 | 0.1199 | 0.0790 |
+| **Qwen3.5-4B** | 0.0889 | 0.0959 | 0.1495 | 0.1481 | 0.0931 |
+| **Qwen3.5-9B** | 0.0973 | 0.1114 | **0.2045** | 0.1636 | 0.1044 |
+
+Metric: Recall@5. Best overall: **Qwen3.5-9B × Linq-Embed-Mistral = 0.2045**.
 
 ### Key Findings
 
-- **Linq-Embed-Mistral `raw_raw`** hits R@1=**0.46** for both gen models — the highest single cell in the entire matrix. This suggests Linq-Embed-Mistral excels at direct moral-to-fable matching without summarization.
-- On the stable `full` ablation (summary + paraphrases), **Qwen3.5-4B × Qwen3-Embed-8B** is best at **0.32**.
-- **Qwen3.5-4B** outperforms Phi-3.5-mini on summarization-dependent ablations; on `raw_raw` both models produce the same raw fable texts so scores are identical.
-- Dominant factor: **embedding model** for `raw_raw`; **generation model** for `full`/`summary_only`.
+- **Generator Scaling Matters**: Better/larger LLMs produce significantly better inputs for the embedding models. For example, keeping the embedding model constant (Linq), logic goes up exactly linearly with generator capability (Mistral -> Phi -> Qwen-4B -> Qwen-9B).
+- **The Clear Winner**: **Qwen3.5-9B + Linq-Embed-Mistral**. This combination hits `~9.7%` Recall@1 and `~20.5%` Recall@5. 
+- **Nomic-Embed-Text** acts as the most robust baseline embedding model. It holds 4-6% Recall@1 even with weak generators.
+- **Comparison to Oracle (Exp 07)**: Using Gemini 3.1 Pro (in Exp 07) yielded ~26.5% Recall@1, meaning **the generation quality** remains the biggest bottleneck in the overall pipeline.

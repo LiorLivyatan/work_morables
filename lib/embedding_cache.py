@@ -41,7 +41,7 @@ def encode_with_cache(
     cache_dir: Path,
     query_instruction: str | None = None,
     label: str = "",
-    batch_size: int = 32,
+    batch_size: int = 4,
 ) -> np.ndarray:
     """
     Encode texts with the model, loading from disk cache if available.
