@@ -12,7 +12,8 @@ import json
 import sys
 from pathlib import Path
 
-from sklearn.model_selection import KFold
+import numpy as np
+from sklearn.model_selection import GroupKFold
 
 EXP_DIR = Path(__file__).parent
 ROOT = EXP_DIR.parent.parent
@@ -22,15 +23,18 @@ from lib.data import load_moral_to_fable_retrieval_data
 
 SPLITS_PATH = EXP_DIR / "cache" / "splits" / "folds.json"
 N_SPLITS = 5
-SEED = 42
 
 
 def generate_folds() -> list[dict]:
     _, moral_texts, _ = load_moral_to_fable_retrieval_data()
-    kf = KFold(n_splits=N_SPLITS, shuffle=True, random_state=SEED)
+    # GroupKFold ensures all instances of identical moral text land in the same
+    # fold — prevents a repeated moral from appearing in both train and test,
+    # which would let the model "recognise" a test query it saw during training.
+    groups = np.array([hash(t) for t in moral_texts])
+    gkf = GroupKFold(n_splits=N_SPLITS)
     return [
         {"fold": i, "train": train.tolist(), "test": test.tolist()}
-        for i, (train, test) in enumerate(kf.split(range(len(moral_texts))))
+        for i, (train, test) in enumerate(gkf.split(range(len(moral_texts)), groups=groups))
     ]
 
 
