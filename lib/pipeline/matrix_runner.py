@@ -6,7 +6,7 @@ import socket
 from pathlib import Path
 
 from lib.pipeline.local_corpus_generator import generate_corpus_summaries, load_corpus_summaries
-from lib.pipeline.local_llm import resolve_model_source, sentence_transformer_load_kwargs
+from lib.pipeline.local_llm import load_embedding_model
 from lib.pipeline.local_query_paraphraser import generate_query_paraphrases, load_query_paraphrases
 from lib.pipeline.matrix_aggregator import aggregate_matrix
 from lib.data import load_fables, load_morals, load_qrels_moral_to_fable
@@ -76,7 +76,6 @@ def _run_matrix_retrieval(
     Stage 2: Evaluate retrieval for all (gen, embed) combinations.
     """
     import torch
-    from sentence_transformers import SentenceTransformer
     from lib.embedding_cache import encode_with_cache
 
     # Resolve "auto" to a concrete device string
@@ -119,21 +118,19 @@ def _run_matrix_retrieval(
         em_cache.mkdir(parents=True, exist_ok=True)
 
         print(f"\n  ── Embedding: {em_alias} ──")
-        model_source, is_local_source = resolve_model_source(em_id)
-        model = SentenceTransformer(
-            model_source,
-            device=device,
-            **sentence_transformer_load_kwargs(em_id, is_local_source),
-        )
+        model = load_embedding_model(em_id, device=device)
+        em_batch_size = em_cfg.get("batch_size", 4)
 
         # 1. Embed raw data
         raw_corpus_embs = encode_with_cache(
             model=model, texts=raw_fable_texts, model_id=em_id,
-            cache_dir=em_cache, query_instruction=None, label="raw_corpus"
+            cache_dir=em_cache, query_instruction=None, label="raw_corpus",
+            batch_size=em_batch_size
         )
         raw_query_embs = encode_with_cache(
             model=model, texts=raw_moral_texts, model_id=em_id,
-            cache_dir=em_cache, query_instruction=em_cfg.get("query_instruction"), label="raw_queries"
+            cache_dir=em_cache, query_instruction=em_cfg.get("query_instruction"), label="raw_queries",
+            batch_size=em_batch_size
         )
 
         for ga in gen_aliases:
@@ -142,14 +139,18 @@ def _run_matrix_retrieval(
             summaries = [item["summary"] for item in gen_corpus[ga]]
             summary_corpus_embs = encode_with_cache(
                 model=model, texts=summaries, model_id=em_id,
-                cache_dir=em_cache, query_instruction=None, label=f"{ga}_summaries"
+                cache_dir=em_cache, query_instruction=None, label=f"{ga}_summaries",
+                batch_size=em_batch_size
             )
 
-            # Rephrased queries (+ original) — use all raw paraphrases, encode in one GPU call.
+            # Rephrased queries (+ original) — use kept_paraphrases (quality-filtered).
+            # If all paraphrases were dropped for a moral, fall back to original only
+            # (same behaviour as exp08: missing variant → repeat original, no harm).
             flat_query_texts: list[str] = []
             query_slices: list[tuple[int, int]] = []
             for item in gen_queries[ga]:
-                texts = [item["original_moral"]] + item["raw_paraphrases"]
+                kept = item.get("kept_paraphrases") or []
+                texts = [item["original_moral"]] + kept
                 start = len(flat_query_texts)
                 flat_query_texts.extend(texts)
                 query_slices.append((start, start + len(texts)))
@@ -157,7 +158,8 @@ def _run_matrix_retrieval(
             all_query_embs = encode_with_cache(
                 model=model, texts=flat_query_texts, model_id=em_id,
                 cache_dir=em_cache, query_instruction=em_cfg.get("query_instruction"),
-                label=f"{ga}_queries_all"
+                label=f"{ga}_queries_all",
+                batch_size=em_batch_size
             )
             para_embs_lists = [
                 all_query_embs[s:e] for s, e in query_slices
@@ -249,7 +251,9 @@ def _run_matrix_retrieval(
 
         del model
         gc.collect()
-        if torch.backends.mps.is_available():
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        elif torch.backends.mps.is_available():
             torch.mps.empty_cache()
 
 

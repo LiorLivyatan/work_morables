@@ -26,7 +26,7 @@ set -euo pipefail
 ENV_FILE="$(dirname "$0")/.env"
 [[ -f "$ENV_FILE" ]] && set -a && source "$ENV_FILE" && set +a
 
-REMOTE_DIR="~/ParabeLink"
+REMOTE_DIR="${REMOTE_DIR:-~/ParabeLink}"
 SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=15"
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
@@ -143,6 +143,7 @@ echo ""
 echo "[1/3] Syncing project to server..."
 rsync_to \
   --exclude='.git/' \
+  --exclude='.venv/' \
   --exclude='venv/' \
   --exclude='.venv/' \
   --exclude='venv_gen/' \
@@ -151,6 +152,7 @@ rsync_to \
   --exclude='*.pyc' \
   --exclude='.env' \
   --exclude='finetuning/*/results/' \
+  --exclude='experiments/*/results/' \
   --exclude='finetuning/*/cache/models/' \
   --exclude='finetuning/*/cache/checkpoints/' \
   --exclude='finetuning/*/cache/embeddings/' \
@@ -211,6 +213,8 @@ export WANDB_API_KEY="${WANDB_KEY}"
 export TG_BOT_TOKEN="${TG_TOKEN}"
 export TG_CHAT_ID="${TG_CHAT}"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
+export HF_HOME="${HF_HOME}"
+export PYTHONUNBUFFERED=1
 cd ${REMOTE_DIR}
 
 CUDA_VISIBLE_DEVICES=${GPU} uv run python ${SCRIPT} ${ARGS_STR} 2>&1 | tee ${LOG}
