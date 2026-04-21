@@ -144,6 +144,7 @@ echo "[1/3] Syncing project to server..."
 rsync_to \
   --exclude='.git/' \
   --exclude='venv/' \
+  --exclude='.venv/' \
   --exclude='venv_gen/' \
   --exclude='wandb/' \
   --exclude='__pycache__/' \
