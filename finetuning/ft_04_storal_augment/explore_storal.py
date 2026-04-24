@@ -88,7 +88,7 @@ def main() -> None:
     print("MORABLES fable length distribution:")
     with open(MORABLES_FABLES) as f:
         fables = json.load(f)
-    morables_lengths = [len(f.get("text", "").split()) for f in fables]
+    morables_lengths = [len(f.get("story", "").split()) for f in fables]
     print(f"  count={len(morables_lengths)}")
     print(f"  min={min(morables_lengths)}  median={sorted(morables_lengths)[len(morables_lengths)//2]}  max={max(morables_lengths)} words")
 
