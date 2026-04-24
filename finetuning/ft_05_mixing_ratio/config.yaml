@@ -1,0 +1,24 @@
+model_name: BAAI/bge-base-en-v1.5
+doc_mode: fable_plus_summary
+epochs: 15
+batch_size: 32
+learning_rate: 0.00002
+temperature: 0.05
+seed: 42
+early_stopping_patience: 3
+
+# BGE-base is a symmetric bi-encoder — no instruction prefix needed
+query_instruction: ""
+
+# Ratios to sweep: number of STORAL pairs added to each fold's training set
+# 0 = MORABLES-only baseline, 1675 = all clean STORAL pairs
+storal_ratios:
+  - 0
+  - 200
+  - 500
+  - 1000
+  - 1675
+
+wandb:
+  project: morables-finetuning
+  enabled: false
