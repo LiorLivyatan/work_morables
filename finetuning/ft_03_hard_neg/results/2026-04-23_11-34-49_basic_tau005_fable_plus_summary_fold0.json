@@ -1,0 +1,68 @@
+{
+  "config": {
+    "model_name": "Linq-AI-Research/Linq-Embed-Mistral",
+    "doc_mode": "fable_plus_summary",
+    "epochs": 10,
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "gradient_checkpointing": true,
+    "max_seq_length": 512,
+    "learning_rate": 0.0001,
+    "temperature": 0.05,
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+    "model_kwargs": {
+      "torch_dtype": "auto"
+    },
+    "lora": {
+      "r": 64,
+      "alpha": 128,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ]
+    },
+    "model_output_dir": "/data/lior/ft_03_hard_neg/models",
+    "wandb": {
+      "project": "morables-finetuning",
+      "enabled": true
+    }
+  },
+  "mode": "basic",
+  "distractor_type": null,
+  "temperature": 0.05,
+  "folds_run": [
+    0
+  ],
+  "mean_mrr": 0.43787270398007855,
+  "std_mrr": 0.0,
+  "fold_mrrs": [
+    0.43787270398007855
+  ],
+  "fold_metrics": [
+    {
+      "MRR": 0.43787270398007855,
+      "MAP": 0.43787270398007855,
+      "R-Precision": 0.30985915492957744,
+      "Mean Rank": 33.2887323943662,
+      "Median Rank": 3.0,
+      "n_queries": 142,
+      "Recall@1": 0.30985915492957744,
+      "P@1": 0.30985915492957744,
+      "NDCG@1": 0.30985915492957744,
+      "Recall@5": 0.5845070422535211,
+      "P@5": 0.11690140845070421,
+      "NDCG@5": 0.46024615642497385,
+      "Recall@10": 0.6549295774647887,
+      "P@10": 0.06549295774647887,
+      "NDCG@10": 0.48197046243030417,
+      "Recall@50": 0.8309859154929577,
+      "P@50": 0.016619718309859158,
+      "NDCG@50": 0.5222824056902456
+    }
+  ]
+}

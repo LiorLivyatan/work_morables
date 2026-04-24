@@ -103,6 +103,7 @@ if [[ "$SUBCMD" == "pull" ]]; then
   rsync_from \
     --include='*/' \
     --include='results/***' \
+    --include='data/***' \
     --exclude='*' \
     "$GPU_USER@$GPU_HOST:$REMOTE_DIR/finetuning/" \
     "$PROJECT_ROOT/finetuning/"
@@ -213,7 +214,7 @@ export WANDB_API_KEY="${WANDB_KEY}"
 export TG_BOT_TOKEN="${TG_TOKEN}"
 export TG_CHAT_ID="${TG_CHAT}"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_HOME="${HF_HOME}"
+export HF_HOME="${HF_HOME:-}"
 export PYTHONUNBUFFERED=1
 cd ${REMOTE_DIR}
 
