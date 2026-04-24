@@ -1,0 +1,32 @@
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+doc_mode: fable_plus_summary
+epochs: 10
+batch_size: 4
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+max_seq_length: 512
+learning_rate: 0.0001
+temperature: 0.05
+seed: 42
+early_stopping_patience: 3
+
+query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+
+model_kwargs:
+  torch_dtype: "auto"
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+
+model_output_dir: /data/lior/ft_04_storal_augment/models
+
+wandb:
+  project: morables-finetuning
+  enabled: true
