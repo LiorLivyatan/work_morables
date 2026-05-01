@@ -1,0 +1,133 @@
+{
+  "config": {
+    "doc_mode": "fable_plus_summary",
+    "seed": 42,
+    "batch_size": 16,
+    "models": [
+      {
+        "alias": "Linq-Embed-Mistral",
+        "id": "Linq-AI-Research/Linq-Embed-Mistral",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16"
+      },
+      {
+        "alias": "NV-Embed-v2",
+        "id": "nvidia/NV-Embed-v2",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "GTE-Qwen2-7B",
+        "id": "Alibaba-NLP/gte-Qwen2-7B-instruct",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "BGE-en-ICL",
+        "id": "BAAI/bge-en-icl",
+        "query_instruction": "Given a moral statement, retrieve the fable that best conveys this moral.\n",
+        "torch_dtype": "bfloat16"
+      },
+      {
+        "alias": "EmbeddingGemma-300M",
+        "id": "google/embeddinggemma-300m",
+        "query_instruction": "",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Nomic-Embed-v2-MoE",
+        "id": "nomic-ai/nomic-embed-text-v2-moe",
+        "query_instruction": "search_query: ",
+        "doc_prefix": "search_document: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Qwen3-Embedding-8B",
+        "id": "Qwen/Qwen3-Embedding-8B",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Llama-Embed-Nemotron-8B",
+        "id": "nvidia/llama-embed-nemotron-8b",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Llama-Embed-Nemotron-8B-NoInstr",
+        "id": "nvidia/llama-embed-nemotron-8b",
+        "query_instruction": "",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "KaLM-Gemma3-12B",
+        "id": "tencent/KaLM-Embedding-Gemma3-12B-2511",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true,
+        "device_map": "auto"
+      },
+      {
+        "alias": "GritLM-7B",
+        "id": "GritLM/GritLM-7B",
+        "query_instruction": "<|user|>\nGiven a moral statement, retrieve the fable that best conveys this moral.\n<|embed|>\n",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    ]
+  },
+  "device": "mps",
+  "results": [
+    {
+      "alias": "BGE-en-ICL",
+      "model_id": "BAAI/bge-en-icl",
+      "MRR": 0.3191777888000072,
+      "MAP": 0.3191777888000072,
+      "R-Precision": 0.22566995768688294,
+      "Mean Rank": 71.6361071932299,
+      "Median Rank": 11.0,
+      "n_queries": 709,
+      "Recall@1": 0.22566995768688294,
+      "P@1": 0.22566995768688294,
+      "NDCG@1": 0.22566995768688294,
+      "Recall@5": 0.4076163610719323,
+      "P@5": 0.08152327221438646,
+      "NDCG@5": 0.32330198745006766,
+      "Recall@10": 0.4908321579689704,
+      "P@10": 0.049083215796897034,
+      "NDCG@10": 0.35040378462379684,
+      "Recall@50": 0.7179125528913963,
+      "P@50": 0.014358251057827925,
+      "NDCG@50": 0.4005273786395847
+    },
+    {
+      "alias": "Qwen3-Embedding-8B",
+      "model_id": "Qwen/Qwen3-Embedding-8B",
+      "MRR": 0.26359642789041837,
+      "MAP": 0.26359642789041837,
+      "R-Precision": 0.1692524682651622,
+      "Mean Rank": 78.58533145275035,
+      "Median Rank": 14.0,
+      "n_queries": 709,
+      "Recall@1": 0.1692524682651622,
+      "P@1": 0.1692524682651622,
+      "NDCG@1": 0.1692524682651622,
+      "Recall@5": 0.35825105782792666,
+      "P@5": 0.07165021156558533,
+      "NDCG@5": 0.2668477298128259,
+      "Recall@10": 0.4527503526093089,
+      "P@10": 0.04527503526093089,
+      "NDCG@10": 0.29809906740171144,
+      "Recall@50": 0.68688293370945,
+      "P@50": 0.013737658674188996,
+      "NDCG@50": 0.35005552356245995
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+# ft_07_storal_transfer — train on STORAL, evaluate on MORABLES (cross-domain transfer)
+#
+# Three models × three dataset sizes = 9 training runs.
+# No fold CV: STORAL is purely training data, all 709 MORABLES fables are the test set.
+
+# ── Common training hyperparameters ──────────────────────────────────────────
+epochs: 10
+temperature: 0.05
+early_stopping_patience: 3
+seed: 42
+
+# ── Models ───────────────────────────────────────────────────────────────────
+models:
+  bge:
+    model_name: BAAI/bge-base-en-v1.5
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_07_storal_transfer/models/bge
+    # no lora: full fine-tune (110M params, fits easily)
+
+  linq:
+    model_name: Linq-AI-Research/Linq-Embed-Mistral
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_07_storal_transfer/models/linq
+
+  qwen3:
+    model_name: Qwen/Qwen3-Embedding-8B
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    model_kwargs:
+      torch_dtype: auto
+    # generic instruction was best for Qwen3 in exp_12 (MRR=0.3625)
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_07_storal_transfer/models/qwen3
+
+# ── Dataset size configs ──────────────────────────────────────────────────────
+# length_range filters STORAL stories by word count before sampling.
+# MORABLES word-count stats: min=28, max=1132, mean=117, p10=56, p25=71, p50=99, p75=137, p90=195
+dataset_sizes:
+  s500:
+    n: 500
+    length_range: [56, 195]   # MORABLES p10–p90; 636 stories available → sample 500
+  s1000:
+    n: 1000
+    length_range: [30, 300]   # Wider window; ~1100 stories available → sample 1000
+  sfull:
+    n: null                   # All 1675 clean pairs (no length filter)
+    length_range: null
+
+wandb:
+  project: morables-finetuning
+  enabled: true

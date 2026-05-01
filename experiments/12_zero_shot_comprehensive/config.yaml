@@ -1,0 +1,119 @@
+doc_mode: custom          # corpus built inline from corpus_configs below
+seed: 42
+batch_size: 16            # inference only — no gradients
+
+# ── Instruction variants ────────────────────────────────────────────────────────
+# Each variant runs for every model × corpus config combination.
+# "default" = each model's own query_instruction as configured below.
+# "generic"  = the exp_07 format that produced the known Linq baseline (MRR≈0.36).
+instruction_variants:
+  - label: default
+  - label: generic
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+
+# ── Corpus configurations ──────────────────────────────────────────────────────
+# Each config defines how the fable document is represented at retrieval time.
+# Templates use {fable}, {cot_proverb}, {direct_moral}, {conceptual_abstract}.
+# "Moral summary:" label is critical — without it Linq conflates the summary with narrative.
+corpus_configs:
+  - id: raw
+    description: "raw fable text only"
+    template: "{fable}"
+
+  - id: fable_cot
+    description: "fable + cot_proverb summary"
+    template: "{fable}\n\nMoral summary: {cot_proverb}"
+
+  - id: fable_direct
+    description: "fable + direct_moral summary"
+    template: "{fable}\n\nMoral summary: {direct_moral}"
+
+  - id: fable_abstract
+    description: "fable + conceptual_abstract summary"
+    template: "{fable}\n\nMoral summary: {conceptual_abstract}"
+
+  - id: summary_only_cot
+    description: "cot_proverb summary only (no fable)"
+    template: "{cot_proverb}"
+
+  - id: summary_fable_cot
+    description: "cot_proverb first, then fable (reversed order)"
+    template: "Moral summary: {cot_proverb}\n\n{fable}"
+
+# ── Models ─────────────────────────────────────────────────────────────────────
+models:
+
+  - alias: Linq-Embed-Mistral
+    id: Linq-AI-Research/Linq-Embed-Mistral
+    # Generic instruction matches exp_07 setup (0.360 on fable+cot, 0.210 on raw).
+    # Task-specific "moral statement" instruction cuts MRR in half for this model.
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    torch_dtype: bfloat16
+
+  - alias: BGE-en-ICL
+    id: BAAI/bge-en-icl
+    query_instruction: "Given a moral statement, retrieve the fable that best conveys this moral.\n"
+    torch_dtype: bfloat16
+
+  - alias: Qwen3-Embedding-8B
+    id: Qwen/Qwen3-Embedding-8B
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    torch_dtype: bfloat16
+    trust_remote_code: true
+
+  - alias: Nomic-Embed-v2-MoE
+    id: nomic-ai/nomic-embed-text-v2-moe
+    query_instruction: "search_query: "
+    doc_prefix: "search_document: "
+    torch_dtype: bfloat16
+    trust_remote_code: true
+
+  - alias: Qwen3-Embedding-0.6B
+    id: Qwen/Qwen3-Embedding-0.6B
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    torch_dtype: bfloat16
+    trust_remote_code: true
+
+  - alias: Multilingual-E5-large
+    id: intfloat/multilingual-e5-large
+    query_instruction: "query: "
+    doc_prefix: "passage: "
+    torch_dtype: bfloat16
+
+  - alias: Multilingual-E5-large-instruct
+    id: intfloat/multilingual-e5-large-instruct
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    torch_dtype: bfloat16
+
+  - alias: BGE-M3
+    id: BAAI/bge-m3
+    query_instruction: ""
+    torch_dtype: bfloat16
+    trust_remote_code: true
+
+  - alias: Instructor-base
+    id: hkunlp/instructor-base
+    query_instruction: "Represent the moral statement for retrieving relevant fables: "
+    torch_dtype: float32   # instructor-base doesn't support bfloat16
+
+  - alias: E5-base-v2
+    id: intfloat/e5-base-v2
+    query_instruction: "query: "
+    doc_prefix: "passage: "
+    torch_dtype: bfloat16
+
+  # NV-Embed-v2 and GTE-Qwen2-7B — include only if server test passes
+  # Uncomment once confirmed working:
+  # - alias: NV-Embed-v2
+  #   id: nvidia/NV-Embed-v2
+  #   query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+  #   torch_dtype: bfloat16
+  #   trust_remote_code: true
+  #   batch_size: 4   # 7B model, needs small batch
+
+  # - alias: GTE-Qwen2-7B
+  #   id: Alibaba-NLP/gte-Qwen2-7B-instruct
+  #   query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+  #   torch_dtype: bfloat16
+  #   trust_remote_code: true
+  #   batch_size: 4

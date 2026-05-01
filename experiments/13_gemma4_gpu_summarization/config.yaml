@@ -1,0 +1,113 @@
+seed: 42
+
+# ── Generator models ──────────────────────────────────────────────────────────
+# All run on GPU server via run.sh. Load one at a time, generate all 709 fables
+# × all variants, then unload before loading the next model.
+models:
+  - alias: gemma4-E2B
+    id: google/gemma-4-E2B-it
+    torch_dtype: bfloat16
+    max_new_tokens: 256
+    max_new_tokens_thinking: 4096   # thinking mode needs more headroom
+
+  - alias: gemma4-E4B
+    id: google/gemma-4-E4B-it
+    torch_dtype: bfloat16
+    max_new_tokens: 256
+    max_new_tokens_thinking: 4096
+
+  - alias: gemma4-26B-A4B
+    id: google/gemma-4-26B-A4B-it
+    torch_dtype: bfloat16
+    load_in_4bit: true
+    max_new_tokens: 256
+    max_new_tokens_thinking: 4096
+
+  - alias: gemma4-31B
+    id: google/gemma-4-31B-it
+    torch_dtype: bfloat16
+    load_in_4bit: true     # 31B × 2 bytes = 62GB bf16; 4-bit ≈ 16GB → fits 24GB VRAM
+    max_new_tokens: 256
+    max_new_tokens_thinking: 4096
+
+# ── Prompt variants ───────────────────────────────────────────────────────────
+# Exp-07-compatible variants use identical system prompts to the Gemini run so
+# results are directly comparable (same task, different generator model).
+# Gemma 4 thinking variants use enable_thinking=True: the model reasons internally
+# via hidden CoT then outputs ONLY the final answer.
+prompt_variants:
+
+  # ── Exp-07 compatible ──────────────────────────────────────────────────────
+
+  - id: cot_proverb            # best performer in exp-07 (MRR=0.360)
+    enable_thinking: false
+    system: |
+      You are an expert in fables and proverbs. When given a fable, reason step by step:
+      1. What is the central conflict or situation?
+      2. What does the outcome reveal about human nature?
+      3. What abstract principle does this illustrate?
+
+      After reasoning, state the moral as a proverb or maxim.
+      Output ONLY the proverb on the last line. Do NOT include your reasoning in the output.
+      Be as concise as possible.
+
+  - id: direct_moral
+    enable_thinking: false
+    system: |
+      You are an expert in fables, parables, and moral philosophy.
+      When given a fable, extract its moral lesson as a single sentence.
+      Be as concise as possible.
+
+  - id: conceptual_abstract
+    enable_thinking: false
+    system: |
+      You are a moral philosopher. When given a fable, reason step by step:
+      1. What is the central conflict or situation?
+      2. What does the outcome reveal about human nature?
+      3. What abstract principle does this illustrate?
+
+      After reasoning, output ONLY the abstract moral principle as a single sentence on the last line.
+      Do NOT include your reasoning in the output. Be as concise as possible.
+
+  - id: proverb
+    enable_thinking: false
+    system: |
+      You are an expert in fables and proverbs.
+      When given a fable, state its moral as a proverb or maxim.
+      Be as concise as possible.
+
+  # ── Gemma 4 thinking-mode variants ────────────────────────────────────────
+  # enable_thinking=True: model uses internal hidden reasoning (no explicit CoT
+  # in output). System prompt asks only for the final answer — the model reasons
+  # on its own before producing it.
+
+  - id: thinking_cot_proverb
+    enable_thinking: true
+    system: |
+      You are an expert in fables and proverbs.
+      State the moral of the given fable as a proverb or maxim.
+      Output ONLY the proverb. Be as concise as possible.
+
+  - id: thinking_direct_moral
+    enable_thinking: true
+    system: |
+      You are an expert in fables, parables, and moral philosophy.
+      Extract the moral lesson of the given fable as a single sentence.
+      Be as concise as possible.
+
+# ── Retrieval models for eval.py ──────────────────────────────────────────────
+# Updated with exp_12 results (2026-04-28):
+#   Best: Qwen3-Embedding-8B + generic instruction + summary_fable_cot → MRR=0.3625
+#   2nd:  Linq-Embed-Mistral  + generic instruction + fable_cot         → MRR=0.3597
+retrieval_models:
+
+  - alias: Qwen3-Embedding-8B    # exp_12 best overall (MRR=0.3625 on summary_fable_cot)
+    id: Qwen/Qwen3-Embedding-8B
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    torch_dtype: bfloat16
+    trust_remote_code: true
+
+  - alias: Linq-Embed-Mistral    # exp_12 second best (MRR=0.3597 on fable_cot)
+    id: Linq-AI-Research/Linq-Embed-Mistral
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    torch_dtype: bfloat16

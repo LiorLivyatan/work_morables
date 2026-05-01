@@ -29,6 +29,7 @@ def evaluate(
     doc_texts: list[str],
     ground_truth: dict[int, int],
     cache_dir: Path | None = None,
+    doc_cache_dir: Path | None = None,
     force: bool = False,
     query_prompt: str | None = None,
 ) -> dict:
@@ -43,14 +44,17 @@ def evaluate(
         moral_texts    query strings for this evaluation set
         doc_texts      full corpus of document strings (typically all 709 fables)
         ground_truth   {query_local_idx: global_corpus_fable_idx}
-        cache_dir      optional directory to persist/load embeddings
+        cache_dir      directory to persist/load query (moral) embeddings
+        doc_cache_dir  directory to persist/load doc embeddings; falls back to
+                       cache_dir if not set. Pass the default-variant cache dir
+                       here when running instruction ablations so doc embeddings
+                       are reused across variants instead of re-encoded.
         force          re-encode even if embeddings are cached
         query_prompt   optional instruction prefix prepended to each moral before
-                       encoding (e.g. Linq-Embed-Mistral's task instruction);
-                       only applies to queries, not documents
+                       encoding; only applies to queries, not documents
     """
     moral_embs = _encode(model, moral_texts, cache_dir, "moral_embs.npy", force, prompt=query_prompt)
-    doc_embs = _encode(model, doc_texts, cache_dir, "doc_embs.npy", force)
+    doc_embs   = _encode(model, doc_texts, doc_cache_dir or cache_dir, "doc_embs.npy", force)
     return compute_metrics(moral_embs, doc_embs, ground_truth)
 
 

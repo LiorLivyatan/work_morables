@@ -18,6 +18,7 @@ dependencies = [
     "einops",
     "torch",
     "transformers",
+    "bitsandbytes>=0.46.1",
     "gritlm",
     "mlx-lm ; sys_platform == 'darwin'",
 ]
