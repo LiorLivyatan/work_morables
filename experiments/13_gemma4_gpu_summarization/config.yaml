@@ -19,7 +19,7 @@ models:
   - alias: gemma4-26B-A4B
     id: google/gemma-4-26B-A4B-it
     torch_dtype: bfloat16
-    load_in_4bit: true
+    load_in_8bit: true      # 4-bit trips device_map bf16-size estimation; 8-bit fits cleanly across 2×24GB
     max_new_tokens: 256
     max_new_tokens_thinking: 4096
 

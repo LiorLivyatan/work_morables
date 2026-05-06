@@ -66,8 +66,9 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-SESSION="parabelink_gpu${GPU}"
-LOG="/tmp/parabelink_gpu${GPU}.log"
+GPU_TAG="$(echo "$GPU" | tr ',' '_')"
+SESSION="parabelink_gpu${GPU_TAG}"
+LOG="/tmp/parabelink_gpu${GPU_TAG}.log"
 
 # ── SUBCOMMANDS ───────────────────────────────────────────────
 

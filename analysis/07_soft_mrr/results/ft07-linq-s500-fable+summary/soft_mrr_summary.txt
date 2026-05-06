@@ -1,0 +1,15 @@
+Experiment: ft07-linq-s500-fable+summary
+Similarity threshold: 0.9
+
+Standard MRR@10:               0.4398  (n=709)
+Soft MRR@10:                   0.4683  (ambiguity-corrected)
+  Queries rescued by soft:     42
+
+Ambiguous queries excluded:    94 / 709 (13.3%)
+Clean subset MRR@10:           0.4477  (n=615)
+Clean subset R@1:              0.3463
+Clean subset R@5:              0.5870
+Clean subset R@10:             0.6699
+
+MRR gain (soft vs standard):   +0.0285
+MRR gain (clean vs standard):  +0.0079

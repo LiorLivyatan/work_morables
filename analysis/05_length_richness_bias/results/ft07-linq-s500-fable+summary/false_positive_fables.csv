@@ -1,0 +1,710 @@
+fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_rank
+0,Androcles,261,3,2,0.0028,513.0
+1,The Ant and the Chrysalis,204,0,0,0.0000,328.4
+2,The Ant and the Grasshopper,116,1,1,0.0014,523.5
+3,The Ass and His Shadow,124,1,0,0.0000,285.9
+4,The Ass and the Frogs,75,0,0,0.0000,263.7
+5,The Ass and the Lapdog,260,0,0,0.0000,273.8
+6,The Ass and the Lapdog,129,0,0,0.0000,288.4
+7,The Ass and the Mule,182,0,0,0.0000,270.0
+8,The Ass in the Lion's Skin,96,0,0,0.0000,358.2
+9,The Ass's Brains,160,0,0,0.0000,265.9
+10,Avaricious and Envious,137,1,1,0.0014,367.4
+11,The Bald Knight,74,1,0,0.0000,252.3
+12,The Bald Man and the Fly,66,1,0,0.0000,279.3
+13,"The Bat, the Birds and the Beasts",130,2,1,0.0014,323.3
+14,The Bear and the Two Travelers,139,2,1,0.0014,371.6
+15,Belling the Cat,169,0,0,0.0000,336.4
+16,The Belly and the Members,70,1,0,0.0000,368.1
+17,"The Birdcatcher, the Partridge, and the Cock",169,1,0,0.0000,202.5
+18,The Bowman and Lion,121,0,0,0.0000,381.7
+19,The Boy and the Filberts,81,4,4,0.0056,296.8
+20,The Boys and the Frogs,53,0,0,0.0000,332.2
+21,The Boy and the Nettles,63,1,0,0.0000,396.8
+22,The Buffoon and the Countryman,134,2,1,0.0014,402.3
+23,The Cat-Maiden,118,3,3,0.0042,432.8
+24,The Cat and Venus,121,1,1,0.0014,370.9
+25,The Cat and the Mice,105,4,3,0.0042,277.5
+26,The Cock and the Pearl,86,4,3,0.0042,421.4
+27,The Crow and the Pitcher,170,2,1,0.0014,504.0
+28,The Dancing Monkeys,123,1,1,0.0014,407.6
+29,The Dog and the Cook,208,0,0,0.0000,275.5
+30,The Dog in the Manger,88,0,0,0.0000,307.0
+31,The Dog and the Shadow,107,0,0,0.0000,307.6
+32,The Eagle and the Arrow,87,1,1,0.0014,300.9
+33,The Farmer and the Cranes,115,1,0,0.0000,334.7
+34,The Farmer and the Snake,64,2,2,0.0028,492.4
+35,The Farmer and the Stork,139,1,0,0.0000,342.9
+36,The Fisher and the Little Fish,71,3,2,0.0028,337.9
+37,The Fisherman Piping,108,0,0,0.0000,252.4
+38,The Four Oxen and the Lion,90,0,0,0.0000,443.6
+39,The Fox And The Bramble,91,1,0,0.0000,330.1
+40,The Fox and the Cat,131,1,0,0.0000,377.2
+41,"The Fox, the Cock and the Dog",165,0,0,0.0000,238.2
+42,The Fox and the Crane,114,2,2,0.0028,448.7
+43,The Fox And The Raven,139,0,0,0.0000,279.5
+44,The Fox and the Crow,133,5,4,0.0056,305.6
+45,The Fox and the Goat,223,1,1,0.0014,285.1
+46,The Fox and the Hedgehog,138,0,0,0.0000,262.7
+47,The Fox and the Woodcutter,181,0,0,0.0000,479.9
+48,The Frogs Asking for a King,177,0,0,0.0000,218.7
+49,The Goatherd and the Wild Goats,196,1,1,0.0014,371.0
+50,The Goose With the Golden Eggs,115,2,1,0.0014,368.4
+51,The Hare and the Hound,58,1,1,0.0014,335.9
+52,The Hares and the Frogs,120,3,2,0.0028,242.1
+53,The Hare With Many Friends,261,1,0,0.0000,355.6
+54,The Hart and the Hunter,120,2,1,0.0014,299.9
+55,The Hart in the Ox-Stall,123,2,1,0.0014,313.4
+56,"The Hawk, the Kite, and the Pigeons",55,1,1,0.0014,237.1
+57,The Heifer and the Ox,92,0,0,0.0000,320.6
+58,Hercules and Pallas,136,1,0,0.0000,364.8
+59,Hercules and the Wagoner,92,0,0,0.0000,511.5
+60,"The Horse, Hunter and Stag",155,1,0,0.0000,293.0
+61,The Hunter and the Woodman,84,0,0,0.0000,311.9
+62,The Huntsman and the Fisherman,115,1,1,0.0014,400.2
+63,The Kites and the Swans,46,0,0,0.0000,331.9
+64,The Labourer and the Nightingale,142,0,0,0.0000,231.2
+65,The Lark Burying Her Father,72,1,0,0.0000,538.5
+66,The Lark and Her Young Ones,209,3,2,0.0028,317.3
+67,The Lion and the Eagle,62,0,0,0.0000,432.9
+68,"The Lion, the Fox, and the Ass",147,4,3,0.0042,221.2
+69,"The Lion, the Mouse, and the Fox",86,0,0,0.0000,330.1
+70,The Lion's Share,151,1,1,0.0014,411.9
+71,The Lost Wig,123,0,0,0.0000,289.4
+72,The Man and His Wife,123,0,0,0.0000,335.1
+73,The Man and His Two Wives,131,0,0,0.0000,242.9
+74,The Man and the Satyr,140,0,0,0.0000,403.8
+75,The Man and the Lion,100,0,0,0.0000,327.2
+76,The Mice and the Weasels,193,1,0,0.0000,381.3
+77,The Milk-Woman and Her Pail,144,1,0,0.0000,497.7
+78,"The Miller, His Son, and Their Ass",394,2,1,0.0014,289.1
+79,The Mountains in Labour,119,1,0,0.0000,399.4
+80,The Mother and the Wolf,133,1,1,0.0014,297.8
+81,The Mule,75,1,0,0.0000,421.1
+82,The Nurse and the Wolf,139,1,1,0.0014,383.2
+83,The Oak and the Reeds,73,0,0,0.0000,298.2
+84,The One-Eyed Doe,122,5,5,0.0071,310.0
+85,The Peacock and Juno,41,0,0,0.0000,340.9
+86,The Peasant and the Apple-Tree,128,2,1,0.0014,253.2
+87,The Quack Frog,63,2,1,0.0014,370.0
+88,The Raven and the Swan,78,0,0,0.0000,458.0
+89,The Scorpion and the Frog,79,0,0,0.0000,374.6
+90,The Scorpion and the Ladybug,71,0,0,0.0000,399.9
+91,The Serpent and the Eagle,126,1,1,0.0014,491.3
+92,The Serpent and the File,62,2,1,0.0014,318.7
+93,The Shepherd and the Sea,105,1,1,0.0014,320.5
+94,The Shepherd's Boy and the Wolf,98,0,0,0.0000,351.4
+95,The Shipwrecked Impostor,175,3,3,0.0042,388.7
+96,The Silkworm and Spider,133,0,0,0.0000,492.8
+97,"The Stag, the Wolf, and the Sheep",70,0,0,0.0000,380.2
+98,The Swallow and the Other Birds,122,0,0,0.0000,274.9
+99,The Thief and the Housedog,94,1,0,0.0000,398.9
+100,The Three Tradesmen,81,0,0,0.0000,276.0
+101,The Tortoise and the Birds,106,0,0,0.0000,253.0
+102,The Tortoise and the Eagle,136,2,2,0.0028,270.9
+103,The Traveler and Fortune,101,0,0,0.0000,315.1
+104,The Traveler and His Dog,58,1,0,0.0000,303.5
+105,The Tree and the Reed,127,0,0,0.0000,292.5
+106,The Trumpeter Taken Prisoner,84,1,0,0.0000,428.9
+107,The Two Pots,62,1,1,0.0014,296.6
+108,The Two Pots,84,1,1,0.0014,281.4
+109,The Two Travelers and the Axe,94,0,0,0.0000,334.2
+110,The Vain Jackdaw,177,0,0,0.0000,442.9
+111,The Vixen and the Lioness,92,0,0,0.0000,492.2
+112,The Widow and the Sheep,95,1,0,0.0000,229.9
+113,The Wolf and the Goat,81,2,1,0.0014,301.2
+114,The Wolf and the Kid,88,0,0,0.0000,369.6
+115,The Wolf and the Shepherds,37,1,0,0.0000,412.8
+116,The Wolf in Sheep's Clothing,89,0,0,0.0000,312.1
+117,The Wolf in Sheep's Clothing,102,0,0,0.0000,391.5
+118,The Woodman and the Serpent,124,1,1,0.0014,452.1
+119,The Young Thief and His Mother,139,0,0,0.0000,463.6
+120,The Aethiop,57,2,1,0.0014,484.1
+121,The Abbot And The Flea,141,0,0,0.0000,353.8
+122,The Lion And The Elephant,241,0,0,0.0000,232.4
+123,The Donkey And The Wild Boar,109,2,2,0.0028,308.1
+124,"The Dog, The Sow And Aphrodite",104,1,0,0.0000,276.7
+125,The Camel And The Elephant,94,0,0,0.0000,392.2
+126,The Hunted beaver,97,1,0,0.0000,180.7
+127,The Crow And The Water Jar,92,1,0,0.0000,439.6
+128,The Shepherd And The Wolf Cubs,69,0,0,0.0000,331.6
+129,Aesop And The Bow,150,1,0,0.0000,313.2
+130,The Man Bitten By The Dog,92,0,0,0.0000,419.1
+131,Aesop And The Hooligan,109,0,0,0.0000,270.5
+132,Aesop And The Shipbuilders,119,2,2,0.0028,280.7
+133,Aesop And The Soothsayers,181,0,0,0.0000,256.6
+134,The Old Bull And The Young Bull,144,2,1,0.0014,416.8
+135,The Vegetables And The Weeds,77,0,0,0.0000,507.3
+136,Demades And The Athenians,99,1,0,0.0000,296.4
+137,"The Wolf, The Fox And The Monkey",78,3,3,0.0042,400.8
+138,The Crested Lark And The Farmer,556,0,0,0.0000,244.0
+139,The Nut Tree And The People,62,1,0,0.0000,421.1
+140,The Bird Catcher And The Viper,105,1,1,0.0014,332.8
+141,The Magpie And Her Tail,94,2,1,0.0014,463.6
+142,The Rose And The Amaranth,75,1,1,0.0014,483.9
+143,The Clay Pot And The Rain,195,2,2,0.0028,404.1
+144,"The Donkey, The Priests And The Tambourines",77,1,0,0.0000,341.5
+145,The Foxes At The River,153,0,0,0.0000,289.6
+146,The Shepherd And The Lion,163,2,1,0.0014,562.7
+147,Zeus And Prometheus,59,4,4,0.0056,478.0
+148,The Ant And The Dung Beetle,138,1,1,0.0014,398.5
+149,The Ant And The Cricket,109,2,2,0.0028,490.8
+150,The Ant And The Fly,281,0,0,0.0000,376.4
+151,"The Ant, The Pigeon And The Bird-Catcher",98,0,0,0.0000,539.5
+152,Zeus And The Ant,93,0,0,0.0000,437.6
+153,The Gods And Their Trees,144,0,0,0.0000,449.3
+154,The Olive Tree And The Fig Tree,80,0,0,0.0000,398.9
+155,The Cricket And The Owl,223,0,0,0.0000,215.5
+156,The Man And The Oracle,115,2,2,0.0028,385.5
+157,Apollo And The Snake,51,0,0,0.0000,327.9
+158,The Black Man In The River,41,1,1,0.0014,490.6
+159,The Trees And The Bramble Bush,45,2,2,0.0028,266.4
+160,The Donkey Who Carried The God,96,1,1,0.0014,417.0
+161,The Bald Man And The Gardener,125,3,3,0.0042,363.6
+162,The Monkey Elected King Of The Animals,124,1,0,0.0000,263.5
+163,The Eagle And The Fox,116,2,1,0.0014,331.5
+164,The Fox And The Cat,258,1,0,0.0000,337.0
+165,"The Shepherd, The Wolf Cub And The Wolf",136,1,1,0.0014,406.8
+166,The Jackdaw And The Ravens,91,1,0,0.0000,280.2
+167,The Rooster And The Pearl,87,1,1,0.0014,402.4
+168,The Ax And The Trees,84,1,1,0.0014,273.4
+169,The Crow And Athena,68,0,0,0.0000,277.1
+170,The Shipwrecked Man And Athena,66,1,0,0.0000,520.6
+171,The Snake And The Crab,103,0,0,0.0000,360.7
+172,The Travellers And The Plane Tree,89,1,1,0.0014,351.5
+173,Socrates And His Friends,93,2,1,0.0014,432.2
+174,The Monkey And The Dolphin,192,2,2,0.0028,387.0
+175,Simonides And The Twin Gods,353,0,0,0.0000,400.8
+176,"The Man, The Flea And Heracles",58,1,0,0.0000,302.4
+177,The Boastful Athlete,91,2,1,0.0014,515.1
+178,'The Prince',410,0,0,0.0000,306.7
+179,Opportunity,63,1,0,0.0000,505.5
+180,The Wolf And The Goat On The Cliff,120,1,1,0.0014,182.9
+181,The Man And The Golden Eggs,127,0,0,0.0000,362.9
+182,The Wolf And The Crane,105,1,0,0.0000,390.7
+183,The Frog And The Ox,111,1,1,0.0014,329.6
+184,Zeus And The Good Things,81,1,0,0.0000,438.8
+185,The Bald Men And The Comb,70,0,0,0.0000,314.2
+186,The Bald Man And The Fly,127,0,0,0.0000,332.8
+187,The Bald Man And His Two Mistresses,100,0,0,0.0000,243.2
+188,The Bat And The Songbird,99,2,1,0.0014,363.2
+189,The Bat And The Weasels,134,3,3,0.0042,197.7
+190,The War Between The Beasts And The Birds,90,1,1,0.0014,375.9
+191,"The Bat, The Booby And The Bramble Bush",134,0,0,0.0000,293.9
+192,The Bear And The Crabs,71,2,1,0.0014,407.7
+193,The Lion And The Bear,121,1,1,0.0014,253.5
+194,The Bees And The Beekeeper,94,0,0,0.0000,270.6
+195,The Bees And The Beetles,72,0,0,0.0000,409.8
+196,"The Bees, The Drones And The Wasps",168,1,1,0.0014,441.7
+197,Zeus And The Bee,128,1,1,0.0014,316.8
+198,Jupiter And The Fox,95,0,0,0.0000,381.8
+199,The Two Dung Beetles,170,3,3,0.0042,356.7
+200,The Beetle In The Air,240,1,1,0.0014,311.5
+201,Simonides And The Shipwreck,305,1,0,0.0000,490.0
+202,The Dogs And The Lion Skin,56,1,1,0.0014,340.1
+203,The Decoys And The Doves,110,1,0,0.0000,366.7
+204,The Bird Catcher And The Partridge,68,1,1,0.0014,289.9
+205,"The Nightingale, The Hawk And The Bird Catcher",122,1,1,0.0014,311.1
+206,The Sparrow And The Myrtle Berries,75,3,3,0.0042,361.0
+207,The Bird-Catcher And The Lark,103,0,0,0.0000,376.9
+208,The Cat And The Birds,42,1,1,0.0014,394.6
+209,The Dog And The Blacksmiths,74,1,0,0.0000,311.7
+210,The Blacksmiths And The Mouse,52,1,1,0.0014,262.3
+211,The Blind Man And The Cub,83,1,0,0.0000,457.3
+212,The Old Dog And His Master,121,0,0,0.0000,416.6
+213,The Old Lion And The Donkey,128,1,0,0.0000,374.2
+214,"The Fox, The Boar And His Tusks",64,3,2,0.0028,489.8
+215,The Lion And The Boar At The Spring,104,2,1,0.0014,281.8
+216,The Lioness And The Wild Boar,65,1,1,0.0014,434.2
+217,The Drowning Boy,88,0,0,0.0000,433.7
+218,The Farmer'S Boy And The Snails,31,3,2,0.0028,295.7
+219,The Boys And The Butcher,115,0,0,0.0000,440.2
+220,The Fir Tree And The Bramble Bush,92,0,0,0.0000,370.7
+221,The Children And The Mirror,180,0,0,0.0000,480.6
+222,The Gnat And The Camel,76,1,0,0.0000,376.4
+223,The Sick Man And The Gods,215,1,1,0.0014,394.1
+224,The Bull And The Calf,53,0,0,0.0000,429.7
+225,The Gnat And The Bull,107,1,1,0.0014,311.4
+226,The Bull And The Goats,60,1,1,0.0014,277.2
+227,The Dolphin And The Lion,137,0,0,0.0000,269.9
+228,The Two Bulls And The Lion,89,0,0,0.0000,439.3
+229,"The Lion, The Bull And His Horns",195,0,0,0.0000,160.6
+230,The Lion And The Two Men,126,1,1,0.0014,325.6
+231,The Dog And The Reeds,59,1,0,0.0000,270.8
+232,The Butcher And The Dog,57,0,0,0.0000,342.4
+233,The Monkey And The Camel,58,1,1,0.0014,330.9
+234,The Camel And The People,75,1,1,0.0014,365.2
+235,Zeus And The Camel,28,3,3,0.0042,340.6
+236,"The Night-Owl, The Cat And The Mouse",164,0,0,0.0000,285.3
+237,"The Cat, The Mouse And The Oath",172,2,1,0.0014,360.1
+238,The Cat And The Rooster,141,3,2,0.0028,300.3
+239,The Cat And The Stork,165,1,1,0.0014,263.4
+240,"The Eagle, The Sow And The Cat",296,0,0,0.0000,288.1
+241,The Man And The Cat,49,4,4,0.0056,236.5
+242,The Fox And The Goat In The Well,97,0,0,0.0000,240.7
+243,The Fox And The Stork,105,0,0,0.0000,441.8
+244,The Lion And The Man Disputing,124,1,0,0.0000,476.1
+245,The Viper And The File,48,2,2,0.0028,232.2
+246,The Charcoal Burner And The Fuller,59,1,0,0.0000,393.3
+247,"The Two Men, The Eagle And The Fox",114,1,1,0.0014,342.9
+248,The Cicada And The Fox,139,2,2,0.0028,259.5
+249,The Man And The Insect,39,0,0,0.0000,200.2
+250,The Eagle And The Farmer,133,3,2,0.0028,583.9
+251,The Monkey And The Lion's Breath,280,2,2,0.0028,335.4
+252,The City Mouse And The Country Mouse,218,2,1,0.0014,382.4
+253,"The Clown, The Farmer And The Pig",421,1,0,0.0000,272.1
+254,Hermes And The Cobblers,87,3,3,0.0042,408.2
+255,The Cobbler And The King,177,1,1,0.0014,350.6
+256,The Farmer And The Pig,221,1,1,0.0014,411.3
+257,"The Lion, The Cow, The She-Goat And The Sheep",99,0,0,0.0000,331.4
+258,The Coward And The Lion Of Gold,188,0,0,0.0000,277.9
+259,The Coward And The Ravens,70,2,1,0.0014,342.4
+260,The Crab On Dry Land,57,0,0,0.0000,231.3
+261,The Crane And The Crow,257,3,3,0.0042,357.0
+262,The Crane And The Peacock,78,1,0,0.0000,481.4
+263,The Boy And The Scorpion,81,2,2,0.0028,261.6
+264,The Donkey And The Cricket,79,1,1,0.0014,296.5
+265,The Dogs And The Crocodiles,78,2,2,0.0028,260.7
+266,The Murderer And The Nile,59,1,1,0.0014,388.5
+267,"The Birds, The Peacock And His Feathers",172,1,1,0.0014,265.1
+268,The Jackdaw And The Peacocks,135,0,0,0.0000,380.4
+269,Hermes And Tiresias,168,1,1,0.0014,298.9
+270,Juno And The Peacock,166,4,3,0.0042,361.8
+271,"The Crow, The Eagle And The Feathers",126,0,0,0.0000,391.0
+272,The Dove And The Crow,43,0,0,0.0000,487.6
+273,The Travellers And The Crow,78,1,0,0.0000,247.8
+274,The Eagle And The Crow,161,0,0,0.0000,294.8
+275,The Eagle And The Crow,347,2,1,0.0014,289.7
+276,The Cyclops And His Treasure,192,0,0,0.0000,347.7
+277,The Woman And Her Two Daughters,179,1,0,0.0000,398.6
+278,The Poor Man And Death,77,0,0,0.0000,230.1
+279,"The Lion, The Hare And The Deer",119,0,0,0.0000,395.3
+280,The Deer And Her Friends,72,1,1,0.0014,335.9
+281,The Deer And The Lion,70,0,0,0.0000,278.2
+282,The Deer And The Vine,70,1,0,0.0000,388.7
+283,The Hunters And The Deer With One Eye,86,1,1,0.0014,344.1
+284,"The Man, The Pig And The Miracle",148,2,1,0.0014,378.0
+285,Diogenes And The Ferryman,142,1,0,0.0000,450.4
+286,The Patient And His Symptoms,105,0,0,0.0000,366.8
+287,The Old Woman And Her Doctor,179,1,1,0.0014,332.1
+288,The Doctor At The Funeral,78,1,0,0.0000,362.4
+289,"The Donkey, The Dog And The Letter",129,1,0,0.0000,262.1
+290,The Dog And The Lion,55,2,2,0.0028,318.4
+291,"The Fox, The Lamb And The Dog",56,0,0,0.0000,423.9
+292,The Wolves And The Hides,71,3,2,0.0028,318.3
+293,"The Shepherd, The Dog And The Sick Sheep",69,1,1,0.0014,349.8
+294,The Donkey And The Pet Dog,241,0,0,0.0000,272.2
+295,The Farmer And His Dogs,85,0,0,0.0000,215.4
+296,The Wolves And The Dogs,152,1,1,0.0014,267.2
+297,The Mother Dog And Her Puppies,102,1,1,0.0014,318.7
+298,"The Dog, The Meat And The Reflection",140,2,2,0.0028,369.7
+299,"The Fox, The Rooster And The Dog",166,0,0,0.0000,283.8
+300,The Dog And The Lamb Among The Goats,224,1,1,0.0014,507.2
+301,"The Sheep, The Dog And The Wolf",106,2,1,0.0014,452.0
+302,"The Sheep, The Dog And The Witnesses",142,1,0,0.0000,342.5
+303,The Dog And The Shellfish,65,1,1,0.0014,371.7
+304,"The Sow, The Dog And Their Litters",41,0,0,0.0000,459.6
+305,The Dog And The Treasure,99,0,0,0.0000,378.9
+306,The Wolf And The Sleeping Dog,138,0,0,0.0000,315.9
+307,The Wolf And The Dog In Pursuit,71,1,0,0.0000,420.4
+308,The Dog And The Gardener,80,0,0,0.0000,446.1
+309,The Dog And The Hare,54,0,0,0.0000,388.6
+310,The Dog-Catcher And The Dog,39,1,1,0.0014,391.0
+311,The Hunting Dog And The Watch Dog,94,0,0,0.0000,483.2
+312,"The Wolves, The Sheep And The Dogs",106,0,0,0.0000,259.5
+313,The Tuna Fish And The Dolphin,88,1,0,0.0000,301.3
+314,The Wolf And The Raven,99,1,1,0.0014,196.3
+315,"The Fox, The Donkey And The Lion",90,1,0,0.0000,399.5
+316,"The Fox, The Donkey And The Lion Skin",62,2,1,0.0014,347.1
+317,The Goat And The Donkey,150,6,5,0.0071,348.9
+318,"The Donkey, The Horse And The War",118,0,0,0.0000,382.4
+319,The Donkey And The Horse,126,1,0,0.0000,475.1
+320,"The Donkey, The Horse And The Barley",90,1,0,0.0000,426.1
+321,The Donkey And The Lion Go Hunting,139,0,0,0.0000,307.8
+322,The Donkey And The Lyre,65,2,1,0.0014,407.8
+323,The Donkey And The Mule,152,2,2,0.0028,404.1
+324,The Donkey And His Masters,144,1,1,0.0014,375.5
+325,"The Donkey, The Onager And The Lion",103,1,1,0.0014,354.8
+326,"The Old Man, The Donkey And The Pack Saddles",99,1,0,0.0000,327.2
+327,The Man And The New Donkey,119,1,0,0.0000,460.7
+328,"The Pig, The Donkey And The Barley",87,1,1,0.0014,279.4
+329,Zeus And The Donkeys,88,0,0,0.0000,276.8
+330,"The Lion, The Rooster And The Donkey",94,0,0,0.0000,332.4
+331,The Driver And The Donkey On The Cliff,84,3,2,0.0028,264.0
+332,The Jackdaw And The Doves,114,4,4,0.0056,275.0
+333,The Fox And The Dragon,180,0,0,0.0000,419.3
+334,The Piece Of Driftwood,129,2,1,0.0014,462.4
+335,The Woman And Her Drunken Husband,179,2,1,0.0014,394.0
+336,The Peacock Elected King Of The Birds,92,1,0,0.0000,420.8
+337,The Hares And The Foxes,45,3,3,0.0042,286.0
+338,The Two Roosters And The Eagle,48,1,1,0.0014,468.7
+339,The Eagle And The Fox,192,0,0,0.0000,429.8
+340,The Hare And The Sparrow,111,1,1,0.0014,322.7
+341,The Eagle And The Kite,213,2,2,0.0028,304.6
+342,The Earthworm And The Snake,44,0,0,0.0000,363.5
+343,The Two Enemies,104,2,1,0.0014,268.0
+344,"The Farmer, The Wolf And The Plow",109,0,0,0.0000,349.9
+345,The Race Horse In The Mill,60,0,0,0.0000,382.2
+346,The Eunuch And His Accuser,81,1,1,0.0014,294.0
+347,The Kite And The Partridges,120,3,2,0.0028,284.1
+348,The Stag Among The Cattle,295,1,1,0.0014,256.3
+349,The Farmer And The Fox,67,3,2,0.0028,405.5
+350,The Lion And The Farmer,93,0,0,0.0000,216.1
+351,"The Farmer, The Wasps And The Partridges",95,0,0,0.0000,364.0
+352,"The Farmer, The Cattle And The Manure",134,0,0,0.0000,386.4
+353,The Snake And The Farmer,138,1,1,0.0014,364.8
+354,The Snake And The Farmer,210,0,0,0.0000,350.6
+355,The Wolves And The Harvesters,229,0,0,0.0000,448.3
+356,The Farmer And His Sons,178,1,0,0.0000,502.0
+357,"The Father, The Son And The Lion",279,1,1,0.0014,367.5
+358,The Fisherman And The Fish,59,3,2,0.0028,299.0
+359,The Monkey And The Fishing Net,109,2,1,0.0014,367.9
+360,The Fishermen And The Stone,122,1,1,0.0014,486.8
+361,The Fishermen And The Tuna Fish,60,2,1,0.0014,394.4
+362,The Fisherman And The River,104,0,0,0.0000,197.2
+363,The Flea And The Ox,104,0,0,0.0000,264.1
+364,The Man And The Flea,102,1,0,0.0000,414.9
+365,The Flies And The Honey,53,0,0,0.0000,338.5
+366,The Fly And The Mule,105,3,2,0.0028,359.5
+367,"The Man, The Mare And The Foal",97,0,0,0.0000,543.0
+368,Hercules And Plutus,76,0,0,0.0000,408.0
+369,The Horse And The Miller,132,2,2,0.0028,342.8
+370,The Fox And The Mask,31,3,2,0.0028,477.1
+371,The Tortoise And The Hare,113,3,2,0.0028,530.2
+372,The Snake And The Thorn Bush,68,0,0,0.0000,327.6
+373,The Fox And The Grapes,48,1,0,0.0000,274.7
+374,The Hare And The Fox,90,0,0,0.0000,384.8
+375,The Fox And The Hare In The Well,87,4,4,0.0056,428.6
+376,The Fox And The Hyena,61,1,0,0.0000,438.1
+377,The Sow And The Lioness,40,3,2,0.0028,519.4
+378,The Fox And The Lion In A Cage,41,1,1,0.0014,290.6
+379,"The Fox, The Lion And The Footprints",79,0,0,0.0000,232.0
+380,"The Fox, The Monkey And His Ancestors",70,2,1,0.0014,385.1
+381,"The Fox, The Moon And The River",71,3,2,0.0028,308.9
+382,The Fox And The Partridge,147,1,0,0.0000,249.4
+383,"The Wolf, The Fox And The Shepherd",241,0,0,0.0000,394.0
+384,The Foxes And Their Tails,129,3,2,0.0028,251.9
+385,The Fox And The Lion,61,2,1,0.0014,415.0
+386,"The Wolf, The Fox And The Ailing Lion",198,0,0,0.0000,267.0
+387,Tiberius Caesar And His Attendant,202,1,0,0.0000,484.2
+388,The Lion And The Frog,54,1,0,0.0000,366.5
+389,The Two Frogs By The Road,107,0,0,0.0000,318.6
+390,The Frog And The Mouse,108,0,0,0.0000,455.0
+391,The Frogs And The Battle Of The Bulls,115,3,2,0.0028,309.4
+392,"The Water-Snake, The Viper And The Frogs",206,1,0,0.0000,385.8
+393,The Two Frogs At The Well,61,4,3,0.0042,401.7
+394,Hermes And The Earth,74,1,0,0.0000,424.8
+395,The Goat And The Vine,80,0,0,0.0000,435.9
+396,Jupiter And The Goats,65,0,0,0.0000,425.7
+397,The Swans And The Geese,60,0,0,0.0000,251.4
+398,The Goose And The Stork,144,1,0,0.0000,333.0
+399,The Halcyon And The Sea,149,3,3,0.0042,220.0
+400,The Hunter And The Horseman,94,0,0,0.0000,224.8
+401,Jupiter And The Hare,132,0,0,0.0000,289.8
+402,The Roosters And The Hawk,104,0,0,0.0000,402.4
+403,The Hawk And The Nightingale,104,0,0,0.0000,291.6
+404,The Widow And Her Hen,55,1,1,0.0014,352.6
+405,The Hen And The Eggs,50,0,0,0.0000,334.3
+406,Hermes And The Statues,122,3,2,0.0028,331.9
+407,Hermes And The Dose Of Intelligence,72,1,0,0.0000,510.8
+408,"The Man, Hermes And The Axes",269,2,1,0.0014,497.8
+409,The Traveller And Hermes,81,0,0,0.0000,402.7
+410,The Man And The Statue Of Hermes,91,0,0,0.0000,324.5
+411,The Man And The Hero,57,1,0,0.0000,301.9
+412,The Cowhide And The River,53,0,0,0.0000,397.7
+413,The Mountain In Labour,30,0,0,0.0000,459.2
+414,The Oath's Punishment,217,3,2,0.0028,451.8
+415,"The Wolf, The Horse And The Barley",99,0,0,0.0000,292.1
+416,The Hunter And The Wolf,60,0,0,0.0000,370.5
+417,"The Man, His Wife And The Boy Outside",144,2,1,0.0014,344.5
+418,The Two Hyenas,64,1,1,0.0014,394.0
+419,The Jackdaw And The String,106,0,0,0.0000,200.1
+420,The Lion And The Unicorn,280,5,4,0.0056,376.9
+421,"The Kid, The Wolf And The Flute",117,0,0,0.0000,316.2
+422,"The She-Goat, The Kid And The Wolf",97,0,0,0.0000,361.8
+423,The Seagull And The Kite,48,0,0,0.0000,280.7
+424,The Sheep And The Injured Wolf,88,1,1,0.0014,325.1
+425,The Rooster And The Thieves,81,0,0,0.0000,284.8
+426,The Pigeon And The Painting,100,3,3,0.0042,321.8
+427,The Lark In The Snare,45,3,2,0.0028,312.0
+428,A Lark in A Net,56,0,0,0.0000,273.1
+429,The Monkeys And The Two Men,317,0,0,0.0000,358.5
+430,The Lion And The Mouse,170,2,1,0.0014,576.3
+431,The Shepherd And The Lion,147,4,3,0.0042,320.0
+432,The Wolf And The Lion,65,3,2,0.0028,429.8
+433,The Lizard And The Snake,34,0,0,0.0000,336.1
+434,Zeus And Man,122,0,0,0.0000,455.3
+435,The Maids And The Rooster,102,0,0,0.0000,240.6
+436,The Merchant And The Ravens,80,1,1,0.0014,277.1
+437,The Snail And The Mirror,81,1,0,0.0000,312.1
+438,The Man And His Gold,129,2,1,0.0014,425.9
+439,The Mole And The Frankincense,69,2,1,0.0014,333.1
+440,The Mole And His Mother,65,1,1,0.0014,360.8
+441,The Monkey And The Nut,29,0,0,0.0000,267.5
+442,The Monkey And Her Two Children,57,0,0,0.0000,499.8
+443,The Thief And His Mother,179,0,0,0.0000,555.1
+444,"The Snake, The Weasel And The Mice",76,0,0,0.0000,275.6
+445,The Mice And The Weasel,141,1,1,0.0014,312.7
+446,The Murderer And The Mulberry Tree,104,0,0,0.0000,372.3
+447,The Two Mules,151,2,1,0.0014,382.9
+448,The Musician At Home,79,0,0,0.0000,472.0
+449,The Swallow And The Nightingale,50,2,1,0.0014,386.2
+450,The North Wind And The Sun,131,2,1,0.0014,397.7
+451,The Old Woman And The Wine Jar,62,2,1,0.0014,504.6
+452,The Man And The Old Woman,205,0,0,0.0000,241.0
+453,The Ostrich,38,1,1,0.0014,368.4
+454,The Panther And The People,221,1,1,0.0014,475.6
+455,The Partridge And The Roosters,95,1,0,0.0000,262.2
+456,The Widow And Her Lover,315,0,0,0.0000,464.4
+457,The Pine Tree And The Wedges,62,1,0,0.0000,405.7
+458,The Swan And His Owner,125,2,1,0.0014,346.3
+459,The Wolf And The Shepherd,145,0,0,0.0000,405.4
+460,The Woman In Labour,69,0,0,0.0000,355.1
+461,"The Wolf, The Raven And The Ram",78,1,1,0.0014,230.2
+462,The Raven And The Snake,57,0,0,0.0000,328.6
+463,"The Raven, The Stork And His Beak",111,0,0,0.0000,385.4
+464,"The Raven, The Swallow And The Seasons",59,0,0,0.0000,478.6
+465,The Thief And The Lamp,153,2,2,0.0028,449.7
+466,The Rich Man And The Tanner,77,0,0,0.0000,438.4
+467,The Rich Man And The Tanner,56,0,0,0.0000,377.7
+468,The Rivers And The Sea,58,0,0,0.0000,241.0
+469,The Two Soldiers And The Robber,169,1,0,0.0000,426.3
+470,The Sailors And The Stones,72,0,0,0.0000,290.9
+471,Jupiter and Modesty,96,1,0,0.0000,387.0
+472,"The Sheep, The Shepherd And His Cloak",99,0,0,0.0000,410.8
+473,The Shepherd And The Wolf Cub,59,1,1,0.0014,441.0
+474,The Snake And The Wasp,62,0,0,0.0000,364.8
+475,Zeus And The Snake,58,1,1,0.0014,383.4
+476,The Soothsayer And The Theft,88,1,1,0.0014,349.4
+477,The Stag And His Reflection,142,0,0,0.0000,286.8
+478,Zeus And The Tortoise,64,1,0,0.0000,406.7
+479,The Man And The Weasel,107,2,1,0.0014,486.9
+480,The Witch On Trial,86,1,1,0.0014,344.2
+481,The Monk And The Abbots,223,0,0,0.0000,351.8
+482,The Ants And The Pigs,36,2,1,0.0014,449.3
+483,The Dog In The Manger,96,2,1,0.0014,343.1
+484,The Goat And His Reflection,221,1,1,0.0014,266.2
+485,The Lion And The Horse,197,1,1,0.0014,293.6
+486,The Wolf And The Nurse,82,5,4,0.0056,277.7
+487,The Dogs And Their Commander,189,1,0,0.0000,421.1
+488,"The Merchant, The Donkey And The Salt",232,2,2,0.0028,251.5
+489,Aesop And His Ugly Mistress,209,1,0,0.0000,335.5
+490,Aesop And The Runaway Slave,248,1,1,0.0014,273.5
+491,Momus And The Gods,159,1,0,0.0000,390.6
+492,The Statue Of Hermes And The Treasure,104,0,0,0.0000,336.1
+493,The Camel In The River,48,0,0,0.0000,401.3
+494,The Bride And The Two Grooms,405,2,1,0.0014,275.4
+495,Aphrodite And The Slave-Woman,133,2,1,0.0014,424.0
+496,Pompey And His Soldier,426,0,0,0.0000,261.4
+497,The Young Man And The Swallow,190,1,0,0.0000,405.0
+498,The Bull And The Bullock,178,0,0,0.0000,320.5
+499,The Bear And The Fox,86,0,0,0.0000,445.6
+500,The Beauty Contest Of The Animals,89,1,0,0.0000,572.2
+501,The Dog And His Bell,84,2,1,0.0014,461.5
+502,The Bulls And The Wagon,64,3,2,0.0028,408.7
+503,The Oxen And The Butcher,109,0,0,0.0000,274.2
+504,The Rooster And The Cats,82,0,0,0.0000,289.0
+505,"The Wolf, The Dog And The Collar",115,0,0,0.0000,393.2
+506,The Dolphins And The Whales,69,1,1,0.0014,310.4
+507,The Wolf And The Lame Donkey,196,0,0,0.0000,245.7
+508,The Jackdaw And The Eagle,83,2,2,0.0028,356.8
+509,The Farmer And The Sea,138,1,1,0.0014,321.0
+510,The Farmer And The Birds,259,0,0,0.0000,411.6
+511,The Old Man And His Sons,154,3,2,0.0028,507.1
+512,The Lizard And The Snake,71,1,1,0.0014,357.6
+513,The Monkey And The Fox,58,2,1,0.0014,353.1
+514,The Horse And His Groom,54,0,0,0.0000,463.8
+515,Mercury And The Two Women,188,2,2,0.0028,427.1
+516,The Mouse In The Pot,55,0,0,0.0000,375.0
+517,The Sow And The Wolf,89,1,0,0.0000,398.2
+518,The Young Man And The Prostitute,85,1,1,0.0014,331.5
+519,The Ram And The Wolf,44,0,0,0.0000,360.4
+520,Socrates And The Slave,72,0,0,0.0000,222.5
+521,The Sick Man And His Wife,106,2,1,0.0014,365.2
+522,The Oak Tree And The Reed,77,0,0,0.0000,334.3
+523,"The Sheep, The Goat And The Sow",85,1,1,0.0014,236.3
+524,The Lion And The Farmer's Daughter,96,1,1,0.0014,248.9
+525,The Stork And The Cranes,80,2,1,0.0014,439.8
+526,The Goatherd And The Goat,83,3,2,0.0028,361.2
+527,The Crab And His Mother,62,2,1,0.0014,448.0
+528,The Kite And His Mother,93,0,0,0.0000,267.7
+529,The Deer And His Mother,85,0,0,0.0000,315.3
+530,"The Farmers, The Donkey And The Lion Skin",81,0,0,0.0000,433.5
+531,The Wolf And The Donkey,38,0,0,0.0000,308.3
+532,The Fox And The Lion Hunting,96,3,3,0.0042,280.5
+533,"The Snake, The Eagle And The Farmer",78,0,0,0.0000,507.9
+534,The Bird Catcher And The Cricket,40,0,0,0.0000,484.2
+535,The Goose And The Swan,86,0,0,0.0000,228.2
+536,The Shepherd And The Honeybees,60,1,1,0.0014,354.0
+537,The Thief And The Innkeeper,303,0,0,0.0000,266.4
+538,The Doves And The Kite,141,8,7,0.0099,283.7
+539,Augustus And The Murder,472,1,1,0.0014,290.7
+540,The Mother And Her Three Daughters,516,0,0,0.0000,300.4
+541,The Butcher And The Flock,163,1,0,0.0000,400.1
+542,"The Birds, The Bird Catcher And His Tears",188,0,0,0.0000,412.3
+543,The Horse And The Goats,47,0,0,0.0000,316.6
+544,The Man And The Sword,39,1,0,0.0000,367.2
+545,The Wolf and the Lamb,128,0,0,0.0000,307.3
+546,The Butcher and the Ape,81,3,2,0.0028,411.8
+547,The Dog and the Wolf,290,3,2,0.0028,380.6
+548,The Horse and the Wild Boar,124,0,0,0.0000,262.6
+549,The Battle of the Mice and the Weasels,91,1,1,0.0014,323.5
+550,Of the Vices of Men,60,3,2,0.0028,466.5
+551,The Embassy of the Dogs to Jupiter,374,1,0,0.0000,197.1
+552,The Frogs asking for a King,286,0,0,0.0000,213.8
+553,The Pilot and the Mariners,78,0,0,0.0000,403.6
+554,The Man and the Ass,67,0,0,0.0000,286.5
+555,The Author,135,3,3,0.0042,370.1
+556,Prometheus and Cunning,197,0,0,0.0000,472.1
+557,The signification of the Punishments of Tartarus,150,1,1,0.0014,349.2
+558,The Chariot Horse sold for the Mill,88,0,0,0.0000,417.2
+559,The Gardener and His Master,188,1,0,0.0000,366.0
+560,The Magic Colours,333,0,0,0.0000,522.0
+561,The Eagle and The Beetle,193,1,1,0.0014,362.0
+562,The Cat and The Birds,93,3,3,0.0042,300.3
+563,The Fox and The Leopard,51,1,1,0.0014,491.2
+564,The Fisherman and The Little Fish,107,0,0,0.0000,287.3
+565,The Swollen Fox,102,0,0,0.0000,218.0
+566,The Astrologer,193,1,0,0.0000,470.9
+567,The boy and the tripe,109,0,0,0.0000,378.3
+568,The Ploughman and Fortune,74,0,0,0.0000,399.5
+569,"Zeus and Apollo, A Contest in Archery",110,4,4,0.0056,351.7
+570,Man's Years,205,1,0,0.0000,413.1
+571,The Jackdaw and The Fox,70,0,0,0.0000,377.8
+572,The Lion and The Bull,181,2,2,0.0028,391.0
+573,"The wolf, the fox and three true things",89,1,0,0.0000,219.8
+574,The Baby and the Crow,119,1,0,0.0000,410.2
+575,The Donkey and the Ox,126,1,0,0.0000,339.8
+576,A Wild Ass and A Tame,123,1,1,0.0014,330.8
+577,The Hired Mourners,72,1,0,0.0000,427.6
+578,"The Swallow, The Serpent, and The Court of Justice",78,0,0,0.0000,289.2
+579,The Weasel and the Partridge,130,3,2,0.0028,338.5
+580,The Gnat and The Lion,179,0,0,0.0000,376.2
+581,The Wolf and his Shadow,91,2,2,0.0028,415.0
+582,The Wolf and the Sheep in the Sheepfold,116,0,0,0.0000,267.4
+583,The Stake and the Wall,44,0,0,0.0000,394.6
+584,Winter and Spring,196,3,2,0.0028,381.7
+585,The Camel and The Arab,49,3,2,0.0028,277.8
+586,The Husbandman That Lost His Mattock,199,0,0,0.0000,208.2
+587,"The Philosopher, The Ants, and Mercury",125,2,2,0.0028,394.3
+588,Hermes and the Dog,98,1,0,0.0000,302.2
+589,The Judgments of Zeus,71,0,0,0.0000,508.7
+590,The Sun and the Frogs,76,0,0,0.0000,328.1
+591,The Soldier and His Horse,121,0,0,0.0000,321.5
+592,The Circus Dogs and the Street Dogs,116,1,0,0.0000,343.1
+593,The Kingdom of The Lion,124,0,0,0.0000,313.2
+594,"The Lion, The Fox and the Deer",1132,0,0,0.0000,188.3
+595,"The Lion, The Fox and the Monkey serving dinner",334,2,2,0.0028,299.4
+596,The Wolf and The Fox,108,0,0,0.0000,395.9
+597,"The Wolf, the Fox and the Gift",115,0,0,0.0000,427.9
+598,The Lamp,62,3,3,0.0042,430.6
+599,The Wolf and The Ass,137,1,1,0.0014,372.5
+600,The Mouse and The Bull,107,1,0,0.0000,338.5
+601,Truth and The Traveler,71,0,0,0.0000,426.8
+602,The Sheep and The Dog,115,1,1,0.0014,380.9
+603,The Playful Ass,63,0,0,0.0000,276.8
+604,The Tail of the Serpent,134,0,0,0.0000,283.0
+605,The Shepherd and The Dog,45,0,0,0.0000,304.4
+606,Prometheus and the two roads,124,0,0,0.0000,514.6
+607,The Mouse and The Frog,99,2,2,0.0028,244.1
+608,The fisherman and the octopus,43,1,0,0.0000,305.2
+609,The Fox and the Man counting waves,74,2,1,0.0014,471.2
+610,Prometheus and the tears,31,3,2,0.0028,423.8
+611,The Owl and The Birds,187,3,2,0.0028,255.7
+612,The Jar goes to Court,54,1,1,0.0014,256.7
+613,Orpheus and the Dogs,101,1,1,0.0014,444.2
+614,The Dog's House,73,0,0,0.0000,317.2
+615,The Assembly of Beasts,113,0,0,0.0000,308.6
+616,The Mouse and the Oyster,69,1,1,0.0014,339.5
+617,The Eyes and the Honey,71,1,1,0.0014,220.1
+618,Aesop and the Athlete,99,2,2,0.0028,461.0
+619,The Crow and The Sheep,85,0,0,0.0000,270.1
+620,The Fox and the Ground-Bird,155,1,1,0.0014,288.2
+621,The Thief and The Boy,108,0,0,0.0000,316.8
+622,The River Fish and The Sea Fish,143,0,0,0.0000,351.5
+623,The Rustic seeking to Cross a River,56,0,0,0.0000,469.1
+624,A Mouse in a Chest,70,2,1,0.0014,466.7
+625,A Husband-man and Ceres,63,3,2,0.0028,232.7
+626,A Country-man and a Hawk,64,1,1,0.0014,466.5
+627,A Swallow and a Spider,62,2,2,0.0028,273.5
+628,A Pigeon and a Pye,37,0,0,0.0000,277.6
+629,A Cuckow and a Hawk,94,0,0,0.0000,301.5
+630,A Fox and a Knot of Gossips,79,1,0,0.0000,327.5
+631,Capons Fat and Lean,81,0,0,0.0000,275.8
+632,Oxen and a Piece of Timber,70,1,1,0.0014,298.7
+633,Trees Straight and Crooked,68,0,0,0.0000,357.1
+634,A Swan and a Stork,60,1,0,0.0000,424.0
+635,A Wench parting with her Sweetheart,83,1,0,0.0000,397.0
+636,A Fly upon a Wheel,28,1,1,0.0014,416.3
+637,An Eele and a Snake,49,1,0,0.0000,292.8
+638,"The monkey, donkey and mole",36,2,2,0.0028,347.1
+639,Seamen Praying to Saints,72,0,0,0.0000,419.1
+640,The Fishes and the Frying-Pan,45,1,1,0.0014,239.3
+641,A League of Beasts and Fishes,32,0,0,0.0000,290.9
+642,A Covetous Ambassador,93,0,0,0.0000,294.9
+643,An Old Friend and a Cardinal,102,1,0,0.0000,391.5
+644,A Young Droll and a Crooked Old Man,52,1,0,0.0000,358.5
+645,An Old Fellow and a Young Wench,78,3,2,0.0028,404.7
+646,An Eagle and a Pye,110,2,1,0.0014,351.2
+647,Town-Dogs and Country-Dogs,97,0,0,0.0000,256.0
+648,An Old Woman and the Devil,177,3,2,0.0028,363.7
+649,The Frogs and Tortoises,60,0,0,0.0000,364.0
+650,The Mice and the Oak,59,0,0,0.0000,290.4
+651,A Run-away Dog and his Master,111,1,0,0.0000,411.5
+652,The Birds and Beetles,70,1,0,0.0000,321.2
+653,A Bear and Bees,57,1,0,0.0000,415.2
+654,A Fowler and a Chaffinch,115,3,3,0.0042,387.5
+655,A Soldier and two Horses,58,0,0,0.0000,455.9
+656,A Spaniel and a Sow,49,0,0,0.0000,386.6
+657,Oxen and Timber,78,0,0,0.0000,269.3
+658,A Goldfinch and a Boy,58,0,0,0.0000,390.9
+659,A Lapwing Preferr'd,59,1,1,0.0014,451.5
+660,A Priest and Pears,155,0,0,0.0000,260.5
+661,A Horse and a Hog,73,1,0,0.0000,326.2
+662,A Hunts-man and a Currier,174,0,0,0.0000,392.8
+663,A Hermit and a Soldier,74,0,0,0.0000,296.2
+664,A Husband and Wife twice Married,162,1,1,0.0014,295.0
+665,A Lion and a Mouse,77,1,0,0.0000,339.1
+666,Wax and Brick,71,0,0,0.0000,365.8
+667,A Husbandman turn'd Soldier and Merchant,182,1,1,0.0014,460.6
+668,An Ass puts in for an Office,92,0,0,0.0000,348.8
+669,A River and a Fountain,133,0,0,0.0000,377.5
+670,A Wicked Man and the Devil,115,0,0,0.0000,342.2
+671,A Council of Birds for Chusing more Kings,82,2,1,0.0014,405.8
+672,A Woman that would needs Die for her Husband,84,1,1,0.0014,220.4
+673,A Son Singing at his Mother's Funeral,97,1,1,0.0014,332.7
+674,A Man that would not take a Clyster,101,2,2,0.0028,224.8
+675,A Wolf and a Sick Ass,52,2,1,0.0014,305.5
+676,The Ass's Wish,223,0,0,0.0000,340.4
+677,A Cat and Mice,91,5,5,0.0071,416.5
+678,A Wolf and a Porcupine,110,0,0,0.0000,248.3
+679,A Mouse and a Kite,47,1,1,0.0014,411.1
+680,A Cockle and Jupiter,55,0,0,0.0000,323.2
+681,A Hedge-Hog and a Snake,72,1,1,0.0014,242.1
+682,A Fox and a Hare,67,1,1,0.0014,420.5
+683,An Old Man resolv'd to give over Whoring,71,2,1,0.0014,292.1
+684,An Impertinent and a Philosopher,49,1,0,0.0000,414.4
+685,A Wolfe in a Sheeps-Skin,85,1,1,0.0014,445.0
+686,A Widow and a Green Ass,181,2,1,0.0014,389.7
+687,A Sheep-Biter Hang'd,162,3,2,0.0028,409.6
+688,A Bull and a Ram,70,0,0,0.0000,413.1
+689,An Incorrigible Son,92,2,1,0.0014,300.1
+690,An Eagle and Rabbets,176,0,0,0.0000,443.8
+691,A Pike sets up for Sovereignty,89,0,0,0.0000,449.3
+692,A Sheep picks a Quarrel with a Shepherd,89,0,0,0.0000,208.5
+693,A Creaking Wheel,42,0,0,0.0000,344.0
+694,A Man had a mind to try his Friends,107,2,2,0.0028,443.6
+695,A Fox Praising Hare's Flesh,130,0,0,0.0000,279.4
+696,About the hare seeking cunning and the fox seeking swiftness from Jupiter,78,0,0,0.0000,318.3
+697,A Plain Horse wins the Prize,121,1,1,0.0014,408.5
+698,A Country-man and a Kid,110,1,0,0.0000,363.3
+699,A Weak Young Man and a Wolfe,149,3,2,0.0028,387.5
+700,A Lad Robbing an Orchard,99,2,2,0.0028,314.7
+701,A Nightingale and a Hawk,95,0,0,0.0000,267.4
+702,A Lion and a Hog,73,0,0,0.0000,420.3
+703,A Gnat and a Bee,56,1,0,0.0000,418.4
+704,"A Lion, Ass, and Hare",83,2,1,0.0014,390.0
+705,Pigeons Reconcile the Hawks,83,0,0,0.0000,279.6
+706,An Old Man that was willing to put off Death,196,3,2,0.0028,384.4
+707,A Miser and his Bags,93,2,1,0.0014,497.5
+708,The Elm and the Willow,115,0,0,0.0000,319.4

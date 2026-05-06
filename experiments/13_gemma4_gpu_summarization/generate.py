@@ -83,6 +83,28 @@ def load_model_and_processor(model_cfg: dict):
     if model_cfg.get("load_in_4bit"):
         from transformers import BitsAndBytesConfig
         load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_4bit=True)
+        # bitsandbytes 4-bit cannot offload to CPU. Set max_memory explicitly so
+        # device_map="auto" plans purely within GPU and never touches CPU/disk.
+        n_gpus = torch.cuda.device_count()
+        load_kwargs["max_memory"] = {i: "22GiB" for i in range(n_gpus)}
+    elif model_cfg.get("load_in_8bit"):
+        from accelerate import init_empty_weights, infer_auto_device_map
+        from transformers import AutoConfig, BitsAndBytesConfig
+        # device_map="auto" plans at bf16 sizes (too large); pre-compute at int8 size
+        # so all layers land on GPU and bitsandbytes validator doesn't reject the map.
+        n_gpus = torch.cuda.device_count()
+        max_mem = {i: "22GiB" for i in range(n_gpus)}
+        _cfg = AutoConfig.from_pretrained(model_cfg["id"])
+        with init_empty_weights():
+            _empty = model_class.from_config(_cfg)
+        _no_split = getattr(_empty, "_no_split_modules", None)
+        _device_map = infer_auto_device_map(
+            _empty, max_memory=max_mem, dtype=torch.int8,
+            no_split_module_classes=_no_split,
+        )
+        del _empty
+        load_kwargs["quantization_config"] = BitsAndBytesConfig(load_in_8bit=True)
+        load_kwargs["device_map"] = _device_map
 
     model     = model_class.from_pretrained(model_cfg["id"], **load_kwargs)
     tokenizer = AutoTokenizer.from_pretrained(model_cfg["id"])

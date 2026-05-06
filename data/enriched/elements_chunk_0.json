@@ -1,0 +1,1715 @@
+[
+  {
+    "doc_id": "fable_0000",
+    "title": "Androcles",
+    "themes": ["gratitude", "kindness", "friendship", "compassion"],
+    "characters": ["slave", "lion", "emperor", "servants"],
+    "character_roles": {
+      "androcles": "protagonist",
+      "lion": "helper",
+      "emperor": "judge"
+    },
+    "narrative_elements": [
+      "slave escapes and heals wounded lion in forest",
+      "lion shelters and feeds androcles in cave",
+      "both captured and sentenced to arena spectacle",
+      "lion recognizes androcles and shows affection, leading to his pardon"
+    ],
+    "setting": "forest",
+    "moral_category": "friendship",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0001",
+    "title": "The Ant and the Chrysalis",
+    "themes": ["humility", "patience", "transformation", "vanity"],
+    "characters": ["ant", "chrysalis", "butterfly"],
+    "character_roles": {
+      "ant": "antagonist",
+      "chrysalis": "protagonist",
+      "butterfly": "protagonist"
+    },
+    "narrative_elements": [
+      "ant mocks imprisoned chrysalis for its immobility",
+      "chrysalis endures taunts without reply",
+      "chrysalis transforms into a butterfly",
+      "butterfly flies away leaving ant behind"
+    ],
+    "setting": "field",
+    "moral_category": "pride",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0002",
+    "title": "The Ant and the Grasshopper",
+    "themes": ["preparation", "laziness", "foresight", "industry"],
+    "characters": ["ant", "grasshopper"],
+    "character_roles": {
+      "ant": "protagonist",
+      "grasshopper": "antagonist"
+    },
+    "narrative_elements": [
+      "grasshopper sings and plays all summer while ant works",
+      "ant collects food and ignores grasshopper's invitation to idle",
+      "winter arrives and grasshopper faces starvation",
+      "ant has stores of food while grasshopper suffers"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0003",
+    "title": "The Ass and His Shadow",
+    "themes": ["greed", "folly", "dispute", "absurdity"],
+    "characters": ["traveler", "ass owner", "ass"],
+    "character_roles": {
+      "traveler": "antagonist",
+      "ass owner": "antagonist",
+      "ass": "bystander"
+    },
+    "narrative_elements": [
+      "traveler hires ass to travel on a hot day",
+      "both men dispute ownership of the ass's shadow",
+      "quarrel escalates from words to blows",
+      "ass runs away while men fight"
+    ],
+    "setting": "field",
+    "moral_category": "greed",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0004",
+    "title": "The Ass and the Frogs",
+    "themes": ["perspective", "suffering", "complaint", "empathy"],
+    "characters": ["ass", "frogs"],
+    "character_roles": {
+      "ass": "protagonist",
+      "frogs": "judge"
+    },
+    "narrative_elements": [
+      "ass carrying wood stumbles and falls in a pond",
+      "ass groans heavily under his load",
+      "frogs mock the ass for complaining about a temporary fall"
+    ],
+    "setting": "river",
+    "moral_category": "contentment",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0005",
+    "title": "The Ass and the Lapdog",
+    "themes": ["envy", "contentment", "imitation", "folly"],
+    "characters": ["ass", "lapdog", "master", "servants"],
+    "character_roles": {
+      "ass": "protagonist",
+      "lapdog": "bystander",
+      "master": "judge"
+    },
+    "narrative_elements": [
+      "ass envies the pampered lapdog and its easy life",
+      "ass breaks free and imitates lapdog's playful behavior",
+      "ass destroys dishes and jumps on master",
+      "servants beat ass back to stable"
+    ],
+    "setting": "home",
+    "moral_category": "contentment",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0006",
+    "title": "The Ass and the Lapdog",
+    "themes": ["envy", "imitation", "folly", "contentment"],
+    "characters": ["farmer", "ass", "lapdog", "servants"],
+    "character_roles": {
+      "ass": "protagonist",
+      "lapdog": "bystander",
+      "farmer": "judge"
+    },
+    "narrative_elements": [
+      "lapdog frisks and dances for farmer's affection",
+      "ass breaks loose and imitates lapdog's antics",
+      "ass tries to climb into farmer's lap",
+      "servants drive ass back to stable with sticks"
+    ],
+    "setting": "farm",
+    "moral_category": "contentment",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0007",
+    "title": "The Ass and the Mule",
+    "themes": ["compassion", "ingratitude", "consequences", "selfishness"],
+    "characters": ["muleteer", "ass", "mule"],
+    "character_roles": {
+      "ass": "victim",
+      "mule": "antagonist",
+      "muleteer": "judge"
+    },
+    "narrative_elements": [
+      "ass begs mule to share part of his load on steep mountain path",
+      "mule refuses to help the overburdened ass",
+      "ass collapses and dies under his load",
+      "mule must carry both loads plus ass's hide as consequence"
+    ],
+    "setting": "field",
+    "moral_category": "ingratitude",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0008",
+    "title": "The Ass in the Lion's Skin",
+    "themes": ["deception", "vanity", "folly", "true nature"],
+    "characters": ["ass", "fox", "owner"],
+    "character_roles": {
+      "ass": "protagonist",
+      "fox": "judge",
+      "owner": "antagonist"
+    },
+    "narrative_elements": [
+      "ass finds and dons a lion's skin",
+      "all animals and people flee in fear from disguised ass",
+      "ass brays and reveals his true identity",
+      "owner beats ass for causing fright"
+    ],
+    "setting": "field",
+    "moral_category": "vanity",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0009",
+    "title": "The Ass's Brains",
+    "themes": ["deception", "treachery", "cunning", "naivety"],
+    "characters": ["lion", "fox", "ass"],
+    "character_roles": {
+      "lion": "antagonist",
+      "fox": "trickster",
+      "ass": "victim"
+    },
+    "narrative_elements": [
+      "fox lures ass to lion with promise of royal alliance",
+      "lion kills ass and instructs fox to guard the prey",
+      "fox secretly eats ass's brains while lion sleeps",
+      "fox deflects lion's anger with wit about ass's lack of brains"
+    ],
+    "setting": "forest",
+    "moral_category": "deception",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0010",
+    "title": "Avaricious and Envious",
+    "themes": ["envy", "greed", "spite", "self-destruction"],
+    "characters": ["avaricious man", "envious man", "jupiter"],
+    "character_roles": {
+      "jupiter": "judge",
+      "avaricious man": "antagonist",
+      "envious man": "antagonist"
+    },
+    "narrative_elements": [
+      "jupiter grants wishes with condition neighbor gets double",
+      "avaricious man wishes for gold but envies neighbor's double amount",
+      "envious man wishes to lose one eye so neighbor goes completely blind"
+    ],
+    "setting": "divine/olympus",
+    "moral_category": "greed",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0011",
+    "title": "The Bald Knight",
+    "themes": ["humility", "humor", "self-acceptance", "wit"],
+    "characters": ["bald knight", "companions"],
+    "character_roles": {
+      "bald knight": "protagonist"
+    },
+    "narrative_elements": [
+      "wind blows off knight's hat and wig while hunting",
+      "companions burst into laughter",
+      "knight laughs along and makes witty remark about borrowed hair"
+    ],
+    "setting": "forest",
+    "moral_category": "pride",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0012",
+    "title": "The Bald Man and the Fly",
+    "themes": ["patience", "self-control", "futility", "wisdom"],
+    "characters": ["bald man", "fly"],
+    "character_roles": {
+      "bald man": "protagonist",
+      "fly": "antagonist"
+    },
+    "narrative_elements": [
+      "fly repeatedly stings bald man on his bare head",
+      "man swats at fly and hits himself instead",
+      "man learns to restrain himself and stops striking"
+    ],
+    "setting": "home",
+    "moral_category": "patience",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0013",
+    "title": "The Bat, the Birds and the Beasts",
+    "themes": ["loyalty", "opportunism", "belonging", "neutrality"],
+    "characters": ["bat", "birds", "beasts"],
+    "character_roles": {
+      "bat": "protagonist",
+      "birds": "antagonist",
+      "beasts": "antagonist"
+    },
+    "narrative_elements": [
+      "war breaks out between birds and beasts",
+      "bat wavers and sides with each group alternately",
+      "peace is made and both groups reject the bat",
+      "bat is left with nowhere to belong"
+    ],
+    "setting": "forest",
+    "moral_category": "trust",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0014",
+    "title": "The Bear and the Two Travelers",
+    "themes": ["friendship", "loyalty", "cowardice", "trust"],
+    "characters": ["two travelers", "bear"],
+    "character_roles": {
+      "first traveler": "antagonist",
+      "second traveler": "protagonist",
+      "bear": "judge"
+    },
+    "narrative_elements": [
+      "bear suddenly appears on the travelers' path",
+      "one traveler climbs a tree and hides",
+      "other traveler plays dead and bear sniffs him and leaves",
+      "surviving traveler tells friend bears advise never traveling with cowards"
+    ],
+    "setting": "forest",
+    "moral_category": "friendship",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0015",
+    "title": "Belling the Cat",
+    "themes": ["courage", "wisdom", "planning", "cowardice"],
+    "characters": ["mice", "cat", "old mouse", "young mouse"],
+    "character_roles": {
+      "young mouse": "seeker",
+      "old mouse": "judge",
+      "cat": "antagonist"
+    },
+    "narrative_elements": [
+      "mice council meets to discuss how to outwit the cat",
+      "young mouse proposes tying a bell around the cat's neck",
+      "plan is met with approval",
+      "old mouse asks who will actually bell the cat and silence falls"
+    ],
+    "setting": "home",
+    "moral_category": "courage",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0016",
+    "title": "The Belly and the Members",
+    "themes": ["cooperation", "interdependence", "rebellion", "folly"],
+    "characters": ["belly", "body members"],
+    "character_roles": {
+      "body members": "antagonist",
+      "belly": "protagonist"
+    },
+    "narrative_elements": [
+      "body members rebel against belly for being idle",
+      "members refuse to do their work",
+      "entire body becomes debilitated",
+      "members repent their folly too late"
+    ],
+    "setting": "unknown",
+    "moral_category": "wisdom",
+    "fable_type": "mixed"
+  },
+  {
+    "doc_id": "fable_0017",
+    "title": "The Birdcatcher, the Partridge, and the Cock",
+    "themes": ["self-preservation", "utility", "sacrifice", "pragmatism"],
+    "characters": ["birdcatcher", "partridge", "cock"],
+    "character_roles": {
+      "birdcatcher": "judge",
+      "partridge": "victim",
+      "cock": "victim"
+    },
+    "narrative_elements": [
+      "birdcatcher has no food and needs to feed a guest",
+      "partridge pleads its usefulness as a decoy",
+      "cock pleads its usefulness as morning alarm",
+      "birdcatcher kills cock anyway for dinner"
+    ],
+    "setting": "home",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0018",
+    "title": "The Bowman and Lion",
+    "themes": ["courage", "fear", "warning", "prudence"],
+    "characters": ["bowman", "lion", "fox"],
+    "character_roles": {
+      "bowman": "antagonist",
+      "lion": "protagonist",
+      "fox": "bystander"
+    },
+    "narrative_elements": [
+      "bowman shoots an arrow at the challenging lion",
+      "lion flees in fear from the arrow wound",
+      "fox urges lion to show courage",
+      "lion reasons that the arrow is more fearful than the man himself"
+    ],
+    "setting": "forest",
+    "moral_category": "courage",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0019",
+    "title": "The Boy and the Filberts",
+    "themes": ["greed", "moderation", "disappointment", "wisdom"],
+    "characters": ["boy", "bystander"],
+    "character_roles": {
+      "boy": "protagonist",
+      "bystander": "judge"
+    },
+    "narrative_elements": [
+      "boy grabs as many filberts as he can from a pitcher",
+      "hand gets stuck because he grabbed too many",
+      "boy cries in frustration",
+      "bystander advises him to take only half"
+    ],
+    "setting": "home",
+    "moral_category": "greed",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0020",
+    "title": "The Boys and the Frogs",
+    "themes": ["cruelty", "empathy", "sport", "suffering"],
+    "characters": ["boys", "frogs"],
+    "character_roles": {
+      "boys": "antagonist",
+      "frogs": "victim"
+    },
+    "narrative_elements": [
+      "boys throw stones at frogs in a pond for sport",
+      "several frogs are killed",
+      "one frog raises its head and pleads for them to stop",
+      "frog points out that what is sport for boys is death for frogs"
+    ],
+    "setting": "river",
+    "moral_category": "justice",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0021",
+    "title": "The Boy and the Nettles",
+    "themes": ["courage", "boldness", "timidity", "wisdom"],
+    "characters": ["boy", "mother"],
+    "character_roles": {
+      "boy": "protagonist",
+      "mother": "judge"
+    },
+    "narrative_elements": [
+      "boy is stung by a nettle after touching it gently",
+      "boy runs home to tell his mother",
+      "mother advises him to grasp nettle boldly next time",
+      "lesson: bold action prevents the sting"
+    ],
+    "setting": "field",
+    "moral_category": "courage",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0022",
+    "title": "The Buffoon and the Countryman",
+    "themes": ["authenticity", "imitation", "deception", "truth"],
+    "characters": ["buffoon", "countryman", "audience"],
+    "character_roles": {
+      "buffoon": "antagonist",
+      "countryman": "protagonist",
+      "audience": "judge"
+    },
+    "narrative_elements": [
+      "buffoon imitates animal sounds and is praised",
+      "countryman challenges him saying it is nothing like a real pig",
+      "countryman performs with real pig pinched behind back",
+      "audience hisses the countryman but he reveals the real pig"
+    ],
+    "setting": "city",
+    "moral_category": "deception",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0023",
+    "title": "The Cat-Maiden",
+    "themes": ["nature", "transformation", "instinct", "identity"],
+    "characters": ["jupiter", "venus", "cat", "young man"],
+    "character_roles": {
+      "jupiter": "judge",
+      "venus": "judge",
+      "cat": "protagonist"
+    },
+    "narrative_elements": [
+      "jupiter transforms a cat into a maiden to settle dispute with venus",
+      "cat behaves like a proper woman at wedding feast",
+      "venus releases a mouse to test the cat",
+      "cat instinctively leaps after mouse revealing her true nature"
+    ],
+    "setting": "divine/olympus",
+    "moral_category": "nature",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0024",
+    "title": "The Cat and Venus",
+    "themes": ["nature", "transformation", "instinct", "love"],
+    "characters": ["cat", "venus", "young man"],
+    "character_roles": {
+      "cat": "protagonist",
+      "venus": "judge",
+      "young man": "bystander"
+    },
+    "narrative_elements": [
+      "cat falls in love with young man and asks venus to transform her",
+      "venus transforms cat into a woman",
+      "venus tests the transformed cat by releasing a mouse",
+      "cat chases mouse revealing unchanged nature and is reverted"
+    ],
+    "setting": "home",
+    "moral_category": "nature",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0025",
+    "title": "The Cat and the Mice",
+    "themes": ["deception", "cunning", "suspicion", "survival"],
+    "characters": ["cat", "mice"],
+    "character_roles": {
+      "cat": "deceiver",
+      "mice": "victim"
+    },
+    "narrative_elements": [
+      "cat hunts mice one by one in an infested house",
+      "mice retreat to their holes out of fear",
+      "cat pretends to be dead to lure mice out",
+      "mouse sees through the ruse and refuses to come near"
+    ],
+    "setting": "home",
+    "moral_category": "deception",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0026",
+    "title": "The Cock and the Pearl",
+    "themes": ["value", "contentment", "priorities", "wisdom"],
+    "characters": ["cock"],
+    "character_roles": {
+      "cock": "protagonist"
+    },
+    "narrative_elements": [
+      "cock struts in farmyard and finds a shining pearl in straw",
+      "cock acknowledges the pearl's worth to those who value it",
+      "cock declares he would prefer a single barleycorn to a peck of pearls"
+    ],
+    "setting": "farm",
+    "moral_category": "contentment",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0027",
+    "title": "The Crow and the Pitcher",
+    "themes": ["ingenuity", "persistence", "problem-solving", "wisdom"],
+    "characters": ["crow"],
+    "character_roles": {
+      "crow": "protagonist"
+    },
+    "narrative_elements": [
+      "thirsty crow finds pitcher with water too deep to reach",
+      "crow tries multiple times to access water and fails",
+      "crow drops pebbles one by one into pitcher",
+      "water rises until crow can finally drink"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0028",
+    "title": "The Dancing Monkeys",
+    "themes": ["nature", "instinct", "pretense", "true character"],
+    "characters": ["monkeys", "prince", "courtier", "audience"],
+    "character_roles": {
+      "monkeys": "protagonist",
+      "courtier": "antagonist",
+      "prince": "judge"
+    },
+    "narrative_elements": [
+      "prince trains monkeys to dance in rich clothes",
+      "monkeys perform well and receive applause",
+      "courtier throws nuts on stage to cause mischief",
+      "monkeys forget dancing and fight over nuts revealing their true nature"
+    ],
+    "setting": "city",
+    "moral_category": "nature",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0029",
+    "title": "The Dog and the Cook",
+    "themes": ["opportunism", "greed", "deception", "consequences"],
+    "characters": ["dog", "stranger dog", "rich man", "cook"],
+    "character_roles": {
+      "dog": "protagonist",
+      "cook": "antagonist",
+      "stranger dog": "victim"
+    },
+    "narrative_elements": [
+      "house dog invites a street dog to feast on master's food",
+      "invited dog revels in anticipation of a grand meal",
+      "cook discovers and throws invited dog out the window",
+      "ejected dog pretends he drank too much wine to save face"
+    ],
+    "setting": "home",
+    "moral_category": "deception",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0030",
+    "title": "The Dog in the Manger",
+    "themes": ["selfishness", "spite", "greed", "uselessness"],
+    "characters": ["dog", "ox"],
+    "character_roles": {
+      "dog": "antagonist",
+      "ox": "victim"
+    },
+    "narrative_elements": [
+      "dog claims an ox's manger for his nap",
+      "ox returns from work and tries to eat its straw",
+      "dog rages and barks preventing ox from eating",
+      "ox gives up hope and goes away hungry"
+    ],
+    "setting": "farm",
+    "moral_category": "greed",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0031",
+    "title": "The Dog and the Shadow",
+    "themes": ["greed", "illusion", "foolishness", "loss"],
+    "characters": ["dog"],
+    "character_roles": {
+      "dog": "protagonist"
+    },
+    "narrative_elements": [
+      "dog carries piece of meat across a plank over a brook",
+      "dog sees his own shadow in water thinking it is another dog with meat",
+      "dog snaps at shadow to steal the meat",
+      "dog drops its meat into the water and loses everything"
+    ],
+    "setting": "river",
+    "moral_category": "greed",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0032",
+    "title": "The Eagle and the Arrow",
+    "themes": ["fate", "self-contribution", "hubris", "tragedy"],
+    "characters": ["eagle", "archer", "hare"],
+    "character_roles": {
+      "eagle": "protagonist",
+      "archer": "antagonist"
+    },
+    "narrative_elements": [
+      "eagle watches a hare from lofty rock",
+      "hidden archer shoots eagle with mortal wound",
+      "eagle sees arrow is feathered with his own feathers",
+      "eagle laments dying by arrow made from his own wings"
+    ],
+    "setting": "field",
+    "moral_category": "fate",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0033",
+    "title": "The Farmer and the Cranes",
+    "themes": ["persistence", "determination", "adaptation", "consequences"],
+    "characters": ["farmer", "cranes"],
+    "character_roles": {
+      "farmer": "protagonist",
+      "cranes": "antagonist"
+    },
+    "narrative_elements": [
+      "cranes eat seeds from farmer's newly-sown wheat fields",
+      "farmer scares cranes with empty sling but they learn it is harmless",
+      "cranes ignore the farmer's empty threats",
+      "farmer loads sling with stones and kills many cranes causing rest to flee"
+    ],
+    "setting": "farm",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0034",
+    "title": "The Farmer and the Snake",
+    "themes": ["ingratitude", "compassion", "danger", "consequences"],
+    "characters": ["farmer", "snake"],
+    "character_roles": {
+      "farmer": "victim",
+      "snake": "antagonist"
+    },
+    "narrative_elements": [
+      "farmer finds frozen snake and warms it in his bosom",
+      "snake revives and bites the farmer mortally",
+      "farmer dies lamenting his misplaced compassion"
+    ],
+    "setting": "farm",
+    "moral_category": "ingratitude",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0035",
+    "title": "The Farmer and the Stork",
+    "themes": ["justice", "association", "guilt", "consequences"],
+    "characters": ["farmer", "cranes", "stork"],
+    "character_roles": {
+      "farmer": "judge",
+      "stork": "victim",
+      "cranes": "antagonist"
+    },
+    "narrative_elements": [
+      "farmer traps cranes robbing his fields and catches a stork too",
+      "stork pleads his good character and broken leg for mercy",
+      "farmer refuses to spare stork because he was caught with the thieves"
+    ],
+    "setting": "farm",
+    "moral_category": "justice",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0036",
+    "title": "The Fisher and the Little Fish",
+    "themes": ["certainty", "opportunity", "prudence", "greed"],
+    "characters": ["fisher", "small fish"],
+    "character_roles": {
+      "fisher": "protagonist",
+      "small fish": "victim"
+    },
+    "narrative_elements": [
+      "fisherman catches only a tiny fish after a full day",
+      "small fish pleads to be released promising to grow bigger",
+      "fisherman refuses saying he has the fish now and may not catch it later"
+    ],
+    "setting": "river",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0037",
+    "title": "The Fisherman Piping",
+    "themes": ["timing", "effort", "futility", "irony"],
+    "characters": ["fisherman", "fish"],
+    "character_roles": {
+      "fisherman": "protagonist",
+      "fish": "bystander"
+    },
+    "narrative_elements": [
+      "fisherman plays flute hoping fish will dance into his net",
+      "fish do not respond to music",
+      "fisherman casts net the ordinary way and catches many fish",
+      "fisherman scolds fish for dancing now that he has stopped piping"
+    ],
+    "setting": "sea",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0038",
+    "title": "The Four Oxen and the Lion",
+    "themes": ["unity", "strength", "division", "cooperation"],
+    "characters": ["lion", "four oxen"],
+    "character_roles": {
+      "lion": "antagonist",
+      "oxen": "victim"
+    },
+    "narrative_elements": [
+      "lion repeatedly fails to attack four oxen who stand together",
+      "oxen quarrel and separate to different parts of the field",
+      "lion attacks each one individually",
+      "lion defeats and kills all four oxen one by one"
+    ],
+    "setting": "field",
+    "moral_category": "friendship",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0039",
+    "title": "The Fox And The Bramble",
+    "themes": ["irony", "nature", "helplessness", "character"],
+    "characters": ["fox", "bramble bush"],
+    "character_roles": {
+      "fox": "victim",
+      "bramble bush": "antagonist"
+    },
+    "narrative_elements": [
+      "fox grabs bramble bush for support while climbing fence",
+      "brambles scratch fox's paws painfully",
+      "fox complains about the bramble's cruelty",
+      "bramble explains it always grabs others and cannot help it"
+    ],
+    "setting": "field",
+    "moral_category": "nature",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0040",
+    "title": "The Fox and the Cat",
+    "themes": ["cunning", "simplicity", "overconfidence", "survival"],
+    "characters": ["fox", "cat", "hounds"],
+    "character_roles": {
+      "fox": "antagonist",
+      "cat": "protagonist",
+      "hounds": "antagonist"
+    },
+    "narrative_elements": [
+      "fox boasts of having a hundred tricks for escaping enemies",
+      "cat admits to having only one trick but relies on it",
+      "hounds approach and cat climbs tree to safety",
+      "fox deliberates too long and is caught and killed"
+    ],
+    "setting": "forest",
+    "moral_category": "wisdom",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0041",
+    "title": "The Fox, the Cock and the Dog",
+    "themes": ["deception", "cunning", "vigilance", "trickery"],
+    "characters": ["fox", "cock", "dog"],
+    "character_roles": {
+      "fox": "deceiver",
+      "cock": "protagonist",
+      "dog": "helper"
+    },
+    "narrative_elements": [
+      "fox tells cock a false truce has been declared between beasts and birds",
+      "cock pretends to be interested and mentions an approaching dog",
+      "fox immediately retreats fearing the dog hasn't heard of the truce",
+      "cock's wit exposes fox's deceptive scheme"
+    ],
+    "setting": "farm",
+    "moral_category": "deception",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0042",
+    "title": "The Fox and the Crane",
+    "themes": ["revenge", "hospitality", "trickery", "justice"],
+    "characters": ["fox", "crane"],
+    "character_roles": {
+      "fox": "deceiver",
+      "crane": "trickster"
+    },
+    "narrative_elements": [
+      "fox invites crane to dinner and serves soup in a flat dish",
+      "crane cannot eat from the dish and goes hungry",
+      "crane invites fox to supper and serves food in a narrow-necked flagon",
+      "fox cannot taste the food and receives a fitting lesson"
+    ],
+    "setting": "home",
+    "moral_category": "justice",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0043",
+    "title": "The Fox And The Raven",
+    "themes": ["flattery", "vanity", "deception", "foolishness"],
+    "characters": ["fox", "raven"],
+    "character_roles": {
+      "fox": "deceiver",
+      "raven": "victim"
+    },
+    "narrative_elements": [
+      "raven steals cheese and perches in a tree",
+      "fox flatters raven on his elegant appearance and voice",
+      "raven caws to show off and drops the cheese",
+      "fox grabs cheese and mocks raven for having voice but no brains"
+    ],
+    "setting": "forest",
+    "moral_category": "vanity",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0044",
+    "title": "The Fox and the Crow",
+    "themes": ["flattery", "vanity", "deception", "foolishness"],
+    "characters": ["fox", "crow"],
+    "character_roles": {
+      "fox": "deceiver",
+      "crow": "victim"
+    },
+    "narrative_elements": [
+      "crow carries piece of cheese up to a tree branch",
+      "fox flatters crow on her looks and voice",
+      "crow opens beak to sing and drops cheese",
+      "fox snaps up cheese and departs"
+    ],
+    "setting": "forest",
+    "moral_category": "vanity",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0045",
+    "title": "The Fox and the Goat",
+    "themes": ["deception", "cunning", "foresight", "trust"],
+    "characters": ["fox", "goat"],
+    "character_roles": {
+      "fox": "deceiver",
+      "goat": "victim"
+    },
+    "narrative_elements": [
+      "fox falls into a deep well and cannot escape",
+      "fox persuades thirsty goat to jump in by praising the water",
+      "fox climbs out using goat's back and runs away",
+      "fox berates goat for jumping in without thinking of how to get out"
+    ],
+    "setting": "field",
+    "moral_category": "deception",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0046",
+    "title": "The Fox and the Hedgehog",
+    "themes": ["wisdom", "pragmatism", "suffering", "self-interest"],
+    "characters": ["fox", "hedgehog"],
+    "character_roles": {
+      "fox": "protagonist",
+      "hedgehog": "helper"
+    },
+    "narrative_elements": [
+      "injured fox lies in a ravine covered with blood-sucking flies",
+      "hedgehog offers to drive away the flies",
+      "fox refuses saying flies are already full and not stinging much",
+      "fox explains hungry flies would drain all remaining blood"
+    ],
+    "setting": "river",
+    "moral_category": "wisdom",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0047",
+    "title": "The Fox and the Woodcutter",
+    "themes": ["deception", "ingratitude", "hypocrisy", "trust"],
+    "characters": ["fox", "woodcutter", "huntsman"],
+    "character_roles": {
+      "fox": "protagonist",
+      "woodcutter": "deceiver",
+      "huntsman": "antagonist"
+    },
+    "narrative_elements": [
+      "fox fleeing hounds begs woodcutter for a hiding place",
+      "woodcutter hides fox but points to the hut when huntsman asks",
+      "huntsman believes the words not the gestures and rides on",
+      "fox leaves without thanks and rebukes woodcutter for betrayal in heart"
+    ],
+    "setting": "forest",
+    "moral_category": "deception",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0048",
+    "title": "The Frogs Asking for a King",
+    "themes": ["ambition", "governance", "discontent", "consequences"],
+    "characters": ["frogs", "jupiter", "eel", "heron"],
+    "character_roles": {
+      "frogs": "protagonist",
+      "jupiter": "judge",
+      "heron": "antagonist"
+    },
+    "narrative_elements": [
+      "frogs petition jupiter for a king and receive a harmless log",
+      "frogs grow contemptuous of the log and petition for another king",
+      "jupiter sends an eel who is also too meek",
+      "jupiter finally sends a heron who preys on the frogs until none are left"
+    ],
+    "setting": "river",
+    "moral_category": "ambition",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0049",
+    "title": "The Goatherd and the Wild Goats",
+    "themes": ["ingratitude", "trust", "favoritism", "loyalty"],
+    "characters": ["goatherd", "wild goats", "tame goats"],
+    "character_roles": {
+      "goatherd": "antagonist",
+      "wild goats": "protagonist"
+    },
+    "narrative_elements": [
+      "goatherd shelters wild goats together with his own during snowstorm",
+      "goatherd feeds wild goats more to entice them to stay",
+      "wild goats flee when thaw comes",
+      "wild goat explains excessive favor for new arrivals warns against trusting him"
+    ],
+    "setting": "field",
+    "moral_category": "trust",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0050",
+    "title": "The Goose With the Golden Eggs",
+    "themes": ["greed", "impatience", "short-sightedness", "consequences"],
+    "characters": ["countryman", "goose"],
+    "character_roles": {
+      "countryman": "antagonist",
+      "goose": "victim"
+    },
+    "narrative_elements": [
+      "countryman finds his goose lays golden eggs daily",
+      "countryman grows rich but becomes greedy and impatient",
+      "countryman kills goose expecting to find all gold at once",
+      "goose is dead and no gold is found"
+    ],
+    "setting": "farm",
+    "moral_category": "greed",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0051",
+    "title": "The Hare and the Hound",
+    "themes": ["motivation", "perspective", "survival", "effort"],
+    "characters": ["hound", "hare", "goat-herd"],
+    "character_roles": {
+      "hound": "protagonist",
+      "hare": "victim",
+      "goat-herd": "judge"
+    },
+    "narrative_elements": [
+      "hound chases hare from his lair for a long time",
+      "hound gives up the chase",
+      "goat-herd mocks hound saying the smaller animal ran better",
+      "hound explains hare ran for its life while he ran only for dinner"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0052",
+    "title": "The Hares and the Frogs",
+    "themes": ["fear", "perspective", "courage", "timidity"],
+    "characters": ["hares", "frogs"],
+    "character_roles": {
+      "hares": "protagonist",
+      "frogs": "bystander"
+    },
+    "narrative_elements": [
+      "hares decide to end their lives due to constant fear",
+      "hares stampede to a lake to drown themselves",
+      "frogs hear the noise and flee into deep water",
+      "hare realizes there are creatures even more timid and stops friends"
+    ],
+    "setting": "river",
+    "moral_category": "courage",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0053",
+    "title": "The Hare With Many Friends",
+    "themes": ["friendship", "loyalty", "fair-weather friends", "betrayal"],
+    "characters": ["hare", "horse", "bull", "goat", "ram", "calf", "hounds"],
+    "character_roles": {
+      "hare": "victim",
+      "horse": "bystander",
+      "bull": "bystander",
+      "hounds": "antagonist"
+    },
+    "narrative_elements": [
+      "hare is popular and claims many friends among other beasts",
+      "hounds approach and hare asks each friend in turn for help",
+      "each friend makes excuses and declines to help",
+      "hare must rely on her own speed to escape"
+    ],
+    "setting": "field",
+    "moral_category": "friendship",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0054",
+    "title": "The Hart and the Hunter",
+    "themes": ["vanity", "folly", "pride", "appearance"],
+    "characters": ["hart", "hunter"],
+    "character_roles": {
+      "hart": "protagonist",
+      "hunter": "antagonist"
+    },
+    "narrative_elements": [
+      "hart admires his grand antlers while drinking at a pool",
+      "hart wishes his legs were worthier of his noble crown",
+      "hunter approaches and hart flees with his swift legs",
+      "hart's antlers catch in tree branches allowing hunter to catch up"
+    ],
+    "setting": "forest",
+    "moral_category": "vanity",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0055",
+    "title": "The Hart in the Ox-Stall",
+    "themes": ["hiding", "vigilance", "danger", "discovery"],
+    "characters": ["hart", "hounds", "stable boys", "master"],
+    "character_roles": {
+      "hart": "victim",
+      "master": "antagonist",
+      "hounds": "antagonist"
+    },
+    "narrative_elements": [
+      "hart fleeing hounds hides in ox-stall buried in hay",
+      "hunters ask stable boys who look but miss the hart",
+      "master notices unusual things sticking from hay",
+      "stable boys discover and kill the hart"
+    ],
+    "setting": "farm",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0056",
+    "title": "The Hawk, the Kite, and the Pigeons",
+    "themes": ["protection", "trust", "danger", "folly"],
+    "characters": ["pigeons", "kite", "hawk"],
+    "character_roles": {
+      "hawk": "deceiver",
+      "kite": "antagonist",
+      "pigeons": "victim"
+    },
+    "narrative_elements": [
+      "pigeons fear the kite and ask hawk for protection",
+      "hawk agrees and is admitted into the pigeon coop",
+      "hawk kills more pigeons in one day than kite could in a year"
+    ],
+    "setting": "farm",
+    "moral_category": "trust",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0057",
+    "title": "The Heifer and the Ox",
+    "themes": ["fate", "irony", "consequences", "labor"],
+    "characters": ["heifer", "ox", "owner"],
+    "character_roles": {
+      "heifer": "victim",
+      "ox": "judge",
+      "owner": "antagonist"
+    },
+    "narrative_elements": [
+      "heifer taunts ox for being forced to labor",
+      "owner releases ox from yoke at harvest festival",
+      "owner binds heifer for sacrifice",
+      "ox smiles and tells heifer she was spared for this purpose"
+    ],
+    "setting": "farm",
+    "moral_category": "fate",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0058",
+    "title": "Hercules and Pallas",
+    "themes": ["conflict", "strife", "wisdom", "self-control"],
+    "characters": ["hercules", "pallas", "monster strife"],
+    "character_roles": {
+      "hercules": "protagonist",
+      "pallas": "judge",
+      "monster strife": "antagonist"
+    },
+    "narrative_elements": [
+      "hercules encounters a strange monster and beats it",
+      "monster grows three times larger with each blow",
+      "hercules beats it harder and monster fills the road",
+      "pallas reveals monster is strife and it shrinks when left alone"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0059",
+    "title": "Hercules and the Wagoner",
+    "themes": ["self-reliance", "effort", "prayer", "help"],
+    "characters": ["carter", "hercules", "bullocks"],
+    "character_roles": {
+      "carter": "protagonist",
+      "hercules": "judge"
+    },
+    "narrative_elements": [
+      "carter's wagon wheels sink into a rut",
+      "carter does nothing and cries to hercules for help",
+      "hercules appears and orders carter to put his own shoulders to the wheels",
+      "hercules warns that prayers are vain without self-help"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0060",
+    "title": "The Horse, Hunter and Stag",
+    "themes": ["revenge", "freedom", "servitude", "consequences"],
+    "characters": ["horse", "hunter", "stag"],
+    "character_roles": {
+      "horse": "victim",
+      "hunter": "deceiver",
+      "stag": "antagonist"
+    },
+    "narrative_elements": [
+      "horse asks hunter to help exact revenge on the stag",
+      "hunter requires horse to accept bit and saddle to pursue stag",
+      "horse agrees and together they defeat the stag",
+      "hunter refuses to remove saddle and bridle saying he prefers horse tame"
+    ],
+    "setting": "forest",
+    "moral_category": "ambition",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0061",
+    "title": "The Hunter and the Woodman",
+    "themes": ["courage", "cowardice", "bluster", "bravado"],
+    "characters": ["hunter", "woodman", "lion"],
+    "character_roles": {
+      "hunter": "protagonist",
+      "woodman": "judge",
+      "lion": "antagonist"
+    },
+    "narrative_elements": [
+      "hunter searches for lion tracks in the forest",
+      "woodman offers to show him the lion itself",
+      "hunter turns pale and refuses saying he wanted only tracks not the lion"
+    ],
+    "setting": "forest",
+    "moral_category": "courage",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0062",
+    "title": "The Huntsman and the Fisherman",
+    "themes": ["value", "novelty", "satisfaction", "contentment"],
+    "characters": ["huntsman", "fisherman", "neighbor"],
+    "character_roles": {
+      "huntsman": "protagonist",
+      "fisherman": "protagonist",
+      "neighbor": "judge"
+    },
+    "narrative_elements": [
+      "huntsman and fisherman chance to meet and exchange their day's catch",
+      "both are delighted with the exchange",
+      "they repeat the exchange day after day",
+      "neighbor warns repeated exchange will destroy the pleasure of novelty"
+    ],
+    "setting": "field",
+    "moral_category": "contentment",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0063",
+    "title": "The Kites and the Swans",
+    "themes": ["identity", "ambition", "folly", "nature"],
+    "characters": ["kites", "swans", "horse"],
+    "character_roles": {
+      "kites": "protagonist"
+    },
+    "narrative_elements": [
+      "kites and swans both have the gift of song",
+      "kites hear the horse neigh and are enchanted",
+      "kites try to imitate the neighing sound",
+      "kites forget how to sing while trying to neigh"
+    ],
+    "setting": "field",
+    "moral_category": "nature",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0064",
+    "title": "The Labourer and the Nightingale",
+    "themes": ["freedom", "captivity", "wisdom", "tricks"],
+    "characters": ["labourer", "nightingale"],
+    "character_roles": {
+      "labourer": "antagonist",
+      "nightingale": "trickster"
+    },
+    "narrative_elements": [
+      "labourer captures nightingale wanting it to sing for him always",
+      "nightingale says it cannot sing in a cage",
+      "nightingale offers three pieces of wisdom in exchange for freedom",
+      "labourer frees it and nightingale flies away"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0065",
+    "title": "The Lark Burying Her Father",
+    "themes": ["origin", "legacy", "duty", "myth"],
+    "characters": ["lark", "father"],
+    "character_roles": {
+      "lark": "protagonist"
+    },
+    "narrative_elements": [
+      "lark was created before the earth existed",
+      "lark's father dies with no earth for burial",
+      "lark keeps father unburied for five days",
+      "lark buries him in her own head explaining her crest"
+    ],
+    "setting": "unknown",
+    "moral_category": "nature",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0066",
+    "title": "The Lark and Her Young Ones",
+    "themes": ["self-reliance", "action", "prudence", "wisdom"],
+    "characters": ["lark", "young larks", "field owner"],
+    "character_roles": {
+      "lark": "protagonist",
+      "field owner": "judge"
+    },
+    "narrative_elements": [
+      "farmer asks friends then relatives to help harvest his wheat",
+      "lark tells young ones not to worry as long as farmer relies on others",
+      "farmer finally decides to harvest himself with his own son",
+      "lark immediately moves the nest saying now is the time to go"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0067",
+    "title": "The Lion and the Eagle",
+    "themes": ["trust", "alliance", "reliability", "caution"],
+    "characters": ["lion", "eagle"],
+    "character_roles": {
+      "lion": "protagonist",
+      "eagle": "seeker"
+    },
+    "narrative_elements": [
+      "eagle asks lion to form an alliance",
+      "lion is not opposed but asks for surety of good faith",
+      "lion points out eagle can fly away from bargains whenever he likes",
+      "lion refuses to trust someone who can so easily flee"
+    ],
+    "setting": "forest",
+    "moral_category": "trust",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0068",
+    "title": "The Lion, the Fox, and the Ass",
+    "themes": ["cunning", "power", "survival", "learning"],
+    "characters": ["lion", "fox", "ass"],
+    "character_roles": {
+      "lion": "antagonist",
+      "fox": "trickster",
+      "ass": "victim"
+    },
+    "narrative_elements": [
+      "lion fox and ass share a hunting agreement",
+      "ass divides spoils equally into thirds and is devoured by angry lion",
+      "fox gives lion nearly everything keeping almost nothing for himself",
+      "lion praises fox's division and fox says he learned from ass's fate"
+    ],
+    "setting": "forest",
+    "moral_category": "wisdom",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0069",
+    "title": "The Lion, the Mouse, and the Fox",
+    "themes": ["pride", "dignity", "honor", "excuse"],
+    "characters": ["lion", "mouse", "fox"],
+    "character_roles": {
+      "lion": "protagonist",
+      "mouse": "bystander",
+      "fox": "antagonist"
+    },
+    "narrative_elements": [
+      "mouse runs over sleeping lion's mane waking him",
+      "fox mocks lion for being startled by a tiny mouse",
+      "lion denies being afraid of mouse scratching him",
+      "lion claims he was concerned mouse might mess up his mane"
+    ],
+    "setting": "forest",
+    "moral_category": "pride",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0070",
+    "title": "The Lion's Share",
+    "themes": ["power", "greed", "bullying", "injustice"],
+    "characters": ["lion", "fox", "jackal", "wolf", "stag"],
+    "character_roles": {
+      "lion": "antagonist",
+      "fox": "victim",
+      "wolf": "victim"
+    },
+    "narrative_elements": [
+      "lion fox jackal and wolf hunt together and kill a stag",
+      "lion claims the first quarter as king of beasts",
+      "lion claims second quarter as arbiter and third for participating in hunt",
+      "lion dares anyone to touch the fourth quarter and fox slinks away"
+    ],
+    "setting": "forest",
+    "moral_category": "justice",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0071",
+    "title": "The Lost Wig",
+    "themes": ["vanity", "humor", "self-acceptance", "wit"],
+    "characters": ["old lion", "tiger"],
+    "character_roles": {
+      "old lion": "protagonist",
+      "tiger": "bystander"
+    },
+    "narrative_elements": [
+      "lion wearing a wig tries to impress a tiger across the street",
+      "wind blows off wig leaving lion bald and embarrassed",
+      "lion laughs it off and makes a witty remark about borrowed hair"
+    ],
+    "setting": "city",
+    "moral_category": "vanity",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0072",
+    "title": "The Man and His Wife",
+    "themes": ["character", "personality", "judgment", "self-awareness"],
+    "characters": ["man", "wife", "household servants", "herdsmen"],
+    "character_roles": {
+      "man": "judge",
+      "wife": "antagonist"
+    },
+    "narrative_elements": [
+      "man's wife is hated by all household members",
+      "man sends her to her father's house to test her effect there",
+      "wife returns saying even herdsmen who barely see her dislike her",
+      "man concludes those who spent all day with her must have hated her even more"
+    ],
+    "setting": "home",
+    "moral_category": "wisdom",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0073",
+    "title": "The Man and His Two Wives",
+    "themes": ["vanity", "conflict", "competition", "folly"],
+    "characters": ["man", "young wife", "old wife"],
+    "character_roles": {
+      "man": "victim",
+      "young wife": "antagonist",
+      "old wife": "antagonist"
+    },
+    "narrative_elements": [
+      "young wife plucks man's white hairs to make him look younger",
+      "old wife plucks his black hairs to make him look older",
+      "both wives pull hairs in opposite ways for their own interests",
+      "man ends up completely bald as consequence"
+    ],
+    "setting": "home",
+    "moral_category": "vanity",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0074",
+    "title": "The Man and the Satyr",
+    "themes": ["inconsistency", "hypocrisy", "trust", "character"],
+    "characters": ["man", "satyr"],
+    "character_roles": {
+      "man": "protagonist",
+      "satyr": "judge"
+    },
+    "narrative_elements": [
+      "man and satyr form an alliance over drink",
+      "man blows on hands to warm them on cold day",
+      "man later blows on food to cool it",
+      "satyr refuses friendship with one who blows both hot and cold"
+    ],
+    "setting": "home",
+    "moral_category": "trust",
+    "fable_type": "mixed"
+  },
+  {
+    "doc_id": "fable_0075",
+    "title": "The Man and the Lion",
+    "themes": ["perspective", "bias", "storytelling", "power"],
+    "characters": ["man", "lion"],
+    "character_roles": {
+      "man": "protagonist",
+      "lion": "protagonist"
+    },
+    "narrative_elements": [
+      "man and lion argue over who is stronger while traveling",
+      "man points to a statue of a man strangling a lion as proof",
+      "lion counters the statue was made by a man not a lion",
+      "lion says lion-made statues would show the opposite"
+    ],
+    "setting": "forest",
+    "moral_category": "pride",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0076",
+    "title": "The Mice and the Weasels",
+    "themes": ["leadership", "pride", "military", "consequences"],
+    "characters": ["mice", "weasels", "mouse generals"],
+    "character_roles": {
+      "mouse generals": "antagonist",
+      "mice": "victim",
+      "weasels": "antagonist"
+    },
+    "narrative_elements": [
+      "weasels repeatedly defeat mice in battle",
+      "mice elect generals and create a disciplined army",
+      "mouse generals wear straw ornaments on their heads as insignia",
+      "mice are routed again and generals are caught because of their ornaments"
+    ],
+    "setting": "field",
+    "moral_category": "pride",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0077",
+    "title": "The Milk-Woman and Her Pail",
+    "themes": ["daydreaming", "folly", "planning", "consequences"],
+    "characters": ["farmer's daughter"],
+    "character_roles": {
+      "farmer's daughter": "protagonist"
+    },
+    "narrative_elements": [
+      "milk-woman fantasizes about profits from milk to buy eggs to raise chickens",
+      "plans expand to buying a gown and rejecting suitors at Christmas",
+      "she tosses head imagining rejecting suitors",
+      "pail falls and spills ending all imaginary plans"
+    ],
+    "setting": "farm",
+    "moral_category": "wisdom",
+    "fable_type": "human_only"
+  },
+  {
+    "doc_id": "fable_0078",
+    "title": "The Miller, His Son, and Their Ass",
+    "themes": ["pleasing others", "indecision", "folly", "self-reliance"],
+    "characters": ["miller", "son", "ass", "crowd"],
+    "character_roles": {
+      "miller": "protagonist",
+      "ass": "victim"
+    },
+    "narrative_elements": [
+      "miller tries to please each group of critics who comment on their journey",
+      "changes how they carry the ass based on each person's opinion",
+      "they end up trying to carry the ass themselves on a pole",
+      "ass falls into river and is lost while trying to please everyone"
+    ],
+    "setting": "city",
+    "moral_category": "wisdom",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0079",
+    "title": "The Mountains in Labour",
+    "themes": ["expectation", "disappointment", "overblown claims", "anticlimax"],
+    "characters": ["countrymen", "mountains", "mouse"],
+    "character_roles": {
+      "mountains": "antagonist",
+      "countrymen": "bystander",
+      "mouse": "protagonist"
+    },
+    "narrative_elements": [
+      "mountains shake crash and smoke causing great alarm",
+      "countrymen gather in fear expecting something horrible",
+      "everyone waits in great suspense",
+      "tiny mouse emerges from the gap in the mountain"
+    ],
+    "setting": "field",
+    "moral_category": "wisdom",
+    "fable_type": "mixed"
+  },
+  {
+    "doc_id": "fable_0080",
+    "title": "The Mother and the Wolf",
+    "themes": ["deception", "empty threats", "credulity", "trust"],
+    "characters": ["wolf", "mother", "child"],
+    "character_roles": {
+      "wolf": "protagonist",
+      "mother": "judge",
+      "child": "bystander"
+    },
+    "narrative_elements": [
+      "wolf hears mother threaten to throw child to wolf to quiet it",
+      "wolf waits all day for mother to carry out her threat",
+      "mother fondly soothes child at evening and threatens to kill the wolf",
+      "wolf goes home cold and hungry cursing himself for believing a woman"
+    ],
+    "setting": "forest",
+    "moral_category": "deception",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0081",
+    "title": "The Mule",
+    "themes": ["pride", "hubris", "self-delusion", "reality"],
+    "characters": ["mule"],
+    "character_roles": {
+      "mule": "protagonist"
+    },
+    "narrative_elements": [
+      "well-fed mule gallops about boasting of his noble racing father",
+      "mule claims to be swift and spirited like a horse",
+      "mule is driven on a long hard journey and becomes weary",
+      "mule concludes his father must have been just an ass"
+    ],
+    "setting": "field",
+    "moral_category": "pride",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0082",
+    "title": "The Nurse and the Wolf",
+    "themes": ["credulity", "deception", "empty threats", "cunning"],
+    "characters": ["wolf", "nurse", "child", "dogs"],
+    "character_roles": {
+      "wolf": "protagonist",
+      "nurse": "judge",
+      "dogs": "helper"
+    },
+    "narrative_elements": [
+      "wolf hears nurse threaten to throw child to wolf",
+      "wolf waits patiently outside window for child",
+      "child finally cries and wolf comes forward eagerly",
+      "nurse shuts window and calls dogs who chase wolf away"
+    ],
+    "setting": "home",
+    "moral_category": "deception",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0083",
+    "title": "The Oak and the Reeds",
+    "themes": ["flexibility", "pride", "resilience", "humility"],
+    "characters": ["oak", "reeds"],
+    "character_roles": {
+      "oak": "antagonist",
+      "reeds": "protagonist"
+    },
+    "narrative_elements": [
+      "great oak is uprooted by wind and falls across a stream",
+      "fallen oak asks how weak reeds survive strong winds",
+      "reeds explain they bend before every breath while oak fights the wind",
+      "reeds say their flexibility is why they remain unbroken"
+    ],
+    "setting": "river",
+    "moral_category": "hubris",
+    "fable_type": "mixed"
+  },
+  {
+    "doc_id": "fable_0084",
+    "title": "The One-Eyed Doe",
+    "themes": ["fate", "irony", "precaution", "danger"],
+    "characters": ["doe", "boatmen"],
+    "character_roles": {
+      "doe": "victim",
+      "boatmen": "antagonist"
+    },
+    "narrative_elements": [
+      "blind doe grazes near cliff edge watching land with good eye for danger",
+      "doe turns injured eye toward sea expecting no danger there",
+      "boatmen pass by sea and shoot her mortally",
+      "doe laments that the very shore she thought safe proved most perilous"
+    ],
+    "setting": "sea",
+    "moral_category": "fate",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0085",
+    "title": "The Peacock and Juno",
+    "themes": ["vanity", "contentment", "acceptance", "divine judgment"],
+    "characters": ["peacock", "juno"],
+    "character_roles": {
+      "peacock": "seeker",
+      "juno": "judge"
+    },
+    "narrative_elements": [
+      "peacock petitions juno for a nightingale's voice",
+      "juno refuses the request",
+      "peacock persists citing his status as juno's favourite bird",
+      "juno explains each creature has its appointed gifts"
+    ],
+    "setting": "divine/olympus",
+    "moral_category": "vanity",
+    "fable_type": "divine"
+  },
+  {
+    "doc_id": "fable_0086",
+    "title": "The Peasant and the Apple-Tree",
+    "themes": ["utility", "gratitude", "self-interest", "reward"],
+    "characters": ["peasant", "sparrows", "grasshoppers", "bees"],
+    "character_roles": {
+      "peasant": "protagonist",
+      "creatures": "bystander"
+    },
+    "narrative_elements": [
+      "peasant resolves to cut down barren apple tree sheltering birds and insects",
+      "creatures beg him to spare the tree promising to sing for him",
+      "peasant ignores pleas and continues cutting",
+      "peasant finds honey in hollow tree and decides to preserve it"
+    ],
+    "setting": "field",
+    "moral_category": "greed",
+    "fable_type": "animal_human"
+  },
+  {
+    "doc_id": "fable_0087",
+    "title": "The Quack Frog",
+    "themes": ["hypocrisy", "pretense", "credibility", "charlatanism"],
+    "characters": ["frog", "fox"],
+    "character_roles": {
+      "frog": "antagonist",
+      "fox": "judge"
+    },
+    "narrative_elements": [
+      "frog claims to be a learned physician able to heal all diseases",
+      "fox asks how frog can prescribe for others",
+      "fox points out frog cannot heal its own lame gait and wrinkled skin"
+    ],
+    "setting": "river",
+    "moral_category": "deception",
+    "fable_type": "animal_only"
+  },
+  {
+    "doc_id": "fable_0088",
+    "title": "The Raven and the Swan",
+    "themes": ["envy", "nature", "futility", "imitation"],
+    "characters": ["raven", "swan"],
+    "character_roles": {
+      "raven": "protagonist",
+      "swan": "bystander"
+    },
+    "narrative_elements": [
+      "raven envies swan's white plumage and desires it for himself",
+      "raven believes swan's whiteness comes from bathing in water",
+      "raven abandons his food source and moves to lakes and pools",
+      "raven cannot change his color and dies from lack of food"
+    ],
+    "setting": "river",
+    "moral_category": "nature",
+    "fable_type": "animal_only"
+  }
+]

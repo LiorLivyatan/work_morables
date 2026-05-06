@@ -1,0 +1,475 @@
+query_moral_idx,query_moral,top1_fable_idx,top1_moral_idx,top1_moral,moral_moral_sim,gt_rank,score_gap
+85,Be content with your lot; one cannot be first in everything.,270,270,Be content with your lot; one cannot be first in everything.,1.0005,2,0.0302
+333,A life of greed and hoarding wealth leads to misery.,707,707,A life of greed and hoarding wealth leads to misery.,1.0004,3,0.0333
+190,He that is neither one thing nor the other has no friends.,13,13,He that is neither one thing nor the other has no friends.,1.0003,2,0.0647
+98,"Destroy the seed of evil, or it will grow up to your ruin.",611,611,"Destroy the seed of evil, or it will grow up to your ruin.",1.0002,2,0.0350
+45,Look before you leap.,393,393,Look before you leap.,1.0000,3,0.0483
+59,Self-help is the best help.,66,66,Self-help is the best help.,1.0000,2,0.0067
+138,Self-help is the best help.,66,66,Self-help is the best help.,1.0000,8,0.2579
+242,Look before you leap.,393,393,Look before you leap.,1.0000,6,0.1462
+245,It is useless attacking the insensible.,92,92,It is useless attacking the insensible.,1.0000,2,0.1241
+180,An invitation prompted by selfishness is not to be accepted.,113,113,An invitation prompted by selfishness is not to be accepted.,0.9998,29,0.1359
+564,A little thing in hand is worth more than a great thing in prospect.,36,36,A little thing in hand is worth more than a great thing in prospect.,0.9995,3,0.0293
+616,Greed often overreaches itself.,50,50,Greed often overreaches itself.,0.9995,7,0.1533
+158,Some things you cannot change.,120,120,Some things you cannot change.,0.9993,2,0.0022
+348,Nothing escapes the master's eye.,55,55,Nothing escapes the master's eye,0.9770,2,0.0228
+30,People often grudge others what they cannot enjoy themselves.,483,483,Some begrudge others what they cannot enjoy themselves.,0.9753,2,0.0515
+122,There is always someone else worse off than you.,52,52,There is always someone worse off than yourself.,0.9728,4,0.1470
+694,True friends are hard to come by.,173,173,True friends are hard to find.,0.9718,2,0.0825
+38,Union is strength.,511,511,Union gives strength.,0.9685,2,0.0043
+111,Quality is better than quantity.,377,377,Quality is more valuable than quantity.,0.9525,2,0.0486
+278,Be careful what you wish for.,431,431,Be careful what you wish for; your wish may be granted.,0.9471,76,0.4864
+617,Be careful what you wish for.,431,431,Be careful what you wish for; your wish may be granted.,0.9471,58,0.4761
+8,"Fine clothes may disguise, but silly words will disclose a fool.",316,316,"Clothes may disguise a fool, but his words will give him away.",0.9219,2,0.0093
+43,Flatters are not to be trusted.,44,44,Do not trust flatterers.,0.9202,3,0.1330
+620,Flatters are not to be trusted.,44,44,Do not trust flatterers.,0.9202,2,0.1137
+204,Someone who lays a trap for others will fall victim to it himself.,317,317,People who lay traps for others bring about their own destruction.,0.9174,54,0.3248
+187,Those who seek to please everybody please nobody.,78,78,Try to please all and you end by pleasing none.,0.9147,20,0.4199
+205,People who lay traps for others should be careful not to fall into a trap themselves.,317,317,People who lay traps for others bring about their own destruction.,0.8898,13,0.1560
+183,Do not attempt the impossible.,292,292,Do not try to do impossible things.,0.8762,21,0.3746
+386,Someone who plots against others falls into his own trap.,317,317,People who lay traps for others bring about their own destruction.,0.8752,4,0.0570
+685,"People should not be judged by their appearances, but by their actions.",546,546,Don't judge character by appearance.,0.8713,5,0.1689
+597,Flatterers and deceivers are not to be trusted.,44,44,Do not trust flatterers.,0.8609,52,0.2101
+545,Any excuse will serve a tyrant.,238,238,Tyrants need no excuse.,0.8516,2,0.0062
+677,"People are to be judged by their actions, not by their appearance.",546,546,Don't judge character by appearance.,0.8391,3,0.0933
+248,A discerning person is made wise by the misfortunes of his neighbours.,68,68,Happy is the man who learns from the misfortunes of others.,0.8372,2,0.0656
+49,Old friends should not be sacrificed for new ones.,595,595,Do not neglect the loyalty of old friends to please new acquaintances.,0.8323,2,0.0467
+595,Do not neglect the loyalty of old friends to please new acquaintances.,49,49,Old friends should not be sacrificed for new ones.,0.8323,2,0.0033
+234,Familiarity mollifies even the most terrifying things.,385,385,Familiarity makes it easy to confront even frightening situations.,0.8310,2,0.0460
+395,The things that a person does to others will happen to him in turn.,216,216,"What you have done to others will likewise be done to you, according to the same measure.",0.8162,11,0.1028
+561,The weak may find a way to avenge a wrong.,163,163,Even a high and mighty person should beware of his inferiors; their ingenuity can find a way to take revenge.,0.8156,5,0.0375
+379,Take warning from the misfortunes of others.,68,68,Happy is the man who learns from the misfortunes of others.,0.8154,2,0.0323
+19,Do not attempt too much at once.,347,347,Do not try to grasp too much at once.,0.8113,6,0.1028
+583,Look at the source when placing the blame.,509,509,Use care to place your blame on the right person.,0.8109,4,0.0870
+660,"Nothing should be condemned, since there is nothing so worthless and humble that it cannot at some time or another prove to be useful.",704,704,No one is so contemptible that he cannot be of use to us in some way.,0.8092,11,0.1775
+264,"You must not act unnaturally, trying to achieve some impossible thing.",292,292,Do not try to do impossible things.,0.8045,11,0.1642
+505,There is no wealth greater than liberty.,547,547,There is nothing more valuable than liberty.,0.8024,2,0.0408
+658,There is no wealth greater than liberty.,547,547,There is nothing more valuable than liberty.,0.8024,5,0.0886
+367,We should do favours for someone who can do us a good deed in return.,146,146,Return favors and favors will be bestowed on you.,0.7958,6,0.0741
+690,"It is very unwise, even for the greatest of men, to provoke the least, as they may find a way to enact revenge.",561,561,The weak may find a way to avenge a wrong.,0.7946,15,0.1556
+140,"When people plot against their neighbours, they fall victim to the same sort of plot themselves.",317,317,People who lay traps for others bring about their own destruction.,0.7916,25,0.2204
+560,Kindness is never wasted.,430,430,"No act of kindness, no matter how small, is ever wasted",0.7916,3,0.1793
+91,One good turn deserves another.,250,250,Those who do you a favour you must repay kind.,0.7827,4,0.0287
+151,One good turn deserves another.,250,250,Those who do you a favour you must repay kind.,0.7827,3,0.0074
+402,Those who scheme against others may ultimately fall victim to their own plots.,317,317,People who lay traps for others bring about their own destruction.,0.7789,4,0.0388
+154,Brag and nature may bring you down.,598,598,Do not boast lest you be taken down.,0.7723,8,0.0902
+678,No one can be safe in peace unless they are always ready to face an enemy in case of war.,214,214,Preparedness for war is the best guarantee of peace.,0.7660,3,0.1366
+1,Appearances are deceptive.,677,677,"People are to be judged by their actions, not by their appearance.",0.7650,8,0.1381
+117,Appearances are deceptive.,677,677,"People are to be judged by their actions, not by their appearance.",0.7650,4,0.0687
+332,Greed for more can lead to losing what you already have.,235,235,People who grasp for more than they need are deprived of what they have.,0.7626,235,0.4374
+220,"Better poverty without care, than riches with.",252,252,It is better to live in self-sufficient poverty than to be tormented by the worries of wealth.,0.7577,30,0.1932
+659,"True worth should be measured by character and deeds, not by outward appearances.",370,370,Outside show is a poor substitute for inner worth.,0.7568,3,0.0708
+228,"Unity is strength, while division invites defeat.",511,511,Union gives strength.,0.7536,4,0.0267
+445,Appearances can be deceiving.,677,677,"People are to be judged by their actions, not by their appearance.",0.7523,21,0.3262
+697,Appearances can be deceiving.,677,677,"People are to be judged by their actions, not by their appearance.",0.7523,6,0.0907
+191,Learn from past misfortunes.,68,68,Happy is the man who learns from the misfortunes of others.,0.7505,45,0.2535
+537,Every tale is not to be believed.,486,486,Do not believe everything you hear.,0.7430,39,0.3051
+621,Every tale is not to be believed.,486,486,Do not believe everything you hear.,0.7430,104,0.3559
+279,Those who are not content with what they have may end up losing it while pursuing greater desires.,235,235,People who grasp for more than they need are deprived of what they have.,0.7420,3,0.0614
+631,The life of the poor is often safer than the life of the rich.,447,447,"There is little risk in being poor, while being rich can get you into trouble.",0.7362,125,0.2531
+247,Favor those who do you kindness.,91,91,One good turn deserves another.,0.7347,9,0.0677
+563,A fine coat is not always an indication of an attractive mind.,370,370,Outside show is a poor substitute for inner worth.,0.7294,3,0.0861
+468,Do not blame others.,648,648,Only untrustworthy people blame the consequences of their own actions on others.,0.7260,11,0.1989
+695,A false friend is the worst kind of enemy.,687,687,An enemy in disguise is much more unforgivable than an open enemy.,0.7178,24,0.2136
+37,To do the right thing at the right season is a great art.,645,645,All things are to be done in their own time.,0.7167,2,0.0260
+271,Do not boast to have something you do not.,439,439,Boast of one thing and you will be found lacking in that and a few other things as well.,0.7111,23,0.2293
+663,Many people renounce wicked activities only because they are prevented from conducting them any longer.,683,683,"Many people give up their vices not out of a love for virtue, but because they can no longer continue indulging in them.",0.7070,2,0.0300
+553,Life is a mixture of grief and joy.,610,610,Sadness is a part of life.,0.7059,2,0.0262
+702,Seek the friendship of those who do not withdraw from offering help even in a time of adversity.,14,14,Misfortune tests the sincerity of friends.,0.7059,3,0.0596
+230,"Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity.",450,450,Persuasion is better than Force.,0.7045,2,0.0228
+116,Seek to harm and harm shall find you.,349,349,Bad neighbours are the first to suffer from the harm they would do to others.,0.7017,9,0.0773
+171,Be frank and open in your dealings.,408,408,Honesty is the best policy.,0.6970,16,0.0800
+102,"If men had all they wished, they would be often ruined.",431,431,Be careful what you wish for; your wish may be granted.,0.6932,7,0.1525
+167,True value is wasted on those who cannot appreciate it.,26,26,Precious things are for those that can prize them.,0.6911,2,0.0271
+509,Use care to place your blame on the right person.,648,648,Only untrustworthy people blame the consequences of their own actions on others.,0.6888,2,0.0161
+305,Greed can lead to ruin.,381,381,Greedy men chase after profit with such an intensity that they destroy themselves without achieving anything.,0.6874,6,0.0934
+460,No one gladly revisits a place where they got hurt.,449,449,"When people feel grief for their misfortunes, they avoid the place where that grief overtook them.",0.6836,3,0.1681
+286,A death-bed flattery is the worst of treacheries.,44,44,Do not trust flatterers.,0.6755,240,0.3049
+536,Trouble awaits you if you pursue ill-gotten gains.,432,432,Things you acquire through evil means can be taken from you by evil means.,0.6743,16,0.1943
+515,Do not ask for more than you deserve.,235,235,People who grasp for more than they need are deprived of what they have.,0.6721,462,0.3455
+443,Tear out vice by the roots and the branches will wither away.,611,611,"Destroy the seed of evil, or it will grow up to your ruin.",0.6719,11,0.0906
+31,"He who covets what belongs to another, deservedly loses his own.",432,432,Things you acquire through evil means can be taken from you by evil means.,0.6672,5,0.0938
+403,Do not neglect small advantages in hopes of better ones.,654,654,"Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",0.6668,5,0.0294
+118,No gratitude from the wicked.,34,34,The greatest kindness will not bind the ungrateful.,0.6641,37,0.3274
+80,Enemies' promises are made to be broken.,420,420,"Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",0.6631,58,0.2748
+199,Beware of empty promises made during good times.,521,521,"People are often quick to make promises, but they do not really expect to have to fulfill them.",0.6593,4,0.0886
+638,Men would bear their misfortunes more patiently if they considered the ones of others.,52,52,There is always someone worse off than yourself.,0.6570,5,0.0651
+436,Someone who cannot manage his own affairs is not qualified to give advice to his neighbours.,87,87,"Those who would mend others, should first mend themselves.",0.6563,2,0.0248
+682,Wisdom is far superior to strength.,512,512,"Where force is not enough, cleverness must be used instead.",0.6557,4,0.1175
+287,Few things are done except for profit.,86,86,Self-interest alone moves some men.,0.6527,17,0.1013
+82,Enemies' promises were made to be broken.,420,420,"Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",0.6521,77,0.2953
+693,Complaining is the privilege of the weak.,502,502,They complain most who suffer least.,0.6495,7,0.0575
+172,Some men underrate their best blessings.,54,54,We often despise what is most useful to us.,0.6482,9,0.1369
+622,"Value is what others think of you, not what you think of yourself.",406,406,Vanity can blind one to their true worth in the eyes of others.,0.6476,2,0.0599
+350,Do not take on more than you can handle.,347,347,Do not try to grasp too much at once.,0.6465,7,0.1133
+477,What is most truly valuable is often underrated.,26,26,Precious things are for those that can prize them.,0.6463,4,0.0743
+476,Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings.,550,550,"We are not able to see our own faults: but as soon as others make a slip, we are ready to censure.",0.6458,4,0.1035
+589,"Sometimes, Wicked people commit crime in haste but are not punished until much later.",414,414,There is no fixed day on which wicked people are punished.,0.6448,2,0.0142
+701,A bird in the hand is worth two in the bush.,654,654,"Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",0.6436,6,0.0485
+312,Do not give up friends for foes.,595,595,Do not neglect the loyalty of old friends to please new acquaintances.,0.6422,7,0.0900
+169,People are often eager to treat their enemies well in the hopes of gaining something by it.,420,420,"Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",0.6386,14,0.0568
+153,True value comes from usefulness.,167,167,True value is wasted on those who cannot appreciate it.,0.6376,4,0.1127
+197,"Evil wishes, like chickens, come home to roost.",349,349,Bad neighbours are the first to suffer from the harm they would do to others.,0.6370,13,0.1260
+105,Obscurity often brings safety.,358,358,"To be small is a way to stay safe and avoid problems, whereas you rarely see a man with a big reputation who is able to keep out of danger.",0.6369,38,0.3467
+512,"Where force is not enough, cleverness must be used instead.",275,275,Tricksters can outsmart the strong.,0.6354,2,0.0098
+636,Arrogant fools have no true influence.,366,366,Ignore complainers who have no influence.,0.6336,111,0.2864
+401,"It is often the case that people are greedy for things which they think will bring them honour, but which only result in their death and destruction.",381,381,Greedy men chase after profit with such an intensity that they destroy themselves without achieving anything.,0.6302,35,0.1610
+539,"It is dangerous to believe a story, and dangerous not to believe it.",486,486,Do not believe everything you hear.,0.6286,3,0.0657
+444,"In conflicts between powerful parties, bystanders may suffer unintended consequences.",391,391,Poor folk suffer when the high and mighty are at war with one another.,0.6278,4,0.2274
+654,"Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",36,36,A little thing in hand is worth more than a great thing in prospect.,0.6275,6,0.0614
+195,What is valued in one group may be dismissed by another.,26,26,Precious things are for those that can prize them.,0.6266,13,0.1789
+467,Familiarity can alleviate seemingly intractable problems.,234,234,Familiarity mollifies even the most terrifying things.,0.6236,3,0.0662
+448,There's no reading of ourselves but with other mans eyes.,550,550,"We are not able to see our own faults: but as soon as others make a slip, we are ready to censure.",0.6230,2,0.1165
+51,Necessity is our strongest weapon.,192,192,Hunger sharpens the wits.,0.6161,45,0.2259
+554,Avoid the gain that exposes to hazard.,427,427,People are willing to risk their lives for the sake of some petty profit.,0.6116,24,0.1673
+549,Humble commonalty easily finds safety in obscurity.,358,358,"To be small is a way to stay safe and avoid problems, whereas you rarely see a man with a big reputation who is able to keep out of danger.",0.6097,2,0.1931
+603,People that live by example need to look closely at the example they are following.,527,527,Example is more powerful than precept.,0.6072,3,0.1198
+463,A change of place does not make you a saint.,141,141,Changing your location does not change your state of mind.,0.6054,2,0.0810
+258,Wealth is of little value if one is too afraid to use or enjoy it.,438,438,The true value of money is not in its possession but in its use.,0.6050,4,0.0976
+676,Every Season has its own work.,645,645,All things are to be done in their own time.,0.6043,11,0.1443
+309,No one can be a friend if you know not whether to trust or distrust him.,190,190,He that is neither one thing nor the other has no friends.,0.6030,3,0.0171
+692,"When people won't listen to reason through kind means, they must be made to understand through harsh ones.",700,700,Those who won't learn from advice must be taught by experience.,0.6010,14,0.2016
+429,Those who thrive on deception often retaliate against those who speak the truth.,301,301,Wicked liars generally get their just consequences.,0.6004,34,0.1115
+426,Caution is far superior to reckless haste and hurry.,393,393,Look before you leap.,0.6002,4,0.0622
+459,One should never trust those with a history of deceit.,420,420,"Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",0.5970,12,0.0774
+303,"They who act without sufficient thought, will often fall into unsuspected danger",45,45,Look before you leap.,0.5961,176,0.2670
+533,The man who treats others well is rewarded by gratitude.,0,0,Gratitude is the sign of noble souls.,0.5935,19,0.1586
+340,It is a foolish thing to give advice to others while not looking out for oneself.,476,476,Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings.,0.5920,75,0.2312
+110,It is not only fine feathers that make fine birds.,659,659,"True worth should be measured by character and deeds, not by outward appearances.",0.5898,3,0.1321
+84,Trouble comes from the direction we least expect it.,283,283,Watch on all sides.,0.5895,2,0.0683
+283,Watch on all sides.,84,84,Trouble comes from the direction we least expect it.,0.5895,2,0.0505
+569,Wit outshines skill.,682,682,Wisdom is far superior to strength.,0.5890,11,0.2691
+464,Fair weather friends are not worth much.,694,694,True friends are hard to come by.,0.5876,48,0.2965
+594,Never trust a known deceiver.,25,25,He who is once deceived is doubly cautious.,0.5871,141,0.2949
+5,To be satisfied with one's lot is better than to desire something which one is not fitted to receive.,102,102,"If men had all they wished, they would be often ruined.",0.5870,9,0.1159
+345,Do not boast too much at the height of your powers; people often spend their old age worn out with toil and trouble.,598,598,Do not boast lest you be taken down.,0.5867,13,0.0719
+639,The shortest and surest way of doing things is best.,585,585,Foresake the hard when an easier way is available.,0.5780,2,0.0040
+632,What we are forced to do by a greater power and necessity is not truly our own action.,458,458,Some people will agree to do things under compulsion that they are not willing to do as a favour.,0.5761,27,0.2332
+206,Men feel worst when they contribute to their own undoing.,32,32,How often do we supply our enemies with the means of our own destruction.,0.5737,207,0.2973
+470,That is how life is: we must put up with less serious losses in order to avoid worse ones.,625,625,A small inconvenience is compensated for by a greater usefulness.,0.5723,269,0.2734
+390,People who do harm to others destroy themselves in the bargain.,197,197,"Evil wishes, like chickens, come home to roost.",0.5714,11,0.1124
+405,"We should never put our trust in a wicked man, even if he seems to be completely innocuous.",620,620,Flatters are not to be trusted.,0.5714,68,0.1570
+123,There is strength in restraint.,134,134,A mild disposition can put a stop to vicious behaviour.,0.5661,162,0.2832
+143,Do no overestimate your worth when your fate rests in the hands of the high and the mighty.,406,406,Vanity can blind one to their true worth in the eyes of others.,0.5660,21,0.1206
+232,Experience teaches valuable lessons and encourages caution.,248,248,A discerning person is made wise by the misfortunes of his neighbours.,0.5652,8,0.0905
+107,Equals make the best friends.,108,108,The strong and the weak cannot keep company.,0.5649,2,0.0181
+108,The strong and the weak cannot keep company.,107,107,Equals make the best friends.,0.5649,3,0.0367
+598,Do not boast lest you be taken down.,338,338,Pride goes before destruction.,0.5635,2,0.0029
+7,An ounce of prevention is worth a pound of cure.,188,188,Precautions are useless after the crisis.,0.5631,115,0.2215
+552,Better to endure a small hardship than risk a greater one.,625,625,A small inconvenience is compensated for by a greater usefulness.,0.5623,42,0.1741
+674,Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.,56,56,Avoid a remedy that is worse than the disease.,0.5616,10,0.0345
+378,Chance sometimes rules.,361,361,Luck often bestows the things that skill cannot obtain.,0.5615,75,0.2752
+383,Take pleasure when thieves destroy themselves.,343,343,Some people are so consumed by hatred that they would rather suffer themselves than see their enemies succeed.,0.5606,8,0.0625
+565,Don't be greedy.,404,404,People who grasp at more than they need lose the little that they held in their hands.,0.5584,19,0.2207
+272,Many children are a great blessing; but a few good ones are a greater.,377,377,Quality is more valuable than quantity.,0.5559,3,0.1181
+159,Everyone thinks themselves the best.,270,270,Be content with your lot; one cannot be first in everything.,0.5541,14,0.0790
+372,A wicked person deservedly comes to a bad end by keeping company with other wicked people.,525,525,You are judged by the company you keep.,0.5530,3,0.0577
+221,Inner beauty is better than outer beauty.,563,563,A fine coat is not always an indication of an attractive mind.,0.5519,3,0.0503
+32,How often do we supply our enemies with the means of our own destruction.,168,168,You should think twice before offering anything to your enemies.,0.5505,2,0.0498
+355,"When wicked people do not get the reward and thanks they expect, they immediately put a stop to their good works.",479,479,Those who act in their own self-interest while pretending to help others will not earn gratitude.,0.5491,100,0.2778
+504,Overconfidence often leads people into danger.,484,484,Do not overestimate yourself.,0.5488,130,0.1999
+257,An alliance made with the high and mighty can never be trusted.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.5484,2,0.0029
+254,It is natural to be a knave; men must rise above.,28,28,Men often revert to their natural instincts.,0.5450,21,0.1351
+679,"Save a Thief from the Gallows, and he'll cut your Throat.",34,34,The greatest kindness will not bind the ungrateful.,0.5450,2,0.0124
+256,Only fools indulge into michief and excessive risks.,427,427,People are willing to risk their lives for the sake of some petty profit.,0.5425,195,0.1935
+599,Trust but verify.,486,486,Do not believe everything you hear.,0.5410,137,0.2219
+528,We must make friends in prosperity if we would have their help in adversity.,694,694,True friends are hard to come by.,0.5404,4,0.0497
+269,Vanity betrays every fraud.,95,95,A liar deceives no one but himself.,0.5398,7,0.0888
+6,Clumsy jesting is no joke.,218,218,Anything which is done at the wrong time is liable to be ridiculed.,0.5357,15,0.1654
+419,"It is not the place, nor the condition, but the mind alone that is responsible for our happiness.",624,624,We should not love our homeland so much that we ignore the possibility of finding greater happiness elsewhere.,0.5349,47,0.1736
+542,Tears don't always signify pity.,293,293,False sympathy often masks selfish intentions.,0.5348,2,0.0067
+475,Even the favours of wicked people are frightening.,679,679,"Save a Thief from the Gallows, and he'll cut your Throat.",0.5347,2,0.0698
+329,One cannot circumvent his destiny.,357,357,We had better bear our troubles bravely than try to escape them.,0.5324,3,0.1303
+236,Beware of when the powerful and the deceitful collaborate.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.5286,4,0.0384
+274,Beware of when the powerful and the deceitful collaborate.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.5286,51,0.1382
+193,Sometimes one man toils while another profits.,482,482,Even those who work hard may find their material wealth undone by the greed of others.,0.5276,2,0.1711
+399,"Sometimes, the greatest threats come from those you trust.",687,687,An enemy in disguise is much more unforgivable than an open enemy.,0.5267,53,0.2457
+623,There is danger in the silent enemy.,84,84,Trouble comes from the direction we least expect it.,0.5260,42,0.1361
+243,One bad turn deserves another.,42,42,Do unto others what you would have them do unto you.,0.5252,5,0.2021
+400,A fool will make excuses for foolish behavior.,238,238,Tyrants need no excuse.,0.5214,59,0.2065
+304,Enterprise is not to be judged in terms of its speed but its outcome.,371,371,Slow and steady wins the race.,0.5213,3,0.0487
+662,Don't promise more than you can deliver.,199,199,Beware of empty promises made during good times.,0.5195,5,0.0277
+540,Often there is more good to be found in one man than in a crowd of people.,671,671,"It is better by far to be governed by one chief, than by many.",0.5188,348,0.2310
+226,"When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone.",391,391,Poor folk suffer when the high and mighty are at war with one another.,0.5187,37,0.0962
+607,When fools fight others run away with the prize.,193,193,Sometimes one man toils while another profits.,0.5187,2,0.1640
+567,Avoid overindulgence,699,699,Even the strongest can be brought low by unchecked desires.,0.5183,13,0.2483
+308,Benefits are refused by those who don't understand them.,172,172,Some men underrate their best blessings.,0.5173,17,0.0870
+216,"What you have done to others will likewise be done to you, according to the same measure.",454,454,People who have been treated with contempt repay the deed in kind.,0.5172,3,0.0120
+529,A coward by nature will always be a coward.,259,259,"True courage involves overcoming fears, even when faced with intimidation.",0.5151,2,0.0233
+34,The greatest kindness will not bind the ungrateful.,0,0,Gratitude is the sign of noble souls.,0.5139,3,0.0319
+152,"When someone with a wicked nature changes his appearance, his behaviour remains the same.",685,685,"People should not be judged by their appearances, but by their actions.",0.5131,11,0.1145
+208,Rushing into pleasant invitations can lead to dire consequences.,426,426,Caution is far superior to reckless haste and hurry.,0.5130,36,0.1206
+200,Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well.,143,143,Do no overestimate your worth when your fate rests in the hands of the high and the mighty.,0.5124,41,0.1478
+306,Take what you can get when you can get it.,654,654,"Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",0.5112,4,0.0420
+268,Live your lives in the clothes that suit you.,673,673,Not all things are suitable for all people.,0.5106,26,0.1008
+474,Some may choose mutual destruction over continued suffering.,215,215,"It is good to set aside our deadly disputes and conflicts, since they put everyone's lives in jeopardy.",0.5097,6,0.0495
+83,Stoop to conquer.,225,225,People who enter into contests with unworthy opponents lower their own reputation.,0.5095,2,0.0103
+189,Do not always stick to the same course.,585,585,Foresake the hard when an easier way is available.,0.5076,5,0.0461
+555,We must not require what is unreasonable.,102,102,"If men had all they wished, they would be often ruined.",0.5065,5,0.0238
+224,Some people just won't change.,335,335,It's hard to give up bad habits.,0.5053,46,0.2714
+198,No piece of luck can conceal a depraved nature.,165,165,A wicked nature does not produce a good character.,0.5044,2,0.0054
+298,Do not grasp at more than you need.,19,19,Do not attempt too much at once.,0.5017,9,0.1744
+352,Those who complain about their duties often forget their own role in creating the situation.,502,502,They complain most who suffer least.,0.5000,2,0.0260
+95,A liar deceives no one but himself.,174,174,"Those who pretend to be what they are not, sooner or later, find themselves in deep water.",0.4984,2,0.0329
+265,"If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",25,25,He who is once deceived is doubly cautious.,0.4983,44,0.2081
+581,Do not let your fancy make you forget realities.,334,334,Our mere anticipations of life outrun its realities.,0.4968,139,0.2440
+413,Don't promise big things if you can't deliver.,199,199,Beware of empty promises made during good times.,0.4967,10,0.0768
+100,Every man for himself.,672,672,No one is so loving of a friend that they would not prefer their own good to that of another.,0.4966,4,0.0377
+369,Accept the changes in life.,417,417,Acceptance can lead to unexpected harmony.,0.4961,3,0.0567
+530,"Do not be what you are not, nor pretend to be what you are not",233,233,Jealousy can lead people to foolishly imitate their betters.,0.4917,7,0.1483
+415,"Nobody believes people who are inherently wicked, even if they pretend to be good-natured.",137,137,"The dishonest, if they act honestly, get no credit.",0.4906,210,0.2846
+18,Be on guard against men who can strike from a distance.,84,84,Trouble comes from the direction we least expect it.,0.4900,50,0.1234
+62,Abstain and enjoy.,699,699,Even the strongest can be brought low by unchecked desires.,0.4891,9,0.1564
+101,Never put yourself in your enemy's clutches.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.4886,7,0.0342
+142,Enviable conditions often have a downside.,576,576,The grass is always greener on the other side of the fence.,0.4876,71,0.1488
+157,"If people who have previously committed a crime are swiftly punished, then others will become afraid on their account.",414,414,There is no fixed day on which wicked people are punished.,0.4874,8,0.1057
+293,False sympathy often masks selfish intentions.,675,675,"Many pretend to be concerned about some people's demise, when however what they want is for it to come quickly.",0.4861,2,0.0213
+416,Each man makes his reputation in the field which is his specialty.,270,270,Be content with your lot; one cannot be first in everything.,0.4795,234,0.2180
+669,He who claims any good for himself takes away from the source of all the good he enjoys.,160,160,Do not take credit for the accomplishments of others.,0.4785,13,0.0593
+178,Do not let fame get to your head.,598,598,Do not boast lest you be taken down.,0.4760,4,0.0212
+207,There is no glory in tricking those easy to trick.,618,618,Degrading your opponents only diminishes your own victory.,0.4752,48,0.2278
+63,The desire for imaginary benefits often involves the loss of present blessings.,298,298,Do not grasp at more than you need.,0.4751,97,0.2506
+155,"He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour.",230,230,"Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity.",0.4746,21,0.1058
+412,Life's disasters can often bring boastful and presumptuous people back down to earth.,143,143,Do no overestimate your worth when your fate rests in the hands of the high and the mighty.,0.4746,136,0.3033
+465,"Sometimes, those you support become your worst enemy.",538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.4742,393,0.3054
+656,"We should not be upset by the words of our teachers, since those words are usually the cause of many good things.",700,700,Those who won't learn from advice must be taught by experience.,0.4742,17,0.0553
+615,Be prepared to defend your position.,214,214,Preparedness for war is the best guarantee of peace.,0.4732,16,0.0943
+705,The conflicts of the wicked are the protection of the good.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.4720,3,0.0247
+74,The man who talks for both sides is not to be trusted by either.,453,453,"Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary.",0.4690,4,0.1805
+404,People who grasp at more than they need lose the little that they held in their hands.,19,19,Do not attempt too much at once.,0.4664,3,0.0715
+229,Believing your enemies makes you fall victim to their tricks and gets you into trouble.,265,265,"If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",0.4654,6,0.0272
+543,People with excellent qualities are often insulted by their inferiors.,159,159,Everyone thinks themselves the best.,0.4640,117,0.1705
+657,"It's wise and kind to be considerate of one another, for no one knows their own end.",706,706,We should live as if we always saw Death standing by.,0.4636,2,0.0238
+664,Do not fight with those who are perfectly capable of fighting back.,245,245,It is useless attacking the insensible.,0.4636,104,0.3057
+454,People who have been treated with contempt repay the deed in kind.,42,42,Do unto others what you would have them do unto you.,0.4624,5,0.0888
+181,People often grasp for more than they need and thus lose the little they have.,19,19,Do not attempt too much at once.,0.4600,7,0.1184
+572,"When a man has both an interest and an inclination to betray us, there's no trusting him.",296,296,Trust is not to be given lightly.,0.4589,80,0.1948
+128,When people harbor a criminal they become his first victims without even realizing it.,538,538,"The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",0.4571,39,0.0882
+582,Better to face a known danger than to trust a deceitful promise of safety.,84,84,Trouble comes from the direction we least expect it.,0.4570,9,0.0961
+576,The grass is always greener on the other side of the fence.,667,667,"Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side.",0.4567,27,0.3791
+523,It is easy to be brave when there is no danger.,202,202,It is easy to attack those who have fallen from their position of power and glory.,0.4553,10,0.2598
+64,Sorrow not over what is lost forever,610,610,Sadness is a part of life.,0.4508,68,0.1926
+627,A wise person will not attempt anything without having the right means to achieve it.,290,290,It is a foolish man who wants to rival his superiors.,0.4508,3,0.0853
+363,A reward for one might be destruction for another.,328,328,Easy life and seeming good fortune of others conceal a threat to their welfare.,0.4495,8,0.0771
+626,It's wise to think before we speak.,375,375,People who act impulsively can end up in regrettable situations.,0.4485,484,0.3526
+650,Consider the consequences of your actions.,375,375,People who act impulsively can end up in regrettable situations.,0.4484,29,0.2482
+596,Know yourself and your limits.,627,627,A wise person will not attempt anything without having the right means to achieve it.,0.4480,16,0.2095
+672,No one is so loving of a friend that they would not prefer their own good to that of another.,384,384,Distrust advice from someone who stands to gain.,0.4473,11,0.0701
+300,"Men are averse to fixed rules, but are won by kind services.",584,584,It is better to be loved than feared.,0.4468,52,0.1511
+396,Bear that those who are inferior to you in merit should be like you in outside appearances.,159,159,Everyone thinks themselves the best.,0.4434,2,0.0130
+601,Falsehood is with all men.,254,254,It is natural to be a knave; men must rise above.,0.4431,5,0.0885
+531,The word of a wicked man can never be trusted.,261,261,"Don't be seduced by deceptive words, they will cause nothing but trouble.",0.4415,101,0.2590
+48,Better no rule than cruel rule.,584,584,It is better to be loved than feared.,0.4410,2,0.0045
+260,Contentment with our lot is an element of happiness.,555,555,We must not require what is unreasonable.,0.4387,3,0.0795
+290,It is a foolish man who wants to rival his superiors.,569,569,Wit outshines skill.,0.4386,9,0.1556
+506,Some would rather fight than not.,607,607,When fools fight others run away with the prize.,0.4385,11,0.0499
+318,Be content with your station.,200,200,Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well.,0.4375,18,0.2401
+642,There is a clever way of joking between seriousness and jest that brings both enjoyment and benefit.,218,218,Anything which is done at the wrong time is liable to be ridiculed.,0.4371,10,0.0991
+374,Overly curious people often pay a very high price for recklessly indulging their curiosity.,616,616,Greed often overreaches itself.,0.4366,554,0.2586
+633,Famous beauties are rarely lucky.,142,142,Enviable conditions often have a downside.,0.4363,27,0.1081
+691,Be content with your lot.,555,555,We must not require what is unreasonable.,0.4358,87,0.3210
+696,Be content with your lot.,555,555,We must not require what is unreasonable.,0.4358,47,0.2864
+46,Consider carefully before changing your situation.,324,324,People often appreciate what they had only after experiencing something worse.,0.4329,30,0.1583
+94,"There is no believing a liar, even when he speaks the truth.",137,137,"The dishonest, if they act honestly, get no credit.",0.4326,2,0.0432
+121,Do not trust the wicked.,261,261,"Don't be seduced by deceptive words, they will cause nothing but trouble.",0.4318,20,0.1010
+321,The loud-mouthed boaster does not impress nor frighten those who know him.,366,366,Ignore complainers who have no influence.,0.4318,6,0.1030
+532,It is better to serve in safety than to rule in peril.,325,325,The insubordinate are free from both obligation and protection.,0.4298,4,0.0508
+655,"Everything pleases at first, but nothing pleases for long.",62,62,Abstain and enjoy.,0.4280,2,0.1447
+556,The essence of authenticity cannot be replicated.,22,22,Men often applaud an imitation and hiss the real thing.,0.4265,4,0.0975
+330,False confidence often leads into danger.,84,84,Trouble comes from the direction we least expect it.,0.4253,7,0.0780
+357,We had better bear our troubles bravely than try to escape them.,490,490,You should not add one problem to another.,0.4244,3,0.0139
+89,Vicious people cannot resist hurting others even when it is not in their own interests,664,664,Do not fight with those who are perfectly capable of fighting back.,0.4240,40,0.1717
+291,Do not believe those who have ill intentions.,265,265,"If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",0.4240,17,0.0728
+295,You should especially avoid someone who does not even spare his own people.,204,204,Someone who lays a trap for others will fall victim to it himself.,0.4238,2,0.0193
+93,Understand what you are doing before you do it.,375,375,People who act impulsively can end up in regrettable situations.,0.4237,270,0.4344
+249,Do not go chasing after things that are useless and unprofitable.,298,298,Do not grasp at more than you need.,0.4235,80,0.2296
+524,Love can blind even the wildest.,495,495,Only a man who is out of his mind and hated by the gods delights in ugly things as if they were beautiful.,0.4212,3,0.1581
+219,An honest man's word is as good as his oath.,237,237,Be cautious with promises made under duress.,0.4211,52,0.1917
+421,Do not let anything turn you from your purpose.,331,331,You can't always stop a fool.,0.4195,33,0.1057
+520,No curse weighs more heavily than a guilty conscience.,266,266,Those who commit grave wrongs cannot escape justice.,0.4190,197,0.1783
+130,It is unwise to reward when one should punish.,247,247,Favor those who do you kindness.,0.4178,2,0.0024
+314,Some can do wrong more easily than others can see it.,526,526,Do not attempt to hide things which cannot be hid.,0.4174,4,0.0294
+375,People who act impulsively can end up in regrettable situations.,426,426,Caution is far superior to reckless haste and hurry.,0.4152,3,0.0395
+452,People often disguise their selfish desires as practical needs to justify their actions.,384,384,Distrust advice from someone who stands to gain.,0.4143,14,0.1213
+125,Great achievements are often blocked by some small thing which prevents their realization.,27,27,Little by little does the trick.,0.4141,265,0.2106
+354,"Injuries may be forgiven, but not forgotten.",353,353,He who harms someone should henceforth be treated with suspicion.,0.4141,2,0.0399
+434,The greatest gifts are often overlooked in favor of envying others.,638,638,Men would bear their misfortunes more patiently if they considered the ones of others.,0.4134,21,0.1838
+217,Counsel without help is useless.,689,689,"Men who are wickedly inclined will not stop their vicious behavior, no matter who urges them to do so.",0.4131,15,0.1430
+496,It is difficult to truly know a person.,677,677,"People are to be judged by their actions, not by their appearance.",0.4106,6,0.0336
+310,People who offer to give someone many gifts are no doubt trying to deceive.,475,475,Even the favours of wicked people are frightening.,0.4092,21,0.1056
+70,"You may share the labours of the great, but you will not share the spoil.",532,532,It is better to serve in safety than to rule in peril.,0.4088,44,0.1708
+131,Success leads many astray to their ruin.,549,549,Humble commonalty easily finds safety in obscurity.,0.4069,58,0.1871
+210,Do not laugh at the calamity that befalls your neighbour.,340,340,It is a foolish thing to give advice to others while not looking out for oneself.,0.4067,21,0.2975
+75,"One story is good, till another is told.",686,686,There is no thing so worthy of wonderment which does not cease to be a miracle with the passage of time.,0.4064,4,0.0655
+362,Some never understand the actions of others.,632,632,What we are forced to do by a greater power and necessity is not truly our own action.,0.4064,78,0.1490
+168,You should think twice before offering anything to your enemies.,208,208,Rushing into pleasant invitations can lead to dire consequences.,0.4052,42,0.1046
+488,You can fool someone only so many times.,25,25,He who is once deceived is doubly cautious.,0.4043,9,0.1469
+28,Men often revert to their natural instincts.,24,24,Nature reveals itself.,0.4042,4,0.0533
+571,Don't deceive yourself.,269,269,Vanity betrays every fraud.,0.4042,22,0.0852
+410,"When you lie, you often have to expand the lie.",174,174,"Those who pretend to be what they are not, sooner or later, find themselves in deep water.",0.4028,280,0.3005
+235,People who grasp for more than they need are deprived of what they have.,19,19,Do not attempt too much at once.,0.4023,3,0.0089
+132,People are asking for trouble if they make fun of someone who is better than they are.,569,569,Wit outshines skill.,0.4016,2,0.0131
+88,Change of habit cannot alter nature.,23,23,Nature reveals itself.,0.4011,2,0.0028
+688,We should not pick fights with people stronger than we are.,245,245,It is useless attacking the insensible.,0.3984,10,0.1705
+323,"Instead of looking at how things start, we should look instead at how they turn out in the end.",697,697,Appearances can be deceiving.,0.3982,392,0.2207
+397,Beware of enterprizes where the risks are not equal.,532,532,It is better to serve in safety than to rule in peril.,0.3976,10,0.1069
+23,Nature reveals itself.,147,147,Nature and instincts can persist despite changes in form or appearance.,0.3968,4,0.1638
+24,Nature reveals itself.,147,147,Nature and instincts can persist despite changes in form or appearance.,0.3968,7,0.1865
+147,Nature and instincts can persist despite changes in form or appearance.,23,23,Nature reveals itself.,0.3968,2,0.0150
+593,Nature reveals itself.,147,147,Nature and instincts can persist despite changes in form or appearance.,0.3968,373,0.4074
+613,Nature reveals itself.,147,147,Nature and instincts can persist despite changes in form or appearance.,0.3968,14,0.2462
+109,He who shares the danger ought to share the prize.,532,532,It is better to serve in safety than to rule in peril.,0.3947,2,0.0232
+484,Do not overestimate yourself.,569,569,Wit outshines skill.,0.3938,21,0.1606
+590,Watch the actions of your enemy.,248,248,A discerning person is made wise by the misfortunes of his neighbours.,0.3935,622,0.3535
+472,Appetite blinds men to their surroundings,303,303,"They who act without sufficient thought, will often fall into unsuspected danger",0.3930,340,0.1518
+514,Someone who wants to help his friend must give him what is essential and appropriate.,674,674,Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.,0.3920,31,0.1060
+481,Bad situations rarely get better.,640,640,"When we are avoiding present dangers, we should not fall into even worse peril.",0.3915,5,0.0665
+342,He who competes with his superiors destroys himself before he can equal them.,569,569,Wit outshines skill.,0.3910,15,0.1800
+360,"We have to endure reversals of fortune, since we know that life is a matter of luck.",369,369,Accept the changes in life.,0.3905,30,0.2745
+41,Cunning often outwits itself.,488,488,You can fool someone only so many times.,0.3904,6,0.1947
+276,"Bad things naturally happen to bad people, while good things lie in wait for people who are honest and reasonable.",494,494,Fortune can occasionally bestow favours that exceed a person's hopes and expectations.,0.3903,3,0.0448
+409,The promises of the greedy are often empty and insincere.,341,341,Some people will do anything to get what they want.,0.3898,3,0.0718
+161,Those who refuse to share and respond with rudeness may face dire consequences for their actions.,513,513,"A greedy man does not gladly give anything away, even when he has enough for himself.",0.3878,4,0.0591
+280,Good will is worth nothing unless it is accompanied by good acts.,199,199,Beware of empty promises made during good times.,0.3863,266,0.3264
+389,People who stubbornly cling to unwise choices lose everything before they know it.,331,331,You can't always stop a fool.,0.3845,4,0.0966
+346,The only thing that can really bring shame on a man is a punishment that he has justly deserved.,501,501,Notoriety is often mistaken for fame.,0.3837,5,0.0675
+473,False men cannot be trusted.,261,261,"Don't be seduced by deceptive words, they will cause nothing but trouble.",0.3830,323,0.3533
+69,Small liberties can be large offenses.,314,314,Some can do wrong more easily than others can see it.,0.3790,6,0.0456
+72,Straws show how the wind blows.,526,526,Do not attempt to hide things which cannot be hid.,0.3781,92,0.1418
+324,People often appreciate what they had only after experiencing something worse.,638,638,Men would bear their misfortunes more patiently if they considered the ones of others.,0.3777,3,0.0486
+29,Those who enter by the back stairs may expect to be shown out at the window.,579,579,Honor the customs of the household you enter.,0.3769,10,0.0638
+619,Pick your enemies.,607,607,When fools fight others run away with the prize.,0.3766,77,0.2137
+453,"Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary.",254,254,It is natural to be a knave; men must rise above.,0.3764,19,0.1142
+423,Every man should be content to mind his own business.,506,506,Some would rather fight than not.,0.3753,2,0.0370
+522,Those who adapt to the times will emerge unscathed.,189,189,Do not always stick to the same course.,0.3729,7,0.1574
+580,"No matter how you brag, you can be undone.",95,95,A liar deceives no one but himself.,0.3729,15,0.0991
+708,Those who adapt to the times will emerge unscathed.,189,189,Do not always stick to the same course.,0.3729,8,0.1609
+344,People with a history of wrongdoing are often not trusted.,137,137,"The dishonest, if they act honestly, get no credit.",0.3727,83,0.2658
+466,Not all advice is wise.,674,674,Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.,0.3697,562,0.3356
+365,"Pleasure bought with pains, hurts.",536,536,Trouble awaits you if you pursue ill-gotten gains.,0.3677,2,0.0993
+114,Do not say anything at any time that you would not say at all times.,380,380,Deceivers often exploit the inability of others to challenge their falsehoods.,0.3665,56,0.1162
+145,People get themselves into trouble because of their boasting.,95,95,A liar deceives no one but himself.,0.3656,6,0.0430
+261,"Don't be seduced by deceptive words, they will cause nothing but trouble.",518,518,The things which bring us pleasure can often be hazardous as well.,0.3633,21,0.0793
+604,Know your place.,579,579,Honor the customs of the household you enter.,0.3630,2,0.0280
+96,Fine work gets preserved and treasured.,451,451,The memory of a good deed lives.,0.3625,2,0.0295
+446,If often happens that even honest people do not hesitate to persecute someone who has slandered them.,539,539,"It is dangerous to believe a story, and dangerous not to believe it.",0.3605,14,0.1175
+137,"The dishonest, if they act honestly, get no credit.",287,287,Few things are done except for profit.,0.3598,12,0.0762
+548,"It is better to be injured with impunity, than to put ourselves in the power of another.",524,524,Love can blind even the wildest.,0.3576,12,0.0840
+667,"Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side.",369,369,Accept the changes in life.,0.3575,15,0.0696
+341,Some people will do anything to get what they want.,284,284,"When it serves their purposes, people commonly do not hesitate to swear to the most incredible fabrications.",0.3573,4,0.0356
+71,Wit always has an answer ready.,132,132,People are asking for trouble if they make fun of someone who is better than they are.,0.3515,189,0.2352
+673,Not all things are suitable for all people.,264,264,"You must not act unnaturally, trying to achieve some impossible thing.",0.3511,5,0.0749
+440,"A sinful mind can even change a person's nature, causing it to be impaired.",23,23,Nature reveals itself.,0.3507,140,0.3209
+297,There is danger lurking in the words of a wicked person.,180,180,An invitation prompted by selfishness is not to be accepted.,0.3505,457,0.3353
+516,Indulgence in luxuries can lead to peril.,206,206,Men feel worst when they contribute to their own undoing.,0.3490,2,0.0068
+255,"Beware of swindlers, as they often exploit the gullibility of others.",445,445,Appearances can be deceiving.,0.3478,43,0.1618
+9,Wit has always an answer ready.,132,132,People are asking for trouble if they make fun of someone who is better than they are.,0.3462,46,0.1755
+519,No one should boast when his prowess is a matter of mere circumstance.,618,618,Degrading your opponents only diminishes your own victory.,0.3436,48,0.1788
+587,Act as you profess to believe.,599,599,Trust but verify.,0.3429,34,0.2168
+61,The hero is brave in deeds as well as words.,177,177,Talking is a waste of time when you can simply provide a demonstration.,0.3426,7,0.1501
+337,Count the cost before you commit yourselves.,375,375,People who act impulsively can end up in regrettable situations.,0.3412,4,0.0697
+461,The unjust man is envious of anyone else's good fortune.,10,10,Vices are their own punishment.,0.3410,13,0.1584
+602,Consider all before you judge.,587,587,Act as you profess to believe.,0.3383,640,0.3397
+518,The things which bring us pleasure can often be hazardous as well.,206,206,Men feel worst when they contribute to their own undoing.,0.3373,26,0.1437
+4,Men often bear little grievances with less courage than they do large misfortunes.,226,226,"When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone.",0.3357,7,0.0624
+353,He who harms someone should henceforth be treated with suspicion.,310,310,People who offer to give someone many gifts are no doubt trying to deceive.,0.3355,44,0.1394
+227,"When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",337,337,Count the cost before you commit yourselves.,0.3340,3,0.0470
+156,Do not mock the gods.,161,161,Those who refuse to share and respond with rudeness may face dire consequences for their actions.,0.3337,109,0.2257
+223,Do not mock the gods.,161,161,Those who refuse to share and respond with rudeness may face dire consequences for their actions.,0.3337,46,0.1813
+640,"When we are avoiding present dangers, we should not fall into even worse peril.",399,399,"Sometimes, the greatest threats come from those you trust.",0.3334,5,0.1470
+135,A mother's nurturing is stronger than a stepmother's attentions.,300,300,"Men are averse to fixed rules, but are won by kind services.",0.3331,21,0.2914
+641,An alliance with the powerless is futile.,337,337,Count the cost before you commit yourselves.,0.3329,5,0.1066
+202,It is easy to attack those who have fallen from their position of power and glory.,378,378,Chance sometimes rules.,0.3324,6,0.1315
+241,Relying too much on subordinates can lead to unintended consequences.,348,348,Nothing escapes the master's eye.,0.3314,129,0.1267
+428,"When your adversary is also your judge, don't bother arguing.",612,612,Action is more valuable than arguments.,0.3283,6,0.0427
+150,Work honestly and you won't be scorned.,148,148,There's a time for work and a time for play.,0.3281,4,0.0708
+628,Trusting as you wish to be trusted doesn't work between a rogue and an honest person. ,424,424,Hypocritical speeches are easily seen through.,0.3276,90,0.1480
+281,"In avoiding a lesser danger, one may inadvertently fall into a greater peril.",399,399,"Sometimes, the greatest threats come from those you trust.",0.3244,2,0.0595
+681,Possession is nine-tenths of the law.,70,70,"You may share the labours of the great, but you will not share the spoil.",0.3237,37,0.2359
+480,People often make extravagant promises which they are completely unable to carry out.,341,341,Some people will do anything to get what they want.,0.3235,4,0.0615
+2,There's a time for work and a time for play.,149,149,Prepare for the future.,0.3232,5,0.0537
+148,There's a time for work and a time for play.,149,149,Prepare for the future.,0.3232,4,0.0336
+149,Prepare for the future.,2,2,There's a time for work and a time for play.,0.3232,3,0.0505
+433,You will hurt yourself and accomplish nothing if you try to imitate someone who is far better than you are.,508,508,Don't take on more than you can accomplish.,0.3231,3,0.0349
+267,Vanity can lead to self-destruction.,183,183,Do not attempt the impossible.,0.3212,211,0.3061
+296,Trust is not to be given lightly.,255,255,"Beware of swindlers, as they often exploit the gullibility of others.",0.3157,13,0.1451
+311,Do not blame others for the circumstances of their upbringing.,346,346,The only thing that can really bring shame on a man is a punishment that he has justly deserved.,0.3149,2,0.0009
+351,"Charity begins at home, but this does not prevent the further exercise of it.",210,210,Do not laugh at the calamity that befalls your neighbour.,0.3140,286,0.2177
+493,Unresolved issues can resurface when least expected.,609,609,Do not dwell on what has passed.,0.3137,61,0.2133
+562,Know your enemies.,337,337,Count the cost before you commit yourselves.,0.3135,217,0.2807
+97,Two blacks do not make a white.,158,158,Some things you cannot change.,0.3106,13,0.1819
+508,Don't take on more than you can accomplish.,290,290,It is a foolish man who wants to rival his superiors.,0.3103,6,0.1122
+578,Justice is fickle.,205,205,People who lay traps for others should be careful not to fall into a trap themselves.,0.3049,6,0.0327
+605,Be watchful or all will be lost.,140,140,"When people plot against their neighbours, they fall victim to the same sort of plot themselves.",0.3048,34,0.1281
+666,It's foolish to make decisions without understanding the nature of the matter at hand.,359,359,Imitation is no substitute for knowledge.,0.3027,58,0.2153
+133,Experience often provides clearer insight than empty predictions.,436,436,Someone who cannot manage his own affairs is not qualified to give advice to his neighbours.,0.3019,3,0.0739
+47,There is as much malice in a wink as in a word.,82,82,Enemies' promises were made to be broken.,0.3007,38,0.0995
+586,Even gods may not know everything.,480,480,People often make extravagant promises which they are completely unable to carry out.,0.3005,7,0.0625
+647,Putting up with one insult invites another.,161,161,Those who refuse to share and respond with rudeness may face dire consequences for their actions.,0.2916,52,0.1779
+614,It's easy to put off today what can be done tomorrow.,706,706,We should live as if we always saw Death standing by.,0.2913,40,0.2270
+700,Those who won't learn from advice must be taught by experience.,256,256,Only fools indulge into michief and excessive risks.,0.2901,9,0.1975
+175,Honor your craft with integrity.,254,254,It is natural to be a knave; men must rise above.,0.2882,25,0.1538
+425,The safeguards of virtue are hateful to those with evil intentions.,399,399,"Sometimes, the greatest threats come from those you trust.",0.2881,14,0.0635
+591,Care defines ability.,322,322,Talent is wasted when it's in the hands of the unappreciative.,0.2852,21,0.0863
+165,A wicked nature does not produce a good character.,118,118,No gratitude from the wicked.,0.2846,4,0.0283
+239,Stay focused on your goals.,371,371,Slow and steady wins the race.,0.2792,244,0.1911
+20,One man's pleasure may be another's pain.,617,617,Be careful what you wish for.,0.2785,3,0.0480
+299,Those who try to deceive may expect to be paid in their own coin.,223,223,Do not mock the gods.,0.2756,3,0.0917
+225,People who enter into contests with unworthy opponents lower their own reputation.,123,123,There is strength in restraint.,0.2745,2,0.0298
+263,You should not treat bad people the same way that you treat good people.,418,418,People who have been judged in the past can later on be in a position to judge their former teachers.,0.2745,76,0.1137
+119,We are made by our teachings in youth.,613,613,Nature reveals itself.,0.2725,31,0.1789
+90,"Regardless of our wishes, or even our intent, it is to our Nature alone that we will be faithful.",251,251,The penalty for speaking and for keeping silent is one and the same.,0.2684,21,0.1907
+57,He laughs best that laughs last.,515,515,Do not ask for more than you deserve.,0.2681,329,0.3242
+498,He laughs best that laughs last.,515,515,Do not ask for more than you deserve.,0.2681,296,0.3188
+266,Those who commit grave wrongs cannot escape justice.,465,465,"Sometimes, those you support become your worst enemy.",0.2667,4,0.0836
+558,"Whatever happens, we must bear it with equanimity.",523,523,It is easy to be brave when there is no danger.,0.2657,469,0.2641
+618,Degrading your opponents only diminishes your own victory.,123,123,There is strength in restraint.,0.2622,4,0.1237
+668,"When public officials encourage foolishness, it's no surprise if fools try to become public officials.",646,646,"Big talkers are not suited for trust, business, or conversation.",0.2613,2,0.0152
+442,The best intentions will not always ensure success.,440,440,"A sinful mind can even change a person's nature, causing it to be impaired.",0.2611,373,0.2071
+499,"One is known by deeds, not by words.",572,572,"When a man has both an interest and an inclination to betray us, there's no trusting him.",0.2594,22,0.2662
+670,We should not expect that our crimes will always go unpunished.,465,465,"Sometimes, those you support become your worst enemy.",0.2582,95,0.2966
+251,The penalty for speaking and for keeping silent is one and the same.,461,461,The unjust man is envious of anyone else's good fortune.,0.2574,341,0.1825
+490,You should not add one problem to another.,241,241,Relying too much on subordinates can lead to unintended consequences.,0.2574,11,0.1308
+67,Try before you trust.,263,263,You should not treat bad people the same way that you treat good people.,0.2564,18,0.1006
+435,People often make plans that turn out to be to their own disadvantage.,488,488,You can fool someone only so many times.,0.2538,19,0.1335
+492,People adjust their beliefs based on what is profitable for them.,189,189,Do not always stick to the same course.,0.2535,162,0.1812
+510,Beware the sort of person who uses tricks.,485,485,Be yourself and don't pretend to be someone you're not.,0.2504,36,0.2059
+629,Pride and vanity leads to our downfall.,581,581,Do not let your fancy make you forget realities.,0.2492,97,0.3659
+196,Pretenders will be found out.,562,562,Know your enemies.,0.2451,46,0.2197
+212,Rewards do not always accompany a lifetime of good work.,323,323,"Instead of looking at how things start, we should look instead at how they turn out in the end.",0.2427,10,0.1342
+534,"Pay attention to deeds, not words.",572,572,"When a man has both an interest and an inclination to betray us, there's no trusting him.",0.2371,21,0.2979
+649,Embrace your own strengths.,627,627,A wise person will not attempt anything without having the right means to achieve it.,0.2323,101,0.1943
+186,Intent matters more than the outcome.,51,51,Necessity is our strongest weapon.,0.2303,182,0.1373
+422,A hypocrite can usually be found out.,562,562,Know your enemies.,0.2302,39,0.1734
+339,God is the ultimate judge.,587,587,Act as you profess to believe.,0.2280,81,0.1909
+73,Yield to all and you will soon have nothing to yield.,297,297,There is danger lurking in the words of a wicked person.,0.2237,16,0.1080
+612,Action is more valuable than arguments.,196,196,Pretenders will be found out.,0.2233,14,0.1424
+535,"A man cannot be too careful of what he does, where the life of any creature is in question.",263,263,You should not treat bad people the same way that you treat good people.,0.2195,41,0.1053
+233,Jealousy can lead people to foolishly imitate their betters.,508,508,Don't take on more than you can accomplish.,0.2191,2,0.0186
+503,Do not be in a hurry to change one evil for another.,241,241,Relying too much on subordinates can lead to unintended consequences.,0.2170,11,0.0631
+557,"The meaning is to be considered, not the mere words.",80,80,Enemies' promises are made to be broken.,0.2145,283,0.2318
+441,Those who avoid hardship may miss out on valuable rewards.,323,323,"Instead of looking at how things start, we should look instead at how they turn out in the end.",0.2144,2,0.0101
+680,Unwanted visits are a nuisance to a peaceful person's life.,681,681,Possession is nine-tenths of the law.,0.2129,2,0.0027
+10,Vices are their own punishment.,557,557,"The meaning is to be considered, not the mere words.",0.2094,22,0.3013
+294,Do not try to gain favor by acting in a way that is contrary to your own nature and character.,332,332,Greed for more can lead to losing what you already have.,0.2090,19,0.1194
+160,Do not take credit for the accomplishments of others.,636,636,Arrogant fools have no true influence.,0.1984,2,0.0700
+462,Desire things you don't understand and you accept the consequences.,426,426,Caution is far superior to reckless haste and hurry.,0.1977,107,0.1946
+325,The insubordinate are free from both obligation and protection.,602,602,Consider all before you judge.,0.1972,5,0.0371
+56,Avoid a remedy that is worse than the disease.,241,241,Relying too much on subordinates can lead to unintended consequences.,0.1929,2,0.0677
+15,It is easy to propose impossible remedies.,241,241,Relying too much on subordinates can lead to unintended consequences.,0.1918,6,0.0594
+103,Everyone is more or less master of his own fate.,156,156,Do not mock the gods.,0.1888,5,0.2006
+568,Everyone is more or less master of his own fate.,156,156,Do not mock the gods.,0.1888,174,0.4009
+42,Do unto others what you would have them do unto you.,626,626,It's wise to think before we speak.,0.1872,4,0.2333
+424,Hypocritical speeches are easily seen through.,562,562,Know your enemies.,0.1870,61,0.1922
+418,People who have been judged in the past can later on be in a position to judge their former teachers.,473,473,False men cannot be trusted.,0.1770,3,0.0023
+185,Expectations can lead to disappointment when reality does not match our desires.,360,360,"We have to endure reversals of fortune, since we know that life is a matter of luck.",0.1743,79,0.4107
+174,"Those who pretend to be what they are not, sooner or later, find themselves in deep water.",332,332,Greed for more can lead to losing what you already have.,0.1692,3,0.0499
+194,Don't take your friends for foes.,280,280,Good will is worth nothing unless it is accompanied by good acts.,0.1629,7,0.0800
+606,It is better to endure short-term struggles for long-term benefits than the other way around.,206,206,Men feel worst when they contribute to their own undoing.,0.1588,2,0.0538
+338,Pride goes before destruction.,581,581,Do not let your fancy make you forget realities.,0.1576,2,0.0078
+368,Coffers of cash put a stop to honest traffic in praise.,267,267,Vanity can lead to self-destruction.,0.1549,12,0.1040
+456,Temptation can lead even the most virtuous individuals to compromise their integrity and values.,251,251,The penalty for speaking and for keeping silent is one and the same.,0.1432,32,0.1331
+485,Be yourself and don't pretend to be someone you're not.,332,332,Greed for more can lead to losing what you already have.,0.1432,54,0.2324
+507,Be yourself and don't pretend to be someone you're not.,332,332,Greed for more can lead to losing what you already have.,0.1432,80,0.2592
+328,Easy life and seeming good fortune of others conceal a threat to their welfare.,93,93,Understand what you are doing before you do it.,0.1334,7,0.0302
+240,Gossips are to be seen and not heard.,239,239,Stay focused on your goals.,0.0844,86,0.1685

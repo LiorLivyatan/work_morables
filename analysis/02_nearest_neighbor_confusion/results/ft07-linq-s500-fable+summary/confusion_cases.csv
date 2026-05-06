@@ -1,0 +1,475 @@
+query_idx,moral_text,gt_fable_idx,gt_fable_title,gt_rank,gt_score,top1_fable_idx,top1_fable_title,top1_score,score_gap
+278,Be careful what you wish for.,278,The Poor Man And Death,76,0.3255,431,The Shepherd And The Lion,0.8118,0.4864
+617,Be careful what you wish for.,617,The Eyes and the Honey,58,0.3357,431,The Shepherd And The Lion,0.8118,0.4761
+332,Greed for more can lead to losing what you already have.,332,The Jackdaw And The Doves,235,0.2882,235,Zeus And The Camel,0.7257,0.4374
+93,Understand what you are doing before you do it.,93,The Shepherd and the Sea,270,0.2538,375,The Fox And The Hare In The Well,0.6882,0.4344
+187,Those who seek to please everybody please nobody.,187,The Bald Man And His Two Mistresses,20,0.4662,78,"The Miller, His Son, and Their Ass",0.8861,0.4199
+185,Expectations can lead to disappointment when reality does not match our desires.,185,The Bald Men And The Comb,79,0.2254,360,The Fishermen And The Stone,0.6361,0.4107
+593,Nature reveals itself.,593,The Kingdom of The Lion,373,0.2479,147,Zeus And Prometheus,0.6552,0.4074
+568,Everyone is more or less master of his own fate.,568,The Ploughman and Fortune,174,0.3450,156,The Man And The Oracle,0.7460,0.4009
+576,The grass is always greener on the other side of the fence.,576,A Wild Ass and A Tame,27,0.4448,667,A Husbandman turn'd Soldier and Merchant,0.8239,0.3791
+183,Do not attempt the impossible.,183,The Frog And The Ox,21,0.4616,292,The Wolves And The Hides,0.8362,0.3746
+629,Pride and vanity leads to our downfall.,629,A Cuckow and a Hawk,97,0.3523,581,The Wolf and his Shadow,0.7181,0.3659
+621,Every tale is not to be believed.,621,The Thief and The Boy,104,0.3613,486,The Wolf And The Nurse,0.7172,0.3559
+590,Watch the actions of your enemy.,590,The Sun and the Frogs,622,0.2143,248,The Cicada And The Fox,0.5679,0.3535
+473,False men cannot be trusted.,473,The Shepherd And The Wolf Cub,323,0.3153,261,The Crane And The Crow,0.6686,0.3533
+626,It's wise to think before we speak.,626,A Country-man and a Hawk,484,0.2069,375,The Fox And The Hare In The Well,0.5595,0.3526
+105,Obscurity often brings safety.,105,The Tree and the Reed,38,0.4794,358,The Fisherman And The Fish,0.8260,0.3467
+515,Do not ask for more than you deserve.,515,Mercury And The Two Women,462,0.3227,235,Zeus And The Camel,0.6682,0.3455
+602,Consider all before you judge.,602,The Sheep and The Dog,640,0.2531,587,"The Philosopher, The Ants, and Mercury",0.5928,0.3397
+466,Not all advice is wise.,466,The Rich Man And The Tanner,562,0.2947,674,A Man that would not take a Clyster,0.6303,0.3356
+297,There is danger lurking in the words of a wicked person.,297,The Mother Dog And Her Puppies,457,0.3030,180,The Wolf And The Goat On The Cliff,0.6383,0.3353
+118,No gratitude from the wicked.,118,The Woodman and the Serpent,37,0.4778,34,The Farmer and the Snake,0.8052,0.3274
+280,Good will is worth nothing unless it is accompanied by good acts.,280,The Deer And Her Friends,266,0.2681,199,The Two Dung Beetles,0.5945,0.3264
+445,Appearances can be deceiving.,445,The Mice And The Weasel,21,0.4800,677,A Cat and Mice,0.8062,0.3262
+204,Someone who lays a trap for others will fall victim to it himself.,204,The Bird Catcher And The Partridge,54,0.4818,317,The Goat And The Donkey,0.8066,0.3248
+57,He laughs best that laughs last.,57,The Heifer and the Ox,329,0.2952,515,Mercury And The Two Women,0.6194,0.3242
+691,Be content with your lot.,691,A Pike sets up for Sovereignty,87,0.4482,555,The Author,0.7692,0.3210
+440,"A sinful mind can even change a person's nature, causing it to be impaired.",440,The Mole And His Mother,140,0.3382,23,The Cat-Maiden,0.6591,0.3209
+498,He laughs best that laughs last.,498,The Bull And The Bullock,296,0.3006,515,Mercury And The Two Women,0.6194,0.3188
+267,Vanity can lead to self-destruction.,267,"The Birds, The Peacock And His Feathers",211,0.2981,183,The Frog And The Ox,0.6042,0.3061
+664,Do not fight with those who are perfectly capable of fighting back.,664,A Husband and Wife twice Married,104,0.4026,245,The Viper And The File,0.7083,0.3057
+465,"Sometimes, those you support become your worst enemy.",465,The Thief And The Lamp,393,0.2914,538,The Doves And The Kite,0.5969,0.3054
+537,Every tale is not to be believed.,537,The Thief And The Innkeeper,39,0.4121,486,The Wolf And The Nurse,0.7172,0.3051
+286,A death-bed flattery is the worst of treacheries.,286,The Patient And His Symptoms,240,0.3939,44,The Fox and the Crow,0.6988,0.3049
+412,Life's disasters can often bring boastful and presumptuous people back down to earth.,412,The Cowhide And The River,136,0.3739,143,The Clay Pot And The Rain,0.6773,0.3033
+10,Vices are their own punishment.,10,Avaricious and Envious,22,0.4922,557,The signification of the Punishments of Tartarus,0.7935,0.3013
+410,"When you lie, you often have to expand the lie.",410,The Man And The Statue Of Hermes,280,0.2385,174,The Monkey And The Dolphin,0.5391,0.3005
+534,"Pay attention to deeds, not words.",534,The Bird Catcher And The Cricket,21,0.4248,572,The Lion and The Bull,0.7228,0.2979
+210,Do not laugh at the calamity that befalls your neighbour.,210,The Blacksmiths And The Mouse,21,0.4929,340,The Hare And The Sparrow,0.7905,0.2975
+206,Men feel worst when they contribute to their own undoing.,206,The Sparrow And The Myrtle Berries,207,0.3914,32,The Eagle and the Arrow,0.6888,0.2973
+670,We should not expect that our crimes will always go unpunished.,670,A Wicked Man and the Devil,95,0.3925,465,The Thief And The Lamp,0.6891,0.2966
+464,Fair weather friends are not worth much.,464,"The Raven, The Swallow And The Seasons",48,0.4682,694,A Man had a mind to try his Friends,0.7647,0.2965
+82,Enemies' promises were made to be broken.,82,The Nurse and the Wolf,77,0.4869,420,The Lion And The Unicorn,0.7822,0.2953
+594,Never trust a known deceiver.,594,"The Lion, The Fox and the Deer",141,0.3879,25,The Cat and the Mice,0.6828,0.2949
+135,A mother's nurturing is stronger than a stepmother's attentions.,135,The Vegetables And The Weeds,21,0.3719,300,The Dog And The Lamb Among The Goats,0.6633,0.2914
+636,Arrogant fools have no true influence.,636,A Fly upon a Wheel,111,0.4214,366,The Fly And The Mule,0.7078,0.2864
+696,Be content with your lot.,696,About the hare seeking cunning and the fox seeking swiftness from Jupiter,47,0.4828,555,The Author,0.7692,0.2864
+415,"Nobody believes people who are inherently wicked, even if they pretend to be good-natured.",415,"The Wolf, The Horse And The Barley",210,0.3556,137,"The Wolf, The Fox And The Monkey",0.6402,0.2846
+123,There is strength in restraint.,123,The Donkey And The Wild Boar,162,0.3219,134,The Old Bull And The Young Bull,0.6051,0.2832
+562,Know your enemies.,562,The Cat and The Birds,217,0.3218,337,The Hares And The Foxes,0.6025,0.2807
+355,"When wicked people do not get the reward and thanks they expect, they immediately put a stop to their good works.",355,The Wolves And The Harvesters,100,0.3895,479,The Man And The Weasel,0.6674,0.2778
+378,Chance sometimes rules.,378,The Fox And The Lion In A Cage,75,0.3720,361,The Fishermen And The Tuna Fish,0.6472,0.2752
+80,Enemies' promises are made to be broken.,80,The Mother and the Wolf,58,0.5144,420,The Lion And The Unicorn,0.7892,0.2748
+360,"We have to endure reversals of fortune, since we know that life is a matter of luck.",360,The Fishermen And The Stone,30,0.4312,369,The Horse And The Miller,0.7057,0.2745
+470,That is how life is: we must put up with less serious losses in order to avoid worse ones.,470,The Sailors And The Stones,269,0.3782,625,A Husband-man and Ceres,0.6516,0.2734
+224,Some people just won't change.,224,The Bull And The Calf,46,0.2812,335,The Woman And Her Drunken Husband,0.5527,0.2714
+569,Wit outshines skill.,569,"Zeus and Apollo, A Contest in Archery",11,0.4831,682,A Fox and a Hare,0.7522,0.2691
+303,"They who act without sufficient thought, will often fall into unsuspected danger",303,The Dog And The Shellfish,176,0.3561,45,The Fox and the Goat,0.6231,0.2670
+499,"One is known by deeds, not by words.",499,The Bear And The Fox,22,0.4690,572,The Lion and The Bull,0.7351,0.2662
+344,People with a history of wrongdoing are often not trusted.,344,"The Farmer, The Wolf And The Plow",83,0.3278,137,"The Wolf, The Fox And The Monkey",0.5936,0.2658
+558,"Whatever happens, we must bear it with equanimity.",558,The Chariot Horse sold for the Mill,469,0.2521,523,"The Sheep, The Goat And The Sow",0.5162,0.2641
+523,It is easy to be brave when there is no danger.,523,"The Sheep, The Goat And The Sow",10,0.5793,202,The Dogs And The Lion Skin,0.8391,0.2598
+507,Be yourself and don't pretend to be someone you're not.,507,The Wolf And The Lame Donkey,80,0.2672,332,The Jackdaw And The Doves,0.5264,0.2592
+531,The word of a wicked man can never be trusted.,531,The Wolf And The Donkey,101,0.4570,261,The Crane And The Crow,0.7159,0.2590
+374,Overly curious people often pay a very high price for recklessly indulging their curiosity.,374,The Hare And The Fox,554,0.2275,616,The Mouse and the Oyster,0.4861,0.2586
+138,Self-help is the best help.,138,The Crested Lark And The Farmer,8,0.5149,66,The Lark and Her Young Ones,0.7728,0.2579
+191,Learn from past misfortunes.,191,"The Bat, The Booby And The Bramble Bush",45,0.4328,68,"The Lion, the Fox, and the Ass",0.6863,0.2535
+631,The life of the poor is often safer than the life of the rich.,631,Capons Fat and Lean,125,0.3864,447,The Two Mules,0.6395,0.2531
+63,The desire for imaginary benefits often involves the loss of present blessings.,63,The Kites and the Swans,97,0.4281,298,"The Dog, The Meat And The Reflection",0.6786,0.2506
+567,Avoid overindulgence,567,The boy and the tripe,13,0.3914,699,A Weak Young Man and a Wolfe,0.6396,0.2483
+650,Consider the consequences of your actions.,650,The Mice and the Oak,29,0.3895,375,The Fox And The Hare In The Well,0.6377,0.2482
+613,Nature reveals itself.,613,Orpheus and the Dogs,14,0.4090,147,Zeus And Prometheus,0.6552,0.2462
+399,"Sometimes, the greatest threats come from those you trust.",399,The Halcyon And The Sea,53,0.4185,687,A Sheep-Biter Hang'd,0.6642,0.2457
+581,Do not let your fancy make you forget realities.,581,The Wolf and his Shadow,139,0.3061,334,The Piece Of Driftwood,0.5500,0.2440
+318,Be content with your station.,318,"The Donkey, The Horse And The War",18,0.5501,200,The Beetle In The Air,0.7902,0.2401
+681,Possession is nine-tenths of the law.,681,A Hedge-Hog and a Snake,37,0.3735,70,The Lion's Share,0.6094,0.2359
+71,Wit always has an answer ready.,71,The Lost Wig,189,0.3240,132,Aesop And The Shipbuilders,0.5592,0.2352
+42,Do unto others what you would have them do unto you.,42,The Fox and the Crane,4,0.6293,626,A Country-man and a Hawk,0.8626,0.2333
+632,What we are forced to do by a greater power and necessity is not truly our own action.,632,Oxen and a Piece of Timber,27,0.4155,458,The Swan And His Owner,0.6487,0.2332
+485,Be yourself and don't pretend to be someone you're not.,485,The Lion And The Horse,54,0.2940,332,The Jackdaw And The Doves,0.5264,0.2324
+557,"The meaning is to be considered, not the mere words.",557,The signification of the Punishments of Tartarus,283,0.3141,80,The Mother and the Wolf,0.5459,0.2318
+340,It is a foolish thing to give advice to others while not looking out for oneself.,340,The Hare And The Sparrow,75,0.4702,476,The Soothsayer And The Theft,0.7014,0.2312
+540,Often there is more good to be found in one man than in a crowd of people.,540,The Mother And Her Three Daughters,348,0.3148,671,A Council of Birds for Chusing more Kings,0.5458,0.2310
+249,Do not go chasing after things that are useless and unprofitable.,249,The Man And The Insect,80,0.3742,298,"The Dog, The Meat And The Reflection",0.6038,0.2296
+271,Do not boast to have something you do not.,271,"The Crow, The Eagle And The Feathers",23,0.4537,439,The Mole And The Frankincense,0.6829,0.2293
+207,There is no glory in tricking those easy to trick.,207,The Bird-Catcher And The Lark,48,0.4346,618,Aesop and the Athlete,0.6624,0.2278
+444,"In conflicts between powerful parties, bystanders may suffer unintended consequences.",444,"The Snake, The Weasel And The Mice",4,0.4948,391,The Frogs And The Battle Of The Bulls,0.7221,0.2274
+614,It's easy to put off today what can be done tomorrow.,614,The Dog's House,40,0.3252,706,An Old Man that was willing to put off Death,0.5522,0.2270
+51,Necessity is our strongest weapon.,51,The Hare and the Hound,45,0.4701,192,The Bear And The Crabs,0.6960,0.2259
+156,Do not mock the gods.,156,The Man And The Oracle,109,0.3423,161,The Bald Man And The Gardener,0.5680,0.2257
+599,Trust but verify.,599,The Wolf and The Ass,137,0.3269,486,The Wolf And The Nurse,0.5488,0.2219
+7,An ounce of prevention is worth a pound of cure.,7,The Ass and the Mule,115,0.3301,188,The Bat And The Songbird,0.5516,0.2215
+323,"Instead of looking at how things start, we should look instead at how they turn out in the end.",323,The Donkey And The Mule,392,0.2549,697,A Plain Horse wins the Prize,0.4757,0.2207
+565,Don't be greedy.,565,The Swollen Fox,19,0.3833,404,The Widow And Her Hen,0.6039,0.2207
+140,"When people plot against their neighbours, they fall victim to the same sort of plot themselves.",140,The Bird Catcher And The Viper,25,0.6008,317,The Goat And The Donkey,0.8212,0.2204
+196,Pretenders will be found out.,196,"The Bees, The Drones And The Wasps",46,0.4335,562,The Cat and The Birds,0.6532,0.2197
+416,Each man makes his reputation in the field which is his specialty.,416,The Hunter And The Wolf,234,0.3414,270,Juno And The Peacock,0.5594,0.2180
+351,"Charity begins at home, but this does not prevent the further exercise of it.",351,"The Farmer, The Wasps And The Partridges",286,0.3043,210,The Blacksmiths And The Mouse,0.5220,0.2177
+587,Act as you profess to believe.,587,"The Philosopher, The Ants, and Mercury",34,0.3926,599,The Wolf and The Ass,0.6095,0.2168
+666,It's foolish to make decisions without understanding the nature of the matter at hand.,666,Wax and Brick,58,0.3421,359,The Monkey And The Fishing Net,0.5574,0.2153
+619,Pick your enemies.,619,The Crow and The Sheep,77,0.3753,607,The Mouse and The Frog,0.5890,0.2137
+695,A false friend is the worst kind of enemy.,695,A Fox Praising Hare's Flesh,24,0.5678,687,A Sheep-Biter Hang'd,0.7813,0.2136
+493,Unresolved issues can resurface when least expected.,493,The Camel In The River,61,0.2086,609,The Fox and the Man counting waves,0.4218,0.2133
+125,Great achievements are often blocked by some small thing which prevents their realization.,125,The Camel And The Elephant,265,0.2915,27,The Crow and the Pitcher,0.5021,0.2106
+597,Flatterers and deceivers are not to be trusted.,597,"The Wolf, the Fox and the Gift",52,0.5739,44,The Fox and the Crow,0.7839,0.2101
+596,Know yourself and your limits.,596,The Wolf and The Fox,16,0.4644,627,A Swallow and a Spider,0.6739,0.2095
+265,"If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",265,The Dogs And The Crocodiles,44,0.4507,25,The Cat and the Mice,0.6587,0.2081
+442,The best intentions will not always ensure success.,442,The Monkey And Her Two Children,373,0.2723,440,The Mole And His Mother,0.4794,0.2071
+400,A fool will make excuses for foolish behavior.,400,The Hunter And The Horseman,59,0.3807,238,The Cat And The Rooster,0.5871,0.2065
+510,Beware the sort of person who uses tricks.,510,The Farmer And The Birds,36,0.4557,485,The Lion And The Horse,0.6616,0.2059
+243,One bad turn deserves another.,243,The Fox And The Stork,5,0.6663,42,The Fox and the Crane,0.8684,0.2021
+692,"When people won't listen to reason through kind means, they must be made to understand through harsh ones.",692,A Sheep picks a Quarrel with a Shepherd,14,0.5231,700,A Lad Robbing an Orchard,0.7248,0.2016
+103,Everyone is more or less master of his own fate.,103,The Traveler and Fortune,5,0.5453,156,The Man And The Oracle,0.7460,0.2006
+504,Overconfidence often leads people into danger.,504,The Rooster And The Cats,130,0.3496,484,The Goat And His Reflection,0.5495,0.1999
+468,Do not blame others.,468,The Rivers And The Sea,11,0.4809,648,An Old Woman and the Devil,0.6799,0.1989
+700,Those who won't learn from advice must be taught by experience.,700,A Lad Robbing an Orchard,9,0.5069,256,The Farmer And The Pig,0.7044,0.1975
+572,"When a man has both an interest and an inclination to betray us, there's no trusting him.",572,The Lion and The Bull,80,0.4778,296,The Wolves And The Dogs,0.6726,0.1948
+41,Cunning often outwits itself.,41,"The Fox, the Cock and the Dog",6,0.6664,488,"The Merchant, The Donkey And The Salt",0.8611,0.1947
+462,Desire things you don't understand and you accept the consequences.,462,The Raven And The Snake,107,0.2729,426,The Pigeon And The Painting,0.4675,0.1946
+649,Embrace your own strengths.,649,The Frogs and Tortoises,101,0.2646,627,A Swallow and a Spider,0.4590,0.1943
+536,Trouble awaits you if you pursue ill-gotten gains.,536,The Shepherd And The Honeybees,16,0.4605,432,The Wolf And The Lion,0.6548,0.1943
+256,Only fools indulge into michief and excessive risks.,256,The Farmer And The Pig,195,0.3513,427,The Lark In The Snare,0.5448,0.1935
+220,"Better poverty without care, than riches with.",220,The Fir Tree And The Bramble Bush,30,0.4243,252,The City Mouse And The Country Mouse,0.6175,0.1932
+549,Humble commonalty easily finds safety in obscurity.,549,The Battle of the Mice and the Weasels,2,0.5959,358,The Fisherman And The Fish,0.7890,0.1931
+64,Sorrow not over what is lost forever,64,The Labourer and the Nightingale,68,0.3349,610,Prometheus and the tears,0.5275,0.1926
+424,Hypocritical speeches are easily seen through.,424,The Sheep And The Injured Wolf,61,0.4430,562,The Cat and The Birds,0.6352,0.1922
+219,An honest man's word is as good as his oath.,219,The Boys And The Butcher,52,0.3411,237,"The Cat, The Mouse And The Oath",0.5328,0.1917
+239,Stay focused on your goals.,239,The Cat And The Stork,244,0.1269,371,The Tortoise And The Hare,0.3179,0.1911
+339,God is the ultimate judge.,339,The Eagle And The Fox,81,0.2980,587,"The Philosopher, The Ants, and Mercury",0.4889,0.1909
+90,"Regardless of our wishes, or even our intent, it is to our Nature alone that we will be faithful.",90,The Scorpion and the Ladybug,21,0.4649,251,The Monkey And The Lion's Breath,0.6556,0.1907
+131,Success leads many astray to their ruin.,131,Aesop And The Hooligan,58,0.4612,549,The Battle of the Mice and the Weasels,0.6484,0.1871
+24,Nature reveals itself.,24,The Cat and Venus,7,0.4687,147,Zeus And Prometheus,0.6552,0.1865
+434,The greatest gifts are often overlooked in favor of envying others.,434,Zeus And Man,21,0.4924,638,"The monkey, donkey and mole",0.6762,0.1838
+251,The penalty for speaking and for keeping silent is one and the same.,251,The Monkey And The Lion's Breath,341,0.3155,461,"The Wolf, The Raven And The Ram",0.4980,0.1825
+97,Two blacks do not make a white.,97,"The Stag, the Wolf, and the Sheep",13,0.4284,158,The Black Man In The River,0.6103,0.1819
+223,Do not mock the gods.,223,The Sick Man And The Gods,46,0.3867,161,The Bald Man And The Gardener,0.5680,0.1813
+492,People adjust their beliefs based on what is profitable for them.,492,The Statue Of Hermes And The Treasure,162,0.2744,189,The Bat And The Weasels,0.4556,0.1812
+74,The man who talks for both sides is not to be trusted by either.,74,The Man and the Satyr,4,0.6290,453,The Ostrich,0.8095,0.1805
+342,He who competes with his superiors destroys himself before he can equal them.,342,The Earthworm And The Snake,15,0.5558,569,"Zeus and Apollo, A Contest in Archery",0.7358,0.1800
+560,Kindness is never wasted.,560,The Magic Colours,3,0.6115,430,The Lion And The Mouse,0.7909,0.1793
+119,We are made by our teachings in youth.,119,The Young Thief and His Mother,31,0.3623,613,Orpheus and the Dogs,0.5412,0.1789
+195,What is valued in one group may be dismissed by another.,195,The Bees And The Beetles,13,0.4512,26,The Cock and the Pearl,0.6300,0.1789
+519,No one should boast when his prowess is a matter of mere circumstance.,519,The Ram And The Wolf,48,0.4074,618,Aesop and the Athlete,0.5862,0.1788
+520,No curse weighs more heavily than a guilty conscience.,520,Socrates And The Slave,197,0.2974,266,The Murderer And The Nile,0.4757,0.1783
+647,Putting up with one insult invites another.,647,Town-Dogs and Country-Dogs,52,0.4485,161,The Bald Man And The Gardener,0.6264,0.1779
+660,"Nothing should be condemned, since there is nothing so worthless and humble that it cannot at some time or another prove to be useful.",660,A Priest and Pears,11,0.5239,704,"A Lion, Ass, and Hare",0.7015,0.1775
+9,Wit has always an answer ready.,9,The Ass's Brains,46,0.3852,132,Aesop And The Shipbuilders,0.5607,0.1755
+298,Do not grasp at more than you need.,298,"The Dog, The Meat And The Reflection",9,0.5790,19,The Boy and the Filberts,0.7534,0.1744
+552,Better to endure a small hardship than risk a greater one.,552,The Frogs asking for a King,42,0.4793,625,A Husband-man and Ceres,0.6534,0.1741
+419,"It is not the place, nor the condition, but the mind alone that is responsible for our happiness.",419,The Jackdaw And The String,47,0.4071,624,A Mouse in a Chest,0.5807,0.1736
+422,A hypocrite can usually be found out.,422,"The She-Goat, The Kid And The Wolf",39,0.4883,562,The Cat and The Birds,0.6617,0.1734
+89,Vicious people cannot resist hurting others even when it is not in their own interests,89,The Scorpion and the Frog,40,0.4851,664,A Husband and Wife twice Married,0.6568,0.1717
+193,Sometimes one man toils while another profits.,193,The Lion And The Bear,2,0.5850,482,The Ants And The Pigs,0.7560,0.1711
+70,"You may share the labours of the great, but you will not share the spoil.",70,The Lion's Share,44,0.4414,532,The Fox And The Lion Hunting,0.6122,0.1708
+688,We should not pick fights with people stronger than we are.,688,A Bull and a Ram,10,0.4987,245,The Viper And The File,0.6691,0.1705
+543,People with excellent qualities are often insulted by their inferiors.,543,The Horse And The Goats,117,0.4394,159,The Trees And The Bramble Bush,0.6099,0.1705
+685,"People should not be judged by their appearances, but by their actions.",685,A Wolfe in a Sheeps-Skin,5,0.5487,546,The Butcher and the Ape,0.7176,0.1689
+240,Gossips are to be seen and not heard.,240,"The Eagle, The Sow And The Cat",86,0.3641,239,The Cat And The Stork,0.5326,0.1685
+460,No one gladly revisits a place where they got hurt.,460,The Woman In Labour,3,0.5253,449,The Swallow And The Nightingale,0.6934,0.1681
+554,Avoid the gain that exposes to hazard.,554,The Man and the Ass,24,0.4869,427,The Lark In The Snare,0.6543,0.1673
+6,Clumsy jesting is no joke.,6,The Ass and the Lapdog,15,0.3771,218,The Farmer'S Boy And The Snails,0.5424,0.1654
+264,"You must not act unnaturally, trying to achieve some impossible thing.",264,The Donkey And The Cricket,11,0.5449,292,The Wolves And The Hides,0.7091,0.1642
+607,When fools fight others run away with the prize.,607,The Mouse and The Frog,2,0.6535,193,The Lion And The Bear,0.8174,0.1640
+23,Nature reveals itself.,23,The Cat-Maiden,4,0.4914,147,Zeus And Prometheus,0.6552,0.1638
+255,"Beware of swindlers, as they often exploit the gullibility of others.",255,The Cobbler And The King,43,0.4602,445,The Mice And The Weasel,0.6221,0.1618
+401,"It is often the case that people are greedy for things which they think will bring them honour, but which only result in their death and destruction.",401,Jupiter And The Hare,35,0.4775,381,"The Fox, The Moon And The River",0.6386,0.1610
+708,Those who adapt to the times will emerge unscathed.,708,The Elm and the Willow,8,0.4600,189,The Bat And The Weasels,0.6209,0.1609
+484,Do not overestimate yourself.,484,The Goat And His Reflection,21,0.4735,569,"Zeus and Apollo, A Contest in Archery",0.6341,0.1606
+533,The man who treats others well is rewarded by gratitude.,533,"The Snake, The Eagle And The Farmer",19,0.6219,0,Androcles,0.7805,0.1586
+461,The unjust man is envious of anyone else's good fortune.,461,"The Wolf, The Raven And The Ram",13,0.5065,10,Avaricious and Envious,0.6649,0.1584
+46,Consider carefully before changing your situation.,46,The Fox and the Hedgehog,30,0.4671,324,The Donkey And His Masters,0.6253,0.1583
+524,Love can blind even the wildest.,524,The Lion And The Farmer's Daughter,3,0.4511,495,Aphrodite And The Slave-Woman,0.6092,0.1581
+522,Those who adapt to the times will emerge unscathed.,522,The Oak Tree And The Reed,7,0.4634,189,The Bat And The Weasels,0.6209,0.1574
+405,"We should never put our trust in a wicked man, even if he seems to be completely innocuous.",405,The Hen And The Eggs,68,0.5020,620,The Fox and the Ground-Bird,0.6590,0.1570
+62,Abstain and enjoy.,62,The Huntsman and the Fisherman,9,0.4451,699,A Weak Young Man and a Wolfe,0.6015,0.1564
+205,People who lay traps for others should be careful not to fall into a trap themselves.,205,"The Nightingale, The Hawk And The Bird Catcher",13,0.5957,317,The Goat And The Donkey,0.7517,0.1560
+290,It is a foolish man who wants to rival his superiors.,290,The Dog And The Lion,9,0.6107,569,"Zeus and Apollo, A Contest in Archery",0.7663,0.1556
+690,"It is very unwise, even for the greatest of men, to provoke the least, as they may find a way to enact revenge.",690,An Eagle and Rabbets,15,0.6036,561,The Eagle and The Beetle,0.7592,0.1556
+175,Honor your craft with integrity.,175,Simonides And The Twin Gods,25,0.3617,254,Hermes And The Cobblers,0.5155,0.1538
+616,Greed often overreaches itself.,616,The Mouse and the Oyster,7,0.6713,50,The Goose With the Golden Eggs,0.8246,0.1533
+102,"If men had all they wished, they would be often ruined.",102,The Tortoise and the Eagle,7,0.5607,431,The Shepherd And The Lion,0.7131,0.1525
+472,Appetite blinds men to their surroundings,472,"The Sheep, The Shepherd And His Cloak",340,0.3101,303,The Dog And The Shellfish,0.4619,0.1518
+300,"Men are averse to fixed rules, but are won by kind services.",300,The Dog And The Lamb Among The Goats,52,0.4677,584,Winter and Spring,0.6187,0.1511
+61,The hero is brave in deeds as well as words.,61,The Hunter and the Woodman,7,0.5391,177,The Boastful Athlete,0.6892,0.1501
+362,Some never understand the actions of others.,362,The Fisherman And The River,78,0.3974,632,Oxen and a Piece of Timber,0.5464,0.1490
+142,Enviable conditions often have a downside.,142,The Rose And The Amaranth,71,0.4284,576,A Wild Ass and A Tame,0.5771,0.1488
+530,"Do not be what you are not, nor pretend to be what you are not",530,"The Farmers, The Donkey And The Lion Skin",7,0.5930,233,The Monkey And The Camel,0.7413,0.1483
+628,Trusting as you wish to be trusted doesn't work between a rogue and an honest person. ,628,A Pigeon and a Pye,90,0.4618,424,The Sheep And The Injured Wolf,0.6099,0.1480
+200,Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well.,200,The Beetle In The Air,41,0.4218,143,The Clay Pot And The Rain,0.5697,0.1478
+122,There is always someone else worse off than you.,122,The Lion And The Elephant,4,0.6100,52,The Hares and the Frogs,0.7570,0.1470
+640,"When we are avoiding present dangers, we should not fall into even worse peril.",640,The Fishes and the Frying-Pan,5,0.6434,399,The Halcyon And The Sea,0.7904,0.1470
+488,You can fool someone only so many times.,488,"The Merchant, The Donkey And The Salt",9,0.3969,25,The Cat and the Mice,0.5438,0.1469
+242,Look before you leap.,242,The Fox And The Goat In The Well,6,0.6928,393,The Two Frogs At The Well,0.8390,0.1462
+296,Trust is not to be given lightly.,296,The Wolves And The Dogs,13,0.4258,255,The Cobbler And The King,0.5709,0.1451
+655,"Everything pleases at first, but nothing pleases for long.",655,A Soldier and two Horses,2,0.6185,62,The Huntsman and the Fisherman,0.7632,0.1447
+676,Every Season has its own work.,676,The Ass's Wish,11,0.4139,645,An Old Fellow and a Young Wench,0.5582,0.1443
+518,The things which bring us pleasure can often be hazardous as well.,518,The Young Man And The Prostitute,26,0.4365,206,The Sparrow And The Myrtle Berries,0.5802,0.1437
+217,Counsel without help is useless.,217,The Drowning Boy,15,0.5008,689,An Incorrigible Son,0.6438,0.1430
+612,Action is more valuable than arguments.,612,The Jar goes to Court,14,0.4847,196,"The Bees, The Drones And The Wasps",0.6271,0.1424
+72,Straws show how the wind blows.,72,The Man and His Wife,92,0.3636,526,The Goatherd And The Goat,0.5055,0.1418
+353,He who harms someone should henceforth be treated with suspicion.,353,The Snake And The Farmer,44,0.5076,310,The Dog-Catcher And The Dog,0.6470,0.1394
+274,Beware of when the powerful and the deceitful collaborate.,274,The Eagle And The Crow,51,0.5026,538,The Doves And The Kite,0.6408,0.1382
+1,Appearances are deceptive.,1,The Ant and the Chrysalis,8,0.6811,677,A Cat and Mice,0.8193,0.1381
+186,Intent matters more than the outcome.,186,The Bald Man And The Fly,182,0.2912,51,The Hare and the Hound,0.4285,0.1373
+172,Some men underrate their best blessings.,172,The Travellers And The Plane Tree,9,0.5296,54,The Hart and the Hunter,0.6665,0.1369
+678,No one can be safe in peace unless they are always ready to face an enemy in case of war.,678,A Wolf and a Porcupine,3,0.6076,214,"The Fox, The Boar And His Tusks",0.7442,0.1366
+623,There is danger in the silent enemy.,623,The Rustic seeking to Cross a River,42,0.4283,84,The One-Eyed Doe,0.5644,0.1361
+180,An invitation prompted by selfishness is not to be accepted.,180,The Wolf And The Goat On The Cliff,29,0.5403,113,The Wolf and the Goat,0.6762,0.1359
+254,It is natural to be a knave; men must rise above.,254,Hermes And The Cobblers,21,0.4742,28,The Dancing Monkeys,0.6093,0.1351
+212,Rewards do not always accompany a lifetime of good work.,212,The Old Dog And His Master,10,0.4358,323,The Donkey And The Mule,0.5700,0.1342
+435,People often make plans that turn out to be to their own disadvantage.,435,The Maids And The Rooster,19,0.5256,488,"The Merchant, The Donkey And The Salt",0.6592,0.1335
+456,Temptation can lead even the most virtuous individuals to compromise their integrity and values.,456,The Widow And Her Lover,32,0.2750,251,The Monkey And The Lion's Breath,0.4081,0.1331
+43,Flatters are not to be trusted.,43,The Fox And The Raven,3,0.7178,44,The Fox and the Crow,0.8508,0.1330
+110,It is not only fine feathers that make fine birds.,110,The Vain Jackdaw,3,0.7152,659,A Lapwing Preferr'd,0.8474,0.1321
+202,It is easy to attack those who have fallen from their position of power and glory.,202,The Dogs And The Lion Skin,6,0.6028,378,The Fox And The Lion In A Cage,0.7344,0.1315
+490,You should not add one problem to another.,490,Aesop And The Runaway Slave,11,0.4666,241,The Man And The Cat,0.5974,0.1308
+329,One cannot circumvent his destiny.,329,Zeus And The Donkeys,3,0.6799,357,"The Father, The Son And The Lion",0.8103,0.1303
+605,Be watchful or all will be lost.,605,The Shepherd and The Dog,34,0.4084,140,The Bird Catcher And The Viper,0.5365,0.1281
+241,Relying too much on subordinates can lead to unintended consequences.,241,The Man And The Cat,129,0.2801,348,The Stag Among The Cattle,0.4069,0.1267
+197,"Evil wishes, like chickens, come home to roost.",197,Zeus And The Bee,13,0.6052,349,The Farmer And The Fox,0.7312,0.1260
+245,It is useless attacking the insensible.,245,The Viper And The File,2,0.6129,92,The Serpent and the File,0.7370,0.1241
+618,Degrading your opponents only diminishes your own victory.,618,Aesop and the Athlete,4,0.5662,123,The Donkey And The Wild Boar,0.6900,0.1237
+18,Be on guard against men who can strike from a distance.,18,The Bowman and Lion,50,0.4367,84,The One-Eyed Doe,0.5602,0.1234
+452,People often disguise their selfish desires as practical needs to justify their actions.,452,The Man And The Old Woman,14,0.4365,384,The Foxes And Their Tails,0.5578,0.1213
+143,Do no overestimate your worth when your fate rests in the hands of the high and the mighty.,143,The Clay Pot And The Rain,21,0.5298,406,Hermes And The Statues,0.6505,0.1206
+208,Rushing into pleasant invitations can lead to dire consequences.,208,The Cat And The Birds,36,0.4085,426,The Pigeon And The Painting,0.5291,0.1206
+603,People that live by example need to look closely at the example they are following.,603,The Playful Ass,3,0.5325,527,The Crab And His Mother,0.6523,0.1198
+294,Do not try to gain favor by acting in a way that is contrary to your own nature and character.,294,The Donkey And The Pet Dog,19,0.5586,332,The Jackdaw And The Doves,0.6780,0.1194
+181,People often grasp for more than they need and thus lose the little they have.,181,The Man And The Golden Eggs,7,0.6591,19,The Boy and the Filberts,0.7775,0.1184
+272,Many children are a great blessing; but a few good ones are a greater.,272,The Dove And The Crow,3,0.5662,377,The Sow And The Lioness,0.6843,0.1181
+682,Wisdom is far superior to strength.,682,A Fox and a Hare,4,0.6669,512,The Lizard And The Snake,0.7844,0.1175
+446,If often happens that even honest people do not hesitate to persecute someone who has slandered them.,446,The Murderer And The Mulberry Tree,14,0.5451,539,Augustus And The Murder,0.6626,0.1175
+448,There's no reading of ourselves but with other mans eyes.,448,The Musician At Home,2,0.5139,550,Of the Vices of Men,0.6304,0.1165
+114,Do not say anything at any time that you would not say at all times.,114,The Wolf and the Kid,56,0.3790,380,"The Fox, The Monkey And His Ancestors",0.4952,0.1162
+5,To be satisfied with one's lot is better than to desire something which one is not fitted to receive.,5,The Ass and the Lapdog,9,0.6595,102,The Tortoise and the Eagle,0.7754,0.1159
+152,"When someone with a wicked nature changes his appearance, his behaviour remains the same.",152,Zeus And The Ant,11,0.6041,685,A Wolfe in a Sheeps-Skin,0.7186,0.1145
+453,"Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary.",453,The Ostrich,19,0.4834,254,Hermes And The Cobblers,0.5976,0.1142
+620,Flatters are not to be trusted.,620,The Fox and the Ground-Bird,2,0.7371,44,The Fox and the Crow,0.8508,0.1137
+263,You should not treat bad people the same way that you treat good people.,263,The Boy And The Scorpion,76,0.3269,418,The Two Hyenas,0.4406,0.1137
+350,Do not take on more than you can handle.,350,The Lion And The Farmer,7,0.4459,347,The Kite And The Partridges,0.5592,0.1133
+153,True value comes from usefulness.,153,The Gods And Their Trees,4,0.5185,167,The Rooster And The Pearl,0.6312,0.1127
+390,People who do harm to others destroy themselves in the bargain.,390,The Frog And The Mouse,11,0.6299,197,Zeus And The Bee,0.7423,0.1124
+508,Don't take on more than you can accomplish.,508,The Jackdaw And The Eagle,6,0.4170,290,The Dog And The Lion,0.5291,0.1122
+429,Those who thrive on deception often retaliate against those who speak the truth.,429,The Monkeys And The Two Men,34,0.5634,301,"The Sheep, The Dog And The Wolf",0.6749,0.1115
+633,Famous beauties are rarely lucky.,633,Trees Straight and Crooked,27,0.4094,142,The Rose And The Amaranth,0.5175,0.1081
+73,Yield to all and you will soon have nothing to yield.,73,The Man and His Two Wives,16,0.5179,297,The Mother Dog And Her Puppies,0.6259,0.1080
+397,Beware of enterprizes where the risks are not equal.,397,The Swans And The Geese,10,0.4526,532,The Fox And The Lion Hunting,0.5595,0.1069
+641,An alliance with the powerless is futile.,641,A League of Beasts and Fishes,5,0.5834,337,The Hares And The Foxes,0.6900,0.1066
+514,Someone who wants to help his friend must give him what is essential and appropriate.,514,The Horse And His Groom,31,0.4520,674,A Man that would not take a Clyster,0.5580,0.1060
+155,"He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour.",155,The Cricket And The Owl,21,0.4498,230,The Lion And The Two Men,0.5556,0.1058
+157,"If people who have previously committed a crime are swiftly punished, then others will become afraid on their account.",157,Apollo And The Snake,8,0.4566,414,The Oath's Punishment,0.5623,0.1057
+421,Do not let anything turn you from your purpose.,421,"The Kid, The Wolf And The Flute",33,0.3697,331,The Driver And The Donkey On The Cliff,0.4754,0.1057
+310,People who offer to give someone many gifts are no doubt trying to deceive.,310,The Dog-Catcher And The Dog,21,0.4970,475,Zeus And The Snake,0.6026,0.1056
+535,"A man cannot be too careful of what he does, where the life of any creature is in question.",535,The Goose And The Swan,41,0.4212,263,The Boy And The Scorpion,0.5264,0.1053
+168,You should think twice before offering anything to your enemies.,168,The Ax And The Trees,42,0.4929,208,The Cat And The Birds,0.5975,0.1046
+368,Coffers of cash put a stop to honest traffic in praise.,368,Hercules And Plutus,12,0.4935,267,"The Birds, The Peacock And His Feathers",0.5975,0.1040
+476,Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings.,476,The Soothsayer And The Theft,4,0.5612,550,Of the Vices of Men,0.6647,0.1035
+321,The loud-mouthed boaster does not impress nor frighten those who know him.,321,The Donkey And The Lion Go Hunting,6,0.6031,366,The Fly And The Mule,0.7061,0.1030
+19,Do not attempt too much at once.,19,The Boy and the Filberts,6,0.5238,347,The Kite And The Partridges,0.6267,0.1028
+395,The things that a person does to others will happen to him in turn.,395,The Goat And The Vine,11,0.6135,216,The Lioness And The Wild Boar,0.7163,0.1028
+287,Few things are done except for profit.,287,The Old Woman And Her Doctor,17,0.4718,86,The Peasant and the Apple-Tree,0.5731,0.1013
+121,Do not trust the wicked.,121,The Abbot And The Flea,20,0.5989,261,The Crane And The Crow,0.6999,0.1010
+268,Live your lives in the clothes that suit you.,268,The Jackdaw And The Peacocks,26,0.4466,673,A Son Singing at his Mother's Funeral,0.5474,0.1008
+67,Try before you trust.,67,The Lion and the Eagle,18,0.4744,263,The Boy And The Scorpion,0.5750,0.1006
+47,There is as much malice in a wink as in a word.,47,The Fox and the Woodcutter,38,0.3982,82,The Nurse and the Wolf,0.4977,0.0995
+365,"Pleasure bought with pains, hurts.",365,The Flies And The Honey,2,0.6790,536,The Shepherd And The Honeybees,0.7783,0.0993
+642,There is a clever way of joking between seriousness and jest that brings both enjoyment and benefit.,642,A Covetous Ambassador,10,0.4480,218,The Farmer'S Boy And The Snails,0.5471,0.0991
+580,"No matter how you brag, you can be undone.",580,The Gnat and The Lion,15,0.4713,95,The Shipwrecked Impostor,0.5704,0.0991
+258,Wealth is of little value if one is too afraid to use or enjoy it.,258,The Coward And The Lion Of Gold,4,0.5208,438,The Man And His Gold,0.6184,0.0976
+556,The essence of authenticity cannot be replicated.,556,Prometheus and Cunning,4,0.3649,22,The Buffoon and the Countryman,0.4623,0.0975
+389,People who stubbornly cling to unwise choices lose everything before they know it.,389,The Two Frogs By The Road,4,0.4078,331,The Driver And The Donkey On The Cliff,0.5043,0.0966
+226,"When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone.",226,The Bull And The Goats,37,0.5292,391,The Frogs And The Battle Of The Bulls,0.6253,0.0962
+582,Better to face a known danger than to trust a deceitful promise of safety.,582,The Wolf and the Sheep in the Sheepfold,9,0.5644,84,The One-Eyed Doe,0.6605,0.0961
+615,Be prepared to defend your position.,615,The Assembly of Beasts,16,0.4100,214,"The Fox, The Boar And His Tusks",0.5042,0.0943
+31,"He who covets what belongs to another, deservedly loses his own.",31,The Dog and the Shadow,5,0.6322,432,The Wolf And The Lion,0.7260,0.0938
+305,Greed can lead to ruin.,305,The Dog And The Treasure,6,0.6025,381,"The Fox, The Moon And The River",0.6959,0.0934
+677,"People are to be judged by their actions, not by their appearance.",677,A Cat and Mice,3,0.6936,546,The Butcher and the Ape,0.7869,0.0933
+299,Those who try to deceive may expect to be paid in their own coin.,299,"The Fox, The Rooster And The Dog",3,0.7022,223,The Sick Man And The Gods,0.7939,0.0917
+697,Appearances can be deceiving.,697,A Plain Horse wins the Prize,6,0.7155,677,A Cat and Mice,0.8062,0.0907
+443,Tear out vice by the roots and the branches will wither away.,443,The Thief And His Mother,11,0.4140,611,The Owl and The Birds,0.5045,0.0906
+232,Experience teaches valuable lessons and encourages caution.,232,The Butcher And The Dog,8,0.4888,248,The Cicada And The Fox,0.5793,0.0905
+154,Brag and nature may bring you down.,154,The Olive Tree And The Fig Tree,8,0.6093,598,The Lamp,0.6994,0.0902
+312,Do not give up friends for foes.,312,"The Wolves, The Sheep And The Dogs",7,0.5803,595,"The Lion, The Fox and the Monkey serving dinner",0.6703,0.0900
+454,People who have been treated with contempt repay the deed in kind.,454,The Panther And The People,5,0.6184,42,The Fox and the Crane,0.7072,0.0888
+269,Vanity betrays every fraud.,269,Hermes And Tiresias,7,0.5613,95,The Shipwrecked Impostor,0.6500,0.0888
+658,There is no wealth greater than liberty.,658,A Goldfinch and a Boy,5,0.5554,547,The Dog and the Wolf,0.6440,0.0886
+199,Beware of empty promises made during good times.,199,The Two Dung Beetles,4,0.5909,521,The Sick Man And His Wife,0.6794,0.0886
+601,Falsehood is with all men.,601,Truth and The Traveler,5,0.6096,254,Hermes And The Cobblers,0.6981,0.0885
+128,When people harbor a criminal they become his first victims without even realizing it.,128,The Shepherd And The Wolf Cubs,39,0.4473,538,The Doves And The Kite,0.5354,0.0882
+308,Benefits are refused by those who don't understand them.,308,The Dog And The Gardener,17,0.4768,172,The Travellers And The Plane Tree,0.5638,0.0870
+583,Look at the source when placing the blame.,583,The Stake and the Wall,4,0.6313,509,The Farmer And The Sea,0.7183,0.0870
+591,Care defines ability.,591,The Soldier and His Horse,21,0.3851,322,The Donkey And The Lyre,0.4714,0.0863
+563,A fine coat is not always an indication of an attractive mind.,563,The Fox and The Leopard,3,0.6831,370,The Fox And The Mask,0.7692,0.0861
+627,A wise person will not attempt anything without having the right means to achieve it.,627,A Swallow and a Spider,3,0.5898,290,The Dog And The Lion,0.6751,0.0853
+571,Don't deceive yourself.,571,The Jackdaw and The Fox,22,0.4011,269,Hermes And Tiresias,0.4863,0.0852
+548,"It is better to be injured with impunity, than to put ourselves in the power of another.",548,The Horse and the Wild Boar,12,0.5817,524,The Lion And The Farmer's Daughter,0.6657,0.0840
+266,Those who commit grave wrongs cannot escape justice.,266,The Murderer And The Nile,4,0.5950,465,The Thief And The Lamp,0.6786,0.0836
+694,True friends are hard to come by.,694,A Man had a mind to try his Friends,2,0.6305,173,Socrates And His Friends,0.7130,0.0825
+463,A change of place does not make you a saint.,463,"The Raven, The Stork And His Beak",2,0.5653,141,The Magpie And Her Tail,0.6463,0.0810
+171,Be frank and open in your dealings.,171,The Snake And The Crab,16,0.4529,408,"The Man, Hermes And The Axes",0.5330,0.0800
+194,Don't take your friends for foes.,194,The Bees And The Beekeeper,7,0.5879,280,The Deer And Her Friends,0.6679,0.0800
+260,Contentment with our lot is an element of happiness.,260,The Crab On Dry Land,3,0.6470,555,The Author,0.7265,0.0795
+261,"Don't be seduced by deceptive words, they will cause nothing but trouble.",261,The Crane And The Crow,21,0.4866,518,The Young Man And The Prostitute,0.5658,0.0793
+159,Everyone thinks themselves the best.,159,The Trees And The Bramble Bush,14,0.4874,270,Juno And The Peacock,0.5665,0.0790
+330,False confidence often leads into danger.,330,"The Lion, The Rooster And The Donkey",7,0.5106,84,The One-Eyed Doe,0.5887,0.0780
+459,One should never trust those with a history of deceit.,459,The Wolf And The Shepherd,12,0.5795,420,The Lion And The Unicorn,0.6568,0.0774
+116,Seek to harm and harm shall find you.,116,The Wolf in Sheep's Clothing,9,0.6908,349,The Farmer And The Fox,0.7682,0.0773
+363,A reward for one might be destruction for another.,363,The Flea And The Ox,8,0.5541,328,"The Pig, The Donkey And The Barley",0.6312,0.0771
+413,Don't promise big things if you can't deliver.,413,The Mountain In Labour,10,0.3711,199,The Two Dung Beetles,0.4478,0.0768
+137,"The dishonest, if they act honestly, get no credit.",137,"The Wolf, The Fox And The Monkey",12,0.4620,287,The Old Woman And Her Doctor,0.5383,0.0762
+673,Not all things are suitable for all people.,673,A Son Singing at his Mother's Funeral,5,0.5787,264,The Donkey And The Cricket,0.6536,0.0749
+477,What is most truly valuable is often underrated.,477,The Stag And His Reflection,4,0.5707,26,The Cock and the Pearl,0.6449,0.0743
+367,We should do favours for someone who can do us a good deed in return.,367,"The Man, The Mare And The Foal",6,0.7054,146,The Shepherd And The Lion,0.7795,0.0741
+133,Experience often provides clearer insight than empty predictions.,133,Aesop And The Soothsayers,3,0.4886,436,The Merchant And The Ravens,0.5625,0.0739
+291,Do not believe those who have ill intentions.,291,"The Fox, The Lamb And The Dog",17,0.5704,265,The Dogs And The Crocodiles,0.6432,0.0728
+345,Do not boast too much at the height of your powers; people often spend their old age worn out with toil and trouble.,345,The Race Horse In The Mill,13,0.5169,598,The Lamp,0.5888,0.0719
+409,The promises of the greedy are often empty and insincere.,409,The Traveller And Hermes,3,0.6362,341,The Eagle And The Kite,0.7080,0.0718
+404,People who grasp at more than they need lose the little that they held in their hands.,404,The Widow And Her Hen,3,0.7191,19,The Boy and the Filberts,0.7906,0.0715
+659,"True worth should be measured by character and deeds, not by outward appearances.",659,A Lapwing Preferr'd,3,0.6697,370,The Fox And The Mask,0.7405,0.0708
+150,Work honestly and you won't be scorned.,150,The Ant And The Fly,4,0.4861,148,The Ant And The Dung Beetle,0.5569,0.0708
+672,No one is so loving of a friend that they would not prefer their own good to that of another.,672,A Woman that would needs Die for her Husband,11,0.5698,384,The Foxes And Their Tails,0.6399,0.0701
+160,Do not take credit for the accomplishments of others.,160,The Donkey Who Carried The God,2,0.6295,636,A Fly upon a Wheel,0.6995,0.0700
+475,Even the favours of wicked people are frightening.,475,Zeus And The Snake,2,0.5757,679,A Mouse and a Kite,0.6455,0.0698
+337,Count the cost before you commit yourselves.,337,The Hares And The Foxes,4,0.5165,375,The Fox And The Hare In The Well,0.5861,0.0697
+667,"Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side.",667,A Husbandman turn'd Soldier and Merchant,15,0.5832,369,The Horse And The Miller,0.6528,0.0696
+117,Appearances are deceptive.,117,The Wolf in Sheep's Clothing,4,0.7505,677,A Cat and Mice,0.8193,0.0687
+84,Trouble comes from the direction we least expect it.,84,The One-Eyed Doe,2,0.7362,283,The Hunters And The Deer With One Eye,0.8045,0.0683
+56,Avoid a remedy that is worse than the disease.,56,"The Hawk, the Kite, and the Pigeons",2,0.7700,241,The Man And The Cat,0.8376,0.0677
+247,Favor those who do you kindness.,247,"The Two Men, The Eagle And The Fox",9,0.6977,91,The Serpent and the Eagle,0.7654,0.0677
+346,The only thing that can really bring shame on a man is a punishment that he has justly deserved.,346,The Eunuch And His Accuser,5,0.4808,501,The Dog And His Bell,0.5483,0.0675
+481,Bad situations rarely get better.,481,The Monk And The Abbots,5,0.4386,640,The Fishes and the Frying-Pan,0.5052,0.0665
+467,Familiarity can alleviate seemingly intractable problems.,467,The Rich Man And The Tanner,3,0.5793,234,The Camel And The People,0.6456,0.0662
+539,"It is dangerous to believe a story, and dangerous not to believe it.",539,Augustus And The Murder,3,0.5471,486,The Wolf And The Nurse,0.6128,0.0657
+248,A discerning person is made wise by the misfortunes of his neighbours.,248,The Cicada And The Fox,2,0.7145,68,"The Lion, the Fox, and the Ass",0.7801,0.0656
+75,"One story is good, till another is told.",75,The Man and the Lion,4,0.4718,686,A Widow and a Green Ass,0.5374,0.0655
+638,Men would bear their misfortunes more patiently if they considered the ones of others.,638,"The monkey, donkey and mole",5,0.6521,52,The Hares and the Frogs,0.7172,0.0651
+190,He that is neither one thing nor the other has no friends.,190,The War Between The Beasts And The Birds,2,0.7569,13,"The Bat, the Birds and the Beasts",0.8216,0.0647
+29,Those who enter by the back stairs may expect to be shown out at the window.,29,The Dog and the Cook,10,0.4609,579,The Weasel and the Partridge,0.5248,0.0638
+425,The safeguards of virtue are hateful to those with evil intentions.,425,The Rooster And The Thieves,14,0.4012,399,The Halcyon And The Sea,0.4647,0.0635
+503,Do not be in a hurry to change one evil for another.,503,The Oxen And The Butcher,11,0.6314,241,The Man And The Cat,0.6946,0.0631
+383,Take pleasure when thieves destroy themselves.,383,"The Wolf, The Fox And The Shepherd",8,0.5440,343,The Two Enemies,0.6065,0.0625
+586,Even gods may not know everything.,586,The Husbandman That Lost His Mattock,7,0.4310,480,The Witch On Trial,0.4935,0.0625
+4,Men often bear little grievances with less courage than they do large misfortunes.,4,The Ass and the Frogs,7,0.5620,226,The Bull And The Goats,0.6244,0.0624
+426,Caution is far superior to reckless haste and hurry.,426,The Pigeon And The Painting,4,0.5378,393,The Two Frogs At The Well,0.6000,0.0622
+480,People often make extravagant promises which they are completely unable to carry out.,480,The Witch On Trial,4,0.5732,341,The Eagle And The Kite,0.6347,0.0615
+279,Those who are not content with what they have may end up losing it while pursuing greater desires.,279,"The Lion, The Hare And The Deer",3,0.6715,235,Zeus And The Camel,0.7329,0.0614
+654,"Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",654,A Fowler and a Chaffinch,6,0.6313,36,The Fisher and the Little Fish,0.6928,0.0614
+622,"Value is what others think of you, not what you think of yourself.",622,The River Fish and The Sea Fish,2,0.5357,406,Hermes And The Statues,0.5957,0.0599
+702,Seek the friendship of those who do not withdraw from offering help even in a time of adversity.,702,A Lion and a Hog,3,0.6809,14,The Bear and the Two Travelers,0.7404,0.0596
+281,"In avoiding a lesser danger, one may inadvertently fall into a greater peril.",281,The Deer And The Lion,2,0.7465,399,The Halcyon And The Sea,0.8060,0.0595
+15,It is easy to propose impossible remedies.,15,Belling the Cat,6,0.5592,241,The Man And The Cat,0.6186,0.0594
+669,He who claims any good for himself takes away from the source of all the good he enjoys.,669,A River and a Fountain,13,0.5072,160,The Donkey Who Carried The God,0.5665,0.0593
+161,Those who refuse to share and respond with rudeness may face dire consequences for their actions.,161,The Bald Man And The Gardener,4,0.4390,513,The Monkey And The Fox,0.4981,0.0591
+372,A wicked person deservedly comes to a bad end by keeping company with other wicked people.,372,The Snake And The Thorn Bush,3,0.5849,525,The Stork And The Cranes,0.6426,0.0577
+693,Complaining is the privilege of the weak.,693,A Creaking Wheel,7,0.5672,502,The Bulls And The Wagon,0.6247,0.0575
+386,Someone who plots against others falls into his own trap.,386,"The Wolf, The Fox And The Ailing Lion",4,0.7461,317,The Goat And The Donkey,0.8031,0.0570
+169,People are often eager to treat their enemies well in the hopes of gaining something by it.,169,The Crow And Athena,14,0.5941,420,The Lion And The Unicorn,0.6510,0.0568
+369,Accept the changes in life.,369,The Horse And The Miller,3,0.4084,417,"The Man, His Wife And The Boy Outside",0.4651,0.0567
+656,"We should not be upset by the words of our teachers, since those words are usually the cause of many good things.",656,A Spaniel and a Sow,17,0.4480,700,A Lad Robbing an Orchard,0.5032,0.0553
+606,It is better to endure short-term struggles for long-term benefits than the other way around.,606,Prometheus and the two roads,2,0.4343,206,The Sparrow And The Myrtle Berries,0.4881,0.0538
+2,There's a time for work and a time for play.,2,The Ant and the Grasshopper,5,0.5148,149,The Ant And The Cricket,0.5686,0.0537
+28,Men often revert to their natural instincts.,28,The Dancing Monkeys,4,0.6049,24,The Cat and Venus,0.6582,0.0533
+30,People often grudge others what they cannot enjoy themselves.,30,The Dog in the Manger,2,0.8375,483,The Dog In The Manger,0.8890,0.0515
+532,It is better to serve in safety than to rule in peril.,532,The Fox And The Lion Hunting,4,0.6230,325,"The Donkey, The Onager And The Lion",0.6738,0.0508
+149,Prepare for the future.,149,The Ant And The Cricket,3,0.7059,2,The Ant and the Grasshopper,0.7565,0.0505
+283,Watch on all sides.,283,The Hunters And The Deer With One Eye,2,0.5963,84,The One-Eyed Doe,0.6467,0.0505
+221,Inner beauty is better than outer beauty.,221,The Children And The Mirror,3,0.5932,563,The Fox and The Leopard,0.6434,0.0503
+506,Some would rather fight than not.,506,The Dolphins And The Whales,11,0.4686,607,The Mouse and The Frog,0.5185,0.0499
+174,"Those who pretend to be what they are not, sooner or later, find themselves in deep water.",174,The Monkey And The Dolphin,3,0.6478,332,The Jackdaw And The Doves,0.6977,0.0499
+32,How often do we supply our enemies with the means of our own destruction.,32,The Eagle and the Arrow,2,0.7248,168,The Ax And The Trees,0.7745,0.0498
+528,We must make friends in prosperity if we would have their help in adversity.,528,The Kite And His Mother,4,0.6331,694,A Man had a mind to try his Friends,0.6828,0.0497
+474,Some may choose mutual destruction over continued suffering.,474,The Snake And The Wasp,6,0.5158,215,The Lion And The Boar At The Spring,0.5653,0.0495
+304,Enterprise is not to be judged in terms of its speed but its outcome.,304,"The Sow, The Dog And Their Litters",3,0.5131,371,The Tortoise And The Hare,0.5618,0.0487
+324,People often appreciate what they had only after experiencing something worse.,324,The Donkey And His Masters,3,0.4983,638,"The monkey, donkey and mole",0.5468,0.0486
+111,Quality is better than quantity.,111,The Vixen and the Lioness,2,0.7358,377,The Sow And The Lioness,0.7844,0.0486
+701,A bird in the hand is worth two in the bush.,701,A Nightingale and a Hawk,6,0.8409,654,A Fowler and a Chaffinch,0.8894,0.0485
+45,Look before you leap.,45,The Fox and the Goat,3,0.7907,393,The Two Frogs At The Well,0.8390,0.0483
+20,One man's pleasure may be another's pain.,20,The Boys and the Frogs,3,0.6452,617,The Eyes and the Honey,0.6933,0.0480
+227,"When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",227,The Dolphin And The Lion,3,0.6375,337,The Hares And The Foxes,0.6845,0.0470
+49,Old friends should not be sacrificed for new ones.,49,The Goatherd and the Wild Goats,2,0.7752,595,"The Lion, The Fox and the Monkey serving dinner",0.8219,0.0467
+189,Do not always stick to the same course.,189,The Bat And The Weasels,5,0.4741,585,The Camel and The Arab,0.5201,0.0461
+234,Familiarity mollifies even the most terrifying things.,234,The Camel And The People,2,0.7211,385,The Fox And The Lion,0.7671,0.0460
+69,Small liberties can be large offenses.,69,"The Lion, the Mouse, and the Fox",6,0.5043,314,The Wolf And The Raven,0.5499,0.0456
+276,"Bad things naturally happen to bad people, while good things lie in wait for people who are honest and reasonable.",276,The Cyclops And His Treasure,3,0.5141,494,The Bride And The Two Grooms,0.5589,0.0448
+94,"There is no believing a liar, even when he speaks the truth.",94,The Shepherd's Boy and the Wolf,2,0.7525,137,"The Wolf, The Fox And The Monkey",0.7957,0.0432
+145,People get themselves into trouble because of their boasting.,145,The Foxes At The River,6,0.5342,95,The Shipwrecked Impostor,0.5772,0.0430
+428,"When your adversary is also your judge, don't bother arguing.",428,A Lark in A Net,6,0.4960,612,The Jar goes to Court,0.5387,0.0427
+306,Take what you can get when you can get it.,306,The Wolf And The Sleeping Dog,4,0.6462,654,A Fowler and a Chaffinch,0.6882,0.0420
+505,There is no wealth greater than liberty.,505,"The Wolf, The Dog And The Collar",2,0.6032,547,The Dog and the Wolf,0.6440,0.0408
+354,"Injuries may be forgiven, but not forgotten.",354,The Snake And The Farmer,2,0.8452,353,The Snake And The Farmer,0.8851,0.0399
+375,People who act impulsively can end up in regrettable situations.,375,The Fox And The Hare In The Well,3,0.4365,426,The Pigeon And The Painting,0.4760,0.0395
+402,Those who scheme against others may ultimately fall victim to their own plots.,402,The Roosters And The Hawk,4,0.7339,317,The Goat And The Donkey,0.7727,0.0388
+236,Beware of when the powerful and the deceitful collaborate.,236,"The Night-Owl, The Cat And The Mouse",4,0.6024,538,The Doves And The Kite,0.6408,0.0384
+100,Every man for himself.,100,The Three Tradesmen,4,0.5273,672,A Woman that would needs Die for her Husband,0.5650,0.0377
+561,The weak may find a way to avenge a wrong.,561,The Eagle and The Beetle,5,0.6697,163,The Eagle And The Fox,0.7072,0.0375
+325,The insubordinate are free from both obligation and protection.,325,"The Donkey, The Onager And The Lion",5,0.5231,602,The Sheep and The Dog,0.5602,0.0371
+423,Every man should be content to mind his own business.,423,The Seagull And The Kite,2,0.5695,506,The Dolphins And The Whales,0.6065,0.0370
+108,The strong and the weak cannot keep company.,108,The Two Pots,3,0.6297,107,The Two Pots,0.6664,0.0367
+341,Some people will do anything to get what they want.,341,The Eagle And The Kite,4,0.4693,284,"The Man, The Pig And The Miracle",0.5050,0.0356
+98,"Destroy the seed of evil, or it will grow up to your ruin.",98,The Swallow and the Other Birds,2,0.6753,611,The Owl and The Birds,0.7103,0.0350
+433,You will hurt yourself and accomplish nothing if you try to imitate someone who is far better than you are.,433,The Lizard And The Snake,3,0.7109,508,The Jackdaw And The Eagle,0.7458,0.0349
+674,Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.,674,A Man that would not take a Clyster,10,0.4782,56,"The Hawk, the Kite, and the Pigeons",0.5127,0.0345
+101,Never put yourself in your enemy's clutches.,101,The Tortoise and the Birds,7,0.6010,538,The Doves And The Kite,0.6351,0.0342
+148,There's a time for work and a time for play.,148,The Ant And The Dung Beetle,4,0.5350,149,The Ant And The Cricket,0.5686,0.0336
+496,It is difficult to truly know a person.,496,Pompey And His Soldier,6,0.3740,677,A Cat and Mice,0.4076,0.0336
+333,A life of greed and hoarding wealth leads to misery.,333,The Fox And The Dragon,3,0.5443,707,A Miser and his Bags,0.5775,0.0333
+95,A liar deceives no one but himself.,95,The Shipwrecked Impostor,2,0.6585,174,The Monkey And The Dolphin,0.6914,0.0329
+578,Justice is fickle.,578,"The Swallow, The Serpent, and The Court of Justice",6,0.5219,205,"The Nightingale, The Hawk And The Bird Catcher",0.5546,0.0327
+379,Take warning from the misfortunes of others.,379,"The Fox, The Lion And The Footprints",2,0.7197,68,"The Lion, the Fox, and the Ass",0.7520,0.0323
+34,The greatest kindness will not bind the ungrateful.,34,The Farmer and the Snake,3,0.6217,0,Androcles,0.6536,0.0319
+85,Be content with your lot; one cannot be first in everything.,85,The Peacock and Juno,2,0.8077,270,Juno And The Peacock,0.8380,0.0302
+328,Easy life and seeming good fortune of others conceal a threat to their welfare.,328,"The Pig, The Donkey And The Barley",7,0.5645,93,The Shepherd and the Sea,0.5947,0.0302
+663,Many people renounce wicked activities only because they are prevented from conducting them any longer.,663,A Hermit and a Soldier,2,0.5287,683,An Old Man resolv'd to give over Whoring,0.5588,0.0300
+225,People who enter into contests with unworthy opponents lower their own reputation.,225,The Gnat And The Bull,2,0.7233,123,The Donkey And The Wild Boar,0.7531,0.0298
+96,Fine work gets preserved and treasured.,96,The Silkworm and Spider,2,0.4316,451,The Old Woman And The Wine Jar,0.4610,0.0295
+403,Do not neglect small advantages in hopes of better ones.,403,The Hawk And The Nightingale,5,0.6678,654,A Fowler and a Chaffinch,0.6972,0.0294
+314,Some can do wrong more easily than others can see it.,314,The Wolf And The Raven,4,0.5563,526,The Goatherd And The Goat,0.5856,0.0294
+564,A little thing in hand is worth more than a great thing in prospect.,564,The Fisherman and The Little Fish,3,0.6961,36,The Fisher and the Little Fish,0.7254,0.0293
+91,One good turn deserves another.,91,The Serpent and the Eagle,4,0.8979,250,The Eagle And The Farmer,0.9266,0.0287
+165,A wicked nature does not produce a good character.,165,"The Shepherd, The Wolf Cub And The Wolf",4,0.6194,118,The Woodman and the Serpent,0.6477,0.0283
+604,Know your place.,604,The Tail of the Serpent,2,0.5581,579,The Weasel and the Partridge,0.5860,0.0280
+662,Don't promise more than you can deliver.,662,A Hunts-man and a Currier,5,0.4545,199,The Two Dung Beetles,0.4822,0.0277
+229,Believing your enemies makes you fall victim to their tricks and gets you into trouble.,229,"The Lion, The Bull And His Horns",6,0.5263,265,The Dogs And The Crocodiles,0.5535,0.0272
+167,True value is wasted on those who cannot appreciate it.,167,The Rooster And The Pearl,2,0.6331,26,The Cock and the Pearl,0.6601,0.0271
+228,"Unity is strength, while division invites defeat.",228,The Two Bulls And The Lion,4,0.7871,511,The Old Man And His Sons,0.8138,0.0267
+553,Life is a mixture of grief and joy.,553,The Pilot and the Mariners,2,0.5476,610,Prometheus and the tears,0.5737,0.0262
+352,Those who complain about their duties often forget their own role in creating the situation.,352,"The Farmer, The Cattle And The Manure",2,0.5843,502,The Bulls And The Wagon,0.6104,0.0260
+37,To do the right thing at the right season is a great art.,37,The Fisherman Piping,2,0.5719,645,An Old Fellow and a Young Wench,0.5978,0.0260
+436,Someone who cannot manage his own affairs is not qualified to give advice to his neighbours.,436,The Merchant And The Ravens,2,0.6554,87,The Quack Frog,0.6802,0.0248
+705,The conflicts of the wicked are the protection of the good.,705,Pigeons Reconcile the Hawks,3,0.5625,538,The Doves And The Kite,0.5872,0.0247
+555,We must not require what is unreasonable.,555,The Author,5,0.5088,102,The Tortoise and the Eagle,0.5327,0.0238
+657,"It's wise and kind to be considerate of one another, for no one knows their own end.",657,Oxen and Timber,2,0.5421,706,An Old Man that was willing to put off Death,0.5659,0.0238
+529,A coward by nature will always be a coward.,529,The Deer And His Mother,2,0.6632,259,The Coward And The Ravens,0.6865,0.0233
+109,He who shares the danger ought to share the prize.,109,The Two Travelers and the Axe,2,0.6186,532,The Fox And The Lion Hunting,0.6418,0.0232
+230,"Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity.",230,The Lion And The Two Men,2,0.6744,450,The North Wind And The Sun,0.6972,0.0228
+348,Nothing escapes the master's eye.,348,The Stag Among The Cattle,2,0.6653,55,The Hart in the Ox-Stall,0.6881,0.0228
+293,False sympathy often masks selfish intentions.,293,"The Shepherd, The Dog And The Sick Sheep",2,0.7357,675,A Wolf and a Sick Ass,0.7569,0.0213
+178,Do not let fame get to your head.,178,'The Prince',4,0.5003,598,The Lamp,0.5215,0.0212
+295,You should especially avoid someone who does not even spare his own people.,295,The Farmer And His Dogs,2,0.6200,204,The Bird Catcher And The Partridge,0.6394,0.0193
+233,Jealousy can lead people to foolishly imitate their betters.,233,The Monkey And The Camel,2,0.6806,508,The Jackdaw And The Eagle,0.6992,0.0186
+107,Equals make the best friends.,107,The Two Pots,2,0.8302,108,The Two Pots,0.8483,0.0181
+309,No one can be a friend if you know not whether to trust or distrust him.,309,The Dog And The Hare,3,0.6209,190,The War Between The Beasts And The Birds,0.6380,0.0171
+509,Use care to place your blame on the right person.,509,The Farmer And The Sea,2,0.6701,648,An Old Woman and the Devil,0.6862,0.0161
+668,"When public officials encourage foolishness, it's no surprise if fools try to become public officials.",668,An Ass puts in for an Office,2,0.5107,646,An Eagle and a Pye,0.5258,0.0152
+147,Nature and instincts can persist despite changes in form or appearance.,147,Zeus And Prometheus,2,0.5575,23,The Cat-Maiden,0.5725,0.0150
+589,"Sometimes, Wicked people commit crime in haste but are not punished until much later.",589,The Judgments of Zeus,2,0.6202,414,The Oath's Punishment,0.6344,0.0142
+357,We had better bear our troubles bravely than try to escape them.,357,"The Father, The Son And The Lion",3,0.6051,490,Aesop And The Runaway Slave,0.6191,0.0139
+132,People are asking for trouble if they make fun of someone who is better than they are.,132,Aesop And The Shipbuilders,2,0.6566,569,"Zeus and Apollo, A Contest in Archery",0.6697,0.0131
+396,Bear that those who are inferior to you in merit should be like you in outside appearances.,396,Jupiter And The Goats,2,0.6535,159,The Trees And The Bramble Bush,0.6665,0.0130
+679,"Save a Thief from the Gallows, and he'll cut your Throat.",679,A Mouse and a Kite,2,0.7268,34,The Farmer and the Snake,0.7392,0.0124
+216,"What you have done to others will likewise be done to you, according to the same measure.",216,The Lioness And The Wild Boar,3,0.7538,454,The Panther And The People,0.7658,0.0120
+83,Stoop to conquer.,83,The Oak and the Reeds,2,0.5966,225,The Gnat And The Bull,0.6069,0.0103
+441,Those who avoid hardship may miss out on valuable rewards.,441,The Monkey And The Nut,2,0.4897,323,The Donkey And The Mule,0.4998,0.0101
+512,"Where force is not enough, cleverness must be used instead.",512,The Lizard And The Snake,2,0.7605,275,The Eagle And The Crow,0.7703,0.0098
+8,"Fine clothes may disguise, but silly words will disclose a fool.",8,The Ass in the Lion's Skin,2,0.8571,316,"The Fox, The Donkey And The Lion Skin",0.8664,0.0093
+235,People who grasp for more than they need are deprived of what they have.,235,Zeus And The Camel,3,0.7470,19,The Boy and the Filberts,0.7558,0.0089
+338,Pride goes before destruction.,338,The Two Roosters And The Eagle,2,0.7557,581,The Wolf and his Shadow,0.7635,0.0078
+151,One good turn deserves another.,151,"The Ant, The Pigeon And The Bird-Catcher",3,0.9191,250,The Eagle And The Farmer,0.9266,0.0074
+516,Indulgence in luxuries can lead to peril.,516,The Mouse In The Pot,2,0.5772,206,The Sparrow And The Myrtle Berries,0.5840,0.0068
+542,Tears don't always signify pity.,542,"The Birds, The Bird Catcher And His Tears",2,0.6140,293,"The Shepherd, The Dog And The Sick Sheep",0.6208,0.0067
+59,Self-help is the best help.,59,Hercules and the Wagoner,2,0.7661,66,The Lark and Her Young Ones,0.7728,0.0067
+545,Any excuse will serve a tyrant.,545,The Wolf and the Lamb,2,0.8398,238,The Cat And The Rooster,0.8460,0.0062
+198,No piece of luck can conceal a depraved nature.,198,Jupiter And The Fox,2,0.5841,165,"The Shepherd, The Wolf Cub And The Wolf",0.5895,0.0054
+48,Better no rule than cruel rule.,48,The Frogs Asking for a King,2,0.5165,584,Winter and Spring,0.5209,0.0045
+38,Union is strength.,38,The Four Oxen and the Lion,2,0.8423,511,The Old Man And His Sons,0.8466,0.0043
+639,The shortest and surest way of doing things is best.,639,Seamen Praying to Saints,2,0.5296,585,The Camel and The Arab,0.5336,0.0040
+595,Do not neglect the loyalty of old friends to please new acquaintances.,595,"The Lion, The Fox and the Monkey serving dinner",2,0.7984,49,The Goatherd and the Wild Goats,0.8017,0.0033
+598,Do not boast lest you be taken down.,598,The Lamp,2,0.7312,338,The Two Roosters And The Eagle,0.7342,0.0029
+257,An alliance made with the high and mighty can never be trusted.,257,"The Lion, The Cow, The She-Goat And The Sheep",2,0.7245,538,The Doves And The Kite,0.7275,0.0029
+88,Change of habit cannot alter nature.,88,The Raven and the Swan,2,0.8124,23,The Cat-Maiden,0.8152,0.0028
+680,Unwanted visits are a nuisance to a peaceful person's life.,680,A Cockle and Jupiter,2,0.4830,681,A Hedge-Hog and a Snake,0.4857,0.0027
+130,It is unwise to reward when one should punish.,130,The Man Bitten By The Dog,2,0.6359,247,"The Two Men, The Eagle And The Fox",0.6382,0.0024
+418,People who have been judged in the past can later on be in a position to judge their former teachers.,418,The Two Hyenas,3,0.5052,473,The Shepherd And The Wolf Cub,0.5075,0.0023
+158,Some things you cannot change.,158,The Black Man In The River,2,0.5700,120,The Aethiop,0.5721,0.0022
+311,Do not blame others for the circumstances of their upbringing.,311,The Hunting Dog And The Watch Dog,2,0.6588,346,The Eunuch And His Accuser,0.6596,0.0009
