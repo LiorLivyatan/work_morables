@@ -78,3 +78,4 @@ experiments/*/results/pipeline_runs/
 
 # wandb
 wandb/
+.gstack/

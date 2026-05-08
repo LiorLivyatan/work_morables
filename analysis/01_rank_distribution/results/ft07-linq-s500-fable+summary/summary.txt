@@ -1,0 +1,7 @@
+Experiment: ft07-linq-s500-fable+summary
+MRR@10:     0.4398
+R@1:        0.3315
+R@5:        0.5896
+R@10:       0.6770
+Median rank: 3
+Mean rank:   31.5

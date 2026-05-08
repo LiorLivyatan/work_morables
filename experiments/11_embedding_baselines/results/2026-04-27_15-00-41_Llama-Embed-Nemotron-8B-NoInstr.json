@@ -1,0 +1,111 @@
+{
+  "config": {
+    "doc_mode": "fable_plus_summary",
+    "seed": 42,
+    "batch_size": 16,
+    "models": [
+      {
+        "alias": "Linq-Embed-Mistral",
+        "id": "Linq-AI-Research/Linq-Embed-Mistral",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16"
+      },
+      {
+        "alias": "NV-Embed-v2",
+        "id": "nvidia/NV-Embed-v2",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "GTE-Qwen2-7B",
+        "id": "Alibaba-NLP/gte-Qwen2-7B-instruct",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "BGE-en-ICL",
+        "id": "BAAI/bge-en-icl",
+        "query_instruction": "Given a moral statement, retrieve the fable that best conveys this moral.\n",
+        "torch_dtype": "bfloat16"
+      },
+      {
+        "alias": "EmbeddingGemma-300M",
+        "id": "google/embeddinggemma-300m",
+        "query_instruction": "",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Nomic-Embed-v2-MoE",
+        "id": "nomic-ai/nomic-embed-text-v2-moe",
+        "query_instruction": "search_query: ",
+        "doc_prefix": "search_document: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Qwen3-Embedding-8B",
+        "id": "Qwen/Qwen3-Embedding-8B",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Llama-Embed-Nemotron-8B",
+        "id": "nvidia/llama-embed-nemotron-8b",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "Llama-Embed-Nemotron-8B-NoInstr",
+        "id": "nvidia/llama-embed-nemotron-8b",
+        "query_instruction": "",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      },
+      {
+        "alias": "KaLM-Gemma3-12B",
+        "id": "tencent/KaLM-Embedding-Gemma3-12B-2511",
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true,
+        "device_map": "auto"
+      },
+      {
+        "alias": "GritLM-7B",
+        "id": "GritLM/GritLM-7B",
+        "query_instruction": "<|user|>\nGiven a moral statement, retrieve the fable that best conveys this moral.\n<|embed|>\n",
+        "torch_dtype": "bfloat16",
+        "trust_remote_code": true
+      }
+    ]
+  },
+  "device": "mps",
+  "results": [
+    {
+      "alias": "Llama-Embed-Nemotron-8B-NoInstr",
+      "model_id": "nvidia/llama-embed-nemotron-8b",
+      "MRR": 0.08604929609666678,
+      "MAP": 0.08604929609666678,
+      "R-Precision": 0.04936530324400564,
+      "Mean Rank": 197.86036671368123,
+      "Median Rank": 131.0,
+      "n_queries": 709,
+      "Recall@1": 0.04936530324400564,
+      "P@1": 0.04936530324400564,
+      "NDCG@1": 0.04936530324400564,
+      "Recall@5": 0.1071932299012694,
+      "P@5": 0.02143864598025388,
+      "NDCG@5": 0.07863269442612028,
+      "Recall@10": 0.15091678420310295,
+      "P@10": 0.015091678420310298,
+      "NDCG@10": 0.09282336557592183,
+      "Recall@50": 0.304654442877292,
+      "P@50": 0.00609308885754584,
+      "NDCG@50": 0.12601915523391458
+    }
+  ]
+}

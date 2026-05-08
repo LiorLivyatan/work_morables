@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage[review]{acl}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{microtype}
+\usepackage{inconsolata}
+
+\title{ParabeLink: Retrieving Fables from Moral Lessons}
+
+\author{Anonymous ACL submission}
+
+\begin{document}
+\maketitle
+
+% ============================================================
+%  ABSTRACT
+% ============================================================
+\begin{abstract}
+Linking moral principles to the narratives that teach them poses a fundamental
+retrieval challenge: morals and fables share virtually no vocabulary, demanding
+conceptual understanding far beyond surface-level matching.
+We introduce \textbf{ParabeLink}, a benchmark built on the MORABLES dataset
+\citep{marcuzzo-etal-2025-morables} in which a system must identify the correct
+fable for a given moral lesson from 709 candidates (mean lexical overlap IoU:
+0.011).
+The best off-the-shelf embedding model achieves MRR of 0.210, far below an oracle
+ceiling of 0.893---computed by appending the ground-truth moral to each fable
+document---a four-fold gap that surface matching cannot close.
+Augmenting fable documents with LLM-generated moral-style summaries substantially
+narrows this gap (MRR 0.360), demonstrating that the bottleneck lies in document
+representation rather than encoder capacity.
+Contrastive fine-tuning with moral-negative augmentation improves performance
+further (MRR 0.438).
+\textbf{ParabeLink} provides a challenging testbed for semantic retrieval where
+success requires bridging a deep abstraction gap between query and document.
+\end{abstract}
+
+% ============================================================
+%  SECTIONS (stubs — filled in session by session)
+% ============================================================
+
+\section{Introduction}
+% TODO
+
+\section{Related Work}
+% TODO
+
+\section{The ParabeLink Benchmark}
+% TODO
+
+\section{Experiments}
+% TODO
+
+\section{Results and Discussion}
+% TODO
+
+\section{Conclusions}
+% TODO
+
+\section*{Limitations}
+% TODO
+
+\section*{Ethics Statement}
+% TODO
+
+% ============================================================
+%  REFERENCES
+% ============================================================
+\bibliography{references}
+
+\end{document}

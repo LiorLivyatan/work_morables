@@ -1,0 +1,95 @@
+query_idx,query_moral,similar_moral_idx,similar_moral,sim
+2,There's a time for work and a time for play.,148,There's a time for work and a time for play.,1.0006
+148,There's a time for work and a time for play.,2,There's a time for work and a time for play.,1.0006
+236,Beware of when the powerful and the deceitful collaborate.,274,Beware of when the powerful and the deceitful collaborate.,1.0006
+274,Beware of when the powerful and the deceitful collaborate.,236,Beware of when the powerful and the deceitful collaborate.,1.0006
+1,Appearances are deceptive.,117,Appearances are deceptive.,1.0005
+85,Be content with your lot; one cannot be first in everything.,270,Be content with your lot; one cannot be first in everything.,1.0005
+117,Appearances are deceptive.,1,Appearances are deceptive.,1.0005
+270,Be content with your lot; one cannot be first in everything.,85,Be content with your lot; one cannot be first in everything.,1.0005
+278,Be careful what you wish for.,617,Be careful what you wish for.,1.0005
+617,Be careful what you wish for.,278,Be careful what you wish for.,1.0005
+156,Do not mock the gods.,223,Do not mock the gods.,1.0004
+223,Do not mock the gods.,156,Do not mock the gods.,1.0004
+333,A life of greed and hoarding wealth leads to misery.,707,A life of greed and hoarding wealth leads to misery.,1.0004
+485,Be yourself and don't pretend to be someone you're not.,507,Be yourself and don't pretend to be someone you're not.,1.0004
+507,Be yourself and don't pretend to be someone you're not.,485,Be yourself and don't pretend to be someone you're not.,1.0004
+707,A life of greed and hoarding wealth leads to misery.,333,A life of greed and hoarding wealth leads to misery.,1.0004
+13,He that is neither one thing nor the other has no friends.,190,He that is neither one thing nor the other has no friends.,1.0003
+23,Nature reveals itself.,24,Nature reveals itself.,1.0003
+24,Nature reveals itself.,23,Nature reveals itself.,1.0003
+190,He that is neither one thing nor the other has no friends.,13,He that is neither one thing nor the other has no friends.,1.0003
+593,Nature reveals itself.,23,Nature reveals itself.,1.0003
+613,Nature reveals itself.,23,Nature reveals itself.,1.0003
+691,Be content with your lot.,696,Be content with your lot.,1.0003
+696,Be content with your lot.,691,Be content with your lot.,1.0003
+98,"Destroy the seed of evil, or it will grow up to your ruin.",611,"Destroy the seed of evil, or it will grow up to your ruin.",1.0002
+505,There is no wealth greater than liberty.,658,There is no wealth greater than liberty.,1.0002
+611,"Destroy the seed of evil, or it will grow up to your ruin.",98,"Destroy the seed of evil, or it will grow up to your ruin.",1.0002
+658,There is no wealth greater than liberty.,505,There is no wealth greater than liberty.,1.0002
+43,Flatters are not to be trusted.,620,Flatters are not to be trusted.,1.0001
+522,Those who adapt to the times will emerge unscathed.,708,Those who adapt to the times will emerge unscathed.,1.0001
+620,Flatters are not to be trusted.,43,Flatters are not to be trusted.,1.0001
+708,Those who adapt to the times will emerge unscathed.,522,Those who adapt to the times will emerge unscathed.,1.0001
+45,Look before you leap.,242,Look before you leap.,1.0000
+59,Self-help is the best help.,66,Self-help is the best help.,1.0000
+66,Self-help is the best help.,59,Self-help is the best help.,1.0000
+92,It is useless attacking the insensible.,245,It is useless attacking the insensible.,1.0000
+103,Everyone is more or less master of his own fate.,568,Everyone is more or less master of his own fate.,1.0000
+138,Self-help is the best help.,59,Self-help is the best help.,1.0000
+242,Look before you leap.,45,Look before you leap.,1.0000
+245,It is useless attacking the insensible.,92,It is useless attacking the insensible.,1.0000
+393,Look before you leap.,45,Look before you leap.,1.0000
+568,Everyone is more or less master of his own fate.,103,Everyone is more or less master of his own fate.,1.0000
+91,One good turn deserves another.,151,One good turn deserves another.,0.9998
+113,An invitation prompted by selfishness is not to be accepted.,180,An invitation prompted by selfishness is not to be accepted.,0.9998
+151,One good turn deserves another.,91,One good turn deserves another.,0.9998
+180,An invitation prompted by selfishness is not to be accepted.,113,An invitation prompted by selfishness is not to be accepted.,0.9998
+57,He laughs best that laughs last.,498,He laughs best that laughs last.,0.9997
+498,He laughs best that laughs last.,57,He laughs best that laughs last.,0.9997
+537,Every tale is not to be believed.,621,Every tale is not to be believed.,0.9996
+621,Every tale is not to be believed.,537,Every tale is not to be believed.,0.9996
+36,A little thing in hand is worth more than a great thing in prospect.,564,A little thing in hand is worth more than a great thing in prospect.,0.9995
+50,Greed often overreaches itself.,616,Greed often overreaches itself.,0.9995
+445,Appearances can be deceiving.,697,Appearances can be deceiving.,0.9995
+564,A little thing in hand is worth more than a great thing in prospect.,36,A little thing in hand is worth more than a great thing in prospect.,0.9995
+616,Greed often overreaches itself.,50,Greed often overreaches itself.,0.9995
+697,Appearances can be deceiving.,445,Appearances can be deceiving.,0.9995
+120,Some things you cannot change.,158,Some things you cannot change.,0.9993
+158,Some things you cannot change.,120,Some things you cannot change.,0.9993
+80,Enemies' promises are made to be broken.,82,Enemies' promises were made to be broken.,0.9909
+82,Enemies' promises were made to be broken.,80,Enemies' promises are made to be broken.,0.9909
+9,Wit has always an answer ready.,71,Wit always has an answer ready.,0.9907
+71,Wit always has an answer ready.,9,Wit has always an answer ready.,0.9907
+55,Nothing escapes the master's eye,348,Nothing escapes the master's eye.,0.9770
+348,Nothing escapes the master's eye.,55,Nothing escapes the master's eye,0.9770
+30,People often grudge others what they cannot enjoy themselves.,483,Some begrudge others what they cannot enjoy themselves.,0.9753
+483,Some begrudge others what they cannot enjoy themselves.,30,People often grudge others what they cannot enjoy themselves.,0.9753
+52,There is always someone worse off than yourself.,122,There is always someone else worse off than you.,0.9728
+122,There is always someone else worse off than you.,52,There is always someone worse off than yourself.,0.9728
+173,True friends are hard to find.,694,True friends are hard to come by.,0.9718
+694,True friends are hard to come by.,173,True friends are hard to find.,0.9718
+38,Union is strength.,511,Union gives strength.,0.9685
+511,Union gives strength.,38,Union is strength.,0.9685
+111,Quality is better than quantity.,377,Quality is more valuable than quantity.,0.9525
+377,Quality is more valuable than quantity.,111,Quality is better than quantity.,0.9525
+431,Be careful what you wish for; your wish may be granted.,278,Be careful what you wish for.,0.9471
+181,People often grasp for more than they need and thus lose the little they have.,404,People who grasp at more than they need lose the little that they held in their hands.,0.9432
+404,People who grasp at more than they need lose the little that they held in their hands.,181,People often grasp for more than they need and thus lose the little they have.,0.9432
+204,Someone who lays a trap for others will fall victim to it himself.,205,People who lay traps for others should be careful not to fall into a trap themselves.,0.9357
+205,People who lay traps for others should be careful not to fall into a trap themselves.,204,Someone who lays a trap for others will fall victim to it himself.,0.9357
+677,"People are to be judged by their actions, not by their appearance.",685,"People should not be judged by their appearances, but by their actions.",0.9285
+685,"People should not be judged by their appearances, but by their actions.",677,"People are to be judged by their actions, not by their appearance.",0.9285
+8,"Fine clothes may disguise, but silly words will disclose a fool.",316,"Clothes may disguise a fool, but his words will give him away.",0.9219
+316,"Clothes may disguise a fool, but his words will give him away.",8,"Fine clothes may disguise, but silly words will disclose a fool.",0.9219
+235,People who grasp for more than they need are deprived of what they have.,181,People often grasp for more than they need and thus lose the little they have.,0.9207
+44,Do not trust flatterers.,43,Flatters are not to be trusted.,0.9202
+317,People who lay traps for others bring about their own destruction.,204,Someone who lays a trap for others will fall victim to it himself.,0.9174
+281,"In avoiding a lesser danger, one may inadvertently fall into a greater peril.",640,"When we are avoiding present dangers, we should not fall into even worse peril.",0.9172
+640,"When we are avoiding present dangers, we should not fall into even worse peril.",281,"In avoiding a lesser danger, one may inadvertently fall into a greater peril.",0.9172
+78,Try to please all and you end by pleasing none.,187,Those who seek to please everybody please nobody.,0.9147
+187,Those who seek to please everybody please nobody.,78,Try to please all and you end by pleasing none.,0.9147
+140,"When people plot against their neighbours, they fall victim to the same sort of plot themselves.",402,Those who scheme against others may ultimately fall victim to their own plots.,0.9103
+402,Those who scheme against others may ultimately fall victim to their own plots.,140,"When people plot against their neighbours, they fall victim to the same sort of plot themselves.",0.9103
+350,Do not take on more than you can handle.,508,Don't take on more than you can accomplish.,0.9016
+508,Don't take on more than you can accomplish.,350,Do not take on more than you can handle.,0.9016

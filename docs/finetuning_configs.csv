@@ -1,0 +1,8 @@
+experiment,model,model_size,lora_r,lora_alpha,lora_dropout,lora_target_modules,learning_rate,batch_size,gradient_accumulation,effective_batch,epochs,early_stopping_patience,temperature,max_seq_length,training_data,n_train_pairs,doc_mode,cv_folds,notes
+ft_01,BGE-base-en-v1.5,110M,64,128,0.05,"q,k,v,o",1.0e-4,32,1,32,30,—,0.05,512,MORABLES,570,raw,5,BGE small model baseline
+ft_02,Linq-Embed-Mistral,7B,64,128,0.05,"q_proj,k_proj,v_proj,o_proj",1.0e-4,4,4,16,10,3,0.05,512,MORABLES,570,raw+fable_plus_summary,5,First large model
+ft_03,Linq-Embed-Mistral,7B,64,128,0.05,"q_proj,k_proj,v_proj,o_proj",1.0e-4,4,4,16,10,3,0.05,512,MORABLES+hard_negatives,570,fable_plus_summary,5,Hard negatives from moral-moral similarity
+ft_07,BGE-base-en-v1.5,110M,64,128,0.05,"q,k,v,o",1.0e-4,32,1,32,15,3,0.05,512,STORAL,500/1000/1675,raw+fable_plus_summary,1 (fold 0),Cross-domain transfer
+ft_07,Linq-Embed-Mistral,7B,64,128,0.05,"q_proj,k_proj,v_proj,o_proj",1.0e-4,4,4,16,10,3,0.05,512,STORAL,500/1000/1675,raw+fable_plus_summary,1 (fold 0),Cross-domain transfer — BEST
+ft_07,Qwen3-Embedding-8B,8B,64,128,0.05,"q_proj,k_proj,v_proj,o_proj",1.0e-4,4,4,16,10,3,0.05,512,STORAL,500/1000/1675,raw+fable_plus_summary,1 (fold 0),Cross-domain transfer
+ft_08,Linq-Embed-Mistral,7B,64,128,0.05,"q_proj,k_proj,v_proj,o_proj",1.0e-4,4,4,16,10,3,0.05,512,MORABLES (clean or noisy),615/709,fable_plus_summary,5,Annotation noise ablation — IN PROGRESS

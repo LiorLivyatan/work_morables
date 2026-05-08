@@ -53,7 +53,11 @@ while [[ $# -gt 0 ]]; do
     --remote)   REMOTE=true;          shift ;;
     --local)    REMOTE=false;         shift ;;
     --gpu)      GPU="$2";             shift 2 ;;
-    --models)   PULL_MODELS=true;     shift ;;
+    --models)
+      if [[ "$SUBCMD" == "pull" ]]; then PULL_MODELS=true
+      else PYTHON_ARGS+=("--models")
+      fi
+      shift ;;
     *)
       if [[ -z "$SCRIPT" ]]; then SCRIPT="$1"
       else PYTHON_ARGS+=("$1")
@@ -62,8 +66,9 @@ while [[ $# -gt 0 ]]; do
   esac
 done
 
-SESSION="parabelink_gpu${GPU}"
-LOG="/tmp/parabelink_gpu${GPU}.log"
+GPU_TAG="$(echo "$GPU" | tr ',' '_')"
+SESSION="parabelink_gpu${GPU_TAG}"
+LOG="/tmp/parabelink_gpu${GPU_TAG}.log"
 
 # ── SUBCOMMANDS ───────────────────────────────────────────────
 
@@ -214,7 +219,7 @@ export WANDB_API_KEY="${WANDB_KEY}"
 export TG_BOT_TOKEN="${TG_TOKEN}"
 export TG_CHAT_ID="${TG_CHAT}"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
-export HF_HOME="${HF_HOME:-}"
+export HF_HOME="${HF_HOME:-/data/lior/hf_cache}"
 export PYTHONUNBUFFERED=1
 cd ${REMOTE_DIR}
 

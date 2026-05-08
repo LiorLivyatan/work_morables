@@ -1,0 +1,11 @@
+issue_type,moral_text,fable_1,fable_2,fable_3,fable_4,n_fables,similarity
+exact_duplicate,Nature reveals itself.,The Cat-Maiden,The Cat and Venus,The Kingdom of The Lion,Orpheus and the Dogs,4,1.0
+exact_duplicate,Look before you leap.,The Fox and the Goat,The Fox And The Goat In The Well,The Two Frogs At The Well,,3,1.0
+exact_duplicate,Self-help is the best help.,Hercules and the Wagoner,The Lark and Her Young Ones,The Crested Lark And The Farmer,,3,1.0
+exact_duplicate,Be careful what you wish for.,The Poor Man And Death,The Eyes and the Honey,,,2,1.0
+exact_duplicate,Greed often overreaches itself.,The Goose With the Golden Eggs,The Mouse and the Oyster,,,2,1.0
+exact_duplicate,Appearances are deceptive.,The Ant and the Chrysalis,The Wolf in Sheep's Clothing,,,2,1.0
+exact_duplicate,There's a time for work and a time for play.,The Ant and the Grasshopper,The Ant And The Dung Beetle,,,2,1.0
+near_duplicate,Enemies' promises are made to be broken.,Enemies' promises were made to be broken.,,,,2,0.991
+near_duplicate,Wit has always an answer ready.,Wit always has an answer ready.,,,,2,0.991
+near_duplicate,Nothing escapes the master's eye,Nothing escapes the master's eye.,,,,2,0.977
