@@ -1,0 +1,40 @@
+# ft_08_clean_sanity — Linq+LoRA fine-tuned on MORABLES, 5-fold CV.
+#
+# Two variants via --clean flag:
+#   --clean    train/eval on 615 clean queries (ambiguous pairs removed)
+#   (default)  train/eval on all 709 queries (noisy baseline)
+#
+# Direct comparison isolates the effect of annotation noise:
+#   noisy MRR  → how much duplicate/ambiguous annotations hurt training
+#   clean MRR  → true model capacity on unambiguous cases
+#
+# Model config matches ft_07 linq best run (s500):
+#   same LoRA, same LR, same temperature, same doc_mode.
+
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+batch_size: 4
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+learning_rate: 1.0e-4
+max_seq_length: 512
+model_kwargs:
+  torch_dtype: auto
+query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+doc_mode: fable_plus_summary
+n_folds: 5
+epochs: 10
+temperature: 0.05
+early_stopping_patience: 3
+seed: 42
+
+model_output_dir: /data/lior/ft_08_clean_sanity/models
+
+wandb:
+  project: morables-finetuning
+  enabled: true

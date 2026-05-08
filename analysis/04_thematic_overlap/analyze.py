@@ -38,7 +38,7 @@ import numpy as np
 ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
-from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings
+from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings, load_enriched
 from analysis.lib.plotting import setup_style, save_fig, COLOURS
 
 
@@ -60,6 +60,7 @@ def main():
 
     print(f"\n[04_thematic_overlap] {args.label}")
     fables, morals, qrels = load_dataset()
+    enriched = load_enriched()
 
     cfg = ExperimentConfig(
         moral_embs_path=args.moral_embs,
@@ -72,6 +73,10 @@ def main():
     # fable_idx → moral_idx (reverse qrels)
     fable_to_moral = {v: k for k, v in qrels.items()}
     moral_texts    = [morals[i]["text"] for i in range(len(morals))]
+
+    def _moral_category(fable_idx: int) -> str:
+        doc_id = fables[fable_idx]["doc_id"]
+        return enriched.get(doc_id, {}).get("moral_category", "unknown")
 
     # moral-moral similarity matrix (cosine, already L2-normed)
     moral_sim = moral_embs @ moral_embs.T  # (709, 709)
@@ -91,15 +96,20 @@ def main():
 
         sim = float(moral_sim[q_moral_idx, top1_moral_idx])
         confused_sims.append(sim)
+        q_cat   = _moral_category(r["gt_fable_idx"])
+        top1_cat = _moral_category(top1_fable)
         rows.append({
-            "query_moral_idx":  q_moral_idx,
-            "query_moral":      moral_texts[q_moral_idx],
-            "top1_fable_idx":   top1_fable,
-            "top1_moral_idx":   top1_moral_idx,
-            "top1_moral":       moral_texts[top1_moral_idx],
-            "moral_moral_sim":  f"{sim:.4f}",
-            "gt_rank":          r["gt_rank"],
-            "score_gap":        f"{r['score_gap']:.4f}",
+            "query_moral_idx":       q_moral_idx,
+            "query_moral":           moral_texts[q_moral_idx],
+            "query_moral_category":  q_cat,
+            "top1_fable_idx":        top1_fable,
+            "top1_moral_idx":        top1_moral_idx,
+            "top1_moral":            moral_texts[top1_moral_idx],
+            "top1_moral_category":   top1_cat,
+            "shared_moral_category": q_cat == top1_cat,
+            "moral_moral_sim":       f"{sim:.4f}",
+            "gt_rank":               r["gt_rank"],
+            "score_gap":             f"{r['score_gap']:.4f}",
         })
 
     rows.sort(key=lambda x: float(x["moral_moral_sim"]), reverse=True)
@@ -108,6 +118,9 @@ def main():
         w.writeheader()
         w.writerows(rows)
     print(f"  [saved] {out / 'thematic_overlap.csv'}")
+    shared_cat = sum(1 for r in rows if r["shared_moral_category"])
+    print(f"  Shared moral_category in confused pairs: {shared_cat} / {len(rows)} "
+          f"({100 * shared_cat / len(rows):.1f}%)")
 
     # ── Random baseline ───────────────────────────────────────────────────────
     rng = random.Random(42)

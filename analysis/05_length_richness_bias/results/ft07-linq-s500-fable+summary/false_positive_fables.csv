@@ -219,7 +219,7 @@ fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_ran
 217,The Drowning Boy,88,0,0,0.0000,433.7
 218,The Farmer'S Boy And The Snails,31,3,2,0.0028,295.7
 219,The Boys And The Butcher,115,0,0,0.0000,440.2
-220,The Fir Tree And The Bramble Bush,92,0,0,0.0000,370.7
+220,The Fir Tree And The Bramble Bush,92,0,0,0.0000,370.8
 221,The Children And The Mirror,180,0,0,0.0000,480.6
 222,The Gnat And The Camel,76,1,0,0.0000,376.4
 223,The Sick Man And The Gods,215,1,1,0.0014,394.1
@@ -238,7 +238,7 @@ fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_ran
 236,"The Night-Owl, The Cat And The Mouse",164,0,0,0.0000,285.3
 237,"The Cat, The Mouse And The Oath",172,2,1,0.0014,360.1
 238,The Cat And The Rooster,141,3,2,0.0028,300.3
-239,The Cat And The Stork,165,1,1,0.0014,263.4
+239,The Cat And The Stork,165,1,1,0.0014,263.5
 240,"The Eagle, The Sow And The Cat",296,0,0,0.0000,288.1
 241,The Man And The Cat,49,4,4,0.0056,236.5
 242,The Fox And The Goat In The Well,97,0,0,0.0000,240.7
@@ -289,7 +289,7 @@ fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_ran
 287,The Old Woman And Her Doctor,179,1,1,0.0014,332.1
 288,The Doctor At The Funeral,78,1,0,0.0000,362.4
 289,"The Donkey, The Dog And The Letter",129,1,0,0.0000,262.1
-290,The Dog And The Lion,55,2,2,0.0028,318.4
+290,The Dog And The Lion,55,2,2,0.0028,318.5
 291,"The Fox, The Lamb And The Dog",56,0,0,0.0000,423.9
 292,The Wolves And The Hides,71,3,2,0.0028,318.3
 293,"The Shepherd, The Dog And The Sick Sheep",69,1,1,0.0014,349.8
@@ -562,7 +562,7 @@ fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_ran
 560,The Magic Colours,333,0,0,0.0000,522.0
 561,The Eagle and The Beetle,193,1,1,0.0014,362.0
 562,The Cat and The Birds,93,3,3,0.0042,300.3
-563,The Fox and The Leopard,51,1,1,0.0014,491.2
+563,The Fox and The Leopard,51,1,1,0.0014,491.1
 564,The Fisherman and The Little Fish,107,0,0,0.0000,287.3
 565,The Swollen Fox,102,0,0,0.0000,218.0
 566,The Astrologer,193,1,0,0.0000,470.9
@@ -643,7 +643,7 @@ fable_idx,title,word_count,n_times_rank1,n_times_false_positive,fp_rate,mean_ran
 641,A League of Beasts and Fishes,32,0,0,0.0000,290.9
 642,A Covetous Ambassador,93,0,0,0.0000,294.9
 643,An Old Friend and a Cardinal,102,1,0,0.0000,391.5
-644,A Young Droll and a Crooked Old Man,52,1,0,0.0000,358.5
+644,A Young Droll and a Crooked Old Man,52,1,0,0.0000,358.6
 645,An Old Fellow and a Young Wench,78,3,2,0.0028,404.7
 646,An Eagle and a Pye,110,2,1,0.0014,351.2
 647,Town-Dogs and Country-Dogs,97,0,0,0.0000,256.0

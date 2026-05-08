@@ -1,0 +1,36 @@
+phase,experiment,approach,model,training_data,n_train,corpus_format,MRR@10,R@1,R@5,R@10,notes
+zero_shot,exp_01,Off-the-shelf embedding,all-MiniLM-L6-v2,none,0,raw,0.063,,,,Smallest baseline
+zero_shot,exp_02,Off-the-shelf embedding,BGE-base-en-v1.5,none,0,raw,0.069,0.034,,,Standard BEIR model
+zero_shot,exp_02,Off-the-shelf embedding,BGE-Large,none,0,raw,0.093,,,,
+zero_shot,exp_02,Off-the-shelf embedding,Multilingual-E5-instruct,none,0,raw,0.094,,,,Best zero-shot raw
+zero_shot,exp_12,Zero-shot comprehensive,Linq-Embed-Mistral,none,0,raw,0.095,0.054,0.121,0.168,default instruction
+zero_shot,exp_12,Zero-shot comprehensive,Linq-Embed-Mistral,none,0,fable_cot,0.211,0.128,0.292,0.379,default instruction
+zero_shot,exp_12,Zero-shot comprehensive,Linq-Embed-Mistral,none,0,fable_cot,0.360,0.251,0.468,0.578,generic instruction (best)
+zero_shot,exp_12,Zero-shot comprehensive,BGE-en-ICL,none,0,fable_direct,0.321,0.221,0.432,0.513,generic instruction
+zero_shot,exp_12,Zero-shot comprehensive,Qwen3-Embedding-8B,none,0,fable_cot,0.263,0.169,0.357,0.450,default instruction
+zero_shot,exp_12,Zero-shot comprehensive,Qwen3-Embedding-8B,none,0,summary_fable_cot,0.363,0.255,0.484,0.581,generic instruction (best)
+zero_shot,exp_12,Zero-shot comprehensive,Nomic-Embed-v2-MoE,none,0,summary_fable_cot,0.252,0.172,0.327,0.387,
+zero_shot,exp_12,Zero-shot comprehensive,Qwen3-Embedding-0.6B,none,0,fable_direct,0.256,0.165,0.348,0.426,
+zero_shot,exp_12,Zero-shot comprehensive,Multilingual-E5-large,none,0,fable_abstract,0.230,0.149,0.313,0.372,
+summarization,exp_13,Gemma4 summarization,Gemma4-E2B → Qwen3-8B,none,0,fable_summary,0.247,0.152,0.340,0.430,thinking_cot_proverb prompt
+summarization,exp_13,Gemma4 summarization,Gemma4-E4B → Qwen3-8B,none,0,fable_summary,0.296,0.202,0.396,0.475,thinking_direct_moral prompt
+summarization,exp_13,Gemma4 summarization,Gemma4-31B → Qwen3-8B,none,0,fable_summary,0.304,0.199,0.419,0.504,conceptual_abstract prompt
+summarization,exp_13,Gemma4 summarization,Gemma4-26B-A4B → Qwen3-8B,none,0,fable_summary,0.010,0.001,0.007,0.014,FAILED — degenerate output
+summarization,exp_13,Gemini reference → Qwen3-8B,Gemini,none,0,summary_only,0.350,0.243,0.464,0.554,conceptual_abstract prompt
+oracle,exp_07,Oracle upper bound,Linq-Embed-Mistral,none,0,fable+ground_truth_moral,0.893,0.827,,,Actual annotated moral appended to fable — answer key cheat
+finetuning,ft_01,LoRA fine-tuned on MORABLES,BGE-base-en-v1.5,MORABLES,570,raw,0.122,,,, 5-fold CV
+finetuning,ft_02,LoRA fine-tuned on MORABLES,Linq-Embed-Mistral,MORABLES,570,raw,0.318,0.205,0.437,0.549,5-fold CV
+finetuning,ft_02,LoRA fine-tuned on MORABLES,Linq-Embed-Mistral,MORABLES,570,fable_plus_summary,0.416,0.296,0.557,0.657,5-fold CV
+finetuning,ft_03,Hard negative mining,Linq-Embed-Mistral,MORABLES,570,fable_plus_summary,0.438,0.319,0.577,0.659,5-fold CV
+finetuning,ft_07,STORAL transfer,BGE-base-en-v1.5,STORAL s500,500,fable_plus_summary,0.255,0.171,0.346,0.433,length-matched subset
+finetuning,ft_07,STORAL transfer,BGE-base-en-v1.5,STORAL s1000,1000,fable_plus_summary,0.256,0.166,0.354,0.432,
+finetuning,ft_07,STORAL transfer,BGE-base-en-v1.5,STORAL sfull,1675,fable_plus_summary,0.260,0.172,0.351,0.418,
+finetuning,ft_07,STORAL transfer,Linq-Embed-Mistral,STORAL s500,500,raw,0.357,0.240,0.489,0.578,
+finetuning,ft_07,STORAL transfer,Linq-Embed-Mistral,STORAL s500,500,fable_plus_summary,0.450,0.332,0.590,0.678,BEST RESULT
+finetuning,ft_07,STORAL transfer,Linq-Embed-Mistral,STORAL s1000,1000,fable_plus_summary,0.422,0.303,0.554,0.647,
+finetuning,ft_07,STORAL transfer,Linq-Embed-Mistral,STORAL sfull,1675,fable_plus_summary,0.433,0.313,0.571,0.645,
+finetuning,ft_07,STORAL transfer,Qwen3-Embedding-8B,STORAL s500,500,fable_plus_summary,0.425,0.309,0.560,0.649,
+finetuning,ft_07,STORAL transfer,Qwen3-Embedding-8B,STORAL s1000,1000,fable_plus_summary,0.430,0.312,0.559,0.662,
+finetuning,ft_07,STORAL transfer,Qwen3-Embedding-8B,STORAL sfull,1675,fable_plus_summary,0.435,0.316,0.563,0.688,
+corrected,analysis_07,Soft MRR (ambiguity-corrected),Linq-Embed-Mistral ft_07,—,—,fable_plus_summary,0.468,—,—,—,42 queries rescued
+corrected,analysis_07,Clean subset (94 ambiguous removed),Linq-Embed-Mistral ft_07,—,615,fable_plus_summary,0.448,0.346,0.587,0.670,

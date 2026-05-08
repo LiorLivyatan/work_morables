@@ -30,13 +30,17 @@ Usage
 import argparse
 import csv
 import sys
+from collections import defaultdict
 from pathlib import Path
+
+import matplotlib.pyplot as plt
+import numpy as np
 
 ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
-from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings
-from analysis.lib.plotting import setup_style
+from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings, load_enriched
+from analysis.lib.plotting import setup_style, save_fig, COLOURS
 
 
 def parse_args():
@@ -74,9 +78,14 @@ def main():
     moral_embs, doc_embs  = load_embeddings(cfg)
     rankings              = compute_rankings(moral_embs, doc_embs, qrels)
 
+    enriched     = load_enriched()
     fable_texts  = [f["text"]  for f in fables]
     fable_titles = [f.get("title", f["doc_id"]) for f in fables]
     moral_texts  = {r["query_idx"]: morals[r["query_idx"]]["text"] for r in rankings}
+
+    def _enrich(fable_idx: int) -> dict:
+        doc_id = fables[fable_idx]["doc_id"]
+        return enriched.get(doc_id, {})
 
     misranked = [r for r in rankings if r["gt_rank"] >= args.rank_threshold]
     print(f"  Misranked queries (gt_rank ≥ {args.rank_threshold}): {len(misranked)} / {len(rankings)}")
@@ -86,23 +95,30 @@ def main():
         w = csv.writer(f)
         w.writerow([
             "query_idx", "moral_text",
-            "gt_fable_idx", "gt_fable_title", "gt_rank", "gt_score",
-            "top1_fable_idx", "top1_fable_title", "top1_score",
-            "score_gap",
+            "gt_fable_idx", "gt_fable_title", "gt_moral_category", "gt_themes",
+            "gt_rank", "gt_score",
+            "top1_fable_idx", "top1_fable_title", "top1_moral_category", "top1_themes",
+            "top1_score", "score_gap",
         ])
         for r in sorted(misranked, key=lambda x: x["score_gap"], reverse=True):
-            q   = r["query_idx"]
-            gt  = r["gt_fable_idx"]
+            q    = r["query_idx"]
+            gt   = r["gt_fable_idx"]
             top1 = r["ranked_indices"][0]
+            gt_e   = _enrich(gt)
+            top1_e = _enrich(top1)
             w.writerow([
                 q,
                 moral_texts[q],
                 gt,
                 fable_titles[gt],
+                gt_e.get("moral_category", ""),
+                "|".join(gt_e.get("themes", [])),
                 r["gt_rank"],
                 f"{r['gt_score']:.4f}",
                 top1,
                 fable_titles[top1],
+                top1_e.get("moral_category", ""),
+                "|".join(top1_e.get("themes", [])),
                 f"{r['top1_score']:.4f}",
                 f"{r['score_gap']:.4f}",
             ])
@@ -120,6 +136,8 @@ def main():
         q    = r["query_idx"]
         gt   = r["gt_fable_idx"]
         top1 = r["ranked_indices"][0]
+        gt_e   = _enrich(gt)
+        top1_e = _enrich(top1)
 
         lines += [
             f"---",
@@ -129,9 +147,11 @@ def main():
             f"> {moral_texts[q]}",
             f"",
             f"**Rank-1 (wrong) — `{fable_titles[top1]}` — score {r['top1_score']:.4f}:**",
+            f"- category: `{top1_e.get('moral_category', '?')}` | themes: {', '.join(top1_e.get('themes', []))}",
             f"> {_truncate(fable_texts[top1], 80)}",
             f"",
             f"**Ground truth (rank {r['gt_rank']}) — `{fable_titles[gt]}` — score {r['gt_score']:.4f}:**",
+            f"- category: `{gt_e.get('moral_category', '?')}` | themes: {', '.join(gt_e.get('themes', []))}",
             f"> {_truncate(fable_texts[gt], 80)}",
             f"",
         ]
@@ -139,6 +159,35 @@ def main():
     with open(out / "hardest_cases.md", "w", encoding="utf-8") as f:
         f.write("\n".join(lines))
     print(f"  [saved] {out / 'hardest_cases.md'}")
+
+    # ── Confusion heatmap by moral_category ──────────────────────────────────
+    # For each misranked query: what category did the wrong fable belong to?
+    category_pairs: list[tuple[str, str]] = []
+    for r in misranked:
+        gt   = r["gt_fable_idx"]
+        top1 = r["ranked_indices"][0]
+        gt_cat   = _enrich(gt).get("moral_category", "unknown")
+        top1_cat = _enrich(top1).get("moral_category", "unknown")
+        category_pairs.append((gt_cat, top1_cat))
+
+    categories = sorted(set(c for pair in category_pairs for c in pair))
+    cat_idx    = {c: i for i, c in enumerate(categories)}
+    n_cats     = len(categories)
+    matrix     = np.zeros((n_cats, n_cats), dtype=int)
+    for gt_cat, top1_cat in category_pairs:
+        matrix[cat_idx[gt_cat], cat_idx[top1_cat]] += 1
+
+    fig, ax = plt.subplots(figsize=(max(8, n_cats * 0.6), max(6, n_cats * 0.5)))
+    im = ax.imshow(matrix, cmap="YlOrRd", aspect="auto")
+    plt.colorbar(im, ax=ax, label="Confusion count")
+    ax.set_xticks(range(n_cats)); ax.set_xticklabels(categories, rotation=45, ha="right", fontsize=7)
+    ax.set_yticks(range(n_cats)); ax.set_yticklabels(categories, fontsize=7)
+    ax.set_xlabel("Wrong fable category (rank-1)")
+    ax.set_ylabel("Ground-truth fable category")
+    ax.set_title(f"Confusion by moral_category — {args.label}")
+    fig.tight_layout()
+    save_fig(str(out / "confusion_heatmap.png"), fig)
+    print(f"  [saved] {out / 'confusion_heatmap.png'}")
     print("  Done.\n")
 
 

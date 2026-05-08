@@ -7,6 +7,7 @@ which .npy files you point at.
 """
 from __future__ import annotations
 
+import json
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -130,6 +131,18 @@ def compute_rankings(
         })
 
     return results
+
+
+def load_enriched() -> dict[str, dict]:
+    """Load Claude-enriched fable metadata keyed by doc_id.
+
+    Returns dict mapping doc_id → {themes, characters, character_roles,
+    narrative_elements, setting, moral_category, fable_type}.
+    """
+    path = ROOT / "data" / "enriched" / "fable_elements.json"
+    with open(path, encoding="utf-8") as f:
+        records = json.load(f)
+    return {r["doc_id"]: r for r in records}
 
 
 def compute_mrr(rankings: list[dict], k: int = 10) -> float:

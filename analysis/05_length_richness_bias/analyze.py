@@ -32,7 +32,7 @@ import numpy as np
 ROOT = Path(__file__).parent.parent.parent
 sys.path.insert(0, str(ROOT))
 
-from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings
+from analysis.lib.loader import ExperimentConfig, load_dataset, load_embeddings, compute_rankings, load_enriched
 from analysis.lib.plotting import setup_style, save_fig, COLOURS
 
 
@@ -42,16 +42,17 @@ def parse_args():
     p.add_argument("--doc_embs",        required=True)
     p.add_argument("--label",           required=True)
     p.add_argument("--richness_metric", default="word_count",
-                   choices=["word_count", "unique_words", "sentence_count"])
+                   choices=["word_count", "unique_words", "sentence_count", "narrative_elements"])
     p.add_argument("--n_top_fp",        type=int, default=20)
     p.add_argument("--output_dir",      default=str(Path(__file__).parent / "results"))
     return p.parse_args()
 
 
-def richness(text: str, metric: str) -> int:
-    if metric == "word_count":     return len(text.split())
-    if metric == "unique_words":   return len(set(text.lower().split()))
-    if metric == "sentence_count": return text.count(".") + text.count("!") + text.count("?")
+def richness(text: str, metric: str, enriched_record: dict | None = None) -> int:
+    if metric == "word_count":          return len(text.split())
+    if metric == "unique_words":        return len(set(text.lower().split()))
+    if metric == "sentence_count":      return text.count(".") + text.count("!") + text.count("?")
+    if metric == "narrative_elements":  return len((enriched_record or {}).get("narrative_elements", []))
     return len(text.split())
 
 
@@ -63,6 +64,7 @@ def main():
 
     print(f"\n[05_length_richness_bias] {args.label}")
     fables, morals, qrels = load_dataset()
+    enriched = load_enriched() if args.richness_metric == "narrative_elements" else {}
 
     cfg = ExperimentConfig(
         moral_embs_path=args.moral_embs,
@@ -76,7 +78,11 @@ def main():
     fable_titles = [f.get("title", f["doc_id"]) for f in fables]
     n_fables     = len(fables)
 
-    rich = [richness(t, args.richness_metric) for t in fable_texts]
+    rich = [
+        richness(fable_texts[i], args.richness_metric,
+                 enriched.get(fables[i]["doc_id"]) if enriched else None)
+        for i in range(len(fables))
+    ]
 
     # Per-fable tallies
     n_rank1   = [0] * n_fables   # times this fable appeared at rank-1 (any query)
