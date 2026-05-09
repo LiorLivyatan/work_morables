@@ -1,0 +1,74 @@
+model:
+  hf_id: Linq-AI-Research/Linq-Embed-Mistral
+  pooling: auto
+  device: cuda
+  dtype: bfloat16
+  batch_size: 8
+
+data:
+  morals_path: data/processed/morals_corpus.json
+  fables_path: data/processed/fables_corpus.json
+  metadata_path: data/enriched/fable_elements.json
+
+discovery:
+  failure_definition: rank_gt_1
+  metadata_fields: [characters, character_roles, moral_category, setting, fable_type, themes]
+  min_tagged_fables: 15
+  fdr_alpha: 0.05
+
+concepts:
+  targets: []
+  placebo: []
+
+vectors:
+  layers: [4, 12, 20, 28, -1]
+  methods:
+    primary: caa_matched
+    sanity_byproducts: [mean_diff]
+  matching:
+    fields: [setting, fable_type]
+    cross_field_matching: true
+    length_tolerance: 0.20
+    min_positive_examples: 15
+    min_matched_pairs: 15
+  quality_log:
+    - n_positives
+    - n_matched_pairs
+    - mean_length_ratio
+    - setting_match_rate
+    - fable_type_match_rate
+    - cross_field_overlap_rate
+    - pos_baseline_mrr
+    - neg_baseline_mrr
+    - cos_caa_meandiff
+
+intervention:
+  alphas: [-2.0, -1.0, -0.5, -0.25, 0.0, 0.25, 0.5, 1.0, 2.0]
+  hook_position: residual_stream
+  renormalize: true
+
+null_controls:
+  run_mode: candidate_only
+  random_direction:
+    n_seeds: 5
+    norm_match: caa_matched
+  shuffled_tag_caa:
+    n_permutations: 50
+
+eval:
+  metrics: [mrr_at_10, recall_at_1, recall_at_5, recall_at_10]
+  group_by: [target_tagged, target_untagged]
+  primary_statistic:
+    name: specificity_gap
+    test: paired_bootstrap_ci_over_morals
+    n_bootstrap: 10000
+    alpha: 0.05
+  diagnostics:
+    pooled_cosine_pre_post: true
+    rank_change_listing: true
+    null_envelope: true
+
+output:
+  results_dir: analysis/08_concept_steering/results
+  cache_dir: analysis/08_concept_steering/cache
+  save_intermediate_embeddings: false
