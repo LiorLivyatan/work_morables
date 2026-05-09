@@ -303,7 +303,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--apply", action="store_true",
                         help="Apply saved decisions and write corrected dataset")
-    args = parser.parse_args()
+    args, _ = parser.parse_known_args()  # ignore empty string run.sh passes when no args given
 
     if args.apply:
         apply_decisions()

@@ -1,0 +1,8 @@
+{
+  "('Wit always has an answer ready.', 'Wit has always an answer ready.')": {
+    "action": "merge",
+    "canonical": "Wit always has an answer ready.",
+    "moral_a": "Wit has always an answer ready.",
+    "moral_b": "Wit always has an answer ready."
+  }
+}
