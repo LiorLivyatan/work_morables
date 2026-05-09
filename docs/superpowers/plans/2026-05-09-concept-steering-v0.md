@@ -104,7 +104,12 @@ data:
 
 discovery:
   failure_definition: rank_gt_1
-  metadata_fields: [characters, character_roles, moral_category, setting, fable_type]
+  metadata_fields: [characters, character_roles, moral_category, setting, fable_type, themes]
+  # `themes` is a list of free-text thematic keywords from data/enriched.
+  # 834 distinct values across 709 fables; top values (deception=99,
+  # consequences=94, wisdom=84, pride=52) are well-populated. After
+  # min_tagged_fables=15, ~25-30 themes are eligible candidates for discovery.
+  # Adds finer-grain concepts beyond moral_category's 17 categories.
   min_tagged_fables: 15
   fdr_alpha: 0.05
 
@@ -411,17 +416,25 @@ from lib.data import load_corpus, build_tag_index
 
 def test_build_tag_index_groups_doc_ids_by_tag_value(tmp_path):
     elements = [
-        {"doc_id": "f0", "characters": ["fox", "crow"], "moral_category": "deception"},
-        {"doc_id": "f1", "characters": ["fox"],          "moral_category": "greed"},
-        {"doc_id": "f2", "characters": ["wolf"],         "moral_category": "deception"},
+        {"doc_id": "f0", "characters": ["fox", "crow"], "moral_category": "deception",
+         "character_roles": {"fox": "trickster", "crow": "victim"}},
+        {"doc_id": "f1", "characters": ["fox"],          "moral_category": "greed",
+         "character_roles": {"fox": "protagonist"}},
+        {"doc_id": "f2", "characters": ["wolf"],         "moral_category": "deception",
+         "character_roles": {"wolf": "antagonist"}},
     ]
     p = tmp_path / "fable_elements.json"
     p.write_text(json.dumps(elements))
 
-    idx = build_tag_index(p, fields=["characters", "moral_category"])
+    idx = build_tag_index(p, fields=["characters", "moral_category", "character_roles"])
     assert idx["characters"]["fox"]    == {"f0", "f1"}
     assert idx["characters"]["wolf"]   == {"f2"}
     assert idx["moral_category"]["deception"] == {"f0", "f2"}
+    # character_roles is a dict per fable — we explode the DICT VALUES (roles)
+    assert idx["character_roles"]["trickster"]   == {"f0"}
+    assert idx["character_roles"]["victim"]      == {"f0"}
+    assert idx["character_roles"]["protagonist"] == {"f1"}
+    assert idx["character_roles"]["antagonist"]  == {"f2"}
 
 
 def test_load_corpus_returns_aligned_lists(tmp_path):
@@ -485,8 +498,14 @@ def build_tag_index(metadata_path: Path, *, fields: Iterable[str]) -> dict[str, 
     """
     Return: {field_name: {tag_value: set_of_doc_ids}}
 
-    Lists in the metadata (e.g. characters: [fox, crow]) are exploded so that a
-    fable appears under every tag value it carries.
+    Field shapes seen in `data/enriched/fable_elements.json`:
+      - list of strings:  characters=[fox, crow], themes=[deception, greed]
+      - scalar string:    setting=forest, moral_category=greed, fable_type=animal_only
+      - dict[str, str]:   character_roles={androcles: protagonist, lion: helper}
+                          → we explode the DICT's VALUES (roles), not keys
+                          (the role values are the controlled vocabulary; the
+                          keys are free-form character mentions and not useful
+                          as tags here).
     """
     elements = json.loads(Path(metadata_path).read_text())
     index: dict[str, dict[str, set[str]]] = {f: {} for f in fields}
@@ -496,7 +515,12 @@ def build_tag_index(metadata_path: Path, *, fields: Iterable[str]) -> dict[str, 
             value = el.get(field)
             if value is None:
                 continue
-            if isinstance(value, list):
+            if isinstance(value, dict):
+                # explode the dict's values; deduplicate so a fable with two
+                # tricksters isn't double-counted under "trickster"
+                for v in set(value.values()):
+                    index[field].setdefault(v, set()).add(doc_id)
+            elif isinstance(value, list):
                 for v in value:
                     index[field].setdefault(v, set()).add(doc_id)
             else:
@@ -1618,9 +1642,13 @@ def _fields_match(a: dict, b: dict, fields: list[str]) -> bool:
 
 
 def _list_fields_share_value(a: dict, b: dict, field: str) -> bool:
+    """True iff fables a and b share at least one value under `field`. Handles
+    list, dict (compares value sets — e.g. character_roles), and scalar shapes."""
     av, bv = a.get(field), b.get(field)
     if av is None or bv is None:
         return False
+    if isinstance(av, dict) and isinstance(bv, dict):
+        return bool(set(av.values()) & set(bv.values()))
     if isinstance(av, list) and isinstance(bv, list):
         return bool(set(av) & set(bv))
     return av == bv
@@ -3030,3 +3058,27 @@ git commit -m "feat(08_concept_steering): persist intervened ranks for rank-chan
 ---
 
 **Plan complete and saved to `docs/superpowers/plans/2026-05-09-concept-steering-v0.md`.**
+
+---
+
+## Appendix: notes on `data/enriched/`
+
+`data/enriched/fable_elements.json` (709 fables × 9 fields) drives the entire
+discovery + matched-pair pipeline. Field-by-field plan integration:
+
+| Field | Shape | Used in v0? | Where |
+|---|---|---|---|
+| `doc_id`, `title` | scalar | yes (joins) | `lib/data.py` |
+| `characters` | list | yes — discovery + targets | tasks 3, 6, 8, 19 |
+| `character_roles` | **dict** (char→role) | yes — discovery + targets | dict-explode handled in `build_tag_index` |
+| `moral_category` | scalar | yes — discovery + targets + cross-field matching | tasks 6, 8, 19 |
+| `setting` | scalar | yes — matched-pair nuisance match | tasks 10, 19 |
+| `fable_type` | scalar | yes — matched-pair nuisance match | tasks 10, 19 |
+| `themes` | list (834 distinct, top tokens healthy) | yes — added to discovery fields for finer-grain concepts | task 1 config |
+| `narrative_elements` | list (freeform plot beats) | **no — out of scope for v0** | future extension: contrastive concept-vector construction from event-level text rather than full-fable activations |
+
+**Future extension idea (not in v0):** use `narrative_elements` text instead of
+full-fable text for vector construction. For a "trickery" concept, contrast
+encodings of trickery-related narrative beats against non-trickery beats —
+this gives a denser signal than averaging over full fables. Worth trying if v0
+specificity is weaker than expected.
