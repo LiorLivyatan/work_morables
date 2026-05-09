@@ -15,6 +15,8 @@ If true, this gives us (a) a diagnostic tool for *why* retrieval fails on certai
 
 > If we suppress the internal representation of a specific concept (discovered from data, not hand-picked) inside an encoder used for retrieval, does retrieval behavior change in a way that is **specific to fables that involve that concept**, while leaving other fables unaffected?
 
+**Scope clarification.** v0 does *not* edit model weights. The intervention is applied via a forward hook that subtracts a concept direction from the residual stream at inference time. This is **activation-level concept suppression**, not weight-level "forgetting." Methods that edit weights (ROME, MEMIT) are explicitly out of scope for v0 and listed in §8.
+
 ## 3. Pipeline
 
 ```
@@ -49,12 +51,12 @@ The pipeline ends at v0 success/failure. A follow-up experiment (out of scope he
 | Concept granularity | Metadata tags from `data/enriched/fable_elements.json` for discovery; raw fable text contrasts for vector construction | Metadata gives interpretable, statistically clean discovery; text contrasts give denser, more robust vector directions |
 | Proof criterion | Stage 1 = specificity contrast (this v0). Stage 2 = confusion-shift (follow-up). | Two-stage proof. Stage 1 = "knob is concept-specific." Stage 2 = "knob explains the failure." Stage 1 must pass before Stage 2 is interpretable. |
 | Intervention side | Document side (fables) only | Metadata tags live on fables; cleanest single-side test; morals are too short (avg 12 words) to carry much concept signal in activations |
-| Layer | Coarse sweep at 5 layers: 4, 12, 20, 28, last | Avoids arbitrary single-layer pick (A) without paying for full 32-layer sweep (B); 5 layers is enough to see early/mid/late behavior |
+| Layer | Coarse sweep at 5 layers: 4, 12, 20, 28, last | (1) The layer where a concept is *most cleanly represented* is not necessarily the layer where retrieval-task performance peaks — these are two different optimisation targets, so we shouldn't pre-commit to a single layer. (2) A coarse sweep covers early/mid/late regimes where representational character qualitatively differs (lexical → semantic → task-specific). (3) Avoids the cost of full 32-layer sweep without forcing an arbitrary single pick. |
 | Concept vector method | CAA matched-pairs only for v0 | Matched pairs control nuisance variables (length, setting, fable_type, plus cross-field matching to neutralize correlated metadata — see §5.1). Mean-diff moved to follow-up to keep v0 minimal. |
 | Concept count | 3 problematic targets (one per metadata field: `characters`, `character_roles`, `moral_category`) + 1 **difficulty-matched** placebo (comparable baseline group-MRR to the targets, NOT a low-failure concept) | Low-failure placebos saturate near ceiling and pass the specificity test trivially. A difficulty-matched placebo has real headroom to drop, so its NOT dropping is informative. |
 | Null controls (in addition to placebo) | (a) **Random unit-norm direction** at matched L2 norm, applied with the same hook/layer/α schedule. (b) **Shuffled-tag CAA**: build `v_C` with permuted concept labels (10 permutations). Both should give null specificity. | The placebo concept controls "is this concept low-failure?". Random + shuffled directions control "does any direction in this subspace damage any subset?" — the more dangerous confound. |
 | Min sample size per concept | ≥15 tagged fables | Below this, matched-pair direction is too noisy. Verified: fox=67, trickster=64, deception=87 — all viable |
-| α-sweep range | {-2.0, -1.0, -0.5, -0.25, 0, +0.25, +0.5, +1.0, +2.0} | α=0 is the no-op control; negative α suppresses, positive amplifies; range covers small (likely sweet spot) through aggressive |
+| α-sweep range | {-2.0, -1.0, -0.5, -0.25, 0, +0.25, +0.5, +1.0, +2.0} | Sign convention follows the formula `h ← h − α·v_C` with `v_C` pointing toward the concept (positive contrast). Therefore: **α > 0 suppresses the concept, α < 0 amplifies it**, α = 0 is the no-op control. The range covers small (likely sweet spot) through aggressive interventions in both directions; symmetric so we can also report whether amplification *boosts* on-concept retrieval as a positive control. |
 
 ## 5. Components
 
@@ -94,15 +96,30 @@ concepts:
     - {field: character_roles,   value: trickster}
     - {field: moral_category,    value: deception}
   placebo:
-    # Difficulty-matched: pick a concept whose baseline MRR on its tagged fables
-    # is close to (within ±0.05 of) the mean baseline MRR of the three targets.
-    # NOT just a low-failure-rate concept — those saturate at ceiling and pass
-    # specificity trivially.
-    - {field: moral_category,    value: TBD_after_discovery}
+    # Selected post-discovery. ALL of the following must hold:
+    #   1. Baseline MRR on its tagged fables is within ±0.05 of the mean
+    #      baseline MRR across the three targets (difficulty-matched, not
+    #      saturated at ceiling).
+    #   2. Tagged sample size is comparable to the targets (within ±50%, so
+    #      bootstrap CI widths are similar).
+    #   3. NOT FDR-significant in the discovery failure-overrep test
+    #      (fdr_alpha = 0.05). The placebo must be a non-failure-associated
+    #      concept by construction.
+    #   4. Drawn from a metadata field that is NOT used by any target
+    #      (avoids spurious overlap with target tagged sets).
+    - {field: TBD_after_discovery, value: TBD_after_discovery}
 
 vectors:
-  layers: [4, 12, 20, 28, -1]    # -1 = last layer
-  methods: [caa_matched]          # mean_diff moved to follow-up
+  layers: [4, 12, 20, 28, -1]     # -1 = last layer
+  methods:
+    primary: caa_matched          # only method used for the full intervention sweep
+    sanity_byproducts: [mean_diff]
+                                  # computed for FREE during matched-pair extraction
+                                  # (no extra forward passes). For each layer, log
+                                  # cos(v_caa, v_mean_diff). If cos > 0.95 the
+                                  # matching is barely doing anything; if cos < 0.7
+                                  # matching is substantively reshaping the
+                                  # direction. Either way is informative.
   matching:                       # for caa_matched
     fields: [setting, fable_type] # base nuisance fields, always matched
     cross_field_matching: true    # also match on the OTHER metadata fields:
@@ -112,18 +129,36 @@ vectors:
                                   # `character_roles`. Reported residual tag
                                   # overlap between matched +/- pairs is logged.
     length_tolerance: 0.20        # ±20% token length
+    min_positive_examples: 15     # fables tagged C; concepts with fewer are skipped
+    min_matched_pairs: 15         # valid pairs after matching constraints; concepts
+                                  # that fall below this AFTER matching are skipped
+                                  # (n=15 tagged ≠ n=15 matchable)
+  quality_log:                    # written to results/concept_vectors/{concept}.meta.json
+    - n_positives                 # |C-tagged|
+    - n_matched_pairs             # |valid pairs after matching|
+    - mean_length_ratio           # within-pair token length ratio (closer to 1 is better)
+    - setting_match_rate          # frac of pairs with same `setting`
+    - fable_type_match_rate       # frac of pairs with same `fable_type`
+    - cross_field_overlap_rate    # frac of pairs sharing the cross-matched field
+    - pos_baseline_mrr            # baseline MRR on |C-tagged|
+    - neg_baseline_mrr            # baseline MRR on the matched-negatives subset
+    - cos_caa_meandiff            # per layer: cos(v_caa, v_mean_diff)
 
 null_controls:
-  # Null controls run ONLY at (layer, α) configurations where a target's
-  # bootstrap CI looks like a candidate pass. We don't pay for the full sweep —
-  # the target sweep finds the candidate cells, then null controls validate them.
+  run_mode: candidate_only        # candidate_only | full | skip
+                                  # candidate_only: run only at (layer, α) cells
+                                  #   where a target's bootstrap CI looks like a
+                                  #   candidate pass (default — fast).
+                                  # full: run across the entire (layer × α) grid
+                                  #   for headline-figure null envelopes.
+                                  # skip: dev-only, disables null validation.
   random_direction:
-    n_seeds: 5                    # 5 random directions per candidate (layer, α)
+    n_seeds: 5                    # 5 random directions per evaluated (layer, α)
     norm_match: caa_matched       # match L2 norm to caa_matched v_C at that layer
   shuffled_tag_caa:
-    n_permutations: 50            # 50 label permutations per candidate (concept, layer, α)
-                                  # — 50 because this builds the null envelope shown
-                                  # on the headline figure
+    n_permutations: 50            # 50 label permutations per evaluated cell — 50
+                                  # is enough to estimate the 95% null envelope
+                                  # shown on the headline figure
 
 intervention:
   alphas: [-2.0, -1.0, -0.5, -0.25, 0.0, 0.25, 0.5, 1.0, 2.0]
@@ -222,7 +257,7 @@ For each (concept C, layer L, α):
 - `ΔMRR_target(α) = MRR_target(α) − MRR_target(α=0)`, and `ΔMRR_control` analogously
 - **Specificity gap**: `S(C, L, α) = ΔMRR_target(α) − ΔMRR_control(α)`
 
-A concept-specific intervention should produce S < 0 (target drops more than control).
+**Expected sign.** Under the suppression formula `h ← h − α·v_C` with `v_C` pointing toward the concept, a successful concept-specific intervention at α > 0 (suppressive) should produce **S < 0**: target-tagged fables degrade more than the matched controls. At α < 0 (amplifying) we expect the symmetric prediction — S > 0 if the same direction is also informative for *upweighting* — but only suppressive α is required to satisfy the v0 pass criterion.
 
 ### 6.2 Statistical test
 
@@ -276,7 +311,15 @@ These are explicitly listed in `README.md` as planned follow-ups, with config kn
 - A ranked list of problematic concepts with statistical evidence (`discovery_report.json`).
 - For each chosen concept, per-layer evidence of whether the intervention is concept-specific (specificity figure).
 - A reusable hooked-forward implementation that any future intervention experiment can build on.
-- A clear go/no-go for Stage 2 (confusion-shift): if Stage 1 passes for ≥2 of 3 targets, the difficulty-matched placebo stays inside the null envelope, AND the random-direction control fails to reproduce the target effect, then Stage 2 is justified.
+
+**Stage 2 (confusion-shift) go/no-go decision rule.** Proceed to Stage 2 if and only if **all** of the following hold:
+
+1. ≥ 2 of the 3 target concepts pass the §6.3 specificity criterion (bootstrap CI of S excludes 0 in the negative direction at suppressive α > 0) at ≥ 1 layer each.
+2. The difficulty-matched placebo concept does NOT pass §6.3 criterion 1 at any (layer, α).
+3. The random-direction control's median S at the targets' passing cells lies inside the shuffled-tag null envelope at those cells.
+4. The pooled-cosine diagnostic shows cos(h_pre, h_post) < 0.99 at the passing cells (the intervention is doing more than rescaling).
+
+If any of these fails, Stage 2 is paused pending diagnosis of the failure mode.
 
 ## 10. Compute budget
 
