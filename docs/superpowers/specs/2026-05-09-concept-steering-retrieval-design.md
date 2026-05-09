@@ -50,8 +50,9 @@ The pipeline ends at v0 success/failure. A follow-up experiment (out of scope he
 | Proof criterion | Stage 1 = specificity contrast (this v0). Stage 2 = confusion-shift (follow-up). | Two-stage proof. Stage 1 = "knob is concept-specific." Stage 2 = "knob explains the failure." Stage 1 must pass before Stage 2 is interpretable. |
 | Intervention side | Document side (fables) only | Metadata tags live on fables; cleanest single-side test; morals are too short (avg 12 words) to carry much concept signal in activations |
 | Layer | Coarse sweep at 5 layers: 4, 12, 20, 28, last | Avoids arbitrary single-layer pick (A) without paying for full 32-layer sweep (B); 5 layers is enough to see early/mid/late behavior |
-| Concept vector method | CAA matched-pairs (primary) + mean-difference (byproduct) | Matched pairs control nuisance variables (length, setting, fable_type); mean-diff is free comparison and a sanity check |
-| Concept count | 3 problematic (one per metadata field: `characters`, `character_roles`, `moral_category`) + 1 placebo (low failure-rate concept) | Tests method generalization across field types; placebo is the strongest possible specificity control |
+| Concept vector method | CAA matched-pairs only for v0 | Matched pairs control nuisance variables (length, setting, fable_type, plus cross-field matching to neutralize correlated metadata — see §5.1). Mean-diff moved to follow-up to keep v0 minimal. |
+| Concept count | 3 problematic targets (one per metadata field: `characters`, `character_roles`, `moral_category`) + 1 **difficulty-matched** placebo (comparable baseline group-MRR to the targets, NOT a low-failure concept) | Low-failure placebos saturate near ceiling and pass the specificity test trivially. A difficulty-matched placebo has real headroom to drop, so its NOT dropping is informative. |
+| Null controls (in addition to placebo) | (a) **Random unit-norm direction** at matched L2 norm, applied with the same hook/layer/α schedule. (b) **Shuffled-tag CAA**: build `v_C` with permuted concept labels (10 permutations). Both should give null specificity. | The placebo concept controls "is this concept low-failure?". Random + shuffled directions control "does any direction in this subspace damage any subset?" — the more dangerous confound. |
 | Min sample size per concept | ≥15 tagged fables | Below this, matched-pair direction is too noisy. Verified: fox=67, trickster=64, deception=87 — all viable |
 | α-sweep range | {-2.0, -1.0, -0.5, -0.25, 0, +0.25, +0.5, +1.0, +2.0} | α=0 is the no-op control; negative α suppresses, positive amplifies; range covers small (likely sweet spot) through aggressive |
 
@@ -93,14 +94,36 @@ concepts:
     - {field: character_roles,   value: trickster}
     - {field: moral_category,    value: deception}
   placebo:
-    - {field: moral_category,    value: friendship}   # low failure-rate concept
+    # Difficulty-matched: pick a concept whose baseline MRR on its tagged fables
+    # is close to (within ±0.05 of) the mean baseline MRR of the three targets.
+    # NOT just a low-failure-rate concept — those saturate at ceiling and pass
+    # specificity trivially.
+    - {field: moral_category,    value: TBD_after_discovery}
 
 vectors:
   layers: [4, 12, 20, 28, -1]    # -1 = last layer
-  methods: [caa_matched, mean_diff]
+  methods: [caa_matched]          # mean_diff moved to follow-up
   matching:                       # for caa_matched
-    fields: [setting, fable_type]
+    fields: [setting, fable_type] # base nuisance fields, always matched
+    cross_field_matching: true    # also match on the OTHER metadata fields:
+                                  # for a `characters`/`character_roles` concept,
+                                  # match on `moral_category`. For a
+                                  # `moral_category` concept, match on
+                                  # `character_roles`. Reported residual tag
+                                  # overlap between matched +/- pairs is logged.
     length_tolerance: 0.20        # ±20% token length
+
+null_controls:
+  # Null controls run ONLY at (layer, α) configurations where a target's
+  # bootstrap CI looks like a candidate pass. We don't pay for the full sweep —
+  # the target sweep finds the candidate cells, then null controls validate them.
+  random_direction:
+    n_seeds: 5                    # 5 random directions per candidate (layer, α)
+    norm_match: caa_matched       # match L2 norm to caa_matched v_C at that layer
+  shuffled_tag_caa:
+    n_permutations: 50            # 50 label permutations per candidate (concept, layer, α)
+                                  # — 50 because this builds the null envelope shown
+                                  # on the headline figure
 
 intervention:
   alphas: [-2.0, -1.0, -0.5, -0.25, 0.0, 0.25, 0.5, 1.0, 2.0]
@@ -112,9 +135,20 @@ eval:
   group_by:                       # specificity contrast groups
     - target_tagged                # fables WITH the concept
     - target_untagged              # fables WITHOUT the concept
-  specificity_thresholds:
-    target_min_drop:   0.03        # |ΔMRR_target| at the chosen α must reach this
-    control_max_drift: 0.015       # |ΔMRR_control| at the same α must stay within this
+  primary_statistic:
+    name: specificity_gap
+    definition: ΔMRR_target − ΔMRR_control
+    test: paired_bootstrap_ci_over_morals
+    n_bootstrap: 10000
+    alpha: 0.05
+    pass_rule: ci_excludes_zero_in_negative_direction
+  diagnostics:
+    pooled_cosine_pre_post: true   # cos(h_baseline, h_intervened) at pooled level;
+                                   # if ≈1.0 the intervention only changed magnitude
+    rank_change_listing: true      # for each (concept, layer, α): list which morals
+                                   # gained/lost rank, not just aggregate MRR
+    null_envelope:                 # use the random-direction + shuffled-tag results
+                                   # to draw a null band on every figure
 
 output:
   results_dir: analysis/08_concept_steering/results
@@ -179,22 +213,38 @@ This is the ONLY place in the codebase that touches model internals. Every other
 
 ## 6. Evaluation — the v0 success criterion (Stage 1)
 
-For each (concept C, layer L, α ≠ 0):
+### 6.1 Primary statistic
 
-- `MRR_target = MRR@10 over morals whose ground-truth fable IS tagged C`
-- `MRR_control = MRR@10 over morals whose ground-truth fable is NOT tagged C`
+For each (concept C, layer L, α):
 
-Define `ΔMRR_target(α) = MRR_target(α) − MRR_target(α=0)`, similarly `ΔMRR_control`.
+- `MRR_target(α) = MRR@10 over morals whose ground-truth fable IS tagged C`
+- `MRR_control(α) = MRR@10 over morals whose ground-truth fable is NOT tagged C`
+- `ΔMRR_target(α) = MRR_target(α) − MRR_target(α=0)`, and `ΔMRR_control` analogously
+- **Specificity gap**: `S(C, L, α) = ΔMRR_target(α) − ΔMRR_control(α)`
 
-**Pass criterion (per concept, per layer):**
+A concept-specific intervention should produce S < 0 (target drops more than control).
 
-1. There exists at least one α ≠ 0 with `ΔMRR_target ≤ −0.03` (target moves down meaningfully).
-2. At that same α, `|ΔMRR_control| ≤ 0.015` (control stays flat within noise).
-3. The placebo concept does NOT satisfy criterion 1 at any (layer, α). i.e. subtracting a non-problematic concept does not selectively damage its tagged group.
+### 6.2 Statistical test
 
-Thresholds are stored in the config (`eval.specificity_thresholds`) and are conservative based on standard MRR noise floor at n≈100. They can be tightened if v0 results are too lenient.
+Fixed thresholds are inappropriate here: target group sample size is n≈60–90 (high variance), control group is n≈600+ (low variance), so any single threshold is asymmetric noise. We use **paired bootstrap CIs over the moral set** (10,000 resamples). For each (concept, layer, α), report the 95% CI of S. The intervention is judged concept-specific at that (layer, α) iff the CI excludes 0 in the negative direction.
 
-**Headline figure:** one plot, 4 columns (3 targets + 1 placebo) × 5 rows (one per layer). Each subplot has α on the x-axis and two lines: target-tagged MRR and control MRR. We expect the 3 target columns to show a separating fan; the placebo column should show two flat overlapping lines.
+### 6.3 Pass criterion (v0)
+
+1. **Targets**: for each of the 3 problematic concepts, ≥1 (layer, α) configuration exists where the bootstrap CI of S excludes 0 in the negative direction.
+2. **Difficulty-matched placebo**: at the SAME (layer, α) configurations that pass for the targets, the placebo concept's bootstrap CI of S includes 0 (no concept-specific effect).
+3. **Random-direction null**: at those same (layer, α), the random-direction control's median S is within the 95% null envelope of the shuffled-tag CAA distribution. (i.e. the targets' specificity gap must lie *outside* the null distribution generated by directions that have nothing to do with the concept.)
+
+All three must hold. Criteria 1 and 2 establish "this concept matters"; criterion 3 establishes "it isn't just any direction in this subspace."
+
+### 6.4 Diagnostics reported alongside
+
+- **`pooled_cosine_pre_post`**: cos(h_baseline_pooled, h_intervened_pooled) per fable. If ≈1.0 across the corpus while ΔMRR moves, the intervention is acting only via magnitude — invalid under cosine retrieval and a bug signal.
+- **Rank-change listing**: for each (concept, layer, α), the list of morals whose ground-truth-fable rank changed, with before/after ranks. Lets us verify the aggregate movement isn't driven by a handful of outliers.
+- **Per-concept matched-pair residual overlap**: for each CAA build, fraction of matched +/− pairs that share another metadata field. Logged so the reader can see what nuisance survived matching.
+
+### 6.5 Headline figure
+
+One plot, 4 columns (3 targets + 1 placebo) × 5 rows (one per layer). Each subplot: α on x-axis, S(C, L, α) on y-axis with paired-bootstrap 95% CI shaded; null envelope (from shuffled-tag CAA) shown as a grey band. Targets should show CIs dipping below the null band at some α; placebo should stay inside the null band everywhere.
 
 ## 7. Risks and mitigations
 
@@ -204,7 +254,9 @@ Thresholds are stored in the config (`eval.specificity_thresholds`) and are cons
 | Mean pooling vs last-token pooling identification wrong | `lib/model.py` reads pooling from the loaded SentenceTransformer modules.json, doesn't hard-code; logged at startup |
 | Layer indexing off-by-one between HuggingFace and SentenceTransformer wrappers | `run_baseline.py` at startup logs hidden_states tensor shapes for a single example so we can verify before any 5-layer sweep |
 | n=15–87 per concept is small for matched pairs | Report bootstrap CI on the concept vector cosine norm; if direction is too noisy, report and skip |
-| L2-renormalization after intervention may absorb the effect (since cosine retrieval cares about direction, not magnitude) | Run a subtraction with α large enough that direction shifts (not just magnitude); ablate by reporting both with/without renormalize |
+| L2-renormalization after intervention may absorb the effect (since cosine retrieval cares about direction, not magnitude) | (a) ablate renormalize=true/false; (b) report `pooled_cosine_pre_post` per fable — if ≈1 the intervention is only changing magnitude, which under cosine retrieval should produce no ΔMRR. ΔMRR ≠ 0 with cosine ≈ 1 is a bug signal, not a valid result. |
+| The specificity gap might be reproduced by a random direction in the same activation manifold (target-tagged fables share length/topic structure → any contrast direction overlaps with "this kind of fable") | This is what the random-direction + shuffled-tag null controls in §6.3 criterion 3 are for. Without those controls, criterion 1 alone is suggestive but not a clean causal claim. |
+| Difficulty-matched placebo selection requires baseline MRR per concept first | Discovery script (Step 2) computes per-tag baseline MRR; placebo is chosen post-discovery as the concept whose baseline MRR is closest to the mean of the 3 targets, drawn from a non-target field |
 | The specificity contrast moves but in the wrong direction (target stays up, control drops) | Reporting both directions explicitly; not assuming the sign |
 | GPU disk pressure | Concept vectors are tiny (~16 KB each). Re-encoded fable embeddings are ~22 MB per (concept, layer, α). Total <2 GB for full sweep. No `model_output_dir` issue since no model saving. |
 
@@ -224,4 +276,16 @@ These are explicitly listed in `README.md` as planned follow-ups, with config kn
 - A ranked list of problematic concepts with statistical evidence (`discovery_report.json`).
 - For each chosen concept, per-layer evidence of whether the intervention is concept-specific (specificity figure).
 - A reusable hooked-forward implementation that any future intervention experiment can build on.
-- A clear go/no-go for Stage 2 (confusion-shift): if Stage 1 passes for ≥2 of 3 targets and the placebo behaves correctly, Stage 2 is justified.
+- A clear go/no-go for Stage 2 (confusion-shift): if Stage 1 passes for ≥2 of 3 targets, the difficulty-matched placebo stays inside the null envelope, AND the random-direction control fails to reproduce the target effect, then Stage 2 is justified.
+
+## 10. Compute budget
+
+Approximate forward passes through Linq-Embed-Mistral on 709 fables (~22s each on one A100):
+
+- Step 1 (baseline encoding): 1 pass for fables + 1 pass for morals = ~45s.
+- Step 3 (vector build): 1 pass with `output_hidden_states=True` over fables = ~60s. All concepts × all 5 layers built from this single extraction.
+- Step 4 (target sweep): 5 layers × 9 α × 3 targets = 135 re-encodings ≈ 50 minutes.
+- Step 4b (placebo sweep): 5 layers × 9 α × 1 = 45 re-encodings ≈ 17 minutes.
+- Step 4c (null controls, candidate cells only): worst case ~50 candidate cells × (5 random + 50 shuffled) = ~2750 re-encodings ≈ 17 hours. **Mitigation**: shuffled-tag null can reuse the same set of permuted concept vectors across candidate cells via batched encoding (one forward pass yields all 709 fable embeddings; the per-permutation cost is just the hook-modified forward). Realistic: 4–6 hours.
+
+Total realistic v0 budget: under one overnight run on a single GPU. Storage: <2 GB (concept vectors are ~16 KB each; per-(concept, layer, α) ranking JSONs are ~500 KB; full intervened-fable embeddings stay in memory and are not persisted unless `save_intermediate=true` in config).
