@@ -1,0 +1,35 @@
+# ft_09_fn_masking — Linq+LoRA with false-negative masking via moral sim matrix.
+#
+# Same model/hyperparams as ft_08 (clean run baseline).
+# Only difference: near-duplicate morals (sim > fn_mask_threshold) are masked
+# out of the InfoNCE denominator during training so the model is not penalised
+# for retrieving a fable whose moral is semantically equivalent to the query.
+
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+batch_size: 4
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+learning_rate: 1.0e-4
+max_seq_length: 512
+model_kwargs:
+  torch_dtype: auto
+query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+doc_mode: fable_plus_summary
+n_folds: 5
+epochs: 10
+temperature: 0.05
+fn_mask_threshold: 0.85   # morals with sim > this are masked as false negatives
+early_stopping_patience: 3
+seed: 42
+
+model_output_dir: /data/lior/ft_09_fn_masking/models
+
+wandb:
+  project: morables-finetuning
+  enabled: true

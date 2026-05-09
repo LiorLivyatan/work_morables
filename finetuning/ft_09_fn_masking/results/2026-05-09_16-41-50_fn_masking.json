@@ -1,0 +1,67 @@
+{
+  "fn_mask_threshold": 0.85,
+  "n_queries": 709,
+  "doc_mode": "fable_plus_summary",
+  "config": {
+    "model_name": "Linq-AI-Research/Linq-Embed-Mistral",
+    "batch_size": 4,
+    "gradient_accumulation_steps": 4,
+    "gradient_checkpointing": true,
+    "learning_rate": 0.0001,
+    "max_seq_length": 512,
+    "model_kwargs": {
+      "torch_dtype": "auto"
+    },
+    "query_instruction": "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: ",
+    "lora": {
+      "r": 64,
+      "alpha": 128,
+      "dropout": 0.05,
+      "target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj",
+        "o_proj"
+      ]
+    },
+    "doc_mode": "fable_plus_summary",
+    "n_folds": 5,
+    "epochs": 10,
+    "temperature": 0.05,
+    "fn_mask_threshold": 0.85,
+    "early_stopping_patience": 3,
+    "seed": 42,
+    "model_output_dir": "/data/lior/ft_09_fn_masking/models",
+    "wandb": {
+      "project": "morables-finetuning",
+      "enabled": true
+    }
+  },
+  "fold_results": [
+    {
+      "fold": 0,
+      "n_train": 567,
+      "n_test": 142,
+      "MRR": 0.37349603916151647,
+      "MAP": 0.37349603916151647,
+      "R-Precision": 0.2746478873239437,
+      "Mean Rank": 38.90845070422535,
+      "Median Rank": 8.0,
+      "n_queries": 142,
+      "Recall@1": 0.2746478873239437,
+      "P@1": 0.2746478873239437,
+      "NDCG@1": 0.2746478873239437,
+      "Recall@5": 0.45774647887323944,
+      "P@5": 0.0915492957746479,
+      "NDCG@5": 0.3752507369431282,
+      "Recall@10": 0.5563380281690141,
+      "P@10": 0.055633802816901404,
+      "NDCG@10": 0.4059872117068425,
+      "Recall@50": 0.8098591549295775,
+      "P@50": 0.016197183098591552,
+      "NDCG@50": 0.4622898416847317
+    }
+  ],
+  "mean_mrr": 0.37349603916151647,
+  "std_mrr": 0.0
+}
