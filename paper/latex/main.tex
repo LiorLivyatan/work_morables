@@ -43,7 +43,33 @@ success requires bridging a deep abstraction gap between query and document.
 % TODO
 
 \section{Related Work}
-% TODO
+
+\subsection{Moral Reasoning and Figurative Language in NLP}
+
+Moral and ethical reasoning poses a persistent challenge for NLP systems, as it requires abstracting principles from context rather than matching surface-level patterns.
+Early efforts frame moral reasoning as classification: the ETHICS benchmark \citep{hendrycks2021aligning} evaluates language models on commonsense morality, deontological rules, and virtue across five ethical theory categories, while \citet{jiang2021delphi} introduce Delphi, a system trained to predict human moral judgments about everyday situations.
+Both approaches demonstrate that neural models can approximate moral intuitions in constrained settings but struggle to generalize to novel ethical scenarios.
+A related challenge arises in figurative and abstract language, where meaning departs fundamentally from surface form---idioms, metaphors, and parables require conceptual understanding that lexical overlap cannot supply \citep{TODO:idiolink}.
+\citet{marcuzzo-etal-2025-morables} introduce MORABLES, the dataset on which \textbf{ParabeLink} is built, framing moral reasoning as multiple-choice selection over a small candidate set of Aesop's fables.
+\textbf{ParabeLink} extends this challenge to open retrieval: given a moral, a system must identify the correct fable from 709 candidates with near-zero lexical overlap (IoU~=~0.011), demanding a level of abstraction that closed-set evaluation cannot expose.
+
+\subsection{Semantic Retrieval and Embedding Models}
+
+Neural dense retrieval---representing queries and documents as continuous vectors and retrieving by nearest-neighbor search---has become the dominant paradigm for open-domain information retrieval \citep{karpukhin2020dense}.
+Pre-trained sentence encoders such as Sentence-BERT \citep{reimers2019sentence} and Contriever \citep{izacard2022unsupervised} demonstrated that contrastive objectives yield semantically meaningful representations without requiring labeled query-document pairs.
+Subsequent work scaled this paradigm: E5 \citep{wang2022text} pre-trains on 270M weakly supervised text pairs; BGE \citep{xiao2023cpack} introduces a general-purpose embedding suite with hard-negative-aware contrastive fine-tuning; and Linq-Embed-Mistral \citep{kim2024linq} achieves state-of-the-art performance across the MTEB retrieval leaderboard.
+Cross-domain generalization is evaluated by the BEIR benchmark \citep{thakur2021beir}, which shows that retrieval performance degrades substantially on out-of-domain tasks where surface cues are absent.
+\textbf{ParabeLink} represents an extreme case along this axis: with near-zero lexical overlap between moral queries and fable documents, it isolates semantic abstraction as the primary bottleneck and directly stress-tests whether modern embedding models can reason across deep representational gaps.
+
+\subsection{Contrastive Fine-tuning and Synthetic Data}
+
+Contrastive learning is the dominant paradigm for training text embedding models: SimCSE \citep{gao2021simcse} demonstrates that dropout-based augmentation with in-batch negatives substantially improves representation quality, and hard negative mining---selecting negatives that are semantically plausible but factually distinct---further sharpens discriminative capacity.
+In parallel, large language models have enabled synthetic data generation for retrieval, removing the need for costly annotation: InPars \citep{bonifacio2022inpars} uses few-shot prompting to generate synthetic queries for unlabeled documents, while subsequent work produces full query-positive-negative triplets for instruction-following retrieval \citep{wang2024improving}.
+% TODO: fill in the 2-3 sentences describing exactly how we use STORAL augmentation and
+% what distinguishes our contrastive fine-tuning setup from prior domain adaptation work
+% (hint: the key claim is that our gap is *abstraction*, not just topical domain shift).
+% Reference: \citep{TODO:storal}
+Unlike prior domain adaptation work---where queries and documents share topical vocabulary---our setting requires bridging a deep abstraction gap; we show empirically that synthetic document augmentation narrows this gap substantially, and contrastive fine-tuning with moral-negative augmentation closes it further.
 
 \section{The ParabeLink Benchmark}
 % TODO

@@ -1,0 +1,136 @@
+# ft_10 Option A — Zero-Shot Transfer: fine-tune on IdioLink, eval on MORABLES.
+#
+# Each model is fine-tuned on the 440 IdioLink training triplets, then evaluated
+# on all MORABLES corpus configs without any MORABLES-specific training.
+
+# ── Paths ─────────────────────────────────────────────────────────────────────
+
+idiolink_data_dir: finetuning/ft_10_idiolink_transfer/data   # relative to project root
+gemma4_summaries_path: null                # set to exp13 summaries JSON path once pulled
+
+# ── Training hyperparams (shared across all models) ───────────────────────────
+
+epochs: 10
+early_stopping_patience: 3
+warmup_steps: 100
+seed: 42
+
+# ── Model registry ────────────────────────────────────────────────────────────
+# use_lora: true for 7B+ models (won't fit GPU memory for full FT)
+# model_output_dir: where the fine-tuned model is saved after training
+#   - 7B models → /data/lior/ft_10_option_a/models/<alias>  (long-term storage)
+#   - small models → saved alongside checkpoints, deleted after eval
+
+models:
+  Linq-Embed-Mistral:
+    hf_id: Linq-AI-Research/Linq-Embed-Mistral
+    use_lora: true
+    batch_size: 4
+    gradient_accumulation_steps: 8
+    learning_rate: 2.0e-5
+    gradient_checkpointing: true
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_10_option_a/models/Linq-Embed-Mistral
+
+  BGE-en-ICL:
+    hf_id: BAAI/bge-en-icl
+    use_lora: true
+    batch_size: 4
+    gradient_accumulation_steps: 8
+    learning_rate: 2.0e-5
+    gradient_checkpointing: true
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_10_option_a/models/BGE-en-ICL
+
+  Qwen3-Embedding-8B:
+    hf_id: Qwen/Qwen3-Embedding-8B
+    use_lora: true
+    batch_size: 4
+    gradient_accumulation_steps: 8
+    learning_rate: 2.0e-5
+    gradient_checkpointing: true
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_10_option_a/models/Qwen3-Embedding-8B
+
+  Qwen3-Embedding-0.6B:
+    hf_id: Qwen/Qwen3-Embedding-0.6B
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+  Multilingual-E5-large:
+    hf_id: intfloat/multilingual-e5-large
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+  Multilingual-E5-large-instruct:
+    hf_id: intfloat/multilingual-e5-large-instruct
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+  BGE-M3:
+    hf_id: BAAI/bge-m3
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+  E5-base-v2:
+    hf_id: intfloat/e5-base-v2
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+  Nomic-Embed-v2-MoE:
+    hf_id: nomic-ai/nomic-embed-text-v2-moe
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    model_kwargs:
+      trust_remote_code: true
+
+  Instructor-base:
+    hf_id: hkunlp/instructor-base
+    use_lora: false
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+
+wandb:
+  project: morables-finetuning
+  enabled: true
