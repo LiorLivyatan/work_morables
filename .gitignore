@@ -79,3 +79,12 @@ experiments/*/results/pipeline_runs/
 # wandb
 wandb/
 .gstack/
+
+# Trained model weights (large, stored in /data/lior on server)
+finetuning/*/results/models/
+finetuning/*/results/models_original/
+finetuning/*/*/results/models/
+finetuning/*/*/results/models_original/
+
+# Codex
+.codex/
