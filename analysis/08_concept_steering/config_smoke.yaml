@@ -1,0 +1,67 @@
+# Smoke config — minimal sweep for quick verification.
+# Outputs to results_smoke/ instead of results/.
+model:
+  hf_id: Linq-AI-Research/Linq-Embed-Mistral
+  pooling: auto
+  device: cuda
+  dtype: bfloat16
+  batch_size: 4
+
+data:
+  morals_path: data/processed/morals_corpus.json
+  fables_path: data/processed/fables_corpus.json
+  metadata_path: data/enriched/fable_elements.json
+
+discovery:
+  failure_definition: rank_gt_1
+  metadata_fields: [characters, moral_category]
+  min_tagged_fables: 30
+  fdr_alpha: 0.05
+
+concepts:
+  targets: [{field: characters, value: fox}]
+  placebo: [{field: moral_category, value: friendship}]
+
+vectors:
+  layers: [12, 28]
+  methods:
+    primary: caa_matched
+    sanity_byproducts: [mean_diff]
+  matching:
+    fields: [setting, fable_type]
+    cross_field_matching: true
+    length_tolerance: 0.20
+    min_positive_examples: 15
+    min_matched_pairs: 15
+  quality_log:
+    - n_positives
+    - n_matched_pairs
+    - mean_length_ratio
+
+intervention:
+  alphas: [-1.0, 0.0, 1.0]
+  hook_position: residual_stream
+  renormalize: true
+
+null_controls:
+  run_mode: candidate_only
+  random_direction: {n_seeds: 2, norm_match: caa_matched}
+  shuffled_tag_caa:  {n_permutations: 5}
+
+eval:
+  metrics: [mrr_at_10]
+  group_by: [target_tagged, target_untagged]
+  primary_statistic:
+    name: specificity_gap
+    test: paired_bootstrap_ci_over_morals
+    n_bootstrap: 1000
+    alpha: 0.05
+  diagnostics:
+    pooled_cosine_pre_post: true
+    rank_change_listing: true
+    null_envelope: true
+
+output:
+  results_dir: analysis/08_concept_steering/results_smoke
+  cache_dir: analysis/08_concept_steering/cache
+  save_intermediate_embeddings: false
