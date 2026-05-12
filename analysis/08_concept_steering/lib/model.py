@@ -107,13 +107,17 @@ def extract_hidden_states(
     layers: Sequence[int],
     batch_size: int = 4,
 ) -> dict[int, np.ndarray]:
-    """For each requested layer index, return (n_texts, hidden_dim) array of POOLED
-    hidden states at that layer. Layer index -1 means the last layer.
+    """For each requested BLOCK INDEX, return (n_texts, hidden_dim) array of POOLED
+    hidden states at the OUTPUT of that transformer block.
+
+    Convention (consistent with encode_with_intervention and model.layers[]):
+        block index b in [0, n_layers - 1]; b == -1 resolves to n_layers - 1.
+        The output of block b is res.hidden_states[b + 1] (index 0 is embeddings).
 
     Pooling matches handle.pooling_kind.
     """
-    requested_layers = [(handle.n_layers if l == -1 else l) for l in layers]
-    out: dict[int, list[np.ndarray]] = {l: [] for l in requested_layers}
+    requested_blocks = [((handle.n_layers - 1) if l == -1 else l) for l in layers]
+    out: dict[int, list[np.ndarray]] = {b: [] for b in requested_blocks}
 
     tok = handle.st_model.tokenizer
     handle.transformer.eval()
@@ -125,12 +129,12 @@ def extract_hidden_states(
             enc = {k: v.to(handle.device) for k, v in enc.items()}
             res = handle.transformer(**enc, output_hidden_states=True)
             attn_mask = enc["attention_mask"]
-            for layer in requested_layers:
-                hs = res.hidden_states[layer]
+            for block in requested_blocks:
+                hs = res.hidden_states[block + 1]   # output of block `block`
                 pooled = _pool(hs, attn_mask, handle.pooling_kind)
-                out[layer].append(pooled.float().cpu().numpy())
+                out[block].append(pooled.float().cpu().numpy())
 
-    return {l: np.concatenate(out[l], axis=0) for l in requested_layers}
+    return {b: np.concatenate(out[b], axis=0) for b in requested_blocks}
 
 
 def _get_layer_module(handle: EncoderHandle, layer_idx: int) -> torch.nn.Module:

@@ -9,12 +9,14 @@ from pathlib import Path
 import numpy as np
 
 
-def reciprocal_rank_per_query(rankings: np.ndarray, gt_indices: np.ndarray) -> np.ndarray:
-    """Per-query 1/rank, or 0.0 if gt is not in the ranking."""
+def reciprocal_rank_per_query(rankings: np.ndarray, gt_indices: np.ndarray,
+                                k: int = 10) -> np.ndarray:
+    """Per-query 1/rank capped at k (rr=0 if gt-rank > k). Default k=10 so the
+    aggregate matches MRR@10 — keep the `mrr_at_10` label in artifacts truthful."""
     n_q = rankings.shape[0]
     rr = np.zeros(n_q, dtype=np.float64)
     for i in range(n_q):
-        positions = np.where(rankings[i] == gt_indices[i])[0]
+        positions = np.where(rankings[i, :k] == gt_indices[i])[0]
         if len(positions) == 1:
             rr[i] = 1.0 / (positions[0] + 1)
     return rr

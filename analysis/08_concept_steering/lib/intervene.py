@@ -31,7 +31,8 @@ def sweep_concept(
     summary: dict = {"concept": concept_name, "cells": []}
 
     for layer in layers:
-        layer_resolved = handle.n_layers + layer if layer < 0 else layer
+        # Callers resolve -1 before passing; layer is now a block index in [0, n_layers-1].
+        layer_resolved = layer
         direction = direction_per_layer[layer_resolved]
         for alpha in alphas:
             embs, pooled_cos = encode_with_intervention(
