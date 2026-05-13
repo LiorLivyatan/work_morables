@@ -511,3 +511,15 @@ Reason: Kept as singleton
 
 **✅ Added** fable_0035 *The Farmer and the Stork* — "Birds of a feather flock together."
 Reason: The story is literally about being punished by association — a stork caught in a net with thieving cranes is sentenced with them.
+
+---
+
+## Section 5 — Additional Unifications
+
+### New near cluster: `tyrants_no_excuse`
+
+**✅ Merged** fable_0238 + fable_0545 — same lesson, two classic phrasings
+- fable_0238 *The Cat And The Rooster* — "Tyrants need no excuse."
+- fable_0545 *The Wolf and the Lamb* — "Any excuse will serve a tyrant."
+
+Reason: Identical core lesson (tyrants invent justifications to oppress the powerless); kept as near rather than forcing one canonical text.

@@ -2235,16 +2235,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0238",
-    "moral_set": [
-      "Tyrants need no excuse."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0238"
-    ]
-  },
-  {
     "cluster_id": "singleton_0239",
     "moral_set": [
       "Stay focused on your goals."
@@ -4366,16 +4356,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0545",
-    "moral_set": [
-      "Any excuse will serve a tyrant."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0545"
-    ]
-  },
-  {
     "cluster_id": "singleton_0548",
     "moral_set": [
       "It is better to be injured with impunity, than to put ourselves in the power of another."
@@ -5879,6 +5859,18 @@
     "moral_set": [
       "Nature and instincts can persist despite changes in form or appearance.",
       "When someone with a wicked nature changes his appearance, his behaviour remains the same."
+    ]
+  },
+  {
+    "cluster_id": "tyrants_no_excuse",
+    "type": "near",
+    "fables": [
+      "fable_0238",
+      "fable_0545"
+    ],
+    "moral_set": [
+      "Tyrants need no excuse.",
+      "Any excuse will serve a tyrant."
     ]
   }
 ]
