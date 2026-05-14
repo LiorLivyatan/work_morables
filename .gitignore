@@ -88,3 +88,7 @@ finetuning/*/*/results/models_original/
 
 # Codex
 .codex/
+
+# LLM Retrieval experiment results (regeneratable)
+llm_retrieval/results/runs/*.csv
+llm_retrieval/results/unified.csv
