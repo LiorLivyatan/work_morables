@@ -88,12 +88,12 @@ models:
     concurrency: 5
 
   - alias: GPT-OSS-20B
-    id: VERIFY_OPENROUTER_ID   # verify exact OpenRouter model slug before running
+    id: openai/gpt-oss-20b:free   # 21B MoE, 3.6B active params, 131K ctx (tight — monitor for context overflow)
     provider: openrouter
     concurrency: 10
 
   - alias: GPT-OSS-120B
-    id: VERIFY_OPENROUTER_ID   # verify exact OpenRouter model slug before running
+    id: openai/gpt-oss-120b:free  # 117B MoE, 5.1B active params, 131K ctx (tight — monitor for context overflow)
     provider: openrouter
     concurrency: 5
 
