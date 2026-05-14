@@ -825,16 +825,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0014",
-    "moral_set": [
-      "Misfortune tests the sincerity of friends."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0014"
-    ]
-  },
-  {
     "cluster_id": "singleton_0015",
     "moral_set": [
       "It is easy to propose impossible remedies."
@@ -915,16 +905,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0026",
-    "moral_set": [
-      "Precious things are for those that can prize them."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0026"
-    ]
-  },
-  {
     "cluster_id": "singleton_0029",
     "moral_set": [
       "Those who enter by the back stairs may expect to be shown out at the window."
@@ -1002,16 +982,6 @@
     "type": "singleton",
     "fables": [
       "fable_0041"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0046",
-    "moral_set": [
-      "Consider carefully before changing your situation."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0046"
     ]
   },
   {
@@ -1265,16 +1235,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0087",
-    "moral_set": [
-      "Those who would mend others, should first mend themselves."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0087"
-    ]
-  },
-  {
     "cluster_id": "singleton_0089",
     "moral_set": [
       "Vicious people cannot resist hurting others even when it is not in their own interests."
@@ -1292,16 +1252,6 @@
     "type": "singleton",
     "fables": [
       "fable_0090"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0093",
-    "moral_set": [
-      "Understand what you are doing before you do it."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0093"
     ]
   },
   {
@@ -1415,16 +1365,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0110",
-    "moral_set": [
-      "It is not only fine feathers that make fine birds."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0110"
-    ]
-  },
-  {
     "cluster_id": "singleton_0112",
     "moral_set": [
       "The least outlay is not always the greatest gain."
@@ -1442,16 +1382,6 @@
     "type": "singleton",
     "fables": [
       "fable_0114"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0115",
-    "moral_set": [
-      "Men often condemn others for what they see no wrong in doing themselves."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0115"
     ]
   },
   {
@@ -1685,16 +1615,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0154",
-    "moral_set": [
-      "Brag and nature may bring you down."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0154"
-    ]
-  },
-  {
     "cluster_id": "singleton_0155",
     "moral_set": [
       "He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour."
@@ -1772,16 +1692,6 @@
     "type": "singleton",
     "fables": [
       "fable_0166"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0167",
-    "moral_set": [
-      "True value is wasted on those who cannot appreciate it."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0167"
     ]
   },
   {
@@ -2135,16 +2045,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0221",
-    "moral_set": [
-      "Inner beauty is better than outer beauty."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0221"
-    ]
-  },
-  {
     "cluster_id": "singleton_0222",
     "moral_set": [
       "Some men are of more consequence in their own eyes than in the eyes of their neighbors."
@@ -2172,16 +2072,6 @@
     "type": "singleton",
     "fables": [
       "fable_0226"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0227",
-    "moral_set": [
-      "When we form friendships with one another, we must choose allies who can come to our aid in moments of peril."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0227"
     ]
   },
   {
@@ -2415,16 +2305,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0267",
-    "moral_set": [
-      "Vanity can lead to self-destruction."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0267"
-    ]
-  },
-  {
     "cluster_id": "singleton_0268",
     "moral_set": [
       "Live your lives in the clothes that suit you."
@@ -2632,16 +2512,6 @@
     "type": "singleton",
     "fables": [
       "fable_0302"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0303",
-    "moral_set": [
-      "They who act without sufficient thought, will often fall into unsuspected danger."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0303"
     ]
   },
   {
@@ -2865,26 +2735,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0337",
-    "moral_set": [
-      "Count the cost before you commit yourselves."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0337"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0338",
-    "moral_set": [
-      "Pride goes before destruction."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0338"
-    ]
-  },
-  {
     "cluster_id": "singleton_0339",
     "moral_set": [
       "God is the ultimate judge."
@@ -2892,16 +2742,6 @@
     "type": "singleton",
     "fables": [
       "fable_0339"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0340",
-    "moral_set": [
-      "It is a foolish thing to give advice to others while not looking out for oneself."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0340"
     ]
   },
   {
@@ -3085,26 +2925,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0369",
-    "moral_set": [
-      "Accept the changes in life."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0369"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0370",
-    "moral_set": [
-      "Outside show is a poor substitute for inner worth."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0370"
-    ]
-  },
-  {
     "cluster_id": "singleton_0372",
     "moral_set": [
       "A wicked person deservedly comes to a bad end by keeping company with other wicked people."
@@ -3132,16 +2952,6 @@
     "type": "singleton",
     "fables": [
       "fable_0374"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0375",
-    "moral_set": [
-      "People who act impulsively can end up in regrettable situations."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0375"
     ]
   },
   {
@@ -3212,16 +3022,6 @@
     "type": "singleton",
     "fables": [
       "fable_0387"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0388",
-    "moral_set": [
-      "Imaginary fears are the worst."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0388"
     ]
   },
   {
@@ -3775,16 +3575,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0464",
-    "moral_set": [
-      "Fair weather friends are not worth much."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0464"
-    ]
-  },
-  {
     "cluster_id": "support_becomes_enemy",
     "moral_set": [
       "Sometimes, those you support become your worst enemy."
@@ -3813,16 +3603,6 @@
     "type": "singleton",
     "fables": [
       "fable_0468"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0469",
-    "moral_set": [
-      "Courage in words means nothing if you flee in danger."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0469"
     ]
   },
   {
@@ -4126,16 +3906,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0512",
-    "moral_set": [
-      "Where force is not enough, cleverness must be used instead."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0512"
-    ]
-  },
-  {
     "cluster_id": "singleton_0513",
     "moral_set": [
       "A greedy man does not gladly give anything away, even when he has enough for himself."
@@ -4196,16 +3966,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0523",
-    "moral_set": [
-      "It is easy to be brave when there is no danger."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0523"
-    ]
-  },
-  {
     "cluster_id": "singleton_0524",
     "moral_set": [
       "Love can blind even the wildest."
@@ -4233,16 +3993,6 @@
     "type": "singleton",
     "fables": [
       "fable_0527"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0528",
-    "moral_set": [
-      "We must make friends in prosperity if we would have their help in adversity."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0528"
     ]
   },
   {
@@ -4366,16 +4116,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0550",
-    "moral_set": [
-      "We are not able to see our own faults: but as soon as others make a slip, we are ready to censure."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0550"
-    ]
-  },
-  {
     "cluster_id": "singleton_0551",
     "moral_set": [
       "Choosing unworthy representatives can lead to humiliation and ongoing disrespect for the entire group."
@@ -4433,16 +4173,6 @@
     "type": "singleton",
     "fables": [
       "fable_0557"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0558",
-    "moral_set": [
-      "Whatever happens, we must bear it with equanimity."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0558"
     ]
   },
   {
@@ -4586,16 +4316,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0580",
-    "moral_set": [
-      "No matter how you brag, you can be undone."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0580"
-    ]
-  },
-  {
     "cluster_id": "singleton_0581",
     "moral_set": [
       "Do not let your fancy make you forget realities."
@@ -4693,16 +4413,6 @@
     "type": "singleton",
     "fables": [
       "fable_0596"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0598",
-    "moral_set": [
-      "Do not boast lest you be taken down."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0598"
     ]
   },
   {
@@ -4926,16 +4636,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0629",
-    "moral_set": [
-      "Pride and vanity leads to our downfall."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0629"
-    ]
-  },
-  {
     "cluster_id": "singleton_0630",
     "moral_set": [
       "We should not to conclude that we are allowed to do to other people's things what is permitted to them in their own houses."
@@ -5133,16 +4833,6 @@
     "type": "singleton",
     "fables": [
       "fable_0651"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0652",
-    "moral_set": [
-      "Many people fear danger where there is none, and feel safe where there is danger: put things in perspective."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0652"
     ]
   },
   {
@@ -5356,16 +5046,6 @@
     ]
   },
   {
-    "cluster_id": "singleton_0682",
-    "moral_set": [
-      "Wisdom is far superior to strength."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0682"
-    ]
-  },
-  {
     "cluster_id": "singleton_0684",
     "moral_set": [
       "Better to be alone than in bad company."
@@ -5443,16 +5123,6 @@
     "type": "singleton",
     "fables": [
       "fable_0700"
-    ]
-  },
-  {
-    "cluster_id": "singleton_0702",
-    "moral_set": [
-      "Seek the friendship of those who do not withdraw from offering help even in a time of adversity."
-    ],
-    "type": "singleton",
-    "fables": [
-      "fable_0702"
     ]
   },
   {
@@ -5871,6 +5541,176 @@
     "moral_set": [
       "Tyrants need no excuse.",
       "Any excuse will serve a tyrant."
+    ]
+  },
+  {
+    "cluster_id": "adversity_reveals_friends",
+    "type": "near",
+    "fables": [
+      "fable_0014",
+      "fable_0464"
+    ],
+    "moral_set": [
+      "Misfortune tests the sincerity of friends.",
+      "Fair weather friends are not worth much."
+    ]
+  },
+  {
+    "cluster_id": "choose_friends_who_help_in_adversity",
+    "type": "near",
+    "fables": [
+      "fable_0227",
+      "fable_0528",
+      "fable_0702"
+    ],
+    "moral_set": [
+      "When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",
+      "We must make friends in prosperity if we would have their help in adversity.",
+      "Seek the friendship of those who do not withdraw from offering help even in a time of adversity."
+    ]
+  },
+  {
+    "cluster_id": "pride_before_destruction",
+    "type": "near",
+    "fables": [
+      "fable_0154",
+      "fable_0267",
+      "fable_0338",
+      "fable_0580",
+      "fable_0598",
+      "fable_0629"
+    ],
+    "moral_set": [
+      "Brag and nature may bring you down.",
+      "Vanity can lead to self-destruction.",
+      "Pride goes before destruction.",
+      "No matter how you brag, you can be undone.",
+      "Do not boast lest you be taken down.",
+      "Pride and vanity leads to our downfall."
+    ]
+  },
+  {
+    "cluster_id": "value_wasted_on_unappreciative",
+    "type": "near",
+    "fables": [
+      "fable_0026",
+      "fable_0167"
+    ],
+    "moral_set": [
+      "Precious things are for those that can prize them.",
+      "True value is wasted on those who cannot appreciate it."
+    ]
+  },
+  {
+    "cluster_id": "inner_worth_over_outer_show",
+    "type": "near",
+    "fables": [
+      "fable_0110",
+      "fable_0221",
+      "fable_0370"
+    ],
+    "moral_set": [
+      "It is not only fine feathers that make fine birds.",
+      "Inner beauty is better than outer beauty.",
+      "Outside show is a poor substitute for inner worth."
+    ]
+  },
+  {
+    "cluster_id": "fix_yourself_before_helping_others",
+    "type": "near",
+    "fables": [
+      "fable_0087",
+      "fable_0340"
+    ],
+    "moral_set": [
+      "Those who would mend others, should first mend themselves.",
+      "It is a foolish thing to give advice to others while not looking out for oneself."
+    ]
+  },
+  {
+    "cluster_id": "blind_to_own_faults",
+    "type": "near",
+    "fables": [
+      "fable_0115",
+      "fable_0550"
+    ],
+    "moral_set": [
+      "Men often condemn others for what they see no wrong in doing themselves.",
+      "We are not able to see our own faults: but as soon as others make a slip, we are ready to censure."
+    ]
+  },
+  {
+    "cluster_id": "deliberate_before_committing",
+    "type": "near",
+    "fables": [
+      "fable_0046",
+      "fable_0093",
+      "fable_0337"
+    ],
+    "moral_set": [
+      "Consider carefully before changing your situation.",
+      "Understand what you are doing before you do it.",
+      "Count the cost before you commit yourselves."
+    ]
+  },
+  {
+    "cluster_id": "do_not_act_impulsively",
+    "type": "near",
+    "fables": [
+      "fable_0303",
+      "fable_0375"
+    ],
+    "moral_set": [
+      "They who act without sufficient thought, will often fall into unsuspected danger.",
+      "People who act impulsively can end up in regrettable situations."
+    ]
+  },
+  {
+    "cluster_id": "bear_change_with_equanimity",
+    "type": "near",
+    "fables": [
+      "fable_0369",
+      "fable_0558"
+    ],
+    "moral_set": [
+      "Accept the changes in life.",
+      "Whatever happens, we must bear it with equanimity."
+    ]
+  },
+  {
+    "cluster_id": "cunning_escapes_strength",
+    "type": "near",
+    "fables": [
+      "fable_0512",
+      "fable_0682"
+    ],
+    "moral_set": [
+      "Where force is not enough, cleverness must be used instead.",
+      "Wisdom is far superior to strength."
+    ]
+  },
+  {
+    "cluster_id": "bravery_in_safety_is_cheap",
+    "type": "near",
+    "fables": [
+      "fable_0469",
+      "fable_0523"
+    ],
+    "moral_set": [
+      "Courage in words means nothing if you flee in danger.",
+      "It is easy to be brave when there is no danger."
+    ]
+  },
+  {
+    "cluster_id": "imaginary_fears",
+    "type": "near",
+    "fables": [
+      "fable_0388",
+      "fable_0652"
+    ],
+    "moral_set": [
+      "Imaginary fears are the worst.",
+      "Many people fear danger where there is none, and feel safe where there is danger: put things in perspective."
     ]
   }
 ]

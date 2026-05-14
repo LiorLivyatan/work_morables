@@ -31,7 +31,9 @@ title and full moral text.
 | fable_0528 | The Kite And His Mother | We must make friends in prosperity if we would have their help in adversity. |
 | fable_0702 | A Lion and a Hog | Seek the friendship of those who do not withdraw from offering help even in a time of adversity. |
 
-**Decision:**
+**Decision:** ✂ Split into two clusters.
+- ✅ Cluster `adversity_reveals_friends` (2): fable_0014, fable_0464 — diagnostic: hardship is the test that exposes sincere vs fair-weather friends.
+- ✅ Cluster `choose_friends_who_help_in_adversity` (3): fable_0227, fable_0528, fable_0702 — prescriptive: actively select / cultivate allies who will stand by you in peril.
 
 ---
 
@@ -51,7 +53,10 @@ title and full moral text.
 
 **Note:** fable_0321 (*The Donkey And The Lion Go Hunting* — "The loud-mouthed boaster does not impress nor frighten those who know him.") is adjacent but slightly different — about the boaster being unimpressive rather than being destroyed.
 
-**Decision:**
+**Decision:** ✂ Split.
+- ✅ Cluster `pride_before_destruction` (6): fable_0154, fable_0267, fable_0338, fable_0580, fable_0598, fable_0629 — all share the schema *pride/vanity/brag → severe, irreversible downfall* (destruction / self-destruction / downfall / undone / taken down / bring down).
+- ❌ fable_0145 — keep singleton. "Trouble" is too generic/mild to belong with destruction-framed morals.
+- ❌ fable_0439 — keep singleton. Different causal schema: the boast *exposes* a pre-existing deficiency rather than *causing* destruction. Candidate seed for a future `boasters_exposed` cluster.
 
 ---
 
@@ -66,9 +71,13 @@ title and full moral text.
 | fable_0167 | The Rooster And The Pearl | True value is wasted on those who cannot appreciate it. |
 | fable_0172 | The Travellers And The Plane Tree | Some men underrate their best blessings. |
 
-**Note:** fable_0026 and fable_0167 are both about a rooster and a pearl — check if they are near-duplicates that should be in an exact/near cluster instead.
+**Note:** fable_0026 and fable_0167 are both about a rooster and a pearl — check if they are near-duplicates that should be in an exact/near cluster instead. **Confirmed:** same story (cock/rooster finds pearl in straw/manure, prefers a grain of food). Recommend marking as a `near` cluster, not just thematic.
 
-**Decision:**
+**Decision:** ✂ Split.
+- ✅ Cluster `value_wasted_on_unappreciative` (2): fable_0026, fable_0167 — same story, paraphrased morals. Mark as `near` cluster.
+- ❌ fable_0054 — keep singleton. Different proposition (agent's own blindness to what serves them).
+- ❌ fable_0153 — keep singleton. Definitional claim (usefulness = true value), not about misrecognition.
+- ❌ fable_0172 — keep singleton. Same proposition as 0054 (agent's own blindness), but no third companion to form a cluster.
 
 ---
 
@@ -84,7 +93,9 @@ title and full moral text.
 
 **Note:** Thematically adjacent to `value_unrecognized` (#3) but distinct — these specifically contrast outer appearance vs. inner quality, rather than about appreciation of value.
 
-**Decision:**
+**Decision:** ✂ Split.
+- ✅ Cluster `inner_worth_over_outer_show` (3): fable_0110, fable_0221, fable_0370 — inner trait/character/worth > outer adornment.
+- ❌ fable_0262 — keep singleton. Different axis (useful capability > decorative trait, both visible); doesn't fit the inner-vs-outer schema.
 
 ---
 
@@ -98,7 +109,9 @@ title and full moral text.
 | fable_0340 | The Hare And The Sparrow | It is a foolish thing to give advice to others while not looking out for oneself. |
 | fable_0550 | Of the Vices of Men | We are not able to see our own faults: but as soon as others make a slip, we are ready to censure. |
 
-**Decision:**
+**Decision:** ✂ Split into two pairs along the prescriptive/descriptive axis.
+- ✅ Cluster `fix_yourself_before_helping_others` (2): fable_0087, fable_0340 — prescriptive: don't mend/advise others while neglecting your own issues.
+- ✅ Cluster `blind_to_own_faults` (2): fable_0115, fable_0550 — descriptive: we condemn/censure others for what we ignore in ourselves.
 
 ---
 
@@ -113,7 +126,9 @@ title and full moral text.
 | fable_0337 | The Hares And The Foxes | Count the cost before you commit yourselves. |
 | fable_0375 | The Fox And The Hare In The Well | People who act impulsively can end up in regrettable situations. |
 
-**Decision:**
+**Decision:** ✂ Split into two clusters along *deliberation vs impulse-failure*.
+- ✅ Cluster `deliberate_before_committing` (3): fable_0046, fable_0093, fable_0337 — active evaluation (consider / understand / count the cost) before a significant choice or commitment.
+- ✅ Cluster `do_not_act_impulsively` (2): fable_0303, fable_0375 — generic impulse failure → unsuspected danger / regret.
 
 ---
 
@@ -127,9 +142,13 @@ title and full moral text.
 | fable_0558 | The Chariot Horse sold for the Mill | Whatever happens, we must bear it with equanimity. |
 | fable_0667 | A Husbandman turn'd Soldier and Merchant | Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side. |
 
-**Note:** fable_0357 (*The Father, The Son And The Lion* — "We had better bear our troubles bravely than try to escape them.") could also fit here — about enduring rather than fleeing difficulty.
+**Note:** fable_0357 (*The Father, The Son And The Lion* — "We had better bear our troubles bravely than try to escape them.") could also fit here — about enduring rather than fleeing difficulty. **Decided against** — escape-backfires schema is distinct from passive acceptance.
 
-**Decision:**
+**Decision:** ✂ One pair, rest singletons.
+- ✅ Cluster `bear_change_with_equanimity` (2): fable_0369, fable_0558 — accept the changes circumstance imposes; complaining is futile. **Flag for story-level near-duplicate check** (both are former-glorious-horse-demoted-to-mill stories).
+- ❌ fable_0260 — keep singleton. "Don't leave your given station" framing; different from passive acceptance of imposed change.
+- ❌ fable_0667 — keep singleton. Same "don't seek to change your station" framing as 0260, but kept singleton to match this decision.
+- ❌ fable_0357 — keep singleton. Escape-backfires schema (active avoidance causes the fate); not passive equanimity.
 
 ---
 
@@ -146,7 +165,8 @@ title and full moral text.
 | fable_0051 | The Hare and the Hound | Necessity is our strongest weapon. |
 | fable_0127 | The Crow And The Water Jar | Necessity is the mother of invention. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons.
+- Surface-word "necessity" matches across all three, but the propositions are entirely distinct: (0017) necessity overrides moral/social rules; (0051) desperation intensifies effort; (0127) need drives creativity. Textbook *false-cognate* clustering — would be surface-matching, not semantic-matching.
 
 ---
 
@@ -159,7 +179,7 @@ title and full moral text.
 | fable_0218 | The Farmer'S Boy And The Snails | Anything which is done at the wrong time is liable to be ridiculed. |
 | fable_0645 | An Old Fellow and a Young Wench | All things are to be done in their own time. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons.
 
 ---
 
@@ -172,7 +192,7 @@ title and full moral text.
 | fable_0299 | The Fox, The Rooster And The Dog | Those who try to deceive may expect to be paid in their own coin. |
 | fable_0315 | The Fox, The Donkey And The Lion | Traitors may expect treachery. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons. (Flag: fable_0041 and fable_0299 are story-level near-duplicates — fox tries to trick cock/rooster but bird uses dog against fox — worth re-checking the near-duplicate detection pipeline.)
 
 ---
 
@@ -185,9 +205,9 @@ title and full moral text.
 | fable_0108 | The Two Pots | The strong and the weak cannot keep company. |
 | fable_0665 | A Lion and a Mouse | Unequal matches bring misery. |
 
-**Note:** fable_0107 and fable_0108 appear to be two versions of the same fable (same title). Check whether they should be an exact cluster.
+**Note:** fable_0107 and fable_0108 appear to be two versions of the same fable (same title). Check whether they should be an exact cluster. **Confirmed same story (earthen + brass pot in river); converse paraphrased morals. Should be merged as a `near`-cluster pair in the existing typology.**
 
-**Decision:**
+**Decision:** ❌ Do not create thematic cluster. All 3 kept as singletons. (Flag: fable_0107 + fable_0108 should still be merged as a `near`-cluster pair via the near-duplicate pipeline.)
 
 ---
 
@@ -200,7 +220,7 @@ title and full moral text.
 | fable_0287 | The Old Woman And Her Doctor | Few things are done except for profit. |
 | fable_0492 | The Statue Of Hermes And The Treasure | People adjust their beliefs based on what is profitable for them. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons.
 
 ---
 
@@ -213,7 +233,8 @@ title and full moral text.
 | fable_0394 | Hermes And The Earth | Easy gains often come with hidden costs and hardships. |
 | fable_0518 | The Young Man And The Prostitute | The things which bring us pleasure can often be hazardous as well. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons.
+- Proposed theme is a post-hoc generalization; each fable makes a distinct claim. 0208 = *deceptive lures from others* (deceiver present); 0394 = *no free lunch* (intrinsic cost, no deceiver); 0518 = *pleasure is hazardous* (self-knowing indulgence). Three different cognitive structures — clustering would be surface-grouping by the word "pleasant."
 
 ---
 
@@ -227,7 +248,10 @@ title and full moral text.
 | fable_0569 | Zeus and Apollo, A Contest in Archery | Wit outshines skill. |
 | fable_0682 | A Fox and a Hare | Wisdom is far superior to strength. |
 
-**Decision:**
+**Decision:** ✂ Pair + 2 singletons. Split by *applied situation* (offensive vs defensive cunning).
+- ✅ Cluster `cunning_escapes_strength` (2): fable_0512, fable_0682 — defensive cunning: weaker prey uses cleverness to escape stronger predator.
+- ❌ fable_0275 — keep singleton. Offensive cunning: trickster steals spoils from stronger party (different transaction, not survival).
+- ❌ fable_0569 — keep singleton. Peer wit-vs-*skill* contest (not weak-vs-strong); no survival/threat dynamic.
 
 ---
 
@@ -240,7 +264,7 @@ title and full moral text.
 | fable_0195 | The Bees And The Beetles | What is valued in one group may be dismissed by another. |
 | fable_0289 | The Donkey, The Dog And The Letter | Different people are interested in different things. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. All 3 kept as singletons.
 
 ---
 
@@ -253,9 +277,11 @@ title and full moral text.
 | fable_0469 | The Two Soldiers And The Robber | Courage in words means nothing if you flee in danger. |
 | fable_0523 | The Sheep, The Goat And The Sow | It is easy to be brave when there is no danger. |
 
-**Note:** Could alternatively expand the existing `deeds_not_words` cluster (currently fable_0499 + fable_0534) rather than creating a new cluster.
+**Note:** Could alternatively expand the existing `deeds_not_words` cluster (currently fable_0499 + fable_0534) rather than creating a new cluster. **Decided against** — existing cluster is a tight `near` paraphrase of general "deeds > words"; mixing in bravery-specific morals would loosen it.
 
-**Decision:**
+**Decision:** ✂ Pair + singleton. Split by *timing/structure of false-courage display*.
+- ✅ Cluster `bravery_in_safety_is_cheap` (2): fable_0469, fable_0523 — performing/showing courage when there's no personal threat (post-danger boast / untested calm). Story-level emphasis of 0469 (sword-drawing after robber leaves) maps directly onto 0523's schema.
+- ❌ fable_0061 — keep singleton. Different timing: *bravado before testing, cowardice when tested* (no post-danger safe-performance phase).
 
 ---
 
@@ -271,9 +297,9 @@ title and full moral text.
 | fable_0141 | The Magpie And Her Tail | Changing your location does not change your state of mind. |
 | fable_0463 | The Raven, The Stork And His Beak | A change of place does not make you a saint. |
 
-**Note:** Could absorb into existing `innate_nature_unchangeable` cluster instead.
+**Note:** Could absorb into existing `innate_nature_unchangeable` cluster instead. **Decided against.**
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. Both kept as singletons.
 
 ---
 
@@ -285,7 +311,7 @@ title and full moral text.
 | fable_0388 | The Lion And The Frog | Imaginary fears are the worst. |
 | fable_0652 | The Birds and Beetles | Many people fear danger where there is none, and feel safe where there is danger: put things in perspective. |
 
-**Decision:**
+**Decision:** ✅ Create cluster `imaginary_fears` (2): fable_0388, fable_0652 — fear of non-existent / harmless dangers; misjudging the real threat level. Both stories share the schema *creature paralyzed by fear of something that turns out to be harmless*.
 
 ---
 
@@ -297,7 +323,7 @@ title and full moral text.
 | fable_0502 | The Bulls And The Wagon | They complain most who suffer least. |
 | fable_0693 | A Creaking Wheel | Complaining is the privilege of the weak. |
 
-**Decision:**
+**Decision:** ❌ Do not create cluster. Both kept as singletons. (Flag: stories are structurally near-duplicates — creaking part complains while harder-working silent parts bear the load. Worth a story-level near-duplicate check.)
 
 ---
 
@@ -316,7 +342,8 @@ These 3 candidates are about learning from *your own* experience — decide whet
 | fable_0232 | The Butcher And The Dog | Experience teaches valuable lessons and encourages caution. |
 | fable_0700 | A Lad Robbing an Orchard | Those who won't learn from advice must be taught by experience. |
 
-**Decision:**
+**Decision:** ❌ Keep existing `learn_from_misfortunes` cluster as-is. All 3 candidates kept as singletons.
+- Existing cluster is tightly about *vicarious* learning (observing others' misfortunes). Candidates are about *direct/own* experience — a different proposition. Merging would dilute the existing `near` cluster's tightness.
 
 ---
 
