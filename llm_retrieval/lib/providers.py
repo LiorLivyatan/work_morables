@@ -15,7 +15,8 @@ def make_agno_model(model_cfg: dict):
 
     if provider == "google":
         from agno.models.google import Gemini
-        return Gemini(id=model_id)
+        api_key = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
+        return Gemini(id=model_id, api_key=api_key)
 
     if provider == "openrouter":
         from agno.models.openai.like import OpenAILike
