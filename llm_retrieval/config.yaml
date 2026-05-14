@@ -1,0 +1,130 @@
+top_k: 10
+test_sizes: [50, 100, 200]  # --test N accepts any integer; these are documented suggestions
+
+# ── Prompt variants ──────────────────────────────────────────────────────────
+prompt_variants:
+
+  - label: minimal
+    system: "You are a retrieval system. Return only the requested JSON."
+    user_template: |
+      Moral: {moral}
+
+      Corpus:
+      {corpus}
+
+      Return a JSON array of the {top_k} fable IDs most relevant to this moral, ranked by relevance. IDs are in the format fable_XXXX.
+
+  - label: detailed
+    system: "You are an expert in literature and moral philosophy. Your task is to identify which fables best illustrate a given moral lesson."
+    user_template: |
+      A fable 'conveys' a moral when the story's lesson, theme, or implicit message aligns with the stated moral.
+
+      Moral: {moral}
+
+      Below is a corpus of fables. Read them and identify which best convey the given moral.
+
+      Corpus:
+      {corpus}
+
+      Return a JSON array of the {top_k} fable IDs that best convey this moral, ranked from most to least relevant. IDs are in the format fable_XXXX.
+
+  - label: cot
+    system: "You are an expert in literature and moral philosophy."
+    user_template: |
+      Consider the following moral:
+
+      {moral}
+
+      Below is a corpus of fables. Think step by step:
+      1. What is the core teaching of this moral?
+      2. What story elements would best convey this teaching?
+      3. Which fables in the corpus match these elements most closely?
+
+      Corpus:
+      {corpus}
+
+      After reasoning, return a JSON array of the {top_k} fable IDs that best convey this moral, ranked from most to least relevant. IDs are in the format fable_XXXX.
+
+# ── Models ───────────────────────────────────────────────────────────────────
+models:
+
+  # OpenAI
+  - alias: GPT-4o-mini
+    id: gpt-4o-mini
+    provider: openai
+    concurrency: 20
+
+  - alias: GPT-4o
+    id: gpt-4o
+    provider: openai
+    concurrency: 10
+
+  - alias: GPT-5.5
+    id: gpt-5.5
+    provider: openai
+    concurrency: 5
+
+  # OpenAI OSS (via OpenRouter free tier, 131K ctx — monitor for overflow)
+  - alias: GPT-OSS-20B
+    id: openai/gpt-oss-20b:free
+    provider: openrouter
+    concurrency: 10
+
+  - alias: GPT-OSS-120B
+    id: openai/gpt-oss-120b:free
+    provider: openrouter
+    concurrency: 5
+
+  # Anthropic
+  - alias: Claude-Haiku
+    id: claude-haiku-4-5-20251001
+    provider: anthropic
+    concurrency: 10
+
+  - alias: Claude-Sonnet
+    id: claude-sonnet-4-6
+    provider: anthropic
+    concurrency: 5
+
+  - alias: Claude-Opus
+    id: claude-opus-4-7
+    provider: anthropic
+    concurrency: 3
+
+  # Google
+  - alias: Gemini-2.5-Pro
+    id: gemini-2.5-pro
+    provider: google
+    concurrency: 5
+
+  - alias: Gemini-3-Flash
+    id: gemini-3-flash
+    provider: google
+    concurrency: 10
+
+  - alias: Gemini-3.1-Pro
+    id: gemini-3.1-pro
+    provider: google
+    concurrency: 5
+
+  # OpenRouter — Qwen
+  - alias: Qwen3.5-Flash
+    id: qwen/qwen3.5-flash
+    provider: openrouter
+    concurrency: 10
+
+  - alias: Qwen3.6-Plus
+    id: qwen/qwen3.6-plus
+    provider: openrouter
+    concurrency: 5
+
+  - alias: Qwen3.6-27B
+    id: qwen/qwen3.6-27b
+    provider: openrouter
+    concurrency: 5
+
+  # OpenRouter — Meta
+  - alias: Llama-4-Scout
+    id: meta-llama/Llama-4-Scout-17B-Instruct
+    provider: openrouter
+    concurrency: 10
