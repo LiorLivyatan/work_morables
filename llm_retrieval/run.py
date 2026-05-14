@@ -83,7 +83,15 @@ async def run_one_query(
         t0 = time.monotonic()
         try:
             response = await agent.arun(user)
-            ranked_ids = response.content.ids[:top_k]
+            content = response.content
+            if isinstance(content, RankedFables):
+                ranked_ids = content.ids[:top_k]
+            elif isinstance(content, dict):
+                ranked_ids = content.get("ids", [])[:top_k]
+            else:
+                import json as _json
+                parsed = _json.loads(str(content))
+                ranked_ids = parsed.get("ids", [])[:top_k]
         except Exception as exc:
             print(f"  [WARN] {query['moral_id']} failed: {exc}")
             ranked_ids = []
@@ -122,8 +130,7 @@ async def run_model_variant(
     agent = Agent(
         model=model,
         instructions=variant_cfg["system"],
-        response_model=RankedFables,
-        add_history_to_messages=False,
+        output_schema=RankedFables,
         stream=False,
     )
     sem = asyncio.Semaphore(model_cfg.get("concurrency", 5))
