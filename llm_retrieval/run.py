@@ -181,7 +181,10 @@ def main():
     queries = load_queries(args.test)
     print(f"Loaded {len(queries)} queries")
 
+    import random
     fables = json.loads(FABLES_PATH.read_text())
+    random.seed(42)
+    random.shuffle(fables)
     corpus_block = build_corpus_block(fables)
     print(f"Corpus block: {len(corpus_block):,} chars (~{len(corpus_block)//4:,} tokens)")
 
