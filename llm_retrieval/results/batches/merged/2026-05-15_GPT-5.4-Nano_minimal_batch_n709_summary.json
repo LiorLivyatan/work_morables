@@ -1,0 +1,16 @@
+{
+  "run_date": "2026-05-15",
+  "model_alias": "GPT-5.4-Nano",
+  "model_id": "gpt-5.4-nano",
+  "provider": "openai_batch",
+  "variant_label": "minimal",
+  "n_queries": 709,
+  "MRR@10": 0.0855,
+  "R@1": 0.055,
+  "R@5": 0.1312,
+  "R@10": 0.1566,
+  "NDCG@10": 0.1024,
+  "Mean_Rank": 3.2,
+  "Median_Rank": 2,
+  "avg_latency_s": 0
+}

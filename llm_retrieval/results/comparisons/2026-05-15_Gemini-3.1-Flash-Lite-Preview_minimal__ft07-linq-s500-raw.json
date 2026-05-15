@@ -1,0 +1,12 @@
+{
+  "label": "ft07-linq-s500-raw",
+  "matched_llm_run": "llm_retrieval/results/runs/2026-05-15_Gemini-3.1-Flash-Lite-Preview_minimal.csv",
+  "n_queries": 50,
+  "MRR@10": 0.36754761904761907,
+  "R@1": 0.22,
+  "R@5": 0.58,
+  "R@10": 0.7,
+  "NDCG@10": 0.44709776392093614,
+  "Mean_Rank": 25.32,
+  "Median_Rank": 4.0
+}

@@ -92,3 +92,5 @@ finetuning/*/*/results/models_original/
 # LLM Retrieval experiment results (regeneratable)
 llm_retrieval/results/runs/*.csv
 llm_retrieval/results/unified.csv
+llm_retrieval/results/batches/**/input*.jsonl
+llm_retrieval/results/batches/**/output*.jsonl

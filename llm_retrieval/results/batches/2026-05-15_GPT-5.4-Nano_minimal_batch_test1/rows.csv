@@ -1,0 +1,2 @@
+moral_id,moral_text,relevant_fable,ranked_ids,reciprocal_rank,r_at_1,r_at_5,r_at_10,ndcg_at_10,rank,latency_s
+moral_0000,Gratitude is the sign of noble souls.,fable_0000,fable_0568|fable_0650|fable_0430|fable_0146|fable_0634|fable_0285|fable_0694|fable_0463|fable_0357|fable_0399,0.0,0.0,0.0,0.0,0.0,,0.0

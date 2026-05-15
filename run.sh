@@ -162,6 +162,7 @@ rsync_to \
   --exclude='finetuning/*/cache/models/' \
   --exclude='finetuning/*/cache/checkpoints/' \
   --exclude='finetuning/*/cache/embeddings/' \
+  --exclude='finetuning/ft_10_idiolink_transfer/' \
   --exclude='.claude/' \
   "$PROJECT_ROOT/" \
   "$GPU_USER@$GPU_HOST:$REMOTE_DIR/"

@@ -1,0 +1,114 @@
+[
+  {
+    "part": 0,
+    "input_path": "/Users/liorlivyatan/LocalProjects/Thesis/work_morables/llm_retrieval/results/batches/2026-05-15_GPT-5.4-Nano_minimal_batch_n709/input_000.jsonl",
+    "input_file_id": "file-Dz19aEoyn3LxQxWgf2pw5f",
+    "batch_id": "batch_6a076f2a686c8190ad342365fdb2ba9f",
+    "status": "failed",
+    "batch": {
+      "id": "batch_6a076f2a686c8190ad342365fdb2ba9f",
+      "completion_window": "24h",
+      "created_at": 1778872106,
+      "endpoint": "/v1/chat/completions",
+      "input_file_id": "file-Dz19aEoyn3LxQxWgf2pw5f",
+      "object": "batch",
+      "status": "failed",
+      "cancelled_at": null,
+      "cancelling_at": null,
+      "completed_at": null,
+      "error_file_id": null,
+      "errors": {
+        "data": [
+          {
+            "code": "token_limit_exceeded",
+            "line": null,
+            "message": "Enqueued token limit reached for gpt-5.4-nano in organization org-8o6UdFhWYvGEbbNX0JtavIBt. Limit: 40,000,000 enqueued tokens. Please try again once some in_progress batches have been completed.",
+            "param": null
+          }
+        ],
+        "object": "list"
+      },
+      "expired_at": null,
+      "expires_at": 1778958506,
+      "failed_at": 1778872180,
+      "finalizing_at": null,
+      "in_progress_at": null,
+      "metadata": {
+        "experiment": "llm_retrieval",
+        "variant": "minimal",
+        "test_n": "709",
+        "part": "0",
+        "n_parts": "2"
+      },
+      "model": "gpt-5.4-nano-2026-03-17",
+      "output_file_id": null,
+      "request_counts": {
+        "completed": 0,
+        "failed": 0,
+        "total": 0
+      },
+      "usage": {
+        "input_tokens": 0,
+        "input_tokens_details": {
+          "cached_tokens": 0
+        },
+        "output_tokens": 0,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 0
+      }
+    }
+  },
+  {
+    "part": 1,
+    "input_path": "/Users/liorlivyatan/LocalProjects/Thesis/work_morables/llm_retrieval/results/batches/2026-05-15_GPT-5.4-Nano_minimal_batch_n709/input_001.jsonl",
+    "input_file_id": "file-KqQ3mq4aLcahMhbLg1ebr4",
+    "batch_id": "batch_6a076f61560c8190a05a3631b3a3f47a",
+    "status": "completed",
+    "batch": {
+      "id": "batch_6a076f61560c8190a05a3631b3a3f47a",
+      "completion_window": "24h",
+      "created_at": 1778872161,
+      "endpoint": "/v1/chat/completions",
+      "input_file_id": "file-KqQ3mq4aLcahMhbLg1ebr4",
+      "object": "batch",
+      "status": "completed",
+      "cancelled_at": null,
+      "cancelling_at": null,
+      "completed_at": 1778872494,
+      "error_file_id": null,
+      "errors": null,
+      "expired_at": null,
+      "expires_at": 1778958561,
+      "failed_at": null,
+      "finalizing_at": 1778872467,
+      "in_progress_at": 1778872225,
+      "metadata": {
+        "experiment": "llm_retrieval",
+        "variant": "minimal",
+        "test_n": "709",
+        "part": "1",
+        "n_parts": "2"
+      },
+      "model": "gpt-5.4-nano-2026-03-17",
+      "output_file_id": "file-LYcDNAk9JLqhu6vkAeT1A1",
+      "request_counts": {
+        "completed": 287,
+        "failed": 0,
+        "total": 287
+      },
+      "usage": {
+        "input_tokens": 29583240,
+        "input_tokens_details": {
+          "cached_tokens": 102144
+        },
+        "output_tokens": 20951,
+        "output_tokens_details": {
+          "reasoning_tokens": 0
+        },
+        "total_tokens": 29604191
+      }
+    }
+  }
+]

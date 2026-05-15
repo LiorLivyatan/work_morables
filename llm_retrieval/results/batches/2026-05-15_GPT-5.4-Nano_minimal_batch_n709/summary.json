@@ -1,0 +1,19 @@
+{
+  "run_date": "2026-05-15",
+  "provider": "openai_batch",
+  "variant_label": "minimal",
+  "MRR@10": 0.09162795199380565,
+  "R@1": 0.06620209059233449,
+  "R@5": 0.12195121951219512,
+  "R@10": 0.15331010452961671,
+  "NDCG@10": 0.10608145190535725,
+  "Mean_Rank": 3.3181818181818183,
+  "Median_Rank": 2.0,
+  "n_queries": 287,
+  "batch_ids": [
+    "batch_6a076f2a686c8190ad342365fdb2ba9f",
+    "batch_6a076f61560c8190a05a3631b3a3f47a"
+  ],
+  "n_completed_batches": 1,
+  "n_total_batches": 2
+}

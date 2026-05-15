@@ -2,6 +2,8 @@ top_k: 10
 test_sizes: [50, 100, 200]  # --test N accepts any integer; these are documented suggestions
 
 # ── Prompt variants ──────────────────────────────────────────────────────────
+# Operational default: use `minimal` for future LLM retrieval runs. The other
+# variants are retained for historical reproducibility only.
 prompt_variants:
 
   - label: minimal
@@ -59,6 +61,11 @@ models:
     provider: openai
     concurrency: 10
 
+  - alias: GPT-5.4-Nano
+    id: gpt-5.4-nano
+    provider: openai
+    concurrency: 10
+
   - alias: GPT-5.5
     id: gpt-5.5
     provider: openai
@@ -99,6 +106,11 @@ models:
 
   - alias: Gemini-3-Flash
     id: gemini-3-flash
+    provider: google
+    concurrency: 10
+
+  - alias: Gemini-3.1-Flash-Lite-Preview
+    id: gemini-3.1-flash-lite-preview
     provider: google
     concurrency: 10
 
