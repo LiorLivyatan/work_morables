@@ -1,0 +1,45 @@
+{
+  "run_date": "2026-05-16",
+  "model_alias": "Gemini-3.1-Flash-Lite-Preview",
+  "model_id": "gemini-3.1-flash-lite-preview",
+  "name": "batches/ak7ddata12t1gr8jukm57p36sw6inyy6y21m",
+  "uploaded_file": "files/ddi4agqg9ugm",
+  "initial": {
+    "name": "batches/ak7ddata12t1gr8jukm57p36sw6inyy6y21m",
+    "display_name": "2026-05-16_Gemini-3.1-Flash-Lite-Preview_minimal_batch_n1",
+    "state": "JOB_STATE_PENDING",
+    "error": null,
+    "create_time": "2026-05-15T21:08:34.137871Z",
+    "start_time": null,
+    "end_time": null,
+    "update_time": "2026-05-15T21:08:34.137871Z",
+    "model": "models/gemini-3.1-flash-lite-preview",
+    "src": null,
+    "dest": null,
+    "completion_stats": null,
+    "output_info": null
+  },
+  "latest": {
+    "name": "batches/ak7ddata12t1gr8jukm57p36sw6inyy6y21m",
+    "display_name": "2026-05-16_Gemini-3.1-Flash-Lite-Preview_minimal_batch_n1",
+    "state": "JOB_STATE_SUCCEEDED",
+    "error": null,
+    "create_time": "2026-05-15T21:08:34.137871Z",
+    "start_time": null,
+    "end_time": "2026-05-15T21:14:28.356993Z",
+    "update_time": "2026-05-15T21:14:28.356993Z",
+    "model": "models/gemini-3.1-flash-lite-preview",
+    "src": null,
+    "dest": {
+      "format": null,
+      "gcs_uri": null,
+      "bigquery_uri": null,
+      "file_name": "files/batch-ak7ddata12t1gr8jukm57p36sw6inyy6y21m",
+      "inlined_responses": null,
+      "inlined_embed_content_responses": null,
+      "vertex_dataset": null
+    },
+    "completion_stats": null,
+    "output_info": null
+  }
+}

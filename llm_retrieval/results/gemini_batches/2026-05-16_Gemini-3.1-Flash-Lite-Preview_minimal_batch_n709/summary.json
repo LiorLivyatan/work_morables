@@ -1,0 +1,18 @@
+{
+  "run_date": "2026-05-16",
+  "model_alias": "Gemini-3.1-Flash-Lite-Preview",
+  "model_id": "gemini-3.1-flash-lite-preview",
+  "provider": "google_batch",
+  "variant_label": "minimal",
+  "n_queries": 709,
+  "MRR@10": 0.1162,
+  "R@1": 0.0748,
+  "R@5": 0.1664,
+  "R@10": 0.2426,
+  "NDCG@10": 0.1455,
+  "Mean_Rank": 4.0,
+  "Median_Rank": 3.0,
+  "avg_latency_s": 0,
+  "batch_name": "batches/e2wxpcvlzkmyzx2ojerafywjx0vzbqciqg2x",
+  "result_file_name": "files/batch-e2wxpcvlzkmyzx2ojerafywjx0vzbqciqg2x"
+}

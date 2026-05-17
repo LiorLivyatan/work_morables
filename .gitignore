@@ -94,3 +94,5 @@ llm_retrieval/results/runs/*.csv
 llm_retrieval/results/unified.csv
 llm_retrieval/results/batches/**/input*.jsonl
 llm_retrieval/results/batches/**/output*.jsonl
+llm_retrieval/results/gemini_batches/**/input*.jsonl
+llm_retrieval/results/gemini_batches/**/output*.jsonl
