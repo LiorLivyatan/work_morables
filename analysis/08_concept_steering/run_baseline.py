@@ -12,8 +12,8 @@ from datetime import datetime
 
 EXP_DIR = Path(__file__).resolve().parent
 ROOT    = EXP_DIR.parent.parent
-sys.path.insert(0, str(EXP_DIR))
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(EXP_DIR))
 
 import numpy as np
 

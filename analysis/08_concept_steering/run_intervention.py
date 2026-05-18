@@ -18,8 +18,8 @@ import numpy as np
 
 EXP_DIR = Path(__file__).resolve().parent
 ROOT    = EXP_DIR.parent.parent
-sys.path.insert(0, str(EXP_DIR))
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(EXP_DIR))
 
 from finetuning.lib import notify
 from lib.config import load_config
