@@ -56,7 +56,7 @@ def _detect_pooling(st_model: SentenceTransformer) -> str:
         raise RuntimeError("Could not find pooling module — unexpected SentenceTransformer architecture")
     # Try common attribute names used by SentenceTransformers Pooling module
     for attr, kind in (
-        ("pooling_mode_lasttoken_token", "last_token"),
+        ("pooling_mode_lasttoken",       "last_token"),
         ("pooling_mode_mean_tokens",     "mean"),
         ("pooling_mode_cls_token",       "cls"),
     ):
