@@ -5,6 +5,7 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.parent
 DATA_DIR = ROOT_DIR / "data" / "processed"
+CLUSTERED_DATA_DIR = ROOT_DIR / "data" / "clustered"
 
 
 def load_fables() -> list[dict]:
@@ -57,5 +58,49 @@ def load_moral_to_fable_retrieval_data():
     moral_texts = [morals[i]["text"] for i in moral_indices]
     # Ground truth with contiguous 0-based query indices
     ground_truth = {i: gt_m2f[idx] for i, idx in enumerate(moral_indices)}
+
+    return fable_texts, moral_texts, ground_truth
+
+
+def load_clustered_fables() -> list[dict]:
+    """Load clustered benchmark fable corpus. Same 709 docs as processed data."""
+    with open(CLUSTERED_DATA_DIR / "fables_corpus.json") as f:
+        return json.load(f)
+
+
+def load_unique_morals() -> list[dict]:
+    """Load unique moral query corpus. Each entry has doc_id, text, cluster_id."""
+    with open(CLUSTERED_DATA_DIR / "morals_unique_corpus.json") as f:
+        return json.load(f)
+
+
+def load_qrels_moral_to_fable_clustered() -> dict[int, set[int]]:
+    """Load clustered qrels as {unique_moral_idx: {relevant_fable_idx, ...}}."""
+    with open(CLUSTERED_DATA_DIR / "qrels_moral_to_fable_clustered.json") as f:
+        qrels = json.load(f)
+
+    result: dict[int, set[int]] = {}
+    for q in qrels:
+        query_idx = int(q["query_id"].split("_")[-1])
+        fable_idx = int(q["doc_id"].split("_")[1])
+        result.setdefault(query_idx, set()).add(fable_idx)
+    return result
+
+
+def load_clustered_moral_to_fable_retrieval_data():
+    """
+    Convenience loader for the clustered moral-to-fable retrieval setup.
+
+    Returns:
+        fable_texts: list[str] — 709 fable texts
+        moral_texts: list[str] — 669 unique moral query texts
+        ground_truth: dict[int, set[int]] — multi-label relevant fable indices
+    """
+    fables = load_clustered_fables()
+    morals = load_unique_morals()
+    ground_truth = load_qrels_moral_to_fable_clustered()
+
+    fable_texts = [f["text"] for f in fables]
+    moral_texts = [m["text"] for m in morals]
 
     return fable_texts, moral_texts, ground_truth

@@ -92,8 +92,7 @@
     "cluster_id": "content_with_lot",
     "moral_set": [
       "Be content with your lot; one cannot be first in everything.",
-      "Be content with your lot.",
-      "To be satisfied with one's lot is better than to desire something which one is not fitted to receive."
+      "Be content with your lot."
     ],
     "type": "near",
     "fables": [
@@ -101,7 +100,16 @@
       "fable_0270",
       "fable_0691",
       "fable_0696",
-      "fable_0318",
+      "fable_0318"
+    ]
+  },
+  {
+    "cluster_id": "satisfied_with_lot",
+    "moral_set": [
+      "To be satisfied with one's lot is better than to desire something which one is not fitted to receive."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0005"
     ]
   },
@@ -206,10 +214,7 @@
       "People who lay traps for others bring about their own destruction.",
       "Someone who plots against others falls into his own trap.",
       "Those who scheme against others may ultimately fall victim to their own plots.",
-      "When people plot against their neighbours, they fall victim to the same sort of plot themselves.",
-      "People who do harm to others destroy themselves in the bargain.",
-      "People often make plans that turn out to be to their own disadvantage.",
-      "Bad neighbours are the first to suffer from the harm they would do to others."
+      "When people plot against their neighbours, they fall victim to the same sort of plot themselves."
     ],
     "type": "near",
     "fables": [
@@ -218,9 +223,36 @@
       "fable_0317",
       "fable_0386",
       "fable_0402",
-      "fable_0140",
-      "fable_0390",
-      "fable_0435",
+      "fable_0140"
+    ]
+  },
+  {
+    "cluster_id": "harm_others_destroy_self",
+    "moral_set": [
+      "People who do harm to others destroy themselves in the bargain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0390"
+    ]
+  },
+  {
+    "cluster_id": "plans_own_disadvantage",
+    "moral_set": [
+      "People often make plans that turn out to be to their own disadvantage."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0435"
+    ]
+  },
+  {
+    "cluster_id": "bad_neighbours_suffer_harm",
+    "moral_set": [
+      "Bad neighbours are the first to suffer from the harm they would do to others."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0349"
     ]
   },
@@ -269,31 +301,63 @@
   {
     "cluster_id": "dont_trust_wicked",
     "moral_set": [
-      "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
       "Do not believe those who have ill intentions.",
       "The word of a wicked man can never be trusted.",
       "Never trust a known deceiver.",
       "One should never trust those with a history of deceit.",
-      "We should never put our trust in a wicked man, even if he seems to be completely innocuous.",
       "People with a history of wrongdoing are often not trusted.",
-      "Don't be seduced by deceptive words, they will cause nothing but trouble.",
-      "Beware of swindlers, as they often exploit the gullibility of others.",
-      "There is danger lurking in the words of a wicked person.",
-      "Believing your enemies makes you fall victim to their tricks and gets you into trouble."
+      "There is danger lurking in the words of a wicked person."
     ],
     "type": "near",
     "fables": [
-      "fable_0121",
       "fable_0291",
       "fable_0531",
       "fable_0594",
       "fable_0459",
-      "fable_0420",
-      "fable_0405",
       "fable_0344",
-      "fable_0261",
-      "fable_0255",
-      "fable_0297",
+      "fable_0297"
+    ]
+  },
+  {
+    "cluster_id": "dont_trust_enemy",
+    "moral_set": [
+      "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
+      "We should never put our trust in a wicked man, even if he seems to be completely innocuous."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0121",
+      "fable_0420",
+      "fable_0405"
+    ]
+  },
+  {
+    "cluster_id": "deceptive_words_trouble",
+    "moral_set": [
+      "Don't be seduced by deceptive words, they will cause nothing but trouble."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0261"
+    ]
+  },
+  {
+    "cluster_id": "beware_swindlers",
+    "moral_set": [
+      "Beware of swindlers, as they often exploit the gullibility of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0255"
+    ]
+  },
+  {
+    "cluster_id": "believing_enemies_trouble",
+    "moral_set": [
+      "Believing your enemies makes you fall victim to their tricks and gets you into trouble."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0229"
     ]
   },
@@ -302,14 +366,22 @@
     "moral_set": [
       "The greatest kindness will not bind the ungrateful.",
       "No gratitude from the wicked.",
-      "Expect no reward for serving the wicked.",
-      "Gratitude should be shown through kindness, not harm."
+      "Expect no reward for serving the wicked."
     ],
     "type": "near",
     "fables": [
       "fable_0034",
       "fable_0118",
-      "fable_0182",
+      "fable_0182"
+    ]
+  },
+  {
+    "cluster_id": "gratitude_kindness_not_harm",
+    "moral_set": [
+      "Gratitude should be shown through kindness, not harm."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0139"
     ]
   },
@@ -353,32 +425,56 @@
     "cluster_id": "be_yourself",
     "moral_set": [
       "Be yourself and don't pretend to be someone you're not.",
-      "Do not be what you are not, nor pretend to be what you are not.",
-      "Do not try to gain favor by acting in a way that is contrary to your own nature and character.",
-      "Don't deceive yourself."
+      "Do not be what you are not, nor pretend to be what you are not."
     ],
     "type": "near",
     "fables": [
       "fable_0485",
       "fable_0507",
-      "fable_0530",
-      "fable_0294",
+      "fable_0530"
+    ]
+  },
+  {
+    "cluster_id": "dont_act_against_nature",
+    "moral_set": [
+      "Do not try to gain favor by acting in a way that is contrary to your own nature and character."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0294"
+    ]
+  },
+  {
+    "cluster_id": "dont_deceive_yourself",
+    "moral_set": [
+      "Don't deceive yourself."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0571"
     ]
   },
   {
     "cluster_id": "innate_nature_unchangeable",
     "moral_set": [
-      "Some things you cannot change.",
       "Men often revert to their natural instincts.",
       "Change of habit cannot alter nature."
     ],
     "type": "near",
     "fables": [
-      "fable_0120",
-      "fable_0158",
       "fable_0028",
       "fable_0088"
+    ]
+  },
+  {
+    "cluster_id": "some_things_cannot_change",
+    "moral_set": [
+      "Some things you cannot change."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0120",
+      "fable_0158"
     ]
   },
   {
@@ -450,14 +546,22 @@
   {
     "cluster_id": "greed_misery",
     "moral_set": [
-      "A life of greed and hoarding wealth leads to misery.",
-      "Indulgence in luxuries can lead to peril."
+      "A life of greed and hoarding wealth leads to misery."
     ],
-    "type": "near",
+    "type": "exact",
     "fables": [
       "fable_0333",
       "fable_0707",
-      "fable_0305",
+      "fable_0305"
+    ]
+  },
+  {
+    "cluster_id": "luxuries_lead_to_peril",
+    "moral_set": [
+      "Indulgence in luxuries can lead to peril."
+    ],
+    "type": "singleton",
+    "fables": [
       "fable_0516"
     ]
   },
@@ -525,7 +629,6 @@
     "cluster_id": "not_judged_appearance",
     "moral_set": [
       "People are to be judged by their actions, not by their appearance.",
-      "People should not be judged by their appearances, but by their actions.",
       "True worth should be measured by character and deeds, not by outward appearances.",
       "Don't judge character by appearance."
     ],
@@ -5238,7 +5341,7 @@
     ],
     "moral_set": [
       "In avoiding a lesser danger, one may inadvertently fall into a greater peril.",
-      "When we are avoiding present dangers, we should not fall into even worse peril.",
+      "When we avoid present dangers, we must weigh the degree of danger of the alternatives",
       "Better to endure a small hardship than risk a greater one.",
       "Better to face a known danger than to trust a deceitful promise of safety."
     ]
@@ -5309,16 +5412,24 @@
       "fable_0235",
       "fable_0279",
       "fable_0332",
-      "fable_0404",
-      "fable_0298",
-      "fable_0347"
+      "fable_0404"
     ],
     "moral_set": [
       "People often grasp for more than they need and thus lose the little they have.",
       "People who grasp for more than they need are deprived of what they have.",
       "Those who are not content with what they have may end up losing it while pursuing greater desires.",
       "Greed for more can lead to losing what you already have.",
-      "People who grasp at more than they need lose the little that they held in their hands.",
+      "People who grasp at more than they need lose the little that they held in their hands."
+    ]
+  },
+  {
+    "cluster_id": "dont_grasp_too_much",
+    "type": "near",
+    "fables": [
+      "fable_0298",
+      "fable_0347"
+    ],
+    "moral_set": [
       "Do not grasp at more than you need.",
       "Do not try to grasp too much at once."
     ]
@@ -5337,15 +5448,31 @@
     "cluster_id": "repay_kindness",
     "type": "near",
     "fables": [
-      "fable_0250",
       "fable_0367",
-      "fable_0247",
+      "fable_0247"
+    ],
+    "moral_set": [
+      "We should do favours for someone who can do us a good deed in return.",
+      "Favor those who do you kindness."
+    ]
+  },
+  {
+    "cluster_id": "repay_favour_in_kind",
+    "type": "singleton",
+    "fables": [
+      "fable_0250"
+    ],
+    "moral_set": [
+      "Those who do you a favour you must repay kind."
+    ]
+  },
+  {
+    "cluster_id": "return_favors",
+    "type": "singleton",
+    "fables": [
       "fable_0146"
     ],
     "moral_set": [
-      "Those who do you a favour you must repay kind.",
-      "We should do favours for someone who can do us a good deed in return.",
-      "Favor those who do you kindness.",
       "Return favors and favors will be bestowed on you."
     ]
   },

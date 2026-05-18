@@ -1,0 +1,3342 @@
+[
+  {
+    "query_id": "moral_unique_0000",
+    "text": "Gratitude is the sign of noble souls.",
+    "cluster_id": "singleton_0000"
+  },
+  {
+    "query_id": "moral_unique_0001",
+    "text": "Appearances are deceptive.",
+    "cluster_id": "appearances_deceptive"
+  },
+  {
+    "query_id": "moral_unique_0002",
+    "text": "There's a time for work and a time for play.",
+    "cluster_id": "work_and_play"
+  },
+  {
+    "query_id": "moral_unique_0003",
+    "text": "In quarreling about the shadow we often lose the substance.",
+    "cluster_id": "singleton_0003"
+  },
+  {
+    "query_id": "moral_unique_0004",
+    "text": "Men often bear little grievances with less courage than they do large misfortunes.",
+    "cluster_id": "singleton_0004"
+  },
+  {
+    "query_id": "moral_unique_0005",
+    "text": "To be satisfied with one's lot is better than to desire something which one is not fitted to receive.",
+    "cluster_id": "satisfied_with_lot"
+  },
+  {
+    "query_id": "moral_unique_0006",
+    "text": "Clumsy jesting is no joke.",
+    "cluster_id": "singleton_0006"
+  },
+  {
+    "query_id": "moral_unique_0007",
+    "text": "An ounce of prevention is worth a pound of cure.",
+    "cluster_id": "singleton_0007"
+  },
+  {
+    "query_id": "moral_unique_0008",
+    "text": "Fine clothes may disguise, but silly words will disclose a fool.",
+    "cluster_id": "disguise_reveals_fool"
+  },
+  {
+    "query_id": "moral_unique_0009",
+    "text": "Wit always has an answer ready.",
+    "cluster_id": "wit_answer"
+  },
+  {
+    "query_id": "moral_unique_0010",
+    "text": "Vices are their own punishment.",
+    "cluster_id": "vices_punishment"
+  },
+  {
+    "query_id": "moral_unique_0011",
+    "text": "It's good to be able to laugh at yourself.",
+    "cluster_id": "singleton_0011"
+  },
+  {
+    "query_id": "moral_unique_0012",
+    "text": "You will only injure yourself if you take notice of despicable enemies.",
+    "cluster_id": "singleton_0012"
+  },
+  {
+    "query_id": "moral_unique_0013",
+    "text": "He that is neither one thing nor the other has no friends.",
+    "cluster_id": "neither_one_thing"
+  },
+  {
+    "query_id": "moral_unique_0014",
+    "text": "Misfortune tests the sincerity of friends.",
+    "cluster_id": "adversity_reveals_friends"
+  },
+  {
+    "query_id": "moral_unique_0015",
+    "text": "It is easy to propose impossible remedies.",
+    "cluster_id": "singleton_0015"
+  },
+  {
+    "query_id": "moral_unique_0016",
+    "text": "Each member in his proper sphere must work for the common good.",
+    "cluster_id": "singleton_0016"
+  },
+  {
+    "query_id": "moral_unique_0017",
+    "text": "Necessity knows no law.",
+    "cluster_id": "singleton_0017"
+  },
+  {
+    "query_id": "moral_unique_0018",
+    "text": "Be on guard against men who can strike from a distance.",
+    "cluster_id": "singleton_0018"
+  },
+  {
+    "query_id": "moral_unique_0019",
+    "text": "Do not attempt too much at once.",
+    "cluster_id": "grasp_for_more"
+  },
+  {
+    "query_id": "moral_unique_0020",
+    "text": "One man's pleasure may be another's pain.",
+    "cluster_id": "singleton_0020"
+  },
+  {
+    "query_id": "moral_unique_0021",
+    "text": "Whatever you do, do with all your might.",
+    "cluster_id": "singleton_0021"
+  },
+  {
+    "query_id": "moral_unique_0022",
+    "text": "Men often applaud an imitation and hiss the real thing.",
+    "cluster_id": "singleton_0022"
+  },
+  {
+    "query_id": "moral_unique_0023",
+    "text": "Nature reveals itself.",
+    "cluster_id": "nature_reveals"
+  },
+  {
+    "query_id": "moral_unique_0024",
+    "text": "He who is once deceived is doubly cautious.",
+    "cluster_id": "singleton_0025"
+  },
+  {
+    "query_id": "moral_unique_0025",
+    "text": "Precious things are for those that can prize them.",
+    "cluster_id": "value_wasted_on_unappreciative"
+  },
+  {
+    "query_id": "moral_unique_0026",
+    "text": "Little by little does the trick.",
+    "cluster_id": "slow_steady_wins"
+  },
+  {
+    "query_id": "moral_unique_0027",
+    "text": "Men often revert to their natural instincts.",
+    "cluster_id": "innate_nature_unchangeable"
+  },
+  {
+    "query_id": "moral_unique_0028",
+    "text": "Those who enter by the back stairs may expect to be shown out at the window.",
+    "cluster_id": "singleton_0029"
+  },
+  {
+    "query_id": "moral_unique_0029",
+    "text": "People often grudge others what they cannot enjoy themselves.",
+    "cluster_id": "dog_in_manger"
+  },
+  {
+    "query_id": "moral_unique_0030",
+    "text": "He who covets what belongs to another, deservedly loses his own.",
+    "cluster_id": "singleton_0031"
+  },
+  {
+    "query_id": "moral_unique_0031",
+    "text": "How often do we supply our enemies with the means of our own destruction.",
+    "cluster_id": "singleton_0032"
+  },
+  {
+    "query_id": "moral_unique_0032",
+    "text": "If words suffice not, blows must follow.",
+    "cluster_id": "singleton_0033"
+  },
+  {
+    "query_id": "moral_unique_0033",
+    "text": "The greatest kindness will not bind the ungrateful.",
+    "cluster_id": "ungrateful_wicked"
+  },
+  {
+    "query_id": "moral_unique_0034",
+    "text": "Birds of a feather flock together.",
+    "cluster_id": "company_you_keep"
+  },
+  {
+    "query_id": "moral_unique_0035",
+    "text": "A little thing in hand is worth more than a great thing in prospect.",
+    "cluster_id": "bird_in_hand"
+  },
+  {
+    "query_id": "moral_unique_0036",
+    "text": "To do the right thing at the right season is a great art.",
+    "cluster_id": "singleton_0037"
+  },
+  {
+    "query_id": "moral_unique_0037",
+    "text": "Union is strength.",
+    "cluster_id": "union_strength"
+  },
+  {
+    "query_id": "moral_unique_0038",
+    "text": "It is foolish to expect help from someone who is naturally unkind.",
+    "cluster_id": "singleton_0039"
+  },
+  {
+    "query_id": "moral_unique_0039",
+    "text": "Better one safe way than a hundred on which you cannot reckon.",
+    "cluster_id": "singleton_0040"
+  },
+  {
+    "query_id": "moral_unique_0040",
+    "text": "Cunning often outwits itself.",
+    "cluster_id": "singleton_0041"
+  },
+  {
+    "query_id": "moral_unique_0041",
+    "text": "Do unto others what you would have them do unto you.",
+    "cluster_id": "what_you_do"
+  },
+  {
+    "query_id": "moral_unique_0042",
+    "text": "Flatterers are not to be trusted.",
+    "cluster_id": "flatters_not_trusted"
+  },
+  {
+    "query_id": "moral_unique_0043",
+    "text": "Do not trust flatterers.",
+    "cluster_id": "flatters_not_trusted"
+  },
+  {
+    "query_id": "moral_unique_0044",
+    "text": "Look before you leap.",
+    "cluster_id": "look_before_leap"
+  },
+  {
+    "query_id": "moral_unique_0045",
+    "text": "Consider carefully before changing your situation.",
+    "cluster_id": "deliberate_before_committing"
+  },
+  {
+    "query_id": "moral_unique_0046",
+    "text": "There is as much malice in a wink as in a word.",
+    "cluster_id": "singleton_0047"
+  },
+  {
+    "query_id": "moral_unique_0047",
+    "text": "Better no rule than cruel rule.",
+    "cluster_id": "singleton_0048"
+  },
+  {
+    "query_id": "moral_unique_0048",
+    "text": "Old friends should not be sacrificed for new ones.",
+    "cluster_id": "old_friends"
+  },
+  {
+    "query_id": "moral_unique_0049",
+    "text": "Greed often overreaches itself.",
+    "cluster_id": "greed_overreaches"
+  },
+  {
+    "query_id": "moral_unique_0050",
+    "text": "Necessity is our strongest weapon.",
+    "cluster_id": "singleton_0051"
+  },
+  {
+    "query_id": "moral_unique_0051",
+    "text": "There is always someone worse off than yourself.",
+    "cluster_id": "same_worse_off"
+  },
+  {
+    "query_id": "moral_unique_0052",
+    "text": "He that has many friends, has no friends.",
+    "cluster_id": "neither_one_thing"
+  },
+  {
+    "query_id": "moral_unique_0053",
+    "text": "We often despise what is most useful to us.",
+    "cluster_id": "singleton_0054"
+  },
+  {
+    "query_id": "moral_unique_0054",
+    "text": "Nothing escapes the master's eye.",
+    "cluster_id": "nothing_escapes_master"
+  },
+  {
+    "query_id": "moral_unique_0055",
+    "text": "Avoid a remedy that is worse than the disease.",
+    "cluster_id": "singleton_0056"
+  },
+  {
+    "query_id": "moral_unique_0056",
+    "text": "He laughs best that laughs last.",
+    "cluster_id": "laughs_last"
+  },
+  {
+    "query_id": "moral_unique_0057",
+    "text": "Strife feeds on conflict.",
+    "cluster_id": "singleton_0058"
+  },
+  {
+    "query_id": "moral_unique_0058",
+    "text": "Self-help is the best help.",
+    "cluster_id": "self_help"
+  },
+  {
+    "query_id": "moral_unique_0059",
+    "text": "If you allow men to use you for your own purposes, they will use you for theirs.",
+    "cluster_id": "singleton_0060"
+  },
+  {
+    "query_id": "moral_unique_0060",
+    "text": "The hero is brave in deeds as well as words.",
+    "cluster_id": "singleton_0061"
+  },
+  {
+    "query_id": "moral_unique_0061",
+    "text": "Abstain and enjoy.",
+    "cluster_id": "singleton_0062"
+  },
+  {
+    "query_id": "moral_unique_0062",
+    "text": "The desire for imaginary benefits often involves the loss of present blessings.",
+    "cluster_id": "singleton_0063"
+  },
+  {
+    "query_id": "moral_unique_0063",
+    "text": "Sorrow not over what is lost forever.",
+    "cluster_id": "singleton_0064"
+  },
+  {
+    "query_id": "moral_unique_0064",
+    "text": "Youth's first duty is reverence to parents.",
+    "cluster_id": "singleton_0065"
+  },
+  {
+    "query_id": "moral_unique_0065",
+    "text": "Try before you trust.",
+    "cluster_id": "singleton_0067"
+  },
+  {
+    "query_id": "moral_unique_0066",
+    "text": "Happy is the man who learns from the misfortunes of others.",
+    "cluster_id": "learn_from_misfortunes"
+  },
+  {
+    "query_id": "moral_unique_0067",
+    "text": "Small liberties can be large offenses.",
+    "cluster_id": "singleton_0069"
+  },
+  {
+    "query_id": "moral_unique_0068",
+    "text": "You may share the labours of the great, but you will not share the spoil.",
+    "cluster_id": "singleton_0070"
+  },
+  {
+    "query_id": "moral_unique_0069",
+    "text": "Straws show how the wind blows.",
+    "cluster_id": "singleton_0072"
+  },
+  {
+    "query_id": "moral_unique_0070",
+    "text": "Yield to all and you will soon have nothing to yield.",
+    "cluster_id": "singleton_0073"
+  },
+  {
+    "query_id": "moral_unique_0071",
+    "text": "The man who talks for both sides is not to be trusted by either.",
+    "cluster_id": "singleton_0074"
+  },
+  {
+    "query_id": "moral_unique_0072",
+    "text": "One story is good, till another is told.",
+    "cluster_id": "singleton_0075"
+  },
+  {
+    "query_id": "moral_unique_0073",
+    "text": "Greatness has its penalties.",
+    "cluster_id": "singleton_0076"
+  },
+  {
+    "query_id": "moral_unique_0074",
+    "text": "Do not count your chickens before they are hatched.",
+    "cluster_id": "dont_count_chickens"
+  },
+  {
+    "query_id": "moral_unique_0075",
+    "text": "Try to please all and you end by pleasing none.",
+    "cluster_id": "please_nobody"
+  },
+  {
+    "query_id": "moral_unique_0076",
+    "text": "Don't make a big fuss over nothing.",
+    "cluster_id": "singleton_0079"
+  },
+  {
+    "query_id": "moral_unique_0077",
+    "text": "Enemies' promises are made to be broken.",
+    "cluster_id": "enemies_promises"
+  },
+  {
+    "query_id": "moral_unique_0078",
+    "text": "Be sure of your pedigree before you boast of it.",
+    "cluster_id": "singleton_0081"
+  },
+  {
+    "query_id": "moral_unique_0079",
+    "text": "Stoop to conquer.",
+    "cluster_id": "singleton_0083"
+  },
+  {
+    "query_id": "moral_unique_0080",
+    "text": "Trouble comes from the direction we least expect it.",
+    "cluster_id": "singleton_0084"
+  },
+  {
+    "query_id": "moral_unique_0081",
+    "text": "Be content with your lot; one cannot be first in everything.",
+    "cluster_id": "content_with_lot"
+  },
+  {
+    "query_id": "moral_unique_0082",
+    "text": "Self-interest alone moves some men.",
+    "cluster_id": "singleton_0086"
+  },
+  {
+    "query_id": "moral_unique_0083",
+    "text": "Those who would mend others, should first mend themselves.",
+    "cluster_id": "fix_yourself_before_helping_others"
+  },
+  {
+    "query_id": "moral_unique_0084",
+    "text": "Change of habit cannot alter nature.",
+    "cluster_id": "innate_nature_unchangeable"
+  },
+  {
+    "query_id": "moral_unique_0085",
+    "text": "Vicious people cannot resist hurting others even when it is not in their own interests.",
+    "cluster_id": "singleton_0089"
+  },
+  {
+    "query_id": "moral_unique_0086",
+    "text": "Regardless of our wishes, or even our intent, it is to our Nature alone that we will be faithful.",
+    "cluster_id": "singleton_0090"
+  },
+  {
+    "query_id": "moral_unique_0087",
+    "text": "One good turn deserves another.",
+    "cluster_id": "one_good_turn"
+  },
+  {
+    "query_id": "moral_unique_0088",
+    "text": "It is useless attacking the insensible.",
+    "cluster_id": "useless_insensible"
+  },
+  {
+    "query_id": "moral_unique_0089",
+    "text": "Understand what you are doing before you do it.",
+    "cluster_id": "deliberate_before_committing"
+  },
+  {
+    "query_id": "moral_unique_0090",
+    "text": "There is no believing a liar, even when he speaks the truth.",
+    "cluster_id": "singleton_0094"
+  },
+  {
+    "query_id": "moral_unique_0091",
+    "text": "A liar deceives no one but himself.",
+    "cluster_id": "singleton_0095"
+  },
+  {
+    "query_id": "moral_unique_0092",
+    "text": "Fine work gets preserved and treasured.",
+    "cluster_id": "singleton_0096"
+  },
+  {
+    "query_id": "moral_unique_0093",
+    "text": "Two blacks do not make a white.",
+    "cluster_id": "singleton_0097"
+  },
+  {
+    "query_id": "moral_unique_0094",
+    "text": "Destroy the seed of evil, or it will grow up to your ruin.",
+    "cluster_id": "destroy_seed_evil"
+  },
+  {
+    "query_id": "moral_unique_0095",
+    "text": "A bribe in hand betrays mischief at heart.",
+    "cluster_id": "singleton_0099"
+  },
+  {
+    "query_id": "moral_unique_0096",
+    "text": "Every man for himself.",
+    "cluster_id": "singleton_0100"
+  },
+  {
+    "query_id": "moral_unique_0097",
+    "text": "Never put yourself in your enemy's clutches.",
+    "cluster_id": "singleton_0101"
+  },
+  {
+    "query_id": "moral_unique_0098",
+    "text": "If men had all they wished, they would be often ruined.",
+    "cluster_id": "singleton_0102"
+  },
+  {
+    "query_id": "moral_unique_0099",
+    "text": "Everyone is more or less master of his own fate.",
+    "cluster_id": "master_own_fate"
+  },
+  {
+    "query_id": "moral_unique_0100",
+    "text": "The loiterer often blames delay on his more active friend.",
+    "cluster_id": "singleton_0104"
+  },
+  {
+    "query_id": "moral_unique_0101",
+    "text": "Obscurity often brings safety.",
+    "cluster_id": "obscurity_safety"
+  },
+  {
+    "query_id": "moral_unique_0102",
+    "text": "He who incites to strife is worse than he who takes part in it.",
+    "cluster_id": "singleton_0106"
+  },
+  {
+    "query_id": "moral_unique_0103",
+    "text": "Equals make the best friends.",
+    "cluster_id": "singleton_0107"
+  },
+  {
+    "query_id": "moral_unique_0104",
+    "text": "The strong and the weak cannot keep company.",
+    "cluster_id": "singleton_0108"
+  },
+  {
+    "query_id": "moral_unique_0105",
+    "text": "He who shares the danger ought to share the prize.",
+    "cluster_id": "singleton_0109"
+  },
+  {
+    "query_id": "moral_unique_0106",
+    "text": "It is not only fine feathers that make fine birds.",
+    "cluster_id": "inner_worth_over_outer_show"
+  },
+  {
+    "query_id": "moral_unique_0107",
+    "text": "Quality is better than quantity.",
+    "cluster_id": "quality_over_quantity"
+  },
+  {
+    "query_id": "moral_unique_0108",
+    "text": "The least outlay is not always the greatest gain.",
+    "cluster_id": "singleton_0112"
+  },
+  {
+    "query_id": "moral_unique_0109",
+    "text": "An invitation prompted by selfishness is not to be accepted.",
+    "cluster_id": "invitation_selfish"
+  },
+  {
+    "query_id": "moral_unique_0110",
+    "text": "Do not say anything at any time that you would not say at all times.",
+    "cluster_id": "singleton_0114"
+  },
+  {
+    "query_id": "moral_unique_0111",
+    "text": "Men often condemn others for what they see no wrong in doing themselves.",
+    "cluster_id": "blind_to_own_faults"
+  },
+  {
+    "query_id": "moral_unique_0112",
+    "text": "Seek to harm and harm shall find you.",
+    "cluster_id": "vices_punishment"
+  },
+  {
+    "query_id": "moral_unique_0113",
+    "text": "No gratitude from the wicked.",
+    "cluster_id": "ungrateful_wicked"
+  },
+  {
+    "query_id": "moral_unique_0114",
+    "text": "We are made by our teachings in youth.",
+    "cluster_id": "singleton_0119"
+  },
+  {
+    "query_id": "moral_unique_0115",
+    "text": "Some things you cannot change.",
+    "cluster_id": "some_things_cannot_change"
+  },
+  {
+    "query_id": "moral_unique_0116",
+    "text": "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
+    "cluster_id": "dont_trust_enemy"
+  },
+  {
+    "query_id": "moral_unique_0117",
+    "text": "There is always someone else worse off than you.",
+    "cluster_id": "same_worse_off"
+  },
+  {
+    "query_id": "moral_unique_0118",
+    "text": "There is strength in restraint.",
+    "cluster_id": "singleton_0123"
+  },
+  {
+    "query_id": "moral_unique_0119",
+    "text": "A discerning speaker can deftly turn the insults of his enemies into compliments.",
+    "cluster_id": "singleton_0124"
+  },
+  {
+    "query_id": "moral_unique_0120",
+    "text": "Great achievements are often blocked by some small thing which prevents their realization.",
+    "cluster_id": "singleton_0125"
+  },
+  {
+    "query_id": "moral_unique_0121",
+    "text": "Sometimes a small sacrifice results in a greater good.",
+    "cluster_id": "singleton_0126"
+  },
+  {
+    "query_id": "moral_unique_0122",
+    "text": "Necessity is the mother of invention.",
+    "cluster_id": "singleton_0127"
+  },
+  {
+    "query_id": "moral_unique_0123",
+    "text": "When people harbor a criminal they become his first victims without even realizing it.",
+    "cluster_id": "singleton_0128"
+  },
+  {
+    "query_id": "moral_unique_0124",
+    "text": "Resting the mind is essential for clear thinking.",
+    "cluster_id": "singleton_0129"
+  },
+  {
+    "query_id": "moral_unique_0125",
+    "text": "It is unwise to reward when one should punish.",
+    "cluster_id": "singleton_0130"
+  },
+  {
+    "query_id": "moral_unique_0126",
+    "text": "Success leads many astray to their ruin.",
+    "cluster_id": "singleton_0131"
+  },
+  {
+    "query_id": "moral_unique_0127",
+    "text": "People are asking for trouble if they make fun of someone who is better than they are.",
+    "cluster_id": "singleton_0132"
+  },
+  {
+    "query_id": "moral_unique_0128",
+    "text": "Experience often provides clearer insight than empty predictions.",
+    "cluster_id": "singleton_0133"
+  },
+  {
+    "query_id": "moral_unique_0129",
+    "text": "A mild disposition can put a stop to vicious behaviour.",
+    "cluster_id": "singleton_0134"
+  },
+  {
+    "query_id": "moral_unique_0130",
+    "text": "A mother's nurturing is stronger than a stepmother's attentions.",
+    "cluster_id": "singleton_0135"
+  },
+  {
+    "query_id": "moral_unique_0131",
+    "text": "Foolish people disregard important business in favour of frivolities.",
+    "cluster_id": "singleton_0136"
+  },
+  {
+    "query_id": "moral_unique_0132",
+    "text": "The dishonest, if they act honestly, get no credit.",
+    "cluster_id": "singleton_0137"
+  },
+  {
+    "query_id": "moral_unique_0133",
+    "text": "Gratitude should be shown through kindness, not harm.",
+    "cluster_id": "gratitude_kindness_not_harm"
+  },
+  {
+    "query_id": "moral_unique_0134",
+    "text": "When people plot against their neighbours, they fall victim to the same sort of plot themselves.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0135",
+    "text": "Changing your location does not change your state of mind.",
+    "cluster_id": "singleton_0141"
+  },
+  {
+    "query_id": "moral_unique_0136",
+    "text": "Enviable conditions often have a downside.",
+    "cluster_id": "singleton_0142"
+  },
+  {
+    "query_id": "moral_unique_0137",
+    "text": "Do no overestimate your worth when your fate rests in the hands of the high and the mighty.",
+    "cluster_id": "singleton_0143"
+  },
+  {
+    "query_id": "moral_unique_0138",
+    "text": "Burdens can continue in unexpected ways.",
+    "cluster_id": "singleton_0144"
+  },
+  {
+    "query_id": "moral_unique_0139",
+    "text": "People get themselves into trouble because of their boasting.",
+    "cluster_id": "singleton_0145"
+  },
+  {
+    "query_id": "moral_unique_0140",
+    "text": "Return favors and favors will be bestowed on you.",
+    "cluster_id": "return_favors"
+  },
+  {
+    "query_id": "moral_unique_0141",
+    "text": "Nature and instincts can persist despite changes in form or appearance.",
+    "cluster_id": "nature_survives_transformation"
+  },
+  {
+    "query_id": "moral_unique_0142",
+    "text": "Prepare for the future.",
+    "cluster_id": "singleton_0149"
+  },
+  {
+    "query_id": "moral_unique_0143",
+    "text": "Work honestly and you won't be scorned.",
+    "cluster_id": "singleton_0150"
+  },
+  {
+    "query_id": "moral_unique_0144",
+    "text": "When someone with a wicked nature changes his appearance, his behaviour remains the same.",
+    "cluster_id": "nature_survives_transformation"
+  },
+  {
+    "query_id": "moral_unique_0145",
+    "text": "True value comes from usefulness.",
+    "cluster_id": "singleton_0153"
+  },
+  {
+    "query_id": "moral_unique_0146",
+    "text": "Brag and nature may bring you down.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0147",
+    "text": "He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour.",
+    "cluster_id": "singleton_0155"
+  },
+  {
+    "query_id": "moral_unique_0148",
+    "text": "Do not mock the gods.",
+    "cluster_id": "dont_mock_gods"
+  },
+  {
+    "query_id": "moral_unique_0149",
+    "text": "If people who have previously committed a crime are swiftly punished, then others will become afraid on their account.",
+    "cluster_id": "singleton_0157"
+  },
+  {
+    "query_id": "moral_unique_0150",
+    "text": "Everyone thinks themselves the best.",
+    "cluster_id": "singleton_0159"
+  },
+  {
+    "query_id": "moral_unique_0151",
+    "text": "Do not take credit for the accomplishments of others.",
+    "cluster_id": "singleton_0160"
+  },
+  {
+    "query_id": "moral_unique_0152",
+    "text": "Those who refuse to share and respond with rudeness may face dire consequences for their actions.",
+    "cluster_id": "singleton_0161"
+  },
+  {
+    "query_id": "moral_unique_0153",
+    "text": "The true leader proves himself by his qualities.",
+    "cluster_id": "singleton_0162"
+  },
+  {
+    "query_id": "moral_unique_0154",
+    "text": "Even a high and mighty person should beware of his inferiors; their ingenuity can find a way to take revenge.",
+    "cluster_id": "weak_can_avenge"
+  },
+  {
+    "query_id": "moral_unique_0155",
+    "text": "A single reliable skill is worth more than a bag of useless tricks.",
+    "cluster_id": "singleton_0164"
+  },
+  {
+    "query_id": "moral_unique_0156",
+    "text": "A wicked nature does not produce a good character.",
+    "cluster_id": "singleton_0165"
+  },
+  {
+    "query_id": "moral_unique_0157",
+    "text": "Be true to your roots.",
+    "cluster_id": "singleton_0166"
+  },
+  {
+    "query_id": "moral_unique_0158",
+    "text": "True value is wasted on those who cannot appreciate it.",
+    "cluster_id": "value_wasted_on_unappreciative"
+  },
+  {
+    "query_id": "moral_unique_0159",
+    "text": "You should think twice before offering anything to your enemies.",
+    "cluster_id": "singleton_0168"
+  },
+  {
+    "query_id": "moral_unique_0160",
+    "text": "People are often eager to treat their enemies well in the hopes of gaining something by it.",
+    "cluster_id": "singleton_0169"
+  },
+  {
+    "query_id": "moral_unique_0161",
+    "text": "Self-effort is essential.",
+    "cluster_id": "singleton_0170"
+  },
+  {
+    "query_id": "moral_unique_0162",
+    "text": "Be frank and open in your dealings.",
+    "cluster_id": "singleton_0171"
+  },
+  {
+    "query_id": "moral_unique_0163",
+    "text": "Some men underrate their best blessings.",
+    "cluster_id": "singleton_0172"
+  },
+  {
+    "query_id": "moral_unique_0164",
+    "text": "True friends are hard to find.",
+    "cluster_id": "true_friends_hard"
+  },
+  {
+    "query_id": "moral_unique_0165",
+    "text": "Those who pretend to be what they are not, sooner or later, find themselves in deep water.",
+    "cluster_id": "pretenders_found_out"
+  },
+  {
+    "query_id": "moral_unique_0166",
+    "text": "Honor your craft with integrity.",
+    "cluster_id": "singleton_0175"
+  },
+  {
+    "query_id": "moral_unique_0167",
+    "text": "We should not call upon the gods in trivial affairs but only in dire necessity.",
+    "cluster_id": "singleton_0176"
+  },
+  {
+    "query_id": "moral_unique_0168",
+    "text": "Talking is a waste of time when you can simply provide a demonstration.",
+    "cluster_id": "singleton_0177"
+  },
+  {
+    "query_id": "moral_unique_0169",
+    "text": "Do not let fame get to your head.",
+    "cluster_id": "singleton_0178"
+  },
+  {
+    "query_id": "moral_unique_0170",
+    "text": "Seize opportunities when they arise.",
+    "cluster_id": "singleton_0179"
+  },
+  {
+    "query_id": "moral_unique_0171",
+    "text": "People often grasp for more than they need and thus lose the little they have.",
+    "cluster_id": "lose_what_you_have"
+  },
+  {
+    "query_id": "moral_unique_0172",
+    "text": "Expect no reward for serving the wicked.",
+    "cluster_id": "ungrateful_wicked"
+  },
+  {
+    "query_id": "moral_unique_0173",
+    "text": "Do not attempt the impossible.",
+    "cluster_id": "dont_attempt_impossible"
+  },
+  {
+    "query_id": "moral_unique_0174",
+    "text": "Good things happen less often.",
+    "cluster_id": "singleton_0184"
+  },
+  {
+    "query_id": "moral_unique_0175",
+    "text": "Expectations can lead to disappointment when reality does not match our desires.",
+    "cluster_id": "dont_count_chickens"
+  },
+  {
+    "query_id": "moral_unique_0176",
+    "text": "Intent matters more than the outcome.",
+    "cluster_id": "singleton_0186"
+  },
+  {
+    "query_id": "moral_unique_0177",
+    "text": "Those who seek to please everybody please nobody.",
+    "cluster_id": "please_nobody"
+  },
+  {
+    "query_id": "moral_unique_0178",
+    "text": "Precautions are useless after the crisis.",
+    "cluster_id": "singleton_0188"
+  },
+  {
+    "query_id": "moral_unique_0179",
+    "text": "Do not always stick to the same course.",
+    "cluster_id": "singleton_0189"
+  },
+  {
+    "query_id": "moral_unique_0180",
+    "text": "Learn from past misfortunes.",
+    "cluster_id": "singleton_0191"
+  },
+  {
+    "query_id": "moral_unique_0181",
+    "text": "Hunger sharpens the wits.",
+    "cluster_id": "singleton_0192"
+  },
+  {
+    "query_id": "moral_unique_0182",
+    "text": "Sometimes one man toils while another profits.",
+    "cluster_id": "singleton_0193"
+  },
+  {
+    "query_id": "moral_unique_0183",
+    "text": "Don't take your friends for foes.",
+    "cluster_id": "friends_vs_foes"
+  },
+  {
+    "query_id": "moral_unique_0184",
+    "text": "What is valued in one group may be dismissed by another.",
+    "cluster_id": "singleton_0195"
+  },
+  {
+    "query_id": "moral_unique_0185",
+    "text": "Pretenders will be found out.",
+    "cluster_id": "pretenders_found_out"
+  },
+  {
+    "query_id": "moral_unique_0186",
+    "text": "Evil wishes, like chickens, come home to roost.",
+    "cluster_id": "vices_punishment"
+  },
+  {
+    "query_id": "moral_unique_0187",
+    "text": "No piece of luck can conceal a depraved nature.",
+    "cluster_id": "singleton_0198"
+  },
+  {
+    "query_id": "moral_unique_0188",
+    "text": "Beware of empty promises made during good times.",
+    "cluster_id": "singleton_0199"
+  },
+  {
+    "query_id": "moral_unique_0189",
+    "text": "Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well.",
+    "cluster_id": "singleton_0200"
+  },
+  {
+    "query_id": "moral_unique_0190",
+    "text": "A learned man has always a fund of riches in himself.",
+    "cluster_id": "singleton_0201"
+  },
+  {
+    "query_id": "moral_unique_0191",
+    "text": "It is easy to attack those who have fallen from their position of power and glory.",
+    "cluster_id": "singleton_0202"
+  },
+  {
+    "query_id": "moral_unique_0192",
+    "text": "Self-preservation can sometimes take precedence over kinship.",
+    "cluster_id": "singleton_0203"
+  },
+  {
+    "query_id": "moral_unique_0193",
+    "text": "Someone who lays a trap for others will fall victim to it himself.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0194",
+    "text": "People who lay traps for others should be careful not to fall into a trap themselves.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0195",
+    "text": "Men feel worst when they contribute to their own undoing.",
+    "cluster_id": "singleton_0206"
+  },
+  {
+    "query_id": "moral_unique_0196",
+    "text": "There is no glory in tricking those easy to trick.",
+    "cluster_id": "singleton_0207"
+  },
+  {
+    "query_id": "moral_unique_0197",
+    "text": "Rushing into pleasant invitations can lead to dire consequences.",
+    "cluster_id": "singleton_0208"
+  },
+  {
+    "query_id": "moral_unique_0198",
+    "text": "Inattentive people quickly notice anything that they think will benefit them, while they are completely unaware of things which are not their immediate concern.",
+    "cluster_id": "singleton_0209"
+  },
+  {
+    "query_id": "moral_unique_0199",
+    "text": "Do not laugh at the calamity that befalls your neighbour.",
+    "cluster_id": "singleton_0210"
+  },
+  {
+    "query_id": "moral_unique_0200",
+    "text": "Evil tendencies are shown in early life.",
+    "cluster_id": "singleton_0211"
+  },
+  {
+    "query_id": "moral_unique_0201",
+    "text": "Rewards do not always accompany a lifetime of good work.",
+    "cluster_id": "singleton_0212"
+  },
+  {
+    "query_id": "moral_unique_0202",
+    "text": "Only cowards insult dying majesty.",
+    "cluster_id": "singleton_0213"
+  },
+  {
+    "query_id": "moral_unique_0203",
+    "text": "Preparedness for war is the best guarantee of peace.",
+    "cluster_id": "prepare_for_war"
+  },
+  {
+    "query_id": "moral_unique_0204",
+    "text": "It is good to set aside our deadly disputes and conflicts, since they put everyone's lives in jeopardy.",
+    "cluster_id": "singleton_0215"
+  },
+  {
+    "query_id": "moral_unique_0205",
+    "text": "What you have done to others will likewise be done to you, according to the same measure.",
+    "cluster_id": "what_you_do"
+  },
+  {
+    "query_id": "moral_unique_0206",
+    "text": "Counsel without help is useless.",
+    "cluster_id": "singleton_0217"
+  },
+  {
+    "query_id": "moral_unique_0207",
+    "text": "Anything which is done at the wrong time is liable to be ridiculed.",
+    "cluster_id": "singleton_0218"
+  },
+  {
+    "query_id": "moral_unique_0208",
+    "text": "An honest man's word is as good as his oath.",
+    "cluster_id": "singleton_0219"
+  },
+  {
+    "query_id": "moral_unique_0209",
+    "text": "Better poverty without care, than riches with.",
+    "cluster_id": "poverty_beats_wealth"
+  },
+  {
+    "query_id": "moral_unique_0210",
+    "text": "Inner beauty is better than outer beauty.",
+    "cluster_id": "inner_worth_over_outer_show"
+  },
+  {
+    "query_id": "moral_unique_0211",
+    "text": "Some men are of more consequence in their own eyes than in the eyes of their neighbors.",
+    "cluster_id": "singleton_0222"
+  },
+  {
+    "query_id": "moral_unique_0212",
+    "text": "Some people just won't change.",
+    "cluster_id": "singleton_0224"
+  },
+  {
+    "query_id": "moral_unique_0213",
+    "text": "People who enter into contests with unworthy opponents lower their own reputation.",
+    "cluster_id": "singleton_0225"
+  },
+  {
+    "query_id": "moral_unique_0214",
+    "text": "When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone.",
+    "cluster_id": "singleton_0226"
+  },
+  {
+    "query_id": "moral_unique_0215",
+    "text": "When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",
+    "cluster_id": "choose_friends_who_help_in_adversity"
+  },
+  {
+    "query_id": "moral_unique_0216",
+    "text": "Unity is strength, while division invites defeat.",
+    "cluster_id": "union_strength"
+  },
+  {
+    "query_id": "moral_unique_0217",
+    "text": "Believing your enemies makes you fall victim to their tricks and gets you into trouble.",
+    "cluster_id": "believing_enemies_trouble"
+  },
+  {
+    "query_id": "moral_unique_0218",
+    "text": "Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity.",
+    "cluster_id": "singleton_0230"
+  },
+  {
+    "query_id": "moral_unique_0219",
+    "text": "It is best to keep negative influences away.",
+    "cluster_id": "singleton_0231"
+  },
+  {
+    "query_id": "moral_unique_0220",
+    "text": "Experience teaches valuable lessons and encourages caution.",
+    "cluster_id": "singleton_0232"
+  },
+  {
+    "query_id": "moral_unique_0221",
+    "text": "Jealousy can lead people to foolishly imitate their betters.",
+    "cluster_id": "singleton_0233"
+  },
+  {
+    "query_id": "moral_unique_0222",
+    "text": "Familiarity mollifies even the most terrifying things.",
+    "cluster_id": "familiarity_reduces_fear"
+  },
+  {
+    "query_id": "moral_unique_0223",
+    "text": "People who grasp for more than they need are deprived of what they have.",
+    "cluster_id": "lose_what_you_have"
+  },
+  {
+    "query_id": "moral_unique_0224",
+    "text": "Beware of when the powerful and the deceitful collaborate.",
+    "cluster_id": "beware_powerful"
+  },
+  {
+    "query_id": "moral_unique_0225",
+    "text": "Be cautious with promises made under duress.",
+    "cluster_id": "singleton_0237"
+  },
+  {
+    "query_id": "moral_unique_0226",
+    "text": "Tyrants need no excuse.",
+    "cluster_id": "tyrants_no_excuse"
+  },
+  {
+    "query_id": "moral_unique_0227",
+    "text": "Stay focused on your goals.",
+    "cluster_id": "singleton_0239"
+  },
+  {
+    "query_id": "moral_unique_0228",
+    "text": "Gossips are to be seen and not heard.",
+    "cluster_id": "singleton_0240"
+  },
+  {
+    "query_id": "moral_unique_0229",
+    "text": "Relying too much on subordinates can lead to unintended consequences.",
+    "cluster_id": "singleton_0241"
+  },
+  {
+    "query_id": "moral_unique_0230",
+    "text": "One bad turn deserves another.",
+    "cluster_id": "singleton_0243"
+  },
+  {
+    "query_id": "moral_unique_0231",
+    "text": "When the evidence is fairly weighed, a colourfully painted lie is quickly refuted by the facts.",
+    "cluster_id": "singleton_0244"
+  },
+  {
+    "query_id": "moral_unique_0232",
+    "text": "Opposites are utterly incompatible.",
+    "cluster_id": "singleton_0246"
+  },
+  {
+    "query_id": "moral_unique_0233",
+    "text": "Favor those who do you kindness.",
+    "cluster_id": "repay_kindness"
+  },
+  {
+    "query_id": "moral_unique_0234",
+    "text": "A discerning person is made wise by the misfortunes of his neighbours.",
+    "cluster_id": "learn_from_misfortunes"
+  },
+  {
+    "query_id": "moral_unique_0235",
+    "text": "Do not go chasing after things that are useless and unprofitable.",
+    "cluster_id": "singleton_0249"
+  },
+  {
+    "query_id": "moral_unique_0236",
+    "text": "Those who do you a favour you must repay kind.",
+    "cluster_id": "repay_favour_in_kind"
+  },
+  {
+    "query_id": "moral_unique_0237",
+    "text": "The penalty for speaking and for keeping silent is one and the same.",
+    "cluster_id": "singleton_0251"
+  },
+  {
+    "query_id": "moral_unique_0238",
+    "text": "It is better to live in self-sufficient poverty than to be tormented by the worries of wealth.",
+    "cluster_id": "poverty_beats_wealth"
+  },
+  {
+    "query_id": "moral_unique_0239",
+    "text": "Men will stand behind a judgment made in error until the actual fact of the matter later compels them to regret their choice.",
+    "cluster_id": "singleton_0253"
+  },
+  {
+    "query_id": "moral_unique_0240",
+    "text": "It is natural to be a knave; men must rise above.",
+    "cluster_id": "singleton_0254"
+  },
+  {
+    "query_id": "moral_unique_0241",
+    "text": "Beware of swindlers, as they often exploit the gullibility of others.",
+    "cluster_id": "beware_swindlers"
+  },
+  {
+    "query_id": "moral_unique_0242",
+    "text": "Only fools indulge into michief and excessive risks.",
+    "cluster_id": "singleton_0256"
+  },
+  {
+    "query_id": "moral_unique_0243",
+    "text": "An alliance made with the high and mighty can never be trusted.",
+    "cluster_id": "singleton_0257"
+  },
+  {
+    "query_id": "moral_unique_0244",
+    "text": "Wealth is of little value if one is too afraid to use or enjoy it.",
+    "cluster_id": "singleton_0258"
+  },
+  {
+    "query_id": "moral_unique_0245",
+    "text": "True courage involves overcoming fears, even when faced with intimidation.",
+    "cluster_id": "singleton_0259"
+  },
+  {
+    "query_id": "moral_unique_0246",
+    "text": "Contentment with our lot is an element of happiness.",
+    "cluster_id": "singleton_0260"
+  },
+  {
+    "query_id": "moral_unique_0247",
+    "text": "Don't be seduced by deceptive words, they will cause nothing but trouble.",
+    "cluster_id": "deceptive_words_trouble"
+  },
+  {
+    "query_id": "moral_unique_0248",
+    "text": "The useful is of much more importance and value, than the ornamental.",
+    "cluster_id": "singleton_0262"
+  },
+  {
+    "query_id": "moral_unique_0249",
+    "text": "You should not treat bad people the same way that you treat good people.",
+    "cluster_id": "singleton_0263"
+  },
+  {
+    "query_id": "moral_unique_0250",
+    "text": "You must not act unnaturally, trying to achieve some impossible thing.",
+    "cluster_id": "dont_attempt_impossible"
+  },
+  {
+    "query_id": "moral_unique_0251",
+    "text": "If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well.",
+    "cluster_id": "singleton_0265"
+  },
+  {
+    "query_id": "moral_unique_0252",
+    "text": "Those who commit grave wrongs cannot escape justice.",
+    "cluster_id": "singleton_0266"
+  },
+  {
+    "query_id": "moral_unique_0253",
+    "text": "Vanity can lead to self-destruction.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0254",
+    "text": "Live your lives in the clothes that suit you.",
+    "cluster_id": "singleton_0268"
+  },
+  {
+    "query_id": "moral_unique_0255",
+    "text": "Vanity betrays every fraud.",
+    "cluster_id": "singleton_0269"
+  },
+  {
+    "query_id": "moral_unique_0256",
+    "text": "Do not boast to have something you do not.",
+    "cluster_id": "singleton_0271"
+  },
+  {
+    "query_id": "moral_unique_0257",
+    "text": "Many children are a great blessing; but a few good ones are a greater.",
+    "cluster_id": "singleton_0272"
+  },
+  {
+    "query_id": "moral_unique_0258",
+    "text": "Those who assume a character which does not belong to them, only make themselves ridiculous.",
+    "cluster_id": "pretenders_found_out"
+  },
+  {
+    "query_id": "moral_unique_0259",
+    "text": "Tricksters can outsmart the strong.",
+    "cluster_id": "singleton_0275"
+  },
+  {
+    "query_id": "moral_unique_0260",
+    "text": "Bad things naturally happen to bad people, while good things lie in wait for people who are honest and reasonable.",
+    "cluster_id": "singleton_0276"
+  },
+  {
+    "query_id": "moral_unique_0261",
+    "text": "You can't please everybody.",
+    "cluster_id": "please_nobody"
+  },
+  {
+    "query_id": "moral_unique_0262",
+    "text": "Be careful what you wish for.",
+    "cluster_id": "careful_wish"
+  },
+  {
+    "query_id": "moral_unique_0263",
+    "text": "Those who are not content with what they have may end up losing it while pursuing greater desires.",
+    "cluster_id": "lose_what_you_have"
+  },
+  {
+    "query_id": "moral_unique_0264",
+    "text": "Good will is worth nothing unless it is accompanied by good acts.",
+    "cluster_id": "singleton_0280"
+  },
+  {
+    "query_id": "moral_unique_0265",
+    "text": "In avoiding a lesser danger, one may inadvertently fall into a greater peril.",
+    "cluster_id": "avoid_lesser_fall_greater"
+  },
+  {
+    "query_id": "moral_unique_0266",
+    "text": "Do not harm your benefactors.",
+    "cluster_id": "singleton_0282"
+  },
+  {
+    "query_id": "moral_unique_0267",
+    "text": "Watch on all sides.",
+    "cluster_id": "singleton_0283"
+  },
+  {
+    "query_id": "moral_unique_0268",
+    "text": "When it serves their purposes, people commonly do not hesitate to swear to the most incredible fabrications.",
+    "cluster_id": "singleton_0284"
+  },
+  {
+    "query_id": "moral_unique_0269",
+    "text": "Someone who assists both the truly good and those who are undeserving is not seen as a philanthropist, but is instead regarded as a madman.",
+    "cluster_id": "singleton_0285"
+  },
+  {
+    "query_id": "moral_unique_0270",
+    "text": "A death-bed flattery is the worst of treacheries.",
+    "cluster_id": "singleton_0286"
+  },
+  {
+    "query_id": "moral_unique_0271",
+    "text": "Few things are done except for profit.",
+    "cluster_id": "singleton_0287"
+  },
+  {
+    "query_id": "moral_unique_0272",
+    "text": "Do not play the wise man after the fact.",
+    "cluster_id": "singleton_0288"
+  },
+  {
+    "query_id": "moral_unique_0273",
+    "text": "Different people are interested in different things.",
+    "cluster_id": "singleton_0289"
+  },
+  {
+    "query_id": "moral_unique_0274",
+    "text": "It is a foolish man who wants to rival his superiors.",
+    "cluster_id": "dont_rival_superiors"
+  },
+  {
+    "query_id": "moral_unique_0275",
+    "text": "Do not believe those who have ill intentions.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0276",
+    "text": "Do not try to do impossible things.",
+    "cluster_id": "dont_attempt_impossible"
+  },
+  {
+    "query_id": "moral_unique_0277",
+    "text": "False sympathy often masks selfish intentions.",
+    "cluster_id": "singleton_0293"
+  },
+  {
+    "query_id": "moral_unique_0278",
+    "text": "Do not try to gain favor by acting in a way that is contrary to your own nature and character.",
+    "cluster_id": "dont_act_against_nature"
+  },
+  {
+    "query_id": "moral_unique_0279",
+    "text": "You should especially avoid someone who does not even spare his own people.",
+    "cluster_id": "singleton_0295"
+  },
+  {
+    "query_id": "moral_unique_0280",
+    "text": "Trust is not to be given lightly.",
+    "cluster_id": "singleton_0296"
+  },
+  {
+    "query_id": "moral_unique_0281",
+    "text": "There is danger lurking in the words of a wicked person.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0282",
+    "text": "Do not grasp at more than you need.",
+    "cluster_id": "dont_grasp_too_much"
+  },
+  {
+    "query_id": "moral_unique_0283",
+    "text": "Those who try to deceive may expect to be paid in their own coin.",
+    "cluster_id": "singleton_0299"
+  },
+  {
+    "query_id": "moral_unique_0284",
+    "text": "Men are averse to fixed rules, but are won by kind services.",
+    "cluster_id": "singleton_0300"
+  },
+  {
+    "query_id": "moral_unique_0285",
+    "text": "Wicked liars generally get their just consequences.",
+    "cluster_id": "singleton_0301"
+  },
+  {
+    "query_id": "moral_unique_0286",
+    "text": "Often justice is the captive of criminal deceit.",
+    "cluster_id": "singleton_0302"
+  },
+  {
+    "query_id": "moral_unique_0287",
+    "text": "They who act without sufficient thought, will often fall into unsuspected danger.",
+    "cluster_id": "do_not_act_impulsively"
+  },
+  {
+    "query_id": "moral_unique_0288",
+    "text": "Enterprise is not to be judged in terms of its speed but its outcome.",
+    "cluster_id": "singleton_0304"
+  },
+  {
+    "query_id": "moral_unique_0289",
+    "text": "A life of greed and hoarding wealth leads to misery.",
+    "cluster_id": "greed_misery"
+  },
+  {
+    "query_id": "moral_unique_0290",
+    "text": "Take what you can get when you can get it.",
+    "cluster_id": "singleton_0306"
+  },
+  {
+    "query_id": "moral_unique_0291",
+    "text": "Do not take pride in the good qualities that actually belong to someone else.",
+    "cluster_id": "singleton_0307"
+  },
+  {
+    "query_id": "moral_unique_0292",
+    "text": "Benefits are refused by those who don't understand them.",
+    "cluster_id": "singleton_0308"
+  },
+  {
+    "query_id": "moral_unique_0293",
+    "text": "No one can be a friend if you know not whether to trust or distrust him.",
+    "cluster_id": "singleton_0309"
+  },
+  {
+    "query_id": "moral_unique_0294",
+    "text": "People who offer to give someone many gifts are no doubt trying to deceive.",
+    "cluster_id": "singleton_0310"
+  },
+  {
+    "query_id": "moral_unique_0295",
+    "text": "Do not blame others for the circumstances of their upbringing.",
+    "cluster_id": "singleton_0311"
+  },
+  {
+    "query_id": "moral_unique_0296",
+    "text": "Do not give up friends for foes.",
+    "cluster_id": "friends_vs_foes"
+  },
+  {
+    "query_id": "moral_unique_0297",
+    "text": "There is satisfaction, however wretched, in taking one's enemy along if one has to die.",
+    "cluster_id": "singleton_0313"
+  },
+  {
+    "query_id": "moral_unique_0298",
+    "text": "Some can do wrong more easily than others can see it.",
+    "cluster_id": "singleton_0314"
+  },
+  {
+    "query_id": "moral_unique_0299",
+    "text": "Traitors may expect treachery.",
+    "cluster_id": "singleton_0315"
+  },
+  {
+    "query_id": "moral_unique_0300",
+    "text": "Clothes may disguise a fool, but his words will give him away.",
+    "cluster_id": "disguise_reveals_fool"
+  },
+  {
+    "query_id": "moral_unique_0301",
+    "text": "People who lay traps for others bring about their own destruction.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0302",
+    "text": "Be content with your lot.",
+    "cluster_id": "content_with_lot"
+  },
+  {
+    "query_id": "moral_unique_0303",
+    "text": "Be cautious of pride, as nobody knows what the future may bring.",
+    "cluster_id": "singleton_0319"
+  },
+  {
+    "query_id": "moral_unique_0304",
+    "text": "People are quick to promise but reluctant to give.",
+    "cluster_id": "promises_quick"
+  },
+  {
+    "query_id": "moral_unique_0305",
+    "text": "The loud-mouthed boaster does not impress nor frighten those who know him.",
+    "cluster_id": "singleton_0321"
+  },
+  {
+    "query_id": "moral_unique_0306",
+    "text": "Talent is wasted when it's in the hands of the unappreciative.",
+    "cluster_id": "singleton_0322"
+  },
+  {
+    "query_id": "moral_unique_0307",
+    "text": "Instead of looking at how things start, we should look instead at how they turn out in the end.",
+    "cluster_id": "singleton_0323"
+  },
+  {
+    "query_id": "moral_unique_0308",
+    "text": "People often appreciate what they had only after experiencing something worse.",
+    "cluster_id": "singleton_0324"
+  },
+  {
+    "query_id": "moral_unique_0309",
+    "text": "The insubordinate are free from both obligation and protection.",
+    "cluster_id": "singleton_0325"
+  },
+  {
+    "query_id": "moral_unique_0310",
+    "text": "In a change of government, the poor change nothing beyond the name of their master.",
+    "cluster_id": "singleton_0326"
+  },
+  {
+    "query_id": "moral_unique_0311",
+    "text": "A man is known by the company he keeps.",
+    "cluster_id": "company_you_keep"
+  },
+  {
+    "query_id": "moral_unique_0312",
+    "text": "Easy life and seeming good fortune of others conceal a threat to their welfare.",
+    "cluster_id": "singleton_0328"
+  },
+  {
+    "query_id": "moral_unique_0313",
+    "text": "One cannot circumvent his destiny.",
+    "cluster_id": "singleton_0329"
+  },
+  {
+    "query_id": "moral_unique_0314",
+    "text": "False confidence often leads into danger.",
+    "cluster_id": "overconfidence_danger"
+  },
+  {
+    "query_id": "moral_unique_0315",
+    "text": "You can't always stop a fool.",
+    "cluster_id": "singleton_0331"
+  },
+  {
+    "query_id": "moral_unique_0316",
+    "text": "Greed for more can lead to losing what you already have.",
+    "cluster_id": "lose_what_you_have"
+  },
+  {
+    "query_id": "moral_unique_0317",
+    "text": "Our mere anticipations of life outrun its realities.",
+    "cluster_id": "dont_count_chickens"
+  },
+  {
+    "query_id": "moral_unique_0318",
+    "text": "It's hard to give up bad habits.",
+    "cluster_id": "singleton_0335"
+  },
+  {
+    "query_id": "moral_unique_0319",
+    "text": "Beauty alone does not qualify one for leadership.",
+    "cluster_id": "singleton_0336"
+  },
+  {
+    "query_id": "moral_unique_0320",
+    "text": "Count the cost before you commit yourselves.",
+    "cluster_id": "deliberate_before_committing"
+  },
+  {
+    "query_id": "moral_unique_0321",
+    "text": "Pride goes before destruction.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0322",
+    "text": "God is the ultimate judge.",
+    "cluster_id": "singleton_0339"
+  },
+  {
+    "query_id": "moral_unique_0323",
+    "text": "It is a foolish thing to give advice to others while not looking out for oneself.",
+    "cluster_id": "fix_yourself_before_helping_others"
+  },
+  {
+    "query_id": "moral_unique_0324",
+    "text": "Some people will do anything to get what they want.",
+    "cluster_id": "singleton_0341"
+  },
+  {
+    "query_id": "moral_unique_0325",
+    "text": "He who competes with his superiors destroys himself before he can equal them.",
+    "cluster_id": "dont_rival_superiors"
+  },
+  {
+    "query_id": "moral_unique_0326",
+    "text": "Some people are so consumed by hatred that they would rather suffer themselves than see their enemies succeed.",
+    "cluster_id": "dog_in_manger"
+  },
+  {
+    "query_id": "moral_unique_0327",
+    "text": "People with a history of wrongdoing are often not trusted.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0328",
+    "text": "Do not boast too much at the height of your powers; people often spend their old age worn out with toil and trouble.",
+    "cluster_id": "singleton_0345"
+  },
+  {
+    "query_id": "moral_unique_0329",
+    "text": "The only thing that can really bring shame on a man is a punishment that he has justly deserved.",
+    "cluster_id": "singleton_0346"
+  },
+  {
+    "query_id": "moral_unique_0330",
+    "text": "Do not try to grasp too much at once.",
+    "cluster_id": "dont_grasp_too_much"
+  },
+  {
+    "query_id": "moral_unique_0331",
+    "text": "Bad neighbours are the first to suffer from the harm they would do to others.",
+    "cluster_id": "bad_neighbours_suffer_harm"
+  },
+  {
+    "query_id": "moral_unique_0332",
+    "text": "Do not take on more than you can handle.",
+    "cluster_id": "grasp_for_more"
+  },
+  {
+    "query_id": "moral_unique_0333",
+    "text": "Charity begins at home, but this does not prevent the further exercise of it.",
+    "cluster_id": "singleton_0351"
+  },
+  {
+    "query_id": "moral_unique_0334",
+    "text": "Those who complain about their duties often forget their own role in creating the situation.",
+    "cluster_id": "singleton_0352"
+  },
+  {
+    "query_id": "moral_unique_0335",
+    "text": "He who harms someone should henceforth be treated with suspicion.",
+    "cluster_id": "singleton_0353"
+  },
+  {
+    "query_id": "moral_unique_0336",
+    "text": "Injuries may be forgiven, but not forgotten.",
+    "cluster_id": "singleton_0354"
+  },
+  {
+    "query_id": "moral_unique_0337",
+    "text": "When wicked people do not get the reward and thanks they expect, they immediately put a stop to their good works.",
+    "cluster_id": "singleton_0355"
+  },
+  {
+    "query_id": "moral_unique_0338",
+    "text": "Man's greatest treasure consists in work.",
+    "cluster_id": "singleton_0356"
+  },
+  {
+    "query_id": "moral_unique_0339",
+    "text": "We had better bear our troubles bravely than try to escape them.",
+    "cluster_id": "singleton_0357"
+  },
+  {
+    "query_id": "moral_unique_0340",
+    "text": "To be small is a way to stay safe and avoid problems, whereas you rarely see a man with a big reputation who is able to keep out of danger.",
+    "cluster_id": "singleton_fable_0358"
+  },
+  {
+    "query_id": "moral_unique_0341",
+    "text": "Imitation is no substitute for knowledge.",
+    "cluster_id": "singleton_0359"
+  },
+  {
+    "query_id": "moral_unique_0342",
+    "text": "We have to endure reversals of fortune, since we know that life is a matter of luck.",
+    "cluster_id": "singleton_0360"
+  },
+  {
+    "query_id": "moral_unique_0343",
+    "text": "Luck often bestows the things that skill cannot obtain.",
+    "cluster_id": "singleton_0361"
+  },
+  {
+    "query_id": "moral_unique_0344",
+    "text": "Some never understand the actions of others.",
+    "cluster_id": "singleton_0362"
+  },
+  {
+    "query_id": "moral_unique_0345",
+    "text": "A reward for one might be destruction for another.",
+    "cluster_id": "singleton_0363"
+  },
+  {
+    "query_id": "moral_unique_0346",
+    "text": "No mercy should be shown to someone who is wicked, regardless of whether his wickedness is great or small.",
+    "cluster_id": "singleton_0364"
+  },
+  {
+    "query_id": "moral_unique_0347",
+    "text": "Pleasure bought with pains, hurts.",
+    "cluster_id": "singleton_0365"
+  },
+  {
+    "query_id": "moral_unique_0348",
+    "text": "Ignore complainers who have no influence.",
+    "cluster_id": "singleton_0366"
+  },
+  {
+    "query_id": "moral_unique_0349",
+    "text": "We should do favours for someone who can do us a good deed in return.",
+    "cluster_id": "repay_kindness"
+  },
+  {
+    "query_id": "moral_unique_0350",
+    "text": "Coffers of cash put a stop to honest traffic in praise.",
+    "cluster_id": "singleton_0368"
+  },
+  {
+    "query_id": "moral_unique_0351",
+    "text": "Accept the changes in life.",
+    "cluster_id": "bear_change_with_equanimity"
+  },
+  {
+    "query_id": "moral_unique_0352",
+    "text": "Outside show is a poor substitute for inner worth.",
+    "cluster_id": "inner_worth_over_outer_show"
+  },
+  {
+    "query_id": "moral_unique_0353",
+    "text": "Slow and steady wins the race.",
+    "cluster_id": "slow_steady_wins"
+  },
+  {
+    "query_id": "moral_unique_0354",
+    "text": "A wicked person deservedly comes to a bad end by keeping company with other wicked people.",
+    "cluster_id": "singleton_0372"
+  },
+  {
+    "query_id": "moral_unique_0355",
+    "text": "It's easy to despise what you cannot have.",
+    "cluster_id": "singleton_0373"
+  },
+  {
+    "query_id": "moral_unique_0356",
+    "text": "Overly curious people often pay a very high price for recklessly indulging their curiosity.",
+    "cluster_id": "singleton_0374"
+  },
+  {
+    "query_id": "moral_unique_0357",
+    "text": "People who act impulsively can end up in regrettable situations.",
+    "cluster_id": "do_not_act_impulsively"
+  },
+  {
+    "query_id": "moral_unique_0358",
+    "text": "Ambiguity in character can lead to mistrust.",
+    "cluster_id": "singleton_0376"
+  },
+  {
+    "query_id": "moral_unique_0359",
+    "text": "Quality is more valuable than quantity.",
+    "cluster_id": "quality_over_quantity"
+  },
+  {
+    "query_id": "moral_unique_0360",
+    "text": "Chance sometimes rules.",
+    "cluster_id": "singleton_0378"
+  },
+  {
+    "query_id": "moral_unique_0361",
+    "text": "Take warning from the misfortunes of others.",
+    "cluster_id": "learn_from_misfortunes"
+  },
+  {
+    "query_id": "moral_unique_0362",
+    "text": "Deceivers often exploit the inability of others to challenge their falsehoods.",
+    "cluster_id": "singleton_0380"
+  },
+  {
+    "query_id": "moral_unique_0363",
+    "text": "Greedy men chase after profit with such an intensity that they destroy themselves without achieving anything.",
+    "cluster_id": "singleton_0381"
+  },
+  {
+    "query_id": "moral_unique_0364",
+    "text": "Stay vigilant and think before you speak.",
+    "cluster_id": "think_before_speak"
+  },
+  {
+    "query_id": "moral_unique_0365",
+    "text": "Take pleasure when thieves destroy themselves.",
+    "cluster_id": "singleton_0383"
+  },
+  {
+    "query_id": "moral_unique_0366",
+    "text": "Distrust advice from someone who stands to gain.",
+    "cluster_id": "singleton_0384"
+  },
+  {
+    "query_id": "moral_unique_0367",
+    "text": "Familiarity makes it easy to confront even frightening situations.",
+    "cluster_id": "familiarity_reduces_fear"
+  },
+  {
+    "query_id": "moral_unique_0368",
+    "text": "Someone who plots against others falls into his own trap.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0369",
+    "text": "Beware of those who appear busy but achieve little of value.",
+    "cluster_id": "singleton_0387"
+  },
+  {
+    "query_id": "moral_unique_0370",
+    "text": "Imaginary fears are the worst.",
+    "cluster_id": "imaginary_fears"
+  },
+  {
+    "query_id": "moral_unique_0371",
+    "text": "People who stubbornly cling to unwise choices lose everything before they know it.",
+    "cluster_id": "singleton_0389"
+  },
+  {
+    "query_id": "moral_unique_0372",
+    "text": "People who do harm to others destroy themselves in the bargain.",
+    "cluster_id": "harm_others_destroy_self"
+  },
+  {
+    "query_id": "moral_unique_0373",
+    "text": "Poor folk suffer when the high and mighty are at war with one another.",
+    "cluster_id": "singleton_0391"
+  },
+  {
+    "query_id": "moral_unique_0374",
+    "text": "When you need someone to lend a hand, mere words are no help at all.",
+    "cluster_id": "singleton_0392"
+  },
+  {
+    "query_id": "moral_unique_0375",
+    "text": "Easy gains often come with hidden costs and hardships.",
+    "cluster_id": "singleton_0394"
+  },
+  {
+    "query_id": "moral_unique_0376",
+    "text": "The things that a person does to others will happen to him in turn.",
+    "cluster_id": "what_you_do"
+  },
+  {
+    "query_id": "moral_unique_0377",
+    "text": "Bear that those who are inferior to you in merit should be like you in outside appearances.",
+    "cluster_id": "singleton_0396"
+  },
+  {
+    "query_id": "moral_unique_0378",
+    "text": "Beware of enterprizes where the risks are not equal.",
+    "cluster_id": "singleton_0397"
+  },
+  {
+    "query_id": "moral_unique_0379",
+    "text": "Do not expect to be defended by someone who cannot offer any protection.",
+    "cluster_id": "singleton_0398"
+  },
+  {
+    "query_id": "moral_unique_0380",
+    "text": "Sometimes, the greatest threats come from those you trust.",
+    "cluster_id": "singleton_0399"
+  },
+  {
+    "query_id": "moral_unique_0381",
+    "text": "A fool will make excuses for foolish behavior.",
+    "cluster_id": "singleton_0400"
+  },
+  {
+    "query_id": "moral_unique_0382",
+    "text": "It is often the case that people are greedy for things which they think will bring them honour, but which only result in their death and destruction.",
+    "cluster_id": "singleton_0401"
+  },
+  {
+    "query_id": "moral_unique_0383",
+    "text": "Those who scheme against others may ultimately fall victim to their own plots.",
+    "cluster_id": "lay_trap"
+  },
+  {
+    "query_id": "moral_unique_0384",
+    "text": "Do not neglect small advantages in hopes of better ones.",
+    "cluster_id": "bird_in_hand"
+  },
+  {
+    "query_id": "moral_unique_0385",
+    "text": "People who grasp at more than they need lose the little that they held in their hands.",
+    "cluster_id": "lose_what_you_have"
+  },
+  {
+    "query_id": "moral_unique_0386",
+    "text": "We should never put our trust in a wicked man, even if he seems to be completely innocuous.",
+    "cluster_id": "dont_trust_enemy"
+  },
+  {
+    "query_id": "moral_unique_0387",
+    "text": "Vanity can blind one to their true worth in the eyes of others.",
+    "cluster_id": "singleton_0406"
+  },
+  {
+    "query_id": "moral_unique_0388",
+    "text": "Physical stature does not guarantee wisdom or intelligence.",
+    "cluster_id": "singleton_0407"
+  },
+  {
+    "query_id": "moral_unique_0389",
+    "text": "Honesty is the best policy.",
+    "cluster_id": "singleton_0408"
+  },
+  {
+    "query_id": "moral_unique_0390",
+    "text": "The promises of the greedy are often empty and insincere.",
+    "cluster_id": "singleton_0409"
+  },
+  {
+    "query_id": "moral_unique_0391",
+    "text": "When you lie, you often have to expand the lie.",
+    "cluster_id": "singleton_0410"
+  },
+  {
+    "query_id": "moral_unique_0392",
+    "text": "When people suffer misfortune because of their own foolishness, they often blame the gods.",
+    "cluster_id": "singleton_0411"
+  },
+  {
+    "query_id": "moral_unique_0393",
+    "text": "Life's disasters can often bring boastful and presumptuous people back down to earth.",
+    "cluster_id": "singleton_0412"
+  },
+  {
+    "query_id": "moral_unique_0394",
+    "text": "Don't promise big things if you can't deliver.",
+    "cluster_id": "promises_cant_deliver"
+  },
+  {
+    "query_id": "moral_unique_0395",
+    "text": "There is no fixed day on which wicked people are punished.",
+    "cluster_id": "singleton_0414"
+  },
+  {
+    "query_id": "moral_unique_0396",
+    "text": "Nobody believes people who are inherently wicked, even if they pretend to be good-natured.",
+    "cluster_id": "singleton_0415"
+  },
+  {
+    "query_id": "moral_unique_0397",
+    "text": "Each man makes his reputation in the field which is his specialty.",
+    "cluster_id": "singleton_0416"
+  },
+  {
+    "query_id": "moral_unique_0398",
+    "text": "Acceptance can lead to unexpected harmony.",
+    "cluster_id": "singleton_0417"
+  },
+  {
+    "query_id": "moral_unique_0399",
+    "text": "People who have been judged in the past can later on be in a position to judge their former teachers.",
+    "cluster_id": "singleton_0418"
+  },
+  {
+    "query_id": "moral_unique_0400",
+    "text": "It is not the place, nor the condition, but the mind alone that is responsible for our happiness.",
+    "cluster_id": "mind_not_place"
+  },
+  {
+    "query_id": "moral_unique_0401",
+    "text": "Do not let anything turn you from your purpose.",
+    "cluster_id": "singleton_0421"
+  },
+  {
+    "query_id": "moral_unique_0402",
+    "text": "A hypocrite can usually be found out.",
+    "cluster_id": "pretenders_found_out"
+  },
+  {
+    "query_id": "moral_unique_0403",
+    "text": "Every man should be content to mind his own business.",
+    "cluster_id": "singleton_0423"
+  },
+  {
+    "query_id": "moral_unique_0404",
+    "text": "Hypocritical speeches are easily seen through.",
+    "cluster_id": "pretenders_found_out"
+  },
+  {
+    "query_id": "moral_unique_0405",
+    "text": "The safeguards of virtue are hateful to those with evil intentions.",
+    "cluster_id": "singleton_0425"
+  },
+  {
+    "query_id": "moral_unique_0406",
+    "text": "Caution is far superior to reckless haste and hurry.",
+    "cluster_id": "singleton_0426"
+  },
+  {
+    "query_id": "moral_unique_0407",
+    "text": "People are willing to risk their lives for the sake of some petty profit.",
+    "cluster_id": "singleton_0427"
+  },
+  {
+    "query_id": "moral_unique_0408",
+    "text": "When your adversary is also your judge, don't bother arguing.",
+    "cluster_id": "singleton_0428"
+  },
+  {
+    "query_id": "moral_unique_0409",
+    "text": "Those who thrive on deception often retaliate against those who speak the truth.",
+    "cluster_id": "singleton_0429"
+  },
+  {
+    "query_id": "moral_unique_0410",
+    "text": "No act of kindness, no matter how small, is ever wasted.",
+    "cluster_id": "kindness_never_wasted"
+  },
+  {
+    "query_id": "moral_unique_0411",
+    "text": "Things you acquire through evil means can be taken from you by evil means.",
+    "cluster_id": "singleton_0432"
+  },
+  {
+    "query_id": "moral_unique_0412",
+    "text": "You will hurt yourself and accomplish nothing if you try to imitate someone who is far better than you are.",
+    "cluster_id": "singleton_0433"
+  },
+  {
+    "query_id": "moral_unique_0413",
+    "text": "The greatest gifts are often overlooked in favor of envying others.",
+    "cluster_id": "singleton_0434"
+  },
+  {
+    "query_id": "moral_unique_0414",
+    "text": "People often make plans that turn out to be to their own disadvantage.",
+    "cluster_id": "plans_own_disadvantage"
+  },
+  {
+    "query_id": "moral_unique_0415",
+    "text": "Someone who cannot manage his own affairs is not qualified to give advice to his neighbours.",
+    "cluster_id": "singleton_0436"
+  },
+  {
+    "query_id": "moral_unique_0416",
+    "text": "Marrying someone unworthy can lead to a tarnished reputation.",
+    "cluster_id": "singleton_0437"
+  },
+  {
+    "query_id": "moral_unique_0417",
+    "text": "The true value of money is not in its possession but in its use.",
+    "cluster_id": "singleton_0438"
+  },
+  {
+    "query_id": "moral_unique_0418",
+    "text": "Boast of one thing and you will be found lacking in that and a few other things as well.",
+    "cluster_id": "singleton_0439"
+  },
+  {
+    "query_id": "moral_unique_0419",
+    "text": "A sinful mind can even change a person's nature, causing it to be impaired.",
+    "cluster_id": "singleton_0440"
+  },
+  {
+    "query_id": "moral_unique_0420",
+    "text": "Those who avoid hardship may miss out on valuable rewards.",
+    "cluster_id": "singleton_0441"
+  },
+  {
+    "query_id": "moral_unique_0421",
+    "text": "The best intentions will not always ensure success.",
+    "cluster_id": "singleton_0442"
+  },
+  {
+    "query_id": "moral_unique_0422",
+    "text": "Tear out vice by the roots and the branches will wither away.",
+    "cluster_id": "singleton_0443"
+  },
+  {
+    "query_id": "moral_unique_0423",
+    "text": "In conflicts between powerful parties, bystanders may suffer unintended consequences.",
+    "cluster_id": "singleton_0444"
+  },
+  {
+    "query_id": "moral_unique_0424",
+    "text": "Appearances can be deceiving.",
+    "cluster_id": "appearances_deceptive"
+  },
+  {
+    "query_id": "moral_unique_0425",
+    "text": "If often happens that even honest people do not hesitate to persecute someone who has slandered them.",
+    "cluster_id": "singleton_0446"
+  },
+  {
+    "query_id": "moral_unique_0426",
+    "text": "There is little risk in being poor, while being rich can get you into trouble.",
+    "cluster_id": "poor_life_safer"
+  },
+  {
+    "query_id": "moral_unique_0427",
+    "text": "There's no reading of ourselves but with other mans eyes.",
+    "cluster_id": "singleton_0448"
+  },
+  {
+    "query_id": "moral_unique_0428",
+    "text": "When people feel grief for their misfortunes, they avoid the place where that grief overtook them.",
+    "cluster_id": "singleton_0449"
+  },
+  {
+    "query_id": "moral_unique_0429",
+    "text": "Persuasion is better than Force.",
+    "cluster_id": "singleton_0450"
+  },
+  {
+    "query_id": "moral_unique_0430",
+    "text": "The memory of a good deed lives.",
+    "cluster_id": "singleton_0451"
+  },
+  {
+    "query_id": "moral_unique_0431",
+    "text": "People often disguise their selfish desires as practical needs to justify their actions.",
+    "cluster_id": "singleton_0452"
+  },
+  {
+    "query_id": "moral_unique_0432",
+    "text": "Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary.",
+    "cluster_id": "singleton_0453"
+  },
+  {
+    "query_id": "moral_unique_0433",
+    "text": "People who have been treated with contempt repay the deed in kind.",
+    "cluster_id": "singleton_0454"
+  },
+  {
+    "query_id": "moral_unique_0434",
+    "text": "A wise person readily tolerates the insolence of strangers when he sees those same strangers mistreating one another.",
+    "cluster_id": "singleton_0455"
+  },
+  {
+    "query_id": "moral_unique_0435",
+    "text": "Temptation can lead even the most virtuous individuals to compromise their integrity and values.",
+    "cluster_id": "singleton_0456"
+  },
+  {
+    "query_id": "moral_unique_0436",
+    "text": "The bad things that strangers do to you are never as terrible as the things done to you by the members of your own family.",
+    "cluster_id": "singleton_0457"
+  },
+  {
+    "query_id": "moral_unique_0437",
+    "text": "Some people will agree to do things under compulsion that they are not willing to do as a favour.",
+    "cluster_id": "singleton_0458"
+  },
+  {
+    "query_id": "moral_unique_0438",
+    "text": "One should never trust those with a history of deceit.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0439",
+    "text": "No one gladly revisits a place where they got hurt.",
+    "cluster_id": "singleton_0460"
+  },
+  {
+    "query_id": "moral_unique_0440",
+    "text": "The unjust man is envious of anyone else's good fortune.",
+    "cluster_id": "singleton_0461"
+  },
+  {
+    "query_id": "moral_unique_0441",
+    "text": "Desire things you don't understand and you accept the consequences.",
+    "cluster_id": "singleton_0462"
+  },
+  {
+    "query_id": "moral_unique_0442",
+    "text": "A change of place does not make you a saint.",
+    "cluster_id": "singleton_0463"
+  },
+  {
+    "query_id": "moral_unique_0443",
+    "text": "Fair weather friends are not worth much.",
+    "cluster_id": "adversity_reveals_friends"
+  },
+  {
+    "query_id": "moral_unique_0444",
+    "text": "Sometimes, those you support become your worst enemy.",
+    "cluster_id": "support_becomes_enemy"
+  },
+  {
+    "query_id": "moral_unique_0445",
+    "text": "Not all advice is wise.",
+    "cluster_id": "singleton_0466"
+  },
+  {
+    "query_id": "moral_unique_0446",
+    "text": "Familiarity can alleviate seemingly intractable problems.",
+    "cluster_id": "familiarity_reduces_fear"
+  },
+  {
+    "query_id": "moral_unique_0447",
+    "text": "Do not blame others.",
+    "cluster_id": "singleton_0468"
+  },
+  {
+    "query_id": "moral_unique_0448",
+    "text": "Courage in words means nothing if you flee in danger.",
+    "cluster_id": "bravery_in_safety_is_cheap"
+  },
+  {
+    "query_id": "moral_unique_0449",
+    "text": "That is how life is: we must put up with less serious losses in order to avoid worse ones.",
+    "cluster_id": "singleton_0470"
+  },
+  {
+    "query_id": "moral_unique_0450",
+    "text": "Modesty and carnal love cannot survive together.",
+    "cluster_id": "singleton_0471"
+  },
+  {
+    "query_id": "moral_unique_0451",
+    "text": "Appetite blinds men to their surroundings.",
+    "cluster_id": "singleton_0472"
+  },
+  {
+    "query_id": "moral_unique_0452",
+    "text": "Some may choose mutual destruction over continued suffering.",
+    "cluster_id": "singleton_0474"
+  },
+  {
+    "query_id": "moral_unique_0453",
+    "text": "Even the favours of wicked people are frightening.",
+    "cluster_id": "singleton_0475"
+  },
+  {
+    "query_id": "moral_unique_0454",
+    "text": "Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings.",
+    "cluster_id": "singleton_0476"
+  },
+  {
+    "query_id": "moral_unique_0455",
+    "text": "What is most truly valuable is often underrated.",
+    "cluster_id": "singleton_0477"
+  },
+  {
+    "query_id": "moral_unique_0456",
+    "text": "People often prefer to live simply at home than to live lavishly at someone else's house.",
+    "cluster_id": "singleton_0478"
+  },
+  {
+    "query_id": "moral_unique_0457",
+    "text": "Those who act in their own self-interest while pretending to help others will not earn gratitude.",
+    "cluster_id": "singleton_0479"
+  },
+  {
+    "query_id": "moral_unique_0458",
+    "text": "People often make extravagant promises which they are completely unable to carry out.",
+    "cluster_id": "promises_cant_deliver"
+  },
+  {
+    "query_id": "moral_unique_0459",
+    "text": "Bad situations rarely get better.",
+    "cluster_id": "singleton_0481"
+  },
+  {
+    "query_id": "moral_unique_0460",
+    "text": "Even those who work hard may find their material wealth undone by the greed of others.",
+    "cluster_id": "singleton_0482"
+  },
+  {
+    "query_id": "moral_unique_0461",
+    "text": "Some begrudge others what they cannot enjoy themselves.",
+    "cluster_id": "dog_in_manger"
+  },
+  {
+    "query_id": "moral_unique_0462",
+    "text": "Do not overestimate yourself.",
+    "cluster_id": "singleton_0484"
+  },
+  {
+    "query_id": "moral_unique_0463",
+    "text": "Be yourself and don't pretend to be someone you're not.",
+    "cluster_id": "be_yourself"
+  },
+  {
+    "query_id": "moral_unique_0464",
+    "text": "Do not believe everything you hear.",
+    "cluster_id": "singleton_0486"
+  },
+  {
+    "query_id": "moral_unique_0465",
+    "text": "Unity is mankind's greatest good, while dissension is a weak and slavish thing.",
+    "cluster_id": "union_strength"
+  },
+  {
+    "query_id": "moral_unique_0466",
+    "text": "You can fool someone only so many times.",
+    "cluster_id": "singleton_0488"
+  },
+  {
+    "query_id": "moral_unique_0467",
+    "text": "Telling the truth can sometimes be dangerous.",
+    "cluster_id": "singleton_0489"
+  },
+  {
+    "query_id": "moral_unique_0468",
+    "text": "You should not add one problem to another.",
+    "cluster_id": "singleton_0490"
+  },
+  {
+    "query_id": "moral_unique_0469",
+    "text": "Try to make something, and do not let envy pass judgment on it. Nothing is entirely satisfactory to the dishonest.",
+    "cluster_id": "singleton_0491"
+  },
+  {
+    "query_id": "moral_unique_0470",
+    "text": "People adjust their beliefs based on what is profitable for them.",
+    "cluster_id": "singleton_0492"
+  },
+  {
+    "query_id": "moral_unique_0471",
+    "text": "Unresolved issues can resurface when least expected.",
+    "cluster_id": "singleton_0493"
+  },
+  {
+    "query_id": "moral_unique_0472",
+    "text": "Fortune can occasionally bestow favours that exceed a person's hopes and expectations.",
+    "cluster_id": "singleton_0494"
+  },
+  {
+    "query_id": "moral_unique_0473",
+    "text": "Only a man who is out of his mind and hated by the gods delights in ugly things as if they were beautiful.",
+    "cluster_id": "singleton_0495"
+  },
+  {
+    "query_id": "moral_unique_0474",
+    "text": "It is difficult to truly know a person.",
+    "cluster_id": "singleton_0496"
+  },
+  {
+    "query_id": "moral_unique_0475",
+    "text": "Don't draw a conclusion based on a single observation.",
+    "cluster_id": "singleton_0497"
+  },
+  {
+    "query_id": "moral_unique_0476",
+    "text": "One is known by deeds, not by words.",
+    "cluster_id": "deeds_not_words"
+  },
+  {
+    "query_id": "moral_unique_0477",
+    "text": "Beauty is in the eyes of the beholder.",
+    "cluster_id": "singleton_0500"
+  },
+  {
+    "query_id": "moral_unique_0478",
+    "text": "Notoriety is often mistaken for fame.",
+    "cluster_id": "singleton_0501"
+  },
+  {
+    "query_id": "moral_unique_0479",
+    "text": "They complain most who suffer least.",
+    "cluster_id": "singleton_0502"
+  },
+  {
+    "query_id": "moral_unique_0480",
+    "text": "Do not be in a hurry to change one evil for another.",
+    "cluster_id": "singleton_0503"
+  },
+  {
+    "query_id": "moral_unique_0481",
+    "text": "Overconfidence often leads people into danger.",
+    "cluster_id": "overconfidence_danger"
+  },
+  {
+    "query_id": "moral_unique_0482",
+    "text": "There is no wealth greater than liberty.",
+    "cluster_id": "no_wealth_liberty"
+  },
+  {
+    "query_id": "moral_unique_0483",
+    "text": "Some would rather fight than not.",
+    "cluster_id": "singleton_0506"
+  },
+  {
+    "query_id": "moral_unique_0484",
+    "text": "Don't take on more than you can accomplish.",
+    "cluster_id": "grasp_for_more"
+  },
+  {
+    "query_id": "moral_unique_0485",
+    "text": "Use care to place your blame on the right person.",
+    "cluster_id": "singleton_0509"
+  },
+  {
+    "query_id": "moral_unique_0486",
+    "text": "Beware the sort of person who uses tricks.",
+    "cluster_id": "singleton_0510"
+  },
+  {
+    "query_id": "moral_unique_0487",
+    "text": "Union gives strength.",
+    "cluster_id": "union_strength"
+  },
+  {
+    "query_id": "moral_unique_0488",
+    "text": "Where force is not enough, cleverness must be used instead.",
+    "cluster_id": "cunning_escapes_strength"
+  },
+  {
+    "query_id": "moral_unique_0489",
+    "text": "A greedy man does not gladly give anything away, even when he has enough for himself.",
+    "cluster_id": "singleton_0513"
+  },
+  {
+    "query_id": "moral_unique_0490",
+    "text": "Someone who wants to help his friend must give him what is essential and appropriate.",
+    "cluster_id": "singleton_0514"
+  },
+  {
+    "query_id": "moral_unique_0491",
+    "text": "Do not ask for more than you deserve.",
+    "cluster_id": "singleton_fable_0515"
+  },
+  {
+    "query_id": "moral_unique_0492",
+    "text": "Indulgence in luxuries can lead to peril.",
+    "cluster_id": "luxuries_lead_to_peril"
+  },
+  {
+    "query_id": "moral_unique_0493",
+    "text": "An enemy is most dangerous when offering you help.",
+    "cluster_id": "singleton_0517"
+  },
+  {
+    "query_id": "moral_unique_0494",
+    "text": "The things which bring us pleasure can often be hazardous as well.",
+    "cluster_id": "singleton_0518"
+  },
+  {
+    "query_id": "moral_unique_0495",
+    "text": "No one should boast when his prowess is a matter of mere circumstance.",
+    "cluster_id": "singleton_0519"
+  },
+  {
+    "query_id": "moral_unique_0496",
+    "text": "No curse weighs more heavily than a guilty conscience.",
+    "cluster_id": "singleton_0520"
+  },
+  {
+    "query_id": "moral_unique_0497",
+    "text": "People are often quick to make promises, but they do not really expect to have to fulfill them.",
+    "cluster_id": "promises_quick"
+  },
+  {
+    "query_id": "moral_unique_0498",
+    "text": "Those who adapt to the times will emerge unscathed.",
+    "cluster_id": "those_adapt"
+  },
+  {
+    "query_id": "moral_unique_0499",
+    "text": "It is easy to be brave when there is no danger.",
+    "cluster_id": "bravery_in_safety_is_cheap"
+  },
+  {
+    "query_id": "moral_unique_0500",
+    "text": "Love can blind even the wildest.",
+    "cluster_id": "singleton_0524"
+  },
+  {
+    "query_id": "moral_unique_0501",
+    "text": "You are judged by the company you keep.",
+    "cluster_id": "company_you_keep"
+  },
+  {
+    "query_id": "moral_unique_0502",
+    "text": "Do not attempt to hide things which cannot be hid.",
+    "cluster_id": "singleton_0526"
+  },
+  {
+    "query_id": "moral_unique_0503",
+    "text": "Example is more powerful than precept.",
+    "cluster_id": "singleton_0527"
+  },
+  {
+    "query_id": "moral_unique_0504",
+    "text": "We must make friends in prosperity if we would have their help in adversity.",
+    "cluster_id": "choose_friends_who_help_in_adversity"
+  },
+  {
+    "query_id": "moral_unique_0505",
+    "text": "A coward by nature will always be a coward.",
+    "cluster_id": "singleton_0529"
+  },
+  {
+    "query_id": "moral_unique_0506",
+    "text": "Do not be what you are not, nor pretend to be what you are not.",
+    "cluster_id": "be_yourself"
+  },
+  {
+    "query_id": "moral_unique_0507",
+    "text": "The word of a wicked man can never be trusted.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0508",
+    "text": "It is better to serve in safety than to rule in peril.",
+    "cluster_id": "singleton_fable_0532"
+  },
+  {
+    "query_id": "moral_unique_0509",
+    "text": "The man who treats others well is rewarded by gratitude.",
+    "cluster_id": "singleton_0533"
+  },
+  {
+    "query_id": "moral_unique_0510",
+    "text": "Pay attention to deeds, not words.",
+    "cluster_id": "deeds_not_words"
+  },
+  {
+    "query_id": "moral_unique_0511",
+    "text": "A man cannot be too careful of what he does, where the life of any creature is in question.",
+    "cluster_id": "singleton_0535"
+  },
+  {
+    "query_id": "moral_unique_0512",
+    "text": "Trouble awaits you if you pursue ill-gotten gains.",
+    "cluster_id": "singleton_0536"
+  },
+  {
+    "query_id": "moral_unique_0513",
+    "text": "Every tale is not to be believed.",
+    "cluster_id": "every_tale"
+  },
+  {
+    "query_id": "moral_unique_0514",
+    "text": "The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued.",
+    "cluster_id": "singleton_0538"
+  },
+  {
+    "query_id": "moral_unique_0515",
+    "text": "It is dangerous to believe a story, and dangerous not to believe it.",
+    "cluster_id": "singleton_0539"
+  },
+  {
+    "query_id": "moral_unique_0516",
+    "text": "Often there is more good to be found in one man than in a crowd of people.",
+    "cluster_id": "singleton_0540"
+  },
+  {
+    "query_id": "moral_unique_0517",
+    "text": "If you don't speak out for others, there will be nobody left to speak out for you.",
+    "cluster_id": "singleton_0541"
+  },
+  {
+    "query_id": "moral_unique_0518",
+    "text": "Tears don't always signify pity.",
+    "cluster_id": "singleton_0542"
+  },
+  {
+    "query_id": "moral_unique_0519",
+    "text": "People with excellent qualities are often insulted by their inferiors.",
+    "cluster_id": "singleton_0543"
+  },
+  {
+    "query_id": "moral_unique_0520",
+    "text": "A bad man can come to ruin, but he is able to harm many other people first.",
+    "cluster_id": "singleton_0544"
+  },
+  {
+    "query_id": "moral_unique_0521",
+    "text": "Any excuse will serve a tyrant.",
+    "cluster_id": "tyrants_no_excuse"
+  },
+  {
+    "query_id": "moral_unique_0522",
+    "text": "Don't judge character by appearance.",
+    "cluster_id": "not_judged_appearance"
+  },
+  {
+    "query_id": "moral_unique_0523",
+    "text": "There is nothing more valuable than liberty.",
+    "cluster_id": "no_wealth_liberty"
+  },
+  {
+    "query_id": "moral_unique_0524",
+    "text": "It is better to be injured with impunity, than to put ourselves in the power of another.",
+    "cluster_id": "singleton_0548"
+  },
+  {
+    "query_id": "moral_unique_0525",
+    "text": "Humble commonalty easily finds safety in obscurity.",
+    "cluster_id": "obscurity_safety"
+  },
+  {
+    "query_id": "moral_unique_0526",
+    "text": "We are not able to see our own faults: but as soon as others make a slip, we are ready to censure.",
+    "cluster_id": "blind_to_own_faults"
+  },
+  {
+    "query_id": "moral_unique_0527",
+    "text": "Choosing unworthy representatives can lead to humiliation and ongoing disrespect for the entire group.",
+    "cluster_id": "singleton_0551"
+  },
+  {
+    "query_id": "moral_unique_0528",
+    "text": "Better to endure a small hardship than risk a greater one.",
+    "cluster_id": "avoid_lesser_fall_greater"
+  },
+  {
+    "query_id": "moral_unique_0529",
+    "text": "Life is a mixture of grief and joy.",
+    "cluster_id": "singleton_0553"
+  },
+  {
+    "query_id": "moral_unique_0530",
+    "text": "Avoid the gain that exposes to hazard.",
+    "cluster_id": "singleton_0554"
+  },
+  {
+    "query_id": "moral_unique_0531",
+    "text": "We must not require what is unreasonable.",
+    "cluster_id": "singleton_0555"
+  },
+  {
+    "query_id": "moral_unique_0532",
+    "text": "The essence of authenticity cannot be replicated.",
+    "cluster_id": "singleton_0556"
+  },
+  {
+    "query_id": "moral_unique_0533",
+    "text": "The meaning is to be considered, not the mere words.",
+    "cluster_id": "singleton_0557"
+  },
+  {
+    "query_id": "moral_unique_0534",
+    "text": "Whatever happens, we must bear it with equanimity.",
+    "cluster_id": "bear_change_with_equanimity"
+  },
+  {
+    "query_id": "moral_unique_0535",
+    "text": "Don't go to extremes.",
+    "cluster_id": "singleton_0559"
+  },
+  {
+    "query_id": "moral_unique_0536",
+    "text": "Kindness is never wasted.",
+    "cluster_id": "kindness_never_wasted"
+  },
+  {
+    "query_id": "moral_unique_0537",
+    "text": "The weak may find a way to avenge a wrong.",
+    "cluster_id": "singleton_0561"
+  },
+  {
+    "query_id": "moral_unique_0538",
+    "text": "Know your enemies.",
+    "cluster_id": "know_your_enemies"
+  },
+  {
+    "query_id": "moral_unique_0539",
+    "text": "A fine coat is not always an indication of an attractive mind.",
+    "cluster_id": "disguise_reveals_fool"
+  },
+  {
+    "query_id": "moral_unique_0540",
+    "text": "Don't be greedy.",
+    "cluster_id": "singleton_0565"
+  },
+  {
+    "query_id": "moral_unique_0541",
+    "text": "Take care of the little things and the big things will take care of themselves.",
+    "cluster_id": "singleton_0566"
+  },
+  {
+    "query_id": "moral_unique_0542",
+    "text": "Avoid overindulgence.",
+    "cluster_id": "singleton_0567"
+  },
+  {
+    "query_id": "moral_unique_0543",
+    "text": "Wit outshines skill.",
+    "cluster_id": "singleton_0569"
+  },
+  {
+    "query_id": "moral_unique_0544",
+    "text": "Each stage of life has its own gifts.",
+    "cluster_id": "singleton_0570"
+  },
+  {
+    "query_id": "moral_unique_0545",
+    "text": "Don't deceive yourself.",
+    "cluster_id": "dont_deceive_yourself"
+  },
+  {
+    "query_id": "moral_unique_0546",
+    "text": "When a man has both an interest and an inclination to betray us, there's no trusting him.",
+    "cluster_id": "singleton_0572"
+  },
+  {
+    "query_id": "moral_unique_0547",
+    "text": "In times of peril, the truth may be bitter, but it can also be a means of escape.",
+    "cluster_id": "singleton_0573"
+  },
+  {
+    "query_id": "moral_unique_0548",
+    "text": "Fear of the future can lead to actions that bring about the very fate we seek to avoid.",
+    "cluster_id": "singleton_0574"
+  },
+  {
+    "query_id": "moral_unique_0549",
+    "text": "We must help one another, for if a neighbor falls, their burden will fall on you.",
+    "cluster_id": "singleton_0575"
+  },
+  {
+    "query_id": "moral_unique_0550",
+    "text": "The grass is always greener on the other side of the fence.",
+    "cluster_id": "singleton_0576"
+  },
+  {
+    "query_id": "moral_unique_0551",
+    "text": "Professional mourners serve those who pay the most.",
+    "cluster_id": "singleton_0577"
+  },
+  {
+    "query_id": "moral_unique_0552",
+    "text": "Justice is fickle.",
+    "cluster_id": "singleton_0578"
+  },
+  {
+    "query_id": "moral_unique_0553",
+    "text": "Honor the customs of the household you enter.",
+    "cluster_id": "singleton_0579"
+  },
+  {
+    "query_id": "moral_unique_0554",
+    "text": "No matter how you brag, you can be undone.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0555",
+    "text": "Do not let your fancy make you forget realities.",
+    "cluster_id": "singleton_0581"
+  },
+  {
+    "query_id": "moral_unique_0556",
+    "text": "Better to face a known danger than to trust a deceitful promise of safety.",
+    "cluster_id": "avoid_lesser_fall_greater"
+  },
+  {
+    "query_id": "moral_unique_0557",
+    "text": "Look at the source when placing the blame.",
+    "cluster_id": "singleton_0583"
+  },
+  {
+    "query_id": "moral_unique_0558",
+    "text": "It is better to be loved than feared.",
+    "cluster_id": "singleton_0584"
+  },
+  {
+    "query_id": "moral_unique_0559",
+    "text": "Foresake the hard when an easier way is available.",
+    "cluster_id": "singleton_0585"
+  },
+  {
+    "query_id": "moral_unique_0560",
+    "text": "Even gods may not know everything.",
+    "cluster_id": "singleton_0586"
+  },
+  {
+    "query_id": "moral_unique_0561",
+    "text": "Act as you profess to believe.",
+    "cluster_id": "singleton_0587"
+  },
+  {
+    "query_id": "moral_unique_0562",
+    "text": "Respect is often better shown by refraining from disrespect.",
+    "cluster_id": "singleton_0588"
+  },
+  {
+    "query_id": "moral_unique_0563",
+    "text": "Sometimes, Wicked people commit crime in haste but are not punished until much later.",
+    "cluster_id": "singleton_0589"
+  },
+  {
+    "query_id": "moral_unique_0564",
+    "text": "Watch the actions of your enemy.",
+    "cluster_id": "know_your_enemies"
+  },
+  {
+    "query_id": "moral_unique_0565",
+    "text": "Care defines ability.",
+    "cluster_id": "singleton_0591"
+  },
+  {
+    "query_id": "moral_unique_0566",
+    "text": "A humble life free from danger is more valuable than a life of luxury filled with peril.",
+    "cluster_id": "poor_life_safer"
+  },
+  {
+    "query_id": "moral_unique_0567",
+    "text": "Never trust a known deceiver.",
+    "cluster_id": "dont_trust_wicked"
+  },
+  {
+    "query_id": "moral_unique_0568",
+    "text": "Do not neglect the loyalty of old friends to please new acquaintances.",
+    "cluster_id": "old_friends"
+  },
+  {
+    "query_id": "moral_unique_0569",
+    "text": "Know yourself and your limits.",
+    "cluster_id": "singleton_0596"
+  },
+  {
+    "query_id": "moral_unique_0570",
+    "text": "Do not boast lest you be taken down.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0571",
+    "text": "Trust but verify.",
+    "cluster_id": "singleton_0599"
+  },
+  {
+    "query_id": "moral_unique_0572",
+    "text": "The great do not always prevail.",
+    "cluster_id": "singleton_0600"
+  },
+  {
+    "query_id": "moral_unique_0573",
+    "text": "Falsehood is with all men.",
+    "cluster_id": "singleton_0601"
+  },
+  {
+    "query_id": "moral_unique_0574",
+    "text": "Consider all before you judge.",
+    "cluster_id": "singleton_0602"
+  },
+  {
+    "query_id": "moral_unique_0575",
+    "text": "People that live by example need to look closely at the example they are following.",
+    "cluster_id": "singleton_0603"
+  },
+  {
+    "query_id": "moral_unique_0576",
+    "text": "Know your place.",
+    "cluster_id": "singleton_0604"
+  },
+  {
+    "query_id": "moral_unique_0577",
+    "text": "Be watchful or all will be lost.",
+    "cluster_id": "singleton_0605"
+  },
+  {
+    "query_id": "moral_unique_0578",
+    "text": "It is better to endure short-term struggles for long-term benefits than the other way around.",
+    "cluster_id": "singleton_0606"
+  },
+  {
+    "query_id": "moral_unique_0579",
+    "text": "When fools fight others run away with the prize.",
+    "cluster_id": "singleton_0607"
+  },
+  {
+    "query_id": "moral_unique_0580",
+    "text": "There is no easy choice during desperate times.",
+    "cluster_id": "singleton_0608"
+  },
+  {
+    "query_id": "moral_unique_0581",
+    "text": "Do not dwell on what has passed.",
+    "cluster_id": "singleton_0609"
+  },
+  {
+    "query_id": "moral_unique_0582",
+    "text": "Sadness is a part of life.",
+    "cluster_id": "singleton_0610"
+  },
+  {
+    "query_id": "moral_unique_0583",
+    "text": "Action is more valuable than arguments.",
+    "cluster_id": "singleton_0612"
+  },
+  {
+    "query_id": "moral_unique_0584",
+    "text": "It's easy to put off today what can be done tomorrow.",
+    "cluster_id": "singleton_0614"
+  },
+  {
+    "query_id": "moral_unique_0585",
+    "text": "Be prepared to defend your position.",
+    "cluster_id": "singleton_0615"
+  },
+  {
+    "query_id": "moral_unique_0586",
+    "text": "Degrading your opponents only diminishes your own victory.",
+    "cluster_id": "singleton_0618"
+  },
+  {
+    "query_id": "moral_unique_0587",
+    "text": "Pick your enemies.",
+    "cluster_id": "know_your_enemies"
+  },
+  {
+    "query_id": "moral_unique_0588",
+    "text": "Value is what others think of you, not what you think of yourself.",
+    "cluster_id": "singleton_0622"
+  },
+  {
+    "query_id": "moral_unique_0589",
+    "text": "There is danger in the silent enemy.",
+    "cluster_id": "singleton_0623"
+  },
+  {
+    "query_id": "moral_unique_0590",
+    "text": "We should not love our homeland so much that we ignore the possibility of finding greater happiness elsewhere.",
+    "cluster_id": "singleton_0624"
+  },
+  {
+    "query_id": "moral_unique_0591",
+    "text": "A small inconvenience is compensated for by a greater usefulness.",
+    "cluster_id": "singleton_0625"
+  },
+  {
+    "query_id": "moral_unique_0592",
+    "text": "It's wise to think before we speak.",
+    "cluster_id": "think_before_speak"
+  },
+  {
+    "query_id": "moral_unique_0593",
+    "text": "A wise person will not attempt anything without having the right means to achieve it.",
+    "cluster_id": "singleton_0627"
+  },
+  {
+    "query_id": "moral_unique_0594",
+    "text": "Trusting as you wish to be trusted doesn't work between a rogue and an honest person.",
+    "cluster_id": "singleton_0628"
+  },
+  {
+    "query_id": "moral_unique_0595",
+    "text": "Pride and vanity leads to our downfall.",
+    "cluster_id": "pride_before_destruction"
+  },
+  {
+    "query_id": "moral_unique_0596",
+    "text": "We should not to conclude that we are allowed to do to other people's things what is permitted to them in their own houses.",
+    "cluster_id": "singleton_0630"
+  },
+  {
+    "query_id": "moral_unique_0597",
+    "text": "The life of the poor is often safer than the life of the rich.",
+    "cluster_id": "poor_life_safer"
+  },
+  {
+    "query_id": "moral_unique_0598",
+    "text": "What we are forced to do by a greater power and necessity is not truly our own action.",
+    "cluster_id": "singleton_0632"
+  },
+  {
+    "query_id": "moral_unique_0599",
+    "text": "Famous beauties are rarely lucky.",
+    "cluster_id": "singleton_0633"
+  },
+  {
+    "query_id": "moral_unique_0600",
+    "text": "Do not fear death, as it is the final goodbye to all the troubles, pains, and dangers of life.",
+    "cluster_id": "singleton_0634"
+  },
+  {
+    "query_id": "moral_unique_0601",
+    "text": "Beware those who value their gain more than their love.",
+    "cluster_id": "singleton_0635"
+  },
+  {
+    "query_id": "moral_unique_0602",
+    "text": "Arrogant fools have no true influence.",
+    "cluster_id": "singleton_0636"
+  },
+  {
+    "query_id": "moral_unique_0603",
+    "text": "In all disputes, those who keep their opponents afraid of revenge come out best.",
+    "cluster_id": "singleton_0637"
+  },
+  {
+    "query_id": "moral_unique_0604",
+    "text": "Men would bear their misfortunes more patiently if they considered the ones of others.",
+    "cluster_id": "singleton_0638"
+  },
+  {
+    "query_id": "moral_unique_0605",
+    "text": "The shortest and surest way of doing things is best.",
+    "cluster_id": "singleton_0639"
+  },
+  {
+    "query_id": "moral_unique_0606",
+    "text": "When we avoid present dangers, we must weigh the degree of danger of the alternatives",
+    "cluster_id": "avoid_lesser_fall_greater"
+  },
+  {
+    "query_id": "moral_unique_0607",
+    "text": "An alliance with the powerless is futile.",
+    "cluster_id": "singleton_0641"
+  },
+  {
+    "query_id": "moral_unique_0608",
+    "text": "There is a clever way of joking between seriousness and jest that brings both enjoyment and benefit.",
+    "cluster_id": "singleton_0642"
+  },
+  {
+    "query_id": "moral_unique_0609",
+    "text": "Honors change behavior.",
+    "cluster_id": "singleton_0643"
+  },
+  {
+    "query_id": "moral_unique_0610",
+    "text": "Do not mock the feelings of old age, as no one can escape them if they go on living.",
+    "cluster_id": "singleton_0644"
+  },
+  {
+    "query_id": "moral_unique_0611",
+    "text": "All things are to be done in their own time.",
+    "cluster_id": "singleton_0645"
+  },
+  {
+    "query_id": "moral_unique_0612",
+    "text": "Big talkers are not suited for trust, business, or conversation.",
+    "cluster_id": "singleton_0646"
+  },
+  {
+    "query_id": "moral_unique_0613",
+    "text": "Putting up with one insult invites another.",
+    "cluster_id": "singleton_0647"
+  },
+  {
+    "query_id": "moral_unique_0614",
+    "text": "Only untrustworthy people blame the consequences of their own actions on others.",
+    "cluster_id": "singleton_0648"
+  },
+  {
+    "query_id": "moral_unique_0615",
+    "text": "Embrace your own strengths.",
+    "cluster_id": "singleton_0649"
+  },
+  {
+    "query_id": "moral_unique_0616",
+    "text": "Consider the consequences of your actions.",
+    "cluster_id": "singleton_0650"
+  },
+  {
+    "query_id": "moral_unique_0617",
+    "text": "What a person does through another is truly their own action.",
+    "cluster_id": "singleton_0651"
+  },
+  {
+    "query_id": "moral_unique_0618",
+    "text": "Many people fear danger where there is none, and feel safe where there is danger: put things in perspective.",
+    "cluster_id": "imaginary_fears"
+  },
+  {
+    "query_id": "moral_unique_0619",
+    "text": "It's better to ignore an insult from one troublemaker than to bring a whole crowd of trouble upon yourself.",
+    "cluster_id": "singleton_0653"
+  },
+  {
+    "query_id": "moral_unique_0620",
+    "text": "Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",
+    "cluster_id": "bird_in_hand"
+  },
+  {
+    "query_id": "moral_unique_0621",
+    "text": "Everything pleases at first, but nothing pleases for long.",
+    "cluster_id": "singleton_0655"
+  },
+  {
+    "query_id": "moral_unique_0622",
+    "text": "We should not be upset by the words of our teachers, since those words are usually the cause of many good things.",
+    "cluster_id": "singleton_0656"
+  },
+  {
+    "query_id": "moral_unique_0623",
+    "text": "It's wise and kind to be considerate of one another, for no one knows their own end.",
+    "cluster_id": "singleton_0657"
+  },
+  {
+    "query_id": "moral_unique_0624",
+    "text": "True worth should be measured by character and deeds, not by outward appearances.",
+    "cluster_id": "not_judged_appearance"
+  },
+  {
+    "query_id": "moral_unique_0625",
+    "text": "Nothing should be condemned, since there is nothing so worthless and humble that it cannot at some time or another prove to be useful.",
+    "cluster_id": "singleton_0660"
+  },
+  {
+    "query_id": "moral_unique_0626",
+    "text": "It is more honorable to die having achieved noble deeds than to live a life of vice.",
+    "cluster_id": "singleton_0661"
+  },
+  {
+    "query_id": "moral_unique_0627",
+    "text": "Don't promise more than you can deliver.",
+    "cluster_id": "promises_cant_deliver"
+  },
+  {
+    "query_id": "moral_unique_0628",
+    "text": "Many people renounce wicked activities only because they are prevented from conducting them any longer.",
+    "cluster_id": "virtue_by_necessity"
+  },
+  {
+    "query_id": "moral_unique_0629",
+    "text": "Do not fight with those who are perfectly capable of fighting back.",
+    "cluster_id": "dont_fight_stronger"
+  },
+  {
+    "query_id": "moral_unique_0630",
+    "text": "Unequal matches bring misery.",
+    "cluster_id": "singleton_0665"
+  },
+  {
+    "query_id": "moral_unique_0631",
+    "text": "It's foolish to make decisions without understanding the nature of the matter at hand.",
+    "cluster_id": "singleton_0666"
+  },
+  {
+    "query_id": "moral_unique_0632",
+    "text": "Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side.",
+    "cluster_id": "singleton_0667"
+  },
+  {
+    "query_id": "moral_unique_0633",
+    "text": "When public officials encourage foolishness, it's no surprise if fools try to become public officials.",
+    "cluster_id": "singleton_0668"
+  },
+  {
+    "query_id": "moral_unique_0634",
+    "text": "He who claims any good for himself takes away from the source of all the good he enjoys.",
+    "cluster_id": "singleton_0669"
+  },
+  {
+    "query_id": "moral_unique_0635",
+    "text": "We should not expect that our crimes will always go unpunished.",
+    "cluster_id": "singleton_0670"
+  },
+  {
+    "query_id": "moral_unique_0636",
+    "text": "It is better by far to be governed by one chief, than by many.",
+    "cluster_id": "singleton_0671"
+  },
+  {
+    "query_id": "moral_unique_0637",
+    "text": "No one is so loving of a friend that they would not prefer their own good to that of another.",
+    "cluster_id": "singleton_0672"
+  },
+  {
+    "query_id": "moral_unique_0638",
+    "text": "Not all things are suitable for all people.",
+    "cluster_id": "singleton_0673"
+  },
+  {
+    "query_id": "moral_unique_0639",
+    "text": "Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced.",
+    "cluster_id": "singleton_0674"
+  },
+  {
+    "query_id": "moral_unique_0640",
+    "text": "Many pretend to be concerned about some people's demise, when however what they want is for it to come quickly.",
+    "cluster_id": "singleton_0675"
+  },
+  {
+    "query_id": "moral_unique_0641",
+    "text": "Every Season has its own work.",
+    "cluster_id": "singleton_0676"
+  },
+  {
+    "query_id": "moral_unique_0642",
+    "text": "People are to be judged by their actions, not by their appearance.",
+    "cluster_id": "not_judged_appearance"
+  },
+  {
+    "query_id": "moral_unique_0643",
+    "text": "No one can be safe in peace unless they are always ready to face an enemy in case of war.",
+    "cluster_id": "prepare_for_war"
+  },
+  {
+    "query_id": "moral_unique_0644",
+    "text": "Save a Thief from the Gallows, and he'll cut your Throat.",
+    "cluster_id": "singleton_0679"
+  },
+  {
+    "query_id": "moral_unique_0645",
+    "text": "Unwanted visits are a nuisance to a peaceful person's life.",
+    "cluster_id": "singleton_0680"
+  },
+  {
+    "query_id": "moral_unique_0646",
+    "text": "Possession is nine-tenths of the law.",
+    "cluster_id": "singleton_0681"
+  },
+  {
+    "query_id": "moral_unique_0647",
+    "text": "Wisdom is far superior to strength.",
+    "cluster_id": "cunning_escapes_strength"
+  },
+  {
+    "query_id": "moral_unique_0648",
+    "text": "Many people give up their vices not out of a love for virtue, but because they can no longer continue indulging in them.",
+    "cluster_id": "virtue_by_necessity"
+  },
+  {
+    "query_id": "moral_unique_0649",
+    "text": "Better to be alone than in bad company.",
+    "cluster_id": "singleton_0684"
+  },
+  {
+    "query_id": "moral_unique_0650",
+    "text": "There is no thing so worthy of wonderment which does not cease to be a miracle with the passage of time.",
+    "cluster_id": "singleton_0686"
+  },
+  {
+    "query_id": "moral_unique_0651",
+    "text": "An enemy in disguise is much more unforgivable than an open enemy.",
+    "cluster_id": "false_friend_worst"
+  },
+  {
+    "query_id": "moral_unique_0652",
+    "text": "We should not pick fights with people stronger than we are.",
+    "cluster_id": "dont_fight_stronger"
+  },
+  {
+    "query_id": "moral_unique_0653",
+    "text": "Men who are wickedly inclined will not stop their vicious behavior, no matter who urges them to do so.",
+    "cluster_id": "singleton_0689"
+  },
+  {
+    "query_id": "moral_unique_0654",
+    "text": "It is very unwise, even for the greatest of men, to provoke the least, as they may find a way to enact revenge.",
+    "cluster_id": "weak_can_avenge"
+  },
+  {
+    "query_id": "moral_unique_0655",
+    "text": "When people won't listen to reason through kind means, they must be made to understand through harsh ones.",
+    "cluster_id": "singleton_0692"
+  },
+  {
+    "query_id": "moral_unique_0656",
+    "text": "Complaining is the privilege of the weak.",
+    "cluster_id": "singleton_0693"
+  },
+  {
+    "query_id": "moral_unique_0657",
+    "text": "True friends are hard to come by.",
+    "cluster_id": "true_friends_hard"
+  },
+  {
+    "query_id": "moral_unique_0658",
+    "text": "A false friend is the worst kind of enemy.",
+    "cluster_id": "false_friend_worst"
+  },
+  {
+    "query_id": "moral_unique_0659",
+    "text": "Money opens all doors.",
+    "cluster_id": "singleton_0698"
+  },
+  {
+    "query_id": "moral_unique_0660",
+    "text": "Even the strongest can be brought low by unchecked desires.",
+    "cluster_id": "singleton_0699"
+  },
+  {
+    "query_id": "moral_unique_0661",
+    "text": "Those who won't learn from advice must be taught by experience.",
+    "cluster_id": "singleton_0700"
+  },
+  {
+    "query_id": "moral_unique_0662",
+    "text": "A bird in the hand is worth two in the bush.",
+    "cluster_id": "bird_in_hand"
+  },
+  {
+    "query_id": "moral_unique_0663",
+    "text": "Seek the friendship of those who do not withdraw from offering help even in a time of adversity.",
+    "cluster_id": "choose_friends_who_help_in_adversity"
+  },
+  {
+    "query_id": "moral_unique_0664",
+    "text": "Educate your children in those arts which are capable of preserving them from want.",
+    "cluster_id": "singleton_0703"
+  },
+  {
+    "query_id": "moral_unique_0665",
+    "text": "No one is so contemptible that he cannot be of use to us in some way.",
+    "cluster_id": "singleton_0704"
+  },
+  {
+    "query_id": "moral_unique_0666",
+    "text": "The conflicts of the wicked are the protection of the good.",
+    "cluster_id": "singleton_0705"
+  },
+  {
+    "query_id": "moral_unique_0667",
+    "text": "We should live as if we always saw Death standing by.",
+    "cluster_id": "singleton_0706"
+  }
+]

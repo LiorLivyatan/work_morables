@@ -1,0 +1,53 @@
+{
+  "phase": "phase_2_gemini_layout_sweep",
+  "description": "Gemini summaries across summary-only, fable+summary, and summary+fable layouts.",
+  "timestamp": "2026-05-17_21-36-52",
+  "device": "mps",
+  "selected_args": {
+    "models": [
+      "all-MiniLM-L6-v2"
+    ],
+    "instructions": [
+      "no_instr"
+    ],
+    "generators": null,
+    "generator_models": null,
+    "prompt_variants": null,
+    "corpus_configs": null,
+    "limit": 1,
+    "force": false,
+    "dry_run": false
+  },
+  "n_runs": 1,
+  "n_queries": 668,
+  "n_fables": 709,
+  "n_qrels": 1085,
+  "runs": [
+    {
+      "model_alias": "all-MiniLM-L6-v2",
+      "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+      "instruction_variant": "no_instr",
+      "corpus_config": "fable_direct_moral",
+      "corpus_description": "Fable followed by generated direct moral summary.",
+      "corpus_template": "{fable}\\n\\nMoral summary: {direct_moral}",
+      "summary_generator": "gemini",
+      "summary_generator_model_id": "gemini-3-flash-preview",
+      "generator_prompt_variant": "direct_moral",
+      "exp_id": "",
+      "MAP@10": "",
+      "MRR@10": "",
+      "NDCG@10": "",
+      "Recall@5": "",
+      "Recall@10": "",
+      "Recall@15": "",
+      "Recall@50": "",
+      "Recall@100": "",
+      "Recall@200": "",
+      "Recall@300": "",
+      "Hit@1": "",
+      "Hit@5": "",
+      "Hit@10": "",
+      "Hit@100": ""
+    }
+  ]
+}

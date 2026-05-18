@@ -70,6 +70,12 @@ experiments/*/results/pipeline_runs/
 # Numpy embedding arrays (regeneratable)
 *.npy
 
+# Final zero-shot remote ranking snapshots are large local artifacts.
+# Keep metrics/configs in git; keep full rankings locally or on /data/lior.
+experiments/20_final_zero_shot/remote_results/**/rankings/
+experiments/20_final_zero_shot/remote_results/**/cache/
+experiments/20_final_zero_shot/**/rankings/
+
 # HuggingFace dynamic modules cache (runtime, not committed)
 .hf_modules_cache/
 

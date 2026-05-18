@@ -1,0 +1,26 @@
+{
+  "gemini": {
+    "generator": "gemini",
+    "model_id": "gemini-3-flash-preview",
+    "path": "experiments/20_final_zero_shot/summary_inputs/gemini/golden_summaries.json",
+    "notes": "Gemini reference summaries from exp_07."
+  },
+  "gemma4-E2B": {
+    "generator": "gemma4-E2B",
+    "model_id": "google/gemma-4-E2B-it",
+    "path": "experiments/20_final_zero_shot/summary_inputs/gemma4-E2B/golden_summaries.json",
+    "notes": "Gemma 4 E2B summaries from exp_09."
+  },
+  "gemma4-E4B": {
+    "generator": "gemma4-E4B",
+    "model_id": "google/gemma-4-E4B-it",
+    "path": "experiments/20_final_zero_shot/summary_inputs/gemma4-E4B/golden_summaries.json",
+    "notes": "Gemma 4 E4B summaries from exp_09. Change this path if we choose the later duplicate E4B run."
+  },
+  "gemma4-31B": {
+    "generator": "gemma4-31B",
+    "model_id": "google/gemma-4-31B-it",
+    "path": "experiments/20_final_zero_shot/summary_inputs/gemma4-31B/golden_summaries.json",
+    "notes": "Gemma 4 31B summaries from exp_09. Change this path if we choose the earlier duplicate 31B run."
+  }
+}

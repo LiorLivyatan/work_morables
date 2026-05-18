@@ -122,6 +122,116 @@ def compute_metrics_from_matrix(
     return results
 
 
+def _as_relevant_set(value) -> set[int]:
+    if isinstance(value, set):
+        return value
+    if isinstance(value, (list, tuple)):
+        return {int(v) for v in value}
+    return {int(value)}
+
+
+def _average_precision_at_ranking(ranked: np.ndarray, relevant: set[int]) -> float:
+    hits = 0
+    precision_sum = 0.0
+    for rank_idx, doc_idx in enumerate(ranked, start=1):
+        if int(doc_idx) in relevant:
+            hits += 1
+            precision_sum += hits / rank_idx
+            if hits == len(relevant):
+                break
+    return precision_sum / len(relevant)
+
+
+def _dcg_at_k(ranked: np.ndarray, relevant: set[int], k: int) -> float:
+    dcg = 0.0
+    for rank_idx, doc_idx in enumerate(ranked[:k], start=1):
+        if int(doc_idx) in relevant:
+            dcg += 1.0 / np.log2(rank_idx + 1)
+    return dcg
+
+
+def compute_multilabel_metrics_from_matrix(
+    score_matrix: np.ndarray,
+    ground_truth: dict,
+    ks=(1, 5, 10, 50),
+) -> dict:
+    """
+    Compute retrieval metrics for multi-label qrels from a score matrix.
+
+    ground_truth maps query_idx to one or more relevant doc indices. The returned
+    Hit@k is the old single-label Recall@k interpretation: at least one relevant
+    document appears in the top-k. Recall@k is the standard multi-label fraction
+    of relevant documents retrieved by k.
+    """
+    rankings = np.argsort(-score_matrix, axis=1)
+
+    reciprocal_ranks = []
+    average_precisions = []
+    r_precisions = []
+    first_relevant_ranks = []
+    hit_at_k = {k: [] for k in ks}
+    recall_at_k = {k: [] for k in ks}
+    precision_at_k = {k: [] for k in ks}
+    ndcg_at_k = {k: [] for k in ks}
+
+    for q_idx, relevant_value in ground_truth.items():
+        relevant = _as_relevant_set(relevant_value)
+        if not relevant:
+            continue
+
+        ranked = rankings[q_idx]
+        relevant_ranks = np.where(np.isin(ranked, list(relevant)))[0]
+        if len(relevant_ranks) == 0:
+            continue
+
+        first_rank = int(relevant_ranks[0])
+        first_relevant_ranks.append(first_rank + 1)
+        reciprocal_ranks.append(1.0 / (first_rank + 1))
+        average_precisions.append(_average_precision_at_ranking(ranked, relevant))
+
+        r = len(relevant)
+        r_hits = sum(1 for doc_idx in ranked[:r] if int(doc_idx) in relevant)
+        r_precisions.append(r_hits / r)
+
+        for k in ks:
+            top_k = ranked[:k]
+            hits = sum(1 for doc_idx in top_k if int(doc_idx) in relevant)
+            hit_at_k[k].append(1.0 if hits > 0 else 0.0)
+            recall_at_k[k].append(hits / len(relevant))
+            precision_at_k[k].append(hits / k)
+
+            ideal_hits = min(len(relevant), k)
+            ideal_dcg = sum(1.0 / np.log2(i + 2) for i in range(ideal_hits))
+            ndcg = _dcg_at_k(ranked, relevant, k) / ideal_dcg if ideal_dcg else 0.0
+            ndcg_at_k[k].append(ndcg)
+
+    results = {
+        "MRR": float(np.mean(reciprocal_ranks)),
+        "MAP": float(np.mean(average_precisions)),
+        "R-Precision": float(np.mean(r_precisions)),
+        "Mean Rank": float(np.mean(first_relevant_ranks)),
+        "Median Rank": float(np.median(first_relevant_ranks)),
+        "n_queries": len(reciprocal_ranks),
+    }
+    for k in ks:
+        results[f"Hit@{k}"] = float(np.mean(hit_at_k[k]))
+        results[f"Recall@{k}"] = float(np.mean(recall_at_k[k]))
+        results[f"P@{k}"] = float(np.mean(precision_at_k[k]))
+        results[f"NDCG@{k}"] = float(np.mean(ndcg_at_k[k]))
+    return results
+
+
+def compute_multilabel_metrics(
+    query_embeddings,
+    corpus_embeddings,
+    ground_truth,
+    ks=(1, 5, 10, 50),
+) -> dict:
+    """Compute multi-label retrieval metrics from query/corpus embeddings."""
+    sim_matrix = cosine_similarity(query_embeddings, corpus_embeddings)
+    return compute_multilabel_metrics_from_matrix(sim_matrix, ground_truth, ks=ks)
+
+
 def compute_rankings(query_embeddings, corpus_embeddings, top_k=100):
     """
     Return top-k corpus indices and similarity scores for each query.

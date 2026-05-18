@@ -26,7 +26,7 @@ set -euo pipefail
 ENV_FILE="$(dirname "$0")/.env"
 [[ -f "$ENV_FILE" ]] && set -a && source "$ENV_FILE" && set +a
 
-REMOTE_DIR="${REMOTE_DIR:-~/ParabeLink}"
+REMOTE_DIR="${REMOTE_DIR:-/data/lior/ParabeLink}"
 SSH_OPTS="-o StrictHostKeyChecking=no -o ConnectTimeout=15"
 PROJECT_ROOT="$(cd "$(dirname "$0")" && pwd)"
 
@@ -154,11 +154,16 @@ rsync_to \
   --exclude='.venv/' \
   --exclude='venv_gen/' \
   --exclude='wandb/' \
+  --exclude='results/' \
   --exclude='__pycache__/' \
   --exclude='*.pyc' \
   --exclude='.env' \
+  --exclude='llm_retrieval/results/' \
   --exclude='finetuning/*/results/' \
   --exclude='experiments/*/results/' \
+  --exclude='experiments/*/remote_results/' \
+  --exclude='experiments/*/cache/' \
+  --exclude='experiments/**/cache/' \
   --exclude='finetuning/*/cache/models/' \
   --exclude='finetuning/*/cache/checkpoints/' \
   --exclude='finetuning/*/cache/embeddings/' \
@@ -172,6 +177,10 @@ echo "   Done."
 echo "[2/3] Checking server environment..."
 ssh_run "
   set -e
+  mkdir -p /data/lior/hf_cache /data/lior/uv_cache /data/lior/tmp
+  export HF_HOME=\"${HF_HOME:-/data/lior/hf_cache}\"
+  export UV_CACHE_DIR=\"${UV_CACHE_DIR:-/data/lior/uv_cache}\"
+  export TMPDIR=\"${TMPDIR:-/data/lior/tmp}\"
   if ! command -v uv &>/dev/null && [[ ! -f ~/.local/bin/uv ]]; then
     echo '   Installing uv...'
     curl -LsSf https://astral.sh/uv/install.sh | sh -s -- --quiet
@@ -221,6 +230,8 @@ export TG_BOT_TOKEN="${TG_TOKEN}"
 export TG_CHAT_ID="${TG_CHAT}"
 export PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True
 export HF_HOME="${HF_HOME:-/data/lior/hf_cache}"
+export UV_CACHE_DIR="${UV_CACHE_DIR:-/data/lior/uv_cache}"
+export TMPDIR="${TMPDIR:-/data/lior/tmp}"
 export PYTHONUNBUFFERED=1
 cd ${REMOTE_DIR}
 
