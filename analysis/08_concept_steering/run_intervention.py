@@ -53,14 +53,22 @@ def _candidate_cells(summary: dict, target_concepts: list[str]) -> list[tuple[st
 def _run_random_direction_check(
     *, cfg, handle, corpus, moral_embs, gt_indices,
     candidate_cells, results_dir, fable_idx_by_id, rr_baseline,
-    null_envelopes,
+    null_envelopes, tag_index,
 ) -> bool:
     """For each candidate (concept, layer, alpha), draw `n_seeds` random unit
     directions at matched L2 norm to the true v_C, intervene, compute S.
     Pass iff the MEDIAN random-direction S lies inside the shuffled-tag null
-    envelope at every candidate cell (spec §6.3 criterion 3)."""
+    envelope at every candidate cell (spec §6.3 criterion 3).
+
+    `tag_index` is passed in (pre-built once in main) to avoid re-reading the
+    metadata JSON per cell. `null_envelopes` MUST be a populated dict — caller
+    is responsible for not invoking this when no candidate cells exist.
+    """
+    n_seeds = int(cfg["null_controls"]["random_direction"]["n_seeds"])
+    if n_seeds < 1:
+        # Cannot evaluate the criterion with zero seeds; defensive fail.
+        return False
     rng = np.random.default_rng(1)
-    n_seeds = cfg["null_controls"]["random_direction"]["n_seeds"]
 
     all_ok = True
     for cname, layer, alpha in candidate_cells:
@@ -78,13 +86,9 @@ def _run_random_direction_check(
         target_norm = float(np.linalg.norm(v_caa))
 
         field, value = cname.split("__", 1)
-        tag_index = build_tag_index(
-            ROOT / cfg["data"]["metadata_path"],
-            fields=[field],
-        )
         positives = tag_index[field][value]
-        pos_indices = np.array([fable_idx_by_id[p] for p in positives if p in fable_idx_by_id])
-        target_mask = np.array([gt in set(pos_indices) for gt in gt_indices])
+        pos_indices_set = {fable_idx_by_id[p] for p in positives if p in fable_idx_by_id}
+        target_mask = np.array([gt in pos_indices_set for gt in gt_indices])
 
         S_random: list[float] = []
         for _ in range(n_seeds):
@@ -101,7 +105,13 @@ def _run_random_direction_check(
             dc = (rr[~target_mask] - rr_baseline[~target_mask]).mean()
             S_random.append(float(dt - dc))
 
+        if not S_random:
+            all_ok = False
+            continue
         median_S = float(np.median(S_random))
+        if np.isnan(median_S):
+            all_ok = False
+            continue
         if not (envelope_lo <= median_S <= envelope_hi):
             all_ok = False
     return all_ok
@@ -198,11 +208,23 @@ def main(config_path: Path, force: bool = False) -> int:
         f"layers={layers} alphas={alphas}"
     )
 
-    # 1. Hidden states for all fables at the requested block indices (single pass)
-    hs_cache = cache_dir / f"fable_hidden_states_{text_hash(corpus.fable_texts)}.npz"
+    # 1. Hidden states for all fables at the requested block indices (single pass).
+    # Cache key includes the layer set so changing `vectors.layers` invalidates
+    # the cache instead of silently reusing the wrong layers.
+    layers_tag = "-".join(str(l) for l in sorted(layers))
+    hs_cache = cache_dir / f"fable_hidden_states_{text_hash(corpus.fable_texts)}_L{layers_tag}.npz"
     if not force and hs_cache.exists():
         npz = np.load(hs_cache)
         hs_by_layer = {int(k): npz[k] for k in npz.files}
+        if set(hs_by_layer.keys()) != set(layers):
+            # Defensive: cache filename should have made this impossible, but
+            # rebuild rather than crash on mismatch.
+            hs_by_layer = extract_hidden_states(
+                handle, corpus.fable_texts, layers=layers,
+                batch_size=cfg["model"]["batch_size"],
+            )
+            cache_dir.mkdir(parents=True, exist_ok=True)
+            np.savez(hs_cache, **{str(l): h for l, h in hs_by_layer.items()})
     else:
         hs_by_layer = extract_hidden_states(
             handle, corpus.fable_texts, layers=layers,
@@ -314,7 +336,11 @@ def main(config_path: Path, force: bool = False) -> int:
     placebo_names = [f"{c['field']}__{c['value']}" for c in cfg["concepts"]["placebo"]]
     candidate_cells = _candidate_cells(summary_no_nulls, target_names)
     null_envelopes = None
-    random_dir_within_null = False
+    # `random_dir_within_null` distinguishes three states:
+    #   True  → ran the check, all candidate cells stayed inside the null envelope
+    #   False → ran the check, at least one cell escaped (cond3 truly failed)
+    #   None  → check was not applicable (no candidate cells / skip mode)
+    random_dir_within_null = None
     if cfg["null_controls"]["run_mode"] != "skip" and candidate_cells:
         notify.send(f"▶ null controls: {len(candidate_cells)} candidate cells")
         null_envelopes = _run_shuffled_tag_nulls(
@@ -330,6 +356,7 @@ def main(config_path: Path, force: bool = False) -> int:
             candidate_cells=candidate_cells,
             results_dir=results_dir, fable_idx_by_id=fable_idx_by_id,
             rr_baseline=rr_baseline, null_envelopes=null_envelopes,
+            tag_index=tag_index,
         )
 
     # 6. Final summary with null envelopes + Stage-2 inputs + plot + decision

@@ -149,14 +149,24 @@ def stage2_go_no_go(
                 for lc in summary["cells"].get(p, {}).values())
         for p in placebo_concepts
     )
-    cond3 = bool(summary.get("random_dir_within_null", False))
+    # cond3 has three states: True (passed), False (failed), None (N/A — no candidate cells)
+    rdwn = summary.get("random_dir_within_null")
+    cond3 = bool(rdwn) if rdwn is not None else (not cond1)
+    # When no targets passed (cond1 False), the random-direction check was never
+    # run; treat cond3 as vacuously satisfied so the reasons list doesn't include
+    # a misleading random-direction message on top of the real failure.
     cond4 = bool(summary.get("passing_pooled_cosine_max", 1.0) < pooled_cos_threshold)
 
     reasons = []
-    if not cond1: reasons.append(f"only {len(targets_passing)}/{len(target_concepts)} targets pass")
-    if not cond2: reasons.append("placebo passed specificity (criterion 2 failed)")
-    if not cond3: reasons.append("random-direction control did not stay within null envelope")
-    if not cond4: reasons.append("pooled cosine ≥ 0.99 (intervention may be magnitude-only)")
+    if not cond1:
+        reasons.append(f"only {len(targets_passing)}/{len(target_concepts)} targets pass")
+    if not cond2:
+        reasons.append("placebo passed specificity (criterion 2 failed)")
+    if cond1 and rdwn is False:
+        # Only report this when the check actually ran and failed.
+        reasons.append("random-direction control did not stay within null envelope")
+    if cond1 and not cond4:
+        reasons.append("pooled cosine ≥ 0.99 (intervention may be magnitude-only)")
     return {
         "go": all([cond1, cond2, cond3, cond4]),
         "reasons": reasons,

@@ -99,6 +99,21 @@ def main(config_path: Path) -> int:
                                  on=["field", "value"])
     candidates = candidates[~candidates["fdr_significant"]]
     candidates = candidates[~candidates["field"].isin(used_fields)]
+    if len(candidates) == 0:
+        notify.send(
+            "❌ run_discovery: no non-significant placebo candidate exists "
+            "outside the target fields. Cannot proceed."
+        )
+        save_json(results_dir / "discovery_report.json", {
+            "all_concepts": df.to_dict(orient="records"),
+            "per_tag_mrr": mrr_df.to_dict(orient="records"),
+            "selected": {"targets": targets, "placebo": [],
+                          "target_mean_baseline_mrr": target_mean_mrr,
+                          "target_mean_n_tagged": target_n,
+                          "failure_reason": "no_placebo_candidate"},
+        })
+        return 2
+
     strict = candidates[
         (abs(candidates["baseline_mrr"] - target_mean_mrr) <= 0.05) &
         (candidates["n_tagged"] >= 0.5 * target_n) &
