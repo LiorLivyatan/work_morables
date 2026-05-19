@@ -4,8 +4,10 @@ MORABLES pair loading and document representation for fine-tuning.
 Public API
 ----------
 load_pairs(doc_mode) -> (moral_texts, doc_texts, ground_truth)
+load_clean_pairs(doc_mode) -> (moral_texts, doc_texts, ground_truth, original_indices)
 build_doc_text(fable_text, summary, doc_mode) -> str
 """
+import csv
 import json
 import sys
 from pathlib import Path
@@ -86,3 +88,38 @@ def load_pairs(doc_mode: str) -> tuple[list[str], list[str], dict[int, int]]:
     ground_truth = {i: qrels[idx] for i, idx in enumerate(moral_indices)}
 
     return moral_texts, doc_texts, ground_truth
+
+
+_AMBIGUOUS_CSV = (
+    ROOT
+    / "analysis/07_soft_mrr/results/ft07-linq-s500-fable+summary/ambiguous_queries.csv"
+)
+
+
+def load_clean_pairs(
+    doc_mode: str,
+) -> tuple[list[str], list[str], dict[int, int], list[int]]:
+    """Load pairs with ambiguous queries removed (moral-moral sim >= 0.90).
+
+    Ambiguous queries are identified from analysis 07's pre-computed output.
+    The corpus (doc_texts) is unchanged — all 709 fables remain as retrieval
+    targets; only the query set is filtered.
+
+    Returns:
+        moral_texts       list[str] — clean queries only (~615)
+        doc_texts         list[str] — all 709 fable docs (corpus unchanged)
+        ground_truth      dict {new_query_idx: fable_idx} — re-indexed 0-based
+        original_indices  list[int] — which original query indices were kept
+    """
+    moral_texts, doc_texts, ground_truth = load_pairs(doc_mode)
+
+    ambiguous: set[int] = set()
+    with open(_AMBIGUOUS_CSV) as f:
+        for row in csv.DictReader(f):
+            ambiguous.add(int(row["query_idx"]))
+
+    kept = [i for i in range(len(moral_texts)) if i not in ambiguous]
+    clean_morals = [moral_texts[i] for i in kept]
+    clean_gt = {new_i: ground_truth[old_i] for new_i, old_i in enumerate(kept)}
+
+    return clean_morals, doc_texts, clean_gt, kept

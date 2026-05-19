@@ -1,0 +1,37 @@
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+doc_mode: fable_plus_summary
+epochs: 10
+batch_size: 4
+gradient_accumulation_steps: 4
+gradient_checkpointing: true
+max_seq_length: 512
+seed: 42
+early_stopping_patience: 3
+
+query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+
+model_kwargs:
+  torch_dtype: "bfloat16"
+
+# LoRA fixed params (rank is part of search space)
+lora:
+  dropout: 0.05
+  target_modules:
+    - q_proj
+    - k_proj
+    - v_proj
+    - o_proj
+
+# Random search: fold 0 only, best config → full 5-fold on server
+n_trials: 10
+search_space:
+  lora_r: [32, 64, 128]
+  temperature: [0.02, 0.05, 0.07, 0.1]
+  learning_rate: [5.0e-5, 1.0e-4, 2.0e-4]
+
+model_output_dir: /data/lior/ft_06_random_search/models
+checkpoint_output_dir: /data/lior/ft_06_random_search/checkpoints
+
+wandb:
+  project: morables-finetuning
+  enabled: false

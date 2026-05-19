@@ -6,7 +6,10 @@ from pathlib import Path
 sys.path.insert(0, "scripts")
 from retrieval_utils import compute_metrics, rank_analysis
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from lib.retrieval_utils import compute_metrics_from_matrix
+from lib.retrieval_utils import (
+    compute_metrics_from_matrix,
+    compute_multilabel_metrics_from_matrix,
+)
 
 
 def test_perfect_retrieval():
@@ -99,3 +102,39 @@ def test_compute_metrics_from_matrix_matches_compute_metrics():
 
     for key in ["MRR", "MAP", "R-Precision", "Recall@1", "Recall@5", "n_queries"]:
         assert m_emb[key] == pytest.approx(m_mat[key], abs=1e-5), f"Mismatch on {key}"
+
+
+def test_compute_multilabel_metrics_counts_any_relevant_for_mrr_and_hit():
+    matrix = np.array([[0.1, 0.9, 0.8, 0.0]], dtype=np.float32)
+    gt = {0: {0, 2}}
+
+    m = compute_multilabel_metrics_from_matrix(matrix, gt, ks=(1, 2, 3))
+
+    assert m["MRR"] == pytest.approx(1.0 / 2)
+    assert m["Hit@1"] == pytest.approx(0.0)
+    assert m["Hit@2"] == pytest.approx(1.0)
+    assert m["Recall@2"] == pytest.approx(0.5)
+    assert m["Recall@3"] == pytest.approx(1.0)
+    assert m["P@2"] == pytest.approx(0.5)
+    assert m["n_queries"] == 1
+
+
+def test_compute_multilabel_metrics_reduces_to_single_label_metrics():
+    matrix = np.array(
+        [
+            [0.2, 0.9, 0.1],
+            [0.8, 0.3, 0.2],
+        ],
+        dtype=np.float32,
+    )
+    single_gt = {0: 1, 1: 0}
+    multi_gt = {0: {1}, 1: {0}}
+
+    single = compute_metrics_from_matrix(matrix, single_gt, ks=(1, 2))
+    multi = compute_multilabel_metrics_from_matrix(matrix, multi_gt, ks=(1, 2))
+
+    assert multi["MRR"] == pytest.approx(single["MRR"])
+    assert multi["MAP"] == pytest.approx(single["MAP"])
+    assert multi["R-Precision"] == pytest.approx(single["R-Precision"])
+    assert multi["Hit@1"] == pytest.approx(single["Recall@1"])
+    assert multi["Recall@1"] == pytest.approx(single["Recall@1"])

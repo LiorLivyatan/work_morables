@@ -1,0 +1,24 @@
+{
+  "run_date": "2026-05-15",
+  "model_alias": "GPT-5.4-Nano",
+  "model_id": "gpt-5.4-nano",
+  "provider": "openai_batch",
+  "variant_label": "minimal",
+  "MRR@10": 0.07557378807378808,
+  "R@1": 0.04054054054054054,
+  "R@5": 0.13063063063063063,
+  "R@10": 0.15765765765765766,
+  "NDCG@10": 0.09524656211320051,
+  "Mean_Rank": 3.3714285714285714,
+  "Median_Rank": 3,
+  "n_queries": 222,
+  "batch_ids": [
+    "batch_6a07723bb3708190847e0578aba3a4c8"
+  ],
+  "input_file_ids": [
+    "file-4ikTD9iDshp4pDemyjU1KZ"
+  ],
+  "output_file_ids": [
+    "file-JMCTXgzr56QUGiybmmYk3Z"
+  ]
+}

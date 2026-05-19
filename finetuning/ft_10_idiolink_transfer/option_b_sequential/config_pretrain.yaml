@@ -1,0 +1,29 @@
+# ft_10 Option B — Stage 1: IdioLink pre-training for Linq+LoRA.
+#
+# Fine-tune Linq on 440 IdioLink triplets with MNRL (outperformed InfoNCE in Option A).
+# After training: merge LoRA into base weights and save the merged model to disk.
+# The merged model is the starting point for Stage 2 (config_finetune.yaml).
+
+model_name: Linq-AI-Research/Linq-Embed-Mistral
+model_output_dir: /data/lior/ft_10_option_b/pretrained
+
+idiolink_data_dir: finetuning/ft_10_idiolink_transfer/data   # relative to project root
+
+batch_size: 4
+gradient_accumulation_steps: 8
+gradient_checkpointing: true
+learning_rate: 2.0e-5
+max_seq_length: 512
+model_kwargs:
+  torch_dtype: auto
+
+lora:
+  r: 64
+  alpha: 128
+  dropout: 0.05
+  target_modules: [q_proj, k_proj, v_proj, o_proj]
+
+epochs: 10
+early_stopping_patience: 3
+warmup_steps: 100
+seed: 42

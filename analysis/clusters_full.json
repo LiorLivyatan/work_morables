@@ -1,0 +1,5843 @@
+[
+  {
+    "cluster_id": "nature_reveals",
+    "moral_set": [
+      "Nature reveals itself."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0023",
+      "fable_0024",
+      "fable_0593",
+      "fable_0613"
+    ]
+  },
+  {
+    "cluster_id": "appearances_deceptive",
+    "moral_set": [
+      "Appearances are deceptive.",
+      "Appearances can be deceiving."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0001",
+      "fable_0117",
+      "fable_0445",
+      "fable_0697"
+    ]
+  },
+  {
+    "cluster_id": "self_help",
+    "moral_set": [
+      "Self-help is the best help."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0059",
+      "fable_0066",
+      "fable_0138"
+    ]
+  },
+  {
+    "cluster_id": "look_before_leap",
+    "moral_set": [
+      "Look before you leap."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0045",
+      "fable_0242",
+      "fable_0393"
+    ]
+  },
+  {
+    "cluster_id": "work_and_play",
+    "moral_set": [
+      "There's a time for work and a time for play."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0002",
+      "fable_0148"
+    ]
+  },
+  {
+    "cluster_id": "neither_one_thing",
+    "moral_set": [
+      "He that is neither one thing nor the other has no friends.",
+      "He that has many friends, has no friends."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0013",
+      "fable_0190",
+      "fable_0053"
+    ]
+  },
+  {
+    "cluster_id": "flatters_not_trusted",
+    "moral_set": [
+      "Flatterers are not to be trusted.",
+      "Do not trust flatterers."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0043",
+      "fable_0620",
+      "fable_0044",
+      "fable_0597"
+    ]
+  },
+  {
+    "cluster_id": "content_with_lot",
+    "moral_set": [
+      "Be content with your lot; one cannot be first in everything.",
+      "Be content with your lot."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0085",
+      "fable_0270",
+      "fable_0691",
+      "fable_0696",
+      "fable_0318"
+    ]
+  },
+  {
+    "cluster_id": "satisfied_with_lot",
+    "moral_set": [
+      "To be satisfied with one's lot is better than to desire something which one is not fitted to receive."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0005"
+    ]
+  },
+  {
+    "cluster_id": "mind_not_place",
+    "moral_set": [
+      "It is not the place, nor the condition, but the mind alone that is responsible for our happiness."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0419"
+    ]
+  },
+  {
+    "cluster_id": "one_good_turn",
+    "moral_set": [
+      "One good turn deserves another."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0091",
+      "fable_0151"
+    ]
+  },
+  {
+    "cluster_id": "invitation_selfish",
+    "moral_set": [
+      "An invitation prompted by selfishness is not to be accepted."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0113",
+      "fable_0180"
+    ]
+  },
+  {
+    "cluster_id": "every_tale",
+    "moral_set": [
+      "Every tale is not to be believed."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0537",
+      "fable_0621"
+    ]
+  },
+  {
+    "cluster_id": "careful_wish",
+    "moral_set": [
+      "Be careful what you wish for."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0278",
+      "fable_0617",
+      "fable_0431"
+    ]
+  },
+  {
+    "cluster_id": "enemies_promises",
+    "moral_set": [
+      "Enemies' promises are made to be broken."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0080",
+      "fable_0082"
+    ]
+  },
+  {
+    "cluster_id": "union_strength",
+    "moral_set": [
+      "Union is strength.",
+      "Union gives strength.",
+      "Unity is strength, while division invites defeat.",
+      "Unity is mankind's greatest good, while dissension is a weak and slavish thing."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0038",
+      "fable_0511",
+      "fable_0228",
+      "fable_0487"
+    ]
+  },
+  {
+    "cluster_id": "nothing_escapes_master",
+    "moral_set": [
+      "Nothing escapes the master's eye."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0055",
+      "fable_0348"
+    ]
+  },
+  {
+    "cluster_id": "lay_trap",
+    "moral_set": [
+      "Someone who lays a trap for others will fall victim to it himself.",
+      "People who lay traps for others should be careful not to fall into a trap themselves.",
+      "People who lay traps for others bring about their own destruction.",
+      "Someone who plots against others falls into his own trap.",
+      "Those who scheme against others may ultimately fall victim to their own plots.",
+      "When people plot against their neighbours, they fall victim to the same sort of plot themselves."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0204",
+      "fable_0205",
+      "fable_0317",
+      "fable_0386",
+      "fable_0402",
+      "fable_0140"
+    ]
+  },
+  {
+    "cluster_id": "harm_others_destroy_self",
+    "moral_set": [
+      "People who do harm to others destroy themselves in the bargain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0390"
+    ]
+  },
+  {
+    "cluster_id": "plans_own_disadvantage",
+    "moral_set": [
+      "People often make plans that turn out to be to their own disadvantage."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0435"
+    ]
+  },
+  {
+    "cluster_id": "bad_neighbours_suffer_harm",
+    "moral_set": [
+      "Bad neighbours are the first to suffer from the harm they would do to others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0349"
+    ]
+  },
+  {
+    "cluster_id": "greed_overreaches",
+    "moral_set": [
+      "Greed often overreaches itself."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0050",
+      "fable_0616"
+    ]
+  },
+  {
+    "cluster_id": "grasp_for_more",
+    "moral_set": [
+      "Do not attempt too much at once.",
+      "Do not take on more than you can handle.",
+      "Don't take on more than you can accomplish."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0019",
+      "fable_0350",
+      "fable_0508"
+    ]
+  },
+  {
+    "cluster_id": "bird_in_hand",
+    "moral_set": [
+      "A little thing in hand is worth more than a great thing in prospect.",
+      "Do not neglect small advantages in hopes of better ones.",
+      "Do not trade what might come, which is uncertain, for present opportunities, which can never be regained.",
+      "A bird in the hand is worth two in the bush."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0036",
+      "fable_0403",
+      "fable_0564",
+      "fable_0654",
+      "fable_0701"
+    ]
+  },
+  {
+    "cluster_id": "dont_trust_wicked",
+    "moral_set": [
+      "Do not believe those who have ill intentions.",
+      "The word of a wicked man can never be trusted.",
+      "Never trust a known deceiver.",
+      "One should never trust those with a history of deceit.",
+      "People with a history of wrongdoing are often not trusted.",
+      "There is danger lurking in the words of a wicked person."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0291",
+      "fable_0531",
+      "fable_0594",
+      "fable_0459",
+      "fable_0344",
+      "fable_0297"
+    ]
+  },
+  {
+    "cluster_id": "dont_trust_enemy",
+    "moral_set": [
+      "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
+      "We should never put our trust in a wicked man, even if he seems to be completely innocuous."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0121",
+      "fable_0420",
+      "fable_0405"
+    ]
+  },
+  {
+    "cluster_id": "deceptive_words_trouble",
+    "moral_set": [
+      "Don't be seduced by deceptive words, they will cause nothing but trouble."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0261"
+    ]
+  },
+  {
+    "cluster_id": "beware_swindlers",
+    "moral_set": [
+      "Beware of swindlers, as they often exploit the gullibility of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0255"
+    ]
+  },
+  {
+    "cluster_id": "believing_enemies_trouble",
+    "moral_set": [
+      "Believing your enemies makes you fall victim to their tricks and gets you into trouble."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0229"
+    ]
+  },
+  {
+    "cluster_id": "ungrateful_wicked",
+    "moral_set": [
+      "The greatest kindness will not bind the ungrateful.",
+      "No gratitude from the wicked.",
+      "Expect no reward for serving the wicked."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0034",
+      "fable_0118",
+      "fable_0182"
+    ]
+  },
+  {
+    "cluster_id": "gratitude_kindness_not_harm",
+    "moral_set": [
+      "Gratitude should be shown through kindness, not harm."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0139"
+    ]
+  },
+  {
+    "cluster_id": "please_nobody",
+    "moral_set": [
+      "Try to please all and you end by pleasing none.",
+      "Those who seek to please everybody please nobody.",
+      "You can't please everybody."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0078",
+      "fable_0187",
+      "fable_0277"
+    ]
+  },
+  {
+    "cluster_id": "beware_powerful",
+    "moral_set": [
+      "Beware of when the powerful and the deceitful collaborate."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0236",
+      "fable_0274"
+    ]
+  },
+  {
+    "cluster_id": "wit_answer",
+    "moral_set": [
+      "Wit always has an answer ready."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0009",
+      "fable_0071"
+    ]
+  },
+  {
+    "cluster_id": "be_yourself",
+    "moral_set": [
+      "Be yourself and don't pretend to be someone you're not.",
+      "Do not be what you are not, nor pretend to be what you are not."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0485",
+      "fable_0507",
+      "fable_0530"
+    ]
+  },
+  {
+    "cluster_id": "dont_act_against_nature",
+    "moral_set": [
+      "Do not try to gain favor by acting in a way that is contrary to your own nature and character."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0294"
+    ]
+  },
+  {
+    "cluster_id": "dont_deceive_yourself",
+    "moral_set": [
+      "Don't deceive yourself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0571"
+    ]
+  },
+  {
+    "cluster_id": "innate_nature_unchangeable",
+    "moral_set": [
+      "Men often revert to their natural instincts.",
+      "Change of habit cannot alter nature."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0028",
+      "fable_0088"
+    ]
+  },
+  {
+    "cluster_id": "some_things_cannot_change",
+    "moral_set": [
+      "Some things you cannot change."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0120",
+      "fable_0158"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0141",
+    "moral_set": [
+      "Changing your location does not change your state of mind."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0141"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0224",
+    "moral_set": [
+      "Some people just won't change."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0224"
+    ]
+  },
+  {
+    "cluster_id": "same_worse_off",
+    "moral_set": [
+      "There is always someone worse off than yourself.",
+      "There is always someone else worse off than you."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0052",
+      "fable_0122"
+    ]
+  },
+  {
+    "cluster_id": "master_own_fate",
+    "moral_set": [
+      "Everyone is more or less master of his own fate."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0103",
+      "fable_0568"
+    ]
+  },
+  {
+    "cluster_id": "dont_mock_gods",
+    "moral_set": [
+      "Do not mock the gods."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0156",
+      "fable_0223"
+    ]
+  },
+  {
+    "cluster_id": "true_friends_hard",
+    "moral_set": [
+      "True friends are hard to find.",
+      "True friends are hard to come by."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0173",
+      "fable_0694"
+    ]
+  },
+  {
+    "cluster_id": "greed_misery",
+    "moral_set": [
+      "A life of greed and hoarding wealth leads to misery."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0333",
+      "fable_0707",
+      "fable_0305"
+    ]
+  },
+  {
+    "cluster_id": "luxuries_lead_to_peril",
+    "moral_set": [
+      "Indulgence in luxuries can lead to peril."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0516"
+    ]
+  },
+  {
+    "cluster_id": "laughs_last",
+    "moral_set": [
+      "He laughs best that laughs last."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0057",
+      "fable_0498"
+    ]
+  },
+  {
+    "cluster_id": "no_wealth_liberty",
+    "moral_set": [
+      "There is no wealth greater than liberty.",
+      "There is nothing more valuable than liberty."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0505",
+      "fable_0658",
+      "fable_0547"
+    ]
+  },
+  {
+    "cluster_id": "old_friends",
+    "moral_set": [
+      "Old friends should not be sacrificed for new ones.",
+      "Do not neglect the loyalty of old friends to please new acquaintances."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0049",
+      "fable_0595"
+    ]
+  },
+  {
+    "cluster_id": "friends_vs_foes",
+    "moral_set": [
+      "Do not give up friends for foes.",
+      "Don't take your friends for foes."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0312",
+      "fable_0194"
+    ]
+  },
+  {
+    "cluster_id": "deeds_not_words",
+    "moral_set": [
+      "One is known by deeds, not by words.",
+      "Pay attention to deeds, not words."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0499",
+      "fable_0534"
+    ]
+  },
+  {
+    "cluster_id": "not_judged_appearance",
+    "moral_set": [
+      "People are to be judged by their actions, not by their appearance.",
+      "True worth should be measured by character and deeds, not by outward appearances.",
+      "Don't judge character by appearance."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0677",
+      "fable_0685",
+      "fable_0659",
+      "fable_0546"
+    ]
+  },
+  {
+    "cluster_id": "those_adapt",
+    "moral_set": [
+      "Those who adapt to the times will emerge unscathed."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0522",
+      "fable_0708"
+    ]
+  },
+  {
+    "cluster_id": "obscurity_safety",
+    "moral_set": [
+      "Obscurity often brings safety.",
+      "Humble commonalty easily finds safety in obscurity."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0105",
+      "fable_0549"
+    ]
+  },
+  {
+    "cluster_id": "what_you_do",
+    "moral_set": [
+      "Do unto others what you would have them do unto you.",
+      "What you have done to others will likewise be done to you, according to the same measure.",
+      "The things that a person does to others will happen to him in turn."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0042",
+      "fable_0216",
+      "fable_0395"
+    ]
+  },
+  {
+    "cluster_id": "vices_punishment",
+    "moral_set": [
+      "Vices are their own punishment.",
+      "Seek to harm and harm shall find you.",
+      "Evil wishes, like chickens, come home to roost."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0010",
+      "fable_0116",
+      "fable_0197"
+    ]
+  },
+  {
+    "cluster_id": "promises_quick",
+    "moral_set": [
+      "People are quick to promise but reluctant to give.",
+      "People are often quick to make promises, but they do not really expect to have to fulfill them."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0320",
+      "fable_0521"
+    ]
+  },
+  {
+    "cluster_id": "promises_cant_deliver",
+    "moral_set": [
+      "People often make extravagant promises which they are completely unable to carry out.",
+      "Don't promise big things if you can't deliver.",
+      "Don't promise more than you can deliver."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0480",
+      "fable_0413",
+      "fable_0662"
+    ]
+  },
+  {
+    "cluster_id": "destroy_seed_evil",
+    "moral_set": [
+      "Destroy the seed of evil, or it will grow up to your ruin."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0098",
+      "fable_0611"
+    ]
+  },
+  {
+    "cluster_id": "useless_insensible",
+    "moral_set": [
+      "It is useless attacking the insensible."
+    ],
+    "type": "exact",
+    "fables": [
+      "fable_0092",
+      "fable_0245"
+    ]
+  },
+  {
+    "cluster_id": "dont_count_chickens",
+    "moral_set": [
+      "Do not count your chickens before they are hatched.",
+      "Our mere anticipations of life outrun its realities.",
+      "Expectations can lead to disappointment when reality does not match our desires."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0077",
+      "fable_0334",
+      "fable_0185"
+    ]
+  },
+  {
+    "cluster_id": "poor_life_safer",
+    "moral_set": [
+      "There is little risk in being poor, while being rich can get you into trouble.",
+      "A humble life free from danger is more valuable than a life of luxury filled with peril.",
+      "The life of the poor is often safer than the life of the rich."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0447",
+      "fable_0592",
+      "fable_0631"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0165",
+    "moral_set": [
+      "A wicked nature does not produce a good character."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0165"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0198",
+    "moral_set": [
+      "No piece of luck can conceal a depraved nature."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0198"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0463",
+    "moral_set": [
+      "A change of place does not make you a saint."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0463"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0094",
+    "moral_set": [
+      "There is no believing a liar, even when he speaks the truth."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0094"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0565",
+    "moral_set": [
+      "Don't be greedy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0565"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0095",
+    "moral_set": [
+      "A liar deceives no one but himself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0095"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0301",
+    "moral_set": [
+      "Wicked liars generally get their just consequences."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0301"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0410",
+    "moral_set": [
+      "When you lie, you often have to expand the lie."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0410"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0355",
+    "moral_set": [
+      "When wicked people do not get the reward and thanks they expect, they immediately put a stop to their good works."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0355"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0000",
+    "moral_set": [
+      "Gratitude is the sign of noble souls."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0000"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0003",
+    "moral_set": [
+      "In quarreling about the shadow we often lose the substance."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0003"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0004",
+    "moral_set": [
+      "Men often bear little grievances with less courage than they do large misfortunes."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0004"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0006",
+    "moral_set": [
+      "Clumsy jesting is no joke."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0006"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0007",
+    "moral_set": [
+      "An ounce of prevention is worth a pound of cure."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0007"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0011",
+    "moral_set": [
+      "It's good to be able to laugh at yourself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0011"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0012",
+    "moral_set": [
+      "You will only injure yourself if you take notice of despicable enemies."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0012"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0015",
+    "moral_set": [
+      "It is easy to propose impossible remedies."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0015"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0016",
+    "moral_set": [
+      "Each member in his proper sphere must work for the common good."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0016"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0017",
+    "moral_set": [
+      "Necessity knows no law."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0017"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0018",
+    "moral_set": [
+      "Be on guard against men who can strike from a distance."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0018"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0020",
+    "moral_set": [
+      "One man's pleasure may be another's pain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0020"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0021",
+    "moral_set": [
+      "Whatever you do, do with all your might."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0021"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0022",
+    "moral_set": [
+      "Men often applaud an imitation and hiss the real thing."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0022"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0025",
+    "moral_set": [
+      "He who is once deceived is doubly cautious."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0025"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0029",
+    "moral_set": [
+      "Those who enter by the back stairs may expect to be shown out at the window."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0029"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0031",
+    "moral_set": [
+      "He who covets what belongs to another, deservedly loses his own."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0031"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0032",
+    "moral_set": [
+      "How often do we supply our enemies with the means of our own destruction."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0032"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0033",
+    "moral_set": [
+      "If words suffice not, blows must follow."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0033"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0037",
+    "moral_set": [
+      "To do the right thing at the right season is a great art."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0037"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0039",
+    "moral_set": [
+      "It is foolish to expect help from someone who is naturally unkind."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0039"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0040",
+    "moral_set": [
+      "Better one safe way than a hundred on which you cannot reckon."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0040"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0041",
+    "moral_set": [
+      "Cunning often outwits itself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0041"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0047",
+    "moral_set": [
+      "There is as much malice in a wink as in a word."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0047"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0048",
+    "moral_set": [
+      "Better no rule than cruel rule."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0048"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0051",
+    "moral_set": [
+      "Necessity is our strongest weapon."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0051"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0054",
+    "moral_set": [
+      "We often despise what is most useful to us."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0054"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0056",
+    "moral_set": [
+      "Avoid a remedy that is worse than the disease."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0056"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0058",
+    "moral_set": [
+      "Strife feeds on conflict."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0058"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0060",
+    "moral_set": [
+      "If you allow men to use you for your own purposes, they will use you for theirs."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0060"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0061",
+    "moral_set": [
+      "The hero is brave in deeds as well as words."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0061"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0062",
+    "moral_set": [
+      "Abstain and enjoy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0062"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0063",
+    "moral_set": [
+      "The desire for imaginary benefits often involves the loss of present blessings."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0063"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0064",
+    "moral_set": [
+      "Sorrow not over what is lost forever."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0064"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0065",
+    "moral_set": [
+      "Youth's first duty is reverence to parents."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0065"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0067",
+    "moral_set": [
+      "Try before you trust."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0067"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0069",
+    "moral_set": [
+      "Small liberties can be large offenses."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0069"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0070",
+    "moral_set": [
+      "You may share the labours of the great, but you will not share the spoil."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0070"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0072",
+    "moral_set": [
+      "Straws show how the wind blows."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0072"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0073",
+    "moral_set": [
+      "Yield to all and you will soon have nothing to yield."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0073"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0074",
+    "moral_set": [
+      "The man who talks for both sides is not to be trusted by either."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0074"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0075",
+    "moral_set": [
+      "One story is good, till another is told."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0075"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0076",
+    "moral_set": [
+      "Greatness has its penalties."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0076"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0079",
+    "moral_set": [
+      "Don't make a big fuss over nothing."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0079"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0081",
+    "moral_set": [
+      "Be sure of your pedigree before you boast of it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0081"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0083",
+    "moral_set": [
+      "Stoop to conquer."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0083"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0084",
+    "moral_set": [
+      "Trouble comes from the direction we least expect it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0084"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0086",
+    "moral_set": [
+      "Self-interest alone moves some men."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0086"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0089",
+    "moral_set": [
+      "Vicious people cannot resist hurting others even when it is not in their own interests."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0089"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0090",
+    "moral_set": [
+      "Regardless of our wishes, or even our intent, it is to our Nature alone that we will be faithful."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0090"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0096",
+    "moral_set": [
+      "Fine work gets preserved and treasured."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0096"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0097",
+    "moral_set": [
+      "Two blacks do not make a white."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0097"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0099",
+    "moral_set": [
+      "A bribe in hand betrays mischief at heart."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0099"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0100",
+    "moral_set": [
+      "Every man for himself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0100"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0101",
+    "moral_set": [
+      "Never put yourself in your enemy's clutches."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0101"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0102",
+    "moral_set": [
+      "If men had all they wished, they would be often ruined."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0102"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0104",
+    "moral_set": [
+      "The loiterer often blames delay on his more active friend."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0104"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0106",
+    "moral_set": [
+      "He who incites to strife is worse than he who takes part in it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0106"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0107",
+    "moral_set": [
+      "Equals make the best friends."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0107"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0108",
+    "moral_set": [
+      "The strong and the weak cannot keep company."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0108"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0109",
+    "moral_set": [
+      "He who shares the danger ought to share the prize."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0109"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0112",
+    "moral_set": [
+      "The least outlay is not always the greatest gain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0112"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0114",
+    "moral_set": [
+      "Do not say anything at any time that you would not say at all times."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0114"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0119",
+    "moral_set": [
+      "We are made by our teachings in youth."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0119"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0123",
+    "moral_set": [
+      "There is strength in restraint."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0123"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0124",
+    "moral_set": [
+      "A discerning speaker can deftly turn the insults of his enemies into compliments."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0124"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0125",
+    "moral_set": [
+      "Great achievements are often blocked by some small thing which prevents their realization."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0125"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0126",
+    "moral_set": [
+      "Sometimes a small sacrifice results in a greater good."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0126"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0127",
+    "moral_set": [
+      "Necessity is the mother of invention."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0127"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0128",
+    "moral_set": [
+      "When people harbor a criminal they become his first victims without even realizing it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0128"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0129",
+    "moral_set": [
+      "Resting the mind is essential for clear thinking."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0129"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0130",
+    "moral_set": [
+      "It is unwise to reward when one should punish."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0130"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0131",
+    "moral_set": [
+      "Success leads many astray to their ruin."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0131"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0132",
+    "moral_set": [
+      "People are asking for trouble if they make fun of someone who is better than they are."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0132"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0133",
+    "moral_set": [
+      "Experience often provides clearer insight than empty predictions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0133"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0134",
+    "moral_set": [
+      "A mild disposition can put a stop to vicious behaviour."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0134"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0135",
+    "moral_set": [
+      "A mother's nurturing is stronger than a stepmother's attentions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0135"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0136",
+    "moral_set": [
+      "Foolish people disregard important business in favour of frivolities."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0136"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0137",
+    "moral_set": [
+      "The dishonest, if they act honestly, get no credit."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0137"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0142",
+    "moral_set": [
+      "Enviable conditions often have a downside."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0142"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0143",
+    "moral_set": [
+      "Do no overestimate your worth when your fate rests in the hands of the high and the mighty."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0143"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0144",
+    "moral_set": [
+      "Burdens can continue in unexpected ways."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0144"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0145",
+    "moral_set": [
+      "People get themselves into trouble because of their boasting."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0145"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0149",
+    "moral_set": [
+      "Prepare for the future."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0149"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0150",
+    "moral_set": [
+      "Work honestly and you won't be scorned."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0150"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0153",
+    "moral_set": [
+      "True value comes from usefulness."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0153"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0155",
+    "moral_set": [
+      "He who does not conform to courtesy, mostly pays the penalty of his conceited behaviour."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0155"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0157",
+    "moral_set": [
+      "If people who have previously committed a crime are swiftly punished, then others will become afraid on their account."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0157"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0159",
+    "moral_set": [
+      "Everyone thinks themselves the best."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0159"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0160",
+    "moral_set": [
+      "Do not take credit for the accomplishments of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0160"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0161",
+    "moral_set": [
+      "Those who refuse to share and respond with rudeness may face dire consequences for their actions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0161"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0162",
+    "moral_set": [
+      "The true leader proves himself by his qualities."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0162"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0164",
+    "moral_set": [
+      "A single reliable skill is worth more than a bag of useless tricks."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0164"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0166",
+    "moral_set": [
+      "Be true to your roots."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0166"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0168",
+    "moral_set": [
+      "You should think twice before offering anything to your enemies."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0168"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0169",
+    "moral_set": [
+      "People are often eager to treat their enemies well in the hopes of gaining something by it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0169"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0170",
+    "moral_set": [
+      "Self-effort is essential."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0170"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0171",
+    "moral_set": [
+      "Be frank and open in your dealings."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0171"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0172",
+    "moral_set": [
+      "Some men underrate their best blessings."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0172"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0175",
+    "moral_set": [
+      "Honor your craft with integrity."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0175"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0176",
+    "moral_set": [
+      "We should not call upon the gods in trivial affairs but only in dire necessity."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0176"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0177",
+    "moral_set": [
+      "Talking is a waste of time when you can simply provide a demonstration."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0177"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0178",
+    "moral_set": [
+      "Do not let fame get to your head."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0178"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0179",
+    "moral_set": [
+      "Seize opportunities when they arise."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0179"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0184",
+    "moral_set": [
+      "Good things happen less often."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0184"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0186",
+    "moral_set": [
+      "Intent matters more than the outcome."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0186"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0188",
+    "moral_set": [
+      "Precautions are useless after the crisis."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0188"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0189",
+    "moral_set": [
+      "Do not always stick to the same course."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0189"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0191",
+    "moral_set": [
+      "Learn from past misfortunes."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0191"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0192",
+    "moral_set": [
+      "Hunger sharpens the wits."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0192"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0193",
+    "moral_set": [
+      "Sometimes one man toils while another profits."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0193"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0195",
+    "moral_set": [
+      "What is valued in one group may be dismissed by another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0195"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0199",
+    "moral_set": [
+      "Beware of empty promises made during good times."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0199"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0200",
+    "moral_set": [
+      "Disaster awaits the arrogant person who puts on airs: he will fail to get promoted and will lose his former position as well."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0200"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0201",
+    "moral_set": [
+      "A learned man has always a fund of riches in himself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0201"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0202",
+    "moral_set": [
+      "It is easy to attack those who have fallen from their position of power and glory."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0202"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0203",
+    "moral_set": [
+      "Self-preservation can sometimes take precedence over kinship."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0203"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0206",
+    "moral_set": [
+      "Men feel worst when they contribute to their own undoing."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0206"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0207",
+    "moral_set": [
+      "There is no glory in tricking those easy to trick."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0207"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0208",
+    "moral_set": [
+      "Rushing into pleasant invitations can lead to dire consequences."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0208"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0209",
+    "moral_set": [
+      "Inattentive people quickly notice anything that they think will benefit them, while they are completely unaware of things which are not their immediate concern."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0209"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0210",
+    "moral_set": [
+      "Do not laugh at the calamity that befalls your neighbour."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0210"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0211",
+    "moral_set": [
+      "Evil tendencies are shown in early life."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0211"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0212",
+    "moral_set": [
+      "Rewards do not always accompany a lifetime of good work."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0212"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0213",
+    "moral_set": [
+      "Only cowards insult dying majesty."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0213"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0215",
+    "moral_set": [
+      "It is good to set aside our deadly disputes and conflicts, since they put everyone's lives in jeopardy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0215"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0217",
+    "moral_set": [
+      "Counsel without help is useless."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0217"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0218",
+    "moral_set": [
+      "Anything which is done at the wrong time is liable to be ridiculed."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0218"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0219",
+    "moral_set": [
+      "An honest man's word is as good as his oath."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0219"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0222",
+    "moral_set": [
+      "Some men are of more consequence in their own eyes than in the eyes of their neighbors."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0222"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0225",
+    "moral_set": [
+      "People who enter into contests with unworthy opponents lower their own reputation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0225"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0226",
+    "moral_set": [
+      "When you are besieged by powerful people, you are subject to vicious attacks by anyone and everyone."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0226"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0230",
+    "moral_set": [
+      "Those who take by force are met with resistance, while those who approach with humility may find unexpected generosity."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0230"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0231",
+    "moral_set": [
+      "It is best to keep negative influences away."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0231"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0232",
+    "moral_set": [
+      "Experience teaches valuable lessons and encourages caution."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0232"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0233",
+    "moral_set": [
+      "Jealousy can lead people to foolishly imitate their betters."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0233"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0237",
+    "moral_set": [
+      "Be cautious with promises made under duress."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0237"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0239",
+    "moral_set": [
+      "Stay focused on your goals."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0239"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0240",
+    "moral_set": [
+      "Gossips are to be seen and not heard."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0240"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0241",
+    "moral_set": [
+      "Relying too much on subordinates can lead to unintended consequences."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0241"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0243",
+    "moral_set": [
+      "One bad turn deserves another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0243"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0244",
+    "moral_set": [
+      "When the evidence is fairly weighed, a colourfully painted lie is quickly refuted by the facts."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0244"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0246",
+    "moral_set": [
+      "Opposites are utterly incompatible."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0246"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0249",
+    "moral_set": [
+      "Do not go chasing after things that are useless and unprofitable."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0249"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0251",
+    "moral_set": [
+      "The penalty for speaking and for keeping silent is one and the same."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0251"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0253",
+    "moral_set": [
+      "Men will stand behind a judgment made in error until the actual fact of the matter later compels them to regret their choice."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0253"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0254",
+    "moral_set": [
+      "It is natural to be a knave; men must rise above."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0254"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0256",
+    "moral_set": [
+      "Only fools indulge into michief and excessive risks."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0256"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0257",
+    "moral_set": [
+      "An alliance made with the high and mighty can never be trusted."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0257"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0258",
+    "moral_set": [
+      "Wealth is of little value if one is too afraid to use or enjoy it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0258"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0259",
+    "moral_set": [
+      "True courage involves overcoming fears, even when faced with intimidation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0259"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0262",
+    "moral_set": [
+      "The useful is of much more importance and value, than the ornamental."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0262"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0263",
+    "moral_set": [
+      "You should not treat bad people the same way that you treat good people."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0263"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0265",
+    "moral_set": [
+      "If you try to deceive someone who has his wits about him, you will waste your time and be made fun of as well."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0265"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0266",
+    "moral_set": [
+      "Those who commit grave wrongs cannot escape justice."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0266"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0268",
+    "moral_set": [
+      "Live your lives in the clothes that suit you."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0268"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0269",
+    "moral_set": [
+      "Vanity betrays every fraud."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0269"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0271",
+    "moral_set": [
+      "Do not boast to have something you do not."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0271"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0272",
+    "moral_set": [
+      "Many children are a great blessing; but a few good ones are a greater."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0272"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0275",
+    "moral_set": [
+      "Tricksters can outsmart the strong."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0275"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0276",
+    "moral_set": [
+      "Bad things naturally happen to bad people, while good things lie in wait for people who are honest and reasonable."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0276"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0280",
+    "moral_set": [
+      "Good will is worth nothing unless it is accompanied by good acts."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0280"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0282",
+    "moral_set": [
+      "Do not harm your benefactors."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0282"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0283",
+    "moral_set": [
+      "Watch on all sides."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0283"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0284",
+    "moral_set": [
+      "When it serves their purposes, people commonly do not hesitate to swear to the most incredible fabrications."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0284"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0285",
+    "moral_set": [
+      "Someone who assists both the truly good and those who are undeserving is not seen as a philanthropist, but is instead regarded as a madman."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0285"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0286",
+    "moral_set": [
+      "A death-bed flattery is the worst of treacheries."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0286"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0287",
+    "moral_set": [
+      "Few things are done except for profit."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0287"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0288",
+    "moral_set": [
+      "Do not play the wise man after the fact."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0288"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0289",
+    "moral_set": [
+      "Different people are interested in different things."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0289"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0293",
+    "moral_set": [
+      "False sympathy often masks selfish intentions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0293"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0295",
+    "moral_set": [
+      "You should especially avoid someone who does not even spare his own people."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0295"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0296",
+    "moral_set": [
+      "Trust is not to be given lightly."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0296"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0299",
+    "moral_set": [
+      "Those who try to deceive may expect to be paid in their own coin."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0299"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0300",
+    "moral_set": [
+      "Men are averse to fixed rules, but are won by kind services."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0300"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0302",
+    "moral_set": [
+      "Often justice is the captive of criminal deceit."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0302"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0304",
+    "moral_set": [
+      "Enterprise is not to be judged in terms of its speed but its outcome."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0304"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0306",
+    "moral_set": [
+      "Take what you can get when you can get it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0306"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0307",
+    "moral_set": [
+      "Do not take pride in the good qualities that actually belong to someone else."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0307"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0308",
+    "moral_set": [
+      "Benefits are refused by those who don't understand them."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0308"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0309",
+    "moral_set": [
+      "No one can be a friend if you know not whether to trust or distrust him."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0309"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0310",
+    "moral_set": [
+      "People who offer to give someone many gifts are no doubt trying to deceive."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0310"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0311",
+    "moral_set": [
+      "Do not blame others for the circumstances of their upbringing."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0311"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0313",
+    "moral_set": [
+      "There is satisfaction, however wretched, in taking one's enemy along if one has to die."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0313"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0314",
+    "moral_set": [
+      "Some can do wrong more easily than others can see it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0314"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0315",
+    "moral_set": [
+      "Traitors may expect treachery."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0315"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0319",
+    "moral_set": [
+      "Be cautious of pride, as nobody knows what the future may bring."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0319"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0321",
+    "moral_set": [
+      "The loud-mouthed boaster does not impress nor frighten those who know him."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0321"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0322",
+    "moral_set": [
+      "Talent is wasted when it's in the hands of the unappreciative."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0322"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0323",
+    "moral_set": [
+      "Instead of looking at how things start, we should look instead at how they turn out in the end."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0323"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0324",
+    "moral_set": [
+      "People often appreciate what they had only after experiencing something worse."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0324"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0325",
+    "moral_set": [
+      "The insubordinate are free from both obligation and protection."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0325"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0326",
+    "moral_set": [
+      "In a change of government, the poor change nothing beyond the name of their master."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0326"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0328",
+    "moral_set": [
+      "Easy life and seeming good fortune of others conceal a threat to their welfare."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0328"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0329",
+    "moral_set": [
+      "One cannot circumvent his destiny."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0329"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0331",
+    "moral_set": [
+      "You can't always stop a fool."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0331"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0335",
+    "moral_set": [
+      "It's hard to give up bad habits."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0335"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0336",
+    "moral_set": [
+      "Beauty alone does not qualify one for leadership."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0336"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0339",
+    "moral_set": [
+      "God is the ultimate judge."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0339"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0341",
+    "moral_set": [
+      "Some people will do anything to get what they want."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0341"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0345",
+    "moral_set": [
+      "Do not boast too much at the height of your powers; people often spend their old age worn out with toil and trouble."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0345"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0346",
+    "moral_set": [
+      "The only thing that can really bring shame on a man is a punishment that he has justly deserved."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0346"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0351",
+    "moral_set": [
+      "Charity begins at home, but this does not prevent the further exercise of it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0351"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0352",
+    "moral_set": [
+      "Those who complain about their duties often forget their own role in creating the situation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0352"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0353",
+    "moral_set": [
+      "He who harms someone should henceforth be treated with suspicion."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0353"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0354",
+    "moral_set": [
+      "Injuries may be forgiven, but not forgotten."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0354"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0356",
+    "moral_set": [
+      "Man's greatest treasure consists in work."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0356"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0357",
+    "moral_set": [
+      "We had better bear our troubles bravely than try to escape them."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0357"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0359",
+    "moral_set": [
+      "Imitation is no substitute for knowledge."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0359"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0360",
+    "moral_set": [
+      "We have to endure reversals of fortune, since we know that life is a matter of luck."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0360"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0361",
+    "moral_set": [
+      "Luck often bestows the things that skill cannot obtain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0361"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0362",
+    "moral_set": [
+      "Some never understand the actions of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0362"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0363",
+    "moral_set": [
+      "A reward for one might be destruction for another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0363"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0364",
+    "moral_set": [
+      "No mercy should be shown to someone who is wicked, regardless of whether his wickedness is great or small."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0364"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0365",
+    "moral_set": [
+      "Pleasure bought with pains, hurts."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0365"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0366",
+    "moral_set": [
+      "Ignore complainers who have no influence."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0366"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0368",
+    "moral_set": [
+      "Coffers of cash put a stop to honest traffic in praise."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0368"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0372",
+    "moral_set": [
+      "A wicked person deservedly comes to a bad end by keeping company with other wicked people."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0372"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0373",
+    "moral_set": [
+      "It's easy to despise what you cannot have."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0373"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0374",
+    "moral_set": [
+      "Overly curious people often pay a very high price for recklessly indulging their curiosity."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0374"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0376",
+    "moral_set": [
+      "Ambiguity in character can lead to mistrust."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0376"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0378",
+    "moral_set": [
+      "Chance sometimes rules."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0378"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0380",
+    "moral_set": [
+      "Deceivers often exploit the inability of others to challenge their falsehoods."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0380"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0381",
+    "moral_set": [
+      "Greedy men chase after profit with such an intensity that they destroy themselves without achieving anything."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0381"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0383",
+    "moral_set": [
+      "Take pleasure when thieves destroy themselves."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0383"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0384",
+    "moral_set": [
+      "Distrust advice from someone who stands to gain."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0384"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0387",
+    "moral_set": [
+      "Beware of those who appear busy but achieve little of value."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0387"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0389",
+    "moral_set": [
+      "People who stubbornly cling to unwise choices lose everything before they know it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0389"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0391",
+    "moral_set": [
+      "Poor folk suffer when the high and mighty are at war with one another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0391"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0392",
+    "moral_set": [
+      "When you need someone to lend a hand, mere words are no help at all."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0392"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0394",
+    "moral_set": [
+      "Easy gains often come with hidden costs and hardships."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0394"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0396",
+    "moral_set": [
+      "Bear that those who are inferior to you in merit should be like you in outside appearances."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0396"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0397",
+    "moral_set": [
+      "Beware of enterprizes where the risks are not equal."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0397"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0398",
+    "moral_set": [
+      "Do not expect to be defended by someone who cannot offer any protection."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0398"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0399",
+    "moral_set": [
+      "Sometimes, the greatest threats come from those you trust."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0399"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0400",
+    "moral_set": [
+      "A fool will make excuses for foolish behavior."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0400"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0401",
+    "moral_set": [
+      "It is often the case that people are greedy for things which they think will bring them honour, but which only result in their death and destruction."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0401"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0406",
+    "moral_set": [
+      "Vanity can blind one to their true worth in the eyes of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0406"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0407",
+    "moral_set": [
+      "Physical stature does not guarantee wisdom or intelligence."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0407"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0408",
+    "moral_set": [
+      "Honesty is the best policy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0408"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0409",
+    "moral_set": [
+      "The promises of the greedy are often empty and insincere."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0409"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0411",
+    "moral_set": [
+      "When people suffer misfortune because of their own foolishness, they often blame the gods."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0411"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0412",
+    "moral_set": [
+      "Life's disasters can often bring boastful and presumptuous people back down to earth."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0412"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0414",
+    "moral_set": [
+      "There is no fixed day on which wicked people are punished."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0414"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0415",
+    "moral_set": [
+      "Nobody believes people who are inherently wicked, even if they pretend to be good-natured."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0415"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0416",
+    "moral_set": [
+      "Each man makes his reputation in the field which is his specialty."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0416"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0417",
+    "moral_set": [
+      "Acceptance can lead to unexpected harmony."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0417"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0418",
+    "moral_set": [
+      "People who have been judged in the past can later on be in a position to judge their former teachers."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0418"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0421",
+    "moral_set": [
+      "Do not let anything turn you from your purpose."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0421"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0423",
+    "moral_set": [
+      "Every man should be content to mind his own business."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0423"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0425",
+    "moral_set": [
+      "The safeguards of virtue are hateful to those with evil intentions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0425"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0426",
+    "moral_set": [
+      "Caution is far superior to reckless haste and hurry."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0426"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0427",
+    "moral_set": [
+      "People are willing to risk their lives for the sake of some petty profit."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0427"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0428",
+    "moral_set": [
+      "When your adversary is also your judge, don't bother arguing."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0428"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0429",
+    "moral_set": [
+      "Those who thrive on deception often retaliate against those who speak the truth."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0429"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0432",
+    "moral_set": [
+      "Things you acquire through evil means can be taken from you by evil means."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0432"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0433",
+    "moral_set": [
+      "You will hurt yourself and accomplish nothing if you try to imitate someone who is far better than you are."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0433"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0434",
+    "moral_set": [
+      "The greatest gifts are often overlooked in favor of envying others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0434"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0436",
+    "moral_set": [
+      "Someone who cannot manage his own affairs is not qualified to give advice to his neighbours."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0436"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0437",
+    "moral_set": [
+      "Marrying someone unworthy can lead to a tarnished reputation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0437"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0438",
+    "moral_set": [
+      "The true value of money is not in its possession but in its use."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0438"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0439",
+    "moral_set": [
+      "Boast of one thing and you will be found lacking in that and a few other things as well."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0439"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0440",
+    "moral_set": [
+      "A sinful mind can even change a person's nature, causing it to be impaired."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0440"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0441",
+    "moral_set": [
+      "Those who avoid hardship may miss out on valuable rewards."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0441"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0442",
+    "moral_set": [
+      "The best intentions will not always ensure success."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0442"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0443",
+    "moral_set": [
+      "Tear out vice by the roots and the branches will wither away."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0443"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0444",
+    "moral_set": [
+      "In conflicts between powerful parties, bystanders may suffer unintended consequences."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0444"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0446",
+    "moral_set": [
+      "If often happens that even honest people do not hesitate to persecute someone who has slandered them."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0446"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0448",
+    "moral_set": [
+      "There's no reading of ourselves but with other mans eyes."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0448"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0449",
+    "moral_set": [
+      "When people feel grief for their misfortunes, they avoid the place where that grief overtook them."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0449"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0450",
+    "moral_set": [
+      "Persuasion is better than Force."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0450"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0451",
+    "moral_set": [
+      "The memory of a good deed lives."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0451"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0452",
+    "moral_set": [
+      "People often disguise their selfish desires as practical needs to justify their actions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0452"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0453",
+    "moral_set": [
+      "Half-truths in some cases, are foul, and dishonest; in others, laudable; and in some again, not only honest, but necessary."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0453"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0454",
+    "moral_set": [
+      "People who have been treated with contempt repay the deed in kind."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0454"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0455",
+    "moral_set": [
+      "A wise person readily tolerates the insolence of strangers when he sees those same strangers mistreating one another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0455"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0456",
+    "moral_set": [
+      "Temptation can lead even the most virtuous individuals to compromise their integrity and values."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0456"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0457",
+    "moral_set": [
+      "The bad things that strangers do to you are never as terrible as the things done to you by the members of your own family."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0457"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0458",
+    "moral_set": [
+      "Some people will agree to do things under compulsion that they are not willing to do as a favour."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0458"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0460",
+    "moral_set": [
+      "No one gladly revisits a place where they got hurt."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0460"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0461",
+    "moral_set": [
+      "The unjust man is envious of anyone else's good fortune."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0461"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0462",
+    "moral_set": [
+      "Desire things you don't understand and you accept the consequences."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0462"
+    ]
+  },
+  {
+    "cluster_id": "support_becomes_enemy",
+    "moral_set": [
+      "Sometimes, those you support become your worst enemy."
+    ],
+    "type": "near",
+    "fables": [
+      "fable_0465",
+      "fable_0473"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0466",
+    "moral_set": [
+      "Not all advice is wise."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0466"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0468",
+    "moral_set": [
+      "Do not blame others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0468"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0470",
+    "moral_set": [
+      "That is how life is: we must put up with less serious losses in order to avoid worse ones."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0470"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0471",
+    "moral_set": [
+      "Modesty and carnal love cannot survive together."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0471"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0472",
+    "moral_set": [
+      "Appetite blinds men to their surroundings."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0472"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0474",
+    "moral_set": [
+      "Some may choose mutual destruction over continued suffering."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0474"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0475",
+    "moral_set": [
+      "Even the favours of wicked people are frightening."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0475"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0476",
+    "moral_set": [
+      "Those who neglect their own affairs while meddling in others' lives often reveal their own shortcomings."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0476"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0477",
+    "moral_set": [
+      "What is most truly valuable is often underrated."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0477"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0478",
+    "moral_set": [
+      "People often prefer to live simply at home than to live lavishly at someone else's house."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0478"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0479",
+    "moral_set": [
+      "Those who act in their own self-interest while pretending to help others will not earn gratitude."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0479"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0481",
+    "moral_set": [
+      "Bad situations rarely get better."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0481"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0482",
+    "moral_set": [
+      "Even those who work hard may find their material wealth undone by the greed of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0482"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0484",
+    "moral_set": [
+      "Do not overestimate yourself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0484"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0486",
+    "moral_set": [
+      "Do not believe everything you hear."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0486"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0488",
+    "moral_set": [
+      "You can fool someone only so many times."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0488"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0489",
+    "moral_set": [
+      "Telling the truth can sometimes be dangerous."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0489"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0490",
+    "moral_set": [
+      "You should not add one problem to another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0490"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0491",
+    "moral_set": [
+      "Try to make something, and do not let envy pass judgment on it. Nothing is entirely satisfactory to the dishonest."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0491"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0492",
+    "moral_set": [
+      "People adjust their beliefs based on what is profitable for them."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0492"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0493",
+    "moral_set": [
+      "Unresolved issues can resurface when least expected."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0493"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0494",
+    "moral_set": [
+      "Fortune can occasionally bestow favours that exceed a person's hopes and expectations."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0494"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0495",
+    "moral_set": [
+      "Only a man who is out of his mind and hated by the gods delights in ugly things as if they were beautiful."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0495"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0496",
+    "moral_set": [
+      "It is difficult to truly know a person."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0496"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0497",
+    "moral_set": [
+      "Don't draw a conclusion based on a single observation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0497"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0500",
+    "moral_set": [
+      "Beauty is in the eyes of the beholder."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0500"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0501",
+    "moral_set": [
+      "Notoriety is often mistaken for fame."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0501"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0502",
+    "moral_set": [
+      "They complain most who suffer least."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0502"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0503",
+    "moral_set": [
+      "Do not be in a hurry to change one evil for another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0503"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0506",
+    "moral_set": [
+      "Some would rather fight than not."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0506"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0509",
+    "moral_set": [
+      "Use care to place your blame on the right person."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0509"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0510",
+    "moral_set": [
+      "Beware the sort of person who uses tricks."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0510"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0513",
+    "moral_set": [
+      "A greedy man does not gladly give anything away, even when he has enough for himself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0513"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0514",
+    "moral_set": [
+      "Someone who wants to help his friend must give him what is essential and appropriate."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0514"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0517",
+    "moral_set": [
+      "An enemy is most dangerous when offering you help."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0517"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0518",
+    "moral_set": [
+      "The things which bring us pleasure can often be hazardous as well."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0518"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0519",
+    "moral_set": [
+      "No one should boast when his prowess is a matter of mere circumstance."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0519"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0520",
+    "moral_set": [
+      "No curse weighs more heavily than a guilty conscience."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0520"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0524",
+    "moral_set": [
+      "Love can blind even the wildest."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0524"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0526",
+    "moral_set": [
+      "Do not attempt to hide things which cannot be hid."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0526"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0527",
+    "moral_set": [
+      "Example is more powerful than precept."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0527"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0529",
+    "moral_set": [
+      "A coward by nature will always be a coward."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0529"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0533",
+    "moral_set": [
+      "The man who treats others well is rewarded by gratitude."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0533"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0535",
+    "moral_set": [
+      "A man cannot be too careful of what he does, where the life of any creature is in question."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0535"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0536",
+    "moral_set": [
+      "Trouble awaits you if you pursue ill-gotten gains."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0536"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0538",
+    "moral_set": [
+      "The person who turns to a dishonest scoundrel for help in times of trouble will be ruined, not rescued."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0538"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0539",
+    "moral_set": [
+      "It is dangerous to believe a story, and dangerous not to believe it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0539"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0540",
+    "moral_set": [
+      "Often there is more good to be found in one man than in a crowd of people."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0540"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0541",
+    "moral_set": [
+      "If you don't speak out for others, there will be nobody left to speak out for you."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0541"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0542",
+    "moral_set": [
+      "Tears don't always signify pity."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0542"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0543",
+    "moral_set": [
+      "People with excellent qualities are often insulted by their inferiors."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0543"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0544",
+    "moral_set": [
+      "A bad man can come to ruin, but he is able to harm many other people first."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0544"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0548",
+    "moral_set": [
+      "It is better to be injured with impunity, than to put ourselves in the power of another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0548"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0551",
+    "moral_set": [
+      "Choosing unworthy representatives can lead to humiliation and ongoing disrespect for the entire group."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0551"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0553",
+    "moral_set": [
+      "Life is a mixture of grief and joy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0553"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0554",
+    "moral_set": [
+      "Avoid the gain that exposes to hazard."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0554"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0555",
+    "moral_set": [
+      "We must not require what is unreasonable."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0555"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0556",
+    "moral_set": [
+      "The essence of authenticity cannot be replicated."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0556"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0557",
+    "moral_set": [
+      "The meaning is to be considered, not the mere words."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0557"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0559",
+    "moral_set": [
+      "Don't go to extremes."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0559"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0561",
+    "moral_set": [
+      "The weak may find a way to avenge a wrong."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0561"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0566",
+    "moral_set": [
+      "Take care of the little things and the big things will take care of themselves."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0566"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0567",
+    "moral_set": [
+      "Avoid overindulgence."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0567"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0569",
+    "moral_set": [
+      "Wit outshines skill."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0569"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0570",
+    "moral_set": [
+      "Each stage of life has its own gifts."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0570"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0572",
+    "moral_set": [
+      "When a man has both an interest and an inclination to betray us, there's no trusting him."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0572"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0573",
+    "moral_set": [
+      "In times of peril, the truth may be bitter, but it can also be a means of escape."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0573"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0574",
+    "moral_set": [
+      "Fear of the future can lead to actions that bring about the very fate we seek to avoid."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0574"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0575",
+    "moral_set": [
+      "We must help one another, for if a neighbor falls, their burden will fall on you."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0575"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0576",
+    "moral_set": [
+      "The grass is always greener on the other side of the fence."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0576"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0577",
+    "moral_set": [
+      "Professional mourners serve those who pay the most."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0577"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0578",
+    "moral_set": [
+      "Justice is fickle."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0578"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0579",
+    "moral_set": [
+      "Honor the customs of the household you enter."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0579"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0581",
+    "moral_set": [
+      "Do not let your fancy make you forget realities."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0581"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0583",
+    "moral_set": [
+      "Look at the source when placing the blame."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0583"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0584",
+    "moral_set": [
+      "It is better to be loved than feared."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0584"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0585",
+    "moral_set": [
+      "Foresake the hard when an easier way is available."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0585"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0586",
+    "moral_set": [
+      "Even gods may not know everything."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0586"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0587",
+    "moral_set": [
+      "Act as you profess to believe."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0587"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0588",
+    "moral_set": [
+      "Respect is often better shown by refraining from disrespect."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0588"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0589",
+    "moral_set": [
+      "Sometimes, Wicked people commit crime in haste but are not punished until much later."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0589"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0591",
+    "moral_set": [
+      "Care defines ability."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0591"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0596",
+    "moral_set": [
+      "Know yourself and your limits."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0596"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0599",
+    "moral_set": [
+      "Trust but verify."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0599"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0600",
+    "moral_set": [
+      "The great do not always prevail."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0600"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0601",
+    "moral_set": [
+      "Falsehood is with all men."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0601"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0602",
+    "moral_set": [
+      "Consider all before you judge."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0602"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0603",
+    "moral_set": [
+      "People that live by example need to look closely at the example they are following."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0603"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0604",
+    "moral_set": [
+      "Know your place."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0604"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0605",
+    "moral_set": [
+      "Be watchful or all will be lost."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0605"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0606",
+    "moral_set": [
+      "It is better to endure short-term struggles for long-term benefits than the other way around."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0606"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0607",
+    "moral_set": [
+      "When fools fight others run away with the prize."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0607"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0608",
+    "moral_set": [
+      "There is no easy choice during desperate times."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0608"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0609",
+    "moral_set": [
+      "Do not dwell on what has passed."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0609"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0610",
+    "moral_set": [
+      "Sadness is a part of life."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0610"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0612",
+    "moral_set": [
+      "Action is more valuable than arguments."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0612"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0614",
+    "moral_set": [
+      "It's easy to put off today what can be done tomorrow."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0614"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0615",
+    "moral_set": [
+      "Be prepared to defend your position."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0615"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0618",
+    "moral_set": [
+      "Degrading your opponents only diminishes your own victory."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0618"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0622",
+    "moral_set": [
+      "Value is what others think of you, not what you think of yourself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0622"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0623",
+    "moral_set": [
+      "There is danger in the silent enemy."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0623"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0624",
+    "moral_set": [
+      "We should not love our homeland so much that we ignore the possibility of finding greater happiness elsewhere."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0624"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0625",
+    "moral_set": [
+      "A small inconvenience is compensated for by a greater usefulness."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0625"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0627",
+    "moral_set": [
+      "A wise person will not attempt anything without having the right means to achieve it."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0627"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0628",
+    "moral_set": [
+      "Trusting as you wish to be trusted doesn't work between a rogue and an honest person. "
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0628"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0630",
+    "moral_set": [
+      "We should not to conclude that we are allowed to do to other people's things what is permitted to them in their own houses."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0630"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0632",
+    "moral_set": [
+      "What we are forced to do by a greater power and necessity is not truly our own action."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0632"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0633",
+    "moral_set": [
+      "Famous beauties are rarely lucky."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0633"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0634",
+    "moral_set": [
+      "Do not fear death, as it is the final goodbye to all the troubles, pains, and dangers of life."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0634"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0635",
+    "moral_set": [
+      "Beware those who value their gain more than their love."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0635"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0636",
+    "moral_set": [
+      "Arrogant fools have no true influence."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0636"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0637",
+    "moral_set": [
+      "In all disputes, those who keep their opponents afraid of revenge come out best."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0637"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0638",
+    "moral_set": [
+      "Men would bear their misfortunes more patiently if they considered the ones of others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0638"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0639",
+    "moral_set": [
+      "The shortest and surest way of doing things is best."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0639"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0641",
+    "moral_set": [
+      "An alliance with the powerless is futile."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0641"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0642",
+    "moral_set": [
+      "There is a clever way of joking between seriousness and jest that brings both enjoyment and benefit."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0642"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0643",
+    "moral_set": [
+      "Honors change behavior."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0643"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0644",
+    "moral_set": [
+      "Do not mock the feelings of old age, as no one can escape them if they go on living."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0644"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0645",
+    "moral_set": [
+      "All things are to be done in their own time."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0645"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0646",
+    "moral_set": [
+      "Big talkers are not suited for trust, business, or conversation."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0646"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0647",
+    "moral_set": [
+      "Putting up with one insult invites another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0647"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0648",
+    "moral_set": [
+      "Only untrustworthy people blame the consequences of their own actions on others."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0648"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0649",
+    "moral_set": [
+      "Embrace your own strengths."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0649"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0650",
+    "moral_set": [
+      "Consider the consequences of your actions."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0650"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0651",
+    "moral_set": [
+      "What a person does through another is truly their own action."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0651"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0653",
+    "moral_set": [
+      "It's better to ignore an insult from one troublemaker than to bring a whole crowd of trouble upon yourself."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0653"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0655",
+    "moral_set": [
+      "Everything pleases at first, but nothing pleases for long."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0655"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0656",
+    "moral_set": [
+      "We should not be upset by the words of our teachers, since those words are usually the cause of many good things."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0656"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0657",
+    "moral_set": [
+      "It's wise and kind to be considerate of one another, for no one knows their own end."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0657"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0660",
+    "moral_set": [
+      "Nothing should be condemned, since there is nothing so worthless and humble that it cannot at some time or another prove to be useful."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0660"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0661",
+    "moral_set": [
+      "It is more honorable to die having achieved noble deeds than to live a life of vice."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0661"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0665",
+    "moral_set": [
+      "Unequal matches bring misery."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0665"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0666",
+    "moral_set": [
+      "It's foolish to make decisions without understanding the nature of the matter at hand."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0666"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0667",
+    "moral_set": [
+      "Everyone should be satisfied with their own lot in life, given that disaster awaits us on every side."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0667"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0668",
+    "moral_set": [
+      "When public officials encourage foolishness, it's no surprise if fools try to become public officials."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0668"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0669",
+    "moral_set": [
+      "He who claims any good for himself takes away from the source of all the good he enjoys."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0669"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0670",
+    "moral_set": [
+      "We should not expect that our crimes will always go unpunished."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0670"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0671",
+    "moral_set": [
+      "It is better by far to be governed by one chief, than by many."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0671"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0672",
+    "moral_set": [
+      "No one is so loving of a friend that they would not prefer their own good to that of another."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0672"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0673",
+    "moral_set": [
+      "Not all things are suitable for all people."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0673"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0674",
+    "moral_set": [
+      "Even beneficial things all appear to be drastic and sure to hurt for those those who are unfamiliar with them and inexperienced."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0674"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0675",
+    "moral_set": [
+      "Many pretend to be concerned about some people's demise, when however what they want is for it to come quickly."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0675"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0676",
+    "moral_set": [
+      "Every Season has its own work."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0676"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0679",
+    "moral_set": [
+      "Save a Thief from the Gallows, and he'll cut your Throat."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0679"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0680",
+    "moral_set": [
+      "Unwanted visits are a nuisance to a peaceful person's life."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0680"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0681",
+    "moral_set": [
+      "Possession is nine-tenths of the law."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0681"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0684",
+    "moral_set": [
+      "Better to be alone than in bad company."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0684"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0686",
+    "moral_set": [
+      "There is no thing so worthy of wonderment which does not cease to be a miracle with the passage of time."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0686"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0689",
+    "moral_set": [
+      "Men who are wickedly inclined will not stop their vicious behavior, no matter who urges them to do so."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0689"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0692",
+    "moral_set": [
+      "When people won't listen to reason through kind means, they must be made to understand through harsh ones."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0692"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0693",
+    "moral_set": [
+      "Complaining is the privilege of the weak."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0693"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0698",
+    "moral_set": [
+      "Money opens all doors."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0698"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0699",
+    "moral_set": [
+      "Even the strongest can be brought low by unchecked desires."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0699"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0700",
+    "moral_set": [
+      "Those who won't learn from advice must be taught by experience."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0700"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0703",
+    "moral_set": [
+      "Educate your children in those arts which are capable of preserving them from want."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0703"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0704",
+    "moral_set": [
+      "No one is so contemptible that he cannot be of use to us in some way."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0704"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0705",
+    "moral_set": [
+      "The conflicts of the wicked are the protection of the good."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0705"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0706",
+    "moral_set": [
+      "We should live as if we always saw Death standing by."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0706"
+    ]
+  },
+  {
+    "cluster_id": "singleton_0260",
+    "moral_set": [
+      "Contentment with our lot is an element of happiness."
+    ],
+    "type": "singleton",
+    "fables": [
+      "fable_0260"
+    ]
+  },
+  {
+    "cluster_id": "quality_over_quantity",
+    "type": "near",
+    "fables": [
+      "fable_0111",
+      "fable_0377"
+    ],
+    "moral_set": [
+      "Quality is better than quantity.",
+      "Quality is more valuable than quantity."
+    ]
+  },
+  {
+    "cluster_id": "dont_attempt_impossible",
+    "type": "near",
+    "fables": [
+      "fable_0183",
+      "fable_0292",
+      "fable_0264"
+    ],
+    "moral_set": [
+      "Do not attempt the impossible.",
+      "Do not try to do impossible things.",
+      "You must not act unnaturally, trying to achieve some impossible thing."
+    ]
+  },
+  {
+    "cluster_id": "disguise_reveals_fool",
+    "type": "near",
+    "fables": [
+      "fable_0008",
+      "fable_0316",
+      "fable_0563"
+    ],
+    "moral_set": [
+      "Fine clothes may disguise, but silly words will disclose a fool.",
+      "Clothes may disguise a fool, but his words will give him away.",
+      "A fine coat is not always an indication of an attractive mind."
+    ]
+  },
+  {
+    "cluster_id": "kindness_never_wasted",
+    "type": "near",
+    "fables": [
+      "fable_0430",
+      "fable_0560"
+    ],
+    "moral_set": [
+      "No act of kindness, no matter how small, is ever wasted.",
+      "Kindness is never wasted."
+    ]
+  },
+  {
+    "cluster_id": "avoid_lesser_fall_greater",
+    "type": "near",
+    "fables": [
+      "fable_0281",
+      "fable_0640",
+      "fable_0552",
+      "fable_0582"
+    ],
+    "moral_set": [
+      "In avoiding a lesser danger, one may inadvertently fall into a greater peril.",
+      "When we avoid present dangers, we must weigh the degree of danger of the alternatives",
+      "Better to endure a small hardship than risk a greater one.",
+      "Better to face a known danger than to trust a deceitful promise of safety."
+    ]
+  },
+  {
+    "cluster_id": "overconfidence_danger",
+    "type": "near",
+    "fables": [
+      "fable_0330",
+      "fable_0504"
+    ],
+    "moral_set": [
+      "False confidence often leads into danger.",
+      "Overconfidence often leads people into danger."
+    ]
+  },
+  {
+    "cluster_id": "dog_in_manger",
+    "type": "near",
+    "fables": [
+      "fable_0030",
+      "fable_0483",
+      "fable_0343"
+    ],
+    "moral_set": [
+      "People often grudge others what they cannot enjoy themselves.",
+      "Some begrudge others what they cannot enjoy themselves.",
+      "Some people are so consumed by hatred that they would rather suffer themselves than see their enemies succeed."
+    ]
+  },
+  {
+    "cluster_id": "singleton_fable_0358",
+    "type": "singleton",
+    "fables": [
+      "fable_0358"
+    ],
+    "moral_set": [
+      "To be small is a way to stay safe and avoid problems, whereas you rarely see a man with a big reputation who is able to keep out of danger."
+    ]
+  },
+  {
+    "cluster_id": "poverty_beats_wealth",
+    "type": "near",
+    "fables": [
+      "fable_0220",
+      "fable_0252"
+    ],
+    "moral_set": [
+      "Better poverty without care, than riches with.",
+      "It is better to live in self-sufficient poverty than to be tormented by the worries of wealth."
+    ]
+  },
+  {
+    "cluster_id": "singleton_fable_0532",
+    "type": "singleton",
+    "fables": [
+      "fable_0532"
+    ],
+    "moral_set": [
+      "It is better to serve in safety than to rule in peril."
+    ]
+  },
+  {
+    "cluster_id": "lose_what_you_have",
+    "type": "near",
+    "fables": [
+      "fable_0181",
+      "fable_0235",
+      "fable_0279",
+      "fable_0332",
+      "fable_0404"
+    ],
+    "moral_set": [
+      "People often grasp for more than they need and thus lose the little they have.",
+      "People who grasp for more than they need are deprived of what they have.",
+      "Those who are not content with what they have may end up losing it while pursuing greater desires.",
+      "Greed for more can lead to losing what you already have.",
+      "People who grasp at more than they need lose the little that they held in their hands."
+    ]
+  },
+  {
+    "cluster_id": "dont_grasp_too_much",
+    "type": "near",
+    "fables": [
+      "fable_0298",
+      "fable_0347"
+    ],
+    "moral_set": [
+      "Do not grasp at more than you need.",
+      "Do not try to grasp too much at once."
+    ]
+  },
+  {
+    "cluster_id": "singleton_fable_0515",
+    "type": "singleton",
+    "fables": [
+      "fable_0515"
+    ],
+    "moral_set": [
+      "Do not ask for more than you deserve."
+    ]
+  },
+  {
+    "cluster_id": "repay_kindness",
+    "type": "near",
+    "fables": [
+      "fable_0367",
+      "fable_0247"
+    ],
+    "moral_set": [
+      "We should do favours for someone who can do us a good deed in return.",
+      "Favor those who do you kindness."
+    ]
+  },
+  {
+    "cluster_id": "repay_favour_in_kind",
+    "type": "singleton",
+    "fables": [
+      "fable_0250"
+    ],
+    "moral_set": [
+      "Those who do you a favour you must repay kind."
+    ]
+  },
+  {
+    "cluster_id": "return_favors",
+    "type": "singleton",
+    "fables": [
+      "fable_0146"
+    ],
+    "moral_set": [
+      "Return favors and favors will be bestowed on you."
+    ]
+  },
+  {
+    "cluster_id": "think_before_speak",
+    "type": "near",
+    "fables": [
+      "fable_0382",
+      "fable_0626"
+    ],
+    "moral_set": [
+      "Stay vigilant and think before you speak.",
+      "It's wise to think before we speak."
+    ]
+  },
+  {
+    "cluster_id": "familiarity_reduces_fear",
+    "type": "near",
+    "fables": [
+      "fable_0234",
+      "fable_0385",
+      "fable_0467"
+    ],
+    "moral_set": [
+      "Familiarity mollifies even the most terrifying things.",
+      "Familiarity makes it easy to confront even frightening situations.",
+      "Familiarity can alleviate seemingly intractable problems."
+    ]
+  },
+  {
+    "cluster_id": "dont_fight_stronger",
+    "type": "near",
+    "fables": [
+      "fable_0664",
+      "fable_0688"
+    ],
+    "moral_set": [
+      "Do not fight with those who are perfectly capable of fighting back.",
+      "We should not pick fights with people stronger than we are."
+    ]
+  },
+  {
+    "cluster_id": "know_your_enemies",
+    "type": "near",
+    "fables": [
+      "fable_0562",
+      "fable_0619",
+      "fable_0590"
+    ],
+    "moral_set": [
+      "Know your enemies.",
+      "Pick your enemies.",
+      "Watch the actions of your enemy."
+    ]
+  },
+  {
+    "cluster_id": "dont_rival_superiors",
+    "type": "near",
+    "fables": [
+      "fable_0290",
+      "fable_0342"
+    ],
+    "moral_set": [
+      "It is a foolish man who wants to rival his superiors.",
+      "He who competes with his superiors destroys himself before he can equal them."
+    ]
+  },
+  {
+    "cluster_id": "prepare_for_war",
+    "type": "near",
+    "fables": [
+      "fable_0214",
+      "fable_0678"
+    ],
+    "moral_set": [
+      "Preparedness for war is the best guarantee of peace.",
+      "No one can be safe in peace unless they are always ready to face an enemy in case of war."
+    ]
+  },
+  {
+    "cluster_id": "virtue_by_necessity",
+    "type": "near",
+    "fables": [
+      "fable_0663",
+      "fable_0683"
+    ],
+    "moral_set": [
+      "Many people renounce wicked activities only because they are prevented from conducting them any longer.",
+      "Many people give up their vices not out of a love for virtue, but because they can no longer continue indulging in them."
+    ]
+  },
+  {
+    "cluster_id": "weak_can_avenge",
+    "type": "near",
+    "fables": [
+      "fable_0163",
+      "fable_0690"
+    ],
+    "moral_set": [
+      "Even a high and mighty person should beware of his inferiors; their ingenuity can find a way to take revenge.",
+      "It is very unwise, even for the greatest of men, to provoke the least, as they may find a way to enact revenge."
+    ]
+  },
+  {
+    "cluster_id": "false_friend_worst",
+    "type": "near",
+    "fables": [
+      "fable_0687",
+      "fable_0695"
+    ],
+    "moral_set": [
+      "An enemy in disguise is much more unforgivable than an open enemy.",
+      "A false friend is the worst kind of enemy."
+    ]
+  },
+  {
+    "cluster_id": "company_you_keep",
+    "type": "near",
+    "fables": [
+      "fable_0327",
+      "fable_0525",
+      "fable_0035"
+    ],
+    "moral_set": [
+      "A man is known by the company he keeps.",
+      "You are judged by the company you keep.",
+      "Birds of a feather flock together."
+    ]
+  },
+  {
+    "cluster_id": "learn_from_misfortunes",
+    "type": "near",
+    "fables": [
+      "fable_0068",
+      "fable_0248",
+      "fable_0379"
+    ],
+    "moral_set": [
+      "Happy is the man who learns from the misfortunes of others.",
+      "A discerning person is made wise by the misfortunes of his neighbours.",
+      "Take warning from the misfortunes of others."
+    ]
+  },
+  {
+    "cluster_id": "slow_steady_wins",
+    "type": "near",
+    "fables": [
+      "fable_0027",
+      "fable_0371"
+    ],
+    "moral_set": [
+      "Little by little does the trick.",
+      "Slow and steady wins the race."
+    ]
+  },
+  {
+    "cluster_id": "pretenders_found_out",
+    "type": "near",
+    "fables": [
+      "fable_0174",
+      "fable_0196",
+      "fable_0273",
+      "fable_0422",
+      "fable_0424"
+    ],
+    "moral_set": [
+      "Those who pretend to be what they are not, sooner or later, find themselves in deep water.",
+      "Pretenders will be found out.",
+      "Those who assume a character which does not belong to them, only make themselves ridiculous.",
+      "A hypocrite can usually be found out.",
+      "Hypocritical speeches are easily seen through."
+    ]
+  },
+  {
+    "cluster_id": "nature_survives_transformation",
+    "type": "near",
+    "fables": [
+      "fable_0147",
+      "fable_0152"
+    ],
+    "moral_set": [
+      "Nature and instincts can persist despite changes in form or appearance.",
+      "When someone with a wicked nature changes his appearance, his behaviour remains the same."
+    ]
+  },
+  {
+    "cluster_id": "tyrants_no_excuse",
+    "type": "near",
+    "fables": [
+      "fable_0238",
+      "fable_0545"
+    ],
+    "moral_set": [
+      "Tyrants need no excuse.",
+      "Any excuse will serve a tyrant."
+    ]
+  },
+  {
+    "cluster_id": "adversity_reveals_friends",
+    "type": "near",
+    "fables": [
+      "fable_0014",
+      "fable_0464"
+    ],
+    "moral_set": [
+      "Misfortune tests the sincerity of friends.",
+      "Fair weather friends are not worth much."
+    ]
+  },
+  {
+    "cluster_id": "choose_friends_who_help_in_adversity",
+    "type": "near",
+    "fables": [
+      "fable_0227",
+      "fable_0528",
+      "fable_0702"
+    ],
+    "moral_set": [
+      "When we form friendships with one another, we must choose allies who can come to our aid in moments of peril.",
+      "We must make friends in prosperity if we would have their help in adversity.",
+      "Seek the friendship of those who do not withdraw from offering help even in a time of adversity."
+    ]
+  },
+  {
+    "cluster_id": "pride_before_destruction",
+    "type": "near",
+    "fables": [
+      "fable_0154",
+      "fable_0267",
+      "fable_0338",
+      "fable_0580",
+      "fable_0598",
+      "fable_0629"
+    ],
+    "moral_set": [
+      "Brag and nature may bring you down.",
+      "Vanity can lead to self-destruction.",
+      "Pride goes before destruction.",
+      "No matter how you brag, you can be undone.",
+      "Do not boast lest you be taken down.",
+      "Pride and vanity leads to our downfall."
+    ]
+  },
+  {
+    "cluster_id": "value_wasted_on_unappreciative",
+    "type": "near",
+    "fables": [
+      "fable_0026",
+      "fable_0167"
+    ],
+    "moral_set": [
+      "Precious things are for those that can prize them.",
+      "True value is wasted on those who cannot appreciate it."
+    ]
+  },
+  {
+    "cluster_id": "inner_worth_over_outer_show",
+    "type": "near",
+    "fables": [
+      "fable_0110",
+      "fable_0221",
+      "fable_0370"
+    ],
+    "moral_set": [
+      "It is not only fine feathers that make fine birds.",
+      "Inner beauty is better than outer beauty.",
+      "Outside show is a poor substitute for inner worth."
+    ]
+  },
+  {
+    "cluster_id": "fix_yourself_before_helping_others",
+    "type": "near",
+    "fables": [
+      "fable_0087",
+      "fable_0340"
+    ],
+    "moral_set": [
+      "Those who would mend others, should first mend themselves.",
+      "It is a foolish thing to give advice to others while not looking out for oneself."
+    ]
+  },
+  {
+    "cluster_id": "blind_to_own_faults",
+    "type": "near",
+    "fables": [
+      "fable_0115",
+      "fable_0550"
+    ],
+    "moral_set": [
+      "Men often condemn others for what they see no wrong in doing themselves.",
+      "We are not able to see our own faults: but as soon as others make a slip, we are ready to censure."
+    ]
+  },
+  {
+    "cluster_id": "deliberate_before_committing",
+    "type": "near",
+    "fables": [
+      "fable_0046",
+      "fable_0093",
+      "fable_0337"
+    ],
+    "moral_set": [
+      "Consider carefully before changing your situation.",
+      "Understand what you are doing before you do it.",
+      "Count the cost before you commit yourselves."
+    ]
+  },
+  {
+    "cluster_id": "do_not_act_impulsively",
+    "type": "near",
+    "fables": [
+      "fable_0303",
+      "fable_0375"
+    ],
+    "moral_set": [
+      "They who act without sufficient thought, will often fall into unsuspected danger.",
+      "People who act impulsively can end up in regrettable situations."
+    ]
+  },
+  {
+    "cluster_id": "bear_change_with_equanimity",
+    "type": "near",
+    "fables": [
+      "fable_0369",
+      "fable_0558"
+    ],
+    "moral_set": [
+      "Accept the changes in life.",
+      "Whatever happens, we must bear it with equanimity."
+    ]
+  },
+  {
+    "cluster_id": "cunning_escapes_strength",
+    "type": "near",
+    "fables": [
+      "fable_0512",
+      "fable_0682"
+    ],
+    "moral_set": [
+      "Where force is not enough, cleverness must be used instead.",
+      "Wisdom is far superior to strength."
+    ]
+  },
+  {
+    "cluster_id": "bravery_in_safety_is_cheap",
+    "type": "near",
+    "fables": [
+      "fable_0469",
+      "fable_0523"
+    ],
+    "moral_set": [
+      "Courage in words means nothing if you flee in danger.",
+      "It is easy to be brave when there is no danger."
+    ]
+  },
+  {
+    "cluster_id": "imaginary_fears",
+    "type": "near",
+    "fables": [
+      "fable_0388",
+      "fable_0652"
+    ],
+    "moral_set": [
+      "Imaginary fears are the worst.",
+      "Many people fear danger where there is none, and feel safe where there is danger: put things in perspective."
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+{
+  "model": "linq",
+  "size": "s1000",
+  "n_storal": 1000,
+  "length_range": [
+    30,
+    300
+  ],
+  "tau": 0.05,
+  "config": {
+    "epochs": 10,
+    "temperature": 0.05,
+    "early_stopping_patience": 3,
+    "seed": 42,
+    "models": {
+      "bge": {
+        "model_name": "BAAI/bge-base-en-v1.5",
+        "batch_size": 32,
+        "gradient_accumulation_steps": 1,
+        "gradient_checkpointing": false,
+        "learning_rate": 2e-05,
+        "max_seq_length": 512,
+        "query_instruction": "",
+        "model_output_dir": "/data/lior/ft_07_storal_transfer/models/bge"
+      },
+      "linq": {
+        "model_name": "Linq-AI-Research/Linq-Embed-Mistral",
+        "batch_size": 4,
+        "gradient_accumulation_steps": 4,
+        "gradient_checkpointing": true,
+        "learning_rate": 0.0001,
+        "max_seq_length": 512,
+        "model_kwargs": {
+          "torch_dtype": "auto"
+        },
+        "query_instruction": "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: ",
+        "lora": {
+          "r": 64,
+          "alpha": 128,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj"
+          ]
+        },
+        "model_output_dir": "/data/lior/ft_07_storal_transfer/models/linq"
+      },
+      "qwen3": {
+        "model_name": "Qwen/Qwen3-Embedding-8B",
+        "batch_size": 4,
+        "gradient_accumulation_steps": 4,
+        "gradient_checkpointing": true,
+        "learning_rate": 0.0001,
+        "max_seq_length": 512,
+        "trust_remote_code": true,
+        "model_kwargs": {
+          "torch_dtype": "auto"
+        },
+        "query_instruction": "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: ",
+        "lora": {
+          "r": 64,
+          "alpha": 128,
+          "dropout": 0.05,
+          "target_modules": [
+            "q_proj",
+            "k_proj",
+            "v_proj",
+            "o_proj"
+          ]
+        },
+        "model_output_dir": "/data/lior/ft_07_storal_transfer/models/qwen3"
+      }
+    },
+    "dataset_sizes": {
+      "s500": {
+        "n": 500,
+        "length_range": [
+          56,
+          195
+        ]
+      },
+      "s1000": {
+        "n": 1000,
+        "length_range": [
+          30,
+          300
+        ]
+      },
+      "sfull": {
+        "n": null,
+        "length_range": null
+      }
+    },
+    "wandb": {
+      "project": "morables-finetuning",
+      "enabled": true
+    }
+  },
+  "doc_mode_results": {
+    "raw": {
+      "MRR": 0.3067900526348416,
+      "MAP": 0.3067900526348416,
+      "R-Precision": 0.19040902679830748,
+      "Mean Rank": 53.06064880112835,
+      "Median Rank": 8.0,
+      "n_queries": 709,
+      "Recall@1": 0.19040902679830748,
+      "P@1": 0.19040902679830748,
+      "NDCG@1": 0.19040902679830748,
+      "Recall@5": 0.4386459802538787,
+      "P@5": 0.08772919605077574,
+      "NDCG@5": 0.32077931759572337,
+      "Recall@10": 0.5303244005641748,
+      "P@10": 0.05303244005641748,
+      "NDCG@10": 0.3508635236041726,
+      "Recall@50": 0.7376586741889986,
+      "P@50": 0.014753173483779972,
+      "NDCG@50": 0.397273012790077
+    },
+    "fable_plus_summary": {
+      "MRR": 0.42194552495923954,
+      "MAP": 0.42194552495923954,
+      "R-Precision": 0.3032440056417489,
+      "Mean Rank": 37.93511988716502,
+      "Median Rank": 4.0,
+      "n_queries": 709,
+      "Recall@1": 0.3032440056417489,
+      "P@1": 0.3032440056417489,
+      "NDCG@1": 0.3032440056417489,
+      "Recall@5": 0.5543018335684062,
+      "P@5": 0.11086036671368123,
+      "NDCG@5": 0.4382686780805409,
+      "Recall@10": 0.6473906911142454,
+      "P@10": 0.06473906911142455,
+      "NDCG@10": 0.4680170732100894,
+      "Recall@50": 0.8321579689703809,
+      "P@50": 0.016643159379407614,
+      "NDCG@50": 0.5092260187859824
+    }
+  }
+}

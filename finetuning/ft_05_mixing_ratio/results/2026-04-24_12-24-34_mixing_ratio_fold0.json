@@ -1,0 +1,71 @@
+{
+  "config": {
+    "model_name": "BAAI/bge-base-en-v1.5",
+    "doc_mode": "fable_plus_summary",
+    "epochs": 15,
+    "batch_size": 32,
+    "learning_rate": 2e-05,
+    "temperature": 0.05,
+    "seed": 42,
+    "early_stopping_patience": 3,
+    "query_instruction": "",
+    "storal_ratios": [
+      0,
+      200,
+      500,
+      1000,
+      1675
+    ],
+    "wandb": {
+      "project": "morables-finetuning",
+      "enabled": false
+    }
+  },
+  "ratios_tested": [
+    0,
+    200,
+    500,
+    1000,
+    1675
+  ],
+  "folds_run": [
+    0
+  ],
+  "summary": {
+    "0": {
+      "mean_mrr": 0.27737149391044186,
+      "std_mrr": 0.0,
+      "fold_mrrs": [
+        0.27737149391044186
+      ]
+    },
+    "200": {
+      "mean_mrr": 0.2872101645318512,
+      "std_mrr": 0.0,
+      "fold_mrrs": [
+        0.2872101645318512
+      ]
+    },
+    "500": {
+      "mean_mrr": 0.277693927036202,
+      "std_mrr": 0.0,
+      "fold_mrrs": [
+        0.277693927036202
+      ]
+    },
+    "1000": {
+      "mean_mrr": 0.2739791640442562,
+      "std_mrr": 0.0,
+      "fold_mrrs": [
+        0.2739791640442562
+      ]
+    },
+    "1675": {
+      "mean_mrr": 0.2739606299321261,
+      "std_mrr": 0.0,
+      "fold_mrrs": [
+        0.2739606299321261
+      ]
+    }
+  }
+}

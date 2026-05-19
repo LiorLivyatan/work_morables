@@ -1,0 +1,12 @@
+{
+  "label": "ft07-linq-s500-fable+summary",
+  "matched_llm_run": "llm_retrieval/results/runs/2026-05-15_Gemini-3.1-Flash-Lite-Preview_minimal.csv",
+  "n_queries": 50,
+  "MRR@10": 0.5221031746031746,
+  "R@1": 0.38,
+  "R@5": 0.7,
+  "R@10": 0.86,
+  "NDCG@10": 0.602461829808956,
+  "Mean_Rank": 8.84,
+  "Median_Rank": 2.0
+}

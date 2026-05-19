@@ -1,0 +1,30 @@
+[
+  {
+    "run_id": "all-MiniLM-L6-v2__no_instr__fable_direct_moral__gemini__direct_moral",
+    "model_alias": "all-MiniLM-L6-v2",
+    "model_id": "sentence-transformers/all-MiniLM-L6-v2",
+    "instruction_variant": "no_instr",
+    "corpus_config": "fable_direct_moral",
+    "summary_generator": "gemini",
+    "summary_generator_model_id": "gemini-3-flash-preview",
+    "generator_prompt_variant": "direct_moral",
+    "MAP@10": 0.153684,
+    "MRR@10": 0.207945,
+    "NDCG@10": 0.194411,
+    "Recall@5": 0.208258,
+    "Recall@10": 0.278992,
+    "Recall@15": 0.31991,
+    "Recall@50": 0.461377,
+    "Recall@100": 0.565294,
+    "Recall@200": 0.708009,
+    "Recall@300": 0.805115,
+    "Hit@1": 0.137725,
+    "Hit@5": 0.269461,
+    "Hit@10": 0.35479,
+    "Hit@100": 0.661677,
+    "Mean_Rank": 115.11,
+    "Median_Rank": 32.0,
+    "n_queries": 668,
+    "error": ""
+  }
+]

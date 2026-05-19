@@ -70,6 +70,12 @@ experiments/*/results/pipeline_runs/
 # Numpy embedding arrays (regeneratable)
 *.npy
 
+# Final zero-shot remote ranking snapshots are large local artifacts.
+# Keep metrics/configs in git; keep full rankings locally or on /data/lior.
+experiments/20_final_zero_shot/remote_results/**/rankings/
+experiments/20_final_zero_shot/remote_results/**/cache/
+experiments/20_final_zero_shot/**/rankings/
+
 # HuggingFace dynamic modules cache (runtime, not committed)
 .hf_modules_cache/
 
@@ -78,3 +84,21 @@ experiments/*/results/pipeline_runs/
 
 # wandb
 wandb/
+.gstack/
+
+# Trained model weights (large, stored in /data/lior on server)
+finetuning/*/results/models/
+finetuning/*/results/models_original/
+finetuning/*/*/results/models/
+finetuning/*/*/results/models_original/
+
+# Codex
+.codex/
+
+# LLM Retrieval experiment results (regeneratable)
+llm_retrieval/results/runs/*.csv
+llm_retrieval/results/unified.csv
+llm_retrieval/results/batches/**/input*.jsonl
+llm_retrieval/results/batches/**/output*.jsonl
+llm_retrieval/results/gemini_batches/**/input*.jsonl
+llm_retrieval/results/gemini_batches/**/output*.jsonl

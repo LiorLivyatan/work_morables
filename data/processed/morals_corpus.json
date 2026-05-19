@@ -46,7 +46,8 @@
   },
   {
     "doc_id": "moral_0009",
-    "text": "Wit has always an answer ready.",
+    "text": "Wit always has an answer ready.",
+    "original_text": "Wit has always an answer ready.",
     "fable_id": "fable_0009"
   },
   {
@@ -81,8 +82,9 @@
   },
   {
     "doc_id": "moral_0016",
-    "text": "Each member in his proper sphere must work for the common good",
-    "fable_id": "fable_0016"
+    "text": "Each member in his proper sphere must work for the common good.",
+    "fable_id": "fable_0016",
+    "original_text": "Each member in his proper sphere must work for the common good"
   },
   {
     "doc_id": "moral_0017",
@@ -216,8 +218,9 @@
   },
   {
     "doc_id": "moral_0043",
-    "text": "Flatters are not to be trusted.",
-    "fable_id": "fable_0043"
+    "text": "Flatterers are not to be trusted.",
+    "fable_id": "fable_0043",
+    "original_text": "Flatters are not to be trusted."
   },
   {
     "doc_id": "moral_0044",
@@ -276,7 +279,8 @@
   },
   {
     "doc_id": "moral_0055",
-    "text": "Nothing escapes the master's eye",
+    "text": "Nothing escapes the master's eye.",
+    "original_text": "Nothing escapes the master's eye",
     "fable_id": "fable_0055"
   },
   {
@@ -321,8 +325,9 @@
   },
   {
     "doc_id": "moral_0064",
-    "text": "Sorrow not over what is lost forever",
-    "fable_id": "fable_0064"
+    "text": "Sorrow not over what is lost forever.",
+    "fable_id": "fable_0064",
+    "original_text": "Sorrow not over what is lost forever"
   },
   {
     "doc_id": "moral_0065",
@@ -411,7 +416,8 @@
   },
   {
     "doc_id": "moral_0082",
-    "text": "Enemies' promises were made to be broken.",
+    "text": "Enemies' promises are made to be broken.",
+    "original_text": "Enemies' promises were made to be broken.",
     "fable_id": "fable_0082"
   },
   {
@@ -446,8 +452,9 @@
   },
   {
     "doc_id": "moral_0089",
-    "text": "Vicious people cannot resist hurting others even when it is not in their own interests",
-    "fable_id": "fable_0089"
+    "text": "Vicious people cannot resist hurting others even when it is not in their own interests.",
+    "fable_id": "fable_0089",
+    "original_text": "Vicious people cannot resist hurting others even when it is not in their own interests"
   },
   {
     "doc_id": "moral_0090",
@@ -606,7 +613,8 @@
   },
   {
     "doc_id": "moral_0121",
-    "text": "Do not trust the wicked.",
+    "text": "Do not ever trust your enemy. Always protect yourself from him, even if he comes to you humble and supplicating.",
+    "original_text": "Do not trust the wicked.",
     "fable_id": "fable_0121"
   },
   {
@@ -821,8 +829,9 @@
   },
   {
     "doc_id": "moral_0164",
-    "text": "A single reliable skill is worth more than a bag of useless tricks",
-    "fable_id": "fable_0164"
+    "text": "A single reliable skill is worth more than a bag of useless tricks.",
+    "fable_id": "fable_0164",
+    "original_text": "A single reliable skill is worth more than a bag of useless tricks"
   },
   {
     "doc_id": "moral_0165",
@@ -1016,8 +1025,9 @@
   },
   {
     "doc_id": "moral_0203",
-    "text": "Self-preservation can sometimes take precedence over kinship",
-    "fable_id": "fable_0203"
+    "text": "Self-preservation can sometimes take precedence over kinship.",
+    "fable_id": "fable_0203",
+    "original_text": "Self-preservation can sometimes take precedence over kinship"
   },
   {
     "doc_id": "moral_0204",
@@ -1516,8 +1526,9 @@
   },
   {
     "doc_id": "moral_0303",
-    "text": "They who act without sufficient thought, will often fall into unsuspected danger",
-    "fable_id": "fable_0303"
+    "text": "They who act without sufficient thought, will often fall into unsuspected danger.",
+    "fable_id": "fable_0303",
+    "original_text": "They who act without sufficient thought, will often fall into unsuspected danger"
   },
   {
     "doc_id": "moral_0304",
@@ -1526,7 +1537,8 @@
   },
   {
     "doc_id": "moral_0305",
-    "text": "Greed can lead to ruin.",
+    "text": "A life of greed and hoarding wealth leads to misery.",
+    "original_text": "Greed can lead to ruin.",
     "fable_id": "fable_0305"
   },
   {
@@ -1591,7 +1603,8 @@
   },
   {
     "doc_id": "moral_0318",
-    "text": "Be content with your station.",
+    "text": "Be content with your lot.",
+    "original_text": "Be content with your station.",
     "fable_id": "fable_0318"
   },
   {
@@ -2151,12 +2164,14 @@
   },
   {
     "doc_id": "moral_0430",
-    "text": "No act of kindness, no matter how small, is ever wasted",
-    "fable_id": "fable_0430"
+    "text": "No act of kindness, no matter how small, is ever wasted.",
+    "fable_id": "fable_0430",
+    "original_text": "No act of kindness, no matter how small, is ever wasted"
   },
   {
     "doc_id": "moral_0431",
-    "text": "Be careful what you wish for; your wish may be granted.",
+    "text": "Be careful what you wish for.",
+    "original_text": "Be careful what you wish for; your wish may be granted.",
     "fable_id": "fable_0431"
   },
   {
@@ -2361,12 +2376,14 @@
   },
   {
     "doc_id": "moral_0472",
-    "text": "Appetite blinds men to their surroundings",
-    "fable_id": "fable_0472"
+    "text": "Appetite blinds men to their surroundings.",
+    "fable_id": "fable_0472",
+    "original_text": "Appetite blinds men to their surroundings"
   },
   {
     "doc_id": "moral_0473",
-    "text": "False men cannot be trusted.",
+    "text": "Sometimes, those you support become your worst enemy.",
+    "original_text": "False men cannot be trusted.",
     "fable_id": "fable_0473"
   },
   {
@@ -2436,7 +2453,8 @@
   },
   {
     "doc_id": "moral_0487",
-    "text": "Unity is mankind's greatest good, while dissension is a weak and slavish thing",
+    "text": "Unity is mankind's greatest good, while dissension is a weak and slavish thing.",
+    "original_text": "Unity is mankind's greatest good, while dissension is a weak and slavish thing",
     "fable_id": "fable_0487"
   },
   {
@@ -2446,8 +2464,9 @@
   },
   {
     "doc_id": "moral_0489",
-    "text": "Telling the truth can sometimes be dangerous",
-    "fable_id": "fable_0489"
+    "text": "Telling the truth can sometimes be dangerous.",
+    "fable_id": "fable_0489",
+    "original_text": "Telling the truth can sometimes be dangerous"
   },
   {
     "doc_id": "moral_0490",
@@ -2651,7 +2670,8 @@
   },
   {
     "doc_id": "moral_0530",
-    "text": "Do not be what you are not, nor pretend to be what you are not",
+    "text": "Do not be what you are not, nor pretend to be what you are not.",
+    "original_text": "Do not be what you are not, nor pretend to be what you are not",
     "fable_id": "fable_0530"
   },
   {
@@ -2836,8 +2856,9 @@
   },
   {
     "doc_id": "moral_0567",
-    "text": "Avoid overindulgence",
-    "fable_id": "fable_0567"
+    "text": "Avoid overindulgence.",
+    "fable_id": "fable_0567",
+    "original_text": "Avoid overindulgence"
   },
   {
     "doc_id": "moral_0568",
@@ -2986,8 +3007,9 @@
   },
   {
     "doc_id": "moral_0597",
-    "text": "Flatterers and deceivers are not to be trusted.",
-    "fable_id": "fable_0597"
+    "text": "Flatterers are not to be trusted.",
+    "fable_id": "fable_0597",
+    "original_text": "Flatterers and deceivers are not to be trusted."
   },
   {
     "doc_id": "moral_0598",
@@ -3101,8 +3123,9 @@
   },
   {
     "doc_id": "moral_0620",
-    "text": "Flatters are not to be trusted.",
-    "fable_id": "fable_0620"
+    "text": "Flatterers are not to be trusted.",
+    "fable_id": "fable_0620",
+    "original_text": "Flatters are not to be trusted."
   },
   {
     "doc_id": "moral_0621",
@@ -3201,7 +3224,7 @@
   },
   {
     "doc_id": "moral_0640",
-    "text": "When we are avoiding present dangers, we should not fall into even worse peril.",
+    "text": "When we avoid present dangers, we must weigh the degree of danger of the alternatives",
     "fable_id": "fable_0640"
   },
   {
