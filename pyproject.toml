@@ -40,3 +40,8 @@ mlx-lm = { git = "https://github.com/ml-explore/mlx-lm.git" }
 torch = [
   { index = "pytorch-cu126", marker = "sys_platform == 'linux'" },
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
