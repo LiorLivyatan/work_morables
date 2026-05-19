@@ -1,4 +1,5 @@
 # tests/experiments/test_build_tf1_corpus.py
+import json
 import sys
 import importlib.util
 from pathlib import Path
@@ -131,3 +132,55 @@ def test_build_qrels_fable_to_moral_is_inverse():
         {"query_id": "fable_tf1_00000", "doc_id": "moral_tf1_000", "relevance": 1},
         {"query_id": "fable_tf1_00001", "doc_id": "moral_tf1_001", "relevance": 1},
     ]
+
+
+run_build = build.run_build
+
+
+def test_run_build_writes_all_four_files(tmp_path):
+    samples = [
+        {"idx": 0, "chunk": 0, "prompt_hash": "h0", "moral": "A", "fable": "fa0"},
+        {"idx": 1, "chunk": 0, "prompt_hash": "h1", "moral": "A", "fable": "fa1"},
+        {"idx": 2, "chunk": 0, "prompt_hash": "h2", "moral": "A", "fable": "fa2"},
+        {"idx": 3, "chunk": 0, "prompt_hash": "h3", "moral": "B", "fable": "fb0"},
+        {"idx": 4, "chunk": 0, "prompt_hash": "h4", "moral": "B", "fable": "fb1"},
+        {"idx": 5, "chunk": 0, "prompt_hash": "h5", "moral": "B", "fable": "fb2"},
+    ]
+    samples_path = tmp_path / "samples.jsonl"
+    samples_path.write_text("\n".join(json.dumps(r) for r in samples))
+
+    out_dir = tmp_path / "out"
+    run_build(samples_path=samples_path, n=2, seed=42, out_dir=out_dir, expected_unique_morals=2)
+
+    processed = out_dir / "processed"
+    morals = json.loads((processed / "morals_corpus.json").read_text())
+    fables = json.loads((processed / "fables_corpus.json").read_text())
+    qmf = json.loads((processed / "qrels_moral_to_fable.json").read_text())
+    qfm = json.loads((processed / "qrels_fable_to_moral.json").read_text())
+
+    assert len(morals) == 2
+    assert len(fables) == 4
+    assert len(qmf) == 4 and len(qfm) == 4
+    assert (out_dir / "README.md").exists()
+
+    fable_ids = {f["doc_id"] for f in fables}
+    assert {q["doc_id"] for q in qmf} == fable_ids
+    assert {q["query_id"] for q in qfm} == fable_ids
+
+
+def test_run_build_fails_on_wrong_unique_moral_count(tmp_path):
+    samples = [{"idx": i, "chunk": 0, "prompt_hash": str(i), "moral": "Only", "fable": "f"}
+               for i in range(5)]
+    p = tmp_path / "s.jsonl"
+    p.write_text("\n".join(json.dumps(r) for r in samples))
+    with pytest.raises(AssertionError, match="expected 99"):
+        run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=99)
+
+
+def test_run_build_fails_on_duplicate_prompt_hash(tmp_path):
+    samples = [{"idx": i, "chunk": 0, "prompt_hash": "DUP", "moral": "M", "fable": "f"}
+               for i in range(5)]
+    p = tmp_path / "s.jsonl"
+    p.write_text("\n".join(json.dumps(r) for r in samples))
+    with pytest.raises(AssertionError, match="duplicate prompt_hash"):
+        run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=1)
