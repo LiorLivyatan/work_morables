@@ -62,7 +62,11 @@ def build_fables_corpus(
 ) -> list[dict]:
     out: list[dict] = []
     for moral_idx, moral_text in enumerate(unique_morals):
-        for i, row in enumerate(sampled[moral_text]):
+        rows = sampled[moral_text]
+        assert len(rows) == n, (
+            f"Expected {n} rows for moral {moral_text!r}, got {len(rows)}"
+        )
+        for i, row in enumerate(rows):
             fable_id = f"fable_tf1_{moral_idx * n + i:05d}"
             out.append({
                 "doc_id": fable_id,

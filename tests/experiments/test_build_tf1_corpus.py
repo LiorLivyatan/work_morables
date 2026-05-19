@@ -97,6 +97,16 @@ def test_build_fables_corpus_assigns_globally_unique_ids():
     assert out[2]["moral_id"] == "moral_tf1_001"
     assert out[0]["source_idx"] == 10
     assert out[0]["prompt_hash"] == "h0"
+    assert out[0]["text"] == "F0"
+    assert out[2]["text"] == "G0"
+    assert out[0]["source_chunk"] == 1
+    assert out[2]["source_chunk"] == 2
+
+
+def test_build_fables_corpus_rejects_mismatched_row_count():
+    sampled = {"a": [_row(0, "a"), _row(1, "a")]}  # 2 rows
+    with pytest.raises(AssertionError, match="Expected 3 rows"):
+        build_fables_corpus(sampled, ["a"], {"a": "moral_tf1_000"}, n=3)
 
 
 def test_build_qrels_moral_to_fable_pair_per_row():
