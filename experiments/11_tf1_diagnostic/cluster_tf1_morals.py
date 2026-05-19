@@ -40,11 +40,12 @@ def agglomerative_clusters(sim_matrix: np.ndarray, threshold: float) -> list[lis
 def classify_cluster_type(members: list[int], sim_matrix: np.ndarray) -> str:
     if len(members) == 1:
         return "singleton"
-    for i, a in enumerate(members):
-        for b in members[i + 1:]:
-            if sim_matrix[a, b] >= EXACT_THRESHOLD:
-                return "exact"
-    return "near"
+    all_exact = all(
+        sim_matrix[a, b] >= EXACT_THRESHOLD
+        for i, a in enumerate(members)
+        for b in members[i + 1:]
+    )
+    return "exact" if all_exact else "near"
 
 
 def pick_canonical_text(members: list[int], moral_texts: list[str], counts: dict[str, int]) -> str:
