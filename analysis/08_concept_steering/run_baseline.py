@@ -23,6 +23,27 @@ from lib.data import load_corpus
 from lib.io import save_npy, save_json, text_hash
 from lib.model import load_model, encode
 from lib.retrieval import compute_rankings, mrr_at_k
+from lib.eval import best_rank_per_query
+
+
+def _assert_corpus_shape(cfg: dict, corpus) -> None:
+    """Pre-launch sanity checks: dataset-specific shape assertions.
+    Triggered only when an `expect` block is present in config; tolerant otherwise."""
+    expect = cfg.get("data", {}).get("expect", {})
+    if not expect:
+        return
+    if "n_morals" in expect:
+        assert len(corpus.moral_ids) == expect["n_morals"], \
+            f"expected {expect['n_morals']} morals, got {len(corpus.moral_ids)}"
+    if "n_fables" in expect:
+        assert len(corpus.fable_doc_ids) == expect["n_fables"], \
+            f"expected {expect['n_fables']} fables, got {len(corpus.fable_doc_ids)}"
+    if "n_qrels" in expect:
+        actual = sum(len(g) for g in corpus.gt_fable_idxs)
+        assert actual == expect["n_qrels"], \
+            f"expected {expect['n_qrels']} qrels rows, got {actual}"
+    assert all(len(g) >= 1 for g in corpus.gt_fable_idxs), \
+        "every moral must have ≥1 relevant fable"
 
 
 def main(config_path: Path, force: bool = False) -> int:
@@ -30,11 +51,15 @@ def main(config_path: Path, force: bool = False) -> int:
     cache_dir   = ROOT / cfg["output"]["cache_dir"]
     results_dir = ROOT / cfg["output"]["results_dir"]
 
+    qrels_path = ROOT / cfg["data"].get(
+        "qrels_path", "data/processed/qrels_moral_to_fable.json"
+    )
     corpus = load_corpus(
         morals_path=ROOT / cfg["data"]["morals_path"],
         fables_path=ROOT / cfg["data"]["fables_path"],
-        qrels_path =ROOT / "data/processed/qrels_moral_to_fable.json",
+        qrels_path =qrels_path,
     )
+    _assert_corpus_shape(cfg, corpus)
     notify.send(
         f"🚀 08_concept_steering: run_baseline starting\n"
         f"model: {cfg['model']['hf_id']}\n"
@@ -57,8 +82,9 @@ def main(config_path: Path, force: bool = False) -> int:
         save_npy(fable_cache, fable_embs)
 
     rankings = compute_rankings(moral_embs, fable_embs)
-    gt = np.array(corpus.gt_fable_idx)
+    gt = corpus.gt_fable_idxs  # list[list[int]]
     mrr10 = mrr_at_k(rankings, gt, k=10)
+    best_ranks = best_rank_per_query(rankings, gt)
 
     out = {
         "timestamp": datetime.utcnow().isoformat() + "Z",
@@ -66,13 +92,14 @@ def main(config_path: Path, force: bool = False) -> int:
         "n_morals": len(corpus.moral_texts),
         "n_fables": len(corpus.fable_texts),
         "mrr_at_10": mrr10,
+        "qrels_path": str(qrels_path),
         "queries": [
             {
                 "moral_id": corpus.moral_ids[i],
-                "gt_fable_idx": int(gt[i]),
-                "gt_fable_doc_id": corpus.fable_doc_ids[gt[i]],
+                "gt_fable_idxs": [int(x) for x in gt[i]],
+                "gt_fable_doc_ids": [corpus.fable_doc_ids[x] for x in gt[i]],
                 "top_50_indices": rankings[i, :50].tolist(),
-                "gt_rank": int(np.where(rankings[i] == gt[i])[0][0]) + 1,
+                "gt_rank": int(best_ranks[i]),   # best rank over relevant set
             }
             for i in range(len(corpus.moral_texts))
         ],

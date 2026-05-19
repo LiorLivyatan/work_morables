@@ -1,4 +1,8 @@
-"""Load morals/fables/metadata into aligned arrays. No model code here."""
+"""Load morals/fables/metadata into aligned arrays. No model code here.
+
+Multi-target qrels: a moral can have multiple relevant fables (clustered data).
+Corpus.gt_fable_idxs[i] is the *list* of relevant fable indices for moral i.
+"""
 from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
@@ -8,11 +12,11 @@ from typing import Iterable
 
 @dataclass
 class Corpus:
-    moral_ids:     list[str]
-    moral_texts:   list[str]
-    fable_doc_ids: list[str]
-    fable_texts:   list[str]
-    gt_fable_idx:  list[int]   # for each moral, index into fable_texts of its ground-truth fable
+    moral_ids:      list[str]
+    moral_texts:    list[str]
+    fable_doc_ids:  list[str]
+    fable_texts:    list[str]
+    gt_fable_idxs:  list[list[int]]   # for each moral, list of indices into fable_texts
 
 
 def _pick(d: dict, *candidates: str) -> str:
@@ -39,29 +43,37 @@ def _fable_text(f: dict) -> str:
     return _pick(f, "fable", "text", "fable_text")
 
 
-def _qrels_to_map(qrels) -> dict[str, str]:
-    """Normalize qrels into {moral_id: fable_id}.
+def _qrels_to_multimap(qrels) -> dict[str, list[str]]:
+    """Normalize qrels into {moral_id: [fable_id, ...]}.
 
     Accepts:
-      - dict {moral_id: fable_id}
+      - dict {moral_id: fable_id} (legacy single-target) — wraps to 1-element list
+      - dict {moral_id: [fable_id, ...]} — pass-through
       - list of {query_id|moral_id, doc_id|fable_id, [relevance]}
+    Filters relevance==0 rows (when relevance is present).
     """
     if isinstance(qrels, dict):
-        return dict(qrels)
-    out: dict[str, str] = {}
+        out: dict[str, list[str]] = {}
+        for k, v in qrels.items():
+            if isinstance(v, list):
+                out[k] = list(v)
+            else:
+                out[k] = [v]
+        return out
+    out: dict[str, list[str]] = {}
     for r in qrels:
         if r.get("relevance", 1) == 0:
             continue
         mid = _pick(r, "query_id", "moral_id", "id")
         fid = _pick(r, "doc_id", "fable_id")
-        out[mid] = fid
+        out.setdefault(mid, []).append(fid)
     return out
 
 
 def load_corpus(*, morals_path: Path, fables_path: Path, qrels_path: Path) -> Corpus:
     morals = json.loads(Path(morals_path).read_text())
     fables = json.loads(Path(fables_path).read_text())
-    qrels  = _qrels_to_map(json.loads(Path(qrels_path).read_text()))
+    qrels  = _qrels_to_multimap(json.loads(Path(qrels_path).read_text()))
 
     moral_ids   = [_moral_id(m)   for m in morals]
     moral_texts = [_moral_text(m) for m in morals]
@@ -69,9 +81,14 @@ def load_corpus(*, morals_path: Path, fables_path: Path, qrels_path: Path) -> Co
     fable_texts = [_fable_text(f) for f in fables]
 
     fid_to_idx = {fid: i for i, fid in enumerate(fable_ids)}
-    gt_idx = [fid_to_idx[qrels[mid]] for mid in moral_ids]
+    gt_fable_idxs: list[list[int]] = []
+    for mid in moral_ids:
+        rel_fids = qrels.get(mid, [])
+        if not rel_fids:
+            raise KeyError(f"moral {mid} has no relevant fables in qrels")
+        gt_fable_idxs.append([fid_to_idx[fid] for fid in rel_fids])
 
-    return Corpus(moral_ids, moral_texts, fable_ids, fable_texts, gt_idx)
+    return Corpus(moral_ids, moral_texts, fable_ids, fable_texts, gt_fable_idxs)
 
 
 def build_tag_index(metadata_path: Path, *, fields: Iterable[str]) -> dict[str, dict[str, set[str]]]:
@@ -94,8 +111,6 @@ def build_tag_index(metadata_path: Path, *, fields: Iterable[str]) -> dict[str, 
             if value is None:
                 continue
             if isinstance(value, dict):
-                # explode dict VALUES; deduplicate so two characters with the
-                # same role don't double-count one fable
                 for v in set(value.values()):
                     index[field].setdefault(v, set()).add(doc_id)
             elif isinstance(value, list):

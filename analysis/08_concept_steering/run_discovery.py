@@ -33,12 +33,24 @@ def main(config_path: Path) -> int:
 
     baseline = load_json(results_dir / "ranks_baseline.json")
     fable_doc_ids = baseline["fable_doc_ids"]
-    failed_doc_ids = {q["gt_fable_doc_id"] for q in baseline["queries"] if q["gt_rank"] > 1}
+    # Multi-target: a moral "fails" iff best-relevant rank > 1. Mark every
+    # one of its relevant fables as failed (the failure is attributable to
+    # all of them under the rank-of-best definition).
+    failed_doc_ids: set[str] = set()
+    for q in baseline["queries"]:
+        if q["gt_rank"] > 1:
+            ids = q.get("gt_fable_doc_ids") or [q.get("gt_fable_doc_id")]
+            for did in ids:
+                if did is not None:
+                    failed_doc_ids.add(did)
 
+    qrels_path = ROOT / cfg["data"].get(
+        "qrels_path", "data/processed/qrels_moral_to_fable.json"
+    )
     corpus = load_corpus(
         morals_path=ROOT / cfg["data"]["morals_path"],
         fables_path=ROOT / cfg["data"]["fables_path"],
-        qrels_path =ROOT / "data/processed/qrels_moral_to_fable.json",
+        qrels_path =qrels_path,
     )
     tag_index = build_tag_index(
         ROOT / cfg["data"]["metadata_path"],
@@ -57,10 +69,11 @@ def main(config_path: Path) -> int:
 
     # 2. Per-tag baseline MRR (truncated rankings — sufficient for MRR@10)
     rankings = np.array([q["top_50_indices"] for q in baseline["queries"]])
-    gt = np.array([q["gt_fable_idx"] for q in baseline["queries"]])
+    # Multi-target: list[list[int]] where each query has ≥1 relevant fable idx.
+    gt = [q.get("gt_fable_idxs") or [q["gt_fable_idx"]] for q in baseline["queries"]]
     mrr_df = per_tag_baseline_mrr(
         tag_index=tag_index, fable_doc_ids=fable_doc_ids,
-        moral_gt_idx=gt.tolist(), rankings=rankings,
+        moral_gt_idx=gt, rankings=rankings,
         min_tagged_fables=cfg["discovery"]["min_tagged_fables"],
     )
 

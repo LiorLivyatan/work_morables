@@ -43,22 +43,23 @@ def test_load_corpus_returns_aligned_lists(tmp_path):
     corpus = load_corpus(morals_path=mp, fables_path=fp, qrels_path=qp)
     assert corpus.moral_texts   == ["be kind", "be brave"]
     assert corpus.fable_texts   == ["once upon ...", "long ago ..."]
-    assert corpus.gt_fable_idx  == [0, 1]
+    assert corpus.gt_fable_idxs == [[0], [1]]   # multi-target wraps singles
     assert corpus.fable_doc_ids == ["f0", "f1"]
 
 
 def test_real_data_smoke():
-    """Sanity: real corpus loads and shapes are right."""
+    """Sanity: real corpus loads and shapes are right (legacy processed data)."""
     ROOT = Path(__file__).resolve().parents[3]
     corpus = load_corpus(
         morals_path=ROOT / "data/processed/morals_corpus.json",
         fables_path=ROOT / "data/processed/fables_corpus.json",
         qrels_path =ROOT / "data/processed/qrels_moral_to_fable.json",
     )
-    assert len(corpus.moral_texts)  == 709
-    assert len(corpus.fable_texts)  == 709
-    assert len(corpus.gt_fable_idx) == 709
-    assert all(0 <= i < 709 for i in corpus.gt_fable_idx)
+    assert len(corpus.moral_texts)   == 709
+    assert len(corpus.fable_texts)   == 709
+    assert len(corpus.gt_fable_idxs) == 709
+    assert all(len(g) == 1 for g in corpus.gt_fable_idxs)  # processed = single-target
+    assert all(0 <= g[0] < 709 for g in corpus.gt_fable_idxs)
 
 
 def test_real_metadata_smoke():

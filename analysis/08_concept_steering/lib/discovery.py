@@ -84,15 +84,24 @@ def per_tag_baseline_mrr(
     *,
     tag_index: dict[str, dict[str, set[str]]],
     fable_doc_ids: list[str],
-    moral_gt_idx: list[int],
+    moral_gt_idx,
     rankings: np.ndarray,
     min_tagged_fables: int,
     k: int = 10,
 ) -> pd.DataFrame:
     """For each (field, value) with sample size above min_tagged, compute MRR@k
     on queries whose ground-truth fable is tagged with that value. Used to pick
-    the difficulty-matched placebo."""
+    the difficulty-matched placebo.
+
+    moral_gt_idx may be list[int] (legacy single-target) or list[list[int]]
+    (multi-target). For multi-target, a moral is "tagged" iff any of its
+    relevant fables is tagged."""
     from .retrieval import mrr_at_k
+    # Normalise to list[list[int]]
+    if len(moral_gt_idx) and isinstance(moral_gt_idx[0], (int, np.integer)):
+        gts = [[int(g)] for g in moral_gt_idx]
+    else:
+        gts = [[int(x) for x in g] for g in moral_gt_idx]
     fable_idx = {fid: i for i, fid in enumerate(fable_doc_ids)}
     rows = []
     for field, tag_map in tag_index.items():
@@ -100,12 +109,13 @@ def per_tag_baseline_mrr(
             if len(doc_set) < min_tagged_fables:
                 continue
             tagged_fable_indices = {fable_idx[fid] for fid in doc_set if fid in fable_idx}
-            target_query_mask = np.array([gt in tagged_fable_indices for gt in moral_gt_idx])
+            target_query_mask = np.array([
+                any(g in tagged_fable_indices for g in gt) for gt in gts
+            ])
             if target_query_mask.sum() == 0:
                 continue
-            mrr = mrr_at_k(rankings[target_query_mask],
-                           np.array([moral_gt_idx[i] for i in np.where(target_query_mask)[0]]),
-                           k=k)
+            sub_gt = [gts[i] for i in np.where(target_query_mask)[0]]
+            mrr = mrr_at_k(rankings[target_query_mask], sub_gt, k=k)
             rows.append({
                 "field": field, "value": value,
                 "n_tagged_queries": int(target_query_mask.sum()),

@@ -10,7 +10,7 @@ import numpy as np
 
 from .model import EncoderHandle, encode_with_intervention
 from .retrieval import compute_rankings
-from .eval import reciprocal_rank_per_query
+from .eval import reciprocal_rank_per_query, best_rank_per_query
 from .io import save_json
 
 
@@ -19,7 +19,7 @@ def sweep_concept(
     handle: EncoderHandle,
     fable_texts: list[str],
     moral_embs: np.ndarray,
-    gt_indices: np.ndarray,
+    gt_indices,
     concept_name: str,
     direction_per_layer: dict[int, np.ndarray],
     layers: list[int],
@@ -27,7 +27,14 @@ def sweep_concept(
     output_dir: Path,
     batch_size: int = 4,
 ) -> dict:
-    """For one concept, run the full (layer × α) sweep."""
+    """For one concept, run the full (layer × α) sweep.
+
+    Sign convention (see spec §1): v = mean(h_pos − h_neg); intervention is
+    hs ← hs − α·v̂. α has no a-priori "enhance" / "suppress" meaning — direction
+    of effect is read from the data. The α sweep is symmetric on purpose.
+
+    Multi-target: gt_indices may be list[list[int]] or 1D array of ints.
+    """
     summary: dict = {"concept": concept_name, "cells": []}
 
     for layer in layers:
@@ -35,6 +42,18 @@ def sweep_concept(
         layer_resolved = layer
         direction = direction_per_layer[layer_resolved]
         for alpha in alphas:
+            cell_path = Path(output_dir) / f"{concept_name}_layer{layer_resolved}_alpha{alpha:+.2f}.json"
+            # Resume: skip cells already computed in a prior (interrupted) run.
+            if cell_path.exists():
+                import json
+                existing = json.loads(cell_path.read_text())
+                summary["cells"].append({
+                    "layer": int(layer_resolved), "alpha": float(alpha),
+                    "rr_per_query_path": str(cell_path),
+                    "mrr_at_10": float(existing["mrr_at_10"]),
+                    "pooled_cosine_mean": float(existing["pooled_cosine_mean"]),
+                })
+                continue
             embs, pooled_cos = encode_with_intervention(
                 handle, fable_texts,
                 layer_idx=layer, direction=direction, alpha=alpha,
@@ -42,13 +61,8 @@ def sweep_concept(
             )
             rankings = compute_rankings(moral_embs, embs)
             rr = reciprocal_rank_per_query(rankings, gt_indices)
+            ranks_int = best_rank_per_query(rankings, gt_indices)
 
-            ranks_int = np.zeros(len(gt_indices), dtype=np.int32)
-            for i in range(len(gt_indices)):
-                pos = np.where(rankings[i] == gt_indices[i])[0]
-                ranks_int[i] = (pos[0] + 1) if len(pos) else len(rankings[i]) + 1
-
-            cell_path = Path(output_dir) / f"{concept_name}_layer{layer_resolved}_alpha{alpha:+.2f}.json"
             save_json(cell_path, {
                 "concept": concept_name, "layer": int(layer_resolved), "alpha": float(alpha),
                 "mrr_at_10": float(rr.mean()),

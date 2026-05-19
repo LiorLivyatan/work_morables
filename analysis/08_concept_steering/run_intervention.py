@@ -32,19 +32,25 @@ from lib.vectors import (build_matched_pairs, build_caa_vector,
                           matched_pair_quality_metrics)
 from lib.intervene import sweep_concept
 from lib.nulls import shuffled_tag_indices, random_unit_direction_at_norm
-from lib.eval import reciprocal_rank_per_query, summarize_run, stage2_go_no_go
+from lib.eval import (reciprocal_rank_per_query, summarize_run, stage2_go_no_go,
+                       exploratory_decision, passing_lift)
 from lib.plotting import plot_specificity_summary
+from run_baseline import _assert_corpus_shape
 
 
 def _candidate_cells(summary: dict, target_concepts: list[str]) -> list[tuple[str, int, float]]:
+    """Sign-agnostic candidate selection: any cell where the CI for S excludes 0."""
     out: list[tuple[str, int, float]] = []
     for concept in target_concepts:
         if concept not in summary["cells"]:
             continue
         for layer_key, lc in summary["cells"][concept].items():
             for ai, alpha in enumerate(summary["alphas"]):
+                lo = lc["S_ci_lo"][ai]
                 hi = lc["S_ci_hi"][ai]
-                if hi is not None and hi < 0.0:
+                if lo is None or hi is None:
+                    continue
+                if passing_lift(lo, hi):
                     layer_int = int(layer_key)
                     out.append((concept, layer_int, alpha))
     return out
@@ -88,7 +94,9 @@ def _run_random_direction_check(
         field, value = cname.split("__", 1)
         positives = tag_index[field][value]
         pos_indices_set = {fable_idx_by_id[p] for p in positives if p in fable_idx_by_id}
-        target_mask = np.array([gt in pos_indices_set for gt in gt_indices])
+        target_mask = np.array([
+            any(g in pos_indices_set for g in gt) for gt in gt_indices
+        ])
 
         S_random: list[float] = []
         for _ in range(n_seeds):
@@ -149,7 +157,10 @@ def _run_shuffled_tag_nulls(
         n_pos = len([p for p in positives if p in fable_idx_by_id])
 
         pos_indices = np.array([fable_idx_by_id[p] for p in positives if p in fable_idx_by_id])
-        target_mask = np.array([gt in set(pos_indices) for gt in gt_indices])
+        pos_set = set(pos_indices.tolist())
+        target_mask = np.array([
+            any(g in pos_set for g in gt) for gt in gt_indices
+        ])
 
         perm_sets = shuffled_tag_indices(
             n_total=len(corpus.fable_texts), n_positives=n_pos, n_perms=n_perms, rng=rng,
@@ -186,12 +197,22 @@ def main(config_path: Path, force: bool = False) -> int:
     raw_layers = cfg["vectors"]["layers"]
     alphas = cfg["intervention"]["alphas"]
 
+    qrels_path = ROOT / cfg["data"].get(
+        "qrels_path", "data/processed/qrels_moral_to_fable.json"
+    )
     corpus = load_corpus(
         morals_path=ROOT / cfg["data"]["morals_path"],
         fables_path=ROOT / cfg["data"]["fables_path"],
-        qrels_path =ROOT / "data/processed/qrels_moral_to_fable.json",
+        qrels_path =qrels_path,
     )
+    _assert_corpus_shape(cfg, corpus)
     baseline = load_json(results_dir / "ranks_baseline.json")
+    # Guard against stale baseline from a different dataset.
+    if "qrels_path" in baseline and Path(baseline["qrels_path"]).name != qrels_path.name:
+        raise RuntimeError(
+            f"ranks_baseline.json was built with qrels={baseline['qrels_path']!r} "
+            f"but this run uses {qrels_path.name!r}. Re-run run_baseline.py first."
+        )
     tag_index = build_tag_index(ROOT / cfg["data"]["metadata_path"],
                                   fields=cfg["discovery"]["metadata_fields"])
     metadata = load_json(ROOT / cfg["data"]["metadata_path"])
@@ -245,7 +266,13 @@ def main(config_path: Path, force: bool = False) -> int:
     concepts_to_run = list(cfg["concepts"]["targets"]) + list(cfg["concepts"]["placebo"])
     fable_token_lengths = [len(t.split()) for t in corpus.fable_texts]
     fable_idx_by_id = {fid: i for i, fid in enumerate(corpus.fable_doc_ids)}
-    gt_indices = np.array([q["gt_fable_idx"] for q in baseline["queries"]])
+    # Multi-target: list[list[int]] per moral; ≥1 relevant fable each.
+    gt_indices = [
+        [int(x) for x in (q.get("gt_fable_idxs") or [q["gt_fable_idx"]])]
+        for q in baseline["queries"]
+    ]
+    # For cluster-fanout-sensitivity diagnostics (spec §7).
+    singleton_moral_mask = np.array([len(g) == 1 for g in gt_indices])
     # Cap at k=10 so this matches reciprocal_rank_per_query (MRR@10 truthfulness).
     rr_baseline = np.array(
         [(1.0 / q["gt_rank"]) if q["gt_rank"] <= 10 else 0.0 for q in baseline["queries"]],
@@ -271,7 +298,8 @@ def main(config_path: Path, force: bool = False) -> int:
             length_tolerance=cfg["vectors"]["matching"]["length_tolerance"],
         )
         if len(pairs) < cfg["vectors"]["matching"]["min_matched_pairs"]:
-            notify.send(f"⚠️ {cname}: only {len(pairs)} matched pairs — skipping")
+            notify.send(f"⚠️  {cname}: only {len(pairs)} matched pairs (min={cfg['vectors']['matching']['min_matched_pairs']}) — skipping this concept, continuing run")
+            print(f"[skip] {cname}: matched_pairs={len(pairs)} < min={cfg['vectors']['matching']['min_matched_pairs']} — continuing")
             continue
 
         pos_idx = np.array([fable_idx_by_id[p] for p, _ in pairs])
@@ -284,15 +312,30 @@ def main(config_path: Path, force: bool = False) -> int:
         all_neg_idx = np.setdiff1d(np.arange(len(corpus.fable_texts)), all_pos_idx)
         v_mean = build_mean_diff_vector(hs_by_layer, all_pos_idx, all_neg_idx)
         cos_per_layer = {l: cosine(v_caa[l], v_mean[l]) for l in v_caa}
+        # Lexical-confound diagnostic (spec §11.7): cosine between CAA and a
+        # simple lexical baseline = mean(positive fable embeddings) - global mean.
+        # Computed on the model's L2-normalised output embeddings, not hidden
+        # states — this is a different question from cos(v_caa, v_mean_diff).
+        try:
+            fable_embs_cached = load_npy(cache_dir / f"fable_embs_{text_hash(corpus.fable_texts)}.npy")
+            v_lex = fable_embs_cached[all_pos_idx].mean(axis=0) - fable_embs_cached.mean(axis=0)
+            v_lex /= max(np.linalg.norm(v_lex), 1e-12)
+            cos_lex_per_layer = {
+                int(l): float(np.dot(v_caa[l] / (np.linalg.norm(v_caa[l]) + 1e-12), v_lex))
+                for l in v_caa
+            }
+        except FileNotFoundError:
+            cos_lex_per_layer = {}
 
         for l, vec in v_caa.items():
             save_npy(results_dir / "concept_vectors" / f"{cname}_layer{l}_caa_matched.npy", vec)
         for l, vec in v_mean.items():
             save_npy(results_dir / "concept_vectors" / f"{cname}_layer{l}_mean_diff.npy", vec)
 
-        # Quality metrics
+        # Quality metrics (multi-target tag membership)
+        all_pos_set = set(all_pos_idx.tolist())
         target_mask = np.array([
-            gt in set(all_pos_idx.tolist()) for gt in gt_indices
+            any(g in all_pos_set for g in gt) for gt in gt_indices
         ])
         pos_mrr = float(rr_baseline[target_mask].mean()) if target_mask.any() else float("nan")
         neg_mrr = float(rr_baseline[~target_mask].mean()) if (~target_mask).any() else float("nan")
@@ -304,6 +347,8 @@ def main(config_path: Path, force: bool = False) -> int:
             pos_baseline_mrr=pos_mrr, neg_baseline_mrr=neg_mrr,
             cos_caa_meandiff_per_layer=cos_per_layer,
         )
+        # Attach lexical-confound diagnostic (spec §11.7)
+        quality["cos_caa_lexical_per_layer"] = cos_lex_per_layer
         save_json(results_dir / "concept_vectors" / f"{cname}.meta.json", quality)
         target_mask_per_concept[cname] = target_mask
 
@@ -329,6 +374,7 @@ def main(config_path: Path, force: bool = False) -> int:
         rr_baseline=rr_baseline, layers=layers, alphas=alphas,
         null_envelopes=None,
         n_bootstrap=cfg["eval"]["primary_statistic"]["n_bootstrap"],
+        singleton_moral_mask=singleton_moral_mask,
     )
 
     # 5. Null controls at candidate cells (skip in 'skip' run_mode)
@@ -366,7 +412,17 @@ def main(config_path: Path, force: bool = False) -> int:
         rr_baseline=rr_baseline, layers=layers, alphas=alphas,
         null_envelopes=null_envelopes,
         n_bootstrap=cfg["eval"]["primary_statistic"]["n_bootstrap"],
+        singleton_moral_mask=singleton_moral_mask,
     )
+    # Log cluster fanout distribution for the report (spec §7).
+    fanout = np.array([len(g) for g in gt_indices])
+    final_summary["cluster_fanout"] = {
+        "mean": float(fanout.mean()),
+        "min":  int(fanout.min()),
+        "max":  int(fanout.max()),
+        "histogram": {str(k): int(v) for k, v in zip(*np.unique(fanout, return_counts=True))},
+        "n_singleton_morals": int(singleton_moral_mask.sum()),
+    }
     # Stage-2 cond3/cond4 inputs (must be populated explicitly).
     final_summary["random_dir_within_null"] = bool(random_dir_within_null)
     # Max pooled cosine across passing cells (cond4 should be < 0.99 for GO).
@@ -393,19 +449,50 @@ def main(config_path: Path, force: bool = False) -> int:
     plot_specificity_summary(summary=final_summary,
                               save_path=results_dir / "specificity_summary.png")
 
-    decision = stage2_go_no_go(
-        final_summary,
-        target_concepts=target_names,
-        placebo_concepts=placebo_names,
-    )
-    save_json(results_dir / "stage2_decision.json", decision)
+    # Pooled-cosine sanity assertion (spec §11.1): at least one α≠0 cell across
+    # the entire run must have noticeably perturbed embeddings. Else the hook
+    # isn't doing anything observable and the run is invalid.
+    nontrivial_perturbation = False
+    for cell_list in cells_per_concept.values():
+        for c in cell_list:
+            if c["alpha"] != 0.0 and c["pooled_cosine_mean"] < 0.999:
+                nontrivial_perturbation = True
+                break
+        if nontrivial_perturbation:
+            break
+    if not nontrivial_perturbation:
+        notify.send("❌ run_intervention: pooled-cosine assertion FAILED — every α≠0 "
+                     "cell has pooled_cosine ≥ 0.999. Hook may not be firing.")
+        raise RuntimeError(
+            "Pooled-cosine assertion failed: no α≠0 cell has pooled_cosine_mean < 0.999. "
+            "Intervention not measurable — see spec §11.1."
+        )
 
-    notify.send(
-        f"✅ 08_concept_steering: run_intervention done\n"
-        f"Stage 2 GO: {decision['go']}\n"
-        f"targets passing: {decision['targets_passing']}\n"
-        f"reasons: {decision['reasons']}"
-    )
+    # Exploratory mode (placebo empty) → skip Stage-2 four-condition gate.
+    if not cfg["concepts"]["placebo"]:
+        decision = exploratory_decision(final_summary)
+        save_json(results_dir / "stage2_decision.json", decision)
+        n_pass = sum(d["n_passing_strict"] for d in decision["per_concept"].values())
+        notify.send(
+            f"✅ 08_concept_steering: run_intervention done (exploratory)\n"
+            f"strict-passing cells across all concepts: {n_pass}\n"
+            f"per-concept: " + ", ".join(
+                f"{k}={v['n_passing_strict']}" for k, v in decision["per_concept"].items()
+            )
+        )
+    else:
+        decision = stage2_go_no_go(
+            final_summary,
+            target_concepts=target_names,
+            placebo_concepts=placebo_names,
+        )
+        save_json(results_dir / "stage2_decision.json", decision)
+        notify.send(
+            f"✅ 08_concept_steering: run_intervention done\n"
+            f"Stage 2 GO: {decision['go']}\n"
+            f"targets passing: {decision['targets_passing']}\n"
+            f"reasons: {decision['reasons']}"
+        )
     return 0
 
 

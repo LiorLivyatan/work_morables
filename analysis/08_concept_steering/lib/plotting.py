@@ -6,7 +6,12 @@ Each subplot shows S(C, L, α) on y-axis vs alpha on x-axis, with paired-bootstr
 from __future__ import annotations
 from pathlib import Path
 from typing import Any
+import math
 import matplotlib.pyplot as plt
+
+
+def _nan(xs):
+    return [float("nan") if x is None else float(x) for x in xs]
 
 
 def plot_specificity_summary(
@@ -27,13 +32,13 @@ def plot_specificity_summary(
         for li, layer in enumerate(layers):
             ax = axes[li, ci]
             cell = summary["cells"][concept][str(layer)]
-            s_mid = cell["S_median"]
-            s_lo  = cell["S_ci_lo"]
-            s_hi  = cell["S_ci_hi"]
-            null_lo = cell.get("null_lo", [None] * len(alphas))
-            null_hi = cell.get("null_hi", [None] * len(alphas))
+            s_mid = _nan(cell["S_median"])
+            s_lo  = _nan(cell["S_ci_lo"])
+            s_hi  = _nan(cell["S_ci_hi"])
+            null_lo = _nan(cell.get("null_lo", [None] * len(alphas)))
+            null_hi = _nan(cell.get("null_hi", [None] * len(alphas)))
 
-            if null_lo and null_lo[0] is not None:
+            if any(not math.isnan(v) for v in null_lo):
                 ax.fill_between(alphas, null_lo, null_hi, color="0.85", label="null")
             ax.fill_between(alphas, s_lo, s_hi, color="C0", alpha=0.3, label="95% CI")
             ax.plot(alphas, s_mid, color="C0", marker=".", label="S = ΔMRR_t − ΔMRR_c")

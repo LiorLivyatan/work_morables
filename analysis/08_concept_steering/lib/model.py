@@ -47,7 +47,23 @@ def load_model(cfg: dict) -> EncoderHandle:
 
     print(f"[model] loaded {mc['hf_id']} on {device} dtype={dtype}")
     print(f"[model] pooling={pooling_kind} n_layers={n_layers} hidden_dim={hidden_dim}")
+    # Surface ST prompt config so any silent prefix that encode() applies is
+    # visible — extract_hidden_states mirrors this via _resolve_prompt() below.
+    prompts = getattr(st_model, "prompts", {}) or {}
+    default_prompt_name = getattr(st_model, "default_prompt_name", None)
+    print(f"[model] st prompts={prompts} default_prompt_name={default_prompt_name}")
     return EncoderHandle(st_model, transformer, pooling_kind, device, dtype, n_layers, hidden_dim)
+
+
+def _resolve_prompt(st_model: SentenceTransformer) -> str:
+    """Return the prompt string that st_model.encode(texts) would prepend with
+    no explicit prompt_name. Mirrors SentenceTransformer.encode's behaviour so
+    extract_hidden_states tokenises the same text encode() would."""
+    default = getattr(st_model, "default_prompt_name", None)
+    prompts = getattr(st_model, "prompts", {}) or {}
+    if default and default in prompts and prompts[default]:
+        return prompts[default]
+    return ""
 
 
 def _detect_pooling(st_model: SentenceTransformer) -> str:
@@ -120,10 +136,14 @@ def extract_hidden_states(
     out: dict[int, list[np.ndarray]] = {b: [] for b in requested_blocks}
 
     tok = handle.st_model.tokenizer
+    # Match whatever prefix encode() would prepend; if ST has no default prompt
+    # configured this is a no-op and inputs are identical to before.
+    prompt = _resolve_prompt(handle.st_model)
+    prefixed = [prompt + t for t in texts] if prompt else list(texts)
     handle.transformer.eval()
     with torch.no_grad():
-        for batch_start in range(0, len(texts), batch_size):
-            batch = list(texts[batch_start: batch_start + batch_size])
+        for batch_start in range(0, len(prefixed), batch_size):
+            batch = prefixed[batch_start: batch_start + batch_size]
             enc = tok(batch, padding=True, truncation=True, return_tensors="pt",
                        max_length=tok.model_max_length)
             enc = {k: v.to(handle.device) for k, v in enc.items()}
@@ -181,9 +201,20 @@ def encode_with_intervention(
         return embs, np.ones(len(texts), dtype=np.float32)
 
     base_embs = encode(handle, texts, batch_size=batch_size)
-    direction_t = torch.as_tensor(direction, device=handle.device, dtype=handle.dtype)
+    # Unit-normalise the direction so α has the same physical meaning across
+    # layers (raw ‖v_caa‖ grows with depth — without this, the layer axis of
+    # the sweep mixes "depth" and "intervention magnitude").
+    dir_np = np.asarray(direction, dtype=np.float32)
+    dir_norm = float(np.linalg.norm(dir_np))
+    if dir_norm < 1e-12:
+        return base_embs, np.ones(len(texts), dtype=np.float32)
+    direction_t = torch.as_tensor(dir_np / dir_norm, device=handle.device, dtype=handle.dtype)
 
     def hook_fn(module, inputs, output):
+        # Sign convention (locked in spec §1): v = mean(h_pos − h_neg) from
+        # build_caa_vector. The intervention subtracts α·v̂; α > 0 and α < 0 are
+        # both meaningful — direction of effect is read from the data, not
+        # asserted as "enhance" or "suppress" a-priori.
         if isinstance(output, tuple):
             hs = output[0]
             modified = hs - alpha * direction_t

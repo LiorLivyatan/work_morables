@@ -39,7 +39,7 @@ vectors:
     - mean_length_ratio
 
 intervention:
-  alphas: [-1.0, 0.0, 1.0]
+  alphas: [-30.0, -15.0, -7.0, -3.0, 0.0, 3.0, 7.0, 15.0, 30.0]
   hook_position: residual_stream
   renormalize: true
 

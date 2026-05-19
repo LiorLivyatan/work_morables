@@ -1,16 +1,22 @@
+# PILOT — clustered data, ≤30 min validation run before the production sweep.
+# 2 concepts × 2 layers × 5 alphas = 20 cells (≈16 real after α=0 short-circuit).
+# Goal: end-to-end validate the multi-target refactor, sign convention,
+# exploratory mode, and surface initial insights on the new clustered baseline.
+#
+# Writes to results_pilot/ — keeps production results/ untouched.
+
 model:
   hf_id: Linq-AI-Research/Linq-Embed-Mistral
   pooling: auto
   device: cuda
   dtype: bfloat16
-  batch_size: 8             # bumped to 16 caused OOM (another process holding 2.7GB on GPU 2)
+  batch_size: 8
 
 data:
   morals_path: data/clustered/morals_unique_corpus.json
   fables_path: data/clustered/fables_corpus.json
   qrels_path:  data/clustered/qrels_moral_to_fable_clustered.json
   metadata_path: data/enriched/fable_elements.json
-  # Pre-launch corpus shape assertions (spec §10.1)
   expect:
     n_morals: 668
     n_fables: 709
@@ -22,21 +28,15 @@ discovery:
   min_tagged_fables: 15
   fdr_alpha: 0.05
 
-# Exploratory landscape (spec §3, §4). placebo=[] disables Stage-2 four-condition
-# gate; run_intervention.py emits per-concept exploratory_decision instead.
+# Pilot slate: 1 concrete + 1 abstract; placebo empty → exploratory mode.
 concepts:
   targets:
-  - {field: characters,      value: fox}
-  - {field: characters,      value: lion}
-  - {field: characters,      value: wolf}
-  - {field: setting,         value: forest}
-  - {field: moral_category,  value: deception}
-  - {field: moral_category,  value: justice}
-  # Dropped 'field' and 'pride' for faster turnaround — similar to forest/deception respectively.
+  - {field: characters,     value: fox}        # smoke evidence at α=+15 L28
+  - {field: moral_category, value: deception}  # top discovery candidate
   placebo: []
 
 vectors:
-  layers: [12, 20, 24, 28, 31]   # dropped layer-4 negative control for faster turnaround; pilot's L12 collapse already provides negative-control evidence
+  layers: [12, 28]   # same as smoke for direct comparison
   methods:
     primary: caa_matched
     sanity_byproducts: [mean_diff]
@@ -58,17 +58,17 @@ vectors:
     - cos_caa_meandiff
 
 intervention:
-  alphas: [-15.0, -5.0, -3.0, 0.0, 3.0, 5.0, 15.0]  # trimmed from 10 alphas — dropped ±20 (destructive) and ±10 (redundant with ±5/±15)
+  alphas: [-15.0, -3.0, 0.0, 3.0, 15.0]   # direction asymmetry + dose-response shape
   hook_position: residual_stream
   renormalize: true
 
 null_controls:
   run_mode: candidate_only
   random_direction:
-    n_seeds: 2                # aggressive cut for same-day finish
+    n_seeds: 1                # pilot: validate Stage-3 code path only; production uses 3+
     norm_match: caa_matched
   shuffled_tag_caa:
-    n_permutations: 8         # aggressive cut for same-day finish; still gives a usable null envelope
+    n_permutations: 5         # pilot: validate Stage-3 code path only; production uses 50
 
 eval:
   metrics: [mrr_at_10, recall_at_1, recall_at_5, recall_at_10]
@@ -76,7 +76,7 @@ eval:
   primary_statistic:
     name: specificity_gap
     test: paired_bootstrap_ci_over_morals
-    n_bootstrap: 10000
+    n_bootstrap: 5000          # smaller for pilot; production uses 10000
     alpha: 0.05
   diagnostics:
     pooled_cosine_pre_post: true
@@ -84,10 +84,10 @@ eval:
     null_envelope: true
 
 output:
-  results_dir: analysis/08_concept_steering/results
-  cache_dir: analysis/08_concept_steering/cache
+  results_dir: analysis/08_concept_steering/results_pilot
+  # Cache on /data/lior because server home is 100% full. Production config
+  # still uses the local cache; pilot stays self-contained.
+  cache_dir: /data/lior/08_concept_steering/cache_pilot
   save_intermediate_embeddings: false
 
-# Long-term model storage (CLAUDE.md mandate). Final artefacts go here; the
-# physical disk holds only fast-I/O caches during the run.
 model_output_dir: /data/lior/08_concept_steering/models
