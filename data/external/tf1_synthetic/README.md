@@ -20,3 +20,11 @@ via experiments/11_tf1_diagnostic/check_iou.py (--n 50000 --chunks 10).
 - Built: 2026-05-20T00:12:33
 
 See experiments/11_tf1_diagnostic/REPORT.md for the analysis that motivated this derivative.
+
+
+## Clustering (this run)
+
+- Threshold: 0.8
+- Model: BAAI/bge-large-en-v1.5
+- Clusters: 78  (singleton=66, near=12, exact=0)
+- Inspection dumps: experiments/11_tf1_diagnostic/cluster_inspection/20260520_005305/

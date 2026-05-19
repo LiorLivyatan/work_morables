@@ -1,0 +1,1882 @@
+[
+  {
+    "cluster_id": "cluster_000",
+    "type": "near",
+    "moral_set": [
+      "generosity overcomes envy",
+      "a small act of kindness can make a big difference",
+      "kindness transcends boundaries",
+      "generosity enriches the giver",
+      "generosity quells greed",
+      "kindness is rewarded",
+      "selflessness inspires others",
+      "small deeds can spark great change"
+    ],
+    "fables": [
+      "fable_tf1_00010",
+      "fable_tf1_00011",
+      "fable_tf1_00012",
+      "fable_tf1_00013",
+      "fable_tf1_00014",
+      "fable_tf1_00015",
+      "fable_tf1_00016",
+      "fable_tf1_00017",
+      "fable_tf1_00018",
+      "fable_tf1_00019",
+      "fable_tf1_00220",
+      "fable_tf1_00221",
+      "fable_tf1_00222",
+      "fable_tf1_00223",
+      "fable_tf1_00224",
+      "fable_tf1_00225",
+      "fable_tf1_00226",
+      "fable_tf1_00227",
+      "fable_tf1_00228",
+      "fable_tf1_00229",
+      "fable_tf1_00470",
+      "fable_tf1_00471",
+      "fable_tf1_00472",
+      "fable_tf1_00473",
+      "fable_tf1_00474",
+      "fable_tf1_00475",
+      "fable_tf1_00476",
+      "fable_tf1_00477",
+      "fable_tf1_00478",
+      "fable_tf1_00479",
+      "fable_tf1_00530",
+      "fable_tf1_00531",
+      "fable_tf1_00532",
+      "fable_tf1_00533",
+      "fable_tf1_00534",
+      "fable_tf1_00535",
+      "fable_tf1_00536",
+      "fable_tf1_00537",
+      "fable_tf1_00538",
+      "fable_tf1_00539",
+      "fable_tf1_00600",
+      "fable_tf1_00601",
+      "fable_tf1_00602",
+      "fable_tf1_00603",
+      "fable_tf1_00604",
+      "fable_tf1_00605",
+      "fable_tf1_00606",
+      "fable_tf1_00607",
+      "fable_tf1_00608",
+      "fable_tf1_00609",
+      "fable_tf1_00660",
+      "fable_tf1_00661",
+      "fable_tf1_00662",
+      "fable_tf1_00663",
+      "fable_tf1_00664",
+      "fable_tf1_00665",
+      "fable_tf1_00666",
+      "fable_tf1_00667",
+      "fable_tf1_00668",
+      "fable_tf1_00669",
+      "fable_tf1_00820",
+      "fable_tf1_00821",
+      "fable_tf1_00822",
+      "fable_tf1_00823",
+      "fable_tf1_00824",
+      "fable_tf1_00825",
+      "fable_tf1_00826",
+      "fable_tf1_00827",
+      "fable_tf1_00828",
+      "fable_tf1_00829",
+      "fable_tf1_00980",
+      "fable_tf1_00981",
+      "fable_tf1_00982",
+      "fable_tf1_00983",
+      "fable_tf1_00984",
+      "fable_tf1_00985",
+      "fable_tf1_00986",
+      "fable_tf1_00987",
+      "fable_tf1_00988",
+      "fable_tf1_00989"
+    ],
+    "n_morals": 8,
+    "n_fables": 80
+  },
+  {
+    "cluster_id": "cluster_001",
+    "type": "near",
+    "moral_set": [
+      "harmony emerges from balance",
+      "acceptance fosters cooperation",
+      "acceptance of flaws leads to harmony",
+      "acceptance leads to unity"
+    ],
+    "fables": [
+      "fable_tf1_00070",
+      "fable_tf1_00071",
+      "fable_tf1_00072",
+      "fable_tf1_00073",
+      "fable_tf1_00074",
+      "fable_tf1_00075",
+      "fable_tf1_00076",
+      "fable_tf1_00077",
+      "fable_tf1_00078",
+      "fable_tf1_00079",
+      "fable_tf1_00090",
+      "fable_tf1_00091",
+      "fable_tf1_00092",
+      "fable_tf1_00093",
+      "fable_tf1_00094",
+      "fable_tf1_00095",
+      "fable_tf1_00096",
+      "fable_tf1_00097",
+      "fable_tf1_00098",
+      "fable_tf1_00099",
+      "fable_tf1_00150",
+      "fable_tf1_00151",
+      "fable_tf1_00152",
+      "fable_tf1_00153",
+      "fable_tf1_00154",
+      "fable_tf1_00155",
+      "fable_tf1_00156",
+      "fable_tf1_00157",
+      "fable_tf1_00158",
+      "fable_tf1_00159",
+      "fable_tf1_00290",
+      "fable_tf1_00291",
+      "fable_tf1_00292",
+      "fable_tf1_00293",
+      "fable_tf1_00294",
+      "fable_tf1_00295",
+      "fable_tf1_00296",
+      "fable_tf1_00297",
+      "fable_tf1_00298",
+      "fable_tf1_00299"
+    ],
+    "n_morals": 4,
+    "n_fables": 40
+  },
+  {
+    "cluster_id": "cluster_002",
+    "type": "near",
+    "moral_set": [
+      "empathy bridges differences",
+      "empathy softens the hardest hearts",
+      "empathy dissolves hatred"
+    ],
+    "fables": [
+      "fable_tf1_00170",
+      "fable_tf1_00171",
+      "fable_tf1_00172",
+      "fable_tf1_00173",
+      "fable_tf1_00174",
+      "fable_tf1_00175",
+      "fable_tf1_00176",
+      "fable_tf1_00177",
+      "fable_tf1_00178",
+      "fable_tf1_00179",
+      "fable_tf1_00670",
+      "fable_tf1_00671",
+      "fable_tf1_00672",
+      "fable_tf1_00673",
+      "fable_tf1_00674",
+      "fable_tf1_00675",
+      "fable_tf1_00676",
+      "fable_tf1_00677",
+      "fable_tf1_00678",
+      "fable_tf1_00679",
+      "fable_tf1_00880",
+      "fable_tf1_00881",
+      "fable_tf1_00882",
+      "fable_tf1_00883",
+      "fable_tf1_00884",
+      "fable_tf1_00885",
+      "fable_tf1_00886",
+      "fable_tf1_00887",
+      "fable_tf1_00888",
+      "fable_tf1_00889"
+    ],
+    "n_morals": 3,
+    "n_fables": 30
+  },
+  {
+    "cluster_id": "cluster_003",
+    "type": "near",
+    "moral_set": [
+      "perseverance breaks barriers",
+      "perseverance shapes destiny",
+      "perseverance triumphs over difficulty"
+    ],
+    "fables": [
+      "fable_tf1_00790",
+      "fable_tf1_00791",
+      "fable_tf1_00792",
+      "fable_tf1_00793",
+      "fable_tf1_00794",
+      "fable_tf1_00795",
+      "fable_tf1_00796",
+      "fable_tf1_00797",
+      "fable_tf1_00798",
+      "fable_tf1_00799",
+      "fable_tf1_00830",
+      "fable_tf1_00831",
+      "fable_tf1_00832",
+      "fable_tf1_00833",
+      "fable_tf1_00834",
+      "fable_tf1_00835",
+      "fable_tf1_00836",
+      "fable_tf1_00837",
+      "fable_tf1_00838",
+      "fable_tf1_00839",
+      "fable_tf1_00950",
+      "fable_tf1_00951",
+      "fable_tf1_00952",
+      "fable_tf1_00953",
+      "fable_tf1_00954",
+      "fable_tf1_00955",
+      "fable_tf1_00956",
+      "fable_tf1_00957",
+      "fable_tf1_00958",
+      "fable_tf1_00959"
+    ],
+    "n_morals": 3,
+    "n_fables": 30
+  },
+  {
+    "cluster_id": "cluster_004",
+    "type": "near",
+    "moral_set": [
+      "ignorance breeds conflict",
+      "knowledge outlives ignorance"
+    ],
+    "fables": [
+      "fable_tf1_00060",
+      "fable_tf1_00061",
+      "fable_tf1_00062",
+      "fable_tf1_00063",
+      "fable_tf1_00064",
+      "fable_tf1_00065",
+      "fable_tf1_00066",
+      "fable_tf1_00067",
+      "fable_tf1_00068",
+      "fable_tf1_00069",
+      "fable_tf1_00130",
+      "fable_tf1_00131",
+      "fable_tf1_00132",
+      "fable_tf1_00133",
+      "fable_tf1_00134",
+      "fable_tf1_00135",
+      "fable_tf1_00136",
+      "fable_tf1_00137",
+      "fable_tf1_00138",
+      "fable_tf1_00139"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_005",
+    "type": "near",
+    "moral_set": [
+      "sharing knowledge empowers all",
+      "sharing benefits everyone"
+    ],
+    "fables": [
+      "fable_tf1_00140",
+      "fable_tf1_00141",
+      "fable_tf1_00142",
+      "fable_tf1_00143",
+      "fable_tf1_00144",
+      "fable_tf1_00145",
+      "fable_tf1_00146",
+      "fable_tf1_00147",
+      "fable_tf1_00148",
+      "fable_tf1_00149",
+      "fable_tf1_00160",
+      "fable_tf1_00161",
+      "fable_tf1_00162",
+      "fable_tf1_00163",
+      "fable_tf1_00164",
+      "fable_tf1_00165",
+      "fable_tf1_00166",
+      "fable_tf1_00167",
+      "fable_tf1_00168",
+      "fable_tf1_00169"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_006",
+    "type": "near",
+    "moral_set": [
+      "humility paves the path to wisdom",
+      "humility earns admiration"
+    ],
+    "fables": [
+      "fable_tf1_00180",
+      "fable_tf1_00181",
+      "fable_tf1_00182",
+      "fable_tf1_00183",
+      "fable_tf1_00184",
+      "fable_tf1_00185",
+      "fable_tf1_00186",
+      "fable_tf1_00187",
+      "fable_tf1_00188",
+      "fable_tf1_00189",
+      "fable_tf1_00760",
+      "fable_tf1_00761",
+      "fable_tf1_00762",
+      "fable_tf1_00763",
+      "fable_tf1_00764",
+      "fable_tf1_00765",
+      "fable_tf1_00766",
+      "fable_tf1_00767",
+      "fable_tf1_00768",
+      "fable_tf1_00769"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_007",
+    "type": "near",
+    "moral_set": [
+      "second chances reveal new paths",
+      "second chances can rewrite destinies"
+    ],
+    "fables": [
+      "fable_tf1_00270",
+      "fable_tf1_00271",
+      "fable_tf1_00272",
+      "fable_tf1_00273",
+      "fable_tf1_00274",
+      "fable_tf1_00275",
+      "fable_tf1_00276",
+      "fable_tf1_00277",
+      "fable_tf1_00278",
+      "fable_tf1_00279",
+      "fable_tf1_00460",
+      "fable_tf1_00461",
+      "fable_tf1_00462",
+      "fable_tf1_00463",
+      "fable_tf1_00464",
+      "fable_tf1_00465",
+      "fable_tf1_00466",
+      "fable_tf1_00467",
+      "fable_tf1_00468",
+      "fable_tf1_00469"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_008",
+    "type": "near",
+    "moral_set": [
+      "respect is mutual",
+      "honesty invites respect"
+    ],
+    "fables": [
+      "fable_tf1_00280",
+      "fable_tf1_00281",
+      "fable_tf1_00282",
+      "fable_tf1_00283",
+      "fable_tf1_00284",
+      "fable_tf1_00285",
+      "fable_tf1_00286",
+      "fable_tf1_00287",
+      "fable_tf1_00288",
+      "fable_tf1_00289",
+      "fable_tf1_00570",
+      "fable_tf1_00571",
+      "fable_tf1_00572",
+      "fable_tf1_00573",
+      "fable_tf1_00574",
+      "fable_tf1_00575",
+      "fable_tf1_00576",
+      "fable_tf1_00577",
+      "fable_tf1_00578",
+      "fable_tf1_00579"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_009",
+    "type": "near",
+    "moral_set": [
+      "sincerity builds strong bonds",
+      "sincerity invites deep bonds"
+    ],
+    "fables": [
+      "fable_tf1_00390",
+      "fable_tf1_00391",
+      "fable_tf1_00392",
+      "fable_tf1_00393",
+      "fable_tf1_00394",
+      "fable_tf1_00395",
+      "fable_tf1_00396",
+      "fable_tf1_00397",
+      "fable_tf1_00398",
+      "fable_tf1_00399",
+      "fable_tf1_00840",
+      "fable_tf1_00841",
+      "fable_tf1_00842",
+      "fable_tf1_00843",
+      "fable_tf1_00844",
+      "fable_tf1_00845",
+      "fable_tf1_00846",
+      "fable_tf1_00847",
+      "fable_tf1_00848",
+      "fable_tf1_00849"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_010",
+    "type": "near",
+    "moral_set": [
+      "courtesy reflects character",
+      "courtesy is never wasted"
+    ],
+    "fables": [
+      "fable_tf1_00420",
+      "fable_tf1_00421",
+      "fable_tf1_00422",
+      "fable_tf1_00423",
+      "fable_tf1_00424",
+      "fable_tf1_00425",
+      "fable_tf1_00426",
+      "fable_tf1_00427",
+      "fable_tf1_00428",
+      "fable_tf1_00429",
+      "fable_tf1_00940",
+      "fable_tf1_00941",
+      "fable_tf1_00942",
+      "fable_tf1_00943",
+      "fable_tf1_00944",
+      "fable_tf1_00945",
+      "fable_tf1_00946",
+      "fable_tf1_00947",
+      "fable_tf1_00948",
+      "fable_tf1_00949"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_011",
+    "type": "near",
+    "moral_set": [
+      "mildness tames fury",
+      "gentle words quell anger"
+    ],
+    "fables": [
+      "fable_tf1_00690",
+      "fable_tf1_00691",
+      "fable_tf1_00692",
+      "fable_tf1_00693",
+      "fable_tf1_00694",
+      "fable_tf1_00695",
+      "fable_tf1_00696",
+      "fable_tf1_00697",
+      "fable_tf1_00698",
+      "fable_tf1_00699",
+      "fable_tf1_00710",
+      "fable_tf1_00711",
+      "fable_tf1_00712",
+      "fable_tf1_00713",
+      "fable_tf1_00714",
+      "fable_tf1_00715",
+      "fable_tf1_00716",
+      "fable_tf1_00717",
+      "fable_tf1_00718",
+      "fable_tf1_00719"
+    ],
+    "n_morals": 2,
+    "n_fables": 20
+  },
+  {
+    "cluster_id": "cluster_012",
+    "type": "singleton",
+    "moral_set": [
+      "timely help earns lasting loyalty"
+    ],
+    "fables": [
+      "fable_tf1_00000",
+      "fable_tf1_00001",
+      "fable_tf1_00002",
+      "fable_tf1_00003",
+      "fable_tf1_00004",
+      "fable_tf1_00005",
+      "fable_tf1_00006",
+      "fable_tf1_00007",
+      "fable_tf1_00008",
+      "fable_tf1_00009"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_013",
+    "type": "singleton",
+    "moral_set": [
+      "cooperation wards off threats"
+    ],
+    "fables": [
+      "fable_tf1_00020",
+      "fable_tf1_00021",
+      "fable_tf1_00022",
+      "fable_tf1_00023",
+      "fable_tf1_00024",
+      "fable_tf1_00025",
+      "fable_tf1_00026",
+      "fable_tf1_00027",
+      "fable_tf1_00028",
+      "fable_tf1_00029"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_014",
+    "type": "singleton",
+    "moral_set": [
+      "a watchful eye prevents betrayal"
+    ],
+    "fables": [
+      "fable_tf1_00030",
+      "fable_tf1_00031",
+      "fable_tf1_00032",
+      "fable_tf1_00033",
+      "fable_tf1_00034",
+      "fable_tf1_00035",
+      "fable_tf1_00036",
+      "fable_tf1_00037",
+      "fable_tf1_00038",
+      "fable_tf1_00039"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_015",
+    "type": "singleton",
+    "moral_set": [
+      "reflection sparks growth"
+    ],
+    "fables": [
+      "fable_tf1_00040",
+      "fable_tf1_00041",
+      "fable_tf1_00042",
+      "fable_tf1_00043",
+      "fable_tf1_00044",
+      "fable_tf1_00045",
+      "fable_tf1_00046",
+      "fable_tf1_00047",
+      "fable_tf1_00048",
+      "fable_tf1_00049"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_016",
+    "type": "singleton",
+    "moral_set": [
+      "forgiveness brings healing"
+    ],
+    "fables": [
+      "fable_tf1_00050",
+      "fable_tf1_00051",
+      "fable_tf1_00052",
+      "fable_tf1_00053",
+      "fable_tf1_00054",
+      "fable_tf1_00055",
+      "fable_tf1_00056",
+      "fable_tf1_00057",
+      "fable_tf1_00058",
+      "fable_tf1_00059"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_017",
+    "type": "singleton",
+    "moral_set": [
+      "arrogance is self-defeating"
+    ],
+    "fables": [
+      "fable_tf1_00080",
+      "fable_tf1_00081",
+      "fable_tf1_00082",
+      "fable_tf1_00083",
+      "fable_tf1_00084",
+      "fable_tf1_00085",
+      "fable_tf1_00086",
+      "fable_tf1_00087",
+      "fable_tf1_00088",
+      "fable_tf1_00089"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_018",
+    "type": "singleton",
+    "moral_set": [
+      "patience leads to success"
+    ],
+    "fables": [
+      "fable_tf1_00100",
+      "fable_tf1_00101",
+      "fable_tf1_00102",
+      "fable_tf1_00103",
+      "fable_tf1_00104",
+      "fable_tf1_00105",
+      "fable_tf1_00106",
+      "fable_tf1_00107",
+      "fable_tf1_00108",
+      "fable_tf1_00109"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_019",
+    "type": "singleton",
+    "moral_set": [
+      "courage opens new paths"
+    ],
+    "fables": [
+      "fable_tf1_00110",
+      "fable_tf1_00111",
+      "fable_tf1_00112",
+      "fable_tf1_00113",
+      "fable_tf1_00114",
+      "fable_tf1_00115",
+      "fable_tf1_00116",
+      "fable_tf1_00117",
+      "fable_tf1_00118",
+      "fable_tf1_00119"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_020",
+    "type": "singleton",
+    "moral_set": [
+      "wise counsel lights the way"
+    ],
+    "fables": [
+      "fable_tf1_00120",
+      "fable_tf1_00121",
+      "fable_tf1_00122",
+      "fable_tf1_00123",
+      "fable_tf1_00124",
+      "fable_tf1_00125",
+      "fable_tf1_00126",
+      "fable_tf1_00127",
+      "fable_tf1_00128",
+      "fable_tf1_00129"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_021",
+    "type": "singleton",
+    "moral_set": [
+      "the truth surfaces eventually"
+    ],
+    "fables": [
+      "fable_tf1_00190",
+      "fable_tf1_00191",
+      "fable_tf1_00192",
+      "fable_tf1_00193",
+      "fable_tf1_00194",
+      "fable_tf1_00195",
+      "fable_tf1_00196",
+      "fable_tf1_00197",
+      "fable_tf1_00198",
+      "fable_tf1_00199"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_022",
+    "type": "singleton",
+    "moral_set": [
+      "regret teaches humility"
+    ],
+    "fables": [
+      "fable_tf1_00200",
+      "fable_tf1_00201",
+      "fable_tf1_00202",
+      "fable_tf1_00203",
+      "fable_tf1_00204",
+      "fable_tf1_00205",
+      "fable_tf1_00206",
+      "fable_tf1_00207",
+      "fable_tf1_00208",
+      "fable_tf1_00209"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_023",
+    "type": "singleton",
+    "moral_set": [
+      "a kind heart finds friends"
+    ],
+    "fables": [
+      "fable_tf1_00210",
+      "fable_tf1_00211",
+      "fable_tf1_00212",
+      "fable_tf1_00213",
+      "fable_tf1_00214",
+      "fable_tf1_00215",
+      "fable_tf1_00216",
+      "fable_tf1_00217",
+      "fable_tf1_00218",
+      "fable_tf1_00219"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_024",
+    "type": "singleton",
+    "moral_set": [
+      "reliability fosters trust"
+    ],
+    "fables": [
+      "fable_tf1_00230",
+      "fable_tf1_00231",
+      "fable_tf1_00232",
+      "fable_tf1_00233",
+      "fable_tf1_00234",
+      "fable_tf1_00235",
+      "fable_tf1_00236",
+      "fable_tf1_00237",
+      "fable_tf1_00238",
+      "fable_tf1_00239"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_025",
+    "type": "singleton",
+    "moral_set": [
+      "compassion fosters understanding"
+    ],
+    "fables": [
+      "fable_tf1_00240",
+      "fable_tf1_00241",
+      "fable_tf1_00242",
+      "fable_tf1_00243",
+      "fable_tf1_00244",
+      "fable_tf1_00245",
+      "fable_tf1_00246",
+      "fable_tf1_00247",
+      "fable_tf1_00248",
+      "fable_tf1_00249"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_026",
+    "type": "singleton",
+    "moral_set": [
+      "wise actions speak louder than boasts"
+    ],
+    "fables": [
+      "fable_tf1_00250",
+      "fable_tf1_00251",
+      "fable_tf1_00252",
+      "fable_tf1_00253",
+      "fable_tf1_00254",
+      "fable_tf1_00255",
+      "fable_tf1_00256",
+      "fable_tf1_00257",
+      "fable_tf1_00258",
+      "fable_tf1_00259"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_027",
+    "type": "singleton",
+    "moral_set": [
+      "sincerity dispels suspicion"
+    ],
+    "fables": [
+      "fable_tf1_00260",
+      "fable_tf1_00261",
+      "fable_tf1_00262",
+      "fable_tf1_00263",
+      "fable_tf1_00264",
+      "fable_tf1_00265",
+      "fable_tf1_00266",
+      "fable_tf1_00267",
+      "fable_tf1_00268",
+      "fable_tf1_00269"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_028",
+    "type": "singleton",
+    "moral_set": [
+      "hopes can unite hearts"
+    ],
+    "fables": [
+      "fable_tf1_00300",
+      "fable_tf1_00301",
+      "fable_tf1_00302",
+      "fable_tf1_00303",
+      "fable_tf1_00304",
+      "fable_tf1_00305",
+      "fable_tf1_00306",
+      "fable_tf1_00307",
+      "fable_tf1_00308",
+      "fable_tf1_00309"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_029",
+    "type": "singleton",
+    "moral_set": [
+      "a bright mind sees beyond illusions"
+    ],
+    "fables": [
+      "fable_tf1_00310",
+      "fable_tf1_00311",
+      "fable_tf1_00312",
+      "fable_tf1_00313",
+      "fable_tf1_00314",
+      "fable_tf1_00315",
+      "fable_tf1_00316",
+      "fable_tf1_00317",
+      "fable_tf1_00318",
+      "fable_tf1_00319"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_030",
+    "type": "singleton",
+    "moral_set": [
+      "listening brings wisdom"
+    ],
+    "fables": [
+      "fable_tf1_00320",
+      "fable_tf1_00321",
+      "fable_tf1_00322",
+      "fable_tf1_00323",
+      "fable_tf1_00324",
+      "fable_tf1_00325",
+      "fable_tf1_00326",
+      "fable_tf1_00327",
+      "fable_tf1_00328",
+      "fable_tf1_00329"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_031",
+    "type": "singleton",
+    "moral_set": [
+      "truth stands the test of time"
+    ],
+    "fables": [
+      "fable_tf1_00330",
+      "fable_tf1_00331",
+      "fable_tf1_00332",
+      "fable_tf1_00333",
+      "fable_tf1_00334",
+      "fable_tf1_00335",
+      "fable_tf1_00336",
+      "fable_tf1_00337",
+      "fable_tf1_00338",
+      "fable_tf1_00339"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_032",
+    "type": "singleton",
+    "moral_set": [
+      "watchfulness prevents disaster"
+    ],
+    "fables": [
+      "fable_tf1_00340",
+      "fable_tf1_00341",
+      "fable_tf1_00342",
+      "fable_tf1_00343",
+      "fable_tf1_00344",
+      "fable_tf1_00345",
+      "fable_tf1_00346",
+      "fable_tf1_00347",
+      "fable_tf1_00348",
+      "fable_tf1_00349"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_033",
+    "type": "singleton",
+    "moral_set": [
+      "mistakes are stepping stones"
+    ],
+    "fables": [
+      "fable_tf1_00350",
+      "fable_tf1_00351",
+      "fable_tf1_00352",
+      "fable_tf1_00353",
+      "fable_tf1_00354",
+      "fable_tf1_00355",
+      "fable_tf1_00356",
+      "fable_tf1_00357",
+      "fable_tf1_00358",
+      "fable_tf1_00359"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_034",
+    "type": "singleton",
+    "moral_set": [
+      "love conquers fear"
+    ],
+    "fables": [
+      "fable_tf1_00360",
+      "fable_tf1_00361",
+      "fable_tf1_00362",
+      "fable_tf1_00363",
+      "fable_tf1_00364",
+      "fable_tf1_00365",
+      "fable_tf1_00366",
+      "fable_tf1_00367",
+      "fable_tf1_00368",
+      "fable_tf1_00369"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_035",
+    "type": "singleton",
+    "moral_set": [
+      "friendship can overcome obstacles"
+    ],
+    "fables": [
+      "fable_tf1_00370",
+      "fable_tf1_00371",
+      "fable_tf1_00372",
+      "fable_tf1_00373",
+      "fable_tf1_00374",
+      "fable_tf1_00375",
+      "fable_tf1_00376",
+      "fable_tf1_00377",
+      "fable_tf1_00378",
+      "fable_tf1_00379"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_036",
+    "type": "singleton",
+    "moral_set": [
+      "compassion reveals hidden beauty"
+    ],
+    "fables": [
+      "fable_tf1_00380",
+      "fable_tf1_00381",
+      "fable_tf1_00382",
+      "fable_tf1_00383",
+      "fable_tf1_00384",
+      "fable_tf1_00385",
+      "fable_tf1_00386",
+      "fable_tf1_00387",
+      "fable_tf1_00388",
+      "fable_tf1_00389"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_037",
+    "type": "singleton",
+    "moral_set": [
+      "the golden rule prevails"
+    ],
+    "fables": [
+      "fable_tf1_00400",
+      "fable_tf1_00401",
+      "fable_tf1_00402",
+      "fable_tf1_00403",
+      "fable_tf1_00404",
+      "fable_tf1_00405",
+      "fable_tf1_00406",
+      "fable_tf1_00407",
+      "fable_tf1_00408",
+      "fable_tf1_00409"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_038",
+    "type": "singleton",
+    "moral_set": [
+      "cleverness must be guided by conscience"
+    ],
+    "fables": [
+      "fable_tf1_00410",
+      "fable_tf1_00411",
+      "fable_tf1_00412",
+      "fable_tf1_00413",
+      "fable_tf1_00414",
+      "fable_tf1_00415",
+      "fable_tf1_00416",
+      "fable_tf1_00417",
+      "fable_tf1_00418",
+      "fable_tf1_00419"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_039",
+    "type": "singleton",
+    "moral_set": [
+      "illusions are shattered by reality"
+    ],
+    "fables": [
+      "fable_tf1_00430",
+      "fable_tf1_00431",
+      "fable_tf1_00432",
+      "fable_tf1_00433",
+      "fable_tf1_00434",
+      "fable_tf1_00435",
+      "fable_tf1_00436",
+      "fable_tf1_00437",
+      "fable_tf1_00438",
+      "fable_tf1_00439"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_040",
+    "type": "singleton",
+    "moral_set": [
+      "learning never ends"
+    ],
+    "fables": [
+      "fable_tf1_00440",
+      "fable_tf1_00441",
+      "fable_tf1_00442",
+      "fable_tf1_00443",
+      "fable_tf1_00444",
+      "fable_tf1_00445",
+      "fable_tf1_00446",
+      "fable_tf1_00447",
+      "fable_tf1_00448",
+      "fable_tf1_00449"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_041",
+    "type": "singleton",
+    "moral_set": [
+      "trust must be earned, not demanded"
+    ],
+    "fables": [
+      "fable_tf1_00450",
+      "fable_tf1_00451",
+      "fable_tf1_00452",
+      "fable_tf1_00453",
+      "fable_tf1_00454",
+      "fable_tf1_00455",
+      "fable_tf1_00456",
+      "fable_tf1_00457",
+      "fable_tf1_00458",
+      "fable_tf1_00459"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_042",
+    "type": "singleton",
+    "moral_set": [
+      "envy poisons happiness"
+    ],
+    "fables": [
+      "fable_tf1_00480",
+      "fable_tf1_00481",
+      "fable_tf1_00482",
+      "fable_tf1_00483",
+      "fable_tf1_00484",
+      "fable_tf1_00485",
+      "fable_tf1_00486",
+      "fable_tf1_00487",
+      "fable_tf1_00488",
+      "fable_tf1_00489"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_043",
+    "type": "singleton",
+    "moral_set": [
+      "rashness leads to regret"
+    ],
+    "fables": [
+      "fable_tf1_00490",
+      "fable_tf1_00491",
+      "fable_tf1_00492",
+      "fable_tf1_00493",
+      "fable_tf1_00494",
+      "fable_tf1_00495",
+      "fable_tf1_00496",
+      "fable_tf1_00497",
+      "fable_tf1_00498",
+      "fable_tf1_00499"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_044",
+    "type": "singleton",
+    "moral_set": [
+      "a humble spirit learns faster"
+    ],
+    "fables": [
+      "fable_tf1_00500",
+      "fable_tf1_00501",
+      "fable_tf1_00502",
+      "fable_tf1_00503",
+      "fable_tf1_00504",
+      "fable_tf1_00505",
+      "fable_tf1_00506",
+      "fable_tf1_00507",
+      "fable_tf1_00508",
+      "fable_tf1_00509"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_045",
+    "type": "singleton",
+    "moral_set": [
+      "fear limits growth"
+    ],
+    "fables": [
+      "fable_tf1_00510",
+      "fable_tf1_00511",
+      "fable_tf1_00512",
+      "fable_tf1_00513",
+      "fable_tf1_00514",
+      "fable_tf1_00515",
+      "fable_tf1_00516",
+      "fable_tf1_00517",
+      "fable_tf1_00518",
+      "fable_tf1_00519"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_046",
+    "type": "singleton",
+    "moral_set": [
+      "every challenge is a lesson"
+    ],
+    "fables": [
+      "fable_tf1_00520",
+      "fable_tf1_00521",
+      "fable_tf1_00522",
+      "fable_tf1_00523",
+      "fable_tf1_00524",
+      "fable_tf1_00525",
+      "fable_tf1_00526",
+      "fable_tf1_00527",
+      "fable_tf1_00528",
+      "fable_tf1_00529"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_047",
+    "type": "singleton",
+    "moral_set": [
+      "honesty outlives deceit"
+    ],
+    "fables": [
+      "fable_tf1_00540",
+      "fable_tf1_00541",
+      "fable_tf1_00542",
+      "fable_tf1_00543",
+      "fable_tf1_00544",
+      "fable_tf1_00545",
+      "fable_tf1_00546",
+      "fable_tf1_00547",
+      "fable_tf1_00548",
+      "fable_tf1_00549"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_048",
+    "type": "singleton",
+    "moral_set": [
+      "bravery arises from compassion"
+    ],
+    "fables": [
+      "fable_tf1_00550",
+      "fable_tf1_00551",
+      "fable_tf1_00552",
+      "fable_tf1_00553",
+      "fable_tf1_00554",
+      "fable_tf1_00555",
+      "fable_tf1_00556",
+      "fable_tf1_00557",
+      "fable_tf1_00558",
+      "fable_tf1_00559"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_049",
+    "type": "singleton",
+    "moral_set": [
+      "perspective can change the outcome"
+    ],
+    "fables": [
+      "fable_tf1_00560",
+      "fable_tf1_00561",
+      "fable_tf1_00562",
+      "fable_tf1_00563",
+      "fable_tf1_00564",
+      "fable_tf1_00565",
+      "fable_tf1_00566",
+      "fable_tf1_00567",
+      "fable_tf1_00568",
+      "fable_tf1_00569"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_050",
+    "type": "singleton",
+    "moral_set": [
+      "tolerance fosters peace"
+    ],
+    "fables": [
+      "fable_tf1_00580",
+      "fable_tf1_00581",
+      "fable_tf1_00582",
+      "fable_tf1_00583",
+      "fable_tf1_00584",
+      "fable_tf1_00585",
+      "fable_tf1_00586",
+      "fable_tf1_00587",
+      "fable_tf1_00588",
+      "fable_tf1_00589"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_051",
+    "type": "singleton",
+    "moral_set": [
+      "truths heal deep wounds"
+    ],
+    "fables": [
+      "fable_tf1_00590",
+      "fable_tf1_00591",
+      "fable_tf1_00592",
+      "fable_tf1_00593",
+      "fable_tf1_00594",
+      "fable_tf1_00595",
+      "fable_tf1_00596",
+      "fable_tf1_00597",
+      "fable_tf1_00598",
+      "fable_tf1_00599"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_052",
+    "type": "singleton",
+    "moral_set": [
+      "justice serves all"
+    ],
+    "fables": [
+      "fable_tf1_00610",
+      "fable_tf1_00611",
+      "fable_tf1_00612",
+      "fable_tf1_00613",
+      "fable_tf1_00614",
+      "fable_tf1_00615",
+      "fable_tf1_00616",
+      "fable_tf1_00617",
+      "fable_tf1_00618",
+      "fable_tf1_00619"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_053",
+    "type": "singleton",
+    "moral_set": [
+      "justice balances power"
+    ],
+    "fables": [
+      "fable_tf1_00620",
+      "fable_tf1_00621",
+      "fable_tf1_00622",
+      "fable_tf1_00623",
+      "fable_tf1_00624",
+      "fable_tf1_00625",
+      "fable_tf1_00626",
+      "fable_tf1_00627",
+      "fable_tf1_00628",
+      "fable_tf1_00629"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_054",
+    "type": "singleton",
+    "moral_set": [
+      "greed leads to downfall"
+    ],
+    "fables": [
+      "fable_tf1_00630",
+      "fable_tf1_00631",
+      "fable_tf1_00632",
+      "fable_tf1_00633",
+      "fable_tf1_00634",
+      "fable_tf1_00635",
+      "fable_tf1_00636",
+      "fable_tf1_00637",
+      "fable_tf1_00638",
+      "fable_tf1_00639"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_055",
+    "type": "singleton",
+    "moral_set": [
+      "persistence finds solutions"
+    ],
+    "fables": [
+      "fable_tf1_00640",
+      "fable_tf1_00641",
+      "fable_tf1_00642",
+      "fable_tf1_00643",
+      "fable_tf1_00644",
+      "fable_tf1_00645",
+      "fable_tf1_00646",
+      "fable_tf1_00647",
+      "fable_tf1_00648",
+      "fable_tf1_00649"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_056",
+    "type": "singleton",
+    "moral_set": [
+      "teamwork amplifies success"
+    ],
+    "fables": [
+      "fable_tf1_00650",
+      "fable_tf1_00651",
+      "fable_tf1_00652",
+      "fable_tf1_00653",
+      "fable_tf1_00654",
+      "fable_tf1_00655",
+      "fable_tf1_00656",
+      "fable_tf1_00657",
+      "fable_tf1_00658",
+      "fable_tf1_00659"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_057",
+    "type": "singleton",
+    "moral_set": [
+      "pride blinds one to danger"
+    ],
+    "fables": [
+      "fable_tf1_00680",
+      "fable_tf1_00681",
+      "fable_tf1_00682",
+      "fable_tf1_00683",
+      "fable_tf1_00684",
+      "fable_tf1_00685",
+      "fable_tf1_00686",
+      "fable_tf1_00687",
+      "fable_tf1_00688",
+      "fable_tf1_00689"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_058",
+    "type": "singleton",
+    "moral_set": [
+      "loyalty is proven through deeds"
+    ],
+    "fables": [
+      "fable_tf1_00700",
+      "fable_tf1_00701",
+      "fable_tf1_00702",
+      "fable_tf1_00703",
+      "fable_tf1_00704",
+      "fable_tf1_00705",
+      "fable_tf1_00706",
+      "fable_tf1_00707",
+      "fable_tf1_00708",
+      "fable_tf1_00709"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_059",
+    "type": "singleton",
+    "moral_set": [
+      "modesty preserves dignity"
+    ],
+    "fables": [
+      "fable_tf1_00720",
+      "fable_tf1_00721",
+      "fable_tf1_00722",
+      "fable_tf1_00723",
+      "fable_tf1_00724",
+      "fable_tf1_00725",
+      "fable_tf1_00726",
+      "fable_tf1_00727",
+      "fable_tf1_00728",
+      "fable_tf1_00729"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_060",
+    "type": "singleton",
+    "moral_set": [
+      "fairness promotes harmony"
+    ],
+    "fables": [
+      "fable_tf1_00730",
+      "fable_tf1_00731",
+      "fable_tf1_00732",
+      "fable_tf1_00733",
+      "fable_tf1_00734",
+      "fable_tf1_00735",
+      "fable_tf1_00736",
+      "fable_tf1_00737",
+      "fable_tf1_00738",
+      "fable_tf1_00739"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_061",
+    "type": "singleton",
+    "moral_set": [
+      "gratitude keeps the heart humble"
+    ],
+    "fables": [
+      "fable_tf1_00740",
+      "fable_tf1_00741",
+      "fable_tf1_00742",
+      "fable_tf1_00743",
+      "fable_tf1_00744",
+      "fable_tf1_00745",
+      "fable_tf1_00746",
+      "fable_tf1_00747",
+      "fable_tf1_00748",
+      "fable_tf1_00749"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_062",
+    "type": "singleton",
+    "moral_set": [
+      "oppression cannot silence truth"
+    ],
+    "fables": [
+      "fable_tf1_00750",
+      "fable_tf1_00751",
+      "fable_tf1_00752",
+      "fable_tf1_00753",
+      "fable_tf1_00754",
+      "fable_tf1_00755",
+      "fable_tf1_00756",
+      "fable_tf1_00757",
+      "fable_tf1_00758",
+      "fable_tf1_00759"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_063",
+    "type": "singleton",
+    "moral_set": [
+      "reflection clarifies confusion"
+    ],
+    "fables": [
+      "fable_tf1_00770",
+      "fable_tf1_00771",
+      "fable_tf1_00772",
+      "fable_tf1_00773",
+      "fable_tf1_00774",
+      "fable_tf1_00775",
+      "fable_tf1_00776",
+      "fable_tf1_00777",
+      "fable_tf1_00778",
+      "fable_tf1_00779"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_064",
+    "type": "singleton",
+    "moral_set": [
+      "resilience shapes the future"
+    ],
+    "fables": [
+      "fable_tf1_00780",
+      "fable_tf1_00781",
+      "fable_tf1_00782",
+      "fable_tf1_00783",
+      "fable_tf1_00784",
+      "fable_tf1_00785",
+      "fable_tf1_00786",
+      "fable_tf1_00787",
+      "fable_tf1_00788",
+      "fable_tf1_00789"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_065",
+    "type": "singleton",
+    "moral_set": [
+      "honesty is the best policy"
+    ],
+    "fables": [
+      "fable_tf1_00800",
+      "fable_tf1_00801",
+      "fable_tf1_00802",
+      "fable_tf1_00803",
+      "fable_tf1_00804",
+      "fable_tf1_00805",
+      "fable_tf1_00806",
+      "fable_tf1_00807",
+      "fable_tf1_00808",
+      "fable_tf1_00809"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_066",
+    "type": "singleton",
+    "moral_set": [
+      "oppression sows rebellion"
+    ],
+    "fables": [
+      "fable_tf1_00810",
+      "fable_tf1_00811",
+      "fable_tf1_00812",
+      "fable_tf1_00813",
+      "fable_tf1_00814",
+      "fable_tf1_00815",
+      "fable_tf1_00816",
+      "fable_tf1_00817",
+      "fable_tf1_00818",
+      "fable_tf1_00819"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_067",
+    "type": "singleton",
+    "moral_set": [
+      "open-mindedness prevents conflict"
+    ],
+    "fables": [
+      "fable_tf1_00850",
+      "fable_tf1_00851",
+      "fable_tf1_00852",
+      "fable_tf1_00853",
+      "fable_tf1_00854",
+      "fable_tf1_00855",
+      "fable_tf1_00856",
+      "fable_tf1_00857",
+      "fable_tf1_00858",
+      "fable_tf1_00859"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_068",
+    "type": "singleton",
+    "moral_set": [
+      "unity is stronger than division"
+    ],
+    "fables": [
+      "fable_tf1_00860",
+      "fable_tf1_00861",
+      "fable_tf1_00862",
+      "fable_tf1_00863",
+      "fable_tf1_00864",
+      "fable_tf1_00865",
+      "fable_tf1_00866",
+      "fable_tf1_00867",
+      "fable_tf1_00868",
+      "fable_tf1_00869"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_069",
+    "type": "singleton",
+    "moral_set": [
+      "caring for others is caring for oneself"
+    ],
+    "fables": [
+      "fable_tf1_00870",
+      "fable_tf1_00871",
+      "fable_tf1_00872",
+      "fable_tf1_00873",
+      "fable_tf1_00874",
+      "fable_tf1_00875",
+      "fable_tf1_00876",
+      "fable_tf1_00877",
+      "fable_tf1_00878",
+      "fable_tf1_00879"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_070",
+    "type": "singleton",
+    "moral_set": [
+      "creativity solves problems"
+    ],
+    "fables": [
+      "fable_tf1_00890",
+      "fable_tf1_00891",
+      "fable_tf1_00892",
+      "fable_tf1_00893",
+      "fable_tf1_00894",
+      "fable_tf1_00895",
+      "fable_tf1_00896",
+      "fable_tf1_00897",
+      "fable_tf1_00898",
+      "fable_tf1_00899"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_071",
+    "type": "singleton",
+    "moral_set": [
+      "giving fosters joy"
+    ],
+    "fables": [
+      "fable_tf1_00900",
+      "fable_tf1_00901",
+      "fable_tf1_00902",
+      "fable_tf1_00903",
+      "fable_tf1_00904",
+      "fable_tf1_00905",
+      "fable_tf1_00906",
+      "fable_tf1_00907",
+      "fable_tf1_00908",
+      "fable_tf1_00909"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_072",
+    "type": "singleton",
+    "moral_set": [
+      "true strength lies in protecting others"
+    ],
+    "fables": [
+      "fable_tf1_00910",
+      "fable_tf1_00911",
+      "fable_tf1_00912",
+      "fable_tf1_00913",
+      "fable_tf1_00914",
+      "fable_tf1_00915",
+      "fable_tf1_00916",
+      "fable_tf1_00917",
+      "fable_tf1_00918",
+      "fable_tf1_00919"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_073",
+    "type": "singleton",
+    "moral_set": [
+      "one good turn deserves another"
+    ],
+    "fables": [
+      "fable_tf1_00920",
+      "fable_tf1_00921",
+      "fable_tf1_00922",
+      "fable_tf1_00923",
+      "fable_tf1_00924",
+      "fable_tf1_00925",
+      "fable_tf1_00926",
+      "fable_tf1_00927",
+      "fable_tf1_00928",
+      "fable_tf1_00929"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_074",
+    "type": "singleton",
+    "moral_set": [
+      "wisdom grows from mistakes"
+    ],
+    "fables": [
+      "fable_tf1_00930",
+      "fable_tf1_00931",
+      "fable_tf1_00932",
+      "fable_tf1_00933",
+      "fable_tf1_00934",
+      "fable_tf1_00935",
+      "fable_tf1_00936",
+      "fable_tf1_00937",
+      "fable_tf1_00938",
+      "fable_tf1_00939"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_075",
+    "type": "singleton",
+    "moral_set": [
+      "gratitude nurtures relationships"
+    ],
+    "fables": [
+      "fable_tf1_00960",
+      "fable_tf1_00961",
+      "fable_tf1_00962",
+      "fable_tf1_00963",
+      "fable_tf1_00964",
+      "fable_tf1_00965",
+      "fable_tf1_00966",
+      "fable_tf1_00967",
+      "fable_tf1_00968",
+      "fable_tf1_00969"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_076",
+    "type": "singleton",
+    "moral_set": [
+      "appearances can be deceiving"
+    ],
+    "fables": [
+      "fable_tf1_00970",
+      "fable_tf1_00971",
+      "fable_tf1_00972",
+      "fable_tf1_00973",
+      "fable_tf1_00974",
+      "fable_tf1_00975",
+      "fable_tf1_00976",
+      "fable_tf1_00977",
+      "fable_tf1_00978",
+      "fable_tf1_00979"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  },
+  {
+    "cluster_id": "cluster_077",
+    "type": "singleton",
+    "moral_set": [
+      "integrity defines character"
+    ],
+    "fables": [
+      "fable_tf1_00990",
+      "fable_tf1_00991",
+      "fable_tf1_00992",
+      "fable_tf1_00993",
+      "fable_tf1_00994",
+      "fable_tf1_00995",
+      "fable_tf1_00996",
+      "fable_tf1_00997",
+      "fable_tf1_00998",
+      "fable_tf1_00999"
+    ],
+    "n_morals": 1,
+    "n_fables": 10
+  }
+]
