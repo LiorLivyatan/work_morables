@@ -177,10 +177,13 @@ def test_run_build_fails_on_wrong_unique_moral_count(tmp_path):
         run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=99)
 
 
-def test_run_build_fails_on_duplicate_prompt_hash(tmp_path):
+def test_run_build_deduplicates_on_duplicate_prompt_hash(tmp_path):
+    # 5 rows all sharing the same prompt_hash (as produced by multi-chunk sampling).
+    # After dedup only 1 unique row remains, which is fewer than n=2, so the build
+    # should fail with a "not enough rows" error — proving duplicates are removed.
     samples = [{"idx": i, "chunk": 0, "prompt_hash": "DUP", "moral": "M", "fable": "f"}
                for i in range(5)]
     p = tmp_path / "s.jsonl"
     p.write_text("\n".join(json.dumps(r) for r in samples))
-    with pytest.raises(ValueError, match="duplicate prompt_hash"):
+    with pytest.raises(ValueError, match="only 1 cached rows"):
         run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=1)

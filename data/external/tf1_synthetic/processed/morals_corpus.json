@@ -1,0 +1,402 @@
+[
+  {
+    "doc_id": "moral_tf1_000",
+    "text": "timely help earns lasting loyalty"
+  },
+  {
+    "doc_id": "moral_tf1_001",
+    "text": "generosity overcomes envy"
+  },
+  {
+    "doc_id": "moral_tf1_002",
+    "text": "cooperation wards off threats"
+  },
+  {
+    "doc_id": "moral_tf1_003",
+    "text": "a watchful eye prevents betrayal"
+  },
+  {
+    "doc_id": "moral_tf1_004",
+    "text": "reflection sparks growth"
+  },
+  {
+    "doc_id": "moral_tf1_005",
+    "text": "forgiveness brings healing"
+  },
+  {
+    "doc_id": "moral_tf1_006",
+    "text": "ignorance breeds conflict"
+  },
+  {
+    "doc_id": "moral_tf1_007",
+    "text": "harmony emerges from balance"
+  },
+  {
+    "doc_id": "moral_tf1_008",
+    "text": "arrogance is self-defeating"
+  },
+  {
+    "doc_id": "moral_tf1_009",
+    "text": "acceptance fosters cooperation"
+  },
+  {
+    "doc_id": "moral_tf1_010",
+    "text": "patience leads to success"
+  },
+  {
+    "doc_id": "moral_tf1_011",
+    "text": "courage opens new paths"
+  },
+  {
+    "doc_id": "moral_tf1_012",
+    "text": "wise counsel lights the way"
+  },
+  {
+    "doc_id": "moral_tf1_013",
+    "text": "knowledge outlives ignorance"
+  },
+  {
+    "doc_id": "moral_tf1_014",
+    "text": "sharing knowledge empowers all"
+  },
+  {
+    "doc_id": "moral_tf1_015",
+    "text": "acceptance of flaws leads to harmony"
+  },
+  {
+    "doc_id": "moral_tf1_016",
+    "text": "sharing benefits everyone"
+  },
+  {
+    "doc_id": "moral_tf1_017",
+    "text": "empathy bridges differences"
+  },
+  {
+    "doc_id": "moral_tf1_018",
+    "text": "humility paves the path to wisdom"
+  },
+  {
+    "doc_id": "moral_tf1_019",
+    "text": "the truth surfaces eventually"
+  },
+  {
+    "doc_id": "moral_tf1_020",
+    "text": "regret teaches humility"
+  },
+  {
+    "doc_id": "moral_tf1_021",
+    "text": "a kind heart finds friends"
+  },
+  {
+    "doc_id": "moral_tf1_022",
+    "text": "a small act of kindness can make a big difference"
+  },
+  {
+    "doc_id": "moral_tf1_023",
+    "text": "reliability fosters trust"
+  },
+  {
+    "doc_id": "moral_tf1_024",
+    "text": "compassion fosters understanding"
+  },
+  {
+    "doc_id": "moral_tf1_025",
+    "text": "wise actions speak louder than boasts"
+  },
+  {
+    "doc_id": "moral_tf1_026",
+    "text": "sincerity dispels suspicion"
+  },
+  {
+    "doc_id": "moral_tf1_027",
+    "text": "second chances reveal new paths"
+  },
+  {
+    "doc_id": "moral_tf1_028",
+    "text": "respect is mutual"
+  },
+  {
+    "doc_id": "moral_tf1_029",
+    "text": "acceptance leads to unity"
+  },
+  {
+    "doc_id": "moral_tf1_030",
+    "text": "hopes can unite hearts"
+  },
+  {
+    "doc_id": "moral_tf1_031",
+    "text": "a bright mind sees beyond illusions"
+  },
+  {
+    "doc_id": "moral_tf1_032",
+    "text": "listening brings wisdom"
+  },
+  {
+    "doc_id": "moral_tf1_033",
+    "text": "truth stands the test of time"
+  },
+  {
+    "doc_id": "moral_tf1_034",
+    "text": "watchfulness prevents disaster"
+  },
+  {
+    "doc_id": "moral_tf1_035",
+    "text": "mistakes are stepping stones"
+  },
+  {
+    "doc_id": "moral_tf1_036",
+    "text": "love conquers fear"
+  },
+  {
+    "doc_id": "moral_tf1_037",
+    "text": "friendship can overcome obstacles"
+  },
+  {
+    "doc_id": "moral_tf1_038",
+    "text": "compassion reveals hidden beauty"
+  },
+  {
+    "doc_id": "moral_tf1_039",
+    "text": "sincerity builds strong bonds"
+  },
+  {
+    "doc_id": "moral_tf1_040",
+    "text": "the golden rule prevails"
+  },
+  {
+    "doc_id": "moral_tf1_041",
+    "text": "cleverness must be guided by conscience"
+  },
+  {
+    "doc_id": "moral_tf1_042",
+    "text": "courtesy reflects character"
+  },
+  {
+    "doc_id": "moral_tf1_043",
+    "text": "illusions are shattered by reality"
+  },
+  {
+    "doc_id": "moral_tf1_044",
+    "text": "learning never ends"
+  },
+  {
+    "doc_id": "moral_tf1_045",
+    "text": "trust must be earned, not demanded"
+  },
+  {
+    "doc_id": "moral_tf1_046",
+    "text": "second chances can rewrite destinies"
+  },
+  {
+    "doc_id": "moral_tf1_047",
+    "text": "kindness transcends boundaries"
+  },
+  {
+    "doc_id": "moral_tf1_048",
+    "text": "envy poisons happiness"
+  },
+  {
+    "doc_id": "moral_tf1_049",
+    "text": "rashness leads to regret"
+  },
+  {
+    "doc_id": "moral_tf1_050",
+    "text": "a humble spirit learns faster"
+  },
+  {
+    "doc_id": "moral_tf1_051",
+    "text": "fear limits growth"
+  },
+  {
+    "doc_id": "moral_tf1_052",
+    "text": "every challenge is a lesson"
+  },
+  {
+    "doc_id": "moral_tf1_053",
+    "text": "generosity enriches the giver"
+  },
+  {
+    "doc_id": "moral_tf1_054",
+    "text": "honesty outlives deceit"
+  },
+  {
+    "doc_id": "moral_tf1_055",
+    "text": "bravery arises from compassion"
+  },
+  {
+    "doc_id": "moral_tf1_056",
+    "text": "perspective can change the outcome"
+  },
+  {
+    "doc_id": "moral_tf1_057",
+    "text": "honesty invites respect"
+  },
+  {
+    "doc_id": "moral_tf1_058",
+    "text": "tolerance fosters peace"
+  },
+  {
+    "doc_id": "moral_tf1_059",
+    "text": "truths heal deep wounds"
+  },
+  {
+    "doc_id": "moral_tf1_060",
+    "text": "generosity quells greed"
+  },
+  {
+    "doc_id": "moral_tf1_061",
+    "text": "justice serves all"
+  },
+  {
+    "doc_id": "moral_tf1_062",
+    "text": "justice balances power"
+  },
+  {
+    "doc_id": "moral_tf1_063",
+    "text": "greed leads to downfall"
+  },
+  {
+    "doc_id": "moral_tf1_064",
+    "text": "persistence finds solutions"
+  },
+  {
+    "doc_id": "moral_tf1_065",
+    "text": "teamwork amplifies success"
+  },
+  {
+    "doc_id": "moral_tf1_066",
+    "text": "kindness is rewarded"
+  },
+  {
+    "doc_id": "moral_tf1_067",
+    "text": "empathy softens the hardest hearts"
+  },
+  {
+    "doc_id": "moral_tf1_068",
+    "text": "pride blinds one to danger"
+  },
+  {
+    "doc_id": "moral_tf1_069",
+    "text": "mildness tames fury"
+  },
+  {
+    "doc_id": "moral_tf1_070",
+    "text": "loyalty is proven through deeds"
+  },
+  {
+    "doc_id": "moral_tf1_071",
+    "text": "gentle words quell anger"
+  },
+  {
+    "doc_id": "moral_tf1_072",
+    "text": "modesty preserves dignity"
+  },
+  {
+    "doc_id": "moral_tf1_073",
+    "text": "fairness promotes harmony"
+  },
+  {
+    "doc_id": "moral_tf1_074",
+    "text": "gratitude keeps the heart humble"
+  },
+  {
+    "doc_id": "moral_tf1_075",
+    "text": "oppression cannot silence truth"
+  },
+  {
+    "doc_id": "moral_tf1_076",
+    "text": "humility earns admiration"
+  },
+  {
+    "doc_id": "moral_tf1_077",
+    "text": "reflection clarifies confusion"
+  },
+  {
+    "doc_id": "moral_tf1_078",
+    "text": "resilience shapes the future"
+  },
+  {
+    "doc_id": "moral_tf1_079",
+    "text": "perseverance breaks barriers"
+  },
+  {
+    "doc_id": "moral_tf1_080",
+    "text": "honesty is the best policy"
+  },
+  {
+    "doc_id": "moral_tf1_081",
+    "text": "oppression sows rebellion"
+  },
+  {
+    "doc_id": "moral_tf1_082",
+    "text": "selflessness inspires others"
+  },
+  {
+    "doc_id": "moral_tf1_083",
+    "text": "perseverance shapes destiny"
+  },
+  {
+    "doc_id": "moral_tf1_084",
+    "text": "sincerity invites deep bonds"
+  },
+  {
+    "doc_id": "moral_tf1_085",
+    "text": "open-mindedness prevents conflict"
+  },
+  {
+    "doc_id": "moral_tf1_086",
+    "text": "unity is stronger than division"
+  },
+  {
+    "doc_id": "moral_tf1_087",
+    "text": "caring for others is caring for oneself"
+  },
+  {
+    "doc_id": "moral_tf1_088",
+    "text": "empathy dissolves hatred"
+  },
+  {
+    "doc_id": "moral_tf1_089",
+    "text": "creativity solves problems"
+  },
+  {
+    "doc_id": "moral_tf1_090",
+    "text": "giving fosters joy"
+  },
+  {
+    "doc_id": "moral_tf1_091",
+    "text": "true strength lies in protecting others"
+  },
+  {
+    "doc_id": "moral_tf1_092",
+    "text": "one good turn deserves another"
+  },
+  {
+    "doc_id": "moral_tf1_093",
+    "text": "wisdom grows from mistakes"
+  },
+  {
+    "doc_id": "moral_tf1_094",
+    "text": "courtesy is never wasted"
+  },
+  {
+    "doc_id": "moral_tf1_095",
+    "text": "perseverance triumphs over difficulty"
+  },
+  {
+    "doc_id": "moral_tf1_096",
+    "text": "gratitude nurtures relationships"
+  },
+  {
+    "doc_id": "moral_tf1_097",
+    "text": "appearances can be deceiving"
+  },
+  {
+    "doc_id": "moral_tf1_098",
+    "text": "small deeds can spark great change"
+  },
+  {
+    "doc_id": "moral_tf1_099",
+    "text": "integrity defines character"
+  }
+]

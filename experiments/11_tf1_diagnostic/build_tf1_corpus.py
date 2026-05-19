@@ -150,6 +150,24 @@ See experiments/11_tf1_diagnostic/REPORT.md for the analysis that motivated this
     (out_dir / "README.md").write_text(readme)
 
 
+def dedup_by_prompt_hash(rows: list[dict]) -> list[dict]:
+    """Keep the first-seen row per prompt_hash.
+
+    The multi-chunk sampling in check_iou.py re-reads the same TF1 source
+    rows at different chunk offsets, producing identical (prompt_hash, fable)
+    pairs stored under different idx values.  Deduplicating here restores the
+    invariant that every fable in the corpus is unique.
+    """
+    seen: set[str] = set()
+    out: list[dict] = []
+    for r in rows:
+        h = r["prompt_hash"]
+        if h not in seen:
+            seen.add(h)
+            out.append(r)
+    return out
+
+
 def run_build(
     samples_path: Path,
     n: int,
@@ -157,7 +175,7 @@ def run_build(
     out_dir: Path,
     expected_unique_morals: int = 100,
 ) -> dict:
-    rows = _read_samples(samples_path)
+    rows = dedup_by_prompt_hash(_read_samples(samples_path))
     unique_morals = first_seen_order(rows)
     if len(unique_morals) != expected_unique_morals:
         raise ValueError(
