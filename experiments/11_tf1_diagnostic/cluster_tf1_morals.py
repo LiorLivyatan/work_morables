@@ -126,3 +126,126 @@ def build_clustered_outputs(
         "qrels_moral_to_fable_clustered.json": qrels_mtf_clustered,
         "qrels_fable_to_moral_clustered.json": qrels_ftm_clustered,
     }
+
+
+def _load_counts_from_samples(default: dict[str, int] | None = None) -> dict[str, int]:
+    """
+    Compute per-moral occurrence count from the latest samples.jsonl.
+    When `default` is given (testing path), returns it directly.
+    """
+    if default is not None:
+        return default
+    runs_root = ROOT / "experiments" / "11_tf1_diagnostic" / "results" / "runs"
+    samples = sorted(runs_root.glob("*/samples.jsonl"))
+    if not samples:
+        raise FileNotFoundError(f"No samples.jsonl under {runs_root}")
+    counts: Counter = Counter()
+    with samples[-1].open() as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            r = json.loads(line)
+            counts[r["moral"].lower().strip()] += 1
+    return counts
+
+
+def _embed_morals(texts: list[str], model_name: str) -> np.ndarray:
+    from sentence_transformers import SentenceTransformer
+    model = SentenceTransformer(model_name)
+    emb = model.encode(texts, normalize_embeddings=True, convert_to_numpy=True)
+    return emb @ emb.T
+
+
+def _write_json(path: Path, data) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(data, indent=2))
+
+
+def run_cluster(
+    in_dir: Path,
+    threshold: float,
+    inspect_thresholds: list[float],
+    inspection_root: Path,
+    sim_matrix: np.ndarray | None = None,
+    counts_override: dict[str, int] | None = None,
+    model_name: str = DEFAULT_MODEL,
+) -> Path:
+    morals = json.loads((in_dir / "processed" / "morals_corpus.json").read_text())
+    qmf = json.loads((in_dir / "processed" / "qrels_moral_to_fable.json").read_text())
+    moral_texts = [m["text"] for m in morals]
+
+    if sim_matrix is None:
+        print(f"Embedding {len(moral_texts)} morals with {model_name} ...")
+        sim_matrix = _embed_morals(moral_texts, model_name)
+
+    counts = _load_counts_from_samples(counts_override)
+
+    # Side-by-side inspection dumps
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    inspect_dir = inspection_root / timestamp
+    inspect_dir.mkdir(parents=True, exist_ok=True)
+    for t in inspect_thresholds:
+        clusters_at_t = agglomerative_clusters(sim_matrix, threshold=t)
+        payload = [
+            {
+                "size": len(c),
+                "members": [moral_texts[i] for i in c],
+            }
+            for c in sorted(clusters_at_t, key=lambda c: -len(c))
+        ]
+        _write_json(inspect_dir / f"clusters_at_{t:.2f}.json", payload)
+
+    # Canonical clustered outputs
+    out = build_clustered_outputs(
+        morals=morals, qmf=qmf, sim_matrix=sim_matrix,
+        counts=counts, threshold=threshold,
+    )
+    clustered_dir = in_dir / "clustered"
+    for filename, data in out.items():
+        _write_json(clustered_dir / filename, data)
+
+    # Append clustering summary to the existing README
+    n_clusters = len(out["cluster_mapping.json"])
+    types = Counter(c["type"] for c in out["cluster_mapping.json"])
+    readme_path = in_dir / "README.md"
+    readme = readme_path.read_text() if readme_path.exists() else ""
+    readme += (
+        f"\n\n## Clustering (this run)\n\n"
+        f"- Threshold: {threshold}\n"
+        f"- Model: {model_name}\n"
+        f"- Clusters: {n_clusters}  "
+        f"(singleton={types.get('singleton', 0)}, "
+        f"near={types.get('near', 0)}, "
+        f"exact={types.get('exact', 0)})\n"
+        f"- Inspection dumps: experiments/11_tf1_diagnostic/cluster_inspection/{timestamp}/\n"
+    )
+    readme_path.write_text(readme)
+
+    return clustered_dir
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--threshold", type=float, default=0.80)
+    parser.add_argument(
+        "--inspect-thresholds", type=str, default="0.80,0.85,0.90",
+        help="comma-separated cosine thresholds to dump alongside the canonical run",
+    )
+    parser.add_argument("--in", dest="in_dir", type=Path, default=DEFAULT_IN)
+    parser.add_argument("--model", type=str, default=DEFAULT_MODEL)
+    args = parser.parse_args()
+
+    inspect = [float(t) for t in args.inspect_thresholds.split(",")]
+    out = run_cluster(
+        in_dir=args.in_dir,
+        threshold=args.threshold,
+        inspect_thresholds=inspect,
+        inspection_root=DEFAULT_INSPECT_ROOT,
+        model_name=args.model,
+    )
+    print(f"Wrote clustered outputs to {out}")
+
+
+if __name__ == "__main__":
+    main()

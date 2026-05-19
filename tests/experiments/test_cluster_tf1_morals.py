@@ -1,3 +1,4 @@
+import json
 import sys
 import importlib.util
 from collections import Counter
@@ -126,3 +127,58 @@ def test_build_clustered_outputs_basic():
     assert fable_ids == {f["doc_id"] for f in qmf_processed}
     counts_per_fable = Counter(q["query_id"] for q in qfm)
     assert all(c == 1 for c in counts_per_fable.values())
+
+
+def test_run_cluster_writes_all_files(tmp_path):
+    processed = tmp_path / "processed"
+    processed.mkdir()
+    morals = [
+        {"doc_id": "moral_tf1_000", "text": "honesty is best"},
+        {"doc_id": "moral_tf1_001", "text": "honesty wins"},
+        {"doc_id": "moral_tf1_002", "text": "greed leads to downfall"},
+    ]
+    (processed / "morals_corpus.json").write_text(json.dumps(morals))
+    (processed / "qrels_moral_to_fable.json").write_text(json.dumps([
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_001", "doc_id": "fable_tf1_00001", "relevance": 1},
+        {"query_id": "moral_tf1_002", "doc_id": "fable_tf1_00002", "relevance": 1},
+    ]))
+    # Pre-existing README so the snapshot append logic has something to append to
+    (tmp_path / "README.md").write_text("# header\n")
+
+    sim = np.array([
+        [1.0, 0.92, 0.10],
+        [0.92, 1.0, 0.15],
+        [0.10, 0.15, 1.0],
+    ])
+    counts = {"honesty is best": 1, "honesty wins": 2, "greed leads to downfall": 5}
+
+    out_dir = cl.run_cluster(
+        in_dir=tmp_path,
+        threshold=0.80,
+        inspect_thresholds=[0.80, 0.85],
+        sim_matrix=sim,
+        counts_override=counts,
+        inspection_root=tmp_path / "inspect",
+    )
+
+    clustered = tmp_path / "clustered"
+    for fname in [
+        "morals_unique_corpus.json",
+        "cluster_mapping.json",
+        "moral_to_cluster.json",
+        "qrels_moral_to_fable_clustered.json",
+        "qrels_fable_to_moral_clustered.json",
+    ]:
+        assert (clustered / fname).exists()
+
+    # inspection dumps written
+    inspection_subdir = next((tmp_path / "inspect").iterdir())
+    assert (inspection_subdir / "clusters_at_0.80.json").exists()
+    assert (inspection_subdir / "clusters_at_0.85.json").exists()
+
+    # README snapshot appended
+    readme_text = (tmp_path / "README.md").read_text()
+    assert "# header" in readme_text
+    assert "Clustering (this run)" in readme_text
+    assert "Threshold: 0.8" in readme_text
