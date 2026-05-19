@@ -119,6 +119,7 @@ def _write_json(path: Path, data) -> None:
 
 
 def _write_readme(out_dir: Path, n: int, seed: int, source: Path, n_morals: int) -> None:
+    out_dir.mkdir(parents=True, exist_ok=True)
     try:
         rel_source = source.relative_to(ROOT)
     except ValueError:
@@ -158,9 +159,10 @@ def run_build(
 ) -> dict:
     rows = _read_samples(samples_path)
     unique_morals = first_seen_order(rows)
-    assert len(unique_morals) == expected_unique_morals, (
-        f"expected {expected_unique_morals} unique morals, got {len(unique_morals)}"
-    )
+    if len(unique_morals) != expected_unique_morals:
+        raise ValueError(
+            f"expected {expected_unique_morals} unique morals, got {len(unique_morals)}"
+        )
 
     grouped = group_by_moral(rows)
     moral_ids = assign_moral_ids(unique_morals)
@@ -172,7 +174,8 @@ def run_build(
     qrels_ftm = build_qrels_fable_to_moral(fables_corpus)
 
     hashes = [f["prompt_hash"] for f in fables_corpus]
-    assert len(set(hashes)) == len(hashes), "duplicate prompt_hash in sampled fables"
+    if len(set(hashes)) != len(hashes):
+        raise ValueError("duplicate prompt_hash in sampled fables")
 
     processed = out_dir / "processed"
     _write_json(processed / "morals_corpus.json", morals_corpus)
