@@ -1,5 +1,6 @@
 import sys
 import importlib.util
+from collections import Counter
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
@@ -86,3 +87,42 @@ def test_agglomerative_clusters_empty_matrix_returns_empty():
 
 def test_agglomerative_clusters_single_item_returns_singleton_cluster():
     assert cl.agglomerative_clusters(np.array([[1.0]]), threshold=0.8) == [[0]]
+
+
+def test_build_clustered_outputs_basic():
+    morals = [
+        {"doc_id": "moral_tf1_000", "text": "honesty is best"},
+        {"doc_id": "moral_tf1_001", "text": "honesty wins"},
+        {"doc_id": "moral_tf1_002", "text": "greed leads to downfall"},
+    ]
+    qmf_processed = [
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00001", "relevance": 1},
+        {"query_id": "moral_tf1_001", "doc_id": "fable_tf1_00002", "relevance": 1},
+        {"query_id": "moral_tf1_002", "doc_id": "fable_tf1_00003", "relevance": 1},
+    ]
+    sim = np.array([
+        [1.0, 0.92, 0.10],
+        [0.92, 1.0, 0.15],
+        [0.10, 0.15, 1.0],
+    ])
+    counts = {"honesty is best": 30, "honesty wins": 50, "greed leads to downfall": 100}
+
+    out = cl.build_clustered_outputs(
+        morals=morals, qmf=qmf_processed, sim_matrix=sim,
+        counts=counts, threshold=0.80,
+    )
+
+    # 2 clusters expected: {honesty is best, honesty wins}, {greed}
+    assert len(out["cluster_mapping.json"]) == 2
+    canonical_texts = {u["text"] for u in out["morals_unique_corpus.json"]}
+    # higher-count "honesty wins" should be canonical for the merged cluster
+    assert "honesty wins" in canonical_texts and "honesty is best" not in canonical_texts
+    assert "greed leads to downfall" in canonical_texts
+
+    # Each fable maps to exactly one cluster moral in the inverse qrels
+    qfm = out["qrels_fable_to_moral_clustered.json"]
+    fable_ids = {q["query_id"] for q in qfm}
+    assert fable_ids == {f["doc_id"] for f in qmf_processed}
+    counts_per_fable = Counter(q["query_id"] for q in qfm)
+    assert all(c == 1 for c in counts_per_fable.values())

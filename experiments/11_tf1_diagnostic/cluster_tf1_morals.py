@@ -53,3 +53,76 @@ def pick_canonical_text(members: list[int], moral_texts: list[str], counts: dict
         return (-counts.get(moral_texts[i], 0), i)
     best = sorted(members, key=key)[0]
     return moral_texts[best]
+
+
+def build_clustered_outputs(
+    morals: list[dict],
+    qmf: list[dict],
+    sim_matrix: np.ndarray,
+    counts: dict[str, int],
+    threshold: float,
+) -> dict[str, list[dict]]:
+    moral_texts = [m["text"] for m in morals]
+    moral_ids = [m["doc_id"] for m in morals]
+
+    # fable_id grouped by source moral_id (from input qrels)
+    fables_for_moral: dict[str, list[str]] = {}
+    for row in qmf:
+        fables_for_moral.setdefault(row["query_id"], []).append(row["doc_id"])
+
+    clusters = agglomerative_clusters(sim_matrix, threshold=threshold)
+
+    morals_unique: list[dict] = []
+    cluster_mapping: list[dict] = []
+    moral_to_cluster: list[dict] = []
+    qrels_mtf_clustered: list[dict] = []
+    qrels_ftm_clustered: list[dict] = []
+
+    for cluster_idx, members in enumerate(sorted(clusters, key=lambda c: (-len(c), c[0]))):
+        cluster_id = f"cluster_{cluster_idx:03d}"
+        cluster_type = classify_cluster_type(members, sim_matrix)
+        canonical_text = pick_canonical_text(members, moral_texts, counts)
+        member_moral_ids = [moral_ids[i] for i in members]
+        member_texts = [moral_texts[i] for i in members]
+        relevant_fable_ids = [
+            fid for mid in member_moral_ids for fid in fables_for_moral.get(mid, [])
+        ]
+
+        unique_doc_id = f"moral_tf1_unique_{cluster_idx:04d}"
+        morals_unique.append({
+            "doc_id": unique_doc_id,
+            "text": canonical_text,
+            "cluster_id": cluster_id,
+            "cluster_type": cluster_type,
+            "relevant_fable_ids": relevant_fable_ids,
+            "cluster_moral_set": member_texts,
+        })
+        cluster_mapping.append({
+            "cluster_id": cluster_id,
+            "type": cluster_type,
+            "moral_set": member_texts,
+            "fables": relevant_fable_ids,
+            "n_morals": len(member_texts),
+            "n_fables": len(relevant_fable_ids),
+        })
+        for mid, text in zip(member_moral_ids, member_texts):
+            moral_to_cluster.append({
+                "query_id": mid,
+                "text": text,
+                "cluster_id": cluster_id,
+            })
+        for fid in relevant_fable_ids:
+            qrels_mtf_clustered.append({
+                "query_id": unique_doc_id, "doc_id": fid, "relevance": 1,
+            })
+            qrels_ftm_clustered.append({
+                "query_id": fid, "doc_id": unique_doc_id, "relevance": 1,
+            })
+
+    return {
+        "morals_unique_corpus.json": morals_unique,
+        "cluster_mapping.json": cluster_mapping,
+        "moral_to_cluster.json": moral_to_cluster,
+        "qrels_moral_to_fable_clustered.json": qrels_mtf_clustered,
+        "qrels_fable_to_moral_clustered.json": qrels_ftm_clustered,
+    }
