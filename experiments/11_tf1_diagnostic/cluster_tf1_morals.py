@@ -5,6 +5,7 @@ data/clustered/ for MORABLES. See the design spec.
 """
 import argparse
 import json
+import sys
 from collections import Counter
 from datetime import datetime
 from pathlib import Path
@@ -14,6 +15,9 @@ from scipy.cluster.hierarchy import fcluster, linkage
 from scipy.spatial.distance import squareform
 
 ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(ROOT))
+from finetuning.lib import notify  # noqa: E402
+
 DEFAULT_IN = ROOT / "data" / "external" / "tf1_synthetic"
 DEFAULT_INSPECT_ROOT = ROOT / "experiments" / "11_tf1_diagnostic" / "cluster_inspection"
 DEFAULT_MODEL = "BAAI/bge-large-en-v1.5"
@@ -237,6 +241,10 @@ def main() -> None:
     args = parser.parse_args()
 
     inspect = [float(t) for t in args.inspect_thresholds.split(",")]
+    notify.send(
+        f"🧩 cluster_tf1_morals starting\n"
+        f"threshold: {args.threshold}  model: {args.model}"
+    )
     out = run_cluster(
         in_dir=args.in_dir,
         threshold=args.threshold,
@@ -245,6 +253,7 @@ def main() -> None:
         model_name=args.model,
     )
     print(f"Wrote clustered outputs to {out}")
+    notify.send(f"✅ cluster_tf1_morals done\nwrote to {out}")
 
 
 if __name__ == "__main__":

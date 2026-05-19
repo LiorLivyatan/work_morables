@@ -6,10 +6,14 @@ cache. See docs/superpowers/specs/2026-05-06-tf1-synthetic-corpus-design.md.
 import argparse
 import json
 import random
+import sys
 from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(ROOT))
+from finetuning.lib import notify  # noqa: E402
+
 DEFAULT_RUNS_DIR = ROOT / "experiments" / "11_tf1_diagnostic" / "results" / "runs"
 DEFAULT_OUT = ROOT / "data" / "external" / "tf1_synthetic"
 
@@ -223,6 +227,10 @@ def main() -> None:
 
     samples_path = args.source or _latest_samples_path()
     print(f"Reading samples from {samples_path}")
+    notify.send(
+        f"🛠 build_tf1_corpus starting\n"
+        f"source: {samples_path.name}  n={args.n}  seed={args.seed}"
+    )
     result = run_build(
         samples_path=samples_path,
         n=args.n,
@@ -231,6 +239,10 @@ def main() -> None:
         expected_unique_morals=args.expected_unique_morals,
     )
     print(f"Wrote {result['n_fables']} fables across {result['n_morals']} morals to {result['out_dir']}")
+    notify.send(
+        f"✅ build_tf1_corpus done\n"
+        f"{result['n_fables']} fables across {result['n_morals']} morals"
+    )
 
 
 if __name__ == "__main__":
