@@ -48,3 +48,42 @@ def sample_n_per_moral(grouped: dict[str, list[dict]], n: int, seed: int) -> dic
         sorted_rows = sorted(rows, key=lambda r: r["idx"])
         out[moral] = rng.sample(sorted_rows, n)
     return out
+
+
+def build_morals_corpus(unique_morals: list[str], moral_ids: dict[str, str]) -> list[dict]:
+    return [{"doc_id": moral_ids[m], "text": m} for m in unique_morals]
+
+
+def build_fables_corpus(
+    sampled: dict[str, list[dict]],
+    unique_morals: list[str],
+    moral_ids: dict[str, str],
+    n: int,
+) -> list[dict]:
+    out: list[dict] = []
+    for moral_idx, moral_text in enumerate(unique_morals):
+        for i, row in enumerate(sampled[moral_text]):
+            fable_id = f"fable_tf1_{moral_idx * n + i:05d}"
+            out.append({
+                "doc_id": fable_id,
+                "text": row["fable"],
+                "moral_id": moral_ids[moral_text],
+                "source_idx": row["idx"],
+                "source_chunk": row["chunk"],
+                "prompt_hash": row["prompt_hash"],
+            })
+    return out
+
+
+def build_qrels_moral_to_fable(fables_corpus: list[dict]) -> list[dict]:
+    return [
+        {"query_id": f["moral_id"], "doc_id": f["doc_id"], "relevance": 1}
+        for f in fables_corpus
+    ]
+
+
+def build_qrels_fable_to_moral(fables_corpus: list[dict]) -> list[dict]:
+    return [
+        {"query_id": f["doc_id"], "doc_id": f["moral_id"], "relevance": 1}
+        for f in fables_corpus
+    ]

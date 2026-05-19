@@ -61,3 +61,63 @@ def test_sample_n_per_moral_errors_when_not_enough_rows():
     grouped = {"m": [_row(i, "m") for i in range(3)]}
     with pytest.raises(ValueError, match="only 3"):
         sample_n_per_moral(grouped, n=10, seed=42)
+
+
+build_morals_corpus = build.build_morals_corpus
+build_fables_corpus = build.build_fables_corpus
+build_qrels_moral_to_fable = build.build_qrels_moral_to_fable
+build_qrels_fable_to_moral = build.build_qrels_fable_to_moral
+
+
+def test_build_morals_corpus_shape():
+    unique = ["greed leads to downfall", "honesty wins"]
+    ids = {"greed leads to downfall": "moral_tf1_000", "honesty wins": "moral_tf1_001"}
+    out = build_morals_corpus(unique, ids)
+    assert out == [
+        {"doc_id": "moral_tf1_000", "text": "greed leads to downfall"},
+        {"doc_id": "moral_tf1_001", "text": "honesty wins"},
+    ]
+
+
+def test_build_fables_corpus_assigns_globally_unique_ids():
+    sampled = {
+        "a": [_row(10, "a", fable="F0", chunk=1, prompt_hash="h0"),
+              _row(11, "a", fable="F1", chunk=1, prompt_hash="h1")],
+        "b": [_row(20, "b", fable="G0", chunk=2, prompt_hash="h2"),
+              _row(21, "b", fable="G1", chunk=2, prompt_hash="h3")],
+    }
+    unique = ["a", "b"]
+    ids = {"a": "moral_tf1_000", "b": "moral_tf1_001"}
+    out = build_fables_corpus(sampled, unique, ids, n=2)
+    assert [f["doc_id"] for f in out] == [
+        "fable_tf1_00000", "fable_tf1_00001",
+        "fable_tf1_00002", "fable_tf1_00003",
+    ]
+    assert out[0]["moral_id"] == "moral_tf1_000"
+    assert out[2]["moral_id"] == "moral_tf1_001"
+    assert out[0]["source_idx"] == 10
+    assert out[0]["prompt_hash"] == "h0"
+
+
+def test_build_qrels_moral_to_fable_pair_per_row():
+    fables = [
+        {"doc_id": "fable_tf1_00000", "moral_id": "moral_tf1_000"},
+        {"doc_id": "fable_tf1_00001", "moral_id": "moral_tf1_000"},
+    ]
+    qrels = build_qrels_moral_to_fable(fables)
+    assert qrels == [
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00001", "relevance": 1},
+    ]
+
+
+def test_build_qrels_fable_to_moral_is_inverse():
+    fables = [
+        {"doc_id": "fable_tf1_00000", "moral_id": "moral_tf1_000"},
+        {"doc_id": "fable_tf1_00001", "moral_id": "moral_tf1_001"},
+    ]
+    qrels = build_qrels_fable_to_moral(fables)
+    assert qrels == [
+        {"query_id": "fable_tf1_00000", "doc_id": "moral_tf1_000", "relevance": 1},
+        {"query_id": "fable_tf1_00001", "doc_id": "moral_tf1_001", "relevance": 1},
+    ]
