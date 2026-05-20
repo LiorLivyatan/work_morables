@@ -1,0 +1,93 @@
+model:
+  hf_id: Linq-AI-Research/Linq-Embed-Mistral
+  pooling: auto
+  device: cuda
+  dtype: bfloat16
+  batch_size: 8             # bumped to 16 caused OOM (another process holding 2.7GB on GPU 2)
+
+data:
+  morals_path: data/clustered/morals_unique_corpus.json
+  fables_path: data/clustered/fables_corpus.json
+  qrels_path:  data/clustered/qrels_moral_to_fable_clustered.json
+  metadata_path: data/enriched/fable_elements.json
+  # Pre-launch corpus shape assertions (spec §10.1)
+  expect:
+    n_morals: 668
+    n_fables: 709
+    n_qrels:  1085
+
+discovery:
+  failure_definition: rank_gt_1
+  metadata_fields: [characters, character_roles, moral_category, setting, fable_type, themes]
+  min_tagged_fables: 15
+  fdr_alpha: 0.05
+
+# Exploratory landscape (spec §3, §4). placebo=[] disables Stage-2 four-condition
+# gate; run_intervention.py emits per-concept exploratory_decision instead.
+concepts:
+  targets:
+  - {field: characters,      value: fox}
+  - {field: characters,      value: lion}
+  - {field: characters,      value: wolf}
+  - {field: setting,         value: forest}
+  - {field: moral_category,  value: deception}
+  - {field: moral_category,  value: justice}
+  # Dropped 'field' and 'pride' for faster turnaround — similar to forest/deception respectively.
+  placebo: []
+
+vectors:
+  layers: [12, 20, 24, 28, 31]   # dropped layer-4 negative control for faster turnaround; pilot's L12 collapse already provides negative-control evidence
+  methods:
+    primary: caa_matched
+    sanity_byproducts: [mean_diff]
+  matching:
+    fields: [setting, fable_type]
+    cross_field_matching: true
+    length_tolerance: 0.20
+    min_positive_examples: 15
+    min_matched_pairs: 15
+  quality_log:
+    - n_positives
+    - n_matched_pairs
+    - mean_length_ratio
+    - setting_match_rate
+    - fable_type_match_rate
+    - cross_field_overlap_rate
+    - pos_baseline_mrr
+    - neg_baseline_mrr
+    - cos_caa_meandiff
+
+intervention:
+  alphas: [-15.0, -5.0, -3.0, 0.0, 3.0, 5.0, 15.0]  # trimmed from 10 alphas — dropped ±20 (destructive) and ±10 (redundant with ±5/±15)
+  hook_position: residual_stream
+  renormalize: true
+
+null_controls:
+  run_mode: candidate_only
+  random_direction:
+    n_seeds: 2                # aggressive cut for same-day finish
+    norm_match: caa_matched
+  shuffled_tag_caa:
+    n_permutations: 8         # aggressive cut for same-day finish; still gives a usable null envelope
+
+eval:
+  metrics: [mrr_at_10, recall_at_1, recall_at_5, recall_at_10]
+  group_by: [target_tagged, target_untagged]
+  primary_statistic:
+    name: specificity_gap
+    test: paired_bootstrap_ci_over_morals
+    n_bootstrap: 10000
+    alpha: 0.05
+  diagnostics:
+    pooled_cosine_pre_post: true
+    rank_change_listing: true
+    null_envelope: true
+
+output:
+  results_dir: analysis/08_concept_steering/results
+  cache_dir: analysis/08_concept_steering/cache
+  save_intermediate_embeddings: false
+
+# Long-term model storage (CLAUDE.md mandate). Final artefacts go here; the
+# physical disk holds only fast-I/O caches during the run.
+model_output_dir: /data/lior/08_concept_steering/models

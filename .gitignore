@@ -107,3 +107,18 @@ llm_retrieval/results/batches/**/input*.jsonl
 llm_retrieval/results/batches/**/output*.jsonl
 llm_retrieval/results/gemini_batches/**/input*.jsonl
 llm_retrieval/results/gemini_batches/**/output*.jsonl
+
+# Concept-steering smoke artefacts (one-off, pre-clustered data)
+analysis/08_concept_steering/results_smoke/
+
+# Concept-steering preview cache (local rsync of in-progress run; superseded by results/)
+analysis/08_concept_steering/results_preview/
+
+# macOS / iCloud Finder duplicates (" 2.*", " 3.*", … collision rename)
+# Match any file whose stem ends in a space + a digit before the extension.
+* [0-9].md
+* [0-9].json
+* [0-9].npy
+* [0-9].yaml
+* [0-9].py
+* [0-9]

@@ -1,0 +1,17 @@
+{
+  "n_matched_pairs": 72,
+  "mean_length_ratio": 0.8913614262381926,
+  "setting_match_rate": 1.0,
+  "fable_type_match_rate": 1.0,
+  "cross_field_overlap_rate": 1.0,
+  "pos_baseline_mrr": 0.25719806763285025,
+  "neg_baseline_mrr": 0.22036582565515658,
+  "cos_caa_meandiff_per_layer": {
+    "12": 0.22150355577468872,
+    "28": 0.8082569241523743
+  },
+  "cos_caa_lexical_per_layer": {
+    "12": 0.04270230233669281,
+    "28": 0.7706207036972046
+  }
+}
