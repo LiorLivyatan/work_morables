@@ -18,6 +18,8 @@ from finetuning.lib import notify  # noqa: E402
 DEFAULT_RUNS_DIR = ROOT / "experiments" / "11_tf1_diagnostic" / "results" / "runs"
 DEFAULT_OUT = ROOT / "data" / "external" / "tf1_synthetic"
 
+LAYER_2_MIN_ABSOLUTE_MATCHES = 4
+
 LEAKAGE_PATTERNS = [
     re.compile(r"the\s+(moral|lesson|teaching|takeaway)\s+(of|is|here\s+is)", re.IGNORECASE),
     re.compile(r"this\s+(story|fable|tale)\s+teaches\s+(us|that)", re.IGNORECASE),
@@ -43,11 +45,11 @@ def has_explicit_moral(fable_text: str, moral_text: str) -> bool:
     Two layers:
     1. Regex patterns catching common LLM closing phrases like
        "The moral of the story is...".
-    2. Per-sentence content-word overlap of at least 70% with the moral
-       (catches near-verbatim moral restatements without the regex tells).
-
-    Morals with fewer than 2 content words are exempt from layer 2 to
-    avoid spurious matches on tiny morals.
+    2. Per-sentence absolute content-word overlap: fires if any single
+       sentence contains LAYER_2_MIN_ABSOLUTE_MATCHES (=4) or more of the
+       moral's content words. Short morals (fewer content words than the
+       threshold) bypass layer 2 entirely; layer 1 still catches their
+       explicit restatements via the regex patterns.
     """
     if not fable_text or not moral_text:
         return False
@@ -55,11 +57,11 @@ def has_explicit_moral(fable_text: str, moral_text: str) -> bool:
         if pattern.search(fable_text):
             return True
     moral_content = set(WORD_RE.findall(moral_text.lower())) - STOP_WORDS
-    if len(moral_content) < 2:
+    if len(moral_content) < LAYER_2_MIN_ABSOLUTE_MATCHES:
         return False
     for sentence in re.split(r"[.!?]", fable_text):
         sent_content = set(WORD_RE.findall(sentence.lower())) - STOP_WORDS
-        if moral_content and len(moral_content & sent_content) / len(moral_content) >= 0.70:
+        if len(moral_content & sent_content) >= LAYER_2_MIN_ABSOLUTE_MATCHES:
             return True
     return False
 

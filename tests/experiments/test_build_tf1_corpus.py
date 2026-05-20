@@ -332,3 +332,27 @@ def test_run_build_rejects_unknown_selection(tmp_path):
             samples_path=p, n=1, seed=42, out_dir=tmp_path / "o",
             expected_unique_morals=1, selection="bogus",
         )
+
+
+def test_has_explicit_moral_layer2_off_for_2_content_word_morals():
+    # 'every challenge is a lesson' has 2 content words {challenge, lesson}.
+    # Old rule: 2/2 needed -> fired on any sentence with both words.
+    # New rule: 4 needed -> impossible from 2 -> never fires via layer 2.
+    fable = "Through every challenge they learned a hard lesson."
+    assert not has_explicit_moral(fable, "every challenge is a lesson")
+
+
+def test_has_explicit_moral_layer2_off_for_3_content_word_morals():
+    # 'honesty is the best policy' has 3 content words {honesty, best, policy}.
+    # Old rule: 3/3 needed -> could fire. New rule: 4 needed -> never via layer 2.
+    fable = "He realized honesty is the best policy in the long run."
+    assert not has_explicit_moral(fable, "honesty is the best policy")
+
+
+def test_has_explicit_moral_layer2_requires_all_4_for_4_word_morals():
+    # 'truth stands the test of time' has 4 content words {truth, stands, test, time}.
+    # Old rule: 3 of 4 in one sentence fired. New rule: needs all 4.
+    fable_3of4 = "Through the test of time their truth survived."  # truth, test, time = 3/4
+    fable_4of4 = "Truth stands the test of time in every age."     # all 4
+    assert not has_explicit_moral(fable_3of4, "truth stands the test of time")
+    assert has_explicit_moral(fable_4of4, "truth stands the test of time")
