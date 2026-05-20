@@ -100,6 +100,26 @@ def sample_n_per_moral(grouped: dict[str, list[dict]], n: int, seed: int) -> dic
     return out
 
 
+def select_low_iou_clean(grouped: dict[str, list[dict]], n: int) -> dict[str, list[dict]]:
+    """Pick the n fables with lowest iou_no_stop per moral, after filtering
+    out fables that explicitly restate the moral.
+
+    Each row must contain an `iou_no_stop` float field (produced by
+    experiments/11_tf1_diagnostic/check_iou.py during sample dumping).
+    """
+    out: dict[str, list[dict]] = {}
+    for moral, rows in grouped.items():
+        clean = [r for r in rows if not has_explicit_moral(r["fable"], r["moral"])]
+        if len(clean) < n:
+            raise ValueError(
+                f"After leakage filter, only {len(clean)} fables remain for "
+                f"{moral!r}; need {n}. Consider re-streaming more TF1 rows."
+            )
+        clean.sort(key=lambda r: r["iou_no_stop"])
+        out[moral] = clean[:n]
+    return out
+
+
 def build_morals_corpus(unique_morals: list[str], moral_ids: dict[str, str]) -> list[dict]:
     return [{"doc_id": moral_ids[m], "text": m} for m in unique_morals]
 
@@ -168,12 +188,10 @@ def _write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2))
 
 
-def _write_readme(out_dir: Path, n: int, seed: int, source: Path, n_morals: int) -> None:
+def _write_readme(out_dir: Path, n: int, seed: int, source: Path,
+                  n_morals: int, selection: str = "random") -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
-    try:
-        rel_source = source.relative_to(ROOT)
-    except ValueError:
-        rel_source = source
+    rel_source = source.relative_to(ROOT) if source.is_relative_to(ROOT) else source
     readme = f"""# TF1-EN-3M synthetic — MORABLES-shaped derivative
 
 Source: https://huggingface.co/datasets/klusai/ds-tf1-en-3m (MIT)
@@ -182,18 +200,19 @@ Paper: https://arxiv.org/abs/2504.20605
 Built from {rel_source}
 via experiments/11_tf1_diagnostic/check_iou.py (--n 50000 --chunks 10).
 
-## Build commands
-
-./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py --n <N> --seed <S>
-./run.sh experiments/11_tf1_diagnostic/cluster_tf1_morals.py --threshold <T>
-
 ## Snapshot (this build)
 
+- Selection strategy: {selection}
 - N per moral: {n}
 - Total morals: {n_morals}
 - Total fables: {n * n_morals}
 - Seed: {seed}
 - Built: {datetime.now().isoformat(timespec='seconds')}
+
+## Build commands
+
+./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py --selection {selection} --n {n}
+./run.sh experiments/11_tf1_diagnostic/cluster_tf1_morals.py --mode exact --in {out_dir}
 
 See experiments/11_tf1_diagnostic/REPORT.md for the analysis that motivated this derivative.
 """
@@ -224,6 +243,7 @@ def run_build(
     seed: int,
     out_dir: Path,
     expected_unique_morals: int = 100,
+    selection: str = "random",
 ) -> dict:
     rows = dedup_by_prompt_hash(_read_samples(samples_path))
     unique_morals = first_seen_order(rows)
@@ -234,7 +254,14 @@ def run_build(
 
     grouped = group_by_moral(rows)
     moral_ids = assign_moral_ids(unique_morals)
-    sampled = sample_n_per_moral(grouped, n=n, seed=seed)
+    if selection == "random":
+        sampled = sample_n_per_moral(grouped, n=n, seed=seed)
+    elif selection == "low_iou_clean":
+        sampled = select_low_iou_clean(grouped, n=n)
+    else:
+        raise ValueError(
+            f"unknown selection {selection!r}; expected 'random' or 'low_iou_clean'"
+        )
 
     morals_corpus = build_morals_corpus(unique_morals, moral_ids)
     fables_corpus = build_fables_corpus(sampled, unique_morals, moral_ids, n=n)
@@ -250,11 +277,13 @@ def run_build(
     _write_json(processed / "fables_corpus.json", fables_corpus)
     _write_json(processed / "qrels_moral_to_fable.json", qrels_mtf)
     _write_json(processed / "qrels_fable_to_moral.json", qrels_ftm)
-    _write_readme(out_dir, n=n, seed=seed, source=samples_path, n_morals=len(unique_morals))
+    _write_readme(out_dir, n=n, seed=seed, source=samples_path,
+                  n_morals=len(unique_morals), selection=selection)
 
     return {
         "n_morals": len(unique_morals),
         "n_fables": len(fables_corpus),
+        "selection": selection,
         "out_dir": str(out_dir),
     }
 
@@ -264,30 +293,50 @@ def main() -> None:
     parser.add_argument("--n", type=int, default=10)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--source", type=Path, default=None)
-    parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument(
+        "--selection", choices=["random", "low_iou_clean"], default="random",
+        help="How to pick n fables per moral. random = uniform sample. "
+             "low_iou_clean = filter explicit-moral restatements, then take "
+             "the n lowest by iou_no_stop.",
+    )
+    parser.add_argument(
+        "--out", type=Path, default=None,
+        help="Output corpus dir. Defaults to data/external/tf1_synthetic/ "
+             "for --selection random, or data/external/tf1_synthetic_low_iou/ "
+             "for --selection low_iou_clean.",
+    )
     parser.add_argument(
         "--expected-unique-morals", type=int, default=100,
-        help="invariant from the diagnostic; set lower for testing on small samples",
+        help="invariant from the diagnostic; lower for testing on small samples",
     )
     args = parser.parse_args()
 
     samples_path = args.source or _latest_samples_path()
+    if args.out is not None:
+        out_dir = args.out
+    elif args.selection == "low_iou_clean":
+        out_dir = ROOT / "data" / "external" / "tf1_synthetic_low_iou"
+    else:
+        out_dir = DEFAULT_OUT
+
     print(f"Reading samples from {samples_path}")
+    print(f"Selection: {args.selection}  Output dir: {out_dir}")
     notify.send(
         f"🛠 build_tf1_corpus starting\n"
-        f"source: {samples_path.name}  n={args.n}  seed={args.seed}"
+        f"source: {samples_path.name}  n={args.n}  seed={args.seed}  selection={args.selection}"
     )
     result = run_build(
         samples_path=samples_path,
         n=args.n,
         seed=args.seed,
-        out_dir=args.out,
+        out_dir=out_dir,
         expected_unique_morals=args.expected_unique_morals,
+        selection=args.selection,
     )
     print(f"Wrote {result['n_fables']} fables across {result['n_morals']} morals to {result['out_dir']}")
     notify.send(
         f"✅ build_tf1_corpus done\n"
-        f"{result['n_fables']} fables across {result['n_morals']} morals"
+        f"{result['n_fables']} fables across {result['n_morals']} morals  selection={args.selection}"
     )
 
 

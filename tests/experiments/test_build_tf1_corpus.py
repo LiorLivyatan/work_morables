@@ -224,3 +224,77 @@ def test_has_explicit_moral_false_when_clean():
 
 def test_has_explicit_moral_safe_for_short_morals():
     assert not has_explicit_moral("A quiet story with nothing notable.", "patience")
+
+
+select_low_iou_clean = build.select_low_iou_clean
+
+
+def _row_with_iou(idx, moral, fable, iou):
+    return {
+        "idx": idx, "chunk": 0, "prompt_hash": f"h{idx}",
+        "moral": moral, "fable": fable,
+        "iou_no_stop": iou,
+    }
+
+
+def test_select_low_iou_clean_takes_n_lowest_iou_per_moral():
+    grouped = {
+        "moral_a": [
+            _row_with_iou(0, "moral_a", "clean fable 1", iou=0.05),
+            _row_with_iou(1, "moral_a", "clean fable 2", iou=0.02),
+            _row_with_iou(2, "moral_a", "clean fable 3", iou=0.03),
+            _row_with_iou(3, "moral_a", "clean fable 4", iou=0.04),
+        ],
+    }
+    out = select_low_iou_clean(grouped, n=2)
+    assert len(out["moral_a"]) == 2
+    assert [r["iou_no_stop"] for r in out["moral_a"]] == [0.02, 0.03]
+
+
+def test_select_low_iou_clean_filters_leaky_fables_before_sorting():
+    grouped = {
+        "honesty wins": [
+            _row_with_iou(0, "honesty wins", "The moral of the story is honesty.", iou=0.01),
+            _row_with_iou(1, "honesty wins", "Clean narrative about birds.", iou=0.02),
+            _row_with_iou(2, "honesty wins", "Another clean fable.", iou=0.05),
+        ],
+    }
+    out = select_low_iou_clean(grouped, n=2)
+    fables = [r["fable"] for r in out["honesty wins"]]
+    assert "The moral of the story is honesty." not in fables
+    assert fables == ["Clean narrative about birds.", "Another clean fable."]
+
+
+def test_select_low_iou_clean_raises_when_not_enough_clean():
+    grouped = {
+        "m": [
+            _row_with_iou(0, "m", "Moral: be kind.", iou=0.01),  # leaky
+            _row_with_iou(1, "m", "Clean.", iou=0.02),
+        ],
+    }
+    with pytest.raises(ValueError, match="only 1 fables remain"):
+        select_low_iou_clean(grouped, n=2)
+
+
+def test_run_build_with_selection_low_iou_clean_uses_clean_fables(tmp_path):
+    samples = [
+        {"idx": 0, "chunk": 0, "prompt_hash": "h0", "moral": "be kind",
+         "fable": "A clean story about a fox.", "iou_no_stop": 0.02},
+        {"idx": 1, "chunk": 0, "prompt_hash": "h1", "moral": "be kind",
+         "fable": "Another clean story.", "iou_no_stop": 0.03},
+        {"idx": 2, "chunk": 0, "prompt_hash": "h2", "moral": "be kind",
+         "fable": "The moral of the story is to be kind.", "iou_no_stop": 0.01},
+    ]
+    samples_path = tmp_path / "samples.jsonl"
+    samples_path.write_text("\n".join(json.dumps(r) for r in samples))
+
+    out_dir = tmp_path / "out"
+    build.run_build(
+        samples_path=samples_path, n=2, seed=42,
+        out_dir=out_dir, expected_unique_morals=1,
+        selection="low_iou_clean",
+    )
+    fables = json.loads((out_dir / "processed" / "fables_corpus.json").read_text())
+    fable_texts = [f["text"] for f in fables]
+    assert "The moral of the story is to be kind." not in fable_texts
+    assert len(fables) == 2
