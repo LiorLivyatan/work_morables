@@ -44,6 +44,10 @@ def split_tf1_groups(
     for p in pairs:
         by_moral[p["moral_id"]].append(p)
     moral_ids = sorted(by_moral.keys())
+    if len(moral_ids) < 2:
+        raise ValueError(
+            f"split_tf1_groups requires at least 2 distinct morals, got {len(moral_ids)}"
+        )
     rng = random.Random(seed)
     rng.shuffle(moral_ids)
     n_val = max(1, round(len(moral_ids) * validation_ratio))

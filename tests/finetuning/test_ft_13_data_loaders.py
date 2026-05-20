@@ -112,3 +112,10 @@ def test_make_tf1_dataset_empty_instruction_passes_moral_verbatim():
     pairs = [_pair(0, "moral_tf1_000", 0)]
     ds = train.make_tf1_dataset(pairs, instruction="")
     assert ds["anchor"] == ["moral text moral_tf1_000"]
+
+
+def test_split_tf1_groups_rejects_single_moral():
+    import pytest as _pytest
+    pairs = [_pair(0, "moral_tf1_000", 0)]
+    with _pytest.raises(ValueError, match="at least 2 distinct morals"):
+        train.split_tf1_groups(pairs, seed=42, validation_ratio=0.10)
