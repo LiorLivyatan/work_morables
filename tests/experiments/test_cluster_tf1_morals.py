@@ -164,11 +164,11 @@ def test_run_cluster_writes_all_files(tmp_path):
 
     clustered = tmp_path / "clustered"
     for fname in [
-        "morals_unique_corpus.json",
-        "cluster_mapping.json",
-        "moral_to_cluster.json",
-        "qrels_moral_to_fable_clustered.json",
-        "qrels_fable_to_moral_clustered.json",
+        "morals_unique_corpus_near.json",
+        "cluster_mapping_near.json",
+        "moral_to_cluster_near.json",
+        "qrels_moral_to_fable_clustered_near.json",
+        "qrels_fable_to_moral_clustered_near.json",
     ]:
         assert (clustered / fname).exists()
 
@@ -180,5 +180,71 @@ def test_run_cluster_writes_all_files(tmp_path):
     # README snapshot appended
     readme_text = (tmp_path / "README.md").read_text()
     assert "# header" in readme_text
-    assert "Clustering (this run)" in readme_text
+    assert "Clustering — mode=near (this run)" in readme_text
     assert "Threshold: 0.8" in readme_text
+
+
+def test_build_exact_outputs_one_cluster_per_moral():
+    morals = [
+        {"doc_id": "moral_tf1_000", "text": "honesty is best"},
+        {"doc_id": "moral_tf1_001", "text": "greed leads to downfall"},
+    ]
+    qmf = [
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00001", "relevance": 1},
+        {"query_id": "moral_tf1_001", "doc_id": "fable_tf1_00002", "relevance": 1},
+    ]
+    out = cl.build_exact_outputs(morals=morals, qmf=qmf)
+    assert len(out["cluster_mapping.json"]) == 2
+    assert all(c["n_morals"] == 1 for c in out["cluster_mapping.json"])
+    assert all(c["type"] == "exact" for c in out["cluster_mapping.json"])
+    # Sum of cluster fable counts equals total qrel rows
+    assert sum(c["n_fables"] for c in out["cluster_mapping.json"]) == len(qmf)
+    # Each fable appears in exactly one inverse qrel row
+    qfm = out["qrels_fable_to_moral_clustered.json"]
+    fable_ids = [r["query_id"] for r in qfm]
+    assert len(fable_ids) == len(set(fable_ids)) == len(qmf)
+
+
+def test_run_cluster_exact_mode_writes_suffixed_files(tmp_path):
+    processed = tmp_path / "processed"
+    processed.mkdir()
+    morals = [
+        {"doc_id": "moral_tf1_000", "text": "honesty is best"},
+        {"doc_id": "moral_tf1_001", "text": "greed leads to downfall"},
+    ]
+    (processed / "morals_corpus.json").write_text(json.dumps(morals))
+    (processed / "qrels_moral_to_fable.json").write_text(json.dumps([
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_001", "doc_id": "fable_tf1_00001", "relevance": 1},
+    ]))
+    (tmp_path / "README.md").write_text("# header\n")
+
+    out_dir = cl.run_cluster(
+        in_dir=tmp_path,
+        threshold=0.80,
+        inspect_thresholds=[],
+        inspection_root=tmp_path / "inspect",
+        mode="exact",
+    )
+
+    clustered = tmp_path / "clustered"
+    for fname in [
+        "morals_unique_corpus_exact.json",
+        "cluster_mapping_exact.json",
+        "moral_to_cluster_exact.json",
+        "qrels_moral_to_fable_clustered_exact.json",
+        "qrels_fable_to_moral_clustered_exact.json",
+    ]:
+        assert (clustered / fname).exists()
+
+    # Exact mode should skip the inspection dir entirely
+    assert not (tmp_path / "inspect").exists() or not any((tmp_path / "inspect").iterdir())
+
+    cm = json.loads((clustered / "cluster_mapping_exact.json").read_text())
+    assert len(cm) == 2
+    assert all(c["n_morals"] == 1 and c["type"] == "exact" for c in cm)
+
+    readme_text = (tmp_path / "README.md").read_text()
+    assert "Clustering — mode=exact (this run)" in readme_text
+    assert "Inspection dumps: n/a" in readme_text

@@ -28,3 +28,12 @@ See experiments/11_tf1_diagnostic/REPORT.md for the analysis that motivated this
 - Model: BAAI/bge-large-en-v1.5
 - Clusters: 78  (singleton=66, near=12, exact=0)
 - Inspection dumps: experiments/11_tf1_diagnostic/cluster_inspection/20260520_005305/
+
+
+## Clustering — mode=exact (this run)
+
+- Mode: exact
+- Threshold: n/a (trivial 1-cluster-per-moral)
+- Model: n/a (no embedding required)
+- Clusters: 100  (singleton=0, near=0, exact=100)
+- Inspection dumps: n/a (skipped in exact mode)
