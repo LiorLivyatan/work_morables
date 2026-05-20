@@ -342,7 +342,7 @@ def build_doc_texts(
     return doc_texts
 
 
-def build_model(model_cfg: dict):
+def build_model(model_cfg: dict, force_cpu: bool = False):
     from sentence_transformers import SentenceTransformer
 
     st_kwargs: dict = {}
@@ -351,7 +351,11 @@ def build_model(model_cfg: dict):
     if model_cfg.get("model_kwargs"):
         st_kwargs["model_kwargs"] = dict(model_cfg["model_kwargs"])
 
-    model = SentenceTransformer(model_cfg["model_name"], **st_kwargs)
+    model = SentenceTransformer(
+        model_cfg["model_name"],
+        device="cpu" if force_cpu else None,
+        **st_kwargs,
+    )
     if model_cfg.get("max_seq_length"):
         model.max_seq_length = int(model_cfg["max_seq_length"])
 
@@ -637,6 +641,7 @@ def run_one(
     eval_doc_configs: list[str],
     summary_generator: str | None,
     use_wandb: bool,
+    force_cpu: bool = False,
 ) -> dict:
     from sentence_transformers import SentenceTransformer
 
@@ -666,7 +671,11 @@ def run_one(
         st_kwargs: dict = {}
         if model_cfg.get("trust_remote_code"):
             st_kwargs["trust_remote_code"] = True
-        model = SentenceTransformer(str(model_dir), **st_kwargs)
+        model = SentenceTransformer(
+            str(model_dir),
+            device="cpu" if force_cpu else None,
+            **st_kwargs,
+        )
     elif skip_train:
         raise FileNotFoundError(f"--skip_train requested but saved model does not exist: {model_dir}")
     else:
@@ -686,7 +695,9 @@ def run_one(
                 },
             )
 
-        model = build_model(model_cfg)
+        model = build_model(model_cfg, force_cpu=force_cpu)
+        if force_cpu:
+            model_cfg["use_cpu"] = True
         model = train_model(
             model,
             train_dataset,
@@ -744,6 +755,12 @@ def main() -> None:
     parser.add_argument("--skip_train", action="store_true", help="Load saved model and run eval only")
     parser.add_argument("--force", action="store_true")
     parser.add_argument("--no-wandb", dest="no_wandb", action="store_true")
+    parser.add_argument(
+        "--cpu", action="store_true",
+        help="Force CPU execution end-to-end (model + trainer). For local "
+             "validation when no GPU is available; production runs should "
+             "leave this off and use --remote --gpu N.",
+    )
     parser.add_argument(
         "--tf1_corpus_dir", type=Path, default=None,
         help="Override the TF1 corpus dir from config (for ablation against the "
@@ -816,6 +833,7 @@ def main() -> None:
                     eval_doc_configs,
                     summary_generator,
                     use_wandb,
+                    force_cpu=args.cpu,
                 )
                 queue_results.append(result)
 
