@@ -7,8 +7,10 @@ size-as-morals-and-fables-per-moral instead of size-as-row-count, label=moral_id
 """
 from __future__ import annotations
 
+import json
 import random
 from collections import defaultdict
+from pathlib import Path
 
 
 def _subsample_morals(pairs: list[dict], size_cfg: dict, seed: int) -> list[dict]:
@@ -77,3 +79,43 @@ def make_tf1_dataset(pairs: list[dict], instruction: str):
         "positive": [p["story"] for p in pairs],
         "label":    labels,
     })
+
+
+def load_tf1_synthetic_exact(
+    size_cfg: dict, seed: int, source_dir: Path
+) -> tuple[list[dict], dict]:
+    """Load TF1 exact-cluster pairs from source_dir/processed/, then sub-sample
+    per the size config.
+
+    Returns (pairs, stats):
+        pairs: list of dicts with keys {moral, story, moral_id, fable_id}
+        stats: {raw_total, selected_rows, selected_morals, selection_strategy,
+                size_config}
+    """
+    morals = json.loads((source_dir / "processed" / "morals_corpus.json").read_text())
+    fables = json.loads((source_dir / "processed" / "fables_corpus.json").read_text())
+    qrels = json.loads((source_dir / "processed" / "qrels_moral_to_fable.json").read_text())
+
+    moral_by_id = {m["doc_id"]: m["text"] for m in morals}
+    fable_by_id = {f["doc_id"]: f["text"] for f in fables}
+    pairs = [
+        {
+            "moral": moral_by_id[q["query_id"]],
+            "story": fable_by_id[q["doc_id"]],
+            "moral_id": q["query_id"],
+            "fable_id": q["doc_id"],
+        }
+        for q in qrels
+    ]
+    raw_total = len(pairs)
+    pairs = _subsample_morals(pairs, size_cfg, seed)
+    selected_morals = len({p["moral_id"] for p in pairs})
+
+    stats = {
+        "raw_total": raw_total,
+        "selected_rows": len(pairs),
+        "selected_morals": selected_morals,
+        "selection_strategy": source_dir.name,
+        "size_config": dict(size_cfg),
+    }
+    return pairs, stats

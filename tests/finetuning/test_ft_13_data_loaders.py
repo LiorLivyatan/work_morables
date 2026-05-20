@@ -119,3 +119,80 @@ def test_split_tf1_groups_rejects_single_moral():
     pairs = [_pair(0, "moral_tf1_000", 0)]
     with _pytest.raises(ValueError, match="at least 2 distinct morals"):
         train.split_tf1_groups(pairs, seed=42, validation_ratio=0.10)
+
+
+def test_load_tf1_synthetic_exact_from_tmp_dir(tmp_path):
+    import json as _json
+    processed = tmp_path / "processed"
+    processed.mkdir()
+    morals = [
+        {"doc_id": "moral_tf1_000", "text": "be kind"},
+        {"doc_id": "moral_tf1_001", "text": "be brave"},
+    ]
+    fables = [
+        {"doc_id": "fable_tf1_00000", "text": "Kind story 0",
+         "moral_id": "moral_tf1_000", "source_idx": 0, "source_chunk": 0, "prompt_hash": "h0"},
+        {"doc_id": "fable_tf1_00001", "text": "Kind story 1",
+         "moral_id": "moral_tf1_000", "source_idx": 1, "source_chunk": 0, "prompt_hash": "h1"},
+        {"doc_id": "fable_tf1_00002", "text": "Brave story 0",
+         "moral_id": "moral_tf1_001", "source_idx": 2, "source_chunk": 0, "prompt_hash": "h2"},
+    ]
+    qrels = [
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00000", "relevance": 1},
+        {"query_id": "moral_tf1_000", "doc_id": "fable_tf1_00001", "relevance": 1},
+        {"query_id": "moral_tf1_001", "doc_id": "fable_tf1_00002", "relevance": 1},
+    ]
+    (processed / "morals_corpus.json").write_text(_json.dumps(morals))
+    (processed / "fables_corpus.json").write_text(_json.dumps(fables))
+    (processed / "qrels_moral_to_fable.json").write_text(_json.dumps(qrels))
+
+    pairs, stats = train.load_tf1_synthetic_exact(
+        size_cfg={"n_morals": None, "n_fables_per_moral": 10},
+        seed=42,
+        source_dir=tmp_path,
+    )
+    assert len(pairs) == 3
+    # Pair schema
+    sample = pairs[0]
+    assert set(sample.keys()) >= {"moral", "story", "moral_id", "fable_id"}
+    # Stats keys and content
+    assert stats["raw_total"] == 3
+    assert stats["selected_rows"] == 3
+    assert stats["selected_morals"] == 2
+    # source_dir.name returns the last path segment; tmp_path typically ends with "test_..."
+    # but for portability we just assert it's a non-empty string equal to tmp_path.name
+    assert stats["selection_strategy"] == tmp_path.name
+    assert stats["size_config"]["n_fables_per_moral"] == 10
+
+
+def test_load_tf1_synthetic_exact_size_subsamples(tmp_path):
+    import json as _json
+    processed = tmp_path / "processed"
+    processed.mkdir()
+    morals = [{"doc_id": f"moral_tf1_{i:03d}", "text": f"moral {i}"} for i in range(5)]
+    fables = []
+    qrels = []
+    for moral_idx in range(5):
+        for fable_idx in range(4):
+            fid = f"fable_tf1_{moral_idx * 4 + fable_idx:05d}"
+            fables.append({
+                "doc_id": fid, "text": f"story {moral_idx}/{fable_idx}",
+                "moral_id": f"moral_tf1_{moral_idx:03d}",
+                "source_idx": moral_idx * 4 + fable_idx,
+                "source_chunk": 0, "prompt_hash": f"h{moral_idx}{fable_idx}",
+            })
+            qrels.append({
+                "query_id": f"moral_tf1_{moral_idx:03d}",
+                "doc_id": fid, "relevance": 1,
+            })
+    (processed / "morals_corpus.json").write_text(_json.dumps(morals))
+    (processed / "fables_corpus.json").write_text(_json.dumps(fables))
+    (processed / "qrels_moral_to_fable.json").write_text(_json.dumps(qrels))
+
+    pairs, stats = train.load_tf1_synthetic_exact(
+        size_cfg={"n_morals": 2, "n_fables_per_moral": 3},
+        seed=42, source_dir=tmp_path,
+    )
+    assert len(pairs) == 6  # 2 morals * 3 fables
+    assert stats["selected_morals"] == 2
+    assert stats["selected_rows"] == 6
