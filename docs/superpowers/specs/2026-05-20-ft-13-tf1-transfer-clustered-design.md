@@ -239,13 +239,32 @@ The README that `build_tf1_corpus.py` writes records the selection strategy.
 
 ### Sizes
 
-| Key | n_morals | n_fables (= n_morals × 10) | Rationale |
-|---|---|---|---|
-| `s200` | 20 | 200 | Matches ft_12 sweep start; also a probable sweet-spot per ft_12 results |
-| `s500` | 50 | 500 | Mid-sweep |
-| `sfull` | 100 (all) | 1000 | Maximum from our cache |
+| Key | n_morals | n_fables_per_moral | total rows | Rationale |
+|---|---|---|---|---|
+| `s200` | 20 | 10 | 200 | Matches ft_12 sweep start; probable sweet-spot per ft_12 results |
+| `s500` | 50 | 10 | 500 | Mid-sweep |
+| `sfull` | 100 (all) | 10 | 1000 | All TF1 morals, baseline per-moral redundancy |
+| `sfull_n20` | 100 (all) | 20 | 2000 | All TF1 morals at double per-moral redundancy — isolates the "more fables per moral" axis vs the "more morals" axis ft_12 swept |
 
-`s1000` is **deliberately omitted** — at TF1's 100-moral ceiling, `s1000 == sfull` (100 morals × 10 fables = 1000 rows). Including both would be redundant.
+`s1000` is **deliberately omitted** — at TF1's 100-moral ceiling, `s1000 == sfull` for the 10-fable case.
+
+**Corpus build implication.** The low-IoU corpus must be built at `--n 20` so the train script can subsample to 10 fables for sizes `s200`/`s500`/`sfull` while still having 20 available for `sfull_n20`. Because `low_iou_clean` selects by sorted ascending IoU, the first 10 of the 20 chosen are byte-identical to what `--n 10` would have produced — the N=10 sizes and the N=20 size share the same low-IoU prefix.
+
+The `_subsample_morals` helper accepts `n_fables_per_moral` and slices each moral's fable list accordingly:
+
+```python
+def _subsample_morals(pairs: list[dict], size_cfg: dict, seed: int) -> list[dict]:
+    by_moral: dict[str, list[dict]] = defaultdict(list)
+    for p in pairs:
+        by_moral[p["moral_id"]].append(p)
+    moral_ids = sorted(by_moral.keys())
+    n_morals = size_cfg.get("n_morals")
+    if n_morals is not None and n_morals < len(moral_ids):
+        rng = random.Random(seed)
+        moral_ids = rng.sample(moral_ids, n_morals)
+    n_fables = size_cfg["n_fables_per_moral"]
+    return [p for mid in moral_ids for p in by_moral[mid][:n_fables]]
+```
 
 ### Models (two waves)
 
@@ -321,9 +340,10 @@ If any of these are missing, the smoke test has failed and we fix before proceed
 ## Reproduction commands
 
 ```bash
-# Prerequisites — produce the low-IoU corpus (one-time, ~1 minute):
+# Prerequisites — produce the low-IoU corpus at N=20 so sfull_n20 has data
+# (the N=10 sizes use the first 10 fables per moral, byte-identical to --n 10):
 ./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py \
-    --selection low_iou_clean
+    --selection low_iou_clean --n 20
 ./run.sh experiments/11_tf1_diagnostic/cluster_tf1_morals.py \
     --mode exact --in data/external/tf1_synthetic_low_iou
 
@@ -331,17 +351,17 @@ If any of these are missing, the smoke test has failed and we fix before proceed
 ./run.sh finetuning/ft_13_tf1_transfer_clustered/train.py \
     --model bge --size s200 --eval_doc_configs raw
 
-# Wave 1 — first-wave models on all sizes, full eval suite:
+# Wave 1 — first-wave models on all four sizes, full eval suite:
 ./run.sh finetuning/ft_13_tf1_transfer_clustered/train.py \
     --models bge all_minilm all_mpnet qwen3_0_6b qwen3_4b linq \
-    --sizes s200 s500 sfull \
+    --sizes s200 s500 sfull sfull_n20 \
     --eval_doc_configs raw fable_cot_proverb fable_direct_moral conceptual_abstract_fable \
     --summary_generator gemini \
     --remote --gpu 2
 
 # Wave 2 (optional):
 ./run.sh finetuning/ft_13_tf1_transfer_clustered/train.py \
-    --models qwen3 sfr --sizes s500 sfull \
+    --models qwen3 sfr --sizes sfull sfull_n20 \
     --eval_doc_configs all --summary_generator gemini \
     --remote --gpu 3
 
