@@ -1,0 +1,502 @@
+[
+  {
+    "query_id": "moral_tf1_001",
+    "text": "generosity overcomes envy",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_022",
+    "text": "a small act of kindness can make a big difference",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_047",
+    "text": "kindness transcends boundaries",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_053",
+    "text": "generosity enriches the giver",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_060",
+    "text": "generosity quells greed",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_066",
+    "text": "kindness is rewarded",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_082",
+    "text": "selflessness inspires others",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_098",
+    "text": "small deeds can spark great change",
+    "cluster_id": "cluster_000"
+  },
+  {
+    "query_id": "moral_tf1_007",
+    "text": "harmony emerges from balance",
+    "cluster_id": "cluster_001"
+  },
+  {
+    "query_id": "moral_tf1_009",
+    "text": "acceptance fosters cooperation",
+    "cluster_id": "cluster_001"
+  },
+  {
+    "query_id": "moral_tf1_015",
+    "text": "acceptance of flaws leads to harmony",
+    "cluster_id": "cluster_001"
+  },
+  {
+    "query_id": "moral_tf1_029",
+    "text": "acceptance leads to unity",
+    "cluster_id": "cluster_001"
+  },
+  {
+    "query_id": "moral_tf1_017",
+    "text": "empathy bridges differences",
+    "cluster_id": "cluster_002"
+  },
+  {
+    "query_id": "moral_tf1_067",
+    "text": "empathy softens the hardest hearts",
+    "cluster_id": "cluster_002"
+  },
+  {
+    "query_id": "moral_tf1_088",
+    "text": "empathy dissolves hatred",
+    "cluster_id": "cluster_002"
+  },
+  {
+    "query_id": "moral_tf1_079",
+    "text": "perseverance breaks barriers",
+    "cluster_id": "cluster_003"
+  },
+  {
+    "query_id": "moral_tf1_083",
+    "text": "perseverance shapes destiny",
+    "cluster_id": "cluster_003"
+  },
+  {
+    "query_id": "moral_tf1_095",
+    "text": "perseverance triumphs over difficulty",
+    "cluster_id": "cluster_003"
+  },
+  {
+    "query_id": "moral_tf1_006",
+    "text": "ignorance breeds conflict",
+    "cluster_id": "cluster_004"
+  },
+  {
+    "query_id": "moral_tf1_013",
+    "text": "knowledge outlives ignorance",
+    "cluster_id": "cluster_004"
+  },
+  {
+    "query_id": "moral_tf1_014",
+    "text": "sharing knowledge empowers all",
+    "cluster_id": "cluster_005"
+  },
+  {
+    "query_id": "moral_tf1_016",
+    "text": "sharing benefits everyone",
+    "cluster_id": "cluster_005"
+  },
+  {
+    "query_id": "moral_tf1_018",
+    "text": "humility paves the path to wisdom",
+    "cluster_id": "cluster_006"
+  },
+  {
+    "query_id": "moral_tf1_076",
+    "text": "humility earns admiration",
+    "cluster_id": "cluster_006"
+  },
+  {
+    "query_id": "moral_tf1_027",
+    "text": "second chances reveal new paths",
+    "cluster_id": "cluster_007"
+  },
+  {
+    "query_id": "moral_tf1_046",
+    "text": "second chances can rewrite destinies",
+    "cluster_id": "cluster_007"
+  },
+  {
+    "query_id": "moral_tf1_028",
+    "text": "respect is mutual",
+    "cluster_id": "cluster_008"
+  },
+  {
+    "query_id": "moral_tf1_057",
+    "text": "honesty invites respect",
+    "cluster_id": "cluster_008"
+  },
+  {
+    "query_id": "moral_tf1_039",
+    "text": "sincerity builds strong bonds",
+    "cluster_id": "cluster_009"
+  },
+  {
+    "query_id": "moral_tf1_084",
+    "text": "sincerity invites deep bonds",
+    "cluster_id": "cluster_009"
+  },
+  {
+    "query_id": "moral_tf1_042",
+    "text": "courtesy reflects character",
+    "cluster_id": "cluster_010"
+  },
+  {
+    "query_id": "moral_tf1_094",
+    "text": "courtesy is never wasted",
+    "cluster_id": "cluster_010"
+  },
+  {
+    "query_id": "moral_tf1_069",
+    "text": "mildness tames fury",
+    "cluster_id": "cluster_011"
+  },
+  {
+    "query_id": "moral_tf1_071",
+    "text": "gentle words quell anger",
+    "cluster_id": "cluster_011"
+  },
+  {
+    "query_id": "moral_tf1_000",
+    "text": "timely help earns lasting loyalty",
+    "cluster_id": "cluster_012"
+  },
+  {
+    "query_id": "moral_tf1_002",
+    "text": "cooperation wards off threats",
+    "cluster_id": "cluster_013"
+  },
+  {
+    "query_id": "moral_tf1_003",
+    "text": "a watchful eye prevents betrayal",
+    "cluster_id": "cluster_014"
+  },
+  {
+    "query_id": "moral_tf1_004",
+    "text": "reflection sparks growth",
+    "cluster_id": "cluster_015"
+  },
+  {
+    "query_id": "moral_tf1_005",
+    "text": "forgiveness brings healing",
+    "cluster_id": "cluster_016"
+  },
+  {
+    "query_id": "moral_tf1_008",
+    "text": "arrogance is self-defeating",
+    "cluster_id": "cluster_017"
+  },
+  {
+    "query_id": "moral_tf1_010",
+    "text": "patience leads to success",
+    "cluster_id": "cluster_018"
+  },
+  {
+    "query_id": "moral_tf1_011",
+    "text": "courage opens new paths",
+    "cluster_id": "cluster_019"
+  },
+  {
+    "query_id": "moral_tf1_012",
+    "text": "wise counsel lights the way",
+    "cluster_id": "cluster_020"
+  },
+  {
+    "query_id": "moral_tf1_019",
+    "text": "the truth surfaces eventually",
+    "cluster_id": "cluster_021"
+  },
+  {
+    "query_id": "moral_tf1_020",
+    "text": "regret teaches humility",
+    "cluster_id": "cluster_022"
+  },
+  {
+    "query_id": "moral_tf1_021",
+    "text": "a kind heart finds friends",
+    "cluster_id": "cluster_023"
+  },
+  {
+    "query_id": "moral_tf1_023",
+    "text": "reliability fosters trust",
+    "cluster_id": "cluster_024"
+  },
+  {
+    "query_id": "moral_tf1_024",
+    "text": "compassion fosters understanding",
+    "cluster_id": "cluster_025"
+  },
+  {
+    "query_id": "moral_tf1_025",
+    "text": "wise actions speak louder than boasts",
+    "cluster_id": "cluster_026"
+  },
+  {
+    "query_id": "moral_tf1_026",
+    "text": "sincerity dispels suspicion",
+    "cluster_id": "cluster_027"
+  },
+  {
+    "query_id": "moral_tf1_030",
+    "text": "hopes can unite hearts",
+    "cluster_id": "cluster_028"
+  },
+  {
+    "query_id": "moral_tf1_031",
+    "text": "a bright mind sees beyond illusions",
+    "cluster_id": "cluster_029"
+  },
+  {
+    "query_id": "moral_tf1_032",
+    "text": "listening brings wisdom",
+    "cluster_id": "cluster_030"
+  },
+  {
+    "query_id": "moral_tf1_033",
+    "text": "truth stands the test of time",
+    "cluster_id": "cluster_031"
+  },
+  {
+    "query_id": "moral_tf1_034",
+    "text": "watchfulness prevents disaster",
+    "cluster_id": "cluster_032"
+  },
+  {
+    "query_id": "moral_tf1_035",
+    "text": "mistakes are stepping stones",
+    "cluster_id": "cluster_033"
+  },
+  {
+    "query_id": "moral_tf1_036",
+    "text": "love conquers fear",
+    "cluster_id": "cluster_034"
+  },
+  {
+    "query_id": "moral_tf1_037",
+    "text": "friendship can overcome obstacles",
+    "cluster_id": "cluster_035"
+  },
+  {
+    "query_id": "moral_tf1_038",
+    "text": "compassion reveals hidden beauty",
+    "cluster_id": "cluster_036"
+  },
+  {
+    "query_id": "moral_tf1_040",
+    "text": "the golden rule prevails",
+    "cluster_id": "cluster_037"
+  },
+  {
+    "query_id": "moral_tf1_041",
+    "text": "cleverness must be guided by conscience",
+    "cluster_id": "cluster_038"
+  },
+  {
+    "query_id": "moral_tf1_043",
+    "text": "illusions are shattered by reality",
+    "cluster_id": "cluster_039"
+  },
+  {
+    "query_id": "moral_tf1_044",
+    "text": "learning never ends",
+    "cluster_id": "cluster_040"
+  },
+  {
+    "query_id": "moral_tf1_045",
+    "text": "trust must be earned, not demanded",
+    "cluster_id": "cluster_041"
+  },
+  {
+    "query_id": "moral_tf1_048",
+    "text": "envy poisons happiness",
+    "cluster_id": "cluster_042"
+  },
+  {
+    "query_id": "moral_tf1_049",
+    "text": "rashness leads to regret",
+    "cluster_id": "cluster_043"
+  },
+  {
+    "query_id": "moral_tf1_050",
+    "text": "a humble spirit learns faster",
+    "cluster_id": "cluster_044"
+  },
+  {
+    "query_id": "moral_tf1_051",
+    "text": "fear limits growth",
+    "cluster_id": "cluster_045"
+  },
+  {
+    "query_id": "moral_tf1_052",
+    "text": "every challenge is a lesson",
+    "cluster_id": "cluster_046"
+  },
+  {
+    "query_id": "moral_tf1_054",
+    "text": "honesty outlives deceit",
+    "cluster_id": "cluster_047"
+  },
+  {
+    "query_id": "moral_tf1_055",
+    "text": "bravery arises from compassion",
+    "cluster_id": "cluster_048"
+  },
+  {
+    "query_id": "moral_tf1_056",
+    "text": "perspective can change the outcome",
+    "cluster_id": "cluster_049"
+  },
+  {
+    "query_id": "moral_tf1_058",
+    "text": "tolerance fosters peace",
+    "cluster_id": "cluster_050"
+  },
+  {
+    "query_id": "moral_tf1_059",
+    "text": "truths heal deep wounds",
+    "cluster_id": "cluster_051"
+  },
+  {
+    "query_id": "moral_tf1_061",
+    "text": "justice serves all",
+    "cluster_id": "cluster_052"
+  },
+  {
+    "query_id": "moral_tf1_062",
+    "text": "justice balances power",
+    "cluster_id": "cluster_053"
+  },
+  {
+    "query_id": "moral_tf1_063",
+    "text": "greed leads to downfall",
+    "cluster_id": "cluster_054"
+  },
+  {
+    "query_id": "moral_tf1_064",
+    "text": "persistence finds solutions",
+    "cluster_id": "cluster_055"
+  },
+  {
+    "query_id": "moral_tf1_065",
+    "text": "teamwork amplifies success",
+    "cluster_id": "cluster_056"
+  },
+  {
+    "query_id": "moral_tf1_068",
+    "text": "pride blinds one to danger",
+    "cluster_id": "cluster_057"
+  },
+  {
+    "query_id": "moral_tf1_070",
+    "text": "loyalty is proven through deeds",
+    "cluster_id": "cluster_058"
+  },
+  {
+    "query_id": "moral_tf1_072",
+    "text": "modesty preserves dignity",
+    "cluster_id": "cluster_059"
+  },
+  {
+    "query_id": "moral_tf1_073",
+    "text": "fairness promotes harmony",
+    "cluster_id": "cluster_060"
+  },
+  {
+    "query_id": "moral_tf1_074",
+    "text": "gratitude keeps the heart humble",
+    "cluster_id": "cluster_061"
+  },
+  {
+    "query_id": "moral_tf1_075",
+    "text": "oppression cannot silence truth",
+    "cluster_id": "cluster_062"
+  },
+  {
+    "query_id": "moral_tf1_077",
+    "text": "reflection clarifies confusion",
+    "cluster_id": "cluster_063"
+  },
+  {
+    "query_id": "moral_tf1_078",
+    "text": "resilience shapes the future",
+    "cluster_id": "cluster_064"
+  },
+  {
+    "query_id": "moral_tf1_080",
+    "text": "honesty is the best policy",
+    "cluster_id": "cluster_065"
+  },
+  {
+    "query_id": "moral_tf1_081",
+    "text": "oppression sows rebellion",
+    "cluster_id": "cluster_066"
+  },
+  {
+    "query_id": "moral_tf1_085",
+    "text": "open-mindedness prevents conflict",
+    "cluster_id": "cluster_067"
+  },
+  {
+    "query_id": "moral_tf1_086",
+    "text": "unity is stronger than division",
+    "cluster_id": "cluster_068"
+  },
+  {
+    "query_id": "moral_tf1_087",
+    "text": "caring for others is caring for oneself",
+    "cluster_id": "cluster_069"
+  },
+  {
+    "query_id": "moral_tf1_089",
+    "text": "creativity solves problems",
+    "cluster_id": "cluster_070"
+  },
+  {
+    "query_id": "moral_tf1_090",
+    "text": "giving fosters joy",
+    "cluster_id": "cluster_071"
+  },
+  {
+    "query_id": "moral_tf1_091",
+    "text": "true strength lies in protecting others",
+    "cluster_id": "cluster_072"
+  },
+  {
+    "query_id": "moral_tf1_092",
+    "text": "one good turn deserves another",
+    "cluster_id": "cluster_073"
+  },
+  {
+    "query_id": "moral_tf1_093",
+    "text": "wisdom grows from mistakes",
+    "cluster_id": "cluster_074"
+  },
+  {
+    "query_id": "moral_tf1_096",
+    "text": "gratitude nurtures relationships",
+    "cluster_id": "cluster_075"
+  },
+  {
+    "query_id": "moral_tf1_097",
+    "text": "appearances can be deceiving",
+    "cluster_id": "cluster_076"
+  },
+  {
+    "query_id": "moral_tf1_099",
+    "text": "integrity defines character",
+    "cluster_id": "cluster_077"
+  }
+]

@@ -63,6 +63,9 @@ experiments/*/results/embedding_cache/
 # Exp10 matrix pipeline run outputs
 experiments/*/results/pipeline_runs/
 
+# Cluster inspection dumps (transient, regenerable)
+experiments/*/cluster_inspection/
+
 # HuggingFace model weights (downloaded at runtime, not committed)
 ~/.cache/huggingface/
 .cache/huggingface/
