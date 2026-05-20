@@ -1,10 +1,7 @@
 import sys
-import json
 import importlib.util
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
-import pytest
 
 
 def _load(name, path):
@@ -55,6 +52,8 @@ def test_subsample_morals_samples_morals_then_takes_all_fables():
     morals = {p["moral_id"] for p in out}
     assert len(morals) == 2
     assert len(out) == 20  # 2 morals x 10 fables
+    # Pin which morals are selected so algorithmic regressions are caught.
+    assert morals == {"moral_tf1_000", "moral_tf1_003"}
 
 
 def test_subsample_morals_is_seed_stable():
