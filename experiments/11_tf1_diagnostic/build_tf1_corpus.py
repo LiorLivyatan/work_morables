@@ -6,6 +6,7 @@ cache. See docs/superpowers/specs/2026-05-06-tf1-synthetic-corpus-design.md.
 import argparse
 import json
 import random
+import re
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -16,6 +17,51 @@ from finetuning.lib import notify  # noqa: E402
 
 DEFAULT_RUNS_DIR = ROOT / "experiments" / "11_tf1_diagnostic" / "results" / "runs"
 DEFAULT_OUT = ROOT / "data" / "external" / "tf1_synthetic"
+
+LEAKAGE_PATTERNS = [
+    re.compile(r"the\s+(moral|lesson|teaching|takeaway)\s+(of|is|here\s+is)", re.IGNORECASE),
+    re.compile(r"this\s+(story|fable|tale)\s+teaches\s+(us|that)", re.IGNORECASE),
+    re.compile(r"^\s*moral\s*:", re.IGNORECASE | re.MULTILINE),
+]
+
+WORD_RE = re.compile(r"\b\w+\b")
+STOP_WORDS = {
+    "the", "a", "an", "is", "was", "were", "are", "be", "been", "being", "have", "has", "had",
+    "do", "does", "did", "will", "would", "could", "should", "may", "might", "shall", "can",
+    "to", "of", "in", "for", "on", "with", "at", "by", "from", "as", "into", "through",
+    "during", "before", "after", "and", "but", "or", "nor", "not", "so", "if", "than",
+    "that", "this", "it", "its", "his", "her", "their", "who", "which", "what", "when",
+    "where", "how", "all", "each", "every", "both", "few", "more", "most", "other", "some",
+    "such", "no", "only", "own", "same", "he", "she", "they", "them", "him", "we", "you",
+    "i", "me", "my", "your", "our",
+}
+
+
+def has_explicit_moral(fable_text: str, moral_text: str) -> bool:
+    """True if the fable contains an explicit restatement of the moral.
+
+    Two layers:
+    1. Regex patterns catching common LLM closing phrases like
+       "The moral of the story is...".
+    2. Per-sentence content-word overlap of at least 70% with the moral
+       (catches near-verbatim moral restatements without the regex tells).
+
+    Morals with fewer than 2 content words are exempt from layer 2 to
+    avoid spurious matches on tiny morals.
+    """
+    if not fable_text or not moral_text:
+        return False
+    for pattern in LEAKAGE_PATTERNS:
+        if pattern.search(fable_text):
+            return True
+    moral_content = set(WORD_RE.findall(moral_text.lower())) - STOP_WORDS
+    if len(moral_content) < 2:
+        return False
+    for sentence in re.split(r"[.!?]", fable_text):
+        sent_content = set(WORD_RE.findall(sentence.lower())) - STOP_WORDS
+        if moral_content and len(moral_content & sent_content) / len(moral_content) >= 0.70:
+            return True
+    return False
 
 
 def group_by_moral(rows: list[dict]) -> dict[str, list[dict]]:

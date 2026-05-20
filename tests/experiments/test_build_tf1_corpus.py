@@ -187,3 +187,40 @@ def test_run_build_deduplicates_on_duplicate_prompt_hash(tmp_path):
     p.write_text("\n".join(json.dumps(r) for r in samples))
     with pytest.raises(ValueError, match="only 1 cached rows"):
         run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=1)
+
+
+has_explicit_moral = build.has_explicit_moral
+
+
+def test_has_explicit_moral_detects_phrase_the_moral_of():
+    assert has_explicit_moral("...and the moral of the story is to never lie.", "honesty wins")
+
+
+def test_has_explicit_moral_detects_phrase_this_fable_teaches():
+    assert has_explicit_moral("They learned much. This fable teaches us that kindness wins.", "be kind")
+
+
+def test_has_explicit_moral_detects_phrase_lesson_here_is():
+    assert has_explicit_moral("In the end, the lesson here is patience.", "patience pays")
+
+
+def test_has_explicit_moral_detects_explicit_moral_label():
+    assert has_explicit_moral("A short story.\nMoral: always tell the truth.\n", "honesty wins")
+
+
+def test_has_explicit_moral_detects_high_overlap_sentence():
+    fable = "After the storm they learned that timely help earns lasting loyalty."
+    moral = "timely help earns lasting loyalty"
+    assert has_explicit_moral(fable, moral)
+
+
+def test_has_explicit_moral_false_when_clean():
+    fable = ("In a quiet glade lived a young deer who often wandered far from home. "
+             "One day a wise owl told him a strange riddle, and after much thought "
+             "the deer understood that he had been chasing illusions all along.")
+    moral = "patience pays"
+    assert not has_explicit_moral(fable, moral)
+
+
+def test_has_explicit_moral_safe_for_short_morals():
+    assert not has_explicit_moral("A quiet story with nothing notable.", "patience")
