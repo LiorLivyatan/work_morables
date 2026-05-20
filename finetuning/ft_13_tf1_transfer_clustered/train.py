@@ -31,3 +31,45 @@ def _subsample_morals(pairs: list[dict], size_cfg: dict, seed: int) -> list[dict
 
     n_fables = size_cfg["n_fables_per_moral"]
     return [p for mid in moral_ids for p in by_moral[mid][:n_fables]]
+
+
+def split_tf1_groups(
+    pairs: list[dict], seed: int, validation_ratio: float
+) -> tuple[list[dict], list[dict]]:
+    """Group-aware train/val split: morals (not rows) are sampled into the
+    validation set; all fables of a given moral go together. Prevents within-
+    moral leakage.
+    """
+    by_moral: dict[str, list[dict]] = defaultdict(list)
+    for p in pairs:
+        by_moral[p["moral_id"]].append(p)
+    moral_ids = sorted(by_moral.keys())
+    rng = random.Random(seed)
+    rng.shuffle(moral_ids)
+    n_val = max(1, round(len(moral_ids) * validation_ratio))
+    train_rows = [p for mid in moral_ids[n_val:] for p in by_moral[mid]]
+    val_rows = [p for mid in moral_ids[:n_val] for p in by_moral[mid]]
+    rng.shuffle(train_rows)
+    rng.shuffle(val_rows)
+    return train_rows, val_rows
+
+
+def make_tf1_dataset(pairs: list[dict], instruction: str):
+    """Build the 3-column training Dataset: anchor=instruction+moral,
+    positive=fable, label=integer-per-moral (for InfoNCELoss multi-positive
+    masking). In exact-cluster mode, label = moral_id integer index.
+    """
+    from datasets import Dataset
+
+    moral_to_label: dict[str, int] = {}
+    labels: list[int] = []
+    for p in pairs:
+        if p["moral_id"] not in moral_to_label:
+            moral_to_label[p["moral_id"]] = len(moral_to_label)
+        labels.append(moral_to_label[p["moral_id"]])
+
+    return Dataset.from_dict({
+        "anchor":   [f"{instruction}{p['moral']}" for p in pairs],
+        "positive": [p["story"] for p in pairs],
+        "label":    labels,
+    })
