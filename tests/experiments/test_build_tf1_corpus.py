@@ -187,3 +187,172 @@ def test_run_build_deduplicates_on_duplicate_prompt_hash(tmp_path):
     p.write_text("\n".join(json.dumps(r) for r in samples))
     with pytest.raises(ValueError, match="only 1 cached rows"):
         run_build(samples_path=p, n=2, seed=42, out_dir=tmp_path / "o", expected_unique_morals=1)
+
+
+has_explicit_moral = build.has_explicit_moral
+
+
+def test_has_explicit_moral_detects_phrase_the_moral_of():
+    assert has_explicit_moral("...and the moral of the story is to never lie.", "honesty wins")
+
+
+def test_has_explicit_moral_detects_phrase_this_fable_teaches():
+    assert has_explicit_moral("They learned much. This fable teaches us that kindness wins.", "be kind")
+
+
+def test_has_explicit_moral_detects_phrase_lesson_here_is():
+    assert has_explicit_moral("In the end, the lesson here is patience.", "patience pays")
+
+
+def test_has_explicit_moral_detects_explicit_moral_label():
+    assert has_explicit_moral("A short story.\nMoral: always tell the truth.\n", "honesty wins")
+
+
+def test_has_explicit_moral_detects_high_overlap_sentence():
+    fable = "After the storm they learned that timely help earns lasting loyalty."
+    moral = "timely help earns lasting loyalty"
+    assert has_explicit_moral(fable, moral)
+
+
+def test_has_explicit_moral_false_when_clean():
+    fable = ("In a quiet glade lived a young deer who often wandered far from home. "
+             "One day a wise owl told him a strange riddle, and after much thought "
+             "the deer understood that he had been chasing illusions all along.")
+    moral = "patience pays"
+    assert not has_explicit_moral(fable, moral)
+
+
+def test_has_explicit_moral_safe_for_short_morals():
+    assert not has_explicit_moral("A quiet story with nothing notable.", "patience")
+
+
+select_low_iou_clean = build.select_low_iou_clean
+
+
+def _row_with_iou(idx, moral, fable, iou):
+    return {
+        "idx": idx, "chunk": 0, "prompt_hash": f"h{idx}",
+        "moral": moral, "fable": fable,
+        "iou_no_stop": iou,
+    }
+
+
+def test_select_low_iou_clean_takes_n_lowest_iou_per_moral():
+    grouped = {
+        "moral_a": [
+            _row_with_iou(0, "moral_a", "clean fable 1", iou=0.05),
+            _row_with_iou(1, "moral_a", "clean fable 2", iou=0.02),
+            _row_with_iou(2, "moral_a", "clean fable 3", iou=0.03),
+            _row_with_iou(3, "moral_a", "clean fable 4", iou=0.04),
+        ],
+    }
+    out = select_low_iou_clean(grouped, n=2)
+    assert len(out["moral_a"]) == 2
+    assert [r["iou_no_stop"] for r in out["moral_a"]] == [0.02, 0.03]
+
+
+def test_select_low_iou_clean_filters_leaky_fables_before_sorting():
+    grouped = {
+        "honesty wins": [
+            _row_with_iou(0, "honesty wins", "The moral of the story is honesty.", iou=0.01),
+            _row_with_iou(1, "honesty wins", "Clean narrative about birds.", iou=0.02),
+            _row_with_iou(2, "honesty wins", "Another clean fable.", iou=0.05),
+        ],
+    }
+    out = select_low_iou_clean(grouped, n=2)
+    fables = [r["fable"] for r in out["honesty wins"]]
+    assert "The moral of the story is honesty." not in fables
+    assert fables == ["Clean narrative about birds.", "Another clean fable."]
+
+
+def test_select_low_iou_clean_raises_when_not_enough_clean():
+    grouped = {
+        "m": [
+            _row_with_iou(0, "m", "Moral: be kind.", iou=0.01),  # leaky
+            _row_with_iou(1, "m", "Clean.", iou=0.02),
+        ],
+    }
+    with pytest.raises(ValueError, match="only 1 fable remain"):
+        select_low_iou_clean(grouped, n=2)
+
+
+def test_run_build_with_selection_low_iou_clean_uses_clean_fables(tmp_path):
+    samples = [
+        {"idx": 0, "chunk": 0, "prompt_hash": "h0", "moral": "be kind",
+         "fable": "A clean story about a fox.", "iou_no_stop": 0.02},
+        {"idx": 1, "chunk": 0, "prompt_hash": "h1", "moral": "be kind",
+         "fable": "Another clean story.", "iou_no_stop": 0.03},
+        {"idx": 2, "chunk": 0, "prompt_hash": "h2", "moral": "be kind",
+         "fable": "The moral of the story is to be kind.", "iou_no_stop": 0.01},
+    ]
+    samples_path = tmp_path / "samples.jsonl"
+    samples_path.write_text("\n".join(json.dumps(r) for r in samples))
+
+    out_dir = tmp_path / "out"
+    build.run_build(
+        samples_path=samples_path, n=2, seed=42,
+        out_dir=out_dir, expected_unique_morals=1,
+        selection="low_iou_clean",
+    )
+    fables = json.loads((out_dir / "processed" / "fables_corpus.json").read_text())
+    fable_texts = [f["text"] for f in fables]
+    assert "The moral of the story is to be kind." not in fable_texts
+    assert len(fables) == 2
+
+
+def test_select_low_iou_clean_is_deterministic():
+    grouped = {
+        "m1": [
+            _row_with_iou(0, "m1", "clean a", 0.05),
+            _row_with_iou(1, "m1", "clean b", 0.02),
+            _row_with_iou(2, "m1", "clean c", 0.03),
+        ],
+        "m2": [
+            _row_with_iou(3, "m2", "clean d", 0.10),
+            _row_with_iou(4, "m2", "clean e", 0.04),
+        ],
+    }
+    a = select_low_iou_clean(grouped, n=2)
+    b = select_low_iou_clean(grouped, n=2)
+    assert [(r["idx"], r["iou_no_stop"]) for r in a["m1"]] == \
+           [(r["idx"], r["iou_no_stop"]) for r in b["m1"]]
+    assert [(r["idx"], r["iou_no_stop"]) for r in a["m2"]] == \
+           [(r["idx"], r["iou_no_stop"]) for r in b["m2"]]
+
+
+def test_run_build_rejects_unknown_selection(tmp_path):
+    samples = [
+        {"idx": 0, "chunk": 0, "prompt_hash": "h0", "moral": "be kind",
+         "fable": "Clean.", "iou_no_stop": 0.02},
+    ]
+    p = tmp_path / "s.jsonl"
+    p.write_text(json.dumps(samples[0]))
+    with pytest.raises(ValueError, match="unknown selection"):
+        build.run_build(
+            samples_path=p, n=1, seed=42, out_dir=tmp_path / "o",
+            expected_unique_morals=1, selection="bogus",
+        )
+
+
+def test_has_explicit_moral_layer2_off_for_2_content_word_morals():
+    # 'every challenge is a lesson' has 2 content words {challenge, lesson}.
+    # Old rule: 2/2 needed -> fired on any sentence with both words.
+    # New rule: 4 needed -> impossible from 2 -> never fires via layer 2.
+    fable = "Through every challenge they learned a hard lesson."
+    assert not has_explicit_moral(fable, "every challenge is a lesson")
+
+
+def test_has_explicit_moral_layer2_off_for_3_content_word_morals():
+    # 'honesty is the best policy' has 3 content words {honesty, best, policy}.
+    # Old rule: 3/3 needed -> could fire. New rule: 4 needed -> never via layer 2.
+    fable = "He realized honesty is the best policy in the long run."
+    assert not has_explicit_moral(fable, "honesty is the best policy")
+
+
+def test_has_explicit_moral_layer2_requires_all_4_for_4_word_morals():
+    # 'truth stands the test of time' has 4 content words {truth, stands, test, time}.
+    # Old rule: 3 of 4 in one sentence fired. New rule: needs all 4.
+    fable_3of4 = "Through the test of time their truth survived."  # truth, test, time = 3/4
+    fable_4of4 = "Truth stands the test of time in every age."     # all 4
+    assert not has_explicit_moral(fable_3of4, "truth stands the test of time")
+    assert has_explicit_moral(fable_4of4, "truth stands the test of time")

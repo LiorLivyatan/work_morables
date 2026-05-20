@@ -171,6 +171,7 @@ def train_model(
         metric_for_best_model=best_metric,
         greater_is_better=True if has_eval else None,
         dataloader_pin_memory=False,            # MPS doesn't support pin_memory
+        use_cpu=config.get("use_cpu", False),
         logging_steps=max(1, steps_per_epoch // 2),
         report_to="wandb" if wandb.run is not None else "none",
     )
