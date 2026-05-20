@@ -272,7 +272,7 @@ def test_select_low_iou_clean_raises_when_not_enough_clean():
             _row_with_iou(1, "m", "Clean.", iou=0.02),
         ],
     }
-    with pytest.raises(ValueError, match="only 1 fables remain"):
+    with pytest.raises(ValueError, match="only 1 fable remain"):
         select_low_iou_clean(grouped, n=2)
 
 
@@ -298,3 +298,37 @@ def test_run_build_with_selection_low_iou_clean_uses_clean_fables(tmp_path):
     fable_texts = [f["text"] for f in fables]
     assert "The moral of the story is to be kind." not in fable_texts
     assert len(fables) == 2
+
+
+def test_select_low_iou_clean_is_deterministic():
+    grouped = {
+        "m1": [
+            _row_with_iou(0, "m1", "clean a", 0.05),
+            _row_with_iou(1, "m1", "clean b", 0.02),
+            _row_with_iou(2, "m1", "clean c", 0.03),
+        ],
+        "m2": [
+            _row_with_iou(3, "m2", "clean d", 0.10),
+            _row_with_iou(4, "m2", "clean e", 0.04),
+        ],
+    }
+    a = select_low_iou_clean(grouped, n=2)
+    b = select_low_iou_clean(grouped, n=2)
+    assert [(r["idx"], r["iou_no_stop"]) for r in a["m1"]] == \
+           [(r["idx"], r["iou_no_stop"]) for r in b["m1"]]
+    assert [(r["idx"], r["iou_no_stop"]) for r in a["m2"]] == \
+           [(r["idx"], r["iou_no_stop"]) for r in b["m2"]]
+
+
+def test_run_build_rejects_unknown_selection(tmp_path):
+    samples = [
+        {"idx": 0, "chunk": 0, "prompt_hash": "h0", "moral": "be kind",
+         "fable": "Clean.", "iou_no_stop": 0.02},
+    ]
+    p = tmp_path / "s.jsonl"
+    p.write_text(json.dumps(samples[0]))
+    with pytest.raises(ValueError, match="unknown selection"):
+        build.run_build(
+            samples_path=p, n=1, seed=42, out_dir=tmp_path / "o",
+            expected_unique_morals=1, selection="bogus",
+        )

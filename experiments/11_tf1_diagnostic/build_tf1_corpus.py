@@ -111,8 +111,9 @@ def select_low_iou_clean(grouped: dict[str, list[dict]], n: int) -> dict[str, li
     for moral, rows in grouped.items():
         clean = [r for r in rows if not has_explicit_moral(r["fable"], r["moral"])]
         if len(clean) < n:
+            n_word = f"{len(clean)} fable" + ("" if len(clean) == 1 else "s")
             raise ValueError(
-                f"After leakage filter, only {len(clean)} fables remain for "
+                f"After leakage filter, only {n_word} remain for "
                 f"{moral!r}; need {n}. Consider re-streaming more TF1 rows."
             )
         clean.sort(key=lambda r: r["iou_no_stop"])
@@ -192,6 +193,22 @@ def _write_readme(out_dir: Path, n: int, seed: int, source: Path,
                   n_morals: int, selection: str = "random") -> None:
     out_dir.mkdir(parents=True, exist_ok=True)
     rel_source = source.relative_to(ROOT) if source.is_relative_to(ROOT) else source
+
+    # Only the random strategy depends on the seed; for low_iou_clean the
+    # selection is deterministic (sorted by iou) and seed is irrelevant.
+    if selection == "random":
+        seed_line = f"- Seed: {seed}\n"
+        build_cmd = (
+            f"./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py "
+            f"--selection {selection} --n {n} --seed {seed}"
+        )
+    else:
+        seed_line = ""
+        build_cmd = (
+            f"./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py "
+            f"--selection {selection} --n {n}"
+        )
+
     readme = f"""# TF1-EN-3M synthetic — MORABLES-shaped derivative
 
 Source: https://huggingface.co/datasets/klusai/ds-tf1-en-3m (MIT)
@@ -206,12 +223,11 @@ via experiments/11_tf1_diagnostic/check_iou.py (--n 50000 --chunks 10).
 - N per moral: {n}
 - Total morals: {n_morals}
 - Total fables: {n * n_morals}
-- Seed: {seed}
-- Built: {datetime.now().isoformat(timespec='seconds')}
+{seed_line}- Built: {datetime.now().isoformat(timespec='seconds')}
 
 ## Build commands
 
-./run.sh experiments/11_tf1_diagnostic/build_tf1_corpus.py --selection {selection} --n {n}
+{build_cmd}
 ./run.sh experiments/11_tf1_diagnostic/cluster_tf1_morals.py --mode exact --in {out_dir}
 
 See experiments/11_tf1_diagnostic/REPORT.md for the analysis that motivated this derivative.
