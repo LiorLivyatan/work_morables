@@ -420,6 +420,7 @@ def train_model(
         gradient_checkpointing=bool(model_cfg.get("gradient_checkpointing", False)),
         learning_rate=float(model_cfg["learning_rate"]),
         seed=int(config["seed"]),
+        use_cpu=bool(model_cfg.get("use_cpu", False)),
         save_strategy="epoch",
         save_total_limit=2,
         eval_strategy="epoch",
