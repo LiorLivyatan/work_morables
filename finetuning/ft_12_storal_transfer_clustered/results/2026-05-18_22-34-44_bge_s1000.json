@@ -1,0 +1,95 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "early_stopping_metric": "ndcg@10",
+  "exact_moral_masking": true,
+  "result": {
+    "model_alias": "bge",
+    "model_config": {
+      "model_name": "BAAI/bge-base-en-v1.5",
+      "batch_size": 32,
+      "gradient_accumulation_steps": 1,
+      "gradient_checkpointing": false,
+      "learning_rate": 2e-05,
+      "max_seq_length": 512,
+      "query_instruction": "",
+      "model_output_dir": "/data/lior/ft_12_storal_transfer_clustered/models/bge"
+    },
+    "size": "s1000",
+    "size_config": {
+      "n": 1000,
+      "length_range": [
+        30,
+        300
+      ],
+      "description": "Wider length-matched STORAL sample."
+    },
+    "storal_stats": {
+      "raw_total": 1779,
+      "clean_total": 1675,
+      "after_length_filter": 1032,
+      "selected": 1000,
+      "unique_normalized_morals": 929,
+      "exact_duplicate_moral_groups": 62,
+      "exact_duplicate_moral_rows": 133,
+      "length_range": [
+        30,
+        300
+      ],
+      "n_requested": 1000
+    },
+    "train_rows": 900,
+    "validation_rows": 100,
+    "model_dir": "/data/lior/ft_12_storal_transfer_clustered/models/bge/s1000",
+    "eval_doc_configs": [
+      "raw"
+    ],
+    "summary_generator": "gemini",
+    "eval_results": {
+      "raw": {
+        "summary_generator": null,
+        "rankings_path": "/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/results/rankings/bge__s1000__raw__none.json",
+        "metrics": {
+          "MRR": 0.1844610213745392,
+          "MAP": 0.14220680186520124,
+          "R-Precision": 0.09191616766467064,
+          "Mean Rank": 104.71706586826348,
+          "Median Rank": 35.5,
+          "n_queries": 668,
+          "Hit@1": 0.10778443113772455,
+          "Recall@1": 0.07549900199600798,
+          "P@1": 0.10778443113772455,
+          "NDCG@1": 0.10778443113772455,
+          "Hit@5": 0.24550898203592814,
+          "Recall@5": 0.18260978043912177,
+          "P@5": 0.05119760479041917,
+          "NDCG@5": 0.14269197722550764,
+          "Hit@10": 0.3278443113772455,
+          "Recall@10": 0.25054890219560877,
+          "P@10": 0.03682634730538922,
+          "NDCG@10": 0.16728478407315925,
+          "Hit@15": 0.38323353293413176,
+          "Recall@15": 0.29159181636726544,
+          "P@15": 0.028842315369261476,
+          "NDCG@15": 0.179217119626693,
+          "Hit@50": 0.5508982035928144,
+          "Recall@50": 0.454441117764471,
+          "P@50": 0.014131736526946109,
+          "NDCG@50": 0.21751854439347285,
+          "Hit@100": 0.6796407185628742,
+          "Recall@100": 0.5819111776447106,
+          "P@100": 0.009041916167664673,
+          "NDCG@100": 0.24032620748024053,
+          "Hit@200": 0.8068862275449101,
+          "Recall@200": 0.7371007984031936,
+          "P@200": 0.0058308383233532934,
+          "NDCG@200": 0.2650087221083799,
+          "Hit@300": 0.8727544910179641,
+          "Recall@300": 0.8285179640718564,
+          "P@300": 0.004421157684630739,
+          "NDCG@300": 0.27817503249740083
+        }
+      }
+    }
+  }
+}

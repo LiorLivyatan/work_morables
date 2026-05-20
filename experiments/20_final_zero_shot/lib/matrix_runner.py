@@ -229,6 +229,18 @@ def parse_params(params: str) -> float | None:
 
 
 def batch_size_for_model(meta: dict[str, str]) -> int:
+    model_id = meta.get("api name", "")
+    if model_id in {
+        "Alibaba-NLP/gte-Qwen2-7B-instruct",
+        "GritLM/GritLM-7B",
+        "Salesforce/SFR-Embedding-Mistral",
+    }:
+        return 1
+    if model_id in {
+        "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+        "NovaSearch/stella_en_1.5B_v5",
+    }:
+        return 4
     params_b = parse_params(meta.get("Params", ""))
     model_type = meta.get("type", "").lower()
     if params_b is None:
@@ -240,8 +252,61 @@ def batch_size_for_model(meta: dict[str, str]) -> int:
     return 32
 
 
+def patch_rope_theta_compat(model_id: str) -> None:
+    if model_id in {
+        "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+        "Alibaba-NLP/gte-Qwen2-7B-instruct",
+        "NovaSearch/stella_en_1.5B_v5",
+    }:
+        try:
+            from transformers.cache_utils import DynamicCache
+        except Exception:
+            DynamicCache = None
+        if DynamicCache is not None and not hasattr(DynamicCache, "from_legacy_cache"):
+            @classmethod
+            def from_legacy_cache(cls, past_key_values=None):
+                return cls()
+
+            DynamicCache.from_legacy_cache = from_legacy_cache
+        if DynamicCache is not None and not hasattr(DynamicCache, "get_usable_length"):
+            def get_usable_length(self, new_seq_length, layer_idx=0):
+                return 0
+
+            DynamicCache.get_usable_length = get_usable_length
+        if DynamicCache is not None and not hasattr(DynamicCache, "to_legacy_cache"):
+            def to_legacy_cache(self):
+                return None
+
+            DynamicCache.to_legacy_cache = to_legacy_cache
+
+    if model_id in {
+        "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+        "Alibaba-NLP/gte-Qwen2-7B-instruct",
+        "NovaSearch/stella_en_1.5B_v5",
+    }:
+        try:
+            from transformers.models.qwen2.configuration_qwen2 import Qwen2Config
+        except Exception:
+            return
+        if not hasattr(Qwen2Config, "rope_theta"):
+            Qwen2Config.rope_theta = 1_000_000.0
+
+    if model_id in {
+        "GritLM/GritLM-7B",
+        "Salesforce/SFR-Embedding-Mistral",
+    }:
+        try:
+            from transformers.models.mistral.configuration_mistral import MistralConfig
+        except Exception:
+            return
+        if not hasattr(MistralConfig, "rope_theta"):
+            MistralConfig.rope_theta = 10_000.0
+
+
 def load_embedding_model(model_id: str, device: str, meta: dict[str, str]):
     from sentence_transformers import SentenceTransformer
+
+    patch_rope_theta_compat(model_id)
 
     kwargs: dict[str, Any] = {"trust_remote_code": True}
     model_kwargs: dict[str, Any] = {}

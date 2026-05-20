@@ -1,0 +1,34 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "models": [
+    "qwen3",
+    "qwen3_4b",
+    "qwen3_0_6b"
+  ],
+  "sizes": [
+    "s200",
+    "s500",
+    "s1000",
+    "sfull"
+  ],
+  "eval_doc_configs": [
+    "raw",
+    "direct_moral_only",
+    "conceptual_abstract_only",
+    "cot_proverb_only",
+    "fable_direct_moral",
+    "direct_moral_fable",
+    "fable_conceptual_abstract",
+    "conceptual_abstract_fable",
+    "fable_cot_proverb",
+    "cot_proverb_fable",
+    "proverb_only",
+    "fable_proverb",
+    "proverb_fable"
+  ],
+  "summary_generator": "gemma4-31B",
+  "completed": 12,
+  "errors": [],
+  "result_files_written": 12
+}

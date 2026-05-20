@@ -1,0 +1,74 @@
+{
+  "config": {
+    "rankings_glob": "/Users/liorlivyatan/LocalProjects/Thesis/work_morables/finetuning/ft_11_clustered/results/rankings/linq__raw__none__fold_*.json",
+    "n_queries": 668,
+    "n_docs": 709,
+    "n_pair_observations": 473612,
+    "n_relevant_observations": 1085
+  },
+  "pair_level": {
+    "all_token_iou_vs_dense_score": {
+      "pearson": 0.06364027511098125,
+      "spearman": 0.060461145598946844,
+      "n": 473612
+    },
+    "content_iou_vs_dense_score": {
+      "pearson": 0.06109415451854929,
+      "spearman": 0.05993582342327391,
+      "n": 473612
+    },
+    "all_token_iou_vs_dense_reciprocal_rank": {
+      "pearson": 0.015699283519189054,
+      "spearman": 0.016416555930863486,
+      "n": 473612
+    },
+    "content_iou_vs_dense_reciprocal_rank": {
+      "pearson": 0.06265447471385271,
+      "spearman": 0.06518079697331465,
+      "n": 473612
+    }
+  },
+  "relevant_pair_level": {
+    "all_token_iou_vs_dense_score": {
+      "pearson": 0.1017913109843303,
+      "spearman": 0.10578475798204852,
+      "n": 1085
+    },
+    "content_iou_vs_dense_score": {
+      "pearson": 0.1097466030907921,
+      "spearman": 0.10572657040770472,
+      "n": 1085
+    },
+    "all_token_iou_vs_dense_reciprocal_rank": {
+      "pearson": 0.09083101076130749,
+      "spearman": 0.08533393567695588,
+      "n": 1085
+    },
+    "content_iou_vs_dense_reciprocal_rank": {
+      "pearson": 0.18576029751909146,
+      "spearman": 0.1669158078487596,
+      "n": 1085
+    }
+  },
+  "query_level": {
+    "max_relevant_content_iou_vs_best_relevant_rr": {
+      "pearson": 0.19505104405082618,
+      "spearman": 0.2198874725229504,
+      "n": 668
+    },
+    "max_relevant_content_iou_vs_best_relevant_score": {
+      "pearson": 0.21782571391318048,
+      "spearman": 0.23817894391980565,
+      "n": 668
+    },
+    "top1_content_iou_vs_top1_correct": {
+      "pearson": 0.12190166284905679,
+      "spearman": 0.13035744753536363,
+      "n": 668
+    },
+    "best_lexical_doc_is_relevant_rate": 0.03143712574850299,
+    "median_best_lexical_doc_dense_rank": 186.5
+  },
+  "summary_path": "experiments/21_lexical_controls/results/2026-05-19_12-57-31/overlap_analysis/overlap_summary.json",
+  "per_query_path": "experiments/21_lexical_controls/results/2026-05-19_12-57-31/overlap_analysis/per_query_overlap.csv"
+}

@@ -1,4 +1,4 @@
-# ParabeLink — Paper Structure
+# MoraLink — Paper Structure
 
 > ARR May 2026 → ACL 2026 | 8 pages main body + unlimited references
 
@@ -13,7 +13,7 @@
 - **Para 1** — Broad: moral reasoning and narrative understanding pose a fundamental challenge...
 - **Para 2** — Narrow: retrieval across divergent surface forms (moral ≈ 12 words, fable ≈ 133 words, lexical IoU = 0.011)
 - **Para 3** — Gap: no benchmark exists for this; strong off-the-shelf models plateau at MRR 0.210
-- **Para 4** — "We introduce **ParabeLink**, a benchmark designed to..."
+- **Para 4** — "We introduce **MoraLink**, a benchmark designed to..."
 - **Para 5** — Contributions:
   1. We introduce the benchmark and formalize the task
   2. We evaluate off-the-shelf and fine-tuned embedding models under a rigorous 5-fold CV protocol
@@ -34,27 +34,32 @@ InfoNCE / MultipleNegativesRankingLoss, STORAL (Guan et al., NAACL 2022), hard n
 
 ---
 
-## §3 The ParabeLink Benchmark (~2 columns)
+## §3 The MoraLink Benchmark (~2 columns)
 
 ### 3.1 Problem Formulation
-Formal notation: query `q` = moral statement, corpus `C` = 709 fables, retrieve `f*`.
-Why it's hard: near-zero lexical overlap (IoU = 0.011), abstraction gap, 709-way retrieval.
+Formal notation: query `q` = unique moral statement, corpus `C` = 709 fables, retrieve all relevant fables `R_q`.
+Why it's hard: near-zero lexical overlap (IoU = 0.011), abstraction gap, full-corpus 709-way retrieval.
 
 ### 3.2 The MORABLES Dataset
-Source: Marcuzzo et al. (2025). Stats: 709 pairs, avg 133 / 12 words, genre diversity.
+Source: Marcuzzo et al. (2025). Stats: 709 fables, 668 unique moral queries, avg 133 / 12 words, genre diversity.
+
+### 3.3 Clustered Multi-Positive Labels
+Explain why single-label scoring is insufficient: exact duplicate and near-paraphrase morals create false negatives.
+Official benchmark: 558 moral clusters, 1,085 moral-to-fable qrel rows, multi-positive relevance sets.
+Cluster type counts over unique queries: 469 singleton, 16 exact duplicate, 183 near-paraphrase.
 
 > **Figure 1:** Illustrative moral ↔ fable pair showing the lexical divergence.
 
-### 3.3 Measuring Task Difficulty
-Random baseline R@1 = 0.14%. Oracle ceiling R@1 = 82.7% (Gemini re-ranker on gold moral text).
-This oracle gap is the paper's central motivation.
+### 3.4 Measuring Task Difficulty
+Random baseline R@1 = 0.14%. Gold-moral appended upper bound R@1 = 82.7%.
+This upper-bound gap is the paper's central motivation.
 
 ---
 
 ## §4 Experiments (~1.5 columns)
 
 ### 4.1 Evaluation Protocol
-5-fold GroupKFold CV; metrics: MRR (primary), R@1, R@5, NDCG@10, ± std across folds.
+5-fold cluster-aware CV; metrics: MRR (primary), MAP, Hit@k, Recall@k, NDCG@10, R-Precision, ± std across folds.
 
 ### 4.2 Off-the-Shelf Retrieval Baselines
 Zero-shot embedders: BGE-base (≈ 0.15 MRR), **Linq-Embed-Mistral = 0.210 MRR** (best).
@@ -85,15 +90,14 @@ Shows out-of-domain augmentation does not substitute for task-specific signal.
 These are masked to −∞ in the InfoNCE denominator rather than treated as true negatives.
 **MRR 0.435 ± 0.055** — modest absolute gain, improved training stability.
 
-### 4.7 Transfer from Concept-Level Tasks *(ft_10 — in progress)*
-Motivation: IdioLink shares the same *align-meaning-across-form* inductive prior.
-Four strategies:
-- **Option A** — Zero-shot transfer (fine-tune on IdioLink only, eval on MORABLES)
-- **Option B** — Sequential pre-training (IdioLink → MORABLES)
-- **Option C** — Data mixing (IdioLink triplets mixed into MORABLES batches)
-- **Option D** — Hard-negative curriculum transfer (IdioLink curriculum design applied to MORABLES)
-
-> Present whichever options are completed by submission. §4.7 can be cut cleanly if ft_10 is not ready.
+### 4.7 Shortcut and Robustness Controls
+Controls motivated by reviewer concerns about shortcut use:
+- Lexical baselines: BM25 and TF-IDF. Clustered benchmark results: TF-IDF MRR 0.091 / MRR@10 0.080 / MAP@10 0.063 / Hit@10 15.9% / Recall@100 31.2%; BM25 MRR 0.084 / MRR@10 0.073 / MAP@10 0.057 / Hit@10 15.9% / Recall@100 31.5%.
+- Lexical-overlap correlation with rank and score. For clustered LINQ raw rankings, content-token IoU weakly correlates with dense score across all query-document pairs (Spearman 0.060) and with dense reciprocal rank (Spearman 0.065). Query-level max relevant content IoU vs best relevant reciprocal rank is modest (Spearman 0.220). The best lexical-overlap document is relevant for only 3.1% of queries.
+- Surface-only baselines: title-only, first-sentence-only, first-50-words. TF-IDF MRRs are 0.033, 0.038, and 0.055 respectively; BM25 MRRs are 0.030, 0.033, and 0.051. These controls remain far below full-fable lexical baselines and clustered dense results.
+- MORABLES adversarial variants: character swaps, adjective injections, tautologies
+- Lexical robustness on MORABLES adversarial story variants. Character-swap perturbations reduce TF-IDF MRR from 0.091 to 0.078, and combined pre/post character+adjective perturbations reduce it to 0.069; pure injection variants remain near the original lexical baseline.
+- Error correlations: character overlap, theme overlap, fable length, attractor fables
 
 ---
 
@@ -103,7 +107,7 @@ Four strategies:
 
 | Model / Method | MRR | R@1 | R@5 | NDCG@10 |
 |---|---|---|---|---|
-| *Oracle ceiling* | — | 82.7% | — | — |
+| *Gold-moral appended upper bound* | — | 82.7% | — | — |
 | Random baseline | — | 0.14% | — | — |
 | BGE-base, zero-shot | ~0.15 | — | — | — |
 | Linq-Embed-Mistral, zero-shot | 0.210 | — | — | — |
@@ -112,7 +116,9 @@ Four strategies:
 | Linq + LoRA (ft_02) | 0.318 | — | — | — |
 | Linq + LoRA + Hard Neg (ft_03) | 0.432 | — | — | — |
 | Linq + LoRA + Hard Neg + FN Mask (ft_09) | **0.435** | — | — | — |
-| IdioLink transfer (ft_10) | TBD | — | — | — |
+| TF-IDF lexical baseline | 0.091 | 4.8% | 12.4% | 0.082 |
+| BM25 lexical baseline | 0.084 | 4.2% | 11.4% | 0.077 |
+| Remaining shortcut controls | TBD | TBD | TBD | TBD |
 
 ### 5.2 Findings
 
@@ -128,8 +134,8 @@ ft_03 (+0.114 MRR over ft_02) shows that exposing the model to morally adjacent 
 **Fourth, data augmentation from related corpora has limited and asymmetric returns.**
 STORAL mixing offers marginal gains at low ratios and degrades at high ratios. STORAL pre-training (ft_07, Linq-s500 = 0.357) underperforms directly fine-tuned Linq (ft_02 = 0.318) — domain shift from story-moral to fable-moral narrows the transfer benefit.
 
-**Fifth, a persistent oracle gap remains.**
-Best fine-tuned MRR = 0.435, yet oracle R@1 = 82.7%. This gap is the benchmark's core challenge for future work.
+**Fifth, a persistent upper-bound gap remains.**
+Best fine-tuned MRR = 0.435, yet the gold-moral appended upper bound reaches R@1 = 82.7%. This gap is the benchmark's core challenge for future work.
 
 **Summary of key observations.**
 - *(bulleted list — write after all sections are drafted)*
@@ -138,7 +144,7 @@ Best fine-tuned MRR = 0.435, yet oracle R@1 = 82.7%. This gap is the benchmark's
 
 ## §6 Conclusions (~0.5 column)
 
-"We introduce **ParabeLink**, a benchmark..."
+"We introduce **MoraLink**, a benchmark..."
 One sentence per contribution.
 Future directions: better oracle elicitation, multilingual extension, LLM-as-retriever approaches.
 
@@ -181,7 +187,7 @@ Full ft_07 results table (BGE / Linq / Qwen3 × s500 / s1000 / sfull).
 | ft_07 | STORAL pre-training | Linq-s500 MRR 0.357 | §4.4 + §5 Finding 4 |
 | ft_08 | Clean Linq+LoRA sanity check | — | Folded into ft_03 or Appendix |
 | ft_09 | FN masking via sim matrix | MRR 0.435 ± 0.055 | §4.6 + §5 Finding 3 |
-| ft_10 | IdioLink transfer (4 options) | TBD | §4.7 + §5 (if done) |
+| Shortcut controls | BM25/TF-IDF/adversarial/surface-only controls | TBD | §4.7 + §5 |
 
 ---
 

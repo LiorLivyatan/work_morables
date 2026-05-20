@@ -1,0 +1,80 @@
+# Experiment 21: second-stage reranking over saved FT12 STORAL rankings.
+
+seed: 42
+selection_metric: Recall@100
+default_top_n: 15
+default_candidate_k: 100
+ks: [1, 5, 10, 15, 50, 100, 200, 300]
+
+paths:
+  ft12_results_csv: finetuning/ft_12_storal_transfer_clustered/results/ft12_comprehensive_results.csv
+  ft12_rankings_dir: finetuning/ft_12_storal_transfer_clustered/results/rankings
+  morals: data/clustered/morals_unique_corpus.json
+  fables: data/clustered/fables_corpus.json
+  qrels: data/clustered/qrels_moral_to_fable_clustered.json
+  summary_root: experiments/20_final_zero_shot/summary_inputs
+
+doc_text_mode: source_config
+
+rerankers:
+  mock_lexical:
+    model_id: mock_lexical
+    type: deterministic_dry_run
+    batch_size: 64
+    description: "Local no-download dry-run scorer based on lexical overlap."
+
+  bge_reranker_large:
+    model_id: BAAI/bge-reranker-large
+    type: cross_encoder
+    batch_size: 16
+
+  bge_reranker_v2_m3:
+    model_id: BAAI/bge-reranker-v2-m3
+    type: cross_encoder
+    batch_size: 16
+
+  msmarco_minilm_l6:
+    model_id: cross-encoder/ms-marco-MiniLM-L-6-v2
+    type: cross_encoder
+    batch_size: 64
+
+  jina_reranker_v2_base_multilingual:
+    model_id: jinaai/jina-reranker-v2-base-multilingual
+    type: cross_encoder
+    batch_size: 16
+    trust_remote_code: true
+
+  mxbai_rerank_large_v1:
+    model_id: mixedbread-ai/mxbai-rerank-large-v1
+    type: cross_encoder
+    batch_size: 16
+
+  qwen3_reranker_0_6b:
+    model_id: Qwen/Qwen3-Reranker-0.6B
+    type: qwen_causal_lm
+    batch_size: 4
+    max_length: 8192
+    torch_dtype: float16
+    prompt_name: moral_fable
+    prompt: "Given a moral statement, determine whether the fable conveys that moral."
+    description: "Qwen3 instruction-aware reranker via official CausalLM yes/no scoring path."
+
+  qwen3_reranker_4b:
+    model_id: Qwen/Qwen3-Reranker-4B
+    type: qwen_causal_lm
+    batch_size: 1
+    max_length: 8192
+    torch_dtype: float16
+    prompt_name: moral_fable
+    prompt: "Given a moral statement, determine whether the fable conveys that moral."
+    description: "Larger Qwen3 reranker via official CausalLM yes/no scoring path."
+
+  qwen3_reranker_8b:
+    model_id: Qwen/Qwen3-Reranker-8B
+    type: qwen_causal_lm
+    batch_size: 1
+    max_length: 8192
+    torch_dtype: float16
+    prompt_name: moral_fable
+    prompt: "Given a moral statement, determine whether the fable conveys that moral."
+    description: "Largest Qwen3 reranker via official CausalLM yes/no scoring path; likely slow on one 3090."

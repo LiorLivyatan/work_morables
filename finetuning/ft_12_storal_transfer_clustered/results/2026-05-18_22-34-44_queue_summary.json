@@ -1,0 +1,18 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "models": [
+    "bge"
+  ],
+  "sizes": [
+    "s500",
+    "s1000"
+  ],
+  "eval_doc_configs": [
+    "raw"
+  ],
+  "summary_generator": "gemini",
+  "completed": 2,
+  "errors": [],
+  "result_files_written": 2
+}

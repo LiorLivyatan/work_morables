@@ -70,8 +70,12 @@ class InfoNCELoss(nn.Module):
 
         # ── Type 2: moral_i vs other morals in the batch ─────────────────────
         moral_sim = torch.mm(moral_emb, moral_emb.T) / τ  # (B, B)
-        # Mask diagonal — moral vs itself carries no information
-        moral_sim = moral_sim.masked_fill(torch.eye(B, dtype=torch.bool, device=device), float("-inf"))
+        # Mask diagonal and same-label morals. With clustered labels, duplicate
+        # anchors from the same moral cluster are positives, not negatives.
+        moral_mask = torch.eye(B, dtype=torch.bool, device=device)
+        if labels is not None:
+            moral_mask = moral_mask | (labels.unsqueeze(0) == labels.unsqueeze(1))
+        moral_sim = moral_sim.masked_fill(moral_mask, float("-inf"))
 
         # ── Combine all negatives ─────────────────────────────────────────────
         # Column layout: [fable_sim (B) | hard_neg (1, if present) | moral_sim (B)]

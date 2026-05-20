@@ -1,10 +1,10 @@
-# ParabeLink — Paper Writing Guide
+# MoraLink — Paper Writing Guide
 
 ## What This Paper Is
 
-**ParabeLink** is a retrieval benchmark investigating whether embedding models can perform abstract moral reasoning: given a short moral lesson, can a system retrieve the fable that teaches it from a corpus of 709 candidates (MORABLES dataset, Marcuzzo et al., EMNLP 2025)?
+**MoraLink** is a retrieval benchmark investigating whether embedding models can perform abstract moral reasoning: given a short moral lesson, can a system retrieve the fable that teaches it from a corpus of 709 candidates (MORABLES dataset, Marcuzzo et al., EMNLP 2025)?
 
-The core finding is a hard gap between current models and an oracle ceiling, and a systematic exploration of what closes it — summarization, fine-tuning with contrastive loss (STORAL augmentation), symmetric representation, and query expansion.
+The core finding is a hard gap between current models and a gold-moral appended upper bound, and a systematic exploration of what closes it — summarization, fine-tuning with contrastive loss (STORAL augmentation), symmetric representation, and query expansion.
 
 ---
 
@@ -29,7 +29,7 @@ The core finding is a hard gap between current models and an oracle ceiling, and
 Abstract                      (~150–180 words)
 1  Introduction               (~1.5 columns)
 2  Related Work               (~1.5 columns, 3 subsections)
-3  The ParabeLink Benchmark   (~2 columns)
+3  The MoraLink Benchmark   (~2 columns)
    3.1 Problem Formulation
    3.2 Dataset
 4  Experiments                (~1.5 columns)
@@ -66,7 +66,7 @@ Paragraph flow:
 1. Broad domain framing with dense citations
 2. Narrow to the specific problem / gap
 3. Why it's hard / what's missing
-4. "In this work, we introduce **ParabeLink**, a benchmark..." — introduce with bold name
+4. "In this work, we introduce **MoraLink**, a benchmark..." — introduce with bold name
 5. "Building on [MORABLES dataset]..."
 6. Numbered contribution list: "Our contributions are threefold: 1. We introduce... 2. We provide... 3. We show..."
 
@@ -82,7 +82,9 @@ Likely subsections:
 
 ### Main Benchmark Section
 - Opens with a **Problem Formulation** subsection (formal notation, task definition)
-- Uses bold inline subheadings within paragraphs: **Dataset definition.** **Data generation.** **Human validation.**
+- Defines clustered multi-positive relevance as the official benchmark: 668 unique moral queries, 709 fables, 558 moral clusters, 1,085 qrel rows
+- Explains why single-label scoring creates false negatives for duplicate and near-paraphrase morals
+- Keeps LLM-generated summaries framed as method-side interventions, not benchmark data
 - Figure 1 = illustrative example of the query–document mismatch
 
 ### Experiments / Results
@@ -92,7 +94,7 @@ Likely subsections:
 - End Results with: **Summary of key observations.** as a bulleted list
 
 ### Conclusions
-- Opens: "We introduce **ParabeLink**, ..."
+- Opens: "We introduce **MoraLink**, ..."
 - Recaps each contribution in 1 sentence
 - Closes with broader implications / future directions
 
@@ -112,7 +114,7 @@ Likely subsections:
 |---|---|
 | Tense | Present for describing this paper's work; past for prior work |
 | Voice | Active preferred: "We evaluate", "We introduce", "We show" |
-| Benchmark name | **ParabeLink** in bold on first mention per section |
+| Benchmark name | **MoraLink** in bold on first mention per section |
 | "in order to" | Replace with "to" |
 | Em-dash | Use `---` for asides (no spaces) |
 | Numerals | Spell out one–nine; use digits for 10+ |
@@ -143,7 +145,7 @@ We write **section by section**, in this order:
 1. Abstract (after all sections drafted — written last but placed first)
 2. Introduction
 3. Related Work
-4. The ParabeLink Benchmark (§3)
+4. The MoraLink Benchmark (§3)
 5. Experiments (§4)
 6. Results and Discussion (§5)
 7. Conclusions
@@ -164,7 +166,11 @@ Each session: pick one section, draft it fully, then revise together.
 | Avg moral length | ~12 words |
 | Lexical overlap (IoU) | 0.011 (near zero) |
 | Random baseline R@1 | 0.14% |
-| Oracle ceiling R@1 | 82.7% |
+| Gold-moral appended upper bound R@1 | 82.7% |
+| TF-IDF lexical control, clustered | MRR 0.091 / MRR@10 0.080 / MAP@10 0.063 / R@1 4.8% / R@10 15.9% / Recall@100 31.2% |
+| BM25 lexical control, clustered | MRR 0.084 / MRR@10 0.073 / MAP@10 0.057 / R@1 4.2% / R@10 15.9% / Recall@100 31.5% |
+| Lexical-overlap shortcut check | content-IoU vs LINQ dense score Spearman 0.060; max relevant content-IoU vs best relevant RR Spearman 0.220 |
+| Surface-only TF-IDF controls | title MRR 0.033; first sentence MRR 0.038; first 50 words MRR 0.055 |
 | Best off-the-shelf MRR | 0.210 (Linq-Embed-Mistral) |
 | Best summarization R@1 | 26.5% (Gemini, full 709) |
 | Best pilot result R@1 | 70.0% (symmetric + QE, 50-fable pilot) |

@@ -1,0 +1,86 @@
+{
+  "clustered_moralink": {
+    "avg_relevant_fables_per_query": 1.624251497005988,
+    "cluster_type_cluster_counts": {
+      "exact": 16,
+      "near": 73,
+      "singleton": 469
+    },
+    "cluster_type_query_counts": {
+      "exact": 16,
+      "near": 183,
+      "singleton": 469
+    },
+    "fables": 709,
+    "moral_clusters": 558,
+    "query_moral_words": {
+      "max": 30,
+      "mean": 10.402694610778443,
+      "median": 9.5,
+      "min": 2,
+      "n": 668
+    },
+    "relevant_fables_per_query": {
+      "max": 6,
+      "mean": 1.624251497005988,
+      "median": 1.0,
+      "min": 1,
+      "n": 668
+    },
+    "relevant_pair_all_token_iou": {
+      "max": 0.1566265060240964,
+      "mean": 0.032248303084711924,
+      "median": 0.02857142857142857,
+      "min": 0.0,
+      "n": 1085
+    },
+    "relevant_pair_content_token_iou": {
+      "max": 0.1,
+      "mean": 0.007117093586141783,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 1085
+    },
+    "relevant_query_fable_pairs": 1085,
+    "unique_moral_queries": 668
+  },
+  "raw_morables": {
+    "all_token_iou": {
+      "max": 0.1566265060240964,
+      "mean": 0.0333886001648531,
+      "median": 0.03,
+      "min": 0.0,
+      "n": 709
+    },
+    "content_token_iou": {
+      "max": 0.1,
+      "mean": 0.008393087193101417,
+      "median": 0.0,
+      "min": 0.0,
+      "n": 709
+    },
+    "fable_words": {
+      "max": 1132,
+      "mean": 116.66008462623414,
+      "median": 99,
+      "min": 28,
+      "n": 709
+    },
+    "moral_words": {
+      "max": 30,
+      "mean": 10.198871650211565,
+      "median": 9,
+      "min": 2,
+      "n": 709
+    },
+    "pairs": 709,
+    "unique_moral_texts_exact": 678
+  },
+  "source_files": {
+    "cluster_mapping": "data/clustered/cluster_mapping.json",
+    "clustered_fables": "data/clustered/fables_corpus.json",
+    "clustered_morals": "data/clustered/morals_unique_corpus.json",
+    "clustered_qrels": "data/clustered/qrels_moral_to_fable_clustered.json",
+    "raw_fables": "data/raw/fables.json"
+  }
+}

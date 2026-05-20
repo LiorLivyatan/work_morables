@@ -1,0 +1,6 @@
+model_alias,model_id,instruction_variant,corpus_config,corpus_description,corpus_template,summary_generator,summary_generator_model_id,generator_prompt_variant,exp_id,MAP@10,MRR@10,NDCG@10,Recall@5,Recall@10,Recall@15,Recall@50,Recall@100,Recall@200,Recall@300,Hit@1,Hit@5,Hit@10,Hit@100
+GTE-Qwen2-1.5B,Alibaba-NLP/gte-Qwen2-1.5B-instruct,no_instr,raw,Raw fable text only; no generated summary.,{fable},,,,,,,,,,,,,,,,,,
+GTE-Qwen2-7B,Alibaba-NLP/gte-Qwen2-7B-instruct,no_instr,raw,Raw fable text only; no generated summary.,{fable},,,,,,,,,,,,,,,,,,
+GritLM-7B,GritLM/GritLM-7B,default,raw,Raw fable text only; no generated summary.,{fable},,,,,,,,,,,,,,,,,,
+SFR-Embedding-Mistral,Salesforce/SFR-Embedding-Mistral,no_instr,raw,Raw fable text only; no generated summary.,{fable},,,,,,,,,,,,,,,,,,
+Stella-1.5B,NovaSearch/stella_en_1.5B_v5,default,raw,Raw fable text only; no generated summary.,{fable},,,,,,,,,,,,,,,,,,

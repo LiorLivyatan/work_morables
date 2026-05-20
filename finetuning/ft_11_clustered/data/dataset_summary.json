@@ -1,0 +1,38 @@
+{
+  "n_queries": 668,
+  "n_fables": 709,
+  "n_qrels": 1085,
+  "avg_relevant_fables_per_query": 1.624251497005988,
+  "folds": [
+    {
+      "fold": 0,
+      "n_train_queries": 535,
+      "n_test_queries": 133,
+      "n_test_qrels": 217
+    },
+    {
+      "fold": 1,
+      "n_train_queries": 535,
+      "n_test_queries": 133,
+      "n_test_qrels": 217
+    },
+    {
+      "fold": 2,
+      "n_train_queries": 534,
+      "n_test_queries": 134,
+      "n_test_qrels": 217
+    },
+    {
+      "fold": 3,
+      "n_train_queries": 534,
+      "n_test_queries": 134,
+      "n_test_qrels": 217
+    },
+    {
+      "fold": 4,
+      "n_train_queries": 534,
+      "n_test_queries": 134,
+      "n_test_qrels": 217
+    }
+  ]
+}

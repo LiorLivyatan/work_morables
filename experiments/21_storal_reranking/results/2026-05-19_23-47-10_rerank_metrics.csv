@@ -1,0 +1,2 @@
+timestamp,reranker_alias,reranker_model_id,candidate_k,first_stage_rank,first_stage_model,first_stage_size,first_stage_doc_config,first_stage_summary_generator,error
+2026-05-19_23-47-10,qwen3_reranker_0_6b,Qwen/Qwen3-Reranker-0.6B,100,1,linq,s1000,conceptual_abstract_fable,gemini,ValueError: Cannot handle batch sizes > 1 if no padding token is defined.

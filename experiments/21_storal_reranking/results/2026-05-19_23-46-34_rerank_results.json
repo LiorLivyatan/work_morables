@@ -1,0 +1,11 @@
+{
+  "experiment": "21_storal_reranking",
+  "plan": "/media/eimtest/data/lior/ParabeLink/experiments/21_storal_reranking/run_plans/top_recall100_storal.csv",
+  "candidate_k": 100,
+  "rerankers": [
+    "qwen3_reranker_0_6b"
+  ],
+  "limit_runs": 1,
+  "limit_queries": null,
+  "results": []
+}

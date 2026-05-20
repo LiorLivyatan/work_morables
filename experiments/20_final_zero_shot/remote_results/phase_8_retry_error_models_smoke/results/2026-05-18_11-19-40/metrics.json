@@ -1,0 +1,30 @@
+[
+  {
+    "run_id": "GTE-Qwen2-1.5B__no_instr__raw",
+    "model_alias": "GTE-Qwen2-1.5B",
+    "model_id": "Alibaba-NLP/gte-Qwen2-1.5B-instruct",
+    "instruction_variant": "no_instr",
+    "corpus_config": "raw",
+    "summary_generator": "",
+    "summary_generator_model_id": "",
+    "generator_prompt_variant": "",
+    "MAP@10": 0.0,
+    "MRR@10": 0.0,
+    "NDCG@10": 0.0,
+    "Recall@5": 0.0,
+    "Recall@10": 0.0,
+    "Recall@15": 0.0,
+    "Recall@50": 0.0,
+    "Recall@100": 0.0,
+    "Recall@200": 0.0,
+    "Recall@300": 0.0,
+    "Hit@1": 0.0,
+    "Hit@5": 0.0,
+    "Hit@10": 0.0,
+    "Hit@100": 0.0,
+    "Mean_Rank": 0.0,
+    "Median_Rank": 0.0,
+    "n_queries": 0,
+    "error": "error: 'DynamicCache' object has no attribute 'to_legacy_cache'"
+  }
+]

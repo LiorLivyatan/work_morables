@@ -6,8 +6,8 @@ Current clustered benchmark status:
 
 - Fable documents: 709
 - Unique moral queries: 668
-- Moral clusters: 554
-- Clustered moral-to-fable qrel rows: 1122
+- Moral clusters: 558
+- Clustered moral-to-fable qrel rows: 1085
 - Source cluster file: `analysis/clusters_full.json`
 - Derived benchmark folder: `data/clustered/`
 

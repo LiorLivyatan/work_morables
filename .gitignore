@@ -92,6 +92,11 @@ finetuning/*/results/models_original/
 finetuning/*/*/results/models/
 finetuning/*/*/results/models_original/
 
+# Full ranking dumps are large; keep compact metrics/result JSONs in git.
+finetuning/*/results/rankings/
+finetuning/*/results/saved_model_evals/rankings/
+experiments/21_storal_reranking/results/rankings/
+
 # Codex
 .codex/
 

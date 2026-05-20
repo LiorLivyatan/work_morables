@@ -4,8 +4,9 @@
 \usepackage{latexsym}
 \usepackage{microtype}
 \usepackage{inconsolata}
+\usepackage[most]{tcolorbox}
 
-\title{ParabeLink: Retrieving Fables from Moral Lessons}
+\title{MoraLink: Retrieving Fables from Moral Lessons}
 
 \author{Anonymous ACL submission}
 
@@ -13,26 +14,26 @@
 \maketitle
 
 % ============================================================
-%  ABSTRACT
+%  ABSTRACT - TO BE CHANGED
 % ============================================================
 \begin{abstract}
 Linking moral principles to the narratives that teach them poses a fundamental
 retrieval challenge: morals and fables share virtually no vocabulary, demanding
-conceptual understanding far beyond surface-level matching.
-We introduce \textbf{ParabeLink}, a benchmark built on the MORABLES dataset
+semantic alignment beyond surface-level matching.
+We introduce \textbf{MoraLink}, a benchmark built on the MORABLES dataset
 \citep{marcuzzo-etal-2025-morables} in which a system must identify the correct
 fable for a given moral lesson from 709 candidates (mean lexical overlap IoU:
 0.011).
-The best off-the-shelf embedding model achieves MRR of 0.210, far below an oracle
-ceiling of 0.893---computed by appending the ground-truth moral to each fable
-document---a four-fold gap that surface matching cannot close.
+The best off-the-shelf embedding model achieves MRR of 0.210, far below a
+gold-moral appended upper bound of 0.893, computed by appending the
+ground-truth moral to each fable document.
 Augmenting fable documents with LLM-generated moral-style summaries substantially
-narrows this gap (MRR 0.360), demonstrating that the bottleneck lies in document
-representation rather than encoder capacity.
+narrows this gap (MRR 0.360), suggesting that document representation is a major
+source of difficulty.
 Contrastive fine-tuning with moral-negative augmentation improves performance
 further (MRR 0.438).
-\textbf{ParabeLink} provides a challenging testbed for semantic retrieval where
-success requires bridging a deep abstraction gap between query and document.
+\textbf{MoraLink} provides a challenging testbed for semantic retrieval across a
+deep abstraction gap between query and document.
 \end{abstract}
 
 % ============================================================
@@ -40,53 +41,168 @@ success requires bridging a deep abstraction gap between query and document.
 % ============================================================
 
 \section{Introduction}
-% TODO
+
+Humans can connect abstract principles to concrete narratives even when the two share almost no lexical overlap.
+Consider the moral ``Do not trust flatterers'', a reader who knows Aesop's fable of the Fox and the Crow will immediately recognize that this principle is embodied in the story of a fox that tricks a vain crow into dropping its cheese through insincere praise, despite the moral and the story sharing almost no words in common. 
+This alignment between abstract concepts and their narrative realizations is central to fables and analogous stories, and it creates a retrieval setting that is difficult to solve with surface matching alone.
+
+Beyond the human ability to draw such connections, it is natural to ask whether retrieval models encode representations that support similar moral-to-narrative alignment, and whether those representations can be leveraged for downstream tasks such as moral reasoning, story generation, and analogical inference. 
+Evaluating this relationship in retrieval form provides a concrete way to test whether models can connect abstract principles to narratives that express them indirectly.
+
+
+\begin{figure}[t]
+    \centering
+    \begin{tcolorbox}[
+        width=0.95\linewidth,
+        colback=white,
+        colframe=black,
+        arc=4pt,
+        boxrule=0.6pt,
+        left=6pt,
+        right=6pt,
+        top=6pt,
+        bottom=6pt
+    ]
+    \small
+    \textbf{Moral query}\\
+    Do not trust flatterers.
+
+    \vspace{0.9em}
+
+    \textbf{Relevant fable} \\
+    A Fox once saw a Crow fly off with a piece of cheese in its beak and settle on a branch of a tree. ``That's for me, as I am a Fox,'' said Master Reynard, and he walked up to the foot of the tree. ``Good-day, Mistress Crow,'' he cried. How well you are looking to-day: how glossy your feathers; how bright your eye. I feel sure your voice must surpass that of other birds, just as your figure does; let me hear but one song from you that I may greet you as the Queen of Birds. The Crow lifted up her head and began to caw her best, but the moment she opened her mouth the piece of cheese fell to the ground, only to be snapped up by Master Fox.
+    
+    \vspace{1em}
+    \hrule
+    \vspace{1em}
+    {\footnotesize
+    \textit{Retrieval challenge:} The moral states an abstract warning about trust and flattery; the fable conveys that warning indirectly through characters, events, vanity, and deception.}
+
+    \end{tcolorbox}
+    
+    \caption{Example of the moral-to-fable retrieval problem. The query is a compressed abstract principle, while the relevant document expresses that principle through a concrete narrative with little lexical overlap.}
+    \label{fig:sample}
+\end{figure}
+
+
+Modern dense retrieval systems have made major progress on semantic search, enabling retrieval beyond exact keyword matching \citep{reimers-gurevych-2019-sentence, muennighoff-etal-2023-mteb, thakur2021beirheterogenousbenchmarkzeroshot}. 
+However, most retrieval benchmarks still focus on topical or paraphrastic similarity, where queries and documents remain relatively close in structure and surface form. Retrieval under extreme abstraction mismatch remains largely underexplored.
+
+This limitation becomes particularly clear when meaning is expressed across different semantic levels.
+An example is when the query is a concise abstract concept, while the target document conveys that concept indirectly through narrative or analogy.
+Therefore, successful retrieval requires aligning abstract principles with concrete realizations despite large differences in wording and structure.
+
+In this work, we introduce \textbf{MoraLink}, a benchmark for conceptual semantic retrieval under extreme lexical and abstraction divergence. 
+The task is formulated as \emph{moral-to-fable retrieval}: given a short moral statement, the system must retrieve fables that convey it from a corpus of candidate stories. 
+While humans solve this task naturally, current retrieval systems struggle considerably.
+
+MoraLink is built from the MORABLES dataset \citep{marcuzzo-etal-2025-morables}, which contains 709 paired fables and morals drawn from Western literary traditions, including Aesop, Perry, Gibbs, and Abstemius.
+Fables average approximately 133.4 words, whereas morals average only 11.6 words.
+Lexical overlap between morals and their associated fables is extremely low, with token-level intersection-over-union scores of only 0.011.
+Retrieval, therefore, cannot rely on surface lexical matching and instead requires conceptual alignment between abstract principles and narrative content.
+
+We evaluate a wide range of embedding models, spanning multiple architectures and parameter scales.
+Such models often rely on lexical overlap and local semantic similarity rather than abstract cross-level relevance~\citep{wang2022sncsecontrastivelearningunsupervised,Miao_2023,shi-etal-2023-osscse}.
+It is thus not surprising that across our experiments, they perform poorly despite their strong performance on conventional semantic retrieval benchmarks. 
+This further strengthens the claim that dense retrieval approaches struggle when queries and documents operate at different semantic levels.
+
+To better understand this failure mode, we investigate several representation-level interventions.
+We suggest zero-shot methods, such as document-side abstraction preprocessing via LLM-generated moral summaries and instruction-steered embeddings, as well as contrastive task-specific fine-tuning.
+Our experiments show that the zero-shot methods substantially improve retrieval performance and that fine-tuning further narrows the gap.
+However, a large discrepancy remains, with the best performing configuration achieving 0.438 MRR.
+
+Together, these findings suggest that the primary challenge in MoraLink is not merely lexical divergence, but semantic-level alignment itself.
+Dense retrievers struggle to connect compressed abstract principles with narratives that express them indirectly.
+More broadly, this setting reflects retrieval problems involving indirect meaning and conceptual alignment, including analogy-based search, educational retrieval, description-based search, and retrieval-augmented generation systems that must connect abstract intents with concrete evidence.
+
+Our contributions are as follows:
+
+\begin{itemize}
+    \item We introduce \textbf{MoraLink}, a benchmark for conceptual semantic retrieval between abstract moral statements and narrative fables under extreme lexical divergence.
+    \item We demonstrate that document-side abstraction substantially improves retrieval performance, as well as task-specific contrastive fine-tuning.
+    \item We provide a systematic evaluation of modern embedding-based retrieval systems across a diverse set of architectures and scales, revealing that a significant gap persists.
+    
+\end{itemize}
+
+We position MoraLink as a controlled testbed for studying semantic-level alignment and conceptual retrieval beyond topical similarity. 
+To facilitate further research, all datasets, prompts, and evaluation code are publicly released under the CC-BY-NC-4.0 (datasets) and Apache-2.0 (code) licenses: \texttt{<redacted>}.
+
+% All MoraLink resources, including data and code, will be released in the camera-ready version.
+
+
+
 
 \section{Related Work}
+\label{sec:related-work}
 
-\subsection{Moral Reasoning and Figurative Language in NLP}
+\subsection{Moral and Narrative Understanding}
+Moral reasoning has been studied in NLP mostly through benchmarks that require models to judge short descriptions of everyday situations rather than extended narratives. ETHICS introduces a suite of classification tasks where models predict human moral judgments across justice, duties, virtues, and commonsense scenarios \citep{hendrycks2020aligning}. Delphi similarly focuses on predicting context-sensitive ethical judgments over natural language descriptions of situations, trained on the Commonsense Norm Bank of everyday moral judgments \citep{jiang2021delphi}. Related work such as Social Chemistry 101 and SocialIQA likewise targets social and moral norms in short situations through rules-of-thumb or multiple-choice QA, but without requiring models to connect abstract morals to long-form stories \citep{forbes-etal-2020-social,sap-etal-2019-social}.
+A related line of work studies figurative meaning, especially idioms, where surface form can diverge sharply from intended meaning. Recent work shows that LLMs can identify idiomatic expressions in context using prompting, and that cross-lingual fine-tuning can improve idiom identification while revealing how idiomatic meaning is represented across model layers. Adversarial idiom benchmarks further stress-test this ability by introducing contexts that remain clear to humans but mislead models when distinguishing literal from figurative uses. MoraLink shares this broad concern with meaning beyond lexical form, but shifts the challenge from local idiomatic expressions to semantic-level alignment between abstract moral principles and full narrative realizations.
 
-Moral and ethical reasoning poses a persistent challenge for NLP systems, as it requires abstracting principles from context rather than matching surface-level patterns.
-Early efforts frame moral reasoning as classification: the ETHICS benchmark \citep{hendrycks2021aligning} evaluates language models on commonsense morality, deontological rules, and virtue across five ethical theory categories, while \citet{jiang2021delphi} introduce Delphi, a system trained to predict human moral judgments about everyday situations.
-Both approaches demonstrate that neural models can approximate moral intuitions in constrained settings but struggle to generalize to novel ethical scenarios.
-A related challenge arises in figurative and abstract language, where meaning departs fundamentally from surface form---idioms, metaphors, and parables require conceptual understanding that lexical overlap cannot supply \citep{TODO:idiolink}.
-\citet{marcuzzo-etal-2025-morables} introduce MORABLES, the dataset on which \textbf{ParabeLink} is built, framing moral reasoning as multiple-choice selection over a small candidate set of Aesop's fables.
-\textbf{ParabeLink} extends this challenge to open retrieval: given a moral, a system must identify the correct fable from 709 candidates with near-zero lexical overlap (IoU~=~0.011), demanding a level of abstraction that closed-set evaluation cannot expose.
+A closer line of work studies moral meaning in stories. Moral Stories and STORAL connect short narratives with norms, intents, consequences, and explicit morals, supporting tasks such as moral choice, explanation generation, and moral story generation \citep{emelin-etal-2021-moral,guan-etal-2022-corpus}. MORABLES
+further focuses on fables and abstract moral reasoning: given a fable, models must select the correct moral from carefully constructed distractors, with additional adversarial variants to probe robustness
+\citep{marcuzzo-etal-2025-morables}. MoraLink builds on this literary setting but reverses and expands the task: given a short abstract moral, the system must retrieve the corresponding fable from a large corpus of narratives. This turns moral-to-narrative alignment into an open retrieval problem under extreme lexical divergence and a sharp abstraction gap between compressed principles and their narrative realizations.
 
-\subsection{Semantic Retrieval and Embedding Models}
+\subsection{Semantic Retrieval Beyond Surface Similarity}
+Dense retrieval and sentence embedding models have become central tools for semantic search beyond exact keyword matching. Sentence-BERT first demonstrated that Siamese and triplet architectures can yield sentence embeddings suitable for efficient semantic similarity search \citep{reimers2019sentence}, while unsupervised dense retrievers such as \todo{add} showed that contrastive pre-training can close much of the gap to supervised systems \todo{add citation}. Large-scale benchmarks like BEIR and MTEB have standardized evaluation by aggregating dozens of datasets across retrieval, semantic textual similarity, clustering, and other embedding tasks \citep{thakur2021beir,muennighoff-etal-2023-mteb}.
 
-Neural dense retrieval---representing queries and documents as continuous vectors and retrieving by nearest-neighbor search---has become the dominant paradigm for open-domain information retrieval \citep{karpukhin2020dense}.
-Pre-trained sentence encoders such as Sentence-BERT \citep{reimers2019sentence} and Contriever \citep{izacard2022unsupervised} demonstrated that contrastive objectives yield semantically meaningful representations without requiring labeled query-document pairs.
-Subsequent work scaled this paradigm: E5 \citep{wang2022text} pre-trains on 270M weakly supervised text pairs; BGE \citep{xiao2023cpack} introduces a general-purpose embedding suite with hard-negative-aware contrastive fine-tuning; and Linq-Embed-Mistral \citep{kim2024linq} achieves state-of-the-art performance across the MTEB retrieval leaderboard.
-Cross-domain generalization is evaluated by the BEIR benchmark \citep{thakur2021beir}, which shows that retrieval performance degrades substantially on out-of-domain tasks where surface cues are absent.
-\textbf{ParabeLink} represents an extreme case along this axis: with near-zero lexical overlap between moral queries and fable documents, it isolates semantic abstraction as the primary bottleneck and directly stress-tests whether modern embedding models can reason across deep representational gaps.
+Modern embedding models such as E5, BGE, NV-Embed, and Linq-Embed-Mistral push retrieval performance further through weakly supervised contrastive pre-training, instruction-style training, and extensive hard-negative mining \citep{wang2022text,xiao2024c,lee2025nv,choi2024linq}. For example, E5 is trained on large-scale weakly supervised text pairs and achieves strong zero-shot retrieval on BEIR \citep{wang2022text}, while Linq-Embed-Mistral and NV-Embed combine curated and synthetic data with task-specific contrastive objectives to reach state-of-the-art scores on MTEB \citep{choi2024linq,lee2025nv}. However, most standard retrieval benchmarks still emphasize topical relevance, paraphrase similarity, or domain transfer. A newer wave of reasoning-intensive benchmarks, such as BRIGHT, shows that even top-performing retrievers on MTEB struggle when relevance requires deeper multi-step inference rather than surface semantic matching
+\citep{su2025bright}. MoraLink isolates a related but distinct failure mode: queries and documents differ not only lexically, but also in semantic level. The query states a compressed abstract principle, while the document expresses that principle indirectly through characters, events, and consequences, stressing conceptual alignment across abstraction levels rather than topical similarity.
 
-\subsection{Contrastive Fine-tuning and Synthetic Data}
 
-Contrastive learning is the dominant paradigm for training text embedding models: SimCSE \citep{gao2021simcse} demonstrates that dropout-based augmentation with in-batch negatives substantially improves representation quality, and hard negative mining---selecting negatives that are semantically plausible but factually distinct---further sharpens discriminative capacity.
-In parallel, large language models have enabled synthetic data generation for retrieval, removing the need for costly annotation: InPars \citep{bonifacio2022inpars} uses few-shot prompting to generate synthetic queries for unlabeled documents, while subsequent work produces full query-positive-negative triplets for instruction-following retrieval \citep{wang2024improving}.
-% TODO: fill in the 2-3 sentences describing exactly how we use STORAL augmentation and
-% what distinguishes our contrastive fine-tuning setup from prior domain adaptation work
-% (hint: the key claim is that our gap is *abstraction*, not just topical domain shift).
-% Reference: \citep{TODO:storal}
-Unlike prior domain adaptation work---where queries and documents share topical vocabulary---our setting requires bridging a deep abstraction gap; we show empirically that synthetic document augmentation narrows this gap substantially, and contrastive fine-tuning with moral-negative augmentation closes it further.
+\subsection{LLM-Augmented Retrieval and Task-Specific Adaptation}
+LLMs are increasingly used to adapt retrieval systems when labeled query-document
+pairs are scarce. One line of work generates synthetic queries for existing
+documents, as in InPars, while another uses LLM-generated positives, negatives,
+or instructions to improve embedding models for retrieval-specific objectives
+\citep{bonifacio2022inpars,wang2024improving}. Contrastive methods such as
+SimCSE further show that careful positive and negative construction can strongly
+shape the geometry of sentence embeddings \citep{gao2021simcse}. In MoraLink,
+we use LLMs only as a document-representation intervention and training-data
+augmentation strategy; the benchmark itself is defined over the original
+MORABLES fables and morals.
 
-\section{The ParabeLink Benchmark}
-% TODO
+LLMs are increasingly used to adapt retrieval systems when labeled query-document pairs are scarce. One line of work generates synthetic queries for existing documents, as in InPars, while another uses LLM-generated positives, negatives, or instructions to improve embedding models for retrieval-specific objectives
+\citep{bonifacio2022inpars,wang2024improving}. Contrastive methods such as SimCSE further show that careful positive and negative construction can strongly shape the geometry of sentence embeddings \citep{gao2021simcse}. In MoraLink, we use LLMs only as a document-representation intervention and training-data augmentation strategy; the benchmark itself is defined over the original MORABLES fables and morals.
 
-\section{Experiments}
-% TODO
+\section{The MoraLink Benchmark}
+\label{sec:benchmark}
 
-\section{Results and Discussion}
-% TODO
+\subsection{Task Definition}
+MoraLink is a moral-to-fable retrieval benchmark. Let $Q$ be a set of moral
+queries and $C$ be a corpus of fable documents. Given a query $q_i \in Q$, a
+retrieval system produces a ranked list over all $f_j \in C$. The system is
+evaluated by how highly it ranks the fables in the relevance set $R_i \subset C$.
 
-\section{Conclusions}
-% TODO
+The official MoraLink corpus contains 709 fables from MORABLES and 668 unique
+moral queries. Unlike a closed multiple-choice setting, every query is evaluated
+against the full 709-fable corpus. The benchmark therefore tests whether models
+can recover a narrative realization of a moral principle without being given a
+small candidate set.
 
-\section*{Limitations}
-% TODO
+\subsection{Clustered Relevance Judgments}
+The original MORABLES data contains cases where multiple fables share an exact
+or near-equivalent moral. Treating each row as a single-label retrieval problem
+would incorrectly penalize systems for retrieving a fable that expresses the
+same moral but is not the row's original paired fable. This is especially
+problematic for fables, where variants and retellings often teach the same
+lesson with different characters or wording.
 
-\section*{Ethics Statement}
+We therefore define MoraLink using clustered, multi-positive relevance
+judgments. We canonicalize duplicate moral texts and group near-equivalent moral
+statements into moral clusters. For each unique moral query, all fables attached
+to morals in the same cluster are considered relevant. This yields 558 moral
+clusters and 1,085 moral-to-fable relevance links. Among the 668 unique queries,
+469 are singleton queries, 16 are exact-duplicate cases, and 183 are
+near-paraphrase cases.
+
+This clustered setup makes the evaluation more conservative: a model is no
+longer marked wrong for retrieving a valid fable variant, but it still must
+distinguish the target moral cluster from hundreds of unrelated fables. All main
+results use multi-positive metrics, including MRR, Hit@$k$, Recall@$k$,
+NDCG@$k$, MAP, and R-Precision.
+
+
 % TODO
 
 % ============================================================

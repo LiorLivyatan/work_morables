@@ -1,0 +1,231 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "models": [
+    "linq",
+    "qwen3",
+    "qwen3_4b",
+    "qwen3_0_6b",
+    "sfr",
+    "bge",
+    "bge_large",
+    "bge_m3",
+    "e5_large",
+    "e5_base",
+    "multilingual_e5_large",
+    "multilingual_e5_large_instruct",
+    "all_mpnet",
+    "all_minilm",
+    "contriever",
+    "embeddinggemma",
+    "stella"
+  ],
+  "sizes": [
+    "s200",
+    "s500",
+    "s1000",
+    "sfull"
+  ],
+  "eval_doc_configs": [
+    "raw",
+    "direct_moral_only",
+    "conceptual_abstract_only",
+    "cot_proverb_only",
+    "fable_direct_moral",
+    "direct_moral_fable",
+    "fable_conceptual_abstract",
+    "conceptual_abstract_fable",
+    "fable_cot_proverb",
+    "cot_proverb_fable",
+    "proverb_only",
+    "fable_proverb",
+    "proverb_fable"
+  ],
+  "summary_generator": "gemma4-E2B",
+  "completed": 42,
+  "errors": [
+    {
+      "model_alias": "qwen3",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s200\n"
+    },
+    {
+      "model_alias": "qwen3",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s500\n"
+    },
+    {
+      "model_alias": "qwen3",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/s1000\n"
+    },
+    {
+      "model_alias": "qwen3",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3/sfull\n"
+    },
+    {
+      "model_alias": "qwen3_4b",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s200\n"
+    },
+    {
+      "model_alias": "qwen3_4b",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s500\n"
+    },
+    {
+      "model_alias": "qwen3_4b",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/s1000\n"
+    },
+    {
+      "model_alias": "qwen3_4b",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b/sfull\n"
+    },
+    {
+      "model_alias": "qwen3_0_6b",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s200\n"
+    },
+    {
+      "model_alias": "qwen3_0_6b",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s500\n"
+    },
+    {
+      "model_alias": "qwen3_0_6b",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/s1000\n"
+    },
+    {
+      "model_alias": "qwen3_0_6b",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b/sfull\n"
+    },
+    {
+      "model_alias": "sfr",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s200\n"
+    },
+    {
+      "model_alias": "sfr",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s500\n"
+    },
+    {
+      "model_alias": "sfr",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/s1000\n"
+    },
+    {
+      "model_alias": "sfr",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/sfr/sfull\n"
+    },
+    {
+      "model_alias": "e5_large",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/e5_large/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/e5_large/sfull\n"
+    },
+    {
+      "model_alias": "all_mpnet",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/all_mpnet/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/all_mpnet/sfull\n"
+    },
+    {
+      "model_alias": "embeddinggemma",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s200\n"
+    },
+    {
+      "model_alias": "embeddinggemma",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s500\n"
+    },
+    {
+      "model_alias": "embeddinggemma",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/s1000\n"
+    },
+    {
+      "model_alias": "embeddinggemma",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma/sfull\n"
+    },
+    {
+      "model_alias": "stella",
+      "size": "s200",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s200",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s200\n"
+    },
+    {
+      "model_alias": "stella",
+      "size": "s500",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s500",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s500\n"
+    },
+    {
+      "model_alias": "stella",
+      "size": "s1000",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s1000",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/s1000\n"
+    },
+    {
+      "model_alias": "stella",
+      "size": "sfull",
+      "error_type": "FileNotFoundError",
+      "error": "--skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/sfull",
+      "traceback": "Traceback (most recent call last):\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 780, in main\n    result = run_one(\n        model_alias,\n    ...<6 lines>...\n        use_wandb,\n    )\n  File \"/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/train.py\", line 649, in run_one\n    raise FileNotFoundError(f\"--skip_train requested but saved model does not exist: {model_dir}\")\nFileNotFoundError: --skip_train requested but saved model does not exist: /data/lior/ft_12_storal_transfer_clustered/models/stella/sfull\n"
+    }
+  ],
+  "result_files_written": 42
+}

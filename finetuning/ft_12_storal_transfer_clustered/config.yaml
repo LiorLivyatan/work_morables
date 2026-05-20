@@ -1,0 +1,324 @@
+# ft_12_storal_transfer_clustered
+#
+# Train on clean STORAL moral -> raw story pairs, evaluate on clustered MORABLES.
+# STORAL contains raw stories only, so training doc text is always raw story text.
+
+seed: 42
+epochs: 10
+temperature: 0.05
+early_stopping_patience: 3
+early_stopping_metric: ndcg@10
+validation_ratio: 0.10
+exact_moral_masking: true
+ks: [1, 5, 10, 15, 50, 100, 200, 300]
+
+default_summary_generator: gemini
+default_eval_doc_configs:
+  - raw
+  - direct_moral_only
+  - fable_direct_moral
+  - direct_moral_fable
+  - cot_proverb_only
+  - fable_cot_proverb
+  - cot_proverb_fable
+  - conceptual_abstract_only
+  - conceptual_abstract_fable
+
+dataset_sizes:
+  s200:
+    n: 200
+    length_range: [56, 195]
+    description: "Small length-matched STORAL sample."
+  s500:
+    n: 500
+    length_range: [56, 195]
+    description: "MORABLES p10-p90 length-matched STORAL sample."
+  s1000:
+    n: 1000
+    length_range: [30, 300]
+    description: "Wider length-matched STORAL sample."
+  sfull:
+    n: null
+    length_range: null
+    description: "All clean STORAL pairs after MORABLES duplicate removal."
+
+models:
+  linq:
+    model_name: Linq-AI-Research/Linq-Embed-Mistral
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/linq
+
+  qwen3:
+    model_name: Qwen/Qwen3-Embedding-8B
+    batch_size: 2
+    gradient_accumulation_steps: 8
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/qwen3
+
+  qwen3_4b:
+    model_name: Qwen/Qwen3-Embedding-4B
+    batch_size: 2
+    gradient_accumulation_steps: 8
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_4b
+
+  qwen3_0_6b:
+    model_name: Qwen/Qwen3-Embedding-0.6B
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    trust_remote_code: true
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a text, retrieve the most relevant passage that answers the query\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/qwen3_0_6b
+
+  sfr:
+    model_name: Salesforce/SFR-Embedding-Mistral
+    batch_size: 2
+    gradient_accumulation_steps: 8
+    gradient_checkpointing: true
+    learning_rate: 1.0e-4
+    max_seq_length: 512
+    model_kwargs:
+      torch_dtype: auto
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    lora:
+      r: 64
+      alpha: 128
+      dropout: 0.05
+      target_modules: [q_proj, k_proj, v_proj, o_proj]
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/sfr
+
+  bge:
+    model_name: BAAI/bge-base-en-v1.5
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/bge
+
+  bge_large:
+    model_name: BAAI/bge-large-en-v1.5
+    batch_size: 16
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/bge_large
+
+  bge_m3:
+    model_name: BAAI/bge-m3
+    batch_size: 8
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/bge_m3
+
+  e5_large:
+    model_name: intfloat/e5-large-v2
+    batch_size: 16
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: "query: "
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/e5_large
+
+  e5_base:
+    model_name: intfloat/e5-base-v2
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: "query: "
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/e5_base
+
+  multilingual_e5_large:
+    model_name: intfloat/multilingual-e5-large
+    batch_size: 8
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: "query: "
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/multilingual_e5_large
+
+  multilingual_e5_large_instruct:
+    model_name: intfloat/multilingual-e5-large-instruct
+    batch_size: 8
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: "Instruct: Given a moral statement, retrieve the fable that best conveys this moral.\nQuery: "
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/multilingual_e5_large_instruct
+
+  all_mpnet:
+    model_name: sentence-transformers/all-mpnet-base-v2
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/all_mpnet
+
+  all_minilm:
+    model_name: sentence-transformers/all-MiniLM-L6-v2
+    batch_size: 64
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/all_minilm
+
+  contriever:
+    model_name: facebook/contriever
+    batch_size: 32
+    gradient_accumulation_steps: 1
+    gradient_checkpointing: false
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/contriever
+
+  embeddinggemma:
+    model_name: google/embeddinggemma-300m
+    batch_size: 16
+    gradient_accumulation_steps: 2
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    trust_remote_code: true
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/embeddinggemma
+
+  stella:
+    model_name: NovaSearch/stella_en_1.5B_v5
+    batch_size: 4
+    gradient_accumulation_steps: 4
+    gradient_checkpointing: true
+    learning_rate: 2.0e-5
+    max_seq_length: 512
+    trust_remote_code: true
+    query_instruction: ""
+    model_output_dir: /data/lior/ft_12_storal_transfer_clustered/models/stella
+
+doc_configs:
+  raw:
+    template: "{fable}"
+    summary_variant: null
+    description: "Original MORABLES fable text only."
+
+  direct_moral_only:
+    template: "{direct_moral}"
+    summary_variant: direct_moral
+    description: "Generated direct moral only."
+
+  conceptual_abstract_only:
+    template: "{conceptual_abstract}"
+    summary_variant: conceptual_abstract
+    description: "Generated conceptual abstract only."
+
+  cot_proverb_only:
+    template: "{cot_proverb}"
+    summary_variant: cot_proverb
+    description: "Generated cot_proverb output only."
+
+  fable_direct_moral:
+    template: "{fable}\n\nMoral summary: {direct_moral}"
+    summary_variant: direct_moral
+    description: "Original fable followed by direct moral summary."
+
+  direct_moral_fable:
+    template: "Moral summary: {direct_moral}\n\n{fable}"
+    summary_variant: direct_moral
+    description: "Direct moral summary followed by original fable."
+
+  fable_conceptual_abstract:
+    template: "{fable}\n\nConceptual summary: {conceptual_abstract}"
+    summary_variant: conceptual_abstract
+    description: "Original fable followed by conceptual abstract."
+
+  conceptual_abstract_fable:
+    template: "Conceptual summary: {conceptual_abstract}\n\n{fable}"
+    summary_variant: conceptual_abstract
+    description: "Conceptual abstract followed by original fable."
+
+  fable_cot_proverb:
+    template: "{fable}\n\nMoral summary: {cot_proverb}"
+    summary_variant: cot_proverb
+    description: "Original fable followed by cot_proverb output."
+
+  cot_proverb_fable:
+    template: "Moral summary: {cot_proverb}\n\n{fable}"
+    summary_variant: cot_proverb
+    description: "cot_proverb output followed by original fable."
+
+  proverb_only:
+    template: "{proverb}"
+    summary_variant: proverb
+    description: "Generated proverb only."
+
+  fable_proverb:
+    template: "{fable}\n\nProverb: {proverb}"
+    summary_variant: proverb
+    description: "Original fable followed by generated proverb."
+
+  proverb_fable:
+    template: "Proverb: {proverb}\n\n{fable}"
+    summary_variant: proverb
+    description: "Generated proverb followed by original fable."
+
+wandb:
+  project: morables-finetuning
+  enabled: true

@@ -1,0 +1,19 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "models": [
+    "linq"
+  ],
+  "sizes": [
+    "s200"
+  ],
+  "eval_doc_configs": [
+    "fable_cot_proverb",
+    "conceptual_abstract_fable",
+    "fable_proverb"
+  ],
+  "summary_generator": "gemini",
+  "completed": 1,
+  "errors": [],
+  "result_files_written": 1
+}

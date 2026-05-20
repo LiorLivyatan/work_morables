@@ -1,0 +1,95 @@
+{
+  "experiment": "ft_12_storal_transfer_clustered",
+  "seed": 42,
+  "early_stopping_metric": "ndcg@10",
+  "exact_moral_masking": true,
+  "result": {
+    "model_alias": "all_minilm",
+    "model_config": {
+      "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "batch_size": 64,
+      "gradient_accumulation_steps": 1,
+      "gradient_checkpointing": false,
+      "learning_rate": 2e-05,
+      "max_seq_length": 512,
+      "query_instruction": "",
+      "model_output_dir": "/data/lior/ft_12_storal_transfer_clustered/models/all_minilm"
+    },
+    "size": "s200",
+    "size_config": {
+      "n": 200,
+      "length_range": [
+        56,
+        195
+      ],
+      "description": "Small length-matched STORAL sample."
+    },
+    "storal_stats": {
+      "raw_total": 1779,
+      "clean_total": 1675,
+      "after_length_filter": 636,
+      "selected": 200,
+      "unique_normalized_morals": 199,
+      "exact_duplicate_moral_groups": 1,
+      "exact_duplicate_moral_rows": 2,
+      "length_range": [
+        56,
+        195
+      ],
+      "n_requested": 200
+    },
+    "train_rows": 180,
+    "validation_rows": 20,
+    "model_dir": "/data/lior/ft_12_storal_transfer_clustered/models/all_minilm/s200",
+    "eval_doc_configs": [
+      "fable_cot_proverb"
+    ],
+    "summary_generator": "gemini",
+    "eval_results": {
+      "fable_cot_proverb": {
+        "summary_generator": "gemini",
+        "rankings_path": "/media/eimtest/data/lior/ParabeLink/finetuning/ft_12_storal_transfer_clustered/results/rankings/all_minilm__s200__fable_cot_proverb__gemini.json",
+        "metrics": {
+          "MRR": 0.28157602701617435,
+          "MAP": 0.23290945612210776,
+          "R-Precision": 0.17889221556886228,
+          "Mean Rank": 97.63622754491018,
+          "Median Rank": 18.0,
+          "n_queries": 668,
+          "Hit@1": 0.19910179640718562,
+          "Recall@1": 0.14733033932135728,
+          "P@1": 0.19910179640718562,
+          "NDCG@1": 0.19910179640718562,
+          "Hit@5": 0.36077844311377244,
+          "Recall@5": 0.2780688622754491,
+          "P@5": 0.0847305389221557,
+          "NDCG@5": 0.23737989246298555,
+          "Hit@10": 0.4311377245508982,
+          "Recall@10": 0.3466816367265469,
+          "P@10": 0.05374251497005988,
+          "NDCG@10": 0.2622987940824256,
+          "Hit@15": 0.4820359281437126,
+          "Recall@15": 0.39431137724550896,
+          "P@15": 0.04121756487025948,
+          "NDCG@15": 0.27666909397345,
+          "Hit@50": 0.6287425149700598,
+          "Recall@50": 0.5482534930139721,
+          "P@50": 0.01745508982035928,
+          "NDCG@50": 0.31277678673062426,
+          "Hit@100": 0.7380239520958084,
+          "Recall@100": 0.6672654690618762,
+          "P@100": 0.010523952095808383,
+          "NDCG@100": 0.3338045305293692,
+          "Hit@200": 0.8203592814371258,
+          "Recall@200": 0.7652195608782434,
+          "P@200": 0.006197604790419161,
+          "NDCG@200": 0.34975325056776096,
+          "Hit@300": 0.8832335329341318,
+          "Recall@300": 0.8452345309381236,
+          "P@300": 0.004595808383233533,
+          "NDCG@300": 0.36119245299931874
+        }
+      }
+    }
+  }
+}
